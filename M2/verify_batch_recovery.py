@@ -9,7 +9,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import random
+import socket
 import sys
 from pathlib import Path
 
@@ -37,7 +39,12 @@ def main() -> None:
         required=True,
     )
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--batch-size", type=int, default=1)
+    parser.add_argument("--num-candidates", type=int, default=2)
+    parser.add_argument("--require-cross-runner", action="store_true")
     args = parser.parse_args()
+    if args.batch_size < 1 or args.num_candidates != 2 * args.batch_size:
+        parser.error("Recovery check requires exactly two equal positive batches")
     args.output.mkdir(parents=True, exist_ok=True)
     if args.mode == "compare":
         expected = json.loads((args.output / "continuous.json").read_text())
@@ -49,14 +56,25 @@ def main() -> None:
             "first_batch_preserved": interrupted["new_batches"] == 1,
             "completed_batch_not_sampled_twice": actual["replayed_batches"] == 1
             and actual["new_batches"] == 1,
+            "candidate_count": len(actual["structures"]) == args.num_candidates,
+            "fixture_equal": expected["fixture"] == actual["fixture"]
+            == interrupted["fixture"],
+            "cache_source_equal": expected["cache_source_sha256"]
+            == actual["cache_source_sha256"] == interrupted["cache_source_sha256"],
+            "saved_batch_bytes_preserved": interrupted["first_batch_sha256"]
+            == actual["first_batch_sha256"],
         }
+        if args.require_cross_runner:
+            checks["different_runner_hosts"] = (
+                interrupted["runner"]["hostname"] != actual["runner"]["hostname"]
+            )
         report = {
             "kind": "real_cross_process_chemeleon_batch_recovery",
             "benchmark_score": False,
-            "fixture": "Li2O, two candidates, batch size 1, original 256 diffusion steps",
+            "fixture": actual["fixture"],
             "checks": checks,
             "passed": all(checks.values()),
-            "scope": "Small actual-model integration check. Full protocol pool/batch-scale validation still required.",
+            "scope": "Actual-model recovery fixture only; not a protocol score or complete protocol-pool validation.",
         }
         (args.output / "verification.json").write_text(
             json.dumps(report, indent=2) + "\n"
@@ -70,11 +88,16 @@ def main() -> None:
     random.seed(17)
     np.random.seed(17)
     torch.manual_seed(17)
-    generator = ChemeleonGenerator(task="csp", batch_size=1, device="cpu")
-    plan = Plan(compositions=[Composition("Li2O")], num_candidates=2)
+    fixture = {
+        "formula": "Li2O", "batch_size": args.batch_size,
+        "num_candidates": args.num_candidates, "seed": 17,
+        "diffusion_steps": "unchanged model default (256)",
+    }
+    generator = ChemeleonGenerator(task="csp", batch_size=args.batch_size, device="cpu")
+    plan = Plan(compositions=[Composition("Li2O")], num_candidates=args.num_candidates)
     cache = BatchCache(
         args.output / "cache",
-        {"fixture": "Li2O-two-candidates-seed17"},
+        {"fixture": fixture},
         1 if args.mode == "interrupt" else None,
     )
     result = None
@@ -88,6 +111,8 @@ def main() -> None:
                 if args.mode != "interrupt":
                     raise
     record = {
+        "fixture": fixture,
+        "runner": {"hostname": socket.gethostname(), "name": os.getenv("RUNNER_NAME")},
         "structures": [s.as_dict() for s in result] if result else None,
         "rng": rng_state(),
         "new_batches": cache.sampled,
@@ -95,6 +120,9 @@ def main() -> None:
         "cache_source_sha256": hashlib.sha256(
             (REPO / "M2/generation_cache.py").read_bytes()
         ).hexdigest(),
+        "first_batch_sha256": hashlib.sha256(
+            (args.output / "cache/batch_0000.json").read_bytes()
+        ).hexdigest() if args.mode != "continuous" else None,
     }
     target = args.output / f"{args.mode}.json"
     if target.exists():
@@ -104,3 +132,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

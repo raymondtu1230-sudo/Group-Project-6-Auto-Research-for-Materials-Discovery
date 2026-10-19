@@ -1,0 +1,13 @@
+{
+  "scope": "Actual CPU batch256 cross-runner artifact recovery validation only",
+  "benchmark_score": false,
+  "formula": "Li2O",
+  "batch_size": 256,
+  "num_candidates": 512,
+  "seed": 17,
+  "diffusion_steps": "unchanged model default",
+  "official_protocol_modified": false,
+  "previous_small_test_run": 39285316913,
+  "admission": "This fixture does not admit formal 17-unit Chemeleon sweep; verify full protocol pool compatibility and per-batch capacity separately.",
+  "scientific_scores_count": 0
+}
