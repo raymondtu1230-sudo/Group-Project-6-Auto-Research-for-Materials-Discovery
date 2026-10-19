@@ -22,13 +22,23 @@ REPO = M2_DIR.parent
 MADE = REPO / "M1/MADE"
 
 
-def checkpoint_history(output_dir: Path, checkpoints: Path) -> list[dict[str, Any]]:
+def checkpoint_history(
+    output_dir: Path,
+    checkpoints: Path,
+    seen: dict[Path, tuple[int, int]] | None = None,
+) -> list[dict[str, Any]]:
     longest: list[dict[str, Any]] = []
     for path in checkpoints.glob("**/checkpoint.json"):
         try:
+            stat = path.stat()
+            identity = (stat.st_mtime_ns, stat.st_size)
+            if seen is not None and seen.get(path) == identity:
+                continue
             payload = json.loads(path.read_text())
         except (OSError, json.JSONDecodeError):
             continue
+        if seen is not None:
+            seen[path] = identity
         configured = payload.get("config", {}).get("experiment", {}).get("output_dir")
         if not isinstance(configured, str):
             continue
@@ -141,6 +151,7 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
         str(attempt),
     ]
     history: list[dict[str, Any]] = []
+    seen: dict[Path, tuple[int, int]] = {}
     started, last_progress = time.monotonic(), 0.0
     print(f"Starting real protocol unit: {method} {system} seed={seed}", flush=True)
     with live_log.open("w") as log:
@@ -153,7 +164,7 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
         )
         try:
             while process.poll() is None:
-                observed = checkpoint_history(output_dir, MADE / "checkpoints")
+                observed = checkpoint_history(output_dir, MADE / "checkpoints", seen)
                 if len(observed) > len(history):
                     history = observed
                     print(

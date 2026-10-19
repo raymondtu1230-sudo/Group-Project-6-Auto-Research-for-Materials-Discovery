@@ -1,12 +1,5 @@
 name: M2 real materials baselines
 'on':
-  push:
-    branches:
-    - m2/tool-routing-evaluation
-    paths:
-    - .github/workflows/m2-real-baselines.yml
-    - M2/run_baselines.py
-    - M2/check_key.py
   workflow_dispatch: null
 permissions:
   contents: read

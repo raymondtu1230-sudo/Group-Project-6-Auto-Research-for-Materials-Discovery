@@ -134,6 +134,10 @@ def load_run(path: Path) -> Run:
         "llm_output_tokens": cost.get("llm", {}).get("output_tokens"),
         "machine": metadata.get("machine"),
         "processor": metadata.get("processor"),
+        "repository_revision": metadata.get("m2_capture", {}).get(
+            "shared_repository_commit", metadata.get("made_upstream_commit")
+        ),
+        "capture_source_sha256": metadata.get("m2_capture", {}).get("source_sha256"),
         "source": str(path),
     }
     return Run(path, metadata, history, row, snapshot_hash(reference))

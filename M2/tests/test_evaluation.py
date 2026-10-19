@@ -244,6 +244,35 @@ def test_missing_intermediate_queries_are_not_fabricated(tmp_path: Path) -> None
     assert record["query_counts"] == [4]
 
 
+def test_unchanged_large_checkpoints_are_not_reparsed_on_every_poll(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    output, checkpoints = tmp_path / "output", tmp_path / "checkpoints"
+    path = checkpoints / "own/checkpoint.json"
+    payload = {
+        "config": {"experiment": {"output_dir": str(output)}},
+        "metrics_history": [{"queries_used": 1, MSUN: 0, CURVE: 0}],
+    }
+    write(path, payload)
+    read = Path.read_text
+    reads = []
+
+    def counted_read(path: Path, *args: Any, **kwargs: Any) -> str:
+        reads.append(path)
+        return read(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "read_text", counted_read)
+    seen = {}
+    assert len(checkpoint_history(output, checkpoints, seen)) == 1
+    for _ in range(10):
+        assert checkpoint_history(output, checkpoints, seen) == []
+    assert reads == [path]
+    payload["metrics_history"].append({"queries_used": 2, MSUN: 1, CURVE: 1})
+    write(path, payload)
+    assert len(checkpoint_history(output, checkpoints, seen)) == 2
+    assert reads == [path, path]
+
+
 def test_actual_hydra_config_is_selected_resolved_and_credentials_redacted(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:

@@ -83,6 +83,10 @@ gates, then the remaining 34 units with at most four concurrent jobs. It preserv
 each attempt and automatically produces a development report after the sweep,
 including missing/failed units. `baseline_sweep_complete` is separate from
 `final_comparison_complete`, which also requires M1's full integrated method.
+The sweep is manually triggered after adopting the workflow; code-only pushes
+run the lightweight integration checks. The already-started sweep continues at
+its recorded revision. Results retain the capture source hash: wall-time claims
+must also account for observer version, hardware and initial model downloads.
 Official smoke tests use synthetic data and AnalyticOracle;
 they verify integration and do not count as materials-discovery results.
 
