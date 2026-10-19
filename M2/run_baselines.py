@@ -94,16 +94,25 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
     command = [
         sys.executable,
         str(REPO / "M1/run_experiment.py"),
-        "--method", method,
-        "--split", split,
-        "--system", system,
-        "--seed", str(seed),
-        "--attempt", str(attempt),
+        "--method",
+        method,
+        "--split",
+        split,
+        "--system",
+        system,
+        "--seed",
+        str(seed),
+        "--attempt",
+        str(attempt),
     ]
     history: list[dict[str, Any]] = []
     with live_log.open("w") as log:
         process = subprocess.Popen(
-            command, cwd=MADE, stdout=log, stderr=subprocess.STDOUT, env=os.environ.copy()
+            command,
+            cwd=MADE,
+            stdout=log,
+            stderr=subprocess.STDOUT,
+            env=os.environ.copy(),
         )
         try:
             while process.poll() is None:
@@ -139,11 +148,19 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
             ).strip(),
         }
         metadata_path.write_text(json.dumps(metadata, indent=2, allow_nan=False))
-    print(json.dumps({
-        "method": method, "system": system, "seed": seed,
-        "completed": completed, "complete_curve": record["complete_curve"],
-        "output": str(output_dir.relative_to(REPO)), "returncode": process.returncode,
-    }))
+    print(
+        json.dumps(
+            {
+                "method": method,
+                "system": system,
+                "seed": seed,
+                "completed": completed,
+                "complete_curve": record["complete_curve"],
+                "output": str(output_dir.relative_to(REPO)),
+                "returncode": process.returncode,
+            }
+        )
+    )
     if process.returncode:
         # Output is already masked by Actions when it contains a configured secret.
         # The benchmark should never print credentials; retain its failure context.
@@ -161,7 +178,9 @@ def main() -> None:
     args = parser.parse_args()
     if args.attempt < 1:
         parser.error("attempt must be positive")
-    raise SystemExit(run_unit(args.method, args.split, args.system, args.seed, args.attempt))
+    raise SystemExit(
+        run_unit(args.method, args.split, args.system, args.seed, args.attempt)
+    )
 
 
 if __name__ == "__main__":

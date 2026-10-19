@@ -21,7 +21,7 @@ jobs:
       matrix:
         method: [random_generator_baseline, chemeleon_generative_baseline]
     env:
-      MATERIALS_PROJECT_API_KEY: ${{ secrets.MATERIALS_PROJECT_API_KEY }}
+      MATERIALS_PROJECT_API_KEY: ${{ secrets.TUWEIKANG_MATERIALS_PROJECT_API_KEY }}
       OMP_NUM_THREADS: '2'
       MKL_NUM_THREADS: '2'
       UV_LINK_MODE: hardlink
@@ -38,7 +38,7 @@ jobs:
         shell: bash
         run: |
           if [ -z "$MATERIALS_PROJECT_API_KEY" ]; then
-            echo 'The MATERIALS_PROJECT_API_KEY repository secret is missing.'
+            echo 'The TUWEIKANG_MATERIALS_PROJECT_API_KEY repository secret is missing.'
             exit 1
           fi
       - name: Install the frozen MADE environment
