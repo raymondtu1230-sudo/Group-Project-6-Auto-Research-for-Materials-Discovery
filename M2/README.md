@@ -62,6 +62,15 @@ and exposes it to MADE as `MATERIALS_PROJECT_API_KEY`. No key belongs in source,
 configuration, logs or chat. The format check does not establish API access;
 only an actual Materials Project request does.
 
+The observer now emits separate process diagnostics: process CPU seconds, log
+bytes, and Chemeleon's numeric generation-batch marker, together with completed
+query counts. Its child output is unbuffered. A heartbeat is not evidence of a
+completed query; CPU/log activity is not a discovery score. Unavailable or
+incompatible `/proc` namespaces leave CPU counters unknown. Diagnostic JSONL
+files accompany each new attempt and never enter agent state or official metrics.
+Existing running workflows remain on their recorded revision; these diagnostics
+do not retroactively reveal the internal progress of those older attempts.
+
 `run_baselines.py` invokes the unchanged `M1/run_experiment.py`. It reads existing
 atomic checkpoints from a separate process to preserve official per-query
 evaluation history. That history is used only after evaluation and is never
@@ -137,6 +146,12 @@ The actual model check executes three CPU sampling calls and verifies identical
 continued/resumed structures, matching checkpoint state, and preservation of
 external Python/NumPy/Torch random streams. It is not a discovery benchmark.
 Materials performance numbers are populated only from completed protocol units.
+
+The first actual Random development unit has now completed and passed the
+offline validator: Mg-Sn-Sr, seed 17, B=20, mSUN@20=7 and AUDC=55.5. Its
+[raw artifact, provenance, validation, tables and curves](verification/20261019-random-gate/README.md)
+are committed together. This is one of 36 required baseline units, not an
+aggregate result. See [STATUS.md](STATUS.md) for the complete handoff state.
 
 ## Handoff schedule
 

@@ -11,6 +11,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -20,6 +21,48 @@ from typing import Any
 M2_DIR = Path(__file__).resolve().parent
 REPO = M2_DIR.parent
 MADE = REPO / "M1/MADE"
+
+
+def process_progress(pid: int, log_path: Path) -> dict[str, Any]:
+    """Observe CPU work and safe generation markers, never scientific labels.
+
+    A heartbeat, log growth, and CPU activity are different signals. None alone
+    establishes that an oracle query finished or that a process is stalled.
+    Linux process counters are optional so other supported hosts still run.
+    """
+    cpu_seconds = None
+    try:
+        # Some execution hosts expose a host /proc tree with namespace-local
+        # subprocess IDs. Never report another process's counters in that case.
+        self_stat = Path("/proc/self/stat").read_text()
+        if int(self_stat.split(" ", 1)[0]) != os.getpid():
+            raise OSError("Process IDs do not map to this /proc namespace")
+        stat = Path(f"/proc/{pid}/stat").read_text()
+        fields = stat.rsplit(") ", 1)[1].split()
+        cpu_seconds = round(
+            (int(fields[11]) + int(fields[12])) / os.sysconf("SC_CLK_TCK"), 3
+        )
+    except (OSError, ValueError, IndexError, AttributeError):
+        pass
+    log_bytes, generation_batch, generation_batch_size = 0, None, None
+    try:
+        with log_path.open("rb") as stream:
+            log_bytes = stream.seek(0, os.SEEK_END)
+            stream.seek(max(0, log_bytes - 16384))
+            tail = stream.read().decode("utf-8", errors="replace")
+        # Emit only the known numeric marker, not arbitrary log content which
+        # might contain credentials, private paths, or thousands of formulas.
+        batches = re.findall(r"Generating batch #(\d+) with (\d+) samples", tail)
+        if batches:
+            generation_batch, generation_batch_size = map(int, batches[-1])
+    except OSError:
+        pass
+    return {
+        "process_cpu_seconds": cpu_seconds,
+        "process_log_bytes": log_bytes,
+        "generation_batch": generation_batch,
+        "generation_batch_size": generation_batch_size,
+    }
 
 
 def checkpoint_history(
@@ -129,13 +172,18 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
         / f"seed_{seed}"
         / f"attempt_{attempt:02d}"
     )
-    if output_dir.exists() and any(output_dir.iterdir()):
-        raise ValueError("Run output already exists; preserve it and use a new attempt")
-    output_dir.mkdir(parents=True, exist_ok=True)
     log_path = output_dir / "m2_process.log"
     # The M1 driver rejects a nonempty output directory. Keep its capture log
     # outside that directory until the subprocess has finished.
     live_log = output_dir.parent / f"attempt_{attempt:02d}.process.log"
+    progress_log = output_dir.parent / f"attempt_{attempt:02d}.progress.jsonl"
+    if (
+        (output_dir.exists() and any(output_dir.iterdir()))
+        or live_log.exists()
+        or progress_log.exists()
+    ):
+        raise ValueError("Run output already exists; preserve it and use a new attempt")
+    output_dir.mkdir(parents=True, exist_ok=True)
     command = [
         sys.executable,
         str(REPO / "M1/run_experiment.py"),
@@ -152,6 +200,7 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
     ]
     history: list[dict[str, Any]] = []
     seen: dict[Path, tuple[int, int]] = {}
+    previous_cpu = None
     started, last_progress = time.monotonic(), 0.0
     print(f"Starting real protocol unit: {method} {system} seed={seed}", flush=True)
     with live_log.open("w") as log:
@@ -160,7 +209,7 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
             cwd=MADE,
             stdout=log,
             stderr=subprocess.STDOUT,
-            env=os.environ.copy(),
+            env={**os.environ, "PYTHONUNBUFFERED": "1"},
         )
         try:
             while process.poll() is None:
@@ -173,11 +222,23 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
                     )
                 if time.monotonic() - last_progress >= 45:
                     last_progress = time.monotonic()
-                    print(
-                        f"Process active; elapsed={int(last_progress - started)}s, "
-                        f"captured_queries={len(history)}",
-                        flush=True,
+                    progress = process_progress(process.pid, live_log)
+                    cpu = progress["process_cpu_seconds"]
+                    progress.update(
+                        elapsed_seconds=int(last_progress - started),
+                        captured_queries=len(history),
+                        cpu_advanced=(
+                            cpu > previous_cpu
+                            if cpu is not None and previous_cpu is not None
+                            else None
+                        ),
+                        scope="process_diagnostics_not_discovery_metrics",
                     )
+                    previous_cpu = cpu
+                    encoded = json.dumps(progress, allow_nan=False)
+                    with progress_log.open("a") as stream:
+                        stream.write(encoded + "\n")
+                    print(f"Progress diagnostics: {encoded}", flush=True)
                 time.sleep(0.1)
         except BaseException:
             process.terminate()
@@ -191,6 +252,8 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
     if secret:
         live_log.write_text(live_log.read_text().replace(secret, "[REDACTED]"))
     live_log.replace(log_path)
+    if progress_log.exists():
+        progress_log.replace(output_dir / "m2_progress.jsonl")
     metadata_path = output_dir / "run_metadata.json"
     metadata = json.loads(metadata_path.read_text()) if metadata_path.is_file() else {}
     completed = process.returncode == 0 and metadata.get("status") == "completed"
@@ -200,6 +263,7 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
         metadata["m2_capture"] = {
             "complete_curve": record["complete_curve"],
             "resolved_config_saved": config_saved,
+            "progress_diagnostics_saved": (output_dir / "m2_progress.jsonl").is_file(),
             "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             "made_upstream_commit": metadata.get("protocol_settings", {}).get(
                 "made_upstream_commit"
