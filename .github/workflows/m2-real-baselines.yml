@@ -6,6 +6,7 @@ on:
     paths:
       - .github/workflows/m2-real-baselines.yml
       - M2/run_baselines.py
+      - M2/check_key.py
   workflow_dispatch:
 
 permissions:
@@ -34,13 +35,8 @@ jobs:
         with:
           enable-cache: true
           cache-dependency-glob: M1/MADE/uv.lock
-      - name: Check secret is configured
-        shell: bash
-        run: |
-          if [ -z "$MATERIALS_PROJECT_API_KEY" ]; then
-            echo 'The TUWEIKANG_MATERIALS_PROJECT_API_KEY repository secret is missing.'
-            exit 1
-          fi
+      - name: Check credential format without printing its value
+        run: python M2/check_key.py
       - name: Install the frozen MADE environment
         working-directory: M1/MADE
         run: uv sync --locked
@@ -66,11 +62,12 @@ jobs:
           --split dev
           --system ${{ steps.unit.outputs.system }}
           --seed 17
+          --attempt $((GITHUB_RUN_NUMBER * 1000 + GITHUB_RUN_ATTEMPT))
       - name: Preserve raw results and failures
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: m2-real-${{ matrix.method }}-${{ github.run_id }}
+          name: m2-real-${{ matrix.method }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             M1/MADE/results/protocol_v1/
             M1/MADE/checkpoints/

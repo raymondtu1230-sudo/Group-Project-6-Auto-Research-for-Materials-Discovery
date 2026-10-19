@@ -169,6 +169,9 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
 
 
 def main() -> None:
+    key = os.environ.get("MATERIALS_PROJECT_API_KEY")
+    if key:
+        os.environ["MATERIALS_PROJECT_API_KEY"] = key.strip()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--method", required=True)
     parser.add_argument("--split", choices=("dev", "check"), default="dev")
