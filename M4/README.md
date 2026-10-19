@@ -1,3 +1,5 @@
+**交付范围更新：main 仅新增 M4/。M1 配置及集成测试另存 integration/，待 M1/M3 后续接入；当前 main 不自动启用 M4。**
+
 **2026-10-19 更新：已完成 M1 接口接入和 synthetic smoke，实际状态与复现见 [M1_STATUS.md](M1_STATUS.md)。默认 Planner 尚未使用 m1_memory，性能实验仍待 M3 接入消费。**
 
 # PE6203 M4 Memory Module — 独立初版

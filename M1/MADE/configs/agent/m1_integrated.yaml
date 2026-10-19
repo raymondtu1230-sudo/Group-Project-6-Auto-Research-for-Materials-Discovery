@@ -14,15 +14,7 @@ enable_tool_routing: false
 query_budget: ${environment.budget}
 memory_size: 20
 generators: {}
-# M4 package: install editable from ../../M4 before running this config.
-# Protocol v1 runs one episode per process. Use a fresh manager per episode.
-memory_manager:
-  _target_: m4_memory.m1_adapter.M4MemoryManager
-  log_path: ${hydra:runtime.output_dir}/m4_evidence.jsonl
-  run_id: ${oc.env:M4_RUN_ID,m4-local}
-  episode_id: ${oc.env:M4_EPISODE_ID,0}
-  limit: 8
-  max_chars: 4000
+memory_manager: null
 self_correction_policy: null
 exploration_policy: null
 tool_router: null
