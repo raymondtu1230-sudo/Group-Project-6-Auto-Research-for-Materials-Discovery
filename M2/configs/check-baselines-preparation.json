@@ -1,0 +1,97 @@
+{
+  "kind": "preparation_only_no_experiments_started",
+  "split": "check",
+  "dispatch_enabled": false,
+  "protocol_sha256": "e9305aefd75fc32612729b7cfd760817234ad006bae99594271badbd69ca7cef",
+  "systems_sha256": "9009990961414258e67070254a4fa00d8e18501c014d8ca34c6c86dc54b70db1",
+  "query_budget": 20,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "unit_count": 12,
+  "matrix": {
+    "include": [
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Ga-Ho-Lu",
+        "seed": 17
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Ga-Ho-Lu",
+        "seed": 29
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Ga-Ho-Lu",
+        "seed": 43
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Al-Li-V",
+        "seed": 17
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Al-Li-V",
+        "seed": 29
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Al-Li-V",
+        "seed": 43
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Al-V-Zn",
+        "seed": 17
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Al-V-Zn",
+        "seed": 29
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Al-V-Zn",
+        "seed": 43
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Co-Pd-Tl",
+        "seed": 17
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Co-Pd-Tl",
+        "seed": 29
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "check",
+        "system": "Co-Pd-Tl",
+        "seed": 43
+      }
+    ]
+  },
+  "gates_before_check_dispatch": [
+    "Confirm the arrangement with the colleague after their reply",
+    "Verify safe Chemeleon recovery or an adequately long CPU host",
+    "Verify one check unit before authorizing the remaining units",
+    "Use distinct attempt IDs and retain raw outputs and stage costs"
+  ],
+  "hidden_status": "Not requested"
+}

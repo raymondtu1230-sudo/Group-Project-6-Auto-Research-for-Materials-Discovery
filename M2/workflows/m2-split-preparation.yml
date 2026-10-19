@@ -1,0 +1,35 @@
+name: M2 baseline split preparation only
+
+on:
+  workflow_dispatch:
+    inputs:
+      split:
+        description: Prepare a matrix only; no scientific jobs are started
+        type: choice
+        required: true
+        default: check
+        options: [dev, check, hidden]
+
+permissions:
+  contents: read
+
+jobs:
+  prepare-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare the unchanged protocol matrix without API calls
+        env:
+          SELECTED_SPLIT: ${{ inputs.split }}
+        run: |
+          python -m pip install PyYAML==6.0.2
+          python M2/prepare_split.py --split "$SELECTED_SPLIT" --output M2/results/split-preparation.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: m2-split-preparation-${{ inputs.split }}-${{ github.run_id }}
+          path: M2/results/split-preparation.json
+          retention-days: 90
