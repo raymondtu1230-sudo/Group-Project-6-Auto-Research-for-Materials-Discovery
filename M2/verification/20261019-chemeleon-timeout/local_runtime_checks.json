@@ -20,5 +20,6 @@
   "long_verbose_numeric_only_parse": "passed",
   "M1_files_changed": false,
   "python_syntax": "passed",
-  "pytest_and_official_smoke": "pending fresh GitHub Actions run"
+  "pytest_and_official_smoke": "Passed separately in GitHub run 39234330794 on 4284a7d8; not run locally",
+  "explicit_launch_path_guard": "passed; push restricted to the single immutable request record and M2 branch"
 }

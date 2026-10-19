@@ -61,29 +61,33 @@ limitation does not affect the completed scientific result. The independent
 folder publication changes packaging and documentation, not the tested code or
 scientific settings.
 
-## Ended Chemeleon attempts and bounded recovery
+## Current experiment status (2026-10-19 10:07 UTC)
 
-At 17:47 Singapore time on 19 October, run 39213257750's Chemeleon gate
-failed at the external 165-minute action limit. Older run 39211212095 ended
-with a cancelled conclusion at 17:40, near its 180-minute job limit. Neither
-remains active. The raw model logs show three complete sampling batches in
-each attempt and actual progress into batch 4. These logs establish substantial
-computation; the earlier zero-query heartbeat did not establish a deadlock.
+The original run 39213257750 ended with a failed Chemeleon gate after the
+external 165-minute action limit. Its model log completed three generation
+batches and entered batch four; this establishes actual computation during
+that attempt, rather than a deadlock. The older run 39211212095 ended with a
+cancelled conclusion. Its log does not establish who or what cancelled it.
 
-The [timeout audit](verification/20261019-chemeleon-timeout/README.md) retains
-both untouched artifacts, GitHub logs, checksums and the original partial report.
-No complete Chemeleon trajectory, generator checkpoint, resolved configuration
-or 1–20 query history was produced. The report accepts only the already verified
-Random unit: one of 36 baseline units, with 35 still missing.
+The [failure audit and original archives](verification/20261019-chemeleon-timeout/README.md)
+preserve both attempts, SHA256 checksums, absent fields and the partial report.
+Neither Chemeleon attempt has a completed trajectory or accepted metrics.
+The report accepts one Random unit and records 35 missing baseline units.
 
-One Chemeleon-only recovery attempt is prepared, pending checks and actual
-launch. The manual workflow defaults to that single first development unit;
-it skips Random and the wider sweep and blocks a rerun of the same retry run.
-Its external action limit is 330 minutes inside a 350-minute job. Numeric
-sampling-step diagnostics supplement the existing CPU/log/batch observation.
-M1's official scientific settings, CPU, seed, 1024-candidate pool and batch
-size 256 remain unchanged. Recovery status is recorded in the audit JSON;
-preparation is not a completed result. No automatic retry loop is enabled.
+Exactly one bounded Chemeleon retry has now started:
+[run 39234974449](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39234974449),
+revision `3e07d9f0`, job `118001953048`. At 10:07 UTC, environment and
+Chrome installation had completed and the full-budget action step was in
+progress. No sampling/query progress or completed artifact was independently
+visible through the jobs API at that check; this is a launch confirmation,
+not a claim of scientific progress or completion.
+
+The retry retains the original scientific settings and raises only the
+external action/job limits to 330/350 minutes with batch/CPU/log diagnostics.
+It selects one Chemeleon Mg-Sn-Sr / seed 17 / B=20 unit; Random and the wider
+sweep are excluded. The original launch request is preserved unchanged.
+No new experiment was started by this status check. See the timestamped
+[retry receipt](verification/20261019-chemeleon-timeout/retry-status.json).
 
 ## Next required handovers
 
@@ -104,3 +108,21 @@ preparation is not a completed result. No automatic retry loop is enabled.
 The full reference and routing-off comparison cannot honestly be completed
 before the other owners' components and the frozen reference exist. Their
 absence is a team dependency, not a reason to invent or substitute scores.
+
+The recovery implementation passed fresh GitHub CI 39234330794 (4284a7d8):
+17 original M1 tests, 46 M2 tests without skips, Ruff, reproducible installation
+and unchanged official smoke. The final launch-trigger revision ef7f8c2 also
+passed complete CI 39234757674. Source details are in the timeout folder
+`recovery_ci.json`. The observer now also emits numeric sampling steps, totals
+and elapsed sampling seconds. No additional retry is authorized automatically.
+
+Runtime continuity is a user requirement. Preserve the current retry instead of
+restarting it for timeout edits. The current run's limits are fixed at launch;
+GitHub-hosted jobs also have a six-hour hard cap. Initial generation has no
+verified mid-batch restart point. See `verification/20261019-chemeleon-timeout/RUNTIME_SAFEGUARDS.md`
+for admission and preservation rules before later experiments.
+
+At the subsequent live-log check, CPU counters increased and sampling batch 1
+advanced from step 4/256 to 7/256. The actual numerical observations are in
+`verification/20261019-chemeleon-timeout/live-progress.json`; this establishes
+sampling activity, not a completed query or final performance score.

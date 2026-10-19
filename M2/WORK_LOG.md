@@ -92,3 +92,14 @@ unit-level scores only with their raw evidence and never as a full comparison.
 - Retained main and the one M2 development branch because integration review
   and scientific experiments remain open. The independent main/M2 package is
   available; full baseline and full-reference comparisons remain incomplete.
+
+- Recovery-code CI 39234330794 passed: 17 M1 and 46 M2 tests without skips,
+  Ruff, reproducible installation and unchanged official smoke. Preserved the
+  actual CI source/hash/artifact identity in `recovery_ci.json`.
+- The default branch does not activate M2 workflow files. A single immutable
+  `retry-request.json` commit therefore requests the one authorized recovery
+  on the development branch. The exact-path push trigger excludes ordinary
+  changes; its empty-input fallback selects Chemeleon only and no sweep.
+- Launched run 39234974449 at source 3e07d9f0. It has entered the official protocol step, not a
+  completed performance result. The existing result monitor follows this run
+  and is instructed not to spend the once-only retry authorization again.
