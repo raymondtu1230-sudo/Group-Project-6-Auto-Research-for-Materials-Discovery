@@ -47,3 +47,33 @@ what is still open. Used for the individual report.
 - M1: hidden split in the runner; freeze revision on 25 Oct.
 - M2: check-split workflow run for the 24 check baseline units.
 - M5: integration ETA into `m1_integrated.yaml`.
+
+## 2026-10-20
+
+- PR #3 (M6 folder) and PR #4 (repo cleanup) are merged into `main`. Personal drafts
+  (messages, report and slide templates, sample outputs) are kept out of the repo.
+  Only project files are committed.
+- Checked M6 on `main` (`221e159`): 9 tests pass, Ruff is clean, and the
+  `run_check_baselines.sh` dry run lists all 24 check units (0 completed).
+- Read the team updates from M3, M4 and M5 and changed the protocol docs to match:
+  - M3 adds `m3_full`, `m3_planning_off` and `m3_self_correction_off` to
+    `run_experiment.py` through `M3/install.py`. The check/hidden rule now names the
+    three allowed methods, and the runner proposal uses an allow-list
+    (`PROTOCOL_ADOPTION.md` §3, §4).
+  - M3's ablations compare with `m1_baseline`, not `m1_full`. Added an
+    ablation-reference rule: those results go in a separate table from the
+    component ablation (`PROTOCOL_ADOPTION.md` §5).
+  - M3's planner reads `m1_memory` and the default planner does not, so the memory
+    ablation depends on which planner M1 freezes.
+  - M5 asked M4 for rejected/error events before 26 Oct. Without them, the
+    wasteful-exploration example uses evaluated queries only.
+- Received M3's method text and slides (`M3/report/M3_METHOD.md`,
+  `M3/report/M3_Method_Draft.pptx`).
+- No benchmark job was launched.
+
+### Open
+
+- Send the group message (M2: dispatch Chemeleon × check) and the TA email.
+- M1: allow-list for check/hidden methods, hidden split, which planner gets frozen.
+- M4: rejected/error event capture before 26 Oct.
+- Collect M1, M2, M4 and M5 method text by 24 Oct.

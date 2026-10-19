@@ -1,6 +1,7 @@
 # M6 Protocol Adoption
 
-Status: adopted 2026-10-19 at team revision `73dc953`. Owner: M6.
+Status: adopted 2026-10-19 at team revision `73dc953`; updated 2026-10-20 for M3's
+added methods and the ablation reference (sections 3 and 5). Owner: M6.
 
 ## 1. Adoption
 
@@ -35,10 +36,12 @@ file. Results from different protocol versions are never pooled.
 
 Protocol v1 already forbids ablations on check/hidden systems. M6 adds:
 
-1. **No agent run on the check set before the freeze.** `m1_full` (and any
-   `m1_*` or `*_off` variant) is run on check systems only at the frozen release revision
-   (planned 25 Oct). Before that, nobody runs the agent on check systems or looks at
-   per-system check results for the agent.
+1. **No agent run on the check set before the freeze.** Only three methods ever run on
+   check or hidden systems: the frozen `m1_full`, Random and Chemeleon. `m1_full` runs
+   there only at the frozen release revision (planned 25 Oct). Every other method stays on
+   dev, including `m1_baseline`, the `*_off` ablations and M3's `m3_full`,
+   `m3_planning_off` and `m3_self_correction_off`. Before the freeze, nobody runs the
+   agent on check systems or looks at per-system check results for it.
 2. **Baselines may run on the check set now.** Random and Chemeleon have nothing to
    tune, so running them early leaks no information into the agent and saves time.
 3. **No changes after seeing check results.** If the agent is changed after its check
@@ -68,8 +71,10 @@ M2 (wrapper/evaluator) once the TA releases the systems:
    `M2/evaluate.py`. Each already resolves systems from `protocol/<split>_systems.json`,
    so nothing else changes. The output path becomes
    `results/protocol_v1/<method>/hidden/<system>/seed_<seed>/attempt_NN/`.
-3. **Guard the methods.** In `run_experiment.py`, reject `--split hidden` (and `check`)
-   for any ablation method (`*_off`) and for `m1_baseline`. This makes rule 3.1 and
+3. **Guard the methods.** In `run_experiment.py`, accept `--split check` and
+   `--split hidden` only for `m1_full`, `random_generator_baseline` and
+   `chemeleon_generative_baseline`. Use an allow-list, not a deny-list, so that methods
+   added later (such as M3's `m3_*`) are blocked automatically. This makes rule 3.1 and
    protocol v1's no-ablation rule enforceable in code.
 4. **Record the source.** Commit the TA email or announcement date and the exact
    system list in a short `M1/protocol/HIDDEN_SOURCE.md`. No hidden system is ever
@@ -83,7 +88,26 @@ M2 (wrapper/evaluator) once the TA releases the systems:
 Until then: `run_check_baselines.sh` has `--split` and `generalization.py` has
 `--heldout-split` so both work with `hidden` as soon as the runner accepts it.
 
-## 5. Seeds and repeats on held-out systems
+## 5. Ablation reference (added 2026-10-20)
+
+Protocol v1 defines a component ablation as the frozen `m1_full` with one switch turned
+off, run on dev at the same seeds. Some owners compare their component with
+`m1_baseline` instead (M3: `m3_full` vs `m1_baseline`). The report keeps the two apart:
+
+- **Component ablation (report Table 2):** `m1_full` vs `m1_full` with one switch off,
+  same frozen revision, paired by system and seed. This answers "what does each
+  component add to our final agent?"
+- **Component vs M1 reference (separate table, labelled as such):** for example,
+  `m3_full` vs `m1_baseline`. This answers "does the component help on top of the plain
+  M1 agent?" It is useful evidence, but it is not the final agent's ablation.
+- `m1_baseline` results are never reported as "our method" on the leaderboard.
+
+Memory only matters if the planner reads `m1_memory`. M3's planner does, and the default
+diversity planner does not. So the memory ablation is only meaningful if the frozen agent
+uses M3's planner. M1 decides this at the freeze, and the report says which planner the
+frozen agent uses.
+
+## 6. Seeds and repeats on held-out systems
 
 - Default: 3 seeds (17, 29, 43) on check and hidden, like dev.
 - Fallback if compute runs out: seed 17 only, for **every** method on that split, decided
