@@ -1,0 +1,2 @@
+# Same lint/format rules as M1/MADE (and M3).
+extend = "../M1/MADE/pyproject.toml"
