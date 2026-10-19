@@ -1,3 +1,9 @@
+# Current M2 delivery — 20 October 2026
+
+**19/36 dev baseline units accepted: Random18/18;Chemeleon1/18;zeroauditissues.** The remaining17Chemeleonunits are blocked at recoveryadmission,notrunning. This isnotcompletionofallM2work. See [STATUS](STATUS.md), [closeout and blockers](verification/20261020-overnight-closeout/README.md), [complete preserved audit](verification/preserved-39306348134/report/validation.json), and [unexecuted4070pilotguide](GPU_PILOT_GUIDE_4070.md). Main's19-archive reusemanifest iscurrent;do not rerun acceptedunits. NoM1sharedintegration,check/hidden,GPUorpaidresourceaction occurred.
+
+## Preserved earlier documentation
+
 # M2: Tool routing and evaluation
 
 ## 20 October continuation

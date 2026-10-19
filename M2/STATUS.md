@@ -1,3 +1,22 @@
+## Verified overnight closeout — 20 October 2026, 02:56 Asia/Singapore
+
+**19/36 distinct dev baseline units accepted: Random 18/18; Chemeleon 1/18. Zero validation issues.** All 17 missing Random jobs in run 39286848821 succeeded. Its old-source final aggregation failed with "Protocol or material reference revision differs"; no scientific unit was rerun for that report failure. Preservation-only run [39306348134](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39306348134) reused existing ZIP bytes, checksum-verified 23 originals (17 Random plus six archives from the two failed recovery fixtures), published them to main/M2, and executed the current offline evaluator plus unchanged official metrics. The original Mg-Sn-Sr/17 pair is retained and counted once.
+
+Evidence and score tables: [preserved-39306348134](verification/preserved-39306348134/). The actual report says validated_runs=19, issues=[], missing_baseline_units=17, baseline_sweep_complete=false, final_comparison_complete=false. Its broader missing_units=35 also includes M1's 18 unavailable full-reference units; do not misreport those as 35 missing M2 baselines. Each accepted unit has B=20 and 20 recorded queries. The checksum-pinned main/M2 reuse manifest now contains 19 archives; do not reschedule them. The development branch's older delivery snapshot must not override this main manifest.
+
+**Chemeleon recovery admission remains blocked.** Run [39297647516](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39297647516) exited with "Batch model, input or execution identity mismatch" during replay. The exact compare and runner-identity gate did not execute. Which identity field differed is not established by the hash-only saved metadata. This is an explicit failure, not a hang and not a pass. No unchanged retry, full1024 production-wrapper run or formal missing Chemeleon unit was launched. The 17 missing Chemeleon units need a rigorously diagnosed and verified recovery path/full-wrapper cost proof, or an adequately long persistent CPU runtime. Do not remove guards, reduce scientific settings, purchase resources or assume GPU approval to proceed.
+
+Source-specific dev CI [39297647411](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39297647411) on 053d8c3 passed 17 original M1 tests, 62 M2 tests, focused/all-M2 Ruff, reproducible installation and original synthetic smoke. This is not a pass for current shared-main M1/M5 unseeded integration: that separately recorded failure remains an owner dependency. Preservation-only source 78346d6 CI [39306348142](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39306348142) also completed successfully: 17 M1 tests, 62 M2 tests, both Ruff checks, installation reproducibility and original smoke.
+
+Raw failure logs, job/artifact metadata and closeout cross-check are in [20261020-overnight-closeout](verification/20261020-overnight-closeout/). All source code, official science parameters and original archives remain unchanged. Known model/API fees are zero; hardware/electricity/failed-attempt costs remain incompletely priced. No overall method comparison or final slides are claimed.
+
+[RTX4070 pilot preparation](GPU_PILOT_GUIDE_4070.md) is saved; no GPU connection or experiment was performed. Clone only the repository and create a locked environment on that machine; do not migrate all personal data or copy CPU caches. OS-specific steps and a formal GPU comparison protocol await the user's later involvement and M1/M6 alignment.
+
+This is a bounded closeout, **not completion of all M2 work**. After evidence and final CI are recorded, pause the hourly follow-up per the user's stop rule, with no healthy science cancelled (none remains active). M1 still owns integration/freeze/full reference; routing-off awaits that reference. Check/hidden remain on hold. Prepared handoff messages are drafts for the user, not sent or accepted. Keep draft PR #2 and its branch unmerged.
+
+
+## Historical snapshots (superseded)
+
 # M2 status: 20 October 2026 takeover
 
 ## Confirmed durable snapshot — 20 October 2026, 01:27 Asia/Singapore

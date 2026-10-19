@@ -1,0 +1,20 @@
+{
+  "validated_units": 19,
+  "distinct_units": 19,
+  "random": 18,
+  "chemeleon": 1,
+  "all_B20": true,
+  "remaining_baselines": 17,
+  "issues": [],
+  "archive_count": 23,
+  "capture_complete": true,
+  "science_dispatches_this_turn": 0,
+  "source_runs": [
+    39286848821,
+    39286986254,
+    39297647516
+  ],
+  "raw_publication_run": 39306348134,
+  "raw_publication_source": "78346d6d92fcfb18fa44447d650b9e6f77e43adc",
+  "note": "This is a structural cross-check of the actually executed hosted official-metric audit, not an additional scientific run."
+}

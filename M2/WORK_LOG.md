@@ -1,3 +1,15 @@
+# Latest bounded closeout — 20 October 2026, 02:57 Asia/Singapore
+
+Accepted dev baseline coverage advanced to **19/36** (Random18 + Chemeleon1), zero audit issues. All17 missing Random jobs succeeded; their old-source aggregate failed, and no science was rerun. Evidence-only capture39306348134 reused old ZIP bytes, preserved23 original archives with matching GitHubSHA256, ran the current offline audit/officialmetrics and published under main/M2/verification/preserved-39306348134. The original pair counts once. Reuse manifest now pins19 acceptedarchives; allpaths are present on main.
+
+Exact recovery39297647516 failed at replay identity mismatch, before exactcomparison. Preserved original continuous,interrupt,failedresume archives and full failurelog; root identityfield is not established. No retry or formalChemeleon dispatch. Remaining17 need diagnosed exactrecovery/fullwrapperproof or adequateCPU runtime. Main/M1/M5, scientificparameters,check/hidden and GPU remainuntouched. NewGPUguide and unsenthandoffdraft are on main/M2.
+
+Source78346d6 CI39306348142 completed:17M1 +62M2 passes,no skips,bothRuff,installationreproducibility,officialsmoke. This dev-configuration result is separate from existing shared-mainM1/M5 failure. PR2 verified open,draft,unmerged;branchretained. Evidence/statuspublication uses expected-headleases,allmainchanges underM2. Localdisk/proxy failures did not delete userdata or prevent hostedpublication.
+
+Per user'sstoprule,close boundedwork and pausehourlyfollowup after finalverification;not a claim allM2 iscomplete. See verification/20261020-overnight-closeout/README.md for blockers,tasksand links.
+
+## Preserved historical log
+
 # M2 work log
 
 ## Latest continuation — 20 October 2026, Singapore time

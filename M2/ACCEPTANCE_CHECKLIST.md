@@ -1,3 +1,14 @@
+# Current closeout acceptance — 20 October 2026, 02:57 Asia/Singapore
+
+- Scientific audit: **19/36** distinct devbaselines accepted,issues0;Random18/18,Chemeleon1/18. Noqueued,activeorunverifiedRandomunits remain. Main/M2/verification/preserved-39306348134 contains23 checksumverifiedoriginalZIPs;originalpair countedonce.
+- Devsource78346d6 CI39306348142 passed17 originalM1 tests+62M2tests,no skips,focused/allM2Ruff,reproducibleinstaller and unchangedofficialsyntheticsmoke. Saved logs in verification/20261020-overnight-closeout/. This is not validation of the separate shared-mainM1/M5unseededdefault;thatownerissue remains.
+- Exactrecovery39297647516 explicitlyfailedatidentityguardbeforecomparison. No fullpoolproductionwrapperor17formalChemeleonunitsadmitted. No fabricatedpass,unchangedretry,scientificconfigreduction,GPUorchecklaunch.
+- Main19-archive verified_baselines manifest is canonical. Donotuse the olderbranchmanifestto rerunnewlyacceptedunits. Existing slidesremainhistoricalpartialdrafts.
+- M1integration/freeze/reference and M6check/hidden responsibilities unchanged;unsentprogressdraft in handoffs/20261020_PROGRESS_FOR_M1_M6_ZH.md. Recipientacceptance isunconfirmed. KeepPR2draft/unmerged.
+- Allindependentrawpreservation/currentCIcomplete;peruserstoprulepausefollowupwith remainingrecovery/runtime/owner/userdependencies. This is not wholeM2completion.
+
+## Historical checklist (superseded where inconsistent)
+
 # Current acceptance update: 20 October 2026
 
 ## Current independent verification update
