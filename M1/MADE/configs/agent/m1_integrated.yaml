@@ -1,0 +1,37 @@
+_target_: made.agents.m1_integrated.M1IntegratedAgent
+
+defaults:
+  - planner: diversity
+  - generator: random
+  - filter: smact
+  - scorer: random
+
+enable_planning: true
+enable_memory: true
+enable_reflection: false
+enable_exploration: false
+enable_tool_routing: false
+query_budget: ${environment.budget}
+memory_size: 20
+generators: {}
+memory_manager: null
+self_correction_policy: null
+exploration_policy: null
+tool_router: null
+
+planner:
+  seed: ${experiment.seed}
+  num_compositions: 1
+  num_candidates: 8
+  selection_strategy_kwargs:
+    distance_metric: euclidean
+    unattempted_weight: 5.0
+    attempt_weight_factor: 0.7
+    failure_weight_factor: 0.3
+    mask_same_reduced_formula: true
+
+generator:
+  seed: ${experiment.seed}
+
+scorer:
+  seed: ${experiment.seed}
