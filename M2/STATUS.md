@@ -61,19 +61,33 @@ limitation does not affect the completed scientific result. The independent
 folder publication changes packaging and documentation, not the tested code or
 scientific settings.
 
-## Still active / not yet verified
+## Current experiment status (2026-10-19 10:07 UTC)
 
-At the handoff, run 39213257750's Chemeleon gate is still executing. Its older
-observer reports heartbeats with zero completed oracle queries, which cannot
-distinguish slow initial generation from a stall. The official configuration
-first generates a cached pool and the M1 protocol forces CPU; no pool, seed,
-batch-size or scientific setting has been reduced to obtain a faster score.
-The older run 39211212095 also remains part of the failed/completed-run audit.
+The original run 39213257750 ended with a failed Chemeleon gate after the
+external 165-minute action limit. Its model log completed three generation
+batches and entered batch four; this establishes actual computation during
+that attempt, rather than a deadlock. The older run 39211212095 ended with a
+cancelled conclusion. Its log does not establish who or what cancelled it.
 
-The active workflow is pinned to `bf62711`; new code commits do not update its
-running jobs. Its remaining 34 baseline units depend on both initial gates.
-Do not launch a duplicate sweep or label an active run completed. Inspect real
-query/checkpoint output and the final artifacts before accepting each result.
+The [failure audit and original archives](verification/20261019-chemeleon-timeout/README.md)
+preserve both attempts, SHA256 checksums, absent fields and the partial report.
+Neither Chemeleon attempt has a completed trajectory or accepted metrics.
+The report accepts one Random unit and records 35 missing baseline units.
+
+Exactly one bounded Chemeleon retry has now started:
+[run 39234974449](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39234974449),
+revision `3e07d9f0`, job `118001953048`. At 10:07 UTC, environment and
+Chrome installation had completed and the full-budget action step was in
+progress. No sampling/query progress or completed artifact was independently
+visible through the jobs API at that check; this is a launch confirmation,
+not a claim of scientific progress or completion.
+
+The retry retains the original scientific settings and raises only the
+external action/job limits to 330/350 minutes with batch/CPU/log diagnostics.
+It selects one Chemeleon Mg-Sn-Sr / seed 17 / B=20 unit; Random and the wider
+sweep are excluded. The original launch request is preserved unchanged.
+No new experiment was started by this status check. See the timestamped
+[retry receipt](verification/20261019-chemeleon-timeout/retry-status.json).
 
 ## Next required handovers
 
