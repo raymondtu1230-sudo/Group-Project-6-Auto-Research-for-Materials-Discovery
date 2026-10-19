@@ -1,0 +1,6 @@
+method,split,system,n,mSUN_at_B_n,mSUN_at_B_mean,mSUN_at_B_std,AUDC_n,AUDC_mean,AUDC_std,wall_time_seconds_n,wall_time_seconds_mean,wall_time_seconds_std,known_cost_usd_n,known_cost_usd_mean,known_cost_usd_std,AF_vs_random_n,AF_vs_random_mean,AF_vs_random_std,EF_vs_random_n,EF_vs_random_mean,EF_vs_random_std,AF_vs_chemeleon_n,AF_vs_chemeleon_mean,AF_vs_chemeleon_std,EF_vs_chemeleon_n,EF_vs_chemeleon_mean,EF_vs_chemeleon_std
+chemeleon_generative_baseline,dev,Mg-Sn-Sr,1,1,16.0,,1,161.0,,1,15767.025,,1,0.0,,1,2.375,,1,2.2857142857142856,,1,1.0,,1,1.0,
+random_generator_baseline,dev,Au-K-Tb,3,3,2.3333333333333335,0.5773502691896257,3,18.5,4.769696007084728,3,751.7326666666667,156.25866680710334,3,0.0,0.0,3,1.0,0.0,3,1.0,0.0,0,,,0,,
+random_generator_baseline,dev,Co-Dy-W,2,2,1.0,1.4142135623730951,2,2.5,3.5355339059327378,2,1002.4635000000001,158.19746462096037,2,0.0,0.0,2,1.0,0.0,2,0.5,0.7071067811865476,0,,,0,,
+random_generator_baseline,dev,Co-Mg-Na,2,2,2.0,1.4142135623730951,2,31.5,18.384776310850235,2,831.912,126.21856044179873,2,0.0,0.0,2,1.0,0.0,2,1.0,0.0,0,,,0,,
+random_generator_baseline,dev,Mg-Sn-Sr,1,1,7.0,,1,55.5,,1,952.717,,1,0.0,,1,1.0,,1,1.0,,1,0.0,,1,0.4375,

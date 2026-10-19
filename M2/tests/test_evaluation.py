@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
@@ -23,6 +24,66 @@ from M2.run_baselines import (
     preserve_configuration,
     preserve_history,
 )
+
+
+def reference_entry() -> dict:
+    return {
+        "composition": {"Li": 1},
+        "energy": -1.0,
+        "attribute": {
+            "structure": {
+                "lattice": {
+                    "matrix": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+                    "alpha": 90.0,
+                    "volume": 1.0,
+                },
+                "sites": [
+                    {
+                        "abc": [0.5, 0, 0],
+                        "xyz": [0.5, 0, 0],
+                        "species": [{"element": "Li", "occu": 1}],
+                        "properties": {"magmom": 0.0},
+                    }
+                ],
+            }
+        },
+    }
+
+
+def test_reference_hash_uses_exact_independent_structure_data() -> None:
+    original = reference_entry()
+    retained = deepcopy(original)
+    other_cpu = deepcopy(original)
+    other_cpu["attribute"]["structure"]["lattice"]["alpha"] += 1e-14
+    other_cpu["attribute"]["structure"]["sites"][0]["xyz"][0] += 1e-16
+    assert evaluate.snapshot_hash([original]) == evaluate.snapshot_hash([other_cpu])
+    assert original == retained
+
+
+@pytest.mark.parametrize("field", ["energy", "matrix", "abc", "species", "properties"])
+def test_reference_hash_still_rejects_independent_data_changes(field: str) -> None:
+    original = reference_entry()
+    changed = deepcopy(original)
+    structure = changed["attribute"]["structure"]
+    if field == "energy":
+        changed["energy"] += 1e-14
+    elif field == "matrix":
+        structure["lattice"]["matrix"][0][0] += 1e-14
+    elif field == "abc":
+        structure["sites"][0]["abc"][0] += 1e-14
+    elif field == "species":
+        structure["sites"][0]["species"][0]["element"] = "Na"
+    else:
+        structure["sites"][0]["properties"]["magmom"] = 1.0
+    assert evaluate.snapshot_hash([original]) != evaluate.snapshot_hash([changed])
+
+
+def test_reference_hash_does_not_drop_cartesian_data_without_a_basis() -> None:
+    original = reference_entry()
+    del original["attribute"]["structure"]["lattice"]["matrix"]
+    changed = deepcopy(original)
+    changed["attribute"]["structure"]["sites"][0]["xyz"][0] += 1e-14
+    assert evaluate.snapshot_hash([original]) != evaluate.snapshot_hash([changed])
 
 
 def write(path: Path, value: Any) -> None:

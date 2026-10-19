@@ -1,0 +1,17 @@
+{
+  "evaluate_sha256": "2eacad27246a8669657c6551807cbfeb1274cf94b691840f2f196d55e3e93a89",
+  "test_command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-m",
+    "uv",
+    "run",
+    "pytest",
+    "-q",
+    "tests/test_m2_tool_routing.py",
+    "../../M2/tests",
+    "-o",
+    "addopts="
+  ],
+  "test_exit_code": 0,
+  "explanation": "Hash exact independent reference data; ignore only redundant lattice scalars and Cartesian values when matrix/fractional basis exists. No official metric or scientific config changes."
+}

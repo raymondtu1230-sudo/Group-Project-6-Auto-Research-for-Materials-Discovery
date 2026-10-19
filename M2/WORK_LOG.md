@@ -217,3 +217,17 @@ The colleague's request for 12 Chemeleon check units is an additional evaluation
 
 Older job snapshots below are historical and superseded by this update.
 
+
+
+## Overnight audit update — 20 October 2026, 01:22 Asia/Singapore
+
+**Nine distinct dev baseline units have passed offline validation (9/36): eight Random and one Chemeleon.** Seven new Random ZIPs from run 39286848821 matched GitHub artifact SHA256; each has complete B=20 history, matching protocol/config and official metrics. The original verified pair is reused once. Remaining baseline units: 27 (10 Random and 17 Chemeleon). The latest job snapshot has one additional Random success awaiting audit, four running and five queued; these counts can change while the run continues.
+
+Evidence: `verification/20261020-random-partial-audit/report-canonical/`. Initial aggregation failed on redundant floating-point derived fields, with the failure retained in `report/`. The M2-only reference hash now preserves exact independent reference values and omits only redundant lattice scalars/Cartesian positions when their basis is present. Seven regression cases and the current combined local suite passed (59 passed, one CPU-namespace skip); official metrics and scientific settings were not changed. No complete method comparison is claimed.
+
+The latest-main isolated interface check preserves all non-M2 fields and all five switches. M1 tests: 17 passed. Combined M2 tests in that shared config: 51 passed, one failed, one skipped; failure is M5's int(None) under the unseeded default. Required focused Ruff passed; original smoke failed locally, including a retry using installed Chrome. Complete evidence is in `verification/20261020-current-main-interface/`, with an unsent M1/M5 message in `handoffs/M1_M5_CONFIGURATION_ISSUE.md`.
+
+Read `OVERNIGHT_RUNBOOK.md` for the user-authorized continuation, evidence rules and boundaries. A preservation-only workflow is being installed on the existing development branch to publish exact original ZIPs and the failed batch256 artifacts on main/M2 independently of scoring success. It starts no scientific experiments. Check/hidden dispatch still awaits the colleague's reply and a confirmed safe setup; no formal Chemeleon recovery is admitted.
+
+Older snapshots below are superseded by this update.
+

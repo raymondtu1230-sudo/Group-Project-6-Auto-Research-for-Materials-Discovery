@@ -1,0 +1,85 @@
+{
+  "checkout_revision": "7369219c5522934e20e4778d0f3931d9b9648239",
+  "commands": [
+    {
+      "name": "sync",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "uv",
+        "sync",
+        "--locked"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "install",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "uv",
+        "run",
+        "python",
+        "../../M2/install.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "m1-tests",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "uv",
+        "run",
+        "pytest",
+        "-q",
+        "tests/test_m1_integrated.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "m2-tests",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "uv",
+        "run",
+        "pytest",
+        "-q",
+        "tests/test_m2_tool_routing.py",
+        "../../M2/tests",
+        "-o",
+        "addopts="
+      ],
+      "exit_code": 1
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "uv",
+        "run",
+        "ruff",
+        "check",
+        "src/made/agents/m2_tool_routing.py",
+        "tests/test_m2_tool_routing.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "smoke",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "uv",
+        "run",
+        "python",
+        "../run_smoke_test.py"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "component_sha256": "03fab495c4f271dc330a1680dd1f527a21dd40dbfc9f1d7bffca23a031566899",
+  "m1_source_sha256": "a4528b90af04e09d6fb3878284d0ff6f211a6d433424d47d8d149bbe35877b60"
+}
