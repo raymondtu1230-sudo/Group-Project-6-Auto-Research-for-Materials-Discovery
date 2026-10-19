@@ -1,0 +1,78 @@
+name: M2 real materials baselines
+
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths:
+      - .github/workflows/m2-real-baselines.yml
+      - M2/run_baselines.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  real-baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        method: [random_generator_baseline, chemeleon_generative_baseline]
+    env:
+      MATERIALS_PROJECT_API_KEY: ${{ secrets.MATERIALS_PROJECT_API_KEY }}
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      UV_LINK_MODE: hardlink
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - name: Check secret is configured
+        shell: bash
+        run: |
+          if [ -z "$MATERIALS_PROJECT_API_KEY" ]; then
+            echo 'The MATERIALS_PROJECT_API_KEY repository secret is missing.'
+            exit 1
+          fi
+      - name: Install the frozen MADE environment
+        working-directory: M1/MADE
+        run: uv sync --locked
+      - name: Install Chrome for official result figures
+        working-directory: M1/MADE
+        run: uv run python -c "import kaleido; kaleido.get_chrome_sync()"
+      - name: Read the first development unit from M1 protocol
+        id: unit
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          systems = json.loads(Path('M1/protocol/dev_systems.json').read_text())
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('system=' + '-'.join(systems[0]) + '\n')
+          PY
+      - name: Run one real, full-budget protocol unit
+        working-directory: M1/MADE
+        run: >-
+          uv run python ../../M2/run_baselines.py
+          --method ${{ matrix.method }}
+          --split dev
+          --system ${{ steps.unit.outputs.system }}
+          --seed 17
+      - name: Preserve raw results and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2-real-${{ matrix.method }}-${{ github.run_id }}
+          path: |
+            M1/MADE/results/protocol_v1/
+            M1/MADE/checkpoints/
+          if-no-files-found: warn
+          retention-days: 30
