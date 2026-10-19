@@ -7,3 +7,5 @@ results/
 dist/
 
 smoke_test.log
+
+*.log

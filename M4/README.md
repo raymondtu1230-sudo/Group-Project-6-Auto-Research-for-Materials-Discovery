@@ -56,7 +56,7 @@ MADE 的观测字段来自 `ConvexHullEnvironment.step()`；使用返回观测�
 - 验证 M1 的真实决策输入含检索摘要，OFF 不含摘要。
 - 验证最终评估被记录、重启不重复计数、不同 episode 不串历史。
 - 运行小型真实 MADE episode，核对 trajectory 与日志。
-- 已获得 M1 代码并安装锁定环境；真实集成与 smoke 状态见 M1_STATUS.md。真实 ORB 实验及 Planner 对记忆的实际消费仍未完成。
+- 已获得 M1 代码并安装锁定环境；真实集成与 smoke 状态见 M1_STATUS.md。一组真实 ORB 流程验证已完成，见 REAL_TEST_STATUS.md；Planner 对记忆的实际消费和正式消融仍未完成。
 
 ## 暂定交付安排（2026 年）
 

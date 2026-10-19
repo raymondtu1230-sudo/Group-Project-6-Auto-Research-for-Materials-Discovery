@@ -19,7 +19,7 @@
 2. M1 OFF 时不调用 Memory 插件，且 ON 时在下一次 proposal 才更新上一次结果。插件日志不含最后一次查询，也不能作为 OFF 的完整日志。两组统一使用 export_evidence.py 从官方 trajectory 导出；此工具只抽取查询观测，不读取 envelope 的 ground truth 字段用于决策。
 3. 为避免混用历史，每 episode 创建新实例；协议 v1 每进程仅一个 episode。多 episode 自动身份分配尚未接入。
 4. max_chars 约束返回记录序列化后的 JSON 字符长度，不等于模型 token 上限；M1/M3 负责最终 prompt 和 token 计量。
-5. 尚无 Materials Project/ORB 真实实验，无性能提升声明。科学实验遵守 M1/M6 统一配置，待真实消费 Memory 后才做消融。
+5. 已完成一组 Materials Project/ORB 真实流程验证，详见 REAL_TEST_STATUS.md；尚无 Memory 性能提升证据。待 Planner 消费 Memory 后再做消融。
 
 ## 复现
 
