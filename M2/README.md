@@ -187,8 +187,11 @@ Materials performance numbers are populated only from completed protocol units.
 The first actual Random development unit has now completed and passed the
 offline validator: Mg-Sn-Sr, seed 17, B=20, mSUN@20=7 and AUDC=55.5. Its
 [raw artifact, provenance, validation, tables and curves](verification/20261019-random-gate/README.md)
-are committed together. This is one of 36 required baseline units, not an
-aggregate result. See [STATUS.md](STATUS.md) for the complete handoff state.
+are committed together. The subsequent [Chemeleon recovery and paired report](verification/20261019-chemeleon-recovery/README.md)
+validated mSUN@20=16 and AUDC=161 on the same system/seed/budget. These are
+**2/36 baseline units**, with 34 baseline units still missing. This is a single
+paired development comparison, not an aggregate result. See [STATUS.md](STATUS.md)
+for the complete handoff state.
 
 ## Handoff schedule
 

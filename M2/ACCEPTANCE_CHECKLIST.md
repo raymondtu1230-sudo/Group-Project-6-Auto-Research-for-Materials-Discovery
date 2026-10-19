@@ -84,11 +84,12 @@ performance is accepted only from completed, validated protocol experiments.
 - The component implementation and its checks are ready for M1 review. PR #2
   contains the separately prepared M1 integration slots and active GitHub
   workflow files; these have not been merged into `main` by this handoff.
-- Only one of 36 development baseline units is accepted in the committed
-  [real-results package](verification/20261019-random-gate/README.md): Random,
-  Mg-Sn-Sr, seed 17, B=20, mSUN@20=7, AUDC=55.5. The package retains raw data,
-  provenance, validation, tables and curves. The full baseline sweep, full
-  integrated reference and routing-off comparison are not complete.
+- Two of 36 development baseline units are accepted: Random Mg-Sn-Sr/17
+  (B=20, mSUN=7, AUDC=55.5) and Chemeleon on the same unit (mSUN=16,
+  AUDC=161). The [paired recovery package](verification/20261019-chemeleon-recovery/README.md)
+  validates the identical protocol and material-reference snapshot. No overall
+  method score exists. Another 34 baseline units, the full integrated reference
+  and routing-off comparison remain incomplete.
 - Keep `main`: it is the shared delivery branch. Keep the single M2 development
   branch while PR review/integration and experiment work remain active. The
   repository has two branches in total, not two separate M2 branches.
