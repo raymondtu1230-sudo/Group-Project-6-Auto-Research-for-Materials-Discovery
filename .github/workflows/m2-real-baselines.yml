@@ -1,0 +1,210 @@
+name: M2 real materials baselines
+'on':
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths:
+    - M2/verification/20261019-chemeleon-timeout/retry-request.json
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Single failed Chemeleon gate retry or explicit full baseline sweep
+        type: choice
+        required: true
+        default: chemeleon_retry
+        options:
+        - chemeleon_retry
+        - baseline_sweep
+permissions:
+  contents: read
+concurrency:
+  group: m2-real-baselines-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  OMP_NUM_THREADS: '2'
+  MKL_NUM_THREADS: '2'
+  UV_LINK_MODE: hardlink
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      gate_matrix: ${{ steps.units.outputs.gate_matrix }}
+      sweep_matrix: ${{ steps.units.outputs.sweep_matrix }}
+      first_system: ${{ steps.units.outputs.first_system }}
+      first_seed: ${{ steps.units.outputs.first_seed }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - uses: astral-sh/setup-uv@v6
+      with:
+        enable-cache: true
+        cache-dependency-glob: M1/MADE/uv.lock
+    - name: Install the frozen MADE environment
+      working-directory: M1/MADE
+      run: uv sync --locked
+    - name: Read all development units from the M1 protocol
+      id: units
+      working-directory: M1/MADE
+      env:
+        M2_BASELINE_MODE: ${{ inputs.mode || 'chemeleon_retry' }}
+      run: |
+        uv run python - <<'PY_UNITS'
+        import json, os
+        from pathlib import Path
+        import yaml
+        protocol = yaml.safe_load(Path('../protocol/protocol_v1.yaml').read_text())
+        systems = json.loads(Path('../protocol/dev_systems.json').read_text())
+        seeds = protocol['repeats']['seeds']
+        methods = [m for m in protocol['methods']['required'] if m in (
+            'random_generator_baseline', 'chemeleon_generative_baseline')]
+        assert len(methods) == 2 and systems and seeds
+        mode = os.environ['M2_BASELINE_MODE']
+        assert mode in ('chemeleon_retry', 'baseline_sweep')
+        if mode == 'chemeleon_retry':
+            methods = ['chemeleon_generative_baseline']
+        units = [{'method': m, 'system': '-'.join(s), 'seed': seed}
+                 for m in methods for s in systems for seed in seeds
+                 if (s, seed) != (systems[0], seeds[0])]
+        if mode == 'chemeleon_retry':
+            units = []
+        outputs = {
+            'gate_matrix': json.dumps({'method': methods}),
+            'sweep_matrix': json.dumps({'include': units}),
+            'first_system': '-'.join(systems[0]),
+            'first_seed': str(seeds[0]),
+        }
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
+            for name, value in outputs.items():
+                print(name + '=' + value, file=stream)
+        count = 1 if mode == 'chemeleon_retry' else len(units) + len(methods)
+        print(f'Requested mode: {mode}; scientific units: {count}')
+        PY_UNITS
+  real-baseline:
+    needs: prepare
+    if: (inputs.mode || 'chemeleon_retry') != 'chemeleon_retry' || github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix: ${{ fromJSON(needs.prepare.outputs.gate_matrix) }}
+    env:
+      MATERIALS_PROJECT_API_KEY: ${{ secrets.TUWEIKANG_MATERIALS_PROJECT_API_KEY }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - uses: astral-sh/setup-uv@v6
+      with:
+        enable-cache: true
+        cache-dependency-glob: M1/MADE/uv.lock
+    - name: Check credential format without printing its value
+      run: python M2/check_key.py
+    - name: Install the frozen MADE environment
+      working-directory: M1/MADE
+      run: uv sync --locked
+    - name: Install Chrome for official result figures
+      working-directory: M1/MADE
+      run: uv run python -c "import kaleido; kaleido.get_chrome_sync()"
+    - name: Complete one real full-budget unit before the wider sweep
+      timeout-minutes: 330
+      working-directory: M1/MADE
+      run: uv run python ../../M2/run_baselines.py --method ${{ matrix.method }} --split dev --system
+        ${{ needs.prepare.outputs.first_system }} --seed ${{ needs.prepare.outputs.first_seed }} --attempt
+        $((GITHUB_RUN_NUMBER * 1000 + GITHUB_RUN_ATTEMPT))
+    - name: Preserve raw results and failures
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: m2-real-${{ matrix.method }}-gate-${{ github.run_id }}-${{ github.run_attempt }}
+        path: |
+          M1/MADE/results/protocol_v1/
+          M1/MADE/checkpoints/
+        if-no-files-found: warn
+        retention-days: 90
+  development-sweep:
+    needs:
+    - prepare
+    - real-baseline
+    if: inputs.mode == 'baseline_sweep'
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.prepare.outputs.sweep_matrix) }}
+    env:
+      MATERIALS_PROJECT_API_KEY: ${{ secrets.TUWEIKANG_MATERIALS_PROJECT_API_KEY }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - uses: astral-sh/setup-uv@v6
+      with:
+        enable-cache: true
+        cache-dependency-glob: M1/MADE/uv.lock
+    - name: Check credential format without printing its value
+      run: python M2/check_key.py
+    - name: Install the frozen MADE environment
+      working-directory: M1/MADE
+      run: uv sync --locked
+    - name: Install Chrome for official result figures
+      working-directory: M1/MADE
+      run: uv run python -c "import kaleido; kaleido.get_chrome_sync()"
+    - name: Run one unchanged M1 protocol unit
+      timeout-minutes: 330
+      working-directory: M1/MADE
+      run: uv run python ../../M2/run_baselines.py --method ${{ matrix.method }} --split dev --system
+        ${{ matrix.system }} --seed ${{ matrix.seed }} --attempt $((GITHUB_RUN_NUMBER * 1000 + GITHUB_RUN_ATTEMPT))
+    - name: Preserve raw results and failures
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: m2-real-${{ matrix.method }}-${{ matrix.system }}-${{ matrix.seed }}-${{ github.run_id }}-${{
+          github.run_attempt }}
+        path: |
+          M1/MADE/results/protocol_v1/
+          M1/MADE/checkpoints/
+        if-no-files-found: warn
+        retention-days: 90
+  report:
+    needs:
+    - prepare
+    - real-baseline
+    - development-sweep
+    if: always() && needs.prepare.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - uses: astral-sh/setup-uv@v6
+      with:
+        enable-cache: true
+        cache-dependency-glob: M1/MADE/uv.lock
+    - name: Install the frozen MADE environment
+      working-directory: M1/MADE
+      run: uv sync --locked
+    - name: Download this run's actual baseline artifacts
+      uses: actions/download-artifact@v4
+      with:
+        pattern: m2-real-*
+        path: M2/results/downloaded
+    - name: Validate and report real baseline results
+      working-directory: M1/MADE
+      run: uv run python ../../M2/evaluate.py --results-root ../../M2/results/downloaded --output ../../M2/results/dev-baselines
+        --split dev --allow-partial
+    - name: Preserve raw results and failures
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: m2-development-baseline-report
+        path: M2/results/dev-baselines/
+        if-no-files-found: warn
+        retention-days: 90
