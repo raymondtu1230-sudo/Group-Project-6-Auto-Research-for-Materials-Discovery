@@ -1,0 +1,886 @@
+﻿2026-10-19T17:59:49.0455226Z Current runner version: '2.337.0'
+2026-10-19T17:59:49.0472683Z ##[group]Runner Image Provisioner
+2026-10-19T17:59:49.0473335Z Hosted Compute Agent
+2026-10-19T17:59:49.0473715Z Version: 20261012.601
+2026-10-19T17:59:49.0474141Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T17:59:49.0474526Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T17:59:49.0475195Z Worker ID: {eedccf2c-6771-4e9d-92ac-7e84a11460a1}
+2026-10-19T17:59:49.0475597Z Region: centralus
+2026-10-19T17:59:49.0475937Z Cloud: Azure
+2026-10-19T17:59:49.0476281Z ##[endgroup]
+2026-10-19T17:59:49.0477055Z ##[group]Operating System
+2026-10-19T17:59:49.0477444Z Ubuntu
+2026-10-19T17:59:49.0477741Z 24.04.5
+2026-10-19T17:59:49.0478023Z LTS
+2026-10-19T17:59:49.0478407Z ##[endgroup]
+2026-10-19T17:59:49.0478720Z ##[group]Runner Image
+2026-10-19T17:59:49.0479087Z Image: ubuntu-24.04
+2026-10-19T17:59:49.0479414Z Version: 20261012.334.1
+2026-10-19T17:59:49.0480205Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T17:59:49.0481046Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-19T17:59:49.0481609Z ##[endgroup]
+2026-10-19T17:59:49.0482212Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T17:59:49.0483778Z Contents: write
+2026-10-19T17:59:49.0484115Z Metadata: read
+2026-10-19T17:59:49.0484422Z ##[endgroup]
+2026-10-19T17:59:49.0485758Z Secret source: Actions
+2026-10-19T17:59:49.0486276Z Cache mode: write
+2026-10-19T17:59:49.0486769Z Prepare workflow directory
+2026-10-19T17:59:49.0720123Z Prepare all required actions
+2026-10-19T17:59:49.0750249Z Getting action download info
+2026-10-19T17:59:49.3251809Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-19T17:59:49.4148275Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-19T17:59:49.7378663Z Download action repository 'astral-sh/setup-uv@v6' (SHA:d0cc045d04ccac9d8b7881df0226f9e82c39688e)
+2026-10-19T17:59:50.5157120Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-10-19T17:59:51.4686250Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-19T17:59:52.3696816Z Complete job name: report-and-publish
+2026-10-19T17:59:52.4217033Z ##[group]Run actions/checkout@v4
+2026-10-19T17:59:52.4217334Z with:
+2026-10-19T17:59:52.4217566Z   repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:52.4219391Z   token: ***
+2026-10-19T17:59:52.4219509Z   ssh-strict: true
+2026-10-19T17:59:52.4219625Z   ssh-user: git
+2026-10-19T17:59:52.4219746Z   persist-credentials: true
+2026-10-19T17:59:52.4219879Z   clean: true
+2026-10-19T17:59:52.4220001Z   sparse-checkout-cone-mode: true
+2026-10-19T17:59:52.4220141Z   fetch-depth: 1
+2026-10-19T17:59:52.4220268Z   fetch-tags: false
+2026-10-19T17:59:52.4220388Z   show-progress: true
+2026-10-19T17:59:52.4220534Z   lfs: false
+2026-10-19T17:59:52.4220650Z   submodules: false
+2026-10-19T17:59:52.4220770Z   set-safe-directory: true
+2026-10-19T17:59:52.4220915Z   allow-unsafe-pr-checkout: false
+2026-10-19T17:59:52.4221126Z env:
+2026-10-19T17:59:52.4221233Z   OMP_NUM_THREADS: 2
+2026-10-19T17:59:52.4221348Z   MKL_NUM_THREADS: 2
+2026-10-19T17:59:52.4221507Z   UV_LINK_MODE: hardlink
+2026-10-19T17:59:52.4221631Z ##[endgroup]
+2026-10-19T17:59:52.4881326Z Syncing repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:52.4882399Z ##[group]Getting Git version info
+2026-10-19T17:59:52.4882807Z Working directory is '/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery'
+2026-10-19T17:59:52.4883637Z [command]/usr/bin/git version
+2026-10-19T17:59:52.4953956Z git version 2.55.0
+2026-10-19T17:59:52.4971692Z ##[endgroup]
+2026-10-19T17:59:52.4982923Z Temporarily overriding HOME='/home/runner/work/_temp/e01810cb-7f46-4a1b-a159-f5757f83cf3e' before making global git config changes
+2026-10-19T17:59:52.4984230Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T17:59:52.4987324Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:52.5908271Z Deleting the contents of '/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery'
+2026-10-19T17:59:52.5914992Z ##[group]Initializing the repository
+2026-10-19T17:59:52.5915716Z [command]/usr/bin/git init /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:52.6792830Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T17:59:52.6793753Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T17:59:52.6794236Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T17:59:52.6794512Z hint: call:
+2026-10-19T17:59:52.6794637Z hint:
+2026-10-19T17:59:52.6794851Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T17:59:52.6795088Z hint:
+2026-10-19T17:59:52.6795291Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T17:59:52.6795613Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T17:59:52.6795852Z hint:
+2026-10-19T17:59:52.6795992Z hint: 	git branch -m <name>
+2026-10-19T17:59:52.6796149Z hint:
+2026-10-19T17:59:52.6796352Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T17:59:52.6796927Z Initialized empty Git repository in /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/.git/
+2026-10-19T17:59:52.6803431Z [command]/usr/bin/git remote add origin https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:52.6990114Z ##[endgroup]
+2026-10-19T17:59:52.6990499Z ##[group]Disabling automatic garbage collection
+2026-10-19T17:59:52.6992933Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T17:59:52.7090588Z ##[endgroup]
+2026-10-19T17:59:52.7091176Z ##[group]Setting up auth
+2026-10-19T17:59:52.7096413Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T17:59:52.7124673Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T17:59:52.7417735Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T17:59:52.7446458Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T17:59:52.7617399Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T17:59:52.7644746Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T17:59:52.7815843Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T17:59:52.7976944Z ##[endgroup]
+2026-10-19T17:59:52.7977570Z ##[group]Fetching the repository
+2026-10-19T17:59:52.7985220Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b3f68f274373d4599a7e026cd0f3cf5a9889e977:refs/remotes/origin/m2/tool-routing-evaluation
+2026-10-19T17:59:53.6311934Z From https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:53.6313045Z  * [new ref]         b3f68f274373d4599a7e026cd0f3cf5a9889e977 -> origin/m2/tool-routing-evaluation
+2026-10-19T17:59:53.6315486Z ##[endgroup]
+2026-10-19T17:59:53.6316083Z ##[group]Determining the checkout info
+2026-10-19T17:59:53.6317209Z ##[endgroup]
+2026-10-19T17:59:53.6322404Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T17:59:53.6369657Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T17:59:53.6395856Z ##[group]Checking out the ref
+2026-10-19T17:59:53.6398743Z [command]/usr/bin/git checkout --progress --force -B m2/tool-routing-evaluation refs/remotes/origin/m2/tool-routing-evaluation
+2026-10-19T17:59:53.7410190Z Switched to a new branch 'm2/tool-routing-evaluation'
+2026-10-19T17:59:53.7414272Z branch 'm2/tool-routing-evaluation' set up to track 'origin/m2/tool-routing-evaluation'.
+2026-10-19T17:59:53.7422944Z ##[endgroup]
+2026-10-19T17:59:53.7464551Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T17:59:53.7489373Z b3f68f274373d4599a7e026cd0f3cf5a9889e977
+2026-10-19T17:59:53.7674859Z ##[group]Run actions/checkout@v4
+2026-10-19T17:59:53.7675053Z with:
+2026-10-19T17:59:53.7675176Z   ref: main
+2026-10-19T17:59:53.7675287Z   path: published
+2026-10-19T17:59:53.7675412Z   persist-credentials: false
+2026-10-19T17:59:53.7675662Z   repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:53.7677345Z   token: ***
+2026-10-19T17:59:53.7677458Z   ssh-strict: true
+2026-10-19T17:59:53.7677571Z   ssh-user: git
+2026-10-19T17:59:53.7677680Z   clean: true
+2026-10-19T17:59:53.7677806Z   sparse-checkout-cone-mode: true
+2026-10-19T17:59:53.7677952Z   fetch-depth: 1
+2026-10-19T17:59:53.7678066Z   fetch-tags: false
+2026-10-19T17:59:53.7678183Z   show-progress: true
+2026-10-19T17:59:53.7678303Z   lfs: false
+2026-10-19T17:59:53.7678431Z   submodules: false
+2026-10-19T17:59:53.7678581Z   set-safe-directory: true
+2026-10-19T17:59:53.7678725Z   allow-unsafe-pr-checkout: false
+2026-10-19T17:59:53.7678868Z env:
+2026-10-19T17:59:53.7679067Z   OMP_NUM_THREADS: 2
+2026-10-19T17:59:53.7679206Z   MKL_NUM_THREADS: 2
+2026-10-19T17:59:53.7679352Z   UV_LINK_MODE: hardlink
+2026-10-19T17:59:53.7679481Z ##[endgroup]
+2026-10-19T17:59:53.8226628Z Syncing repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:53.8229162Z ##[group]Getting Git version info
+2026-10-19T17:59:53.8229885Z Working directory is '/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/published'
+2026-10-19T17:59:53.8254890Z [command]/usr/bin/git version
+2026-10-19T17:59:53.8286778Z git version 2.55.0
+2026-10-19T17:59:53.8299513Z ##[endgroup]
+2026-10-19T17:59:53.8309272Z Temporarily overriding HOME='/home/runner/work/_temp/020f88eb-fb39-4449-a519-ca5c7800888d' before making global git config changes
+2026-10-19T17:59:53.8310332Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T17:59:53.8312850Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/published
+2026-10-19T17:59:53.8342659Z ##[group]Initializing the repository
+2026-10-19T17:59:53.8346089Z [command]/usr/bin/git init /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/published
+2026-10-19T17:59:53.8381686Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T17:59:53.8382292Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T17:59:53.8382910Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T17:59:53.8383488Z hint: call:
+2026-10-19T17:59:53.8383787Z hint:
+2026-10-19T17:59:53.8384152Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T17:59:53.8384556Z hint:
+2026-10-19T17:59:53.8384993Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T17:59:53.8385574Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T17:59:53.8386284Z hint:
+2026-10-19T17:59:53.8386590Z hint: 	git branch -m <name>
+2026-10-19T17:59:53.8386921Z hint:
+2026-10-19T17:59:53.8387344Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T17:59:53.8388519Z Initialized empty Git repository in /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/published/.git/
+2026-10-19T17:59:53.8390421Z [command]/usr/bin/git remote add origin https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:53.8452221Z ##[endgroup]
+2026-10-19T17:59:53.8452587Z ##[group]Disabling automatic garbage collection
+2026-10-19T17:59:53.8455897Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T17:59:53.8481815Z ##[endgroup]
+2026-10-19T17:59:53.8482151Z ##[group]Setting up auth
+2026-10-19T17:59:53.8487795Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T17:59:53.8517636Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T17:59:53.8717134Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T17:59:53.8760772Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T17:59:53.8941640Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T17:59:53.8970681Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T17:59:53.9148749Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T17:59:53.9184440Z ##[endgroup]
+2026-10-19T17:59:53.9184833Z ##[group]Fetching the repository
+2026-10-19T17:59:53.9191359Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/main*:refs/remotes/origin/main* +refs/tags/main*:refs/tags/main*
+2026-10-19T17:59:55.2511059Z From https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:55.2511615Z  * [new branch]      main       -> origin/main
+2026-10-19T17:59:55.2514981Z ##[endgroup]
+2026-10-19T17:59:55.2515293Z ##[group]Determining the checkout info
+2026-10-19T17:59:55.2521795Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-19T17:59:55.2545834Z   origin/main
+2026-10-19T17:59:55.2549099Z ##[endgroup]
+2026-10-19T17:59:55.2552699Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T17:59:55.2593360Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T17:59:55.2619023Z ##[group]Checking out the ref
+2026-10-19T17:59:55.2621762Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-19T17:59:55.3924715Z Switched to a new branch 'main'
+2026-10-19T17:59:55.3925181Z branch 'main' set up to track 'origin/main'.
+2026-10-19T17:59:55.3934036Z ##[endgroup]
+2026-10-19T17:59:55.3972564Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T17:59:55.3999238Z f0c6e3af4e70044f7849f10596d0e2a00bc49e5c
+2026-10-19T17:59:55.4007274Z ##[group]Removing auth
+2026-10-19T17:59:55.4010137Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T17:59:55.4038830Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T17:59:55.4216761Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T17:59:55.4241452Z http.https://github.com/.extraheader
+2026-10-19T17:59:55.4246907Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T17:59:55.4274812Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T17:59:55.4443851Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T17:59:55.4472921Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T17:59:55.4647815Z ##[endgroup]
+2026-10-19T17:59:55.4785212Z ##[group]Run actions/setup-python@v5
+2026-10-19T17:59:55.4785365Z with:
+2026-10-19T17:59:55.4785476Z   python-version: 3.12
+2026-10-19T17:59:55.4785600Z   check-latest: false
+2026-10-19T17:59:55.4787146Z   token: ***
+2026-10-19T17:59:55.4787268Z   update-environment: true
+2026-10-19T17:59:55.4787402Z   allow-prereleases: false
+2026-10-19T17:59:55.4787541Z   freethreaded: false
+2026-10-19T17:59:55.4787661Z env:
+2026-10-19T17:59:55.4787765Z   OMP_NUM_THREADS: 2
+2026-10-19T17:59:55.4787880Z   MKL_NUM_THREADS: 2
+2026-10-19T17:59:55.4787993Z   UV_LINK_MODE: hardlink
+2026-10-19T17:59:55.4788114Z ##[endgroup]
+2026-10-19T17:59:55.5625324Z ##[group]Installed versions
+2026-10-19T17:59:55.5688196Z (node:2282) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T17:59:55.5688823Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T17:59:55.5689191Z Successfully set up CPython (3.12.15)
+2026-10-19T17:59:55.5689649Z ##[endgroup]
+2026-10-19T17:59:55.5872314Z ##[group]Run astral-sh/setup-uv@v6
+2026-10-19T17:59:55.5872527Z with:
+2026-10-19T17:59:55.5872798Z   enable-cache: true
+2026-10-19T17:59:55.5873032Z   cache-dependency-glob: M1/MADE/uv.lock
+2026-10-19T17:59:55.5873455Z   activate-environment: false
+2026-10-19T17:59:55.5874064Z   working-directory: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:55.5874711Z   server-url: https://github.com
+2026-10-19T17:59:55.5876547Z   github-token: ***
+2026-10-19T17:59:55.5876663Z   restore-cache: true
+2026-10-19T17:59:55.5876777Z   save-cache: true
+2026-10-19T17:59:55.5876887Z   prune-cache: true
+2026-10-19T17:59:55.5877006Z   ignore-nothing-to-cache: false
+2026-10-19T17:59:55.5877149Z   ignore-empty-workdir: false
+2026-10-19T17:59:55.5877287Z   add-problem-matchers: true
+2026-10-19T17:59:55.5877415Z env:
+2026-10-19T17:59:55.5877517Z   OMP_NUM_THREADS: 2
+2026-10-19T17:59:55.5877662Z   MKL_NUM_THREADS: 2
+2026-10-19T17:59:55.5877775Z   UV_LINK_MODE: hardlink
+2026-10-19T17:59:55.5877930Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:55.5878187Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:59:55.5878483Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:55.5878691Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:55.5878956Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:55.5879168Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:59:55.5879347Z ##[endgroup]
+2026-10-19T17:59:55.6993862Z (node:2290) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T17:59:55.6994273Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T17:59:55.7059521Z Trying to find version for uv in: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/uv.toml
+2026-10-19T17:59:55.7060696Z Could not find file: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/uv.toml
+2026-10-19T17:59:55.7061826Z Trying to find version for uv in: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/pyproject.toml
+2026-10-19T17:59:55.7063344Z Could not find file: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/pyproject.toml
+2026-10-19T17:59:55.7064200Z Could not determine uv version from uv.toml or pyproject.toml. Falling back to latest.
+2026-10-19T17:59:55.7064846Z Getting latest version from GitHub API...
+2026-10-19T17:59:56.0119356Z manifest-file not provided, reading from local file.
+2026-10-19T17:59:56.0143076Z manifest-file does not contain version 0.13.1, arch x86_64, platform unknown-linux-gnu. Falling back to GitHub releases.
+2026-10-19T17:59:56.0144270Z Downloading uv from "https://github.com/astral-sh/uv/releases/download/0.13.1/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-10-19T17:59:56.4307017Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/87e6542f-47b2-4f7c-8237-8a075f4a7e2b -f /home/runner/work/_temp/c133ddef-0527-48ae-a8c1-e618092ab79f
+2026-10-19T17:59:56.7691138Z Added /home/runner/.local/bin to the path
+2026-10-19T17:59:56.7692653Z Added /opt/hostedtoolcache/uv/0.13.1/x86_64 to the path
+2026-10-19T17:59:56.7700272Z Set UV_CACHE_DIR to /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:59:56.7700545Z Successfully installed uv version 0.13.1
+2026-10-19T17:59:56.7701006Z Searching files using cache dependency glob: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/uv.lock
+2026-10-19T17:59:56.7746551Z /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/uv.lock
+2026-10-19T17:59:56.7776670Z Found 1 files to hash.
+2026-10-19T17:59:56.8610917Z Trying to restore uv cache from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T17:59:57.0133567Z Cache hit for: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T17:59:57.0200614Z (node:2290) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T17:59:57.8380274Z Received 54646798 of 54646798 (100.0%), 76.8 MBs/sec
+2026-10-19T17:59:57.8380778Z Cache Size: ~52 MB (54646798 B)
+2026-10-19T17:59:57.8401685Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ff876e28-357f-4af8-8710-116350eb53d3/cache.tzst -P -C /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery --use-compress-program unzstd
+2026-10-19T17:59:57.9357376Z Cache restored successfully
+2026-10-19T17:59:57.9384882Z uv cache restored from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T17:59:57.9505630Z ##[group]Run actions/download-artifact@v4
+2026-10-19T17:59:57.9505799Z with:
+2026-10-19T17:59:57.9505921Z   pattern: m2-missing-raw-*
+2026-10-19T17:59:57.9506063Z   path: M2/results/downloaded
+2026-10-19T17:59:57.9506204Z   merge-multiple: false
+2026-10-19T17:59:57.9506435Z   repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:59:57.9506684Z   run-id: 39286848821
+2026-10-19T17:59:57.9506797Z env:
+2026-10-19T17:59:57.9506902Z   OMP_NUM_THREADS: 2
+2026-10-19T17:59:57.9507022Z   MKL_NUM_THREADS: 2
+2026-10-19T17:59:57.9507142Z   UV_LINK_MODE: hardlink
+2026-10-19T17:59:57.9507305Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:57.9507542Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:59:57.9507781Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:57.9508125Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:57.9508371Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:57.9508587Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:59:57.9508791Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:59:57.9508962Z ##[endgroup]
+2026-10-19T17:59:58.0539199Z (node:2320) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T17:59:58.0539815Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T17:59:58.3293501Z Found 18 artifact(s)
+2026-10-19T17:59:58.3293884Z Filtering artifacts by pattern 'm2-missing-raw-*'
+2026-10-19T17:59:58.3306595Z Preparing to download the following artifacts:
+2026-10-19T17:59:58.3307297Z - m2-missing-raw-Mg-Sn-Sr-43-39286848821 (ID: 12210545012, Size: 513567, Expected Digest: sha256:4ec6bc831319b65b5b8ada52f4abac99060134ee99d408d334975713cd7e9ecc)
+2026-10-19T17:59:58.3308341Z - m2-missing-raw-Hf-Ni-Zr-17-39286848821 (ID: 12208125959, Size: 430983, Expected Digest: sha256:bdf172413da8042bb7e361f7cadecb232d28089d7a3b492a572bfba9a1470d4f)
+2026-10-19T17:59:58.3309298Z - m2-missing-raw-Hf-Ni-Zr-29-39286848821 (ID: 12207981935, Size: 431285, Expected Digest: sha256:0ae5638fb2b65a193eda8050d2517e46e00332be0df78520bbcdb9d97d97f468)
+2026-10-19T17:59:58.3310266Z - m2-missing-raw-Mg-Sn-Sr-29-39286848821 (ID: 12207897397, Size: 517096, Expected Digest: sha256:179bbc857afc08dadb5f73cc31a6525ab288a9b4241a28bf7a6e5346476b268d)
+2026-10-19T17:59:58.3311244Z - m2-missing-raw-Ga-Pt-Tm-29-39286848821 (ID: 12207600952, Size: 460301, Expected Digest: sha256:2d2a28dc9151d73e8ec7b92fa4d02ff0ce11d12de71fd204aeb617645f62f5a4)
+2026-10-19T17:59:58.3312249Z - m2-missing-raw-Ga-Pt-Tm-17-39286848821 (ID: 12207322282, Size: 454483, Expected Digest: sha256:bc6e303b8dfbd5fedb70f3046c6ee35f59f56d745a54ff50b2e105c6f6d313cb)
+2026-10-19T17:59:58.3314381Z - m2-missing-raw-Hf-Ni-Zr-43-39286848821 (ID: 12207109544, Size: 429355, Expected Digest: sha256:d9d448c17f267ec90b2c64218bd1666c4c91dedd218cec89a74c84c891a0c1b5)
+2026-10-19T17:59:58.3315771Z - m2-missing-raw-Ga-Pt-Tm-43-39286848821 (ID: 12206569802, Size: 457414, Expected Digest: sha256:2238873c20727c34c60fb8c61322f2696282e09b287f54620648524ff4bfdc25)
+2026-10-19T17:59:58.3316765Z - m2-missing-raw-Co-Dy-W-29-39286848821 (ID: 12205882338, Size: 412711, Expected Digest: sha256:fd29c8a7db133fbfd5b6fc5e51f197b76ced48730ce6c1a63fd346e524acdad9)
+2026-10-19T17:59:58.3317792Z - m2-missing-raw-Co-Mg-Na-43-39286848821 (ID: 12205518875, Size: 409967, Expected Digest: sha256:083f811035ec0b187c7f09350ef3a80cf3331cbadf830937342bbf8784528d19)
+2026-10-19T17:59:58.3318719Z - m2-missing-raw-Co-Dy-W-43-39286848821 (ID: 12205318451, Size: 416177, Expected Digest: sha256:c5b93361adf59efcf339e3edc35b54de13e71b04f02e81de41ec337ab28e7c0f)
+2026-10-19T17:59:58.3319497Z - m2-missing-raw-Au-K-Tb-43-39286848821 (ID: 12205295837, Size: 432253, Expected Digest: sha256:3287431bd96a5019ee1fda5c83cfa5395a4239f3dcd7fb36615c9322f594cdd1)
+2026-10-19T17:59:58.3320542Z - m2-missing-raw-Co-Mg-Na-29-39286848821 (ID: 12205233016, Size: 400105, Expected Digest: sha256:81e3f883915f3969d34d6771af42ab650af4d5a1842ea7c1e7193cc61ed32aea)
+2026-10-19T17:59:58.3321200Z - m2-missing-raw-Co-Mg-Na-17-39286848821 (ID: 12205132959, Size: 400385, Expected Digest: sha256:9711aaf9f30d56aacf0d968f448bb7f63f68aa01754a347dc46381283eae3c2b)
+2026-10-19T17:59:58.3321778Z - m2-missing-raw-Au-K-Tb-17-39286848821 (ID: 12205130735, Size: 431894, Expected Digest: sha256:f9ca80dae172ffbc6e0c1b49d36a5b59db46bb70d2c11524b7d96fc1e248d7ff)
+2026-10-19T17:59:58.3322364Z - m2-missing-raw-Au-K-Tb-29-39286848821 (ID: 12204713320, Size: 429157, Expected Digest: sha256:239417a8cba3f2fcd947632e8ec9c3383d36d463becb94723cf0c11052abd555)
+2026-10-19T17:59:58.3322941Z - m2-missing-raw-Co-Dy-W-17-39286848821 (ID: 12203084390, Size: 413764, Expected Digest: sha256:bad74aa61ac1c4ae3711f6af05ee0101c219e153e5d6d71599845448720117e6)
+2026-10-19T17:59:58.5172354Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-abd43026-f809-56a4-9bbd-2e37f9368230/artifacts/47fc2002fec9bb8980c0bf854b8c117f60f51bcc4d1a49a6417dece3650d32c5.zip
+2026-10-19T17:59:58.5174336Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Mg-Sn-Sr-43-39286848821
+2026-10-19T17:59:58.5668988Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-1c121dda-e379-582a-a08d-269d01ef3364/artifacts/ea5e3e0106e5ba4d053dd84327c0ff0dab868a7614a55f2184dbab4a14005d10.zip
+2026-10-19T17:59:58.5670592Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Hf-Ni-Zr-43-39286848821
+2026-10-19T17:59:58.5790553Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-87be1c21-b1bb-5abe-b474-d6c309d9c167/artifacts/d5e84b2dbf7699f0c4b75f48e3e2a184a64b5d0aa65c43b8a1edc3be6e08b3aa.zip
+2026-10-19T17:59:58.5792245Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Co-Dy-W-29-39286848821
+2026-10-19T17:59:58.5816808Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-4993b99c-7633-58e4-91bc-039f59609ea2/artifacts/8ebaa7154e0f3a421222fc33365fc6349e72cbd593e66146d294a80389aaa099.zip
+2026-10-19T17:59:58.5818532Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Ga-Pt-Tm-43-39286848821
+2026-10-19T17:59:58.5836484Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-a146a59d-071d-5ba8-a697-d00d5c9b9568/artifacts/51c72534be0fb74ee33713eaf5e8d68beb1df92ac347beb1de8492ef8c2796af.zip
+2026-10-19T17:59:58.5838172Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Hf-Ni-Zr-17-39286848821
+2026-10-19T17:59:58.6000726Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-8e66fa55-9d18-5b27-882f-1cb5a781ee0d/artifacts/2eeee890ee1a27b6eb71923254330d26da453e2daffacd98a2aae9e451aff84d.zip
+2026-10-19T17:59:58.6002884Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Co-Dy-W-43-39286848821
+2026-10-19T17:59:58.6005383Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-8ff89c85-b9c0-532b-856e-902d0908fb9d/artifacts/2e7ec45235d06dc48efc69c2e9d93ca755a3b75bf97f8abfbbf28cc6be8fbf7c.zip
+2026-10-19T17:59:58.6006366Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Co-Mg-Na-17-39286848821
+2026-10-19T17:59:58.6026117Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-d23a4225-410e-55a1-bab2-367db8e7da41/artifacts/aa414b3d0d1dab84bd3660ccccfef39ee2fd8c3e625f09df2401b5dafac2940d.zip
+2026-10-19T17:59:58.6027258Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Co-Mg-Na-29-39286848821
+2026-10-19T17:59:58.6095675Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-f9bcdf34-08d1-5d80-8cf9-bc4c78858759/artifacts/7acf292c34701018f2291af8be3e15a19b01d5cd44c4f3120a635e5b2f119127.zip
+2026-10-19T17:59:58.6096678Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Ga-Pt-Tm-17-39286848821
+2026-10-19T17:59:58.6111629Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-ea5aaf04-2382-5d3f-87f4-96dffcfad954/artifacts/9055265506fa6a221c7e4d28deecb363895ff24ca6a19a33a76de8d349537e8b.zip
+2026-10-19T17:59:58.6112645Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Au-K-Tb-17-39286848821
+2026-10-19T17:59:58.6124951Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-2e681e1c-15a8-5a73-8ad7-87dafbee8472/artifacts/7b77547bf6d6ee3f28d944c937ceb1847ccfd1049cc36f5060188aa8abd20513.zip
+2026-10-19T17:59:58.6125983Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Co-Mg-Na-43-39286848821
+2026-10-19T17:59:58.6146288Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-093b4518-fd4f-5461-9a0a-28a9d0e0c77b/artifacts/8f9445ff8d29814090c628ebaf8e34e36acef4cfac35ff6fcfb7ff6669a45fba.zip
+2026-10-19T17:59:58.6147346Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Hf-Ni-Zr-29-39286848821
+2026-10-19T17:59:58.6192174Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-1f2d2d2c-de6a-5bd1-8e0d-8a392dea3a0a/artifacts/d4c95f080cab50dd28ab1f2b77d47bf48aa3e41b4d5a747ef6737e7d556d37c0.zip
+2026-10-19T17:59:58.6193392Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Au-K-Tb-43-39286848821
+2026-10-19T17:59:58.6241509Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-597cff89-420e-5e4f-8143-2c948a0d9514/artifacts/55a8839b36e8eb43c0b03cf9a1a0f57833f00225dafd34b3ced2401c75ec00f8.zip
+2026-10-19T17:59:58.6243577Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Au-K-Tb-29-39286848821
+2026-10-19T17:59:58.6259236Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-f7e4620a-4144-5b4c-a84e-6757123856d4/artifacts/53df3758e305d55694a8e0132591b7f400508209024955d0df0ddb837d755ad2.zip
+2026-10-19T17:59:58.6260329Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Mg-Sn-Sr-29-39286848821
+2026-10-19T17:59:58.6295113Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-9876ca93-6b9e-536b-aa25-f3173cc3631d/artifacts/3cc88bc1b95f22bdabaf6fa9dcde0fc451ba1826d06bc4e666cbe8278b15fbe6.zip
+2026-10-19T17:59:58.6296474Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Ga-Pt-Tm-29-39286848821
+2026-10-19T17:59:58.6569544Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/faa4ecab-c429-8f40-a669-4dab09d530c1/workflow-job-run-8a30ff79-ee81-5e21-9efe-0b90bad8e0da/artifacts/3292613597870dc4011bfda07ffb8bf39ce03fd07a568b6929d60074d34f978f.zip
+2026-10-19T17:59:58.6571365Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/downloaded/m2-missing-raw-Co-Dy-W-17-39286848821
+2026-10-19T17:59:58.6655455Z (node:2320) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-19T17:59:58.8341078Z SHA256 digest of downloaded artifact is 4ec6bc831319b65b5b8ada52f4abac99060134ee99d408d334975713cd7e9ecc
+2026-10-19T17:59:58.8341507Z Artifact download completed successfully.
+2026-10-19T17:59:58.8465580Z SHA256 digest of downloaded artifact is 9711aaf9f30d56aacf0d968f448bb7f63f68aa01754a347dc46381283eae3c2b
+2026-10-19T17:59:58.8465969Z Artifact download completed successfully.
+2026-10-19T17:59:58.8616842Z SHA256 digest of downloaded artifact is d9d448c17f267ec90b2c64218bd1666c4c91dedd218cec89a74c84c891a0c1b5
+2026-10-19T17:59:58.8617460Z Artifact download completed successfully.
+2026-10-19T17:59:58.8642156Z SHA256 digest of downloaded artifact is bdf172413da8042bb7e361f7cadecb232d28089d7a3b492a572bfba9a1470d4f
+2026-10-19T17:59:58.8642639Z Artifact download completed successfully.
+2026-10-19T17:59:58.8742717Z SHA256 digest of downloaded artifact is c5b93361adf59efcf339e3edc35b54de13e71b04f02e81de41ec337ab28e7c0f
+2026-10-19T17:59:58.8756512Z Artifact download completed successfully.
+2026-10-19T17:59:58.9254007Z SHA256 digest of downloaded artifact is 239417a8cba3f2fcd947632e8ec9c3383d36d463becb94723cf0c11052abd555
+2026-10-19T17:59:58.9254621Z Artifact download completed successfully.
+2026-10-19T17:59:58.9307075Z SHA256 digest of downloaded artifact is 81e3f883915f3969d34d6771af42ab650af4d5a1842ea7c1e7193cc61ed32aea
+2026-10-19T17:59:58.9307718Z Artifact download completed successfully.
+2026-10-19T17:59:58.9310465Z SHA256 digest of downloaded artifact is 3287431bd96a5019ee1fda5c83cfa5395a4239f3dcd7fb36615c9322f594cdd1
+2026-10-19T17:59:58.9311148Z Artifact download completed successfully.
+2026-10-19T17:59:58.9358281Z SHA256 digest of downloaded artifact is 083f811035ec0b187c7f09350ef3a80cf3331cbadf830937342bbf8784528d19
+2026-10-19T17:59:58.9372227Z Artifact download completed successfully.
+2026-10-19T17:59:58.9503627Z SHA256 digest of downloaded artifact is fd29c8a7db133fbfd5b6fc5e51f197b76ced48730ce6c1a63fd346e524acdad9
+2026-10-19T17:59:58.9504075Z Artifact download completed successfully.
+2026-10-19T17:59:58.9558580Z SHA256 digest of downloaded artifact is 0ae5638fb2b65a193eda8050d2517e46e00332be0df78520bbcdb9d97d97f468
+2026-10-19T17:59:58.9558961Z Artifact download completed successfully.
+2026-10-19T17:59:58.9666419Z SHA256 digest of downloaded artifact is bad74aa61ac1c4ae3711f6af05ee0101c219e153e5d6d71599845448720117e6
+2026-10-19T17:59:58.9666796Z Artifact download completed successfully.
+2026-10-19T17:59:58.9723564Z SHA256 digest of downloaded artifact is bc6e303b8dfbd5fedb70f3046c6ee35f59f56d745a54ff50b2e105c6f6d313cb
+2026-10-19T17:59:58.9723943Z Artifact download completed successfully.
+2026-10-19T17:59:58.9744225Z SHA256 digest of downloaded artifact is 2d2a28dc9151d73e8ec7b92fa4d02ff0ce11d12de71fd204aeb617645f62f5a4
+2026-10-19T17:59:58.9744603Z Artifact download completed successfully.
+2026-10-19T17:59:58.9810960Z SHA256 digest of downloaded artifact is 179bbc857afc08dadb5f73cc31a6525ab288a9b4241a28bf7a6e5346476b268d
+2026-10-19T17:59:58.9811434Z Artifact download completed successfully.
+2026-10-19T17:59:58.9814250Z SHA256 digest of downloaded artifact is f9ca80dae172ffbc6e0c1b49d36a5b59db46bb70d2c11524b7d96fc1e248d7ff
+2026-10-19T17:59:58.9814624Z Artifact download completed successfully.
+2026-10-19T17:59:58.9944818Z SHA256 digest of downloaded artifact is 2238873c20727c34c60fb8c61322f2696282e09b287f54620648524ff4bfdc25
+2026-10-19T17:59:58.9945592Z Artifact download completed successfully.
+2026-10-19T17:59:58.9946037Z Total of 17 artifact(s) downloaded
+2026-10-19T17:59:58.9950371Z Download artifact has finished successfully
+2026-10-19T17:59:59.0093705Z ##[group]Run uv sync --locked
+2026-10-19T17:59:59.0094030Z [36;1muv sync --locked[0m
+2026-10-19T17:59:59.0094534Z [36;1muv run python ../../M2/prepare_missing.py --results-root ../../M2/results/downloaded --output ../../M2/results/plan-final --published-root ../../published/M2/verification --import-only[0m
+2026-10-19T17:59:59.0095212Z [36;1muv run python ../../M2/evaluate.py --results-root ../../M2/results/downloaded --output ../../M2/results/report --split dev --allow-partial[0m
+2026-10-19T17:59:59.0324993Z shell: /usr/bin/bash -e {0}
+2026-10-19T17:59:59.0325204Z env:
+2026-10-19T17:59:59.0325368Z   OMP_NUM_THREADS: 2
+2026-10-19T17:59:59.0325547Z   MKL_NUM_THREADS: 2
+2026-10-19T17:59:59.0325730Z   UV_LINK_MODE: hardlink
+2026-10-19T17:59:59.0325972Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:59.0326285Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:59:59.0326621Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:59.0326903Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:59.0327207Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:59:59.0327494Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:59:59.0327769Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:59:59.0328004Z ##[endgroup]
+2026-10-19T17:59:59.0470200Z Using CPython 3.12.15 interpreter at: /opt/hostedtoolcache/Python/3.12.15/x64/bin/python3.12
+2026-10-19T17:59:59.0470704Z Creating virtual environment at: .venv
+2026-10-19T17:59:59.0510361Z Resolved 298 packages in 1ms
+2026-10-19T17:59:59.0912040Z    Building made @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE
+2026-10-19T17:59:59.1531936Z Downloading scipy (34.0MiB)
+2026-10-19T17:59:59.1533689Z Downloading numpy (15.8MiB)
+2026-10-19T17:59:59.1541121Z Downloading pandas (11.8MiB)
+2026-10-19T17:59:59.1541477Z Downloading networkx (2.0MiB)
+2026-10-19T17:59:59.1541824Z Downloading widgetsnbextension (2.1MiB)
+2026-10-19T17:59:59.1542103Z Downloading tokenizers (3.1MiB)
+2026-10-19T17:59:59.1542300Z Downloading hf-xet (3.2MiB)
+2026-10-19T17:59:59.1542489Z Downloading sqlalchemy (3.2MiB)
+2026-10-19T17:59:59.1542682Z Downloading fonttools (4.7MiB)
+2026-10-19T17:59:59.1542878Z Downloading pillow (6.7MiB)
+2026-10-19T17:59:59.1543069Z Downloading sympy (6.0MiB)
+2026-10-19T17:59:59.1543341Z Downloading matplotlib (8.3MiB)
+2026-10-19T17:59:59.1543550Z Downloading nvidia-cuda-cupti-cu12 (9.8MiB)
+2026-10-19T17:59:59.1543776Z Downloading scikit-learn (8.5MiB)
+2026-10-19T17:59:59.1543979Z Downloading plotly (9.4MiB)
+2026-10-19T17:59:59.1544167Z Downloading botocore (13.9MiB)
+2026-10-19T17:59:59.1695707Z Downloading kiwisolver (1.4MiB)
+2026-10-19T17:59:59.1696242Z Downloading jedi (1.5MiB)
+2026-10-19T17:59:59.1697050Z Downloading pymatgen (4.4MiB)
+2026-10-19T17:59:59.1697867Z Downloading nvidia-cudnn-cu12 (674.0MiB)
+2026-10-19T17:59:59.1698692Z Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)
+2026-10-19T17:59:59.1699498Z Downloading nvidia-nvjitlink-cu12 (37.4MiB)
+2026-10-19T17:59:59.1700258Z Downloading nvidia-nccl-cu12 (307.4MiB)
+2026-10-19T17:59:59.1701088Z Downloading babel (9.7MiB)
+2026-10-19T17:59:59.1701868Z Downloading pydantic-core (2.0MiB)
+2026-10-19T17:59:59.1702656Z Downloading nvidia-cusparselt-cu12 (273.9MiB)
+2026-10-19T17:59:59.1703529Z Downloading black (1.7MiB)
+2026-10-19T17:59:59.1704374Z Downloading nvidia-nvshmem-cu12 (118.9MiB)
+2026-10-19T17:59:59.1705190Z Downloading gemmi (2.5MiB)
+2026-10-19T17:59:59.1706004Z Downloading jupyterlab (11.8MiB)
+2026-10-19T17:59:59.1706781Z Downloading numba (3.6MiB)
+2026-10-19T17:59:59.1707595Z Downloading notebook (13.8MiB)
+2026-10-19T17:59:59.1708398Z Downloading ase (2.8MiB)
+2026-10-19T17:59:59.1709564Z Downloading nvidia-cublas-cu12 (566.8MiB)
+2026-10-19T17:59:59.1710541Z Downloading nvidia-cufft-cu12 (184.2MiB)
+2026-10-19T17:59:59.1711571Z Downloading llvmlite (53.7MiB)
+2026-10-19T17:59:59.1712246Z Downloading nvidia-curand-cu12 (60.7MiB)
+2026-10-19T17:59:59.1713107Z Downloading ruff (13.6MiB)
+2026-10-19T17:59:59.1714032Z Downloading aiohttp (1.7MiB)
+2026-10-19T17:59:59.1714930Z Downloading debugpy (4.1MiB)
+2026-10-19T17:59:59.1715861Z Downloading nvidia-cusparse-cu12 (274.9MiB)
+2026-10-19T17:59:59.1716742Z Downloading smact (1.8MiB)
+2026-10-19T17:59:59.1717627Z Downloading nvidia-cusolver-cu12 (255.1MiB)
+2026-10-19T17:59:59.1718501Z Downloading grpcio (5.6MiB)
+2026-10-19T17:59:59.1719436Z Downloading wandb (21.8MiB)
+2026-10-19T17:59:59.1720321Z Downloading h5py (4.9MiB)
+2026-10-19T17:59:59.1721244Z Downloading triton (162.6MiB)
+2026-10-19T17:59:59.1722183Z Downloading litellm (10.9MiB)
+2026-10-19T17:59:59.1723984Z Downloading torch (858.1MiB)
+2026-10-19T17:59:59.1724778Z Downloading torch-geometric (1.2MiB)
+2026-10-19T17:59:59.4530378Z  Downloaded torch-geometric
+2026-10-19T17:59:59.4705449Z Downloading pygments (1.2MiB)
+2026-10-19T17:59:59.4774348Z  Downloaded kiwisolver
+2026-10-19T17:59:59.4902228Z Downloading setuptools (1.1MiB)
+2026-10-19T17:59:59.5300323Z  Downloaded smact
+2026-10-19T17:59:59.5334628Z  Downloaded aiohttp
+2026-10-19T17:59:59.5337398Z  Downloaded black
+2026-10-19T17:59:59.5472256Z  Downloaded networkx
+2026-10-19T17:59:59.5555945Z  Downloaded pydantic-core
+2026-10-19T17:59:59.5618249Z Downloading tiktoken (1.1MiB)
+2026-10-19T17:59:59.5619286Z Downloading nvidia-cufile-cu12 (1.1MiB)
+2026-10-19T17:59:59.5872893Z  Downloaded jedi
+2026-10-19T17:59:59.5887145Z  Downloaded widgetsnbextension
+2026-10-19T17:59:59.8154066Z Downloading openai (1.0MiB)
+2026-10-19T17:59:59.8810819Z  Downloaded pygments
+2026-10-19T17:59:59.8844846Z  Downloaded gemmi
+2026-10-19T17:59:59.8884099Z  Downloaded ase
+2026-10-19T17:59:59.8890837Z  Downloaded setuptools
+2026-10-19T17:59:59.9668569Z  Downloaded tokenizers
+2026-10-19T17:59:59.9694339Z  Downloaded tiktoken
+2026-10-19T17:59:59.9831556Z  Downloaded nvidia-cufile-cu12
+2026-10-19T17:59:59.9936425Z  Downloaded hf-xet
+2026-10-19T17:59:59.9936809Z  Downloaded sqlalchemy
+2026-10-19T18:00:00.0308120Z  Downloaded openai
+2026-10-19T18:00:00.0866336Z  Downloaded numba
+2026-10-19T18:00:00.2281461Z  Downloaded debugpy
+2026-10-19T18:00:00.2591900Z  Downloaded pymatgen
+2026-10-19T18:00:00.2910860Z  Downloaded fonttools
+2026-10-19T18:00:00.3073457Z  Downloaded h5py
+2026-10-19T18:00:00.4224903Z  Downloaded grpcio
+2026-10-19T18:00:00.4372070Z  Downloaded sympy
+2026-10-19T18:00:00.5284618Z  Downloaded pillow
+2026-10-19T18:00:00.9216756Z  Downloaded matplotlib
+2026-10-19T18:00:00.9492948Z  Downloaded scikit-learn
+2026-10-19T18:00:01.0698037Z  Downloaded plotly
+2026-10-19T18:00:01.1059698Z  Downloaded babel
+2026-10-19T18:00:01.1060213Z  Downloaded nvidia-cuda-cupti-cu12
+2026-10-19T18:00:01.2252498Z  Downloaded litellm
+2026-10-19T18:00:01.2752955Z  Downloaded jupyterlab
+2026-10-19T18:00:01.3562818Z  Downloaded pandas
+2026-10-19T18:00:01.3861166Z  Downloaded ruff
+2026-10-19T18:00:01.3994432Z  Downloaded notebook
+2026-10-19T18:00:01.4032711Z  Downloaded botocore
+2026-10-19T18:00:01.7038614Z  Downloaded numpy
+2026-10-19T18:00:01.9663548Z  Downloaded wandb
+2026-10-19T18:00:02.4498719Z  Downloaded scipy
+2026-10-19T18:00:02.5693172Z  Downloaded nvidia-nvjitlink-cu12
+2026-10-19T18:00:03.1976049Z       Built made @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE
+2026-10-19T18:00:05.2471651Z  Downloaded nvidia-curand-cu12
+2026-10-19T18:00:06.2061014Z  Downloaded llvmlite
+2026-10-19T18:00:08.4628033Z  Downloaded nvidia-cuda-nvrtc-cu12
+2026-10-19T18:00:12.4491029Z  Downloaded nvidia-nvshmem-cu12
+2026-10-19T18:00:19.1032176Z  Downloaded nvidia-cufft-cu12
+2026-10-19T18:00:22.4409898Z  Downloaded triton
+2026-10-19T18:00:22.6689211Z  Downloaded nvidia-cusolver-cu12
+2026-10-19T18:00:23.3426575Z  Downloaded nvidia-cusparse-cu12
+2026-10-19T18:00:24.2572910Z  Downloaded nvidia-cusparselt-cu12
+2026-10-19T18:00:24.8620464Z  Downloaded nvidia-nccl-cu12
+2026-10-19T18:00:32.4330736Z  Downloaded nvidia-cublas-cu12
+2026-10-19T18:00:34.6495770Z  Downloaded nvidia-cudnn-cu12
+2026-10-19T18:00:36.9447754Z  Downloaded torch
+2026-10-19T18:00:37.0843131Z Prepared 294 packages in 38.02s
+2026-10-19T18:00:38.5578775Z Installed 294 packages in 1.47s
+2026-10-19T18:00:38.5582968Z  + aiohappyeyeballs==2.6.1
+2026-10-19T18:00:38.5583367Z  + aiohttp==3.13.2
+2026-10-19T18:00:38.5583632Z  + aiosignal==1.4.0
+2026-10-19T18:00:38.5583892Z  + alembic==1.17.2
+2026-10-19T18:00:38.5584159Z  + annotated-types==0.7.0
+2026-10-19T18:00:38.5584459Z  + antlr4-python3-runtime==4.9.3
+2026-10-19T18:00:38.5584769Z  + anyio==4.12.0
+2026-10-19T18:00:38.5585031Z  + argon2-cffi==25.1.0
+2026-10-19T18:00:38.5585312Z  + argon2-cffi-bindings==25.1.0
+2026-10-19T18:00:38.5585627Z  + arrow==1.4.0
+2026-10-19T18:00:38.5585870Z  + ase==3.27.0
+2026-10-19T18:00:38.5586113Z  + ase-ga==1.0.3
+2026-10-19T18:00:38.5586367Z  + asttokens==3.0.1
+2026-10-19T18:00:38.5586627Z  + async-lru==2.0.5
+2026-10-19T18:00:38.5586884Z  + asyncer==0.0.8
+2026-10-19T18:00:38.5587166Z  + attrs==25.4.0
+2026-10-19T18:00:38.5587437Z  + average-minimum-distance==1.6.1
+2026-10-19T18:00:38.5587775Z  + babel==2.17.0
+2026-10-19T18:00:38.5588019Z  + backoff==2.2.1
+2026-10-19T18:00:38.5588280Z  + beautifulsoup4==4.14.3
+2026-10-19T18:00:38.5588565Z  + bibtexparser==1.4.3
+2026-10-19T18:00:38.5588825Z  + black==25.12.0
+2026-10-19T18:00:38.5589081Z  + blake3==1.0.8
+2026-10-19T18:00:38.5589330Z  + bleach==6.3.0
+2026-10-19T18:00:38.5589574Z  + boto3==1.42.18
+2026-10-19T18:00:38.5589827Z  + botocore==1.42.18
+2026-10-19T18:00:38.5590092Z  + cached-path==1.8.1
+2026-10-19T18:00:38.5590359Z  + cachetools==6.2.4
+2026-10-19T18:00:38.5590623Z  + cbor2==5.7.1
+2026-10-19T18:00:38.5590869Z  + certifi==2025.11.12
+2026-10-19T18:00:38.5591127Z  + cffi==2.0.0
+2026-10-19T18:00:38.5591385Z  + charset-normalizer==3.4.4
+2026-10-19T18:00:38.5591961Z  + chemeleon-dng==0.1.3 (from git+https://github.com/hspark1212/chemeleon-dng.git@a15307694ccbe3381f856560675aee468cda2aa9)
+2026-10-19T18:00:38.5592517Z  + choreographer==1.2.1
+2026-10-19T18:00:38.5592789Z  + click==8.3.1
+2026-10-19T18:00:38.5593041Z  + cloudpickle==3.1.2
+2026-10-19T18:00:38.5593398Z  + colorlog==6.10.1
+2026-10-19T18:00:38.5593646Z  + comm==0.2.3
+2026-10-19T18:00:38.5593899Z  + configargparse==1.7.1
+2026-10-19T18:00:38.5594180Z  + contourpy==1.3.3
+2026-10-19T18:00:38.5594433Z  + coverage==7.13.1
+2026-10-19T18:00:38.5594686Z  + cycler==0.12.1
+2026-10-19T18:00:38.5594934Z  + debugpy==1.8.19
+2026-10-19T18:00:38.5595190Z  + decorator==5.2.1
+2026-10-19T18:00:38.5595452Z  + defusedxml==0.7.1
+2026-10-19T18:00:38.5595708Z  + dill==0.4.0
+2026-10-19T18:00:38.5595952Z  + diskcache==5.6.3
+2026-10-19T18:00:38.5596207Z  + distro==1.9.0
+2026-10-19T18:00:38.5596452Z  + dm-tree==0.1.8
+2026-10-19T18:00:38.5596701Z  + dspy==3.0.4
+2026-10-19T18:00:38.5596937Z  + e3nn==0.4.4
+2026-10-19T18:00:38.5597180Z  + emmet-core==0.86.2
+2026-10-19T18:00:38.5597440Z  + executing==2.2.1
+2026-10-19T18:00:38.5597701Z  + fastjsonschema==2.21.2
+2026-10-19T18:00:38.5597984Z  + fastuuid==0.14.0
+2026-10-19T18:00:38.5598243Z  + filelock==3.20.1
+2026-10-19T18:00:38.5598744Z  + fire==0.7.1
+2026-10-19T18:00:38.5598991Z  + fonttools==4.61.1
+2026-10-19T18:00:38.5599248Z  + fqdn==1.5.1
+2026-10-19T18:00:38.5599493Z  + frozenlist==1.8.0
+2026-10-19T18:00:38.5599756Z  + fsspec==2025.12.0
+2026-10-19T18:00:38.5600008Z  + gemmi==0.7.4
+2026-10-19T18:00:38.5600253Z  + gepa==0.0.17
+2026-10-19T18:00:38.5600497Z  + gitdb==4.0.12
+2026-10-19T18:00:38.5600975Z  + gitpython==3.1.45
+2026-10-19T18:00:38.5601257Z  + google-api-core==2.28.1
+2026-10-19T18:00:38.5601540Z  + google-auth==2.45.0
+2026-10-19T18:00:38.5601817Z  + google-cloud-core==2.5.0
+2026-10-19T18:00:38.5602118Z  + google-cloud-storage==3.7.0
+2026-10-19T18:00:38.5602420Z  + google-crc32c==1.8.0
+2026-10-19T18:00:38.5602707Z  + google-resumable-media==2.8.0
+2026-10-19T18:00:38.5603031Z  + googleapis-common-protos==1.72.0
+2026-10-19T18:00:38.5603438Z  + greenlet==3.3.0
+2026-10-19T18:00:38.5603696Z  + grpcio==1.67.1
+2026-10-19T18:00:38.5604078Z  + grpclib==0.4.9
+2026-10-19T18:00:38.5605944Z  + h11==0.16.0
+2026-10-19T18:00:38.5606186Z  + h2==4.3.0
+2026-10-19T18:00:38.5606434Z  + h5py==3.15.1
+2026-10-19T18:00:38.5606679Z  + hf-xet==1.2.0
+2026-10-19T18:00:38.5606930Z  + hpack==4.1.0
+2026-10-19T18:00:38.5607174Z  + httpcore==1.0.9
+2026-10-19T18:00:38.5607429Z  + httpx==0.28.1
+2026-10-19T18:00:38.5607700Z  + huggingface-hub==1.2.3
+2026-10-19T18:00:38.5607977Z  + hydra-core==1.3.2
+2026-10-19T18:00:38.5608240Z  + hyperframe==6.1.0
+2026-10-19T18:00:38.5608498Z  + idna==3.11
+2026-10-19T18:00:38.5608753Z  + importlib-metadata==8.7.1
+2026-10-19T18:00:38.5609047Z  + iniconfig==2.3.0
+2026-10-19T18:00:38.5609302Z  + ipykernel==7.1.0
+2026-10-19T18:00:38.5609558Z  + ipython==9.8.0
+2026-10-19T18:00:38.5609832Z  + ipython-pygments-lexers==1.1.1
+2026-10-19T18:00:38.5610144Z  + ipywidgets==8.1.8
+2026-10-19T18:00:38.5610411Z  + isoduration==20.11.0
+2026-10-19T18:00:38.5610674Z  + isort==7.0.0
+2026-10-19T18:00:38.5610919Z  + jedi==0.19.2
+2026-10-19T18:00:38.5611171Z  + jinja2==3.1.6
+2026-10-19T18:00:38.5611417Z  + jiter==0.12.0
+2026-10-19T18:00:38.5611666Z  + jmespath==1.0.1
+2026-10-19T18:00:38.5611921Z  + joblib==1.5.3
+2026-10-19T18:00:38.5612177Z  + json-repair==0.54.3
+2026-10-19T18:00:38.5612630Z  + json5==0.12.1
+2026-10-19T18:00:38.5613127Z  + jsonpointer==3.0.0
+2026-10-19T18:00:38.5613740Z  + jsonschema==4.25.1
+2026-10-19T18:00:38.5614161Z  + jsonschema-specifications==2025.9.1
+2026-10-19T18:00:38.5614687Z  + jupyter==1.1.1
+2026-10-19T18:00:38.5615152Z  + jupyter-client==8.7.0
+2026-10-19T18:00:38.5623646Z  + jupyter-console==6.6.3
+2026-10-19T18:00:38.5623982Z  + jupyter-core==5.9.1
+2026-10-19T18:00:38.5624267Z  + jupyter-events==0.12.0
+2026-10-19T18:00:38.5624639Z  + jupyter-lsp==2.3.0
+2026-10-19T18:00:38.5624915Z  + jupyter-server==2.17.0
+2026-10-19T18:00:38.5625219Z  + jupyter-server-terminals==0.5.3
+2026-10-19T18:00:38.5625536Z  + jupyterlab==4.5.1
+2026-10-19T18:00:38.5625806Z  + jupyterlab-pygments==0.3.0
+2026-10-19T18:00:38.5626121Z  + jupyterlab-server==2.28.0
+2026-10-19T18:00:38.5626439Z  + jupyterlab-widgets==3.0.16
+2026-10-19T18:00:38.5626728Z  + kaleido==1.2.0
+2026-10-19T18:00:38.5626998Z  + kiwisolver==1.4.9
+2026-10-19T18:00:38.5627258Z  + lark==1.3.1
+2026-10-19T18:00:38.5627512Z  + latexcodec==3.0.1
+2026-10-19T18:00:38.5627791Z  + lightning-utilities==0.15.2
+2026-10-19T18:00:38.5628092Z  + litellm==1.80.11
+2026-10-19T18:00:38.5628356Z  + llvmlite==0.46.0
+2026-10-19T18:00:38.5628611Z  + lmdb==1.7.5
+2026-10-19T18:00:38.5628861Z  + logistro==2.0.1
+2026-10-19T18:00:38.5629124Z  + mace-torch==0.3.14
+2026-10-19T18:00:38.5629813Z  + made==0.1.0 (from file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE)
+2026-10-19T18:00:38.5630517Z  + magicattr==0.1.6
+2026-10-19T18:00:38.5630777Z  + mako==1.3.10
+2026-10-19T18:00:38.5631036Z  + markdown-it-py==4.0.0
+2026-10-19T18:00:38.5631326Z  + markupsafe==3.0.3
+2026-10-19T18:00:38.5631593Z  + matplotlib==3.10.8
+2026-10-19T18:00:38.5631878Z  + matplotlib-inline==0.2.1
+2026-10-19T18:00:38.5632167Z  + matscipy==1.2.0
+2026-10-19T18:00:38.5632587Z  + mdurl==0.1.2
+2026-10-19T18:00:38.5632838Z  + mistune==3.2.0
+2026-10-19T18:00:38.5633099Z  + modal==1.3.0.post1
+2026-10-19T18:00:38.5635477Z  + monty==2025.3.3
+2026-10-19T18:00:38.5635738Z  + mp-api==0.45.15
+2026-10-19T18:00:38.5635994Z  + mpmath==1.3.0
+2026-10-19T18:00:38.5636252Z  + msgpack==1.1.2
+2026-10-19T18:00:38.5636511Z  + multidict==6.7.0
+2026-10-19T18:00:38.5636780Z  + multiprocess==0.70.18
+2026-10-19T18:00:38.5637070Z  + mypy-extensions==1.1.0
+2026-10-19T18:00:38.5637351Z  + narwhals==2.14.0
+2026-10-19T18:00:38.5637608Z  + nbclient==0.10.4
+2026-10-19T18:00:38.5637869Z  + nbconvert==7.16.6
+2026-10-19T18:00:38.5638131Z  + nbformat==5.10.4
+2026-10-19T18:00:38.5638395Z  + nest-asyncio==1.6.0
+2026-10-19T18:00:38.5638663Z  + networkx==3.6.1
+2026-10-19T18:00:38.5638916Z  + notebook==7.5.1
+2026-10-19T18:00:38.5639178Z  + notebook-shim==0.2.4
+2026-10-19T18:00:38.5639445Z  + numba==0.63.1
+2026-10-19T18:00:38.5639818Z  + numpy==2.3.5
+2026-10-19T18:00:38.5640087Z  + nvidia-cublas-cu12==12.8.4.1
+2026-10-19T18:00:38.5640407Z  + nvidia-cuda-cupti-cu12==12.8.90
+2026-10-19T18:00:38.5640743Z  + nvidia-cuda-nvrtc-cu12==12.8.93
+2026-10-19T18:00:38.5641071Z  + nvidia-cuda-runtime-cu12==12.8.90
+2026-10-19T18:00:38.5641401Z  + nvidia-cudnn-cu12==9.10.2.21
+2026-10-19T18:00:38.5641704Z  + nvidia-cufft-cu12==11.3.3.83
+2026-10-19T18:00:38.5642000Z  + nvidia-cufile-cu12==1.13.1.3
+2026-10-19T18:00:38.5642308Z  + nvidia-curand-cu12==10.3.9.90
+2026-10-19T18:00:38.5642627Z  + nvidia-cusolver-cu12==11.7.3.90
+2026-10-19T18:00:38.5642946Z  + nvidia-cusparse-cu12==12.5.8.93
+2026-10-19T18:00:38.5643363Z  + nvidia-cusparselt-cu12==0.7.1
+2026-10-19T18:00:38.5643677Z  + nvidia-nccl-cu12==2.27.5
+2026-10-19T18:00:38.5643976Z  + nvidia-nvjitlink-cu12==12.8.93
+2026-10-19T18:00:38.5644292Z  + nvidia-nvshmem-cu12==3.3.20
+2026-10-19T18:00:38.5644598Z  + nvidia-nvtx-cu12==12.8.90
+2026-10-19T18:00:38.5644889Z  + omegaconf==2.3.0
+2026-10-19T18:00:38.5645161Z  + openai==2.14.0
+2026-10-19T18:00:38.5645421Z  + opt-einsum==3.4.0
+2026-10-19T18:00:38.5645698Z  + opt-einsum-fx==0.1.4
+2026-10-19T18:00:38.5645972Z  + optuna==4.6.0
+2026-10-19T18:00:38.5646227Z  + orb-models==0.5.5
+2026-10-19T18:00:38.5646488Z  + orjson==3.11.5
+2026-10-19T18:00:38.5646745Z  + packaging==25.0
+2026-10-19T18:00:38.5647017Z  + palettable==3.3.3
+2026-10-19T18:00:38.5647287Z  + pandarallel==1.6.5
+2026-10-19T18:00:38.5647552Z  + pandas==2.3.3
+2026-10-19T18:00:38.5647811Z  + pandocfilters==1.5.1
+2026-10-19T18:00:38.5648078Z  + parso==0.8.5
+2026-10-19T18:00:38.5648331Z  + pathos==0.3.4
+2026-10-19T18:00:38.5648589Z  + pathspec==0.12.1
+2026-10-19T18:00:38.5648849Z  + pexpect==4.9.0
+2026-10-19T18:00:38.5649108Z  + pillow==12.0.0
+2026-10-19T18:00:38.5649370Z  + platformdirs==4.5.1
+2026-10-19T18:00:38.5649634Z  + plotly==6.5.0
+2026-10-19T18:00:38.5649891Z  + pluggy==1.6.0
+2026-10-19T18:00:38.5650142Z  + pox==0.3.6
+2026-10-19T18:00:38.5650398Z  + ppft==1.7.7
+2026-10-19T18:00:38.5650659Z  + prettytable==3.17.0
+2026-10-19T18:00:38.5650969Z  + prometheus-client==0.23.1
+2026-10-19T18:00:38.5651260Z  + prompt-toolkit==3.0.52
+2026-10-19T18:00:38.5651454Z  + propcache==0.4.1
+2026-10-19T18:00:38.5651636Z  + proto-plus==1.27.0
+2026-10-19T18:00:38.5651812Z  + protobuf==6.33.2
+2026-10-19T18:00:38.5651985Z  + psutil==7.2.1
+2026-10-19T18:00:38.5652154Z  + ptyprocess==0.7.0
+2026-10-19T18:00:38.5652327Z  + pure-eval==0.2.3
+2026-10-19T18:00:38.5652496Z  + pyasn1==0.6.1
+2026-10-19T18:00:38.5652666Z  + pyasn1-modules==0.4.2
+2026-10-19T18:00:38.5652839Z  + pybtex==0.25.1
+2026-10-19T18:00:38.5653005Z  + pycparser==2.23
+2026-10-19T18:00:38.5653302Z  + pydantic==2.12.5
+2026-10-19T18:00:38.5653533Z  + pydantic-core==2.41.5
+2026-10-19T18:00:38.5653720Z  + pydantic-settings==2.12.0
+2026-10-19T18:00:38.5653909Z  + pygments==2.19.2
+2026-10-19T18:00:38.5654077Z  + pymatgen==2025.10.7
+2026-10-19T18:00:38.5654264Z  + pymatgen-io-validation==0.1.2
+2026-10-19T18:00:38.5654483Z  + pyparsing==3.3.1
+2026-10-19T18:00:38.5654652Z  + pytest==9.0.2
+2026-10-19T18:00:38.5654822Z  + pytest-asyncio==1.3.0
+2026-10-19T18:00:38.5655004Z  + pytest-cov==7.0.0
+2026-10-19T18:00:38.5655272Z  + pytest-timeout==2.4.0
+2026-10-19T18:00:38.5655460Z  + python-dateutil==2.9.0.post0
+2026-10-19T18:00:38.5655655Z  + python-dotenv==1.2.1
+2026-10-19T18:00:38.5655839Z  + python-hostlist==2.3.0
+2026-10-19T18:00:38.5656029Z  + python-json-logger==4.0.0
+2026-10-19T18:00:38.5656220Z  + pytokens==0.3.0
+2026-10-19T18:00:38.5656400Z  + pytorch-lightning==2.6.0
+2026-10-19T18:00:38.5656584Z  + pytz==2025.2
+2026-10-19T18:00:38.5656743Z  + pyyaml==6.0.3
+2026-10-19T18:00:38.5656905Z  + pyzmq==27.1.0
+2026-10-19T18:00:38.5657069Z  + referencing==0.37.0
+2026-10-19T18:00:38.5657241Z  + regex==2025.11.3
+2026-10-19T18:00:38.5657409Z  + requests==2.32.5
+2026-10-19T18:00:38.5657583Z  + rfc3339-validator==0.1.4
+2026-10-19T18:00:38.5657770Z  + rfc3986-validator==0.1.1
+2026-10-19T18:00:38.5657950Z  + rfc3987-syntax==1.1.0
+2026-10-19T18:00:38.5658131Z  + rich==13.9.4
+2026-10-19T18:00:38.5658382Z  + rpds-py==0.30.0
+2026-10-19T18:00:38.5658548Z  + rsa==4.9.1
+2026-10-19T18:00:38.5658718Z  + ruamel-yaml==0.18.17
+2026-10-19T18:00:38.5658899Z  + ruamel-yaml-clib==0.2.15
+2026-10-19T18:00:38.5659076Z  + ruff==0.14.10
+2026-10-19T18:00:38.5659243Z  + s3transfer==0.16.0
+2026-10-19T18:00:38.5659415Z  + scikit-learn==1.8.0
+2026-10-19T18:00:38.5659589Z  + scipy==1.16.3
+2026-10-19T18:00:38.5659756Z  + seaborn==0.13.2
+2026-10-19T18:00:38.5659923Z  + send2trash==1.8.3
+2026-10-19T18:00:38.5660095Z  + sentry-sdk==2.48.0
+2026-10-19T18:00:38.5660266Z  + setuptools==80.9.0
+2026-10-19T18:00:38.5660438Z  + shellingham==1.5.4
+2026-10-19T18:00:38.5660608Z  + simplejson==3.20.2
+2026-10-19T18:00:38.5660770Z  + six==1.17.0
+2026-10-19T18:00:38.5660930Z  + smact==3.2.0
+2026-10-19T18:00:38.5661091Z  + smart-open==7.5.0
+2026-10-19T18:00:38.5661259Z  + smmap==5.0.2
+2026-10-19T18:00:38.5661420Z  + sniffio==1.3.1
+2026-10-19T18:00:38.5661586Z  + soupsieve==2.8.1
+2026-10-19T18:00:38.5661752Z  + spglib==2.7.0
+2026-10-19T18:00:38.5661922Z  + sqlalchemy==2.0.45
+2026-10-19T18:00:38.5662091Z  + stack-data==0.6.3
+2026-10-19T18:00:38.5662265Z  + sympy==1.14.0
+2026-10-19T18:00:38.5662433Z  + synchronicity==0.11.1
+2026-10-19T18:00:38.5662613Z  + tabulate==0.9.0
+2026-10-19T18:00:38.5662781Z  + tenacity==9.1.2
+2026-10-19T18:00:38.5662943Z  + termcolor==3.3.0
+2026-10-19T18:00:38.5663113Z  + terminado==0.18.1
+2026-10-19T18:00:38.5663439Z  + threadpoolctl==3.6.0
+2026-10-19T18:00:38.5663614Z  + tiktoken==0.12.0
+2026-10-19T18:00:38.5663780Z  + tinycss2==1.4.0
+2026-10-19T18:00:38.5663945Z  + tokenizers==0.22.1
+2026-10-19T18:00:38.5664114Z  + toml==0.10.2
+2026-10-19T18:00:38.5664274Z  + torch==2.9.1
+2026-10-19T18:00:38.5664433Z  + torch-ema==0.3
+2026-10-19T18:00:38.5664606Z  + torch-geometric==2.7.0
+2026-10-19T18:00:38.5664785Z  + torchmetrics==1.8.2
+2026-10-19T18:00:38.5664961Z  + tornado==6.5.4
+2026-10-19T18:00:38.5665123Z  + tqdm==4.67.1
+2026-10-19T18:00:38.5665281Z  + traitlets==5.14.3
+2026-10-19T18:00:38.5665450Z  + triton==3.5.1
+2026-10-19T18:00:38.5665620Z  + typer==0.21.0
+2026-10-19T18:00:38.5665782Z  + typer-slim==0.21.0
+2026-10-19T18:00:38.5665964Z  + types-certifi==2021.10.8.3
+2026-10-19T18:00:38.5666157Z  + types-toml==0.10.8.20240310
+2026-10-19T18:00:38.5666355Z  + typing-extensions==4.15.0
+2026-10-19T18:00:38.5666549Z  + typing-inspection==0.4.2
+2026-10-19T18:00:38.5666731Z  + tzdata==2025.3
+2026-10-19T18:00:38.5666901Z  + uncertainties==3.2.3
+2026-10-19T18:00:38.5667079Z  + uri-template==1.3.0
+2026-10-19T18:00:38.5667248Z  + urllib3==2.6.2
+2026-10-19T18:00:38.5667411Z  + wandb==0.23.1
+2026-10-19T18:00:38.5667573Z  + watchfiles==1.1.1
+2026-10-19T18:00:38.5667743Z  + wcwidth==0.2.14
+2026-10-19T18:00:38.5667912Z  + webcolors==25.10.0
+2026-10-19T18:00:38.5668080Z  + webencodings==0.5.1
+2026-10-19T18:00:38.5668259Z  + websocket-client==1.9.0
+2026-10-19T18:00:38.5668448Z  + widgetsnbextension==4.0.15
+2026-10-19T18:00:38.5668635Z  + wrapt==2.0.1
+2026-10-19T18:00:38.5668798Z  + xxhash==3.6.0
+2026-10-19T18:00:38.5668957Z  + yarl==1.22.0
+2026-10-19T18:00:38.5669119Z  + zipp==3.23.0
+2026-10-19T18:00:55.3781162Z UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T18:01:02.1507983Z cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-19T18:01:08.9475841Z UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T18:01:12.1003750Z cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-19T18:01:12.1007103Z Protocol or material reference revision differs; stop aggregation
+2026-10-19T18:01:13.9659196Z ##[error]Process completed with exit code 1.
+2026-10-19T18:01:13.9717821Z ##[group]Run actions/upload-artifact@v4
+2026-10-19T18:01:13.9718044Z with:
+2026-10-19T18:01:13.9718226Z   name: m2-missing-report-39286848821
+2026-10-19T18:01:13.9718476Z   path: M2/results/report/
+M2/results/plan-final/
+
+2026-10-19T18:01:13.9718721Z   retention-days: 90
+2026-10-19T18:01:13.9718904Z   if-no-files-found: warn
+2026-10-19T18:01:13.9719093Z   compression-level: 6
+2026-10-19T18:01:13.9719273Z   overwrite: false
+2026-10-19T18:01:13.9719449Z   include-hidden-files: false
+2026-10-19T18:01:13.9719642Z env:
+2026-10-19T18:01:13.9719797Z   OMP_NUM_THREADS: 2
+2026-10-19T18:01:13.9719966Z   MKL_NUM_THREADS: 2
+2026-10-19T18:01:13.9720137Z   UV_LINK_MODE: hardlink
+2026-10-19T18:01:13.9720361Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T18:01:13.9720663Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T18:01:13.9720957Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T18:01:13.9721249Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T18:01:13.9721527Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T18:01:13.9721809Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T18:01:13.9722082Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T18:01:13.9722306Z ##[endgroup]
+2026-10-19T18:01:14.0700792Z (node:2449) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T18:01:14.0701258Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T18:01:14.0787024Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-19T18:01:14.0788473Z The least common ancestor is /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results. This will be the root directory of the artifact
+2026-10-19T18:01:14.0789559Z With the provided path, there will be 1 file uploaded
+2026-10-19T18:01:14.0790272Z Artifact name is valid!
+2026-10-19T18:01:14.0790565Z Root directory input is valid!
+2026-10-19T18:01:14.5331951Z Beginning upload of artifact content to blob storage
+2026-10-19T18:01:14.5435099Z (node:2449) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T18:01:14.6744698Z Uploaded bytes 595
+2026-10-19T18:01:14.7114829Z Finished uploading artifact content to blob storage!
+2026-10-19T18:01:14.7115462Z SHA256 digest of uploaded artifact zip is bcacd406d76cc90b1af59a42f4caca3c469b9d3ccc2a99d74b40805cf1883756
+2026-10-19T18:01:14.7116676Z Finalizing artifact upload
+2026-10-19T18:01:14.9565710Z Artifact m2-missing-report-39286848821.zip successfully finalized. Artifact ID 12211540126
+2026-10-19T18:01:14.9566524Z Artifact m2-missing-report-39286848821 has been successfully uploaded! Final size is 595 bytes. Artifact ID is 12211540126
+2026-10-19T18:01:14.9570939Z Artifact download URL: https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39286848821/artifacts/12211540126
+2026-10-19T18:01:14.9717519Z Post job cleanup.
+2026-10-19T18:01:15.0215226Z [command]/usr/bin/git version
+2026-10-19T18:01:15.0244827Z git version 2.55.0
+2026-10-19T18:01:15.0266114Z Temporarily overriding HOME='/home/runner/work/_temp/e4947f2f-749a-4be4-a7e2-a59ce3de1e30' before making global git config changes
+2026-10-19T18:01:15.0266914Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T18:01:15.0269995Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/published
+2026-10-19T18:01:15.0299127Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T18:01:15.0324291Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T18:01:15.0525710Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T18:01:15.0553357Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T18:01:15.0740640Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T18:01:15.0773290Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T18:01:15.1072983Z Post job cleanup.
+2026-10-19T18:01:15.1573127Z [command]/usr/bin/git version
+2026-10-19T18:01:15.1603711Z git version 2.55.0
+2026-10-19T18:01:15.1625859Z Temporarily overriding HOME='/home/runner/work/_temp/4f91e5b1-2571-4c55-bb11-eef9ca89f3cd' before making global git config changes
+2026-10-19T18:01:15.1626688Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T18:01:15.1629625Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T18:01:15.1658136Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T18:01:15.1713104Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T18:01:15.1937148Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T18:01:15.1959353Z http.https://github.com/.extraheader
+2026-10-19T18:01:15.1975349Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T18:01:15.2114125Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T18:01:15.2291656Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T18:01:15.2319357Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T18:01:15.2605693Z Cleaning up orphan processes
+2026-10-19T18:01:15.2828076Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/download-artifact@v4, actions/setup-python@v5, actions/upload-artifact@v4, astral-sh/setup-uv@v6. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

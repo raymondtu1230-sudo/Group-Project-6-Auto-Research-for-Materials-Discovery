@@ -1,0 +1,1752 @@
+﻿2026-10-19T17:51:15.7918826Z Current runner version: '2.337.0'
+2026-10-19T17:51:15.7953127Z ##[group]Runner Image Provisioner
+2026-10-19T17:51:15.7954113Z Hosted Compute Agent
+2026-10-19T17:51:15.7955140Z Version: 20261012.601
+2026-10-19T17:51:15.7955893Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T17:51:15.7956755Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T17:51:15.7957465Z Worker ID: {f80bb079-fa89-45d8-ad80-195bdac80452}
+2026-10-19T17:51:15.7958273Z Region: canadaeast
+2026-10-19T17:51:15.7958841Z Cloud: Azure
+2026-10-19T17:51:15.7959737Z ##[endgroup]
+2026-10-19T17:51:15.7961471Z ##[group]Operating System
+2026-10-19T17:51:15.7962130Z Ubuntu
+2026-10-19T17:51:15.7962752Z 24.04.5
+2026-10-19T17:51:15.7963357Z LTS
+2026-10-19T17:51:15.7963853Z ##[endgroup]
+2026-10-19T17:51:15.7964816Z ##[group]Runner Image
+2026-10-19T17:51:15.7965468Z Image: ubuntu-24.04
+2026-10-19T17:51:15.7966118Z Version: 20261012.334.1
+2026-10-19T17:51:15.7967409Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T17:51:15.7969079Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-19T17:51:15.7970086Z ##[endgroup]
+2026-10-19T17:51:15.7971296Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T17:51:15.7973405Z Contents: read
+2026-10-19T17:51:15.7974100Z Metadata: read
+2026-10-19T17:51:15.7975181Z ##[endgroup]
+2026-10-19T17:51:15.7977373Z Secret source: Actions
+2026-10-19T17:51:15.7978482Z Cache mode: write
+2026-10-19T17:51:15.7979496Z Prepare workflow directory
+2026-10-19T17:51:15.8427454Z Prepare all required actions
+2026-10-19T17:51:15.8478035Z Getting action download info
+2026-10-19T17:51:16.1591334Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-19T17:51:16.2474856Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-19T17:51:16.3279844Z Download action repository 'astral-sh/setup-uv@v6' (SHA:d0cc045d04ccac9d8b7881df0226f9e82c39688e)
+2026-10-19T17:51:16.8610513Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-19T17:51:17.0796468Z Complete job name: contract-and-smoke
+2026-10-19T17:51:17.1634762Z ##[group]Run actions/checkout@v4
+2026-10-19T17:51:17.1635952Z with:
+2026-10-19T17:51:17.1636789Z   repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:51:17.1641316Z   token: ***
+2026-10-19T17:51:17.1641870Z   ssh-strict: true
+2026-10-19T17:51:17.1642492Z   ssh-user: git
+2026-10-19T17:51:17.1643108Z   persist-credentials: true
+2026-10-19T17:51:17.1643687Z   clean: true
+2026-10-19T17:51:17.1644301Z   sparse-checkout-cone-mode: true
+2026-10-19T17:51:17.1645140Z   fetch-depth: 1
+2026-10-19T17:51:17.1645755Z   fetch-tags: false
+2026-10-19T17:51:17.1646330Z   show-progress: true
+2026-10-19T17:51:17.1646894Z   lfs: false
+2026-10-19T17:51:17.1647468Z   submodules: false
+2026-10-19T17:51:17.1648030Z   set-safe-directory: true
+2026-10-19T17:51:17.1648689Z   allow-unsafe-pr-checkout: false
+2026-10-19T17:51:17.1649722Z env:
+2026-10-19T17:51:17.1650245Z   OMP_NUM_THREADS: 2
+2026-10-19T17:51:17.1650862Z   MKL_NUM_THREADS: 2
+2026-10-19T17:51:17.1651565Z   UV_LINK_MODE: hardlink
+2026-10-19T17:51:17.1652176Z ##[endgroup]
+2026-10-19T17:51:17.2717624Z Syncing repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:51:17.2721234Z ##[group]Getting Git version info
+2026-10-19T17:51:17.2723576Z Working directory is '/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery'
+2026-10-19T17:51:17.2726974Z [command]/usr/bin/git version
+2026-10-19T17:51:17.2778687Z git version 2.55.0
+2026-10-19T17:51:17.2801404Z ##[endgroup]
+2026-10-19T17:51:17.2828010Z Temporarily overriding HOME='/home/runner/work/_temp/003eceed-6336-460a-b66d-d663ea11bd8e' before making global git config changes
+2026-10-19T17:51:17.2831034Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T17:51:17.2840513Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:51:17.2892975Z Deleting the contents of '/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery'
+2026-10-19T17:51:17.2897384Z ##[group]Initializing the repository
+2026-10-19T17:51:17.2903609Z [command]/usr/bin/git init /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:51:17.3016388Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T17:51:17.3018497Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T17:51:17.3020344Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T17:51:17.3022015Z hint: call:
+2026-10-19T17:51:17.3022922Z hint:
+2026-10-19T17:51:17.3024111Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T17:51:17.3025794Z hint:
+2026-10-19T17:51:17.3027158Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T17:51:17.3029132Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T17:51:17.3030693Z hint:
+2026-10-19T17:51:17.3031729Z hint: 	git branch -m <name>
+2026-10-19T17:51:17.3032772Z hint:
+2026-10-19T17:51:17.3034004Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T17:51:17.3037644Z Initialized empty Git repository in /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/.git/
+2026-10-19T17:51:17.3042911Z [command]/usr/bin/git remote add origin https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:51:17.3091503Z ##[endgroup]
+2026-10-19T17:51:17.3093171Z ##[group]Disabling automatic garbage collection
+2026-10-19T17:51:17.3097882Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T17:51:17.3132006Z ##[endgroup]
+2026-10-19T17:51:17.3134041Z ##[group]Setting up auth
+2026-10-19T17:51:17.3139171Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T17:51:17.3175839Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T17:51:17.3582494Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T17:51:17.3628215Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T17:51:17.3859283Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T17:51:17.3896205Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T17:51:17.4135645Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T17:51:17.4178158Z ##[endgroup]
+2026-10-19T17:51:17.4179218Z ##[group]Fetching the repository
+2026-10-19T17:51:17.4188616Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +053d8c323cf697fe4ce1da947b3602318952ace3:refs/remotes/origin/m2/tool-routing-evaluation
+2026-10-19T17:51:18.2693841Z From https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:51:18.2698855Z  * [new ref]         053d8c323cf697fe4ce1da947b3602318952ace3 -> origin/m2/tool-routing-evaluation
+2026-10-19T17:51:18.2707094Z ##[endgroup]
+2026-10-19T17:51:18.2709727Z ##[group]Determining the checkout info
+2026-10-19T17:51:18.2712354Z ##[endgroup]
+2026-10-19T17:51:18.2713603Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T17:51:18.2762587Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T17:51:18.2802998Z ##[group]Checking out the ref
+2026-10-19T17:51:18.2807206Z [command]/usr/bin/git checkout --progress --force -B m2/tool-routing-evaluation refs/remotes/origin/m2/tool-routing-evaluation
+2026-10-19T17:51:18.4149349Z Switched to a new branch 'm2/tool-routing-evaluation'
+2026-10-19T17:51:18.4154711Z branch 'm2/tool-routing-evaluation' set up to track 'origin/m2/tool-routing-evaluation'.
+2026-10-19T17:51:18.4164865Z ##[endgroup]
+2026-10-19T17:51:18.4213762Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T17:51:18.4252644Z 053d8c323cf697fe4ce1da947b3602318952ace3
+2026-10-19T17:51:18.4642811Z ##[group]Run actions/setup-python@v5
+2026-10-19T17:51:18.4643949Z with:
+2026-10-19T17:51:18.4644959Z   python-version: 3.12
+2026-10-19T17:51:18.4645878Z   check-latest: false
+2026-10-19T17:51:18.4656477Z   token: ***
+2026-10-19T17:51:18.4657309Z   update-environment: true
+2026-10-19T17:51:18.4658283Z   allow-prereleases: false
+2026-10-19T17:51:18.4659223Z   freethreaded: false
+2026-10-19T17:51:18.4660061Z env:
+2026-10-19T17:51:18.4660776Z   OMP_NUM_THREADS: 2
+2026-10-19T17:51:18.4661615Z   MKL_NUM_THREADS: 2
+2026-10-19T17:51:18.4662454Z   UV_LINK_MODE: hardlink
+2026-10-19T17:51:18.4663346Z ##[endgroup]
+2026-10-19T17:51:18.6025930Z ##[group]Installed versions
+2026-10-19T17:51:18.6124362Z (node:2308) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T17:51:18.6128877Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T17:51:18.6131940Z Successfully set up CPython (3.12.15)
+2026-10-19T17:51:18.6135055Z ##[endgroup]
+2026-10-19T17:51:18.6644023Z ##[group]Run astral-sh/setup-uv@v6
+2026-10-19T17:51:18.6645863Z with:
+2026-10-19T17:51:18.6646955Z   enable-cache: true
+2026-10-19T17:51:18.6648379Z   cache-dependency-glob: M1/MADE/uv.lock
+2026-10-19T17:51:18.6650178Z   activate-environment: false
+2026-10-19T17:51:18.6654627Z   working-directory: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:51:18.6659193Z   server-url: https://github.com
+2026-10-19T17:51:18.6676498Z   github-token: ***
+2026-10-19T17:51:18.6677767Z   restore-cache: true
+2026-10-19T17:51:18.6679020Z   save-cache: true
+2026-10-19T17:51:18.6680318Z   prune-cache: true
+2026-10-19T17:51:18.6681710Z   ignore-nothing-to-cache: false
+2026-10-19T17:51:18.6683355Z   ignore-empty-workdir: false
+2026-10-19T17:51:18.6685118Z   add-problem-matchers: true
+2026-10-19T17:51:18.6686592Z env:
+2026-10-19T17:51:18.6687785Z   OMP_NUM_THREADS: 2
+2026-10-19T17:51:18.6689175Z   MKL_NUM_THREADS: 2
+2026-10-19T17:51:18.6690510Z   UV_LINK_MODE: hardlink
+2026-10-19T17:51:18.6692276Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:18.6695052Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:51:18.6697762Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:18.6700177Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:18.6702509Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:18.6704093Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:51:18.6705791Z ##[endgroup]
+2026-10-19T17:51:19.0670193Z (node:2316) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T17:51:19.0671057Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T17:51:19.0789146Z Trying to find version for uv in: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/uv.toml
+2026-10-19T17:51:19.0792014Z Could not find file: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/uv.toml
+2026-10-19T17:51:19.0795181Z Trying to find version for uv in: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/pyproject.toml
+2026-10-19T17:51:19.0797675Z Could not find file: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/pyproject.toml
+2026-10-19T17:51:19.0799417Z Could not determine uv version from uv.toml or pyproject.toml. Falling back to latest.
+2026-10-19T17:51:19.0800792Z Getting latest version from GitHub API...
+2026-10-19T17:51:19.5571820Z manifest-file not provided, reading from local file.
+2026-10-19T17:51:19.5618818Z manifest-file does not contain version 0.13.1, arch x86_64, platform unknown-linux-gnu. Falling back to GitHub releases.
+2026-10-19T17:51:19.5620487Z Downloading uv from "https://github.com/astral-sh/uv/releases/download/0.13.1/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-10-19T17:51:19.8972867Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/91c57870-978a-4f3a-9c93-95b0edc307cc -f /home/runner/work/_temp/ecba3f79-19f3-434e-8f9b-ce9998191b7d
+2026-10-19T17:51:20.2261968Z Added /home/runner/.local/bin to the path
+2026-10-19T17:51:20.2270314Z Added /opt/hostedtoolcache/uv/0.13.1/x86_64 to the path
+2026-10-19T17:51:20.2282206Z Set UV_CACHE_DIR to /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:51:20.2283090Z Successfully installed uv version 0.13.1
+2026-10-19T17:51:20.2285161Z Searching files using cache dependency glob: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/uv.lock
+2026-10-19T17:51:20.2321337Z /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/uv.lock
+2026-10-19T17:51:20.2355240Z Found 1 files to hash.
+2026-10-19T17:51:20.3462132Z Trying to restore uv cache from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T17:51:20.5070041Z Cache hit for: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T17:51:20.5184273Z (node:2316) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T17:51:21.3070975Z Received 54646798 of 54646798 (100.0%), 77.7 MBs/sec
+2026-10-19T17:51:21.3071748Z Cache Size: ~52 MB (54646798 B)
+2026-10-19T17:51:21.3105362Z [command]/usr/bin/tar -xf /home/runner/work/_temp/8707c26b-bae6-4d6a-b6ac-ddfb0ded2a7b/cache.tzst -P -C /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery --use-compress-program unzstd
+2026-10-19T17:51:21.4705256Z Cache restored successfully
+2026-10-19T17:51:21.4735808Z uv cache restored from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T17:51:21.4889363Z ##[group]Run uv sync --locked
+2026-10-19T17:51:21.4889757Z [36;1muv sync --locked[0m
+2026-10-19T17:51:21.5147835Z shell: /usr/bin/bash -e {0}
+2026-10-19T17:51:21.5148206Z env:
+2026-10-19T17:51:21.5148447Z   OMP_NUM_THREADS: 2
+2026-10-19T17:51:21.5148699Z   MKL_NUM_THREADS: 2
+2026-10-19T17:51:21.5148944Z   UV_LINK_MODE: hardlink
+2026-10-19T17:51:21.5149309Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:21.5149829Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:51:21.5150328Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:21.5150774Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:21.5151439Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:21.5151898Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:51:21.5152333Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:51:21.5152728Z ##[endgroup]
+2026-10-19T17:51:21.5333023Z Using CPython 3.12.15 interpreter at: /opt/hostedtoolcache/Python/3.12.15/x64/bin/python3.12
+2026-10-19T17:51:21.5333980Z Creating virtual environment at: .venv
+2026-10-19T17:51:21.5391712Z Resolved 298 packages in 1ms
+2026-10-19T17:51:21.5919417Z    Building made @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE
+2026-10-19T17:51:21.6598566Z Downloading sympy (6.0MiB)
+2026-10-19T17:51:21.6600905Z Downloading networkx (2.0MiB)
+2026-10-19T17:51:21.6686370Z Downloading pydantic-core (2.0MiB)
+2026-10-19T17:51:21.6687421Z Downloading aiohttp (1.7MiB)
+2026-10-19T17:51:21.6693094Z Downloading jedi (1.5MiB)
+2026-10-19T17:51:21.6693731Z Downloading torch-geometric (1.2MiB)
+2026-10-19T17:51:21.6694623Z Downloading plotly (9.4MiB)
+2026-10-19T17:51:21.6695161Z Downloading nvidia-nvshmem-cu12 (118.9MiB)
+2026-10-19T17:51:21.6695672Z Downloading grpcio (5.6MiB)
+2026-10-19T17:51:21.6696151Z Downloading tokenizers (3.1MiB)
+2026-10-19T17:51:21.6696758Z Downloading sqlalchemy (3.2MiB)
+2026-10-19T17:51:21.6697937Z Downloading scikit-learn (8.5MiB)
+2026-10-19T17:51:21.6768059Z Downloading nvidia-cudnn-cu12 (674.0MiB)
+2026-10-19T17:51:21.6769359Z Downloading debugpy (4.1MiB)
+2026-10-19T17:51:21.6770888Z Downloading hf-xet (3.2MiB)
+2026-10-19T17:51:21.6772476Z Downloading pymatgen (4.4MiB)
+2026-10-19T17:51:21.6774246Z Downloading pillow (6.7MiB)
+2026-10-19T17:51:21.6775563Z Downloading nvidia-cublas-cu12 (566.8MiB)
+2026-10-19T17:51:21.6777394Z Downloading nvidia-nccl-cu12 (307.4MiB)
+2026-10-19T17:51:21.6778941Z Downloading nvidia-cufft-cu12 (184.2MiB)
+2026-10-19T17:51:21.6780636Z Downloading ruff (13.6MiB)
+2026-10-19T17:51:21.6782354Z Downloading nvidia-cusparse-cu12 (274.9MiB)
+2026-10-19T17:51:21.6783654Z Downloading scipy (34.0MiB)
+2026-10-19T17:51:21.6785958Z Downloading nvidia-curand-cu12 (60.7MiB)
+2026-10-19T17:51:21.6787075Z Downloading nvidia-cusparselt-cu12 (273.9MiB)
+2026-10-19T17:51:21.6788993Z Downloading ase (2.8MiB)
+2026-10-19T17:51:21.6790684Z Downloading nvidia-cuda-cupti-cu12 (9.8MiB)
+2026-10-19T17:51:21.6792237Z Downloading kiwisolver (1.4MiB)
+2026-10-19T17:51:21.6793894Z Downloading h5py (4.9MiB)
+2026-10-19T17:51:21.6795966Z Downloading litellm (10.9MiB)
+2026-10-19T17:51:21.6797881Z Downloading wandb (21.8MiB)
+2026-10-19T17:51:21.6800077Z Downloading notebook (13.8MiB)
+2026-10-19T17:51:21.6801868Z Downloading llvmlite (53.7MiB)
+2026-10-19T17:51:21.6803755Z Downloading pandas (11.8MiB)
+2026-10-19T17:51:21.6805845Z Downloading nvidia-cusolver-cu12 (255.1MiB)
+2026-10-19T17:51:21.6807764Z Downloading numpy (15.8MiB)
+2026-10-19T17:51:21.6809541Z Downloading widgetsnbextension (2.1MiB)
+2026-10-19T17:51:21.6811346Z Downloading triton (162.6MiB)
+2026-10-19T17:51:21.6813176Z Downloading numba (3.6MiB)
+2026-10-19T17:51:21.6815729Z Downloading torch (858.1MiB)
+2026-10-19T17:51:21.6817309Z Downloading fonttools (4.7MiB)
+2026-10-19T17:51:21.6818665Z Downloading botocore (13.9MiB)
+2026-10-19T17:51:21.6820879Z Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)
+2026-10-19T17:51:21.6822069Z Downloading babel (9.7MiB)
+2026-10-19T17:51:21.6835203Z Downloading jupyterlab (11.8MiB)
+2026-10-19T17:51:21.6836168Z Downloading nvidia-nvjitlink-cu12 (37.4MiB)
+2026-10-19T17:51:21.6837726Z Downloading black (1.7MiB)
+2026-10-19T17:51:21.6840578Z Downloading matplotlib (8.3MiB)
+2026-10-19T17:51:21.6850807Z Downloading gemmi (2.5MiB)
+2026-10-19T17:51:21.6852761Z Downloading smact (1.8MiB)
+2026-10-19T17:51:22.0907032Z  Downloaded torch-geometric
+2026-10-19T17:51:22.1465893Z Downloading pygments (1.2MiB)
+2026-10-19T17:51:22.1473798Z  Downloaded kiwisolver
+2026-10-19T17:51:22.1707635Z Downloading setuptools (1.1MiB)
+2026-10-19T17:51:22.1724129Z  Downloaded jedi
+2026-10-19T17:51:22.1961113Z Downloading nvidia-cufile-cu12 (1.1MiB)
+2026-10-19T17:51:22.2161439Z  Downloaded black
+2026-10-19T17:51:22.2172932Z  Downloaded aiohttp
+2026-10-19T17:51:22.2607986Z Downloading tiktoken (1.1MiB)
+2026-10-19T17:51:22.2608948Z  Downloaded smact
+2026-10-19T17:51:22.2738378Z  Downloaded pydantic-core
+2026-10-19T17:51:22.2769896Z Downloading openai (1.0MiB)
+2026-10-19T17:51:22.2771934Z  Downloaded networkx
+2026-10-19T17:51:22.3151188Z  Downloaded widgetsnbextension
+2026-10-19T17:51:22.4245718Z  Downloaded gemmi
+2026-10-19T17:51:22.5560972Z  Downloaded pygments
+2026-10-19T17:51:22.5637109Z  Downloaded setuptools
+2026-10-19T17:51:22.5854743Z  Downloaded ase
+2026-10-19T17:51:22.5973550Z  Downloaded nvidia-cufile-cu12
+2026-10-19T17:51:22.6395056Z  Downloaded tiktoken
+2026-10-19T17:51:22.6397004Z  Downloaded tokenizers
+2026-10-19T17:51:22.6748609Z  Downloaded openai
+2026-10-19T17:51:22.8882185Z  Downloaded sqlalchemy
+2026-10-19T17:51:22.9036772Z  Downloaded hf-xet
+2026-10-19T17:51:22.9972203Z  Downloaded numba
+2026-10-19T17:51:23.0933597Z  Downloaded debugpy
+2026-10-19T17:51:23.2582970Z  Downloaded pymatgen
+2026-10-19T17:51:23.3985768Z  Downloaded fonttools
+2026-10-19T17:51:23.4229030Z  Downloaded h5py
+2026-10-19T17:51:23.5646058Z  Downloaded grpcio
+2026-10-19T17:51:23.7284558Z  Downloaded sympy
+2026-10-19T17:51:23.9031032Z  Downloaded pillow
+2026-10-19T17:51:24.2876233Z  Downloaded matplotlib
+2026-10-19T17:51:24.3090844Z  Downloaded scikit-learn
+2026-10-19T17:51:24.4592847Z  Downloaded plotly
+2026-10-19T17:51:24.4825533Z  Downloaded babel
+2026-10-19T17:51:24.5307554Z  Downloaded nvidia-cuda-cupti-cu12
+2026-10-19T17:51:24.9865784Z  Downloaded jupyterlab
+2026-10-19T17:51:24.9904165Z  Downloaded litellm
+2026-10-19T17:51:25.1349759Z  Downloaded ruff
+2026-10-19T17:51:25.1680900Z  Downloaded notebook
+2026-10-19T17:51:25.1795343Z  Downloaded pandas
+2026-10-19T17:51:25.2061073Z  Downloaded botocore
+2026-10-19T17:51:25.3107349Z  Downloaded numpy
+2026-10-19T17:51:26.2425550Z  Downloaded wandb
+2026-10-19T17:51:26.5992127Z  Downloaded scipy
+2026-10-19T17:51:26.7330799Z  Downloaded nvidia-nvjitlink-cu12
+2026-10-19T17:51:27.4199066Z  Downloaded llvmlite
+2026-10-19T17:51:27.6455693Z  Downloaded nvidia-curand-cu12
+2026-10-19T17:51:28.3147773Z  Downloaded nvidia-cuda-nvrtc-cu12
+2026-10-19T17:51:29.5323153Z  Downloaded nvidia-nvshmem-cu12
+2026-10-19T17:51:31.0139732Z  Downloaded triton
+2026-10-19T17:51:31.0170171Z       Built made @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE
+2026-10-19T17:51:31.9222694Z  Downloaded nvidia-cufft-cu12
+2026-10-19T17:51:33.2480300Z  Downloaded nvidia-cusolver-cu12
+2026-10-19T17:51:33.4625220Z  Downloaded nvidia-cusparselt-cu12
+2026-10-19T17:51:33.5264021Z  Downloaded nvidia-cusparse-cu12
+2026-10-19T17:51:33.9438966Z  Downloaded nvidia-nccl-cu12
+2026-10-19T17:51:37.4377645Z  Downloaded nvidia-cublas-cu12
+2026-10-19T17:51:38.6150896Z  Downloaded nvidia-cudnn-cu12
+2026-10-19T17:51:40.1835326Z  Downloaded torch
+2026-10-19T17:51:40.2864170Z Prepared 294 packages in 18.74s
+2026-10-19T17:51:42.1916027Z Installed 294 packages in 1.90s
+2026-10-19T17:51:42.1919282Z  + aiohappyeyeballs==2.6.1
+2026-10-19T17:51:42.1919732Z  + aiohttp==3.13.2
+2026-10-19T17:51:42.1920417Z  + aiosignal==1.4.0
+2026-10-19T17:51:42.1920780Z  + alembic==1.17.2
+2026-10-19T17:51:42.1921139Z  + annotated-types==0.7.0
+2026-10-19T17:51:42.1921563Z  + antlr4-python3-runtime==4.9.3
+2026-10-19T17:51:42.1921983Z  + anyio==4.12.0
+2026-10-19T17:51:42.1922322Z  + argon2-cffi==25.1.0
+2026-10-19T17:51:42.1922707Z  + argon2-cffi-bindings==25.1.0
+2026-10-19T17:51:42.1923115Z  + arrow==1.4.0
+2026-10-19T17:51:42.1923437Z  + ase==3.27.0
+2026-10-19T17:51:42.1923752Z  + ase-ga==1.0.3
+2026-10-19T17:51:42.1924082Z  + asttokens==3.0.1
+2026-10-19T17:51:42.1924638Z  + async-lru==2.0.5
+2026-10-19T17:51:42.1935021Z  + asyncer==0.0.8
+2026-10-19T17:51:42.1945163Z  + attrs==25.4.0
+2026-10-19T17:51:42.1945571Z  + average-minimum-distance==1.6.1
+2026-10-19T17:51:42.1946296Z  + babel==2.17.0
+2026-10-19T17:51:42.1946627Z  + backoff==2.2.1
+2026-10-19T17:51:42.1946975Z  + beautifulsoup4==4.14.3
+2026-10-19T17:51:42.1947365Z  + bibtexparser==1.4.3
+2026-10-19T17:51:42.1947723Z  + black==25.12.0
+2026-10-19T17:51:42.1948049Z  + blake3==1.0.8
+2026-10-19T17:51:42.1948383Z  + bleach==6.3.0
+2026-10-19T17:51:42.1948703Z  + boto3==1.42.18
+2026-10-19T17:51:42.1949035Z  + botocore==1.42.18
+2026-10-19T17:51:42.1949386Z  + cached-path==1.8.1
+2026-10-19T17:51:42.1949741Z  + cachetools==6.2.4
+2026-10-19T17:51:42.1950092Z  + cbor2==5.7.1
+2026-10-19T17:51:42.1950418Z  + certifi==2025.11.12
+2026-10-19T17:51:42.1950766Z  + cffi==2.0.0
+2026-10-19T17:51:42.1951114Z  + charset-normalizer==3.4.4
+2026-10-19T17:51:42.1952050Z  + chemeleon-dng==0.1.3 (from git+https://github.com/hspark1212/chemeleon-dng.git@a15307694ccbe3381f856560675aee468cda2aa9)
+2026-10-19T17:51:42.1953002Z  + choreographer==1.2.1
+2026-10-19T17:51:42.1953368Z  + click==8.3.1
+2026-10-19T17:51:42.1953702Z  + cloudpickle==3.1.2
+2026-10-19T17:51:42.1954064Z  + colorlog==6.10.1
+2026-10-19T17:51:42.1954618Z  + comm==0.2.3
+2026-10-19T17:51:42.1954964Z  + configargparse==1.7.1
+2026-10-19T17:51:42.1955340Z  + contourpy==1.3.3
+2026-10-19T17:51:42.1955672Z  + coverage==7.13.1
+2026-10-19T17:51:42.1956019Z  + cycler==0.12.1
+2026-10-19T17:51:42.1956352Z  + debugpy==1.8.19
+2026-10-19T17:51:42.1956684Z  + decorator==5.2.1
+2026-10-19T17:51:42.1957020Z  + defusedxml==0.7.1
+2026-10-19T17:51:42.1957357Z  + dill==0.4.0
+2026-10-19T17:51:42.1957682Z  + diskcache==5.6.3
+2026-10-19T17:51:42.1958010Z  + distro==1.9.0
+2026-10-19T17:51:42.1958334Z  + dm-tree==0.1.8
+2026-10-19T17:51:42.1958656Z  + dspy==3.0.4
+2026-10-19T17:51:42.1958972Z  + e3nn==0.4.4
+2026-10-19T17:51:42.1959288Z  + emmet-core==0.86.2
+2026-10-19T17:51:42.1959632Z  + executing==2.2.1
+2026-10-19T17:51:42.1959983Z  + fastjsonschema==2.21.2
+2026-10-19T17:51:42.1960362Z  + fastuuid==0.14.0
+2026-10-19T17:51:42.1960691Z  + filelock==3.20.1
+2026-10-19T17:51:42.1961016Z  + fire==0.7.1
+2026-10-19T17:51:42.1961343Z  + fonttools==4.61.1
+2026-10-19T17:51:42.1961679Z  + fqdn==1.5.1
+2026-10-19T17:51:42.1962008Z  + frozenlist==1.8.0
+2026-10-19T17:51:42.1962347Z  + fsspec==2025.12.0
+2026-10-19T17:51:42.1962675Z  + gemmi==0.7.4
+2026-10-19T17:51:42.1962989Z  + gepa==0.0.17
+2026-10-19T17:51:42.1963320Z  + gitdb==4.0.12
+2026-10-19T17:51:42.1963811Z  + gitpython==3.1.45
+2026-10-19T17:51:42.1964207Z  + google-api-core==2.28.1
+2026-10-19T17:51:42.1964774Z  + google-auth==2.45.0
+2026-10-19T17:51:42.1965151Z  + google-cloud-core==2.5.0
+2026-10-19T17:51:42.1965562Z  + google-cloud-storage==3.7.0
+2026-10-19T17:51:42.1965972Z  + google-crc32c==1.8.0
+2026-10-19T17:51:42.1966362Z  + google-resumable-media==2.8.0
+2026-10-19T17:51:42.1966824Z  + googleapis-common-protos==1.72.0
+2026-10-19T17:51:42.1967258Z  + greenlet==3.3.0
+2026-10-19T17:51:42.1967595Z  + grpcio==1.67.1
+2026-10-19T17:51:42.1967924Z  + grpclib==0.4.9
+2026-10-19T17:51:42.1968249Z  + h11==0.16.0
+2026-10-19T17:51:42.1968555Z  + h2==4.3.0
+2026-10-19T17:51:42.1968861Z  + h5py==3.15.1
+2026-10-19T17:51:42.1969191Z  + hf-xet==1.2.0
+2026-10-19T17:51:42.1969543Z  + hpack==4.1.0
+2026-10-19T17:51:42.1969869Z  + httpcore==1.0.9
+2026-10-19T17:51:42.1970202Z  + httpx==0.28.1
+2026-10-19T17:51:42.1970540Z  + huggingface-hub==1.2.3
+2026-10-19T17:51:42.1971115Z  + hydra-core==1.3.2
+2026-10-19T17:51:42.1971480Z  + hyperframe==6.1.0
+2026-10-19T17:51:42.1971817Z  + idna==3.11
+2026-10-19T17:51:42.1972157Z  + importlib-metadata==8.7.1
+2026-10-19T17:51:42.1972550Z  + iniconfig==2.3.0
+2026-10-19T17:51:42.1972891Z  + ipykernel==7.1.0
+2026-10-19T17:51:42.1973220Z  + ipython==9.8.0
+2026-10-19T17:51:42.1973583Z  + ipython-pygments-lexers==1.1.1
+2026-10-19T17:51:42.1974009Z  + ipywidgets==8.1.8
+2026-10-19T17:51:42.1974530Z  + isoduration==20.11.0
+2026-10-19T17:51:42.1974902Z  + isort==7.0.0
+2026-10-19T17:51:42.1975218Z  + jedi==0.19.2
+2026-10-19T17:51:42.1975531Z  + jinja2==3.1.6
+2026-10-19T17:51:42.1975848Z  + jiter==0.12.0
+2026-10-19T17:51:42.1976175Z  + jmespath==1.0.1
+2026-10-19T17:51:42.1976503Z  + joblib==1.5.3
+2026-10-19T17:51:42.1977013Z  + json-repair==0.54.3
+2026-10-19T17:51:42.1977360Z  + json5==0.12.1
+2026-10-19T17:51:42.1977693Z  + jsonpointer==3.0.0
+2026-10-19T17:51:42.1978049Z  + jsonschema==4.25.1
+2026-10-19T17:51:42.1978442Z  + jsonschema-specifications==2025.9.1
+2026-10-19T17:51:42.1978889Z  + jupyter==1.1.1
+2026-10-19T17:51:42.1979231Z  + jupyter-client==8.7.0
+2026-10-19T17:51:42.1979622Z  + jupyter-console==6.6.3
+2026-10-19T17:51:42.1980006Z  + jupyter-core==5.9.1
+2026-10-19T17:51:42.1980372Z  + jupyter-events==0.12.0
+2026-10-19T17:51:42.1980749Z  + jupyter-lsp==2.3.0
+2026-10-19T17:51:42.1981112Z  + jupyter-server==2.17.0
+2026-10-19T17:51:42.1981512Z  + jupyter-server-terminals==0.5.3
+2026-10-19T17:51:42.1981943Z  + jupyterlab==4.5.1
+2026-10-19T17:51:42.1982311Z  + jupyterlab-pygments==0.3.0
+2026-10-19T17:51:42.1982735Z  + jupyterlab-server==2.28.0
+2026-10-19T17:51:42.1983144Z  + jupyterlab-widgets==3.0.16
+2026-10-19T17:51:42.1983533Z  + kaleido==1.2.0
+2026-10-19T17:51:42.1983870Z  + kiwisolver==1.4.9
+2026-10-19T17:51:42.1984216Z  + lark==1.3.1
+2026-10-19T17:51:42.1984724Z  + latexcodec==3.0.1
+2026-10-19T17:51:42.1985093Z  + lightning-utilities==0.15.2
+2026-10-19T17:51:42.1985493Z  + litellm==1.80.11
+2026-10-19T17:51:42.1985830Z  + llvmlite==0.46.0
+2026-10-19T17:51:42.1986168Z  + lmdb==1.7.5
+2026-10-19T17:51:42.1986486Z  + logistro==2.0.1
+2026-10-19T17:51:42.1986822Z  + mace-torch==0.3.14
+2026-10-19T17:51:42.1987999Z  + made==0.1.0 (from file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE)
+2026-10-19T17:51:42.1989256Z  + magicattr==0.1.6
+2026-10-19T17:51:42.1989589Z  + mako==1.3.10
+2026-10-19T17:51:42.1989931Z  + markdown-it-py==4.0.0
+2026-10-19T17:51:42.1990307Z  + markupsafe==3.0.3
+2026-10-19T17:51:42.1990686Z  + matplotlib==3.10.8
+2026-10-19T17:51:42.1991052Z  + matplotlib-inline==0.2.1
+2026-10-19T17:51:42.1991435Z  + matscipy==1.2.0
+2026-10-19T17:51:42.1991767Z  + mdurl==0.1.2
+2026-10-19T17:51:42.1992093Z  + mistune==3.2.0
+2026-10-19T17:51:42.1992426Z  + modal==1.3.0.post1
+2026-10-19T17:51:42.1992763Z  + monty==2025.3.3
+2026-10-19T17:51:42.1993088Z  + mp-api==0.45.15
+2026-10-19T17:51:42.1993430Z  + mpmath==1.3.0
+2026-10-19T17:51:42.1993755Z  + msgpack==1.1.2
+2026-10-19T17:51:42.1994085Z  + multidict==6.7.0
+2026-10-19T17:51:42.1994659Z  + multiprocess==0.70.18
+2026-10-19T17:51:42.1995059Z  + mypy-extensions==1.1.0
+2026-10-19T17:51:42.1995432Z  + narwhals==2.14.0
+2026-10-19T17:51:42.1995749Z  + nbclient==0.10.4
+2026-10-19T17:51:42.1995962Z  + nbconvert==7.16.6
+2026-10-19T17:51:42.1996170Z  + nbformat==5.10.4
+2026-10-19T17:51:42.1996378Z  + nest-asyncio==1.6.0
+2026-10-19T17:51:42.1996595Z  + networkx==3.6.1
+2026-10-19T17:51:42.1996804Z  + notebook==7.5.1
+2026-10-19T17:51:42.1997011Z  + notebook-shim==0.2.4
+2026-10-19T17:51:42.1997229Z  + numba==0.63.1
+2026-10-19T17:51:42.1997428Z  + numpy==2.3.5
+2026-10-19T17:51:42.1997671Z  + nvidia-cublas-cu12==12.8.4.1
+2026-10-19T17:51:42.1997949Z  + nvidia-cuda-cupti-cu12==12.8.90
+2026-10-19T17:51:42.1998229Z  + nvidia-cuda-nvrtc-cu12==12.8.93
+2026-10-19T17:51:42.1998504Z  + nvidia-cuda-runtime-cu12==12.8.90
+2026-10-19T17:51:42.1998778Z  + nvidia-cudnn-cu12==9.10.2.21
+2026-10-19T17:51:42.1999036Z  + nvidia-cufft-cu12==11.3.3.83
+2026-10-19T17:51:42.1999437Z  + nvidia-cufile-cu12==1.13.1.3
+2026-10-19T17:51:42.1999701Z  + nvidia-curand-cu12==10.3.9.90
+2026-10-19T17:51:42.1999976Z  + nvidia-cusolver-cu12==11.7.3.90
+2026-10-19T17:51:42.2000257Z  + nvidia-cusparse-cu12==12.5.8.93
+2026-10-19T17:51:42.2000659Z  + nvidia-cusparselt-cu12==0.7.1
+2026-10-19T17:51:42.2001101Z  + nvidia-nccl-cu12==2.27.5
+2026-10-19T17:51:42.2001514Z  + nvidia-nvjitlink-cu12==12.8.93
+2026-10-19T17:51:42.2001957Z  + nvidia-nvshmem-cu12==3.3.20
+2026-10-19T17:51:42.2002369Z  + nvidia-nvtx-cu12==12.8.90
+2026-10-19T17:51:42.2002754Z  + omegaconf==2.3.0
+2026-10-19T17:51:42.2003088Z  + openai==2.14.0
+2026-10-19T17:51:42.2003427Z  + opt-einsum==3.4.0
+2026-10-19T17:51:42.2003791Z  + opt-einsum-fx==0.1.4
+2026-10-19T17:51:42.2004500Z  + optuna==4.6.0
+2026-10-19T17:51:42.2004843Z  + orb-models==0.5.5
+2026-10-19T17:51:42.2005181Z  + orjson==3.11.5
+2026-10-19T17:51:42.2005520Z  + packaging==25.0
+2026-10-19T17:51:42.2005865Z  + palettable==3.3.3
+2026-10-19T17:51:42.2006219Z  + pandarallel==1.6.5
+2026-10-19T17:51:42.2006571Z  + pandas==2.3.3
+2026-10-19T17:51:42.2006910Z  + pandocfilters==1.5.1
+2026-10-19T17:51:42.2007279Z  + parso==0.8.5
+2026-10-19T17:51:42.2007602Z  + pathos==0.3.4
+2026-10-19T17:51:42.2007930Z  + pathspec==0.12.1
+2026-10-19T17:51:42.2008268Z  + pexpect==4.9.0
+2026-10-19T17:51:42.2008602Z  + pillow==12.0.0
+2026-10-19T17:51:42.2008936Z  + platformdirs==4.5.1
+2026-10-19T17:51:42.2009291Z  + plotly==6.5.0
+2026-10-19T17:51:42.2009624Z  + pluggy==1.6.0
+2026-10-19T17:51:42.2009949Z  + pox==0.3.6
+2026-10-19T17:51:42.2010264Z  + ppft==1.7.7
+2026-10-19T17:51:42.2010597Z  + prettytable==3.17.0
+2026-10-19T17:51:42.2011002Z  + prometheus-client==0.23.1
+2026-10-19T17:51:42.2011416Z  + prompt-toolkit==3.0.52
+2026-10-19T17:51:42.2011802Z  + propcache==0.4.1
+2026-10-19T17:51:42.2012150Z  + proto-plus==1.27.0
+2026-10-19T17:51:42.2012517Z  + protobuf==6.33.2
+2026-10-19T17:51:42.2012850Z  + psutil==7.2.1
+2026-10-19T17:51:42.2013185Z  + ptyprocess==0.7.0
+2026-10-19T17:51:42.2013513Z  + pure-eval==0.2.3
+2026-10-19T17:51:42.2013723Z  + pyasn1==0.6.1
+2026-10-19T17:51:42.2013930Z  + pyasn1-modules==0.4.2
+2026-10-19T17:51:42.2014152Z  + pybtex==0.25.1
+2026-10-19T17:51:42.2014552Z  + pycparser==2.23
+2026-10-19T17:51:42.2014919Z  + pydantic==2.12.5
+2026-10-19T17:51:42.2015289Z  + pydantic-core==2.41.5
+2026-10-19T17:51:42.2015690Z  + pydantic-settings==2.12.0
+2026-10-19T17:51:42.2016087Z  + pygments==2.19.2
+2026-10-19T17:51:42.2016489Z  + pymatgen==2025.10.7
+2026-10-19T17:51:42.2016882Z  + pymatgen-io-validation==0.1.2
+2026-10-19T17:51:42.2017301Z  + pyparsing==3.3.1
+2026-10-19T17:51:42.2017636Z  + pytest==9.0.2
+2026-10-19T17:51:42.2017985Z  + pytest-asyncio==1.3.0
+2026-10-19T17:51:42.2018363Z  + pytest-cov==7.0.0
+2026-10-19T17:51:42.2018730Z  + pytest-timeout==2.4.0
+2026-10-19T17:51:42.2019119Z  + python-dateutil==2.9.0.post0
+2026-10-19T17:51:42.2019533Z  + python-dotenv==1.2.1
+2026-10-19T17:51:42.2019919Z  + python-hostlist==2.3.0
+2026-10-19T17:51:42.2020324Z  + python-json-logger==4.0.0
+2026-10-19T17:51:42.2020749Z  + pytokens==0.3.0
+2026-10-19T17:51:42.2021110Z  + pytorch-lightning==2.6.0
+2026-10-19T17:51:42.2021503Z  + pytz==2025.2
+2026-10-19T17:51:42.2021831Z  + pyyaml==6.0.3
+2026-10-19T17:51:42.2022159Z  + pyzmq==27.1.0
+2026-10-19T17:51:42.2022494Z  + referencing==0.37.0
+2026-10-19T17:51:42.2022846Z  + regex==2025.11.3
+2026-10-19T17:51:42.2023191Z  + requests==2.32.5
+2026-10-19T17:51:42.2023537Z  + rfc3339-validator==0.1.4
+2026-10-19T17:51:42.2023938Z  + rfc3986-validator==0.1.1
+2026-10-19T17:51:42.2024498Z  + rfc3987-syntax==1.1.0
+2026-10-19T17:51:42.2024880Z  + rich==13.9.4
+2026-10-19T17:51:42.2025205Z  + rpds-py==0.30.0
+2026-10-19T17:51:42.2025537Z  + rsa==4.9.1
+2026-10-19T17:51:42.2025869Z  + ruamel-yaml==0.18.17
+2026-10-19T17:51:42.2026264Z  + ruamel-yaml-clib==0.2.15
+2026-10-19T17:51:42.2026642Z  + ruff==0.14.10
+2026-10-19T17:51:42.2026973Z  + s3transfer==0.16.0
+2026-10-19T17:51:42.2027328Z  + scikit-learn==1.8.0
+2026-10-19T17:51:42.2027678Z  + scipy==1.16.3
+2026-10-19T17:51:42.2028217Z  + seaborn==0.13.2
+2026-10-19T17:51:42.2028569Z  + send2trash==1.8.3
+2026-10-19T17:51:42.2028926Z  + sentry-sdk==2.48.0
+2026-10-19T17:51:42.2029278Z  + setuptools==80.9.0
+2026-10-19T17:51:42.2029656Z  + shellingham==1.5.4
+2026-10-19T17:51:42.2029875Z  + simplejson==3.20.2
+2026-10-19T17:51:42.2030080Z  + six==1.17.0
+2026-10-19T17:51:42.2030273Z  + smact==3.2.0
+2026-10-19T17:51:42.2030530Z  + smart-open==7.5.0
+2026-10-19T17:51:42.2030828Z  + smmap==5.0.2
+2026-10-19T17:51:42.2031046Z  + sniffio==1.3.1
+2026-10-19T17:51:42.2031289Z  + soupsieve==2.8.1
+2026-10-19T17:51:42.2031557Z  + spglib==2.7.0
+2026-10-19T17:51:42.2031896Z  + sqlalchemy==2.0.45
+2026-10-19T17:51:42.2032246Z  + stack-data==0.6.3
+2026-10-19T17:51:42.2032582Z  + sympy==1.14.0
+2026-10-19T17:51:42.2032963Z  + synchronicity==0.11.1
+2026-10-19T17:51:42.2033194Z  + tabulate==0.9.0
+2026-10-19T17:51:42.2033397Z  + tenacity==9.1.2
+2026-10-19T17:51:42.2033600Z  + termcolor==3.3.0
+2026-10-19T17:51:42.2033805Z  + terminado==0.18.1
+2026-10-19T17:51:42.2034026Z  + threadpoolctl==3.6.0
+2026-10-19T17:51:42.2034250Z  + tiktoken==0.12.0
+2026-10-19T17:51:42.2034700Z  + tinycss2==1.4.0
+2026-10-19T17:51:42.2034921Z  + tokenizers==0.22.1
+2026-10-19T17:51:42.2035131Z  + toml==0.10.2
+2026-10-19T17:51:42.2035329Z  + torch==2.9.1
+2026-10-19T17:51:42.2035531Z  + torch-ema==0.3
+2026-10-19T17:51:42.2035756Z  + torch-geometric==2.7.0
+2026-10-19T17:51:42.2035997Z  + torchmetrics==1.8.2
+2026-10-19T17:51:42.2036212Z  + tornado==6.5.4
+2026-10-19T17:51:42.2036411Z  + tqdm==4.67.1
+2026-10-19T17:51:42.2036608Z  + traitlets==5.14.3
+2026-10-19T17:51:42.2036824Z  + triton==3.5.1
+2026-10-19T17:51:42.2037035Z  + typer==0.21.0
+2026-10-19T17:51:42.2037245Z  + typer-slim==0.21.0
+2026-10-19T17:51:42.2037487Z  + types-certifi==2021.10.8.3
+2026-10-19T17:51:42.2037745Z  + types-toml==0.10.8.20240310
+2026-10-19T17:51:42.2037996Z  + typing-extensions==4.15.0
+2026-10-19T17:51:42.2038245Z  + typing-inspection==0.4.2
+2026-10-19T17:51:42.2038473Z  + tzdata==2025.3
+2026-10-19T17:51:42.2038686Z  + uncertainties==3.2.3
+2026-10-19T17:51:42.2038915Z  + uri-template==1.3.0
+2026-10-19T17:51:42.2039129Z  + urllib3==2.6.2
+2026-10-19T17:51:42.2039326Z  + wandb==0.23.1
+2026-10-19T17:51:42.2039524Z  + watchfiles==1.1.1
+2026-10-19T17:51:42.2039736Z  + wcwidth==0.2.14
+2026-10-19T17:51:42.2039941Z  + webcolors==25.10.0
+2026-10-19T17:51:42.2040152Z  + webencodings==0.5.1
+2026-10-19T17:51:42.2040373Z  + websocket-client==1.9.0
+2026-10-19T17:51:42.2040622Z  + widgetsnbextension==4.0.15
+2026-10-19T17:51:42.2040857Z  + wrapt==2.0.1
+2026-10-19T17:51:42.2041051Z  + xxhash==3.6.0
+2026-10-19T17:51:42.2041247Z  + yarl==1.22.0
+2026-10-19T17:51:42.2041445Z  + zipp==3.23.0
+2026-10-19T17:51:42.2339250Z ##[group]Run uv run python ../../M2/install.py
+2026-10-19T17:51:42.2339661Z [36;1muv run python ../../M2/install.py[0m
+2026-10-19T17:51:42.2340384Z [36;1mgit diff --exit-code -- src/made/agents/m2_tool_routing.py tests/test_m2_tool_routing.py configs/agent/m1_integrated.yaml configs/agent/m2_routing.yaml[0m
+2026-10-19T17:51:42.2405468Z shell: /usr/bin/bash -e {0}
+2026-10-19T17:51:42.2405729Z env:
+2026-10-19T17:51:42.2405928Z   OMP_NUM_THREADS: 2
+2026-10-19T17:51:42.2406152Z   MKL_NUM_THREADS: 2
+2026-10-19T17:51:42.2406364Z   UV_LINK_MODE: hardlink
+2026-10-19T17:51:42.2406677Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:42.2407119Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:51:42.2407555Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:42.2407951Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:42.2408411Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:42.2408809Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:51:42.2409194Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:51:42.2409500Z ##[endgroup]
+2026-10-19T17:51:42.3714908Z {
+2026-10-19T17:51:42.3715888Z   "M1/MADE/src/made/agents/m2_tool_routing.py": "03fab495c4f271dc330a1680dd1f527a21dd40dbfc9f1d7bffca23a031566899",
+2026-10-19T17:51:42.3717132Z   "M1/MADE/tests/test_m2_tool_routing.py": "d037535145f702c12e283b73013020154b683e1cd4347229e5d0e6aadc7bc214",
+2026-10-19T17:51:42.3718283Z   "M1/MADE/configs/agent/m2_routing.yaml": "43e1dea65aee3a71c17b5d3f51ec9769b5e9bebb4c4deffea5db96af7e905c61",
+2026-10-19T17:51:42.3719486Z   "M1/MADE/configs/agent/m1_integrated.yaml": "c2b09868cc1473443ab8dfac1bc2c43e043a6e81412158069caa7b3e33f0b437"
+2026-10-19T17:51:42.3720300Z }
+2026-10-19T17:51:42.4721048Z ##[group]Run uv run pytest -q tests/test_m1_integrated.py
+2026-10-19T17:51:42.4721516Z [36;1muv run pytest -q tests/test_m1_integrated.py[0m
+2026-10-19T17:51:42.4783221Z shell: /usr/bin/bash -e {0}
+2026-10-19T17:51:42.4783478Z env:
+2026-10-19T17:51:42.4783847Z   OMP_NUM_THREADS: 2
+2026-10-19T17:51:42.4784077Z   MKL_NUM_THREADS: 2
+2026-10-19T17:51:42.4784293Z   UV_LINK_MODE: hardlink
+2026-10-19T17:51:42.4784803Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:42.4785255Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:51:42.4785704Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:42.4786096Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:42.4786483Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:51:42.4786871Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:51:42.4787285Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:51:42.4787596Z ##[endgroup]
+2026-10-19T17:52:36.0469114Z .................                                                        [100%]
+2026-10-19T17:52:36.0470076Z =============================== warnings summary ===============================
+2026-10-19T17:52:36.0470643Z src/made/agents/base.py:19
+2026-10-19T17:52:36.0471008Z src/made/agents/base.py:35
+2026-10-19T17:52:36.0472385Z   PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+2026-10-19T17:52:36.0473691Z 
+2026-10-19T17:52:36.0473917Z .venv/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10
+2026-10-19T17:52:36.0475609Z   UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T17:52:36.0476649Z 
+2026-10-19T17:52:36.0476961Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-19T17:52:36.0477646Z ================================ tests coverage ================================
+2026-10-19T17:52:36.0478291Z _______________ coverage: platform linux, python 3.12.15-final-0 _______________
+2026-10-19T17:52:36.0478737Z 
+2026-10-19T17:52:36.0478939Z Name                                        Stmts   Miss  Cover   Missing
+2026-10-19T17:52:36.0479508Z -------------------------------------------------------------------------
+2026-10-19T17:52:36.0480130Z src/made/__init__.py                            2      0   100%
+2026-10-19T17:52:36.0480699Z src/made/agents/__init__.py                     6      0   100%
+2026-10-19T17:52:36.0481396Z src/made/agents/base.py                       151     16    89%   140, 191, 202, 225, 283, 345-350, 439-447
+2026-10-19T17:52:36.0482031Z src/made/agents/filters/__init__.py             6      0   100%
+2026-10-19T17:52:36.0482606Z src/made/agents/filters/chain.py               47     37    21%   23-25, 36-113, 117, 121-126, 130-131
+2026-10-19T17:52:36.0483250Z src/made/agents/filters/min_distance.py        21     11    48%   26, 32-66, 70
+2026-10-19T17:52:36.0483840Z src/made/agents/filters/noop.py                12      3    75%   24-27, 31
+2026-10-19T17:52:36.0484544Z src/made/agents/filters/smact.py               21     11    48%   25-51, 55
+2026-10-19T17:52:36.0485154Z src/made/agents/filters/uniqueness.py          49     34    31%   38, 49-101, 105-117, 121
+2026-10-19T17:52:36.0485746Z src/made/agents/generators/__init__.py          4      0   100%
+2026-10-19T17:52:36.0486391Z src/made/agents/generators/cached.py           95     79    17%   46-57, 62-82, 86-102, 106-143, 158-183, 204-266, 280-290
+2026-10-19T17:52:36.0487138Z src/made/agents/generators/chemeleon.py        65     51    22%   35-40, 43, 46, 50-61, 75-148
+2026-10-19T17:52:36.0487821Z src/made/agents/generators/random.py           46     32    30%   32-34, 38, 44, 47-64, 67-89
+2026-10-19T17:52:36.0489424Z src/made/agents/llm_react_orchestrator.py     585    546     7%   123-133, 157-277, 289-344, 378-443, 482-534, 542-589, 613-676, 708-807, 811, 867-912, 920-936, 944-1021, 1025-1053, 1057-1082, 1086-1122, 1126-1187, 1191-1259, 1266-1295, 1305-1378
+2026-10-19T17:52:36.0490781Z src/made/agents/m1_integrated.py              151     16    89%   47, 49, 96, 118, 147, 190, 193-197, 208, 212, 232, 248-249
+2026-10-19T17:52:36.0491355Z src/made/agents/m2_tool_routing.py            151    151     0%   9-257
+2026-10-19T17:52:36.0491799Z src/made/agents/planners/__init__.py            3      0   100%
+2026-10-19T17:52:36.0492667Z src/made/agents/planners/grid_search.py       354    300    15%   63-64, 72-94, 106-107, 115-162, 170, 178-200, 212-215, 223-259, 274-280, 288-378, 383-395, 407-425, 437-448, 456-483, 510, 526-550, 556-575, 582-592, 605-638, 646-666, 685-754, 759-785
+2026-10-19T17:52:36.0493625Z src/made/agents/planners/llm.py                63     43    32%   93-104, 109-183, 190, 194-195, 198
+2026-10-19T17:52:36.0494111Z src/made/agents/scorers/__init__.py             6      0   100%
+2026-10-19T17:52:36.0494768Z src/made/agents/scorers/chain.py               98     85    13%   43-65, 69, 78-89, 93-94, 106-117, 132-182, 192-246
+2026-10-19T17:52:36.0495378Z src/made/agents/scorers/diversity.py           76     61    20%   16-17, 21, 27, 37-81, 86-98, 101-112, 117-134
+2026-10-19T17:52:36.0495952Z src/made/agents/scorers/llm.py                 53     34    36%   75-85, 97-174, 178, 182-183, 186
+2026-10-19T17:52:36.0496477Z src/made/agents/scorers/oracle.py             121    104    14%   58-75, 79, 86-89, 105-321
+2026-10-19T17:52:36.0497000Z src/made/agents/scorers/random.py              19      8    58%   13, 17, 23, 29-34
+2026-10-19T17:52:36.0497468Z src/made/agents/workflow.py                    27     19    30%   28-53
+2026-10-19T17:52:36.0497879Z src/made/data/__init__.py                       2      0   100%
+2026-10-19T17:52:36.0498441Z src/made/data/chemical_system.py               83     63    24%   29-33, 55-58, 61-93, 96, 99, 103, 112-125, 134-141, 145-154, 165-172, 176-185
+2026-10-19T17:52:36.0498993Z src/made/envs/__init__.py                       2      0   100%
+2026-10-19T17:52:36.0499395Z src/made/envs/base.py                          20      7    65%   25-30, 34
+2026-10-19T17:52:36.0500147Z src/made/envs/convex_hull.py                  328    297     9%   102-246, 250-294, 298-347, 352-355, 380-390, 398-409, 413, 416, 423-428, 436-670, 684-716, 726-738, 744-764, 772-796, 800-805, 809-837, 841
+2026-10-19T17:52:36.0500878Z src/made/evaluation/__init__.py                 2      0   100%
+2026-10-19T17:52:36.0502075Z src/made/evaluation/metrics.py                460    370    20%   52-76, 106-150, 161-165, 179-182, 205-223, 242-251, 273-311, 330-344, 357-369, 392-422, 440, 453, 466-470, 496-519, 537-579, 602-612, 628-648, 674-679, 710-737, 764-789, 811-859, 881-894, 921-944, 975-980, 1002-1016, 1034-1046, 1069-1085, 1108-1122, 1144-1170, 1202-1224, 1248-1276, 1314-1326, 1356-1400, 1435-1506, 1545-1570
+2026-10-19T17:52:36.0503287Z src/made/oracles/__init__.py                    5      0   100%
+2026-10-19T17:52:36.0503833Z src/made/oracles/ase_potential.py             103     77    25%   48-93, 97-99, 104-120, 132-157, 162, 165-167, 181-214, 218, 224-231
+2026-10-19T17:52:36.0504552Z src/made/oracles/base.py                       35     24    31%   28, 49-96
+2026-10-19T17:52:36.0504980Z src/made/oracles/classic/__init__.py            0      0   100%
+2026-10-19T17:52:36.0505411Z src/made/oracles/classic/analytic.py           10      5    50%   32-40
+2026-10-19T17:52:36.0505831Z src/made/oracles/mace/__init__.py               2      0   100%
+2026-10-19T17:52:36.0506249Z src/made/oracles/mace/mace_oracle.py           36     21    42%   62-111
+2026-10-19T17:52:36.0506668Z src/made/oracles/orb/__init__.py                0      0   100%
+2026-10-19T17:52:36.0507111Z src/made/oracles/orb/orb_oracle.py             51     17    67%   46, 70-74, 109-132
+2026-10-19T17:52:36.0507923Z src/made/oracles/qe/__init__.py                 0      0   100%
+2026-10-19T17:52:36.0508339Z src/made/oracles/qe/qe_oracle.py                0      0   100%
+2026-10-19T17:52:36.0508726Z src/made/utils/__init__.py                      2      0   100%
+2026-10-19T17:52:36.0509141Z src/made/utils/agent_utils.py                  14      8    43%   8, 40-49
+2026-10-19T17:52:36.0509753Z src/made/utils/convex_hull_utils.py            32     22    31%   30-31, 69-76, 97-110, 126-134
+2026-10-19T17:52:36.0510256Z src/made/utils/llm.py                          74     65    12%   16-20, 42-147, 170-200
+2026-10-19T17:52:36.0510733Z src/made/utils/structure_hash.py               16     13    19%   28-59
+2026-10-19T17:52:36.0511162Z -------------------------------------------------------------------------
+2026-10-19T17:52:36.0511536Z TOTAL                                        3509   2630    25%
+2026-10-19T17:52:36.0511855Z Coverage HTML written to dir htmlcov
+2026-10-19T17:52:36.0512153Z Coverage XML written to file coverage.xml
+2026-10-19T17:52:36.0512448Z 17 passed, 3 warnings in 49.69s
+2026-10-19T17:52:38.1993210Z ##[group]Run uv run pytest -q tests/test_m2_tool_routing.py ../../M2/tests -o addopts='' --junitxml=../../M2/test-results.xml
+2026-10-19T17:52:38.1994063Z [36;1muv run pytest -q tests/test_m2_tool_routing.py ../../M2/tests -o addopts='' --junitxml=../../M2/test-results.xml[0m
+2026-10-19T17:52:38.2056314Z shell: /usr/bin/bash -e {0}
+2026-10-19T17:52:38.2056580Z env:
+2026-10-19T17:52:38.2056773Z   OMP_NUM_THREADS: 2
+2026-10-19T17:52:38.2056994Z   MKL_NUM_THREADS: 2
+2026-10-19T17:52:38.2057207Z   UV_LINK_MODE: hardlink
+2026-10-19T17:52:38.2057510Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:52:38.2057964Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:52:38.2058401Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:52:38.2058791Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:52:38.2059190Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:52:38.2059618Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:52:38.2059993Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:52:38.2060296Z ##[endgroup]
+2026-10-19T17:52:58.4758428Z ..............................................................           [100%]
+2026-10-19T17:52:58.4759281Z =============================== warnings summary ===============================
+2026-10-19T17:52:58.4759910Z src/made/agents/base.py:19
+2026-10-19T17:52:58.4760413Z src/made/agents/base.py:35
+2026-10-19T17:52:58.4762221Z   PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+2026-10-19T17:52:58.4763768Z 
+2026-10-19T17:52:58.4764076Z .venv/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10
+2026-10-19T17:52:58.4766169Z   UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T17:52:58.4767367Z 
+2026-10-19T17:52:58.4767746Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-19T17:52:58.4768466Z 62 passed, 3 warnings in 17.90s
+2026-10-19T17:53:00.4215845Z ##[group]Run uv run ruff check src/made/agents/m2_tool_routing.py tests/test_m2_tool_routing.py
+2026-10-19T17:53:00.4216532Z [36;1muv run ruff check src/made/agents/m2_tool_routing.py tests/test_m2_tool_routing.py[0m
+2026-10-19T17:53:00.4280039Z shell: /usr/bin/bash -e {0}
+2026-10-19T17:53:00.4280295Z env:
+2026-10-19T17:53:00.4280492Z   OMP_NUM_THREADS: 2
+2026-10-19T17:53:00.4280721Z   MKL_NUM_THREADS: 2
+2026-10-19T17:53:00.4280929Z   UV_LINK_MODE: hardlink
+2026-10-19T17:53:00.4281227Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.4281665Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:53:00.4282099Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.4282483Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.4282877Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.4283340Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:53:00.4283904Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:53:00.4284205Z ##[endgroup]
+2026-10-19T17:53:00.4695898Z All checks passed!
+2026-10-19T17:53:00.4742386Z ##[group]Run uv run ruff check ../../M2
+2026-10-19T17:53:00.4742729Z [36;1muv run ruff check ../../M2[0m
+2026-10-19T17:53:00.4805533Z shell: /usr/bin/bash -e {0}
+2026-10-19T17:53:00.4805788Z env:
+2026-10-19T17:53:00.4805984Z   OMP_NUM_THREADS: 2
+2026-10-19T17:53:00.4806211Z   MKL_NUM_THREADS: 2
+2026-10-19T17:53:00.4806428Z   UV_LINK_MODE: hardlink
+2026-10-19T17:53:00.4806734Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.4807185Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:53:00.4807636Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.4808027Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.4808414Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.4808817Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:53:00.4809204Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:53:00.4809552Z ##[endgroup]
+2026-10-19T17:53:00.5265466Z All checks passed!
+2026-10-19T17:53:00.5340814Z ##[group]Run uv run python -c "import kaleido; kaleido.get_chrome_sync()"
+2026-10-19T17:53:00.5341760Z [36;1muv run python -c "import kaleido; kaleido.get_chrome_sync()"[0m
+2026-10-19T17:53:00.5434274Z shell: /usr/bin/bash -e {0}
+2026-10-19T17:53:00.5435044Z env:
+2026-10-19T17:53:00.5435388Z   OMP_NUM_THREADS: 2
+2026-10-19T17:53:00.5435792Z   MKL_NUM_THREADS: 2
+2026-10-19T17:53:00.5436180Z   UV_LINK_MODE: hardlink
+2026-10-19T17:53:00.5436785Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.5437640Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:53:00.5438449Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.5439238Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.5439953Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:00.5440668Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:53:00.5441425Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:53:00.5441994Z ##[endgroup]
+2026-10-19T17:53:03.9564138Z ##[group]Run uv run python ../run_smoke_test.py
+2026-10-19T17:53:03.9564842Z [36;1muv run python ../run_smoke_test.py[0m
+2026-10-19T17:53:03.9627540Z shell: /usr/bin/bash -e {0}
+2026-10-19T17:53:03.9627798Z env:
+2026-10-19T17:53:03.9627994Z   OMP_NUM_THREADS: 2
+2026-10-19T17:53:03.9628224Z   MKL_NUM_THREADS: 2
+2026-10-19T17:53:03.9628438Z   UV_LINK_MODE: hardlink
+2026-10-19T17:53:03.9628749Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:03.9629198Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:53:03.9629667Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:03.9630055Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:03.9630489Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:03.9630883Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:53:03.9631298Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:53:03.9631622Z ##[endgroup]
+2026-10-19T17:53:06.7946642Z 
+2026-10-19T17:53:06.7952937Z Running episodes:   0%|          | 0/1 [00:00<?, ?it/s]/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/modal/_functions.py:1826: UserWarning: The run_episode function is executing locally and will not have access to the mounted Volume or NetworkFileSystem data
+2026-10-19T17:53:06.7954854Z   warnings.warn(
+2026-10-19T17:53:17.5024866Z UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T17:53:22.7462008Z [2026-10-19 17:53:22] [WARNING] [made.oracles.ase_potential] No elemental reference energies provided, make sure to compute them using compute_elemental_energies_from_structures using the oracle
+2026-10-19T17:53:22.7741752Z [2026-10-19 17:53:22] [INFO] [made.envs.convex_hull] Filtered ground truth PD from 3 to 3 entries (SMACT-valid, num_atoms<=4)
+2026-10-19T17:53:22.7754758Z [2026-10-19 17:53:22] [INFO] [made.envs.convex_hull] Computing elemental energies using oracle from dataset structures...
+2026-10-19T17:53:22.7786030Z [2026-10-19 17:53:22] [INFO] [made.oracles.ase_potential] Computed elemental energy for O: -0.000000 eV/atom
+2026-10-19T17:53:22.7809289Z [2026-10-19 17:53:22] [INFO] [made.oracles.ase_potential] Computed elemental energy for Li: -0.000000 eV/atom
+2026-10-19T17:53:22.7810762Z [2026-10-19 17:53:22] [INFO] [made.envs.convex_hull] Computed elemental energies: {'O': -2.6020852139652106e-18, 'Li': -2.6020852139652106e-18}
+2026-10-19T17:53:22.7818393Z [2026-10-19 17:53:22] [INFO] [made.envs.convex_hull] Starting PD with 2 elemental reference entries
+2026-10-19T17:53:22.7992813Z [2026-10-19 17:53:22] [INFO] [__main__] Starting new episode 0
+2026-10-19T17:53:22.8009399Z [2026-10-19 17:53:22] [INFO] [made.agents.planners.grid_search] Enumerated 3 SMACT-valid compositions from 6 total compositions
+2026-10-19T17:53:22.8016963Z [2026-10-19 17:53:22] [WARNING] [made.agents.planners.grid_search] Composition O1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 4)
+2026-10-19T17:53:22.8019120Z [2026-10-19 17:53:22] [WARNING] [made.agents.planners.grid_search] Composition Li1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 4)
+2026-10-19T17:53:22.8024101Z [2026-10-19 17:53:22] [INFO] [made.agents.planners.grid_search] Initialized composition stats with {'Li1 O1': CompositionStats(composition=Composition('Li1 O1'), num_attempts=0, num_successes=0, best_score=-10000000, last_score=-10000000, last_attempted_step=-1), 'Li2 O1': CompositionStats(composition=Composition('Li2 O1'), num_attempts=0, num_successes=0, best_score=-10000000, last_score=-10000000, last_attempted_step=-1), 'Li2 O2': CompositionStats(composition=Composition('Li2 O2'), num_attempts=0, num_successes=0, best_score=-10000000, last_score=-10000000, last_attempted_step=-1)}
+2026-10-19T17:53:22.8037565Z [2026-10-19 17:53:22] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+2026-10-19T17:53:22.8039418Z [2026-10-19 17:53:22] [INFO] [made.agents.base] Scorer.select(): Selected candidate 1/1 (composition: Li1 O1, score: 0.530587, score range: [0.294665, 0.530587], mean: 0.412626)
+2026-10-19T17:53:22.8178344Z [2026-10-19 17:53:22] [INFO] [__main__] Saved checkpoint to checkpoints/20261019_175306/episode_000/checkpoint.json (query_count=1)
+2026-10-19T17:53:22.8191246Z [2026-10-19 17:53:22] [INFO] [__main__] Observation: {'proposal': {'@module': 'pymatgen.core.structure', '@class': 'Structure', 'charge': 0.0, 'lattice': {'matrix': [[8.971381973465629, 0.0, 0.9278212114928278], [-3.096580817899685, 5.235313077330413, -3.0607476253445625], [0.0, 0.0, 13.155933709541088]], 'pbc': (True, True, True), 'a': 9.019232046816406, 'b': 6.809221086548996, 'c': 13.155933709541088, 'alpha': 116.71163487029337, 'beta': 84.09545621464018, 'gamma': 119.90682030522126, 'volume': 617.9078072118238}, 'properties': {}, 'sites': [{'species': [{'element': 'Li', 'occu': 1}], 'abc': [0.0621927912524467, 0.8126090004416155, 0.8753165021282806], 'properties': {}, 'label': 'Li', 'xyz': [-1.9583541568984322, 4.254262526768385, 9.086118599357713]}, {'species': [{'element': 'O', 'occu': 1}], 'abc': [0.1509154802769801, 0.7055686155919507, 0.5588918686046748], 'properties': {}, 'label': 'O', 'xyz': [-0.8309298214802643, 3.6938726001624547, 5.3331994932175455]}]}, 'oracle_result': {'energy': 0.0, 'energy_per_atom': 0.0, 'natoms': 2, 'formula': 'Li1 O1'}, 'reduced_formula': 'Li2 O2', 'formation_energy_per_atom': 2.6020852139652106e-18, 'energy_per_atom': 0.0, 'e_above_hull': 2.6020852139652106e-18, 'is_stable': True, 'is_newly_discovered': True, 'validity_distance_valid_count': 1.0, 'validity_distance_valid_fraction': 1.0, 'validity_min_interatomic_distance_min': 3.958474999184207, 'validity_min_interatomic_distance_mean': 3.958474999184207, 'validity_min_interatomic_distance_std': 0.0, 'validity_smact_valid_count': 1.0, 'validity_smact_valid_fraction': 1.0, 'validity_distance_and_smact_valid_count': 1.0, 'validity_distance_and_smact_valid_fraction': 1.0}
+2026-10-19T17:53:22.8201318Z [2026-10-19 17:53:22] [INFO] [__main__] Metrics: {
+2026-10-19T17:53:22.8201888Z   "queries_used": 1,
+2026-10-19T17:53:22.8202311Z   "num_observed_stable_formulas": 3,
+2026-10-19T17:53:22.8202833Z   "num_ground_truth_stable_formulas": 3,
+2026-10-19T17:53:22.8203360Z   "num_gt_formulas_missing_initial": 1,
+2026-10-19T17:53:22.8203905Z   "num_correct_stable_formulas": 1,
+2026-10-19T17:53:22.8204693Z   "recall_formula": 1.0,
+2026-10-19T17:53:22.8205159Z   "precision_formula": 1.0,
+2026-10-19T17:53:22.8205647Z   "num_newly_discovered_structures": 1,
+2026-10-19T17:53:22.8206171Z   "num_newly_discovered_stable": 1,
+2026-10-19T17:53:22.8206678Z   "discovery_efficiency": 1.0,
+2026-10-19T17:53:22.8207178Z   "stable_discovery_efficiency": 1.0,
+2026-10-19T17:53:22.8207722Z   "num_initial_structures": 2,
+2026-10-19T17:53:22.8208203Z   "num_ground_truth_stable_structures": 3,
+2026-10-19T17:53:22.8208710Z   "num_gt_structures_missing_initial": 1,
+2026-10-19T17:53:22.8209224Z   "num_correct_stable_structures": 0,
+2026-10-19T17:53:22.8209725Z   "recall_structure": 0.0,
+2026-10-19T17:53:22.8210201Z   "precision_structure": 0.0,
+2026-10-19T17:53:22.8210701Z   "reference_composition_precision": 1.0,
+2026-10-19T17:53:22.8211254Z   "reference_composition_recall": 1.0,
+2026-10-19T17:53:22.8211805Z   "reference_structure_precision": 0.0,
+2026-10-19T17:53:22.8212353Z   "reference_structure_recall": 0.0,
+2026-10-19T17:53:22.8212902Z   "validity_distance_valid_count": 1.0,
+2026-10-19T17:53:22.8213463Z   "validity_distance_valid_fraction": 1.0,
+2026-10-19T17:53:22.8214122Z   "validity_min_interatomic_distance_min": 3.958474999184207,
+2026-10-19T17:53:22.8215139Z   "validity_min_interatomic_distance_mean": 3.958474999184207,
+2026-10-19T17:53:22.8216149Z   "validity_min_interatomic_distance_std": 0.0,
+2026-10-19T17:53:22.8216780Z   "validity_smact_valid_count": 1.0,
+2026-10-19T17:53:22.8217327Z   "validity_smact_valid_fraction": 1.0,
+2026-10-19T17:53:22.8217899Z   "validity_distance_and_smact_valid_count": 1.0,
+2026-10-19T17:53:22.8218558Z   "validity_distance_and_smact_valid_fraction": 1.0,
+2026-10-19T17:53:22.8219282Z   "diversity_all_composition_unique_composition_count": 1.0,
+2026-10-19T17:53:22.8220072Z   "diversity_all_composition_unique_composition_fraction": 1.0,
+2026-10-19T17:53:22.8220802Z   "diversity_all_composition_l1_distance_min": 0.0,
+2026-10-19T17:53:22.8221462Z   "diversity_all_composition_l1_distance_mean": 0.0,
+2026-10-19T17:53:22.8222125Z   "diversity_all_composition_l1_distance_max": 0.0,
+2026-10-19T17:53:22.8222763Z   "diversity_all_composition_l1_distance_std": 0.0,
+2026-10-19T17:53:22.8223396Z   "diversity_all_composition_l2_distance_min": 0.0,
+2026-10-19T17:53:22.8224048Z   "diversity_all_composition_l2_distance_mean": 0.0,
+2026-10-19T17:53:22.8224989Z   "diversity_all_composition_l2_distance_max": 0.0,
+2026-10-19T17:53:22.8225635Z   "diversity_all_composition_l2_distance_std": 0.0,
+2026-10-19T17:53:22.8226314Z   "diversity_all_structure_unique_structure_count": 1.0,
+2026-10-19T17:53:22.8227027Z   "diversity_all_structure_unique_structure_fraction": 1.0,
+2026-10-19T17:53:22.8227759Z   "diversity_all_structure_spacegroup_entropy": -0.0,
+2026-10-19T17:53:22.8228486Z   "diversity_all_structure_unique_spacegroups_count": 1.0,
+2026-10-19T17:53:22.8229257Z   "diversity_all_structure_unique_spacegroups_fraction": 1.0,
+2026-10-19T17:53:22.8230028Z   "diversity_all_structure_lattice_parameter_variance": 0.0,
+2026-10-19T17:53:22.8231018Z   "diversity_all_structure_amd_distance_min": 0.0,
+2026-10-19T17:53:22.8231667Z   "diversity_all_structure_amd_distance_mean": 0.0,
+2026-10-19T17:53:22.8232322Z   "diversity_all_structure_amd_distance_max": 0.0,
+2026-10-19T17:53:22.8233046Z   "diversity_stable_composition_unique_composition_count": 1.0,
+2026-10-19T17:53:22.8233872Z   "diversity_stable_composition_unique_composition_fraction": 1.0,
+2026-10-19T17:53:22.8234912Z   "diversity_stable_composition_l1_distance_min": 0.0,
+2026-10-19T17:53:22.8235606Z   "diversity_stable_composition_l1_distance_mean": 0.0,
+2026-10-19T17:53:22.8236282Z   "diversity_stable_composition_l1_distance_max": 0.0,
+2026-10-19T17:53:22.8236949Z   "diversity_stable_composition_l1_distance_std": 0.0,
+2026-10-19T17:53:22.8237646Z   "diversity_stable_composition_l2_distance_min": 0.0,
+2026-10-19T17:53:22.8238318Z   "diversity_stable_composition_l2_distance_mean": 0.0,
+2026-10-19T17:53:22.8238961Z   "diversity_stable_composition_l2_distance_max": 0.0,
+2026-10-19T17:53:22.8239651Z   "diversity_stable_composition_l2_distance_std": 0.0,
+2026-10-19T17:53:22.8240361Z   "diversity_stable_structure_unique_structure_count": 1.0,
+2026-10-19T17:53:22.8241134Z   "diversity_stable_structure_unique_structure_fraction": 1.0,
+2026-10-19T17:53:22.8241905Z   "diversity_stable_structure_spacegroup_entropy": -0.0,
+2026-10-19T17:53:22.8242667Z   "diversity_stable_structure_unique_spacegroups_count": 1.0,
+2026-10-19T17:53:22.8243472Z   "diversity_stable_structure_unique_spacegroups_fraction": 1.0,
+2026-10-19T17:53:22.8244283Z   "diversity_stable_structure_lattice_parameter_variance": 0.0,
+2026-10-19T17:53:22.8245277Z   "diversity_stable_structure_amd_distance_min": 0.0,
+2026-10-19T17:53:22.8245945Z   "diversity_stable_structure_amd_distance_mean": 0.0,
+2026-10-19T17:53:22.8246614Z   "diversity_stable_structure_amd_distance_max": 0.0,
+2026-10-19T17:53:22.8247230Z   "novelty_unique_structure_count": 1.0,
+2026-10-19T17:53:22.8247785Z   "novelty_unique_structure_fraction": 1.0,
+2026-10-19T17:53:22.8248341Z   "novelty_novel_structure_count": 1.0,
+2026-10-19T17:53:22.8248885Z   "novelty_novel_structure_fraction": 1.0,
+2026-10-19T17:53:22.8249432Z   "novelty_stable_count": 1.0,
+2026-10-19T17:53:22.8249994Z   "novelty_stable_unique_count": 1.0,
+2026-10-19T17:53:22.8250516Z   "novelty_stable_novel_count": 1.0,
+2026-10-19T17:53:22.8251311Z   "novelty_stable_unique_novel_count": 1.0,
+2026-10-19T17:53:22.8251896Z   "novelty_stable_fraction": 1.0,
+2026-10-19T17:53:22.8252397Z   "novelty_stable_unique_fraction": 1.0,
+2026-10-19T17:53:22.8252940Z   "novelty_stable_novel_fraction": 1.0,
+2026-10-19T17:53:22.8253494Z   "novelty_stable_unique_novel_fraction": 1.0,
+2026-10-19T17:53:22.8254136Z   "convex_hull_e_above_hull_min": 2.6020852139652106e-18,
+2026-10-19T17:53:22.8255058Z   "convex_hull_e_above_hull_mean": 2.6020852139652106e-18,
+2026-10-19T17:53:22.8255712Z   "convex_hull_e_above_hull_max": 2.6020852139652106e-18,
+2026-10-19T17:53:22.8256307Z   "convex_hull_e_above_hull_std": 0.0,
+2026-10-19T17:53:22.8256863Z   "convex_hull_energy_per_atom_min": 0.0,
+2026-10-19T17:53:22.8257415Z   "convex_hull_energy_per_atom_max": 0.0,
+2026-10-19T17:53:22.8257961Z   "convex_hull_energy_per_atom_mean": 0.0,
+2026-10-19T17:53:22.8258513Z   "convex_hull_energy_per_atom_std": 0.0,
+2026-10-19T17:53:22.8259209Z   "convex_hull_formation_energy_per_atom_min": 2.6020852139652106e-18,
+2026-10-19T17:53:22.8260078Z   "convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+2026-10-19T17:53:22.8260929Z   "convex_hull_formation_energy_per_atom_mean": 2.6020852139652106e-18,
+2026-10-19T17:53:22.8261692Z   "convex_hull_formation_energy_per_atom_std": 0.0,
+2026-10-19T17:53:22.8262303Z   "convex_hull_stable_fraction": 1.0,
+2026-10-19T17:53:22.8262823Z   "convex_hull_stable_count": 1.0,
+2026-10-19T17:53:22.8263392Z   "discovery_curve_area_under_discovery_curve": 0.5,
+2026-10-19T17:53:22.8264115Z   "discovery_curve_area_under_discovery_curve_normalized": 1.0,
+2026-10-19T17:53:22.8265097Z   "discovery_curve_enhancement_factor": 0.0,
+2026-10-19T17:53:22.8266062Z   "discovery_curve_acceleration_factor": 0.0
+2026-10-19T17:53:22.8266589Z }
+2026-10-19T17:53:22.8267268Z [2026-10-19 17:53:22] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+2026-10-19T17:53:22.8268893Z [2026-10-19 17:53:22] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: Li2 O2, score: 0.191521, score range: [0.191521, 0.191521], mean: 0.191521)
+2026-10-19T17:53:31.0748823Z [2026-10-19 17:53:31] [INFO] [__main__] Saved checkpoint to checkpoints/20261019_175306/episode_000/checkpoint.json (query_count=2)
+2026-10-19T17:53:31.0765466Z [2026-10-19 17:53:31] [INFO] [__main__] Observation: {'proposal': {'@module': 'pymatgen.core.structure', '@class': 'Structure', 'charge': 0.0, 'lattice': {'matrix': [[14.309810508900796, 0.0, -2.0943075228927723], [0.7923130988009516, 5.021149353101014, -2.1522140225855098], [0.0, 0.0, 9.479560207441484]], 'pbc': (True, True, True), 'a': 14.462254347130425, 'b': 5.520120113882667, 'c': 9.479560207441484, 'alpha': 112.94736640852203, 'beta': 98.32639086358778, 'gamma': 78.5519717974995, 'volume': 681.1224761510546}, 'properties': {}, 'sites': [{'species': [{'element': 'Li', 'occu': 1}], 'abc': [0.08186385413474262, 0.939776047011715, 0.47409847110640535], 'properties': {}, 'label': 'Li', 'xyz': [1.9160531121832225, 4.718755890512701, 2.300197729073146]}, {'species': [{'element': 'Li', 'occu': 1}], 'abc': [0.9963261827822232, 0.14160714062013535, 0.812204252248064], 'properties': {}, 'label': 'Li', 'xyz': [14.369436073067154, 0.7110306025192769, 5.307956816328771]}, {'species': [{'element': 'O', 'occu': 1}], 'abc': [0.8133781217490886, 0.9199750224976402, 0.0178343164383028], 'properties': {}, 'label': 'O', 'xyz': [12.36819505520968, 4.619331989083117, -3.514385586747896]}, {'species': [{'element': 'O', 'occu': 1}], 'abc': [0.3721928415574348, 0.051668993360395654, 0.7520348335719639], 'properties': {}, 'label': 'O', 'xyz': [5.366947055697531, 0.2594377325869312, 6.238270482854973]}]}, 'oracle_result': {'energy': 0.0, 'energy_per_atom': 0.0, 'natoms': 4, 'formula': 'Li2 O2'}, 'reduced_formula': 'Li2 O2', 'formation_energy_per_atom': 2.6020852139652106e-18, 'energy_per_atom': 0.0, 'e_above_hull': 2.6020852139652106e-18, 'is_stable': True, 'is_newly_discovered': True, 'validity_distance_valid_count': 1.0, 'validity_distance_valid_fraction': 1.0, 'validity_min_interatomic_distance_min': 3.295602856097915, 'validity_min_interatomic_distance_mean': 3.295602856097915, 'validity_min_interatomic_distance_std': 0.0, 'validity_smact_valid_count': 1.0, 'validity_smact_valid_fraction': 1.0, 'validity_distance_and_smact_valid_count': 1.0, 'validity_distance_and_smact_valid_fraction': 1.0}
+2026-10-19T17:53:31.0773220Z [2026-10-19 17:53:31] [INFO] [__main__] Metrics: {
+2026-10-19T17:53:31.0773545Z   "queries_used": 2,
+2026-10-19T17:53:31.0773787Z   "num_observed_stable_formulas": 3,
+2026-10-19T17:53:31.0774078Z   "num_ground_truth_stable_formulas": 3,
+2026-10-19T17:53:31.0774628Z   "num_gt_formulas_missing_initial": 1,
+2026-10-19T17:53:31.0774931Z   "num_correct_stable_formulas": 1,
+2026-10-19T17:53:31.0775194Z   "recall_formula": 1.0,
+2026-10-19T17:53:31.0775436Z   "precision_formula": 0.5,
+2026-10-19T17:53:31.0775687Z   "num_newly_discovered_structures": 2,
+2026-10-19T17:53:31.0775967Z   "num_newly_discovered_stable": 2,
+2026-10-19T17:53:31.0776242Z   "discovery_efficiency": 1.0,
+2026-10-19T17:53:31.0776510Z   "stable_discovery_efficiency": 1.0,
+2026-10-19T17:53:31.0776793Z   "num_initial_structures": 2,
+2026-10-19T17:53:31.0777055Z   "num_ground_truth_stable_structures": 3,
+2026-10-19T17:53:31.0777346Z   "num_gt_structures_missing_initial": 1,
+2026-10-19T17:53:31.0777630Z   "num_correct_stable_structures": 0,
+2026-10-19T17:53:31.0777899Z   "recall_structure": 0.0,
+2026-10-19T17:53:31.0778140Z   "precision_structure": 0.0,
+2026-10-19T17:53:31.0778398Z   "reference_composition_precision": 0.5,
+2026-10-19T17:53:31.0778687Z   "reference_composition_recall": 1.0,
+2026-10-19T17:53:31.0779146Z   "reference_structure_precision": 0.0,
+2026-10-19T17:53:31.0779424Z   "reference_structure_recall": 0.0,
+2026-10-19T17:53:31.0779695Z   "validity_distance_valid_count": 2.0,
+2026-10-19T17:53:31.0779973Z   "validity_distance_valid_fraction": 1.0,
+2026-10-19T17:53:31.0780322Z   "validity_min_interatomic_distance_min": 3.295602856097915,
+2026-10-19T17:53:31.0780724Z   "validity_min_interatomic_distance_mean": 3.627038927641061,
+2026-10-19T17:53:31.0781118Z   "validity_min_interatomic_distance_std": 0.33143607154314614,
+2026-10-19T17:53:31.0781482Z   "validity_smact_valid_count": 2.0,
+2026-10-19T17:53:31.0781765Z   "validity_smact_valid_fraction": 1.0,
+2026-10-19T17:53:31.0782066Z   "validity_distance_and_smact_valid_count": 2.0,
+2026-10-19T17:53:31.0782411Z   "validity_distance_and_smact_valid_fraction": 1.0,
+2026-10-19T17:53:31.0782789Z   "diversity_all_composition_unique_composition_count": 1.0,
+2026-10-19T17:53:31.0783204Z   "diversity_all_composition_unique_composition_fraction": 0.5,
+2026-10-19T17:53:31.0783591Z   "diversity_all_composition_l1_distance_min": 0.0,
+2026-10-19T17:53:31.0783943Z   "diversity_all_composition_l1_distance_mean": 0.0,
+2026-10-19T17:53:31.0784290Z   "diversity_all_composition_l1_distance_max": 0.0,
+2026-10-19T17:53:31.0784876Z   "diversity_all_composition_l1_distance_std": 0.0,
+2026-10-19T17:53:31.0785202Z   "diversity_all_composition_l2_distance_min": 0.0,
+2026-10-19T17:53:31.0785537Z   "diversity_all_composition_l2_distance_mean": 0.0,
+2026-10-19T17:53:31.0785861Z   "diversity_all_composition_l2_distance_max": 0.0,
+2026-10-19T17:53:31.0786188Z   "diversity_all_composition_l2_distance_std": 0.0,
+2026-10-19T17:53:31.0799225Z   "diversity_all_structure_unique_structure_count": 2.0,
+2026-10-19T17:53:31.0799869Z   "diversity_all_structure_unique_structure_fraction": 1.0,
+2026-10-19T17:53:31.0800547Z   "diversity_all_structure_spacegroup_entropy": -0.0,
+2026-10-19T17:53:31.0800956Z   "diversity_all_structure_unique_spacegroups_count": 1.0,
+2026-10-19T17:53:31.0801686Z   "diversity_all_structure_unique_spacegroups_fraction": 0.5,
+2026-10-19T17:53:31.0802393Z   "diversity_all_structure_lattice_parameter_variance": 3.733666267198759,
+2026-10-19T17:53:31.0803096Z   "diversity_all_structure_amd_distance_min": 3.2219719864865333,
+2026-10-19T17:53:31.0803527Z   "diversity_all_structure_amd_distance_mean": 3.2219719864865333,
+2026-10-19T17:53:31.0804144Z   "diversity_all_structure_amd_distance_max": 3.2219719864865333,
+2026-10-19T17:53:31.0804891Z   "diversity_stable_composition_unique_composition_count": 1.0,
+2026-10-19T17:53:31.0805327Z   "diversity_stable_composition_unique_composition_fraction": 0.5,
+2026-10-19T17:53:31.0805727Z   "diversity_stable_composition_l1_distance_min": 0.0,
+2026-10-19T17:53:31.0806092Z   "diversity_stable_composition_l1_distance_mean": 0.0,
+2026-10-19T17:53:31.0806447Z   "diversity_stable_composition_l1_distance_max": 0.0,
+2026-10-19T17:53:31.0806789Z   "diversity_stable_composition_l1_distance_std": 0.0,
+2026-10-19T17:53:31.0807130Z   "diversity_stable_composition_l2_distance_min": 0.0,
+2026-10-19T17:53:31.0807492Z   "diversity_stable_composition_l2_distance_mean": 0.0,
+2026-10-19T17:53:31.0807838Z   "diversity_stable_composition_l2_distance_max": 0.0,
+2026-10-19T17:53:31.0808175Z   "diversity_stable_composition_l2_distance_std": 0.0,
+2026-10-19T17:53:31.0808544Z   "diversity_stable_structure_unique_structure_count": 2.0,
+2026-10-19T17:53:31.0808955Z   "diversity_stable_structure_unique_structure_fraction": 1.0,
+2026-10-19T17:53:31.0809357Z   "diversity_stable_structure_spacegroup_entropy": -0.0,
+2026-10-19T17:53:31.0809746Z   "diversity_stable_structure_unique_spacegroups_count": 1.0,
+2026-10-19T17:53:31.0810160Z   "diversity_stable_structure_unique_spacegroups_fraction": 0.5,
+2026-10-19T17:53:31.0810625Z   "diversity_stable_structure_lattice_parameter_variance": 3.733666267198759,
+2026-10-19T17:53:31.0811096Z   "diversity_stable_structure_amd_distance_min": 3.2219719864865333,
+2026-10-19T17:53:31.0811536Z   "diversity_stable_structure_amd_distance_mean": 3.2219719864865333,
+2026-10-19T17:53:31.0812154Z   "diversity_stable_structure_amd_distance_max": 3.2219719864865333,
+2026-10-19T17:53:31.0812517Z   "novelty_unique_structure_count": 2.0,
+2026-10-19T17:53:31.0812810Z   "novelty_unique_structure_fraction": 1.0,
+2026-10-19T17:53:31.0813103Z   "novelty_novel_structure_count": 2.0,
+2026-10-19T17:53:31.0813391Z   "novelty_novel_structure_fraction": 1.0,
+2026-10-19T17:53:31.0813675Z   "novelty_stable_count": 2.0,
+2026-10-19T17:53:31.0813934Z   "novelty_stable_unique_count": 2.0,
+2026-10-19T17:53:31.0814216Z   "novelty_stable_novel_count": 2.0,
+2026-10-19T17:53:31.0814751Z   "novelty_stable_unique_novel_count": 2.0,
+2026-10-19T17:53:31.0815061Z   "novelty_stable_fraction": 1.0,
+2026-10-19T17:53:31.0815336Z   "novelty_stable_unique_fraction": 1.0,
+2026-10-19T17:53:31.0815619Z   "novelty_stable_novel_fraction": 1.0,
+2026-10-19T17:53:31.0815920Z   "novelty_stable_unique_novel_fraction": 1.0,
+2026-10-19T17:53:31.0816270Z   "convex_hull_e_above_hull_min": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0816657Z   "convex_hull_e_above_hull_mean": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0817015Z   "convex_hull_e_above_hull_max": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0817335Z   "convex_hull_e_above_hull_std": 0.0,
+2026-10-19T17:53:31.0817620Z   "convex_hull_energy_per_atom_min": 0.0,
+2026-10-19T17:53:31.0817904Z   "convex_hull_energy_per_atom_max": 0.0,
+2026-10-19T17:53:31.0818190Z   "convex_hull_energy_per_atom_mean": 0.0,
+2026-10-19T17:53:31.0818475Z   "convex_hull_energy_per_atom_std": 0.0,
+2026-10-19T17:53:31.0818831Z   "convex_hull_formation_energy_per_atom_min": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0819264Z   "convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0819715Z   "convex_hull_formation_energy_per_atom_mean": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0820120Z   "convex_hull_formation_energy_per_atom_std": 0.0,
+2026-10-19T17:53:31.0820442Z   "convex_hull_stable_fraction": 1.0,
+2026-10-19T17:53:31.0820718Z   "convex_hull_stable_count": 2.0,
+2026-10-19T17:53:31.0821023Z   "discovery_curve_area_under_discovery_curve": 2.0,
+2026-10-19T17:53:31.0821402Z   "discovery_curve_area_under_discovery_curve_normalized": 1.0,
+2026-10-19T17:53:31.0821778Z   "discovery_curve_enhancement_factor": 0.0,
+2026-10-19T17:53:31.0822083Z   "discovery_curve_acceleration_factor": 0.0
+2026-10-19T17:53:31.0822363Z }
+2026-10-19T17:53:31.0822831Z [2026-10-19 17:53:31] [INFO] [__main__] Final metrics: {
+2026-10-19T17:53:31.0823166Z   "episode_id": 0,
+2026-10-19T17:53:31.0823385Z   "final/queries_used": 2,
+2026-10-19T17:53:31.0823644Z   "final/num_observed_stable_formulas": 3,
+2026-10-19T17:53:31.0823949Z   "final/num_ground_truth_stable_formulas": 3,
+2026-10-19T17:53:31.0824270Z   "final/num_gt_formulas_missing_initial": 1,
+2026-10-19T17:53:31.0824939Z   "final/num_correct_stable_formulas": 1,
+2026-10-19T17:53:31.0825226Z   "final/recall_formula": 1.0,
+2026-10-19T17:53:31.0825485Z   "final/precision_formula": 0.5,
+2026-10-19T17:53:31.0825775Z   "final/num_newly_discovered_structures": 2,
+2026-10-19T17:53:31.0826081Z   "final/num_newly_discovered_stable": 2,
+2026-10-19T17:53:31.0826365Z   "final/discovery_efficiency": 1.0,
+2026-10-19T17:53:31.0826644Z   "final/stable_discovery_efficiency": 1.0,
+2026-10-19T17:53:31.0826942Z   "final/num_initial_structures": 2,
+2026-10-19T17:53:31.0827236Z   "final/num_ground_truth_stable_structures": 3,
+2026-10-19T17:53:31.0827569Z   "final/num_gt_structures_missing_initial": 1,
+2026-10-19T17:53:31.0827880Z   "final/num_correct_stable_structures": 0,
+2026-10-19T17:53:31.0828175Z   "final/recall_structure": 0.0,
+2026-10-19T17:53:31.0828439Z   "final/precision_structure": 0.0,
+2026-10-19T17:53:31.0828729Z   "final/reference_composition_precision": 0.5,
+2026-10-19T17:53:31.0829068Z   "final/reference_composition_recall": 1.0,
+2026-10-19T17:53:31.0829387Z   "final/reference_structure_precision": 0.0,
+2026-10-19T17:53:31.0829687Z   "final/reference_structure_recall": 0.0,
+2026-10-19T17:53:31.0829994Z   "final/validity_distance_valid_count": 2.0,
+2026-10-19T17:53:31.0830453Z   "final/validity_distance_valid_fraction": 1.0,
+2026-10-19T17:53:31.0830834Z   "final/validity_min_interatomic_distance_min": 3.295602856097915,
+2026-10-19T17:53:31.0831275Z   "final/validity_min_interatomic_distance_mean": 3.627038927641061,
+2026-10-19T17:53:31.0831717Z   "final/validity_min_interatomic_distance_std": 0.33143607154314614,
+2026-10-19T17:53:31.0832091Z   "final/validity_smact_valid_count": 2.0,
+2026-10-19T17:53:31.0832402Z   "final/validity_smact_valid_fraction": 1.0,
+2026-10-19T17:53:31.0832731Z   "final/validity_distance_and_smact_valid_count": 2.0,
+2026-10-19T17:53:31.0833101Z   "final/validity_distance_and_smact_valid_fraction": 1.0,
+2026-10-19T17:53:31.0833516Z   "final/diversity_all_composition_unique_composition_count": 1.0,
+2026-10-19T17:53:31.0833976Z   "final/diversity_all_composition_unique_composition_fraction": 0.5,
+2026-10-19T17:53:31.0834659Z   "final/diversity_all_composition_l1_distance_min": 0.0,
+2026-10-19T17:53:31.0835056Z   "final/diversity_all_composition_l1_distance_mean": 0.0,
+2026-10-19T17:53:31.0835436Z   "final/diversity_all_composition_l1_distance_max": 0.0,
+2026-10-19T17:53:31.0835807Z   "final/diversity_all_composition_l1_distance_std": 0.0,
+2026-10-19T17:53:31.0836164Z   "final/diversity_all_composition_l2_distance_min": 0.0,
+2026-10-19T17:53:31.0836524Z   "final/diversity_all_composition_l2_distance_mean": 0.0,
+2026-10-19T17:53:31.0836889Z   "final/diversity_all_composition_l2_distance_max": 0.0,
+2026-10-19T17:53:31.0837255Z   "final/diversity_all_composition_l2_distance_std": 0.0,
+2026-10-19T17:53:31.0837639Z   "final/diversity_all_structure_unique_structure_count": 2.0,
+2026-10-19T17:53:31.0838056Z   "final/diversity_all_structure_unique_structure_fraction": 1.0,
+2026-10-19T17:53:31.0838474Z   "final/diversity_all_structure_spacegroup_entropy": -0.0,
+2026-10-19T17:53:31.0838905Z   "final/diversity_all_structure_unique_spacegroups_count": 1.0,
+2026-10-19T17:53:31.0839338Z   "final/diversity_all_structure_unique_spacegroups_fraction": 0.5,
+2026-10-19T17:53:31.0839823Z   "final/diversity_all_structure_lattice_parameter_variance": 3.733666267198759,
+2026-10-19T17:53:31.0840312Z   "final/diversity_all_structure_amd_distance_min": 3.2219719864865333,
+2026-10-19T17:53:31.0840769Z   "final/diversity_all_structure_amd_distance_mean": 3.2219719864865333,
+2026-10-19T17:53:31.0841353Z   "final/diversity_all_structure_amd_distance_max": 3.2219719864865333,
+2026-10-19T17:53:31.0841813Z   "final/diversity_stable_composition_unique_composition_count": 1.0,
+2026-10-19T17:53:31.0842280Z   "final/diversity_stable_composition_unique_composition_fraction": 0.5,
+2026-10-19T17:53:31.0842714Z   "final/diversity_stable_composition_l1_distance_min": 0.0,
+2026-10-19T17:53:31.0843351Z   "final/diversity_stable_composition_l1_distance_mean": 0.0,
+2026-10-19T17:53:31.0843762Z   "final/diversity_stable_composition_l1_distance_max": 0.0,
+2026-10-19T17:53:31.0844167Z   "final/diversity_stable_composition_l1_distance_std": 0.0,
+2026-10-19T17:53:31.0844808Z   "final/diversity_stable_composition_l2_distance_min": 0.0,
+2026-10-19T17:53:31.0845211Z   "final/diversity_stable_composition_l2_distance_mean": 0.0,
+2026-10-19T17:53:31.0845606Z   "final/diversity_stable_composition_l2_distance_max": 0.0,
+2026-10-19T17:53:31.0845996Z   "final/diversity_stable_composition_l2_distance_std": 0.0,
+2026-10-19T17:53:31.0846404Z   "final/diversity_stable_structure_unique_structure_count": 2.0,
+2026-10-19T17:53:31.0846844Z   "final/diversity_stable_structure_unique_structure_fraction": 1.0,
+2026-10-19T17:53:31.0847276Z   "final/diversity_stable_structure_spacegroup_entropy": -0.0,
+2026-10-19T17:53:31.0847710Z   "final/diversity_stable_structure_unique_spacegroups_count": 1.0,
+2026-10-19T17:53:31.0848160Z   "final/diversity_stable_structure_unique_spacegroups_fraction": 0.5,
+2026-10-19T17:53:31.0848651Z   "final/diversity_stable_structure_lattice_parameter_variance": 3.733666267198759,
+2026-10-19T17:53:31.0849157Z   "final/diversity_stable_structure_amd_distance_min": 3.2219719864865333,
+2026-10-19T17:53:31.0849794Z   "final/diversity_stable_structure_amd_distance_mean": 3.2219719864865333,
+2026-10-19T17:53:31.0850270Z   "final/diversity_stable_structure_amd_distance_max": 3.2219719864865333,
+2026-10-19T17:53:31.0850668Z   "final/novelty_unique_structure_count": 2.0,
+2026-10-19T17:53:31.0851315Z   "final/novelty_unique_structure_fraction": 1.0,
+2026-10-19T17:53:31.0851647Z   "final/novelty_novel_structure_count": 2.0,
+2026-10-19T17:53:31.0851967Z   "final/novelty_novel_structure_fraction": 1.0,
+2026-10-19T17:53:31.0852279Z   "final/novelty_stable_count": 2.0,
+2026-10-19T17:53:31.0852564Z   "final/novelty_stable_unique_count": 2.0,
+2026-10-19T17:53:31.0852862Z   "final/novelty_stable_novel_count": 2.0,
+2026-10-19T17:53:31.0853162Z   "final/novelty_stable_unique_novel_count": 2.0,
+2026-10-19T17:53:31.0853468Z   "final/novelty_stable_fraction": 1.0,
+2026-10-19T17:53:31.0853902Z   "final/novelty_stable_unique_fraction": 1.0,
+2026-10-19T17:53:31.0854482Z   "final/novelty_stable_novel_fraction": 1.0,
+2026-10-19T17:53:31.0854916Z   "final/novelty_stable_unique_novel_fraction": 1.0,
+2026-10-19T17:53:31.0855379Z   "final/convex_hull_e_above_hull_min": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0855787Z   "final/convex_hull_e_above_hull_mean": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0856180Z   "final/convex_hull_e_above_hull_max": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0856530Z   "final/convex_hull_e_above_hull_std": 0.0,
+2026-10-19T17:53:31.0856846Z   "final/convex_hull_energy_per_atom_min": 0.0,
+2026-10-19T17:53:31.0857169Z   "final/convex_hull_energy_per_atom_max": 0.0,
+2026-10-19T17:53:31.0857479Z   "final/convex_hull_energy_per_atom_mean": 0.0,
+2026-10-19T17:53:31.0857795Z   "final/convex_hull_energy_per_atom_std": 0.0,
+2026-10-19T17:53:31.0858179Z   "final/convex_hull_formation_energy_per_atom_min": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0858659Z   "final/convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0859134Z   "final/convex_hull_formation_energy_per_atom_mean": 2.6020852139652106e-18,
+2026-10-19T17:53:31.0859571Z   "final/convex_hull_formation_energy_per_atom_std": 0.0,
+2026-10-19T17:53:31.0859906Z   "final/convex_hull_stable_fraction": 1.0,
+2026-10-19T17:53:31.0860204Z   "final/convex_hull_stable_count": 2.0,
+2026-10-19T17:53:31.0860533Z   "final/discovery_curve_area_under_discovery_curve": 2.0,
+2026-10-19T17:53:31.0861090Z   "final/discovery_curve_area_under_discovery_curve_normalized": 1.0,
+2026-10-19T17:53:31.0861492Z   "final/discovery_curve_enhancement_factor": 0.0,
+2026-10-19T17:53:31.0861834Z   "final/discovery_curve_acceleration_factor": 0.0
+2026-10-19T17:53:31.0862120Z }
+2026-10-19T17:53:31.0862649Z [2026-10-19 17:53:31] [INFO] [__main__] Removed checkpoint file checkpoints/20261019_175306/episode_000/checkpoint.json after successful completion
+2026-10-19T17:53:31.3207596Z [2026-10-19 17:53:31] [INFO] [choreographer.browsers.chromium] Chromium init'ed with kwargs {}
+2026-10-19T17:53:31.3210359Z [2026-10-19 17:53:31] [INFO] [choreographer.browsers.chromium] Found chromium path: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-10-19T17:53:31.3213228Z [2026-10-19 17:53:31] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmptq48zo4w.
+2026-10-19T17:53:31.3214615Z [2026-10-19 17:53:31] [INFO] [choreographer.browser_async] Opening browser.
+2026-10-19T17:53:31.3219760Z [2026-10-19 17:53:31] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmpdbwamk1c.
+2026-10-19T17:53:31.3542029Z [2026-10-19 17:53:31] [INFO] [choreographer.browsers.chromium] Temporary directory at: /tmp/tmpdbwamk1c
+2026-10-19T17:53:31.6025942Z [2026-10-19 17:53:31] [INFO] [kaleido.kaleido] Conforming 1 to file:///tmp/tmptq48zo4w/index.html
+2026-10-19T17:53:31.6055482Z [2026-10-19 17:53:31] [INFO] [kaleido.kaleido] Waiting on all navigates
+2026-10-19T17:53:32.8205777Z [2026-10-19 17:53:32] [INFO] [kaleido.kaleido] All navigates done, putting them all in queue.
+2026-10-19T17:53:32.8216385Z [2026-10-19 17:53:32] [INFO] [kaleido.kaleido] Getting tab from queue (has 1)
+2026-10-19T17:53:32.8217633Z [2026-10-19 17:53:32] [INFO] [kaleido.kaleido] Got EF98
+2026-10-19T17:53:32.8218598Z [2026-10-19 17:53:32] [INFO] [kaleido._kaleido_tab] Processing fig.png
+2026-10-19T17:53:32.8219549Z [2026-10-19 17:53:32] [INFO] [kaleido._kaleido_tab] Sending big command for fig.png.
+2026-10-19T17:53:32.9410171Z [2026-10-19 17:53:32] [INFO] [kaleido._kaleido_tab] Sent big command for fig.png.
+2026-10-19T17:53:32.9414232Z [2026-10-19 17:53:32] [INFO] [kaleido.kaleido] Reloading tab EF98 before return.
+2026-10-19T17:53:33.0291447Z [2026-10-19 17:53:33] [INFO] [kaleido.kaleido] Putting tab EF98 back (queue size: 0).
+2026-10-19T17:53:33.0292504Z [2026-10-19 17:53:33] [INFO] [kaleido.kaleido] Waiting for all cleanups to finish.
+2026-10-19T17:53:33.0293284Z [2026-10-19 17:53:33] [INFO] [kaleido.kaleido] Exiting Kaleido
+2026-10-19T17:53:33.0294047Z [2026-10-19 17:53:33] [INFO] [choreographer.browser_async] Closing browser.
+2026-10-19T17:53:33.0306283Z [2026-10-19 17:53:33] [INFO] [choreographer.browser_async] Closing browser.
+2026-10-19T17:53:33.0315449Z [2026-10-19 17:53:33] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+2026-10-19T17:53:33.0316680Z [2026-10-19 17:53:33] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+2026-10-19T17:53:33.0317627Z [2026-10-19 17:53:33] [INFO] [kaleido.kaleido] Cancelling tasks.
+2026-10-19T17:53:33.0318538Z [2026-10-19 17:53:33] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+2026-10-19T17:53:33.1046973Z [2026-10-19 17:53:33] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+2026-10-19T17:53:33.1048346Z [2026-10-19 17:53:33] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+2026-10-19T17:53:33.1049674Z [2026-10-19 17:53:33] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+2026-10-19T17:53:33.1050962Z [2026-10-19 17:53:33] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+2026-10-19T17:53:33.1051963Z [2026-10-19 17:53:33] [INFO] [kaleido.kaleido] Cancelling tasks.
+2026-10-19T17:53:33.1052888Z [2026-10-19 17:53:33] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+2026-10-19T17:53:33.1060368Z 
+2026-10-19T17:53:33.1063069Z Running episodes: 100%|██████████| 1/1 [00:26<00:00, 26.31s/it]
+2026-10-19T17:53:33.1063982Z Running episodes: 100%|██████████| 1/1 [00:26<00:00, 26.31s/it]
+2026-10-19T17:53:33.1182996Z [2026-10-19 17:53:33] [INFO] [choreographer.browsers.chromium] Chromium init'ed with kwargs {}
+2026-10-19T17:53:33.1185773Z [2026-10-19 17:53:33] [INFO] [choreographer.browsers.chromium] Found chromium path: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-10-19T17:53:33.1187866Z [2026-10-19 17:53:33] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmps6zb0tef.
+2026-10-19T17:53:33.1189736Z [2026-10-19 17:53:33] [INFO] [choreographer.browser_async] Opening browser.
+2026-10-19T17:53:33.1194157Z [2026-10-19 17:53:33] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmppa1ge0ne.
+2026-10-19T17:53:33.1314239Z [2026-10-19 17:53:33] [INFO] [choreographer.browsers.chromium] Temporary directory at: /tmp/tmppa1ge0ne
+2026-10-19T17:53:33.3760525Z [2026-10-19 17:53:33] [INFO] [kaleido.kaleido] Conforming 1 to file:///tmp/tmps6zb0tef/index.html
+2026-10-19T17:53:33.3862631Z [2026-10-19 17:53:33] [INFO] [kaleido.kaleido] Waiting on all navigates
+2026-10-19T17:53:34.5273404Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] All navigates done, putting them all in queue.
+2026-10-19T17:53:34.5285812Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Getting tab from queue (has 1)
+2026-10-19T17:53:34.5287063Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Got 5D80
+2026-10-19T17:53:34.5288392Z [2026-10-19 17:53:34] [INFO] [kaleido._kaleido_tab] Processing fig.png
+2026-10-19T17:53:34.5289829Z [2026-10-19 17:53:34] [INFO] [kaleido._kaleido_tab] Sending big command for fig.png.
+2026-10-19T17:53:34.6474326Z [2026-10-19 17:53:34] [INFO] [kaleido._kaleido_tab] Sent big command for fig.png.
+2026-10-19T17:53:34.6479137Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Reloading tab 5D80 before return.
+2026-10-19T17:53:34.7338042Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Putting tab 5D80 back (queue size: 0).
+2026-10-19T17:53:34.7339277Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Waiting for all cleanups to finish.
+2026-10-19T17:53:34.7340403Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Exiting Kaleido
+2026-10-19T17:53:34.7341584Z [2026-10-19 17:53:34] [INFO] [choreographer.browser_async] Closing browser.
+2026-10-19T17:53:34.7357612Z [2026-10-19 17:53:34] [INFO] [choreographer.browser_async] Closing browser.
+2026-10-19T17:53:34.7365616Z [2026-10-19 17:53:34] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+2026-10-19T17:53:34.7366903Z [2026-10-19 17:53:34] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+2026-10-19T17:53:34.7367791Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Cancelling tasks.
+2026-10-19T17:53:34.7368477Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+2026-10-19T17:53:34.8095056Z [2026-10-19 17:53:34] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+2026-10-19T17:53:34.8096105Z [2026-10-19 17:53:34] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+2026-10-19T17:53:34.8098598Z [2026-10-19 17:53:34] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+2026-10-19T17:53:34.8100632Z [2026-10-19 17:53:34] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+2026-10-19T17:53:34.8101312Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Cancelling tasks.
+2026-10-19T17:53:34.8102057Z [2026-10-19 17:53:34] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+2026-10-19T17:53:34.8163350Z [2026-10-19 17:53:34] [INFO] [__main__] Summary results: {
+2026-10-19T17:53:34.8164162Z   "final/convex_hull_e_above_hull_max": {
+2026-10-19T17:53:34.8164921Z     "mean": 2.6020852139652106e-18,
+2026-10-19T17:53:34.8165246Z     "std": 0.0,
+2026-10-19T17:53:34.8165498Z     "sem": 0.0
+2026-10-19T17:53:34.8165741Z   },
+2026-10-19T17:53:34.8166006Z   "final/convex_hull_e_above_hull_mean": {
+2026-10-19T17:53:34.8166639Z     "mean": 2.6020852139652106e-18,
+2026-10-19T17:53:34.8166971Z     "std": 0.0,
+2026-10-19T17:53:34.8167220Z     "sem": 0.0
+2026-10-19T17:53:34.8167459Z   },
+2026-10-19T17:53:34.8167717Z   "final/convex_hull_e_above_hull_min": {
+2026-10-19T17:53:34.8168072Z     "mean": 2.6020852139652106e-18,
+2026-10-19T17:53:34.8168379Z     "std": 0.0,
+2026-10-19T17:53:34.8168632Z     "sem": 0.0
+2026-10-19T17:53:34.8168886Z   },
+2026-10-19T17:53:34.8169136Z   "final/convex_hull_e_above_hull_std": {
+2026-10-19T17:53:34.8169474Z     "mean": 0.0,
+2026-10-19T17:53:34.8169720Z     "std": 0.0,
+2026-10-19T17:53:34.8169972Z     "sem": 0.0
+2026-10-19T17:53:34.8170209Z   },
+2026-10-19T17:53:34.8170472Z   "final/convex_hull_energy_per_atom_max": {
+2026-10-19T17:53:34.8170826Z     "mean": 0.0,
+2026-10-19T17:53:34.8171070Z     "std": 0.0,
+2026-10-19T17:53:34.8171312Z     "sem": 0.0
+2026-10-19T17:53:34.8171546Z   },
+2026-10-19T17:53:34.8171811Z   "final/convex_hull_energy_per_atom_mean": {
+2026-10-19T17:53:34.8172259Z     "mean": 0.0,
+2026-10-19T17:53:34.8172573Z     "std": 0.0,
+2026-10-19T17:53:34.8172822Z     "sem": 0.0
+2026-10-19T17:53:34.8173055Z   },
+2026-10-19T17:53:34.8173320Z   "final/convex_hull_energy_per_atom_min": {
+2026-10-19T17:53:34.8173774Z     "mean": 0.0,
+2026-10-19T17:53:34.8174002Z     "std": 0.0,
+2026-10-19T17:53:34.8174222Z     "sem": 0.0
+2026-10-19T17:53:34.8174700Z   },
+2026-10-19T17:53:34.8174983Z   "final/convex_hull_energy_per_atom_std": {
+2026-10-19T17:53:34.8175389Z     "mean": 0.0,
+2026-10-19T17:53:34.8175618Z     "std": 0.0,
+2026-10-19T17:53:34.8175837Z     "sem": 0.0
+2026-10-19T17:53:34.8176253Z   },
+2026-10-19T17:53:34.8176526Z   "final/convex_hull_formation_energy_per_atom_max": {
+2026-10-19T17:53:34.8176897Z     "mean": 2.6020852139652106e-18,
+2026-10-19T17:53:34.8177184Z     "std": 0.0,
+2026-10-19T17:53:34.8177411Z     "sem": 0.0
+2026-10-19T17:53:34.8177628Z   },
+2026-10-19T17:53:34.8177903Z   "final/convex_hull_formation_energy_per_atom_mean": {
+2026-10-19T17:53:34.8178280Z     "mean": 2.6020852139652106e-18,
+2026-10-19T17:53:34.8178568Z     "std": 0.0,
+2026-10-19T17:53:34.8178789Z     "sem": 0.0
+2026-10-19T17:53:34.8179004Z   },
+2026-10-19T17:53:34.8179273Z   "final/convex_hull_formation_energy_per_atom_min": {
+2026-10-19T17:53:34.8179646Z     "mean": 2.6020852139652106e-18,
+2026-10-19T17:53:34.8179942Z     "std": 0.0,
+2026-10-19T17:53:34.8180172Z     "sem": 0.0
+2026-10-19T17:53:34.8180412Z   },
+2026-10-19T17:53:34.8180688Z   "final/convex_hull_formation_energy_per_atom_std": {
+2026-10-19T17:53:34.8181052Z     "mean": 0.0,
+2026-10-19T17:53:34.8181293Z     "std": 0.0,
+2026-10-19T17:53:34.8181525Z     "sem": 0.0
+2026-10-19T17:53:34.8181746Z   },
+2026-10-19T17:53:34.8181982Z   "final/convex_hull_stable_count": {
+2026-10-19T17:53:34.8182300Z     "mean": 2.0,
+2026-10-19T17:53:34.8182539Z     "std": 0.0,
+2026-10-19T17:53:34.8182764Z     "sem": 0.0
+2026-10-19T17:53:34.8182984Z   },
+2026-10-19T17:53:34.8183220Z   "final/convex_hull_stable_fraction": {
+2026-10-19T17:53:34.8183499Z     "mean": 1.0,
+2026-10-19T17:53:34.8183689Z     "std": 0.0,
+2026-10-19T17:53:34.8183884Z     "sem": 0.0
+2026-10-19T17:53:34.8184072Z   },
+2026-10-19T17:53:34.8184299Z   "final/discovery_curve_acceleration_factor": {
+2026-10-19T17:53:34.8184905Z     "mean": 0.0,
+2026-10-19T17:53:34.8185163Z     "std": 0.0,
+2026-10-19T17:53:34.8185355Z     "sem": 0.0
+2026-10-19T17:53:34.8185548Z   },
+2026-10-19T17:53:34.8185790Z   "final/discovery_curve_area_under_discovery_curve": {
+2026-10-19T17:53:34.8186106Z     "mean": 2.0,
+2026-10-19T17:53:34.8186301Z     "std": 0.0,
+2026-10-19T17:53:34.8186488Z     "sem": 0.0
+2026-10-19T17:53:34.8186682Z   },
+2026-10-19T17:53:34.8186962Z   "final/discovery_curve_area_under_discovery_curve_normalized": {
+2026-10-19T17:53:34.8187313Z     "mean": 1.0,
+2026-10-19T17:53:34.8187504Z     "std": 0.0,
+2026-10-19T17:53:34.8187699Z     "sem": 0.0
+2026-10-19T17:53:34.8187880Z   },
+2026-10-19T17:53:34.8188090Z   "final/discovery_curve_enhancement_factor": {
+2026-10-19T17:53:34.8188379Z     "mean": 0.0,
+2026-10-19T17:53:34.8188719Z     "std": 0.0,
+2026-10-19T17:53:34.8188916Z     "sem": 0.0
+2026-10-19T17:53:34.8189099Z   },
+2026-10-19T17:53:34.8189296Z   "final/discovery_efficiency": {
+2026-10-19T17:53:34.8189547Z     "mean": 1.0,
+2026-10-19T17:53:34.8189743Z     "std": 0.0,
+2026-10-19T17:53:34.8189933Z     "sem": 0.0
+2026-10-19T17:53:34.8190120Z   },
+2026-10-19T17:53:34.8190361Z   "final/diversity_all_composition_l1_distance_max": {
+2026-10-19T17:53:34.8190672Z     "mean": 0.0,
+2026-10-19T17:53:34.8190875Z     "std": 0.0,
+2026-10-19T17:53:34.8191074Z     "sem": 0.0
+2026-10-19T17:53:34.8191348Z   },
+2026-10-19T17:53:34.8191759Z   "final/diversity_all_composition_l1_distance_mean": {
+2026-10-19T17:53:34.8192158Z     "mean": 0.0,
+2026-10-19T17:53:34.8192357Z     "std": 0.0,
+2026-10-19T17:53:34.8192546Z     "sem": 0.0
+2026-10-19T17:53:34.8192727Z   },
+2026-10-19T17:53:34.8192960Z   "final/diversity_all_composition_l1_distance_min": {
+2026-10-19T17:53:34.8193255Z     "mean": 0.0,
+2026-10-19T17:53:34.8193450Z     "std": 0.0,
+2026-10-19T17:53:34.8193635Z     "sem": 0.0
+2026-10-19T17:53:34.8193819Z   },
+2026-10-19T17:53:34.8194045Z   "final/diversity_all_composition_l1_distance_std": {
+2026-10-19T17:53:34.8194575Z     "mean": 0.0,
+2026-10-19T17:53:34.8194910Z     "std": 0.0,
+2026-10-19T17:53:34.8195206Z     "sem": 0.0
+2026-10-19T17:53:34.8195399Z   },
+2026-10-19T17:53:34.8195627Z   "final/diversity_all_composition_l2_distance_max": {
+2026-10-19T17:53:34.8195927Z     "mean": 0.0,
+2026-10-19T17:53:34.8196119Z     "std": 0.0,
+2026-10-19T17:53:34.8196312Z     "sem": 0.0
+2026-10-19T17:53:34.8196495Z   },
+2026-10-19T17:53:34.8196894Z   "final/diversity_all_composition_l2_distance_mean": {
+2026-10-19T17:53:34.8197197Z     "mean": 0.0,
+2026-10-19T17:53:34.8197392Z     "std": 0.0,
+2026-10-19T17:53:34.8197579Z     "sem": 0.0
+2026-10-19T17:53:34.8197762Z   },
+2026-10-19T17:53:34.8197988Z   "final/diversity_all_composition_l2_distance_min": {
+2026-10-19T17:53:34.8198279Z     "mean": 0.0,
+2026-10-19T17:53:34.8198477Z     "std": 0.0,
+2026-10-19T17:53:34.8198671Z     "sem": 0.0
+2026-10-19T17:53:34.8198853Z   },
+2026-10-19T17:53:34.8199076Z   "final/diversity_all_composition_l2_distance_std": {
+2026-10-19T17:53:34.8199374Z     "mean": 0.0,
+2026-10-19T17:53:34.8199565Z     "std": 0.0,
+2026-10-19T17:53:34.8199761Z     "sem": 0.0
+2026-10-19T17:53:34.8199942Z   },
+2026-10-19T17:53:34.8200208Z   "final/diversity_all_composition_unique_composition_count": {
+2026-10-19T17:53:34.8200553Z     "mean": 1.0,
+2026-10-19T17:53:34.8200747Z     "std": 0.0,
+2026-10-19T17:53:34.8200937Z     "sem": 0.0
+2026-10-19T17:53:34.8201120Z   },
+2026-10-19T17:53:34.8201406Z   "final/diversity_all_composition_unique_composition_fraction": {
+2026-10-19T17:53:34.8201753Z     "mean": 0.5,
+2026-10-19T17:53:34.8201942Z     "std": 0.0,
+2026-10-19T17:53:34.8202126Z     "sem": 0.0
+2026-10-19T17:53:34.8202312Z   },
+2026-10-19T17:53:34.8202543Z   "final/diversity_all_structure_amd_distance_max": {
+2026-10-19T17:53:34.8202849Z     "mean": 3.2219719864865333,
+2026-10-19T17:53:34.8203083Z     "std": 0.0,
+2026-10-19T17:53:34.8203273Z     "sem": 0.0
+2026-10-19T17:53:34.8203463Z   },
+2026-10-19T17:53:34.8203688Z   "final/diversity_all_structure_amd_distance_mean": {
+2026-10-19T17:53:34.8203988Z     "mean": 3.2219719864865333,
+2026-10-19T17:53:34.8204213Z     "std": 0.0,
+2026-10-19T17:53:34.8204710Z     "sem": 0.0
+2026-10-19T17:53:34.8204943Z   },
+2026-10-19T17:53:34.8205176Z   "final/diversity_all_structure_amd_distance_min": {
+2026-10-19T17:53:34.8205481Z     "mean": 3.2219719864865333,
+2026-10-19T17:53:34.8205714Z     "std": 0.0,
+2026-10-19T17:53:34.8205925Z     "sem": 0.0
+2026-10-19T17:53:34.8206125Z   },
+2026-10-19T17:53:34.8206385Z   "final/diversity_all_structure_lattice_parameter_variance": {
+2026-10-19T17:53:34.8206735Z     "mean": 3.733666267198759,
+2026-10-19T17:53:34.8206967Z     "std": 0.0,
+2026-10-19T17:53:34.8207155Z     "sem": 0.0
+2026-10-19T17:53:34.8207337Z   },
+2026-10-19T17:53:34.8207575Z   "final/diversity_all_structure_spacegroup_entropy": {
+2026-10-19T17:53:34.8208011Z     "mean": 0.0,
+2026-10-19T17:53:34.8208212Z     "std": 0.0,
+2026-10-19T17:53:34.8208400Z     "sem": 0.0
+2026-10-19T17:53:34.8208581Z   },
+2026-10-19T17:53:34.8208842Z   "final/diversity_all_structure_unique_spacegroups_count": {
+2026-10-19T17:53:34.8209170Z     "mean": 1.0,
+2026-10-19T17:53:34.8209361Z     "std": 0.0,
+2026-10-19T17:53:34.8209551Z     "sem": 0.0
+2026-10-19T17:53:34.8209735Z   },
+2026-10-19T17:53:34.8210009Z   "final/diversity_all_structure_unique_spacegroups_fraction": {
+2026-10-19T17:53:34.8210348Z     "mean": 0.5,
+2026-10-19T17:53:34.8210539Z     "std": 0.0,
+2026-10-19T17:53:34.8210724Z     "sem": 0.0
+2026-10-19T17:53:34.8210924Z   },
+2026-10-19T17:53:34.8211173Z   "final/diversity_all_structure_unique_structure_count": {
+2026-10-19T17:53:34.8211497Z     "mean": 2.0,
+2026-10-19T17:53:34.8211684Z     "std": 0.0,
+2026-10-19T17:53:34.8211874Z     "sem": 0.0
+2026-10-19T17:53:34.8212059Z   },
+2026-10-19T17:53:34.8212312Z   "final/diversity_all_structure_unique_structure_fraction": {
+2026-10-19T17:53:34.8212642Z     "mean": 1.0,
+2026-10-19T17:53:34.8212832Z     "std": 0.0,
+2026-10-19T17:53:34.8213023Z     "sem": 0.0
+2026-10-19T17:53:34.8213202Z   },
+2026-10-19T17:53:34.8213445Z   "final/diversity_stable_composition_l1_distance_max": {
+2026-10-19T17:53:34.8213763Z     "mean": 0.0,
+2026-10-19T17:53:34.8213958Z     "std": 0.0,
+2026-10-19T17:53:34.8214148Z     "sem": 0.0
+2026-10-19T17:53:34.8214537Z   },
+2026-10-19T17:53:34.8214854Z   "final/diversity_stable_composition_l1_distance_mean": {
+2026-10-19T17:53:34.8215179Z     "mean": 0.0,
+2026-10-19T17:53:34.8215372Z     "std": 0.0,
+2026-10-19T17:53:34.8215711Z     "sem": 0.0
+2026-10-19T17:53:34.8215898Z   },
+2026-10-19T17:53:34.8216143Z   "final/diversity_stable_composition_l1_distance_min": {
+2026-10-19T17:53:34.8216463Z     "mean": 0.0,
+2026-10-19T17:53:34.8216665Z     "std": 0.0,
+2026-10-19T17:53:34.8216850Z     "sem": 0.0
+2026-10-19T17:53:34.8217032Z   },
+2026-10-19T17:53:34.8217277Z   "final/diversity_stable_composition_l1_distance_std": {
+2026-10-19T17:53:34.8217868Z     "mean": 0.0,
+2026-10-19T17:53:34.8218249Z     "std": 0.0,
+2026-10-19T17:53:34.8218579Z     "sem": 0.0
+2026-10-19T17:53:34.8218775Z   },
+2026-10-19T17:53:34.8219032Z   "final/diversity_stable_composition_l2_distance_max": {
+2026-10-19T17:53:34.8219343Z     "mean": 0.0,
+2026-10-19T17:53:34.8219549Z     "std": 0.0,
+2026-10-19T17:53:34.8219740Z     "sem": 0.0
+2026-10-19T17:53:34.8219932Z   },
+2026-10-19T17:53:34.8220182Z   "final/diversity_stable_composition_l2_distance_mean": {
+2026-10-19T17:53:34.8220498Z     "mean": 0.0,
+2026-10-19T17:53:34.8220691Z     "std": 0.0,
+2026-10-19T17:53:34.8220896Z     "sem": 0.0
+2026-10-19T17:53:34.8221084Z   },
+2026-10-19T17:53:34.8221324Z   "final/diversity_stable_composition_l2_distance_min": {
+2026-10-19T17:53:34.8221630Z     "mean": 0.0,
+2026-10-19T17:53:34.8221823Z     "std": 0.0,
+2026-10-19T17:53:34.8222016Z     "sem": 0.0
+2026-10-19T17:53:34.8222195Z   },
+2026-10-19T17:53:34.8222427Z   "final/diversity_stable_composition_l2_distance_std": {
+2026-10-19T17:53:34.8222743Z     "mean": 0.0,
+2026-10-19T17:53:34.8222937Z     "std": 0.0,
+2026-10-19T17:53:34.8223120Z     "sem": 0.0
+2026-10-19T17:53:34.8223298Z   },
+2026-10-19T17:53:34.8223570Z   "final/diversity_stable_composition_unique_composition_count": {
+2026-10-19T17:53:34.8223922Z     "mean": 1.0,
+2026-10-19T17:53:34.8224115Z     "std": 0.0,
+2026-10-19T17:53:34.8224301Z     "sem": 0.0
+2026-10-19T17:53:34.8224785Z   },
+2026-10-19T17:53:34.8225085Z   "final/diversity_stable_composition_unique_composition_fraction": {
+2026-10-19T17:53:34.8225487Z     "mean": 0.5,
+2026-10-19T17:53:34.8225683Z     "std": 0.0,
+2026-10-19T17:53:34.8225875Z     "sem": 0.0
+2026-10-19T17:53:34.8226058Z   },
+2026-10-19T17:53:34.8226307Z   "final/diversity_stable_structure_amd_distance_max": {
+2026-10-19T17:53:34.8226621Z     "mean": 3.2219719864865333,
+2026-10-19T17:53:34.8226854Z     "std": 0.0,
+2026-10-19T17:53:34.8227047Z     "sem": 0.0
+2026-10-19T17:53:34.8227239Z   },
+2026-10-19T17:53:34.8227638Z   "final/diversity_stable_structure_amd_distance_mean": {
+2026-10-19T17:53:34.8227967Z     "mean": 3.2219719864865333,
+2026-10-19T17:53:34.8228196Z     "std": 0.0,
+2026-10-19T17:53:34.8228387Z     "sem": 0.0
+2026-10-19T17:53:34.8228587Z   },
+2026-10-19T17:53:34.8228822Z   "final/diversity_stable_structure_amd_distance_min": {
+2026-10-19T17:53:34.8229132Z     "mean": 3.2219719864865333,
+2026-10-19T17:53:34.8229356Z     "std": 0.0,
+2026-10-19T17:53:34.8229554Z     "sem": 0.0
+2026-10-19T17:53:34.8229742Z   },
+2026-10-19T17:53:34.8230024Z   "final/diversity_stable_structure_lattice_parameter_variance": {
+2026-10-19T17:53:34.8230379Z     "mean": 3.733666267198759,
+2026-10-19T17:53:34.8230618Z     "std": 0.0,
+2026-10-19T17:53:34.8230807Z     "sem": 0.0
+2026-10-19T17:53:34.8230994Z   },
+2026-10-19T17:53:34.8231241Z   "final/diversity_stable_structure_spacegroup_entropy": {
+2026-10-19T17:53:34.8231553Z     "mean": 0.0,
+2026-10-19T17:53:34.8231757Z     "std": 0.0,
+2026-10-19T17:53:34.8231941Z     "sem": 0.0
+2026-10-19T17:53:34.8232123Z   },
+2026-10-19T17:53:34.8232391Z   "final/diversity_stable_structure_unique_spacegroups_count": {
+2026-10-19T17:53:34.8232735Z     "mean": 1.0,
+2026-10-19T17:53:34.8232928Z     "std": 0.0,
+2026-10-19T17:53:34.8233115Z     "sem": 0.0
+2026-10-19T17:53:34.8233295Z   },
+2026-10-19T17:53:34.8233577Z   "final/diversity_stable_structure_unique_spacegroups_fraction": {
+2026-10-19T17:53:34.8233926Z     "mean": 0.5,
+2026-10-19T17:53:34.8234117Z     "std": 0.0,
+2026-10-19T17:53:34.8234306Z     "sem": 0.0
+2026-10-19T17:53:34.8234748Z   },
+2026-10-19T17:53:34.8235018Z   "final/diversity_stable_structure_unique_structure_count": {
+2026-10-19T17:53:34.8235499Z     "mean": 2.0,
+2026-10-19T17:53:34.8235687Z     "std": 0.0,
+2026-10-19T17:53:34.8235875Z     "sem": 0.0
+2026-10-19T17:53:34.8236065Z   },
+2026-10-19T17:53:34.8236332Z   "final/diversity_stable_structure_unique_structure_fraction": {
+2026-10-19T17:53:34.8236670Z     "mean": 1.0,
+2026-10-19T17:53:34.8236862Z     "std": 0.0,
+2026-10-19T17:53:34.8237057Z     "sem": 0.0
+2026-10-19T17:53:34.8237242Z   },
+2026-10-19T17:53:34.8237446Z   "final/novelty_novel_structure_count": {
+2026-10-19T17:53:34.8237723Z     "mean": 2.0,
+2026-10-19T17:53:34.8237914Z     "std": 0.0,
+2026-10-19T17:53:34.8238108Z     "sem": 0.0
+2026-10-19T17:53:34.8238291Z   },
+2026-10-19T17:53:34.8238505Z   "final/novelty_novel_structure_fraction": {
+2026-10-19T17:53:34.8238788Z     "mean": 1.0,
+2026-10-19T17:53:34.8238992Z     "std": 0.0,
+2026-10-19T17:53:34.8239179Z     "sem": 0.0
+2026-10-19T17:53:34.8239364Z   },
+2026-10-19T17:53:34.8239562Z   "final/novelty_stable_count": {
+2026-10-19T17:53:34.8239809Z     "mean": 2.0,
+2026-10-19T17:53:34.8240011Z     "std": 0.0,
+2026-10-19T17:53:34.8240201Z     "sem": 0.0
+2026-10-19T17:53:34.8240382Z   },
+2026-10-19T17:53:34.8240574Z   "final/novelty_stable_fraction": {
+2026-10-19T17:53:34.8240832Z     "mean": 1.0,
+2026-10-19T17:53:34.8241021Z     "std": 0.0,
+2026-10-19T17:53:34.8241212Z     "sem": 0.0
+2026-10-19T17:53:34.8241400Z   },
+2026-10-19T17:53:34.8241609Z   "final/novelty_stable_novel_count": {
+2026-10-19T17:53:34.8241873Z     "mean": 2.0,
+2026-10-19T17:53:34.8242066Z     "std": 0.0,
+2026-10-19T17:53:34.8242255Z     "sem": 0.0
+2026-10-19T17:53:34.8242437Z   },
+2026-10-19T17:53:34.8242648Z   "final/novelty_stable_novel_fraction": {
+2026-10-19T17:53:34.8242919Z     "mean": 1.0,
+2026-10-19T17:53:34.8243112Z     "std": 0.0,
+2026-10-19T17:53:34.8243298Z     "sem": 0.0
+2026-10-19T17:53:34.8243488Z   },
+2026-10-19T17:53:34.8243685Z   "final/novelty_stable_unique_count": {
+2026-10-19T17:53:34.8243954Z     "mean": 2.0,
+2026-10-19T17:53:34.8244147Z     "std": 0.0,
+2026-10-19T17:53:34.8244558Z     "sem": 0.0
+2026-10-19T17:53:34.8244813Z   },
+2026-10-19T17:53:34.8245023Z   "final/novelty_stable_unique_fraction": {
+2026-10-19T17:53:34.8245302Z     "mean": 1.0,
+2026-10-19T17:53:34.8245492Z     "std": 0.0,
+2026-10-19T17:53:34.8245691Z     "sem": 0.0
+2026-10-19T17:53:34.8245872Z   },
+2026-10-19T17:53:34.8246083Z   "final/novelty_stable_unique_novel_count": {
+2026-10-19T17:53:34.8246496Z     "mean": 2.0,
+2026-10-19T17:53:34.8246695Z     "std": 0.0,
+2026-10-19T17:53:34.8246885Z     "sem": 0.0
+2026-10-19T17:53:34.8247065Z   },
+2026-10-19T17:53:34.8247283Z   "final/novelty_stable_unique_novel_fraction": {
+2026-10-19T17:53:34.8247577Z     "mean": 1.0,
+2026-10-19T17:53:34.8247775Z     "std": 0.0,
+2026-10-19T17:53:34.8247969Z     "sem": 0.0
+2026-10-19T17:53:34.8248152Z   },
+2026-10-19T17:53:34.8248355Z   "final/novelty_unique_structure_count": {
+2026-10-19T17:53:34.8248636Z     "mean": 2.0,
+2026-10-19T17:53:34.8248830Z     "std": 0.0,
+2026-10-19T17:53:34.8249021Z     "sem": 0.0
+2026-10-19T17:53:34.8249208Z   },
+2026-10-19T17:53:34.8249414Z   "final/novelty_unique_structure_fraction": {
+2026-10-19T17:53:34.8249697Z     "mean": 1.0,
+2026-10-19T17:53:34.8249888Z     "std": 0.0,
+2026-10-19T17:53:34.8250075Z     "sem": 0.0
+2026-10-19T17:53:34.8250255Z   },
+2026-10-19T17:53:34.8250458Z   "final/num_correct_stable_formulas": {
+2026-10-19T17:53:34.8250724Z     "mean": 1.0,
+2026-10-19T17:53:34.8250917Z     "std": 0.0,
+2026-10-19T17:53:34.8251109Z     "sem": 0.0
+2026-10-19T17:53:34.8251295Z   },
+2026-10-19T17:53:34.8251503Z   "final/num_correct_stable_structures": {
+2026-10-19T17:53:34.8251769Z     "mean": 0.0,
+2026-10-19T17:53:34.8251964Z     "std": 0.0,
+2026-10-19T17:53:34.8252153Z     "sem": 0.0
+2026-10-19T17:53:34.8252345Z   },
+2026-10-19T17:53:34.8252551Z   "final/num_ground_truth_stable_formulas": {
+2026-10-19T17:53:34.8252830Z     "mean": 3.0,
+2026-10-19T17:53:34.8253020Z     "std": 0.0,
+2026-10-19T17:53:34.8253214Z     "sem": 0.0
+2026-10-19T17:53:34.8253396Z   },
+2026-10-19T17:53:34.8253606Z   "final/num_ground_truth_stable_structures": {
+2026-10-19T17:53:34.8254020Z     "mean": 3.0,
+2026-10-19T17:53:34.8254207Z     "std": 0.0,
+2026-10-19T17:53:34.8254656Z     "sem": 0.0
+2026-10-19T17:53:34.8254854Z   },
+2026-10-19T17:53:34.8255062Z   "final/num_gt_formulas_missing_initial": {
+2026-10-19T17:53:34.8255336Z     "mean": 1.0,
+2026-10-19T17:53:34.8255532Z     "std": 0.0,
+2026-10-19T17:53:34.8255720Z     "sem": 0.0
+2026-10-19T17:53:34.8255912Z   },
+2026-10-19T17:53:34.8256120Z   "final/num_gt_structures_missing_initial": {
+2026-10-19T17:53:34.8256397Z     "mean": 1.0,
+2026-10-19T17:53:34.8256595Z     "std": 0.0,
+2026-10-19T17:53:34.8256781Z     "sem": 0.0
+2026-10-19T17:53:34.8256963Z   },
+2026-10-19T17:53:34.8257156Z   "final/num_initial_structures": {
+2026-10-19T17:53:34.8257416Z     "mean": 2.0,
+2026-10-19T17:53:34.8257605Z     "std": 0.0,
+2026-10-19T17:53:34.8257795Z     "sem": 0.0
+2026-10-19T17:53:34.8257975Z   },
+2026-10-19T17:53:34.8258181Z   "final/num_newly_discovered_stable": {
+2026-10-19T17:53:34.8258438Z     "mean": 2.0,
+2026-10-19T17:53:34.8258628Z     "std": 0.0,
+2026-10-19T17:53:34.8258907Z     "sem": 0.0
+2026-10-19T17:53:34.8259316Z   },
+2026-10-19T17:53:34.8259684Z   "final/num_newly_discovered_structures": {
+2026-10-19T17:53:34.8260075Z     "mean": 2.0,
+2026-10-19T17:53:34.8260431Z     "std": 0.0,
+2026-10-19T17:53:34.8260718Z     "sem": 0.0
+2026-10-19T17:53:34.8261020Z   },
+2026-10-19T17:53:34.8261411Z   "final/num_observed_stable_formulas": {
+2026-10-19T17:53:34.8274240Z     "mean": 3.0,
+2026-10-19T17:53:34.8274830Z     "std": 0.0,
+2026-10-19T17:53:34.8275060Z     "sem": 0.0
+2026-10-19T17:53:34.8275271Z   },
+2026-10-19T17:53:34.8275484Z   "final/precision_formula": {
+2026-10-19T17:53:34.8275743Z     "mean": 0.5,
+2026-10-19T17:53:34.8275951Z     "std": 0.0,
+2026-10-19T17:53:34.8276147Z     "sem": 0.0
+2026-10-19T17:53:34.8276345Z   },
+2026-10-19T17:53:34.8276549Z   "final/precision_structure": {
+2026-10-19T17:53:34.8276806Z     "mean": 0.0,
+2026-10-19T17:53:34.8277000Z     "std": 0.0,
+2026-10-19T17:53:34.8277200Z     "sem": 0.0
+2026-10-19T17:53:34.8277396Z   },
+2026-10-19T17:53:34.8277587Z   "final/queries_used": {
+2026-10-19T17:53:34.8277824Z     "mean": 2.0,
+2026-10-19T17:53:34.8278018Z     "std": 0.0,
+2026-10-19T17:53:34.8278217Z     "sem": 0.0
+2026-10-19T17:53:34.8278405Z   },
+2026-10-19T17:53:34.8278591Z   "final/recall_formula": {
+2026-10-19T17:53:34.8278819Z     "mean": 1.0,
+2026-10-19T17:53:34.8279199Z     "std": 0.0,
+2026-10-19T17:53:34.8279398Z     "sem": 0.0
+2026-10-19T17:53:34.8279585Z   },
+2026-10-19T17:53:34.8279781Z   "final/recall_structure": {
+2026-10-19T17:53:34.8280027Z     "mean": 0.0,
+2026-10-19T17:53:34.8280228Z     "std": 0.0,
+2026-10-19T17:53:34.8280425Z     "sem": 0.0
+2026-10-19T17:53:34.8280619Z   },
+2026-10-19T17:53:34.8280842Z   "final/reference_composition_precision": {
+2026-10-19T17:53:34.8281131Z     "mean": 0.5,
+2026-10-19T17:53:34.8281333Z     "std": 0.0,
+2026-10-19T17:53:34.8281529Z     "sem": 0.0
+2026-10-19T17:53:34.8281714Z   },
+2026-10-19T17:53:34.8281927Z   "final/reference_composition_recall": {
+2026-10-19T17:53:34.8282205Z     "mean": 1.0,
+2026-10-19T17:53:34.8282398Z     "std": 0.0,
+2026-10-19T17:53:34.8282593Z     "sem": 0.0
+2026-10-19T17:53:34.8282786Z   },
+2026-10-19T17:53:34.8283000Z   "final/reference_structure_precision": {
+2026-10-19T17:53:34.8283270Z     "mean": 0.0,
+2026-10-19T17:53:34.8283468Z     "std": 0.0,
+2026-10-19T17:53:34.8283663Z     "sem": 0.0
+2026-10-19T17:53:34.8283861Z   },
+2026-10-19T17:53:34.8284064Z   "final/reference_structure_recall": {
+2026-10-19T17:53:34.8284327Z     "mean": 0.0,
+2026-10-19T17:53:34.8284817Z     "std": 0.0,
+2026-10-19T17:53:34.8285014Z     "sem": 0.0
+2026-10-19T17:53:34.8285211Z   },
+2026-10-19T17:53:34.8285416Z   "final/stable_discovery_efficiency": {
+2026-10-19T17:53:34.8285680Z     "mean": 1.0,
+2026-10-19T17:53:34.8285870Z     "std": 0.0,
+2026-10-19T17:53:34.8286066Z     "sem": 0.0
+2026-10-19T17:53:34.8286251Z   },
+2026-10-19T17:53:34.8286481Z   "final/validity_distance_and_smact_valid_count": {
+2026-10-19T17:53:34.8286779Z     "mean": 2.0,
+2026-10-19T17:53:34.8287133Z     "std": 0.0,
+2026-10-19T17:53:34.8287324Z     "sem": 0.0
+2026-10-19T17:53:34.8287511Z   },
+2026-10-19T17:53:34.8287753Z   "final/validity_distance_and_smact_valid_fraction": {
+2026-10-19T17:53:34.8288054Z     "mean": 1.0,
+2026-10-19T17:53:34.8288253Z     "std": 0.0,
+2026-10-19T17:53:34.8288441Z     "sem": 0.0
+2026-10-19T17:53:34.8288624Z   },
+2026-10-19T17:53:34.8288831Z   "final/validity_distance_valid_count": {
+2026-10-19T17:53:34.8289107Z     "mean": 2.0,
+2026-10-19T17:53:34.8289296Z     "std": 0.0,
+2026-10-19T17:53:34.8289484Z     "sem": 0.0
+2026-10-19T17:53:34.8289667Z   },
+2026-10-19T17:53:34.8289879Z   "final/validity_distance_valid_fraction": {
+2026-10-19T17:53:34.8290165Z     "mean": 1.0,
+2026-10-19T17:53:34.8290356Z     "std": 0.0,
+2026-10-19T17:53:34.8290541Z     "sem": 0.0
+2026-10-19T17:53:34.8290723Z   },
+2026-10-19T17:53:34.8290960Z   "final/validity_min_interatomic_distance_mean": {
+2026-10-19T17:53:34.8291279Z     "mean": 3.627038927641061,
+2026-10-19T17:53:34.8291525Z     "std": 0.0,
+2026-10-19T17:53:34.8291718Z     "sem": 0.0
+2026-10-19T17:53:34.8291909Z   },
+2026-10-19T17:53:34.8292133Z   "final/validity_min_interatomic_distance_min": {
+2026-10-19T17:53:34.8292437Z     "mean": 3.295602856097915,
+2026-10-19T17:53:34.8292669Z     "std": 0.0,
+2026-10-19T17:53:34.8292861Z     "sem": 0.0
+2026-10-19T17:53:34.8293068Z   },
+2026-10-19T17:53:34.8293293Z   "final/validity_min_interatomic_distance_std": {
+2026-10-19T17:53:34.8293591Z     "mean": 0.33143607154314614,
+2026-10-19T17:53:34.8293823Z     "std": 0.0,
+2026-10-19T17:53:34.8294021Z     "sem": 0.0
+2026-10-19T17:53:34.8294204Z   },
+2026-10-19T17:53:34.8294682Z   "final/validity_smact_valid_count": {
+2026-10-19T17:53:34.8295026Z     "mean": 2.0,
+2026-10-19T17:53:34.8295225Z     "std": 0.0,
+2026-10-19T17:53:34.8295416Z     "sem": 0.0
+2026-10-19T17:53:34.8295600Z   },
+2026-10-19T17:53:34.8295805Z   "final/validity_smact_valid_fraction": {
+2026-10-19T17:53:34.8296075Z     "mean": 1.0,
+2026-10-19T17:53:34.8296272Z     "std": 0.0,
+2026-10-19T17:53:34.8296464Z     "sem": 0.0
+2026-10-19T17:53:34.8296652Z   }
+2026-10-19T17:53:34.8296830Z }
+2026-10-19T17:53:34.8297215Z [2026-10-19 17:53:34] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+2026-10-19T17:53:34.8297778Z [2026-10-19 17:53:34] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+2026-10-19T17:53:34.8299270Z [2026-10-19 17:53:34] [INFO] [__main__] Saved results to /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/results/20261019-175306-analytic-m1_integrated (episodes.json, episodes.csv, summary.json, trajectories/*.json)
+2026-10-19T17:53:34.8300755Z cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-19T17:53:35.2991938Z [2026-10-19 17:53:35] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+2026-10-19T17:53:35.2992950Z [2026-10-19 17:53:35] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+2026-10-19T17:53:37.3078731Z ##[group]Run actions/upload-artifact@v4
+2026-10-19T17:53:37.3079050Z with:
+2026-10-19T17:53:37.3079274Z   name: m2-integration-verification
+2026-10-19T17:53:37.3079645Z   path: M2/test-results.xml
+M1/MADE/results/
+M1/MADE/checkpoints/
+
+2026-10-19T17:53:37.3080008Z   if-no-files-found: warn
+2026-10-19T17:53:37.3080243Z   retention-days: 30
+2026-10-19T17:53:37.3080471Z   compression-level: 6
+2026-10-19T17:53:37.3080701Z   overwrite: false
+2026-10-19T17:53:37.3080926Z   include-hidden-files: false
+2026-10-19T17:53:37.3081176Z env:
+2026-10-19T17:53:37.3081366Z   OMP_NUM_THREADS: 2
+2026-10-19T17:53:37.3081589Z   MKL_NUM_THREADS: 2
+2026-10-19T17:53:37.3081804Z   UV_LINK_MODE: hardlink
+2026-10-19T17:53:37.3082108Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:37.3082561Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T17:53:37.3082994Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:37.3083592Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:37.3083970Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T17:53:37.3084517Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T17:53:37.3084910Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T17:53:37.3085212Z ##[endgroup]
+2026-10-19T17:53:37.4845654Z (node:2760) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T17:53:37.4846923Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T17:53:37.5027275Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-19T17:53:37.5030064Z The least common ancestor is /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery. This will be the root directory of the artifact
+2026-10-19T17:53:37.5031818Z With the provided path, there will be 8 files uploaded
+2026-10-19T17:53:37.5032784Z Artifact name is valid!
+2026-10-19T17:53:37.5033221Z Root directory input is valid!
+2026-10-19T17:53:37.7704686Z Beginning upload of artifact content to blob storage
+2026-10-19T17:53:37.8046308Z (node:2760) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T17:53:37.9871690Z Uploaded bytes 82104
+2026-10-19T17:53:38.0260228Z Finished uploading artifact content to blob storage!
+2026-10-19T17:53:38.0261387Z SHA256 digest of uploaded artifact zip is bc5d0431984cb364612b9a4bf9e9343eca15823d695351fadea5f4d6209fb8ef
+2026-10-19T17:53:38.0263085Z Finalizing artifact upload
+2026-10-19T17:53:38.2770246Z Artifact m2-integration-verification.zip successfully finalized. Artifact ID 12208398269
+2026-10-19T17:53:38.2771407Z Artifact m2-integration-verification has been successfully uploaded! Final size is 82104 bytes. Artifact ID is 12208398269
+2026-10-19T17:53:38.2779106Z Artifact download URL: https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39297647411/artifacts/12208398269
+2026-10-19T17:53:38.2970869Z Post job cleanup.
+2026-10-19T17:53:38.4249792Z Cache hit occurred on key setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80, not saving cache.
+2026-10-19T17:53:38.4251886Z (node:2772) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T17:53:38.4253252Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T17:53:38.4391824Z Post job cleanup.
+2026-10-19T17:53:38.5623593Z (node:2780) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T17:53:38.5625215Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T17:53:38.5832423Z Post job cleanup.
+2026-10-19T17:53:38.6839317Z [command]/usr/bin/git version
+2026-10-19T17:53:38.6881913Z git version 2.55.0
+2026-10-19T17:53:38.6921745Z Temporarily overriding HOME='/home/runner/work/_temp/bd0e91c7-6f59-405d-abfc-15404314eea6' before making global git config changes
+2026-10-19T17:53:38.6922836Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T17:53:38.6928982Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T17:53:38.6970714Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T17:53:38.7007390Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T17:53:38.7262377Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T17:53:38.7290564Z http.https://github.com/.extraheader
+2026-10-19T17:53:38.7304017Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T17:53:38.7348986Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T17:53:38.7617936Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T17:53:38.7662974Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T17:53:38.8081844Z Cleaning up orphan processes
+2026-10-19T17:53:38.8387785Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4, astral-sh/setup-uv@v6. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
