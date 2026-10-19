@@ -1,13 +1,15 @@
-# M2 speaker notes for the M6 outline
+# M2 speaker notes
 
-## Slide 7: Tool routing, 40 seconds
+## Tool routing, about40 seconds
 
-Our router chooses between Random and Chemeleon using feedback from completed queries. It first tries each tool, then combines the observed reward with an upper-confidence bonus. Stable new observations earn one, while stable-only observations earn a quarter. This reward is a proxy, distinct from mSUN. For the final two queries, the router uses only the smoothed reward. M1 keeps the five independent switches. The final routing-off comparison will change one switch in M1's frozen full system.
+Our router chooses between Random and Chemeleon using feedback from completed queries. It tries each tool first, then combines observed reward with an upper-confidence bonus. Stable new observations earn one, while stable-only observations earn a quarter. This reward is a proxy, distinct from mSUN. For the final two queries, the router uses the smoothed reward alone. Routing makes no oracle call. The final routing-off comparison changes one switch in M1's frozen full system. We have not measured the router's scientific benefit yet.
 
-## Slide 10: Discovery curves, 40 seconds
+## Development coverage and example curves, about40 seconds
 
-This is the currently verified example, one development system and seed. Random reaches mSUN seven and AUDC 55.5. Chemeleon reaches sixteen and 161. The curves come from all twenty official query positions. mSUN and the AUDC source curve use different definitions, even though they coincide in this pair. Two of thirty-six baseline units are accepted here, so there is no overall ranking or variability estimate. We will update this slide from validated new results.
+Random is complete across all six development systems and three seeds. Chemeleon has one verified unit, so the combined baseline coverage is19 of36. These curves retain the matched Mg-Sn-Sr, seed17 example, with20 queries. Random reaches mSUN7 and AUDC55.5. Chemeleon reaches16 and161. The example does not establish an overall ranking. Across the full Random sweep, mSUN is4.06 with sample SD0.63 and AUDC is40.58 with sample SD9.46. We will complete the comparison after the remaining Chemeleon results are validated.
 
-## Protocol / cost backups
+## Protocol and cost backups
 
-The development protocol fixes six systems, three seeds and twenty queries per unit. Both baselines use the official models and inference settings. Successful driver times were 15.9 and 262.8 minutes for this pair. Recorded inference fees are zero, while hardware, electricity, interrupted-attempt charges and unreported token fields remain unmeasured. AF/EF measure discovery-curve improvement, not wall-time speedup. M6 owns public-check and hidden-test evaluation. M1 owns the frozen full-system reference.
+The development protocol fixes six systems, seeds17/29/43 and20 oracle queries per unit. Random's mean driver time is16.0 minutes across the full dev sweep. Chemeleon's262.8 minutes describe only the accepted Mg-Sn-Sr/17 unit. Fees recorded for inference are zero. Hardware, electricity, failed attempts and unreported token fields are not fully priced. AF/EF are discovery-curve metrics, not wall-time speedups.
+
+Means and sample SD are computed from equal-weight system means for each seed, followed by the three-seed summary. M6 owns check/hidden execution and final group assembly. M1 owns the frozen reference. Current main's M1/M5 unseeded initialization issue is recorded separately from M2's method. Suggested slide positions from the earlier outline need M6's confirmation.

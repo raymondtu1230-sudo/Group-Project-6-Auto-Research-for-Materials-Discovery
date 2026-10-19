@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="1" tests="79" time="15.095" timestamp="2026-10-19T23:00:12.622820+03:00" hostname="a1fe3ac2814e"><testcase classname="tests.test_m1_integrated" name="test_budget_caps_candidates_and_memory_is_checkpointed" time="0.001" /><testcase classname="tests.test_m1_integrated" name="test_budget_caps_total_candidates_for_multi_composition_plan" time="0.001" /><testcase classname="tests.test_m1_integrated" name="test_planning_ablation_uses_system_elements_without_planner" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_tool_router_is_only_called_when_enabled" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_tool_routing_requires_an_alternative_generator" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_disabled_tool_routing_uses_primary_generator" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_exploration_hook_is_opt_in_and_receives_budget_context" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_exploration_hook_is_not_called_when_disabled" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_missing_optional_hooks_default_to_inactive" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_enabling_unconfigured_optional_hook_fails_fast" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_reflection_hook_is_opt_in_and_receives_budget_context" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_reflection_hook_is_not_called_when_disabled" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_invalid_reflection_output_is_rejected" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_invalid_exploration_output_is_rejected" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_query_budget_exhaustion_is_rejected" time="0.000" /><testcase classname="tests.test_m1_integrated" name="test_memory_manager_hook_updates_and_restores" time="0.001" /><testcase classname="tests.test_m1_integrated" name="test_memory_ablation_omits_history_from_planner" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_completed_feedback_is_attributed_once_to_the_tool_that_was_used" time="0.001" /><testcase classname="tests.test_m2_tool_routing" name="test_bad_or_exhausted_budget_is_rejected[0]" time="0.001" /><testcase classname="tests.test_m2_tool_routing" name="test_bad_or_exhausted_budget_is_rejected[-1]" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_bad_or_exhausted_budget_is_rejected[None]" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_bad_or_exhausted_budget_is_rejected[True]" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_bad_or_exhausted_budget_is_rejected[1.5]" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_unknown_configured_generator_is_rejected" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_skipped_queries_do_not_misattribute_latest_feedback" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_router_json_checkpoint_resumes_the_same_decisions[17]" time="0.004" /><testcase classname="tests.test_m2_tool_routing" name="test_router_json_checkpoint_resumes_the_same_decisions[29]" time="0.004" /><testcase classname="tests.test_m2_tool_routing" name="test_router_json_checkpoint_resumes_the_same_decisions[43]" time="0.005" /><testcase classname="tests.test_m2_tool_routing" name="test_checkpoint_rejects_a_changed_configuration_or_corrupt_state" time="0.001" /><testcase classname="tests.test_m2_tool_routing" name="test_random_generator_checkpoint_restores_real_structure_generation" time="0.002" /><testcase classname="tests.test_m2_tool_routing" name="test_chemeleon_adapter_configuration_state_round_trip" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_enabled_and_disabled_slots_generate_real_structures" time="0.001" /><testcase classname="tests.test_m2_tool_routing" name="test_full_agent_json_checkpoint_restores_tool_and_generator_state" time="0.004" /><testcase classname="tests.test_m2_tool_routing" name="test_m1_rejects_invalid_router_outputs[unknown]" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_m1_rejects_invalid_router_outputs[invalid1]" time="0.000" /><testcase classname="tests.test_m2_tool_routing" name="test_hydra_instantiates_m2_with_only_its_switch_changed[orb]" time="0.170" /><testcase classname="tests.test_m2_tool_routing" name="test_hydra_instantiates_m2_with_only_its_switch_changed[analytic]" time="0.187" /><testcase classname="tests.test_m2_tool_routing" name="test_default_unseeded_configuration_still_initializes_with_routing_off" time="0.082"><failure message="hydra.errors.InstantiationException: Error in call to target 'made.agents.m5_exploration.UCBExplorationPolicy':&#10;TypeError(&quot;int() argument must be a string, a bytes-like object or a real number, not 'NoneType'&quot;)&#10;full_key: agent.exploration_policy">_target_ = &lt;class 'made.agents.m5_exploration.UCBExplorationPolicy'&gt;
+_partial_ = False, args = ()
+kwargs = {'alpha0': 0.5, 'beta0': 2.0, 'gamma': 1.0, 'length_scale': 0.35, ...}
+full_key = 'agent.exploration_policy'
+
+    def _call_target(
+        _target_: Callable[..., Any],
+        _partial_: bool,
+        args: Tuple[Any, ...],
+        kwargs: Dict[str, Any],
+        full_key: str,
+    ) -&gt; Any:
+        """Call target (type) with args and kwargs."""
+        try:
+            args, kwargs = _extract_pos_args(args, kwargs)
+            # detaching configs from parent.
+            # At this time, everything is resolved and the parent link can cause
+            # issues when serializing objects in some scenarios.
+            for arg in args:
+                if OmegaConf.is_config(arg):
+                    arg._set_parent(None)
+            for v in kwargs.values():
+                if OmegaConf.is_config(v):
+                    v._set_parent(None)
+        except Exception as e:
+            msg = (
+                f"Error in collecting args and kwargs for '{_convert_target_to_string(_target_)}':"
+                + f"\n{repr(e)}"
+            )
+            if full_key:
+                msg += f"\nfull_key: {full_key}"
+    
+            raise InstantiationException(msg) from e
+    
+        if _partial_:
+            try:
+                return functools.partial(_target_, *args, **kwargs)
+            except Exception as e:
+                msg = (
+                    f"Error in creating partial({_convert_target_to_string(_target_)}, ...) object:"
+                    + f"\n{repr(e)}"
+                )
+                if full_key:
+                    msg += f"\nfull_key: {full_key}"
+                raise InstantiationException(msg) from e
+        else:
+            try:
+&gt;               return _target_(*args, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/workspace/scratch/11b39fd0e5ec/m2_run39234974449/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;made.agents.m5_exploration.UCBExplorationPolicy object at 0x7f095040d2b0&gt;
+alpha0 = 0.5, gamma = 1.0, beta0 = 2.0, seed = None, max_stoichiometry = 8
+length_scale = 0.35, noise = 0.0001, max_pool = 512
+
+    def __init__(
+        self,
+        alpha0: float = 0.5,
+        gamma: float = 1.0,
+        beta0: float = 2.0,
+        seed: int = 0,
+        max_stoichiometry: int = 8,
+        length_scale: float = 0.35,
+        noise: float = 1e-4,
+        max_pool: int = 512,
+    ) -&gt; None:
+        if not 0.0 &lt;= alpha0 &lt;= 1.0:
+            raise ValueError("alpha0 must be in [0, 1]")
+        if gamma &lt;= 0 or beta0 &lt; 0:
+            raise ValueError("gamma must be positive and beta0 non-negative")
+        self.alpha0 = float(alpha0)
+        self.gamma = float(gamma)
+        self.beta0 = float(beta0)
+&gt;       self.seed = int(seed)
+                    ^^^^^^^^^
+E       TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+
+M1/MADE/src/made/agents/m5_exploration.py:131: TypeError
+
+The above exception was the direct cause of the following exception:
+
+    def test_default_unseeded_configuration_still_initializes_with_routing_off() -&gt; None:
+        from pathlib import Path
+    
+        configs = Path(__file__).resolve().parents[1] / "configs"
+        with initialize_config_dir(config_dir=str(configs), version_base=None):
+            config = compose(config_name="config", overrides=["agent=m1_integrated"])
+        assert config.experiment.seed is None
+        assert config.agent.enable_tool_routing is False
+&gt;       agent = instantiate(config.agent)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+M1/MADE/tests/test_m2_tool_routing.py:216: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/workspace/scratch/11b39fd0e5ec/m2_run39234974449/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:226: in instantiate
+    return instantiate_node(
+/workspace/scratch/11b39fd0e5ec/m2_run39234974449/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:342: in instantiate_node
+    value = instantiate_node(
+/workspace/scratch/11b39fd0e5ec/m2_run39234974449/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:347: in instantiate_node
+    return _call_target(_target_, partial, args, kwargs, full_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+_target_ = &lt;class 'made.agents.m5_exploration.UCBExplorationPolicy'&gt;
+_partial_ = False, args = ()
+kwargs = {'alpha0': 0.5, 'beta0': 2.0, 'gamma': 1.0, 'length_scale': 0.35, ...}
+full_key = 'agent.exploration_policy'
+
+    def _call_target(
+        _target_: Callable[..., Any],
+        _partial_: bool,
+        args: Tuple[Any, ...],
+        kwargs: Dict[str, Any],
+        full_key: str,
+    ) -&gt; Any:
+        """Call target (type) with args and kwargs."""
+        try:
+            args, kwargs = _extract_pos_args(args, kwargs)
+            # detaching configs from parent.
+            # At this time, everything is resolved and the parent link can cause
+            # issues when serializing objects in some scenarios.
+            for arg in args:
+                if OmegaConf.is_config(arg):
+                    arg._set_parent(None)
+            for v in kwargs.values():
+                if OmegaConf.is_config(v):
+                    v._set_parent(None)
+        except Exception as e:
+            msg = (
+                f"Error in collecting args and kwargs for '{_convert_target_to_string(_target_)}':"
+                + f"\n{repr(e)}"
+            )
+            if full_key:
+                msg += f"\nfull_key: {full_key}"
+    
+            raise InstantiationException(msg) from e
+    
+        if _partial_:
+            try:
+                return functools.partial(_target_, *args, **kwargs)
+            except Exception as e:
+                msg = (
+                    f"Error in creating partial({_convert_target_to_string(_target_)}, ...) object:"
+                    + f"\n{repr(e)}"
+                )
+                if full_key:
+                    msg += f"\nfull_key: {full_key}"
+                raise InstantiationException(msg) from e
+        else:
+            try:
+                return _target_(*args, **kwargs)
+            except Exception as e:
+                msg = f"Error in call to target '{_convert_target_to_string(_target_)}':\n{repr(e)}"
+                if full_key:
+                    msg += f"\nfull_key: {full_key}"
+&gt;               raise InstantiationException(msg) from e
+E               hydra.errors.InstantiationException: Error in call to target 'made.agents.m5_exploration.UCBExplorationPolicy':
+E               TypeError("int() argument must be a string, a bytes-like object or a real number, not 'NoneType'")
+E               full_key: agent.exploration_policy
+
+/workspace/scratch/11b39fd0e5ec/m2_run39234974449/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:97: InstantiationException</failure></testcase><testcase classname="test_evaluation" name="test_reference_hash_uses_exact_independent_structure_data" time="0.001" /><testcase classname="test_evaluation" name="test_reference_hash_still_rejects_independent_data_changes[energy]" time="0.000" /><testcase classname="test_evaluation" name="test_reference_hash_still_rejects_independent_data_changes[matrix]" time="0.000" /><testcase classname="test_evaluation" name="test_reference_hash_still_rejects_independent_data_changes[abc]" time="0.000" /><testcase classname="test_evaluation" name="test_reference_hash_still_rejects_independent_data_changes[species]" time="0.000" /><testcase classname="test_evaluation" name="test_reference_hash_still_rejects_independent_data_changes[properties]" time="0.000" /><testcase classname="test_evaluation" name="test_reference_hash_does_not_drop_cartesian_data_without_a_basis" time="0.000" /><testcase classname="test_evaluation" name="test_official_metrics_match_a_hand_calculated_example" time="0.002" /><testcase classname="test_evaluation" name="test_official_msun_and_official_audc_curve_are_kept_distinct" time="0.002" /><testcase classname="test_evaluation" name="test_paired_af_ef_use_official_functions_and_the_same_seed" time="0.002" /><testcase classname="test_evaluation" name="test_failed_incomplete_or_synthetic_experiments_are_rejected[status]" time="0.001" /><testcase classname="test_evaluation" name="test_failed_incomplete_or_synthetic_experiments_are_rejected[budget]" time="0.001" /><testcase classname="test_evaluation" name="test_failed_incomplete_or_synthetic_experiments_are_rejected[protocol_budget]" time="0.001" /><testcase classname="test_evaluation" name="test_failed_incomplete_or_synthetic_experiments_are_rejected[config]" time="0.001" /><testcase classname="test_evaluation" name="test_failed_incomplete_or_synthetic_experiments_are_rejected[curve]" time="0.001" /><testcase classname="test_evaluation" name="test_failed_incomplete_or_synthetic_experiments_are_rejected[audc]" time="0.002" /><testcase classname="test_evaluation" name="test_failed_incomplete_or_synthetic_experiments_are_rejected[oracle]" time="0.001" /><testcase classname="test_evaluation" name="test_latest_failed_attempt_does_not_fall_back_to_a_success" time="0.001" /><testcase classname="test_evaluation" name="test_different_reference_revisions_cannot_be_compared" time="0.002" /><testcase classname="test_evaluation" name="test_one_repeat_has_no_invented_standard_deviation" time="0.001" /><testcase classname="test_evaluation" name="test_method_table_uses_equal_system_weights_and_variability_across_seeds" time="0.004" /><testcase classname="test_evaluation" name="test_checkpoint_capture_selects_only_its_own_run" time="0.001" /><testcase classname="test_evaluation" name="test_missing_intermediate_queries_are_not_fabricated" time="0.001" /><testcase classname="test_evaluation" name="test_unchanged_large_checkpoints_are_not_reparsed_on_every_poll" time="0.001" /><testcase classname="test_evaluation" name="test_actual_hydra_config_is_selected_resolved_and_credentials_redacted" time="0.004" /><testcase classname="test_evaluation" name="test_missing_actual_hydra_config_is_not_reconstructed" time="0.001" /><testcase classname="test_evaluation" name="test_a_self_consistent_run_with_the_wrong_frozen_protocol_is_not_scored" time="0.003" /><testcase classname="test_evaluation" name="test_incomparable_references_cannot_leave_a_successful_final_audit" time="0.004" /><testcase classname="test_generation_cache" name="test_exact_structures_and_rng_after_an_interruption" time="0.034" /><testcase classname="test_generation_cache" name="test_resume_rejects_incompatible_or_corrupt_state[rng]" time="0.015" /><testcase classname="test_generation_cache" name="test_resume_rejects_incompatible_or_corrupt_state[identity]" time="0.009" /><testcase classname="test_generation_cache" name="test_resume_rejects_incompatible_or_corrupt_state[checksum]" time="0.010" /><testcase classname="test_prepare_missing" name="test_completed_pair_is_never_rescheduled" time="0.004" /><testcase classname="test_prepare_missing" name="test_invalid_or_latest_failed_evidence_blocks_scheduling" time="0.004" /><testcase classname="test_prepare_missing" name="test_archive_hash_and_existing_bytes_are_protected" time="0.002" /><testcase classname="test_progress" name="test_real_cpu_work_and_generation_marker_are_visible_before_first_query" time="0.003"><skipped type="pytest.skip" message="This execution host does not expose child /proc counters">/dev/shm/m2_closeout_20261020/M2/tests/test_progress.py:39: This execution host does not expose child /proc counters</skipped></testcase><testcase classname="test_progress" name="test_unavailable_counters_stay_unknown_and_log_content_is_not_disclosed" time="0.001" /><testcase classname="test_progress" name="test_an_orphaned_live_log_cannot_be_overwritten" time="0.001" /><testcase classname="test_progress" name="test_numeric_sampling_progress_survives_verbose_batch_output" time="0.001" /><testcase classname="test_recovery_evidence" name="test_distinct_runner_ids_are_accepted_even_with_repeated_hostnames" time="0.000" /><testcase classname="test_recovery_evidence" name="test_missing_or_ambiguous_runner_metadata_does_not_pass" time="0.000" /></testsuite></testsuites>

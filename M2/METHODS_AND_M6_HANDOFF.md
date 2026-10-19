@@ -78,8 +78,10 @@ Collect the other owners' ablations and deliver the complete validated table,
 curves, cost analysis, failed-run audit and reproducibility details by 27 October.
 M6 owns check/hidden-test handling. No hidden test system is encoded in M2 code.
 
-## Current M6-format deliverable, 20 October
+## Current independent delivery, 20 October
 
-`report/M2_Method_and_Partial_Results_Draft.pptx` is an actual editable four-slide draft, with native charts/table and embedded speaker notes. Slide 1 maps to M6 slide 7 and slide 2 maps to M6 slide 10, 40 seconds each. Slides 3/4 are protocol/cost backups. See `report/M2_SPEAKER_NOTES.md` and `report/README.md` for the source mapping. The earlier three-slide text outline is superseded by this mapping. The numerical slides retain the dated two-unit development pair, not the future complete baseline comparison. Update from the validated missing-only sweep before final assembly.
+The current editable draft is report/M2_Method_and_Partial_Results_20261020.pptx, with four slides and speaker notes. Dev coverage is19/36: Random18/18 and Chemeleon1/18. Random has a complete dev aggregate, while Chemeleon has only a labelled Mg-Sn-Sr/17 example. The initial matching-pair curves are retained and explicitly labelled as a single pair. No overall Chemeleon, full-method ranking or routing-effect claim is made.
 
-The experimental batch-recovery work concerns execution continuity only. It does not change the tool-routing method or its reported effectiveness. Actual small/full-batch/cross-runner verification must precede using this recovery for scientific results.
+Latest verified tables and curves are in verification/20261020-handoff-audit/report/. The19 checksum-pinned originals remain unchanged. The earlier two-unit presentation is historical. Suggested M6 insertion positions7/10 come from the prior outline and need confirmation against M6's current deck, which is not present in this repository.
+
+Checkpointable adapter state does not prove resumability during initial baseline pool generation. Full-pool recovery has not passed admission. No new Chemeleon or check/hidden scientific job was launched in this closeout. Check/hidden execution remains with M6, shared integration and the frozen full reference with M1. M2's final routing-off comparison waits for that reference.

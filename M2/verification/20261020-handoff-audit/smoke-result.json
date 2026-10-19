@@ -1,0 +1,8 @@
+{
+  "kind": "unchanged_official_synthetic_smoke",
+  "status": "failed",
+  "returncode": 1,
+  "timeout_seconds": 55,
+  "scientific_units": 0,
+  "new_chemeleon_calls": 0
+}

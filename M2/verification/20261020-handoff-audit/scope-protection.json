@@ -1,0 +1,13 @@
+{
+  "shared_main_base": "70e8a7e938f204a9585544b3c12a1ca7062bb8f7",
+  "isolated_m1_installation_restored": true,
+  "tracked_m1_m3_m4_m5_m6_changes": [],
+  "all_delivery_changes_under_M2": true,
+  "new_scientific_experiments": 0,
+  "new_check_random_jobs": 0,
+  "new_chemeleon_jobs": 0,
+  "pr2_merged": false,
+  "publication_status": "prepared_draft_branch_after_auto_review_rejection",
+  "shared_main_unchanged": true,
+  "default_branch_publication_blocked": true
+}
