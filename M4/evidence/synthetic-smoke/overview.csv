@@ -1,3 +1,3 @@
-run_id,episode_id,step_id,candidate_id,status,reduced_formula,energy_per_atom,formation_energy_per_atom,e_above_hull,is_stable,is_newly_discovered
-synthetic-smoke-20261019,0,1,query:1,evaluated,Li2 O2,0.0,2.6020852139652106e-18,2.6020852139652106e-18,True,True
-synthetic-smoke-20261019,0,2,query:2,evaluated,Li2 O2,0.0,2.6020852139652106e-18,2.6020852139652106e-18,True,True
+run_id,episode_id,step_id,candidate_id,elements,composition,status,outcome,reason,reduced_formula,energy_per_atom,formation_energy_per_atom,e_above_hull,is_stable,is_newly_discovered
+synthetic-smoke-20261019,0,1,query:1,"[""Li"", ""O""]","{""Li"": 1, ""O"": 1}",evaluated,stable,Stable within the observed phase-diagram tolerance at evaluation,Li2 O2,0.0,2.6020852139652106e-18,2.6020852139652106e-18,True,True
+synthetic-smoke-20261019,0,2,query:2,"[""Li"", ""O""]","{""Li"": 2, ""O"": 2}",evaluated,stable,Stable within the observed phase-diagram tolerance at evaluation,Li2 O2,0.0,2.6020852139652106e-18,2.6020852139652106e-18,True,True

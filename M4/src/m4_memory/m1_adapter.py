@@ -1,8 +1,9 @@
-"""Adapter to the published M1 MemoryManager contract (implementation pending)."""
+"""Adapter to the M1 MemoryManager contract, ready for framework adoption."""
 
 import copy
 import json
 
+from .evidence import candidate_composition, normalize_elements, observed_outcome
 from .memory import MemoryModule
 
 
@@ -35,10 +36,14 @@ class M4MemoryManager:
         self.last_query = 0
 
     def update_state(self, state):
-        elements = sorted(str(x) for x in state["elements"])
+        elements = normalize_elements(state["elements"])
         if self.memory.context is None:
             self.memory.reset(
-                {"run_id": self.run_id, "episode_id": self.episode_id, "elements": elements}
+                {
+                    "run_id": self.run_id,
+                    "episode_id": self.episode_id,
+                    "elements": elements,
+                }
             )
         elif elements != self.memory.context["elements"]:
             raise ValueError("Create a fresh manager for a different chemical system")
@@ -67,6 +72,10 @@ class M4MemoryManager:
                 if not isinstance(value, (str, int, float, bool, type(None))):
                     raise ValueError(f"{field} must be a JSON scalar")
                 event[field] = value
+        event["composition"] = candidate_composition(
+            observation.get("proposal"), elements
+        )
+        event["outcome"], event["reason"] = observed_outcome(observation)
         json.dumps(event, allow_nan=False)
         self.memory.record(event)
         self.last_query = step

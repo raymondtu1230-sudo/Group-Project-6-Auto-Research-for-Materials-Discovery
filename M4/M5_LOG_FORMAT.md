@@ -1,11 +1,11 @@
-# Proposed log format and examples for M5
+# Evidence handoff for M5
 
-This format is pending M5's confirmation; it has not been sent or approved.
+Format confirmation by M5 is pending. EVIDENCE_SCHEMA.md is the common field reference. The adapter and exporter supply the complete chemical system, candidate composition when available, and a limited observed-outcome explanation. The exporter now requires --elements for the full run system.
 
-Export evidence.jsonl from each official episode trajectory in both ON/OFF groups, including the final query. Plugin logs are diagnostic and do not replace a complete trajectory. JSONL retains candidate proposal structures and queried energy/stability feedback. overview.csv provides a readable table example.
+Export both ON/OFF episodes from official trajectories, including the final query. Do not use the online plugin log as the complete experiment record. Candidate IDs identify attempts rather than reduced formulas, so different structures at the same composition remain separate.
 
-Fields: run_id and episode_id identify the experiment; step_id and query_count indicate query order; candidate_id identifies the evaluated structure; status is evaluated for trajectory exports; reduced_formula is the composition label. energy_per_atom, formation_energy_per_atom, and e_above_hull are in eV/atom. is_stable reflects the observed phase diagram at that step; is_newly_discovered is the official observation flag.
+The committed evidence/synthetic-smoke examples contain two synthetic Li-O evaluations. They are not real discoveries or failure cases. A separate real Mg-Sn-Sr run completed 20 queries; its derived records and table are in evidence/real-workflow, while original official outputs remain preserved locally.
 
-The two records in evidence/synthetic-smoke come entirely from a synthetic Li-O/analytic-oracle test. They are not real discovery or failure examples. Preserve commands, seeds, configurations, machine information, and complete official outputs for real experiments.
+For over-exploitation and wasteful-exploration analysis, M1/M5 must provide exploration mode, selected direction, remaining budget, candidate-tool provenance and the actual policy rationale. These cannot be inferred from energy values. M3 must also provide the IDs/content of memory actually consumed by a decision.
 
-To analyze over-exploitation and wasteful exploration, M1/M5 must also record exploration mode, direction-selection rationale, remaining budget, and candidate provenance at the policy layer. M4 cannot infer these reasons from energies. Ask M5 to confirm field sufficiency before formal experiments and extend the export format if needed.
+Current automatic capture covers completed evaluations, including unstable outcomes. Runtime errors and rejected candidates require an explicit framework event source. The storage API supports those statuses, but the current hook does not automatically emit them. Never invent a physical cause for an unstable structure.

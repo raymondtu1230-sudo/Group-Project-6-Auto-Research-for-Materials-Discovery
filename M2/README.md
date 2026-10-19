@@ -5,11 +5,37 @@ discovery curves and cost analysis. Planning/reflection (M3), memory (M4), and
 composition exploration (M5) remain their owners' components. The full reference
 and its `tool_routing_off` ablation require M1's later frozen integration.
 
+## Independent M2 delivery
+
+This is the M2-owned delivery folder, published beside `M1/` and `M4/` on the
+repository's `main` branch. M2 sources, tests, evidence and documentation belong
+here. Publishing this folder does not install files into M1 or complete the
+team's full integration.
+
+| Contents | Location in this folder |
+| --- | --- |
+| Router, generator adapters and component contract tests | `integration/` |
+| Hydra profile and explicit integration installer | `configs/`, `install.py` |
+| Baseline driver and official metric reporting | `run_baselines.py`, `evaluate.py` |
+| Reporting and process-diagnostic tests | `tests/` |
+| Validated real evidence, raw results, tables and curves | `verification/` |
+| Reproducible workflow definitions | `workflows/` |
+| Progress, methods and presentation material | `STATUS.md`, `WORK_LOG.md`, `METHODS_AND_M6_HANDOFF.md` |
+
+The workflow definitions are retained here with the rest of M2's work. Their
+active GitHub Actions copies are under `.github/workflows/` on the
+`m2/tool-routing-evaluation` development branch. Existing jobs keep their
+recorded source revision. The main-branch folder publication does not start a
+new experiment or merge the development branch's M1 integration changes.
+
 ## Integration
 
-Canonical M2 sources live here. The importable module, contract tests and Hydra
-profile are also installed into the slots required by `M1/PLUGIN_INTERFACE.md`.
-The only existing M1 file changed is `configs/agent/m1_integrated.yaml`.
+Canonical M2 sources live here. Run `install.py` explicitly to copy the
+importable module, contract tests and Hydra profile into the slots required by
+`M1/PLUGIN_INTERFACE.md`. The installer updates the existing
+`M1/MADE/configs/agent/m1_integrated.yaml` through M1's documented fields.
+The main-branch delivery itself changes only `M2/`; M1's existing contents
+remain unchanged until that separate integration step is performed.
 
 ```bash
 cd M1/MADE
@@ -137,6 +163,9 @@ success. Synthetic fixtures exist only in pytest temporary directories.
 
 ## Verification evidence
 
+- [Complete continuation CI on b8e2c0c: passed](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39218278124):
+  17 original M1 contract tests, 45 M2 tests, both Ruff checks, installation
+  reproducibility and the unchanged official M1 smoke script.
 - [Required M1 checks and official smoke: passed](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39211626362).
 - [Actual Materials Project request and real Chemeleon continuation: passed](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39212250266).
 - Small machine-readable reports with the tested revisions are in

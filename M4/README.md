@@ -62,4 +62,8 @@ Start with a paired pilot to estimate cost before scaling. Use official mSUN/AUD
 
 ## Delivery schedule for October 2026
 
-Confirm the interface by 21 October; complete integration and pilot checks on 22-23 October; hand off code and log examples to M1 and method text/draft slides to M6 by 24 October. Freeze on 25 October. Run the agreed ablations and prepare 2-3 evidence-backed cases on 26-27 October, subject to compute availability. Original task documents have been checked. See HANDOVER.md for recipients, draft method text, and the slide outline.
+Confirm the interface by 21 October; complete integration and pilot checks on 22-23 October; hand off code and log examples to M1 and method text/draft slides to M6 by 24 October. Freeze on 25 October. Run the agreed ablations and prepare 2-3 evidence-backed cases on 26-27 October, subject to compute availability. Original task documents have been checked. See HANDOVER.md for recipients and report/ for method text and the editable two-slide draft.
+
+## Evidence schema and reporting
+
+See [EVIDENCE_SCHEMA.md](EVIDENCE_SCHEMA.md) for required fields and capture limits. The trajectory exporter requires `--elements` for the full chemical system. The adapter now records candidate composition and a factual observed-outcome explanation; it still does not perform target-composition retrieval through M1. See report/M4_METHOD.md for the current report text and the slide draft in report/.

@@ -45,9 +45,13 @@ If default cache directories are unavailable, point `MPLCONFIGDIR` and `DSPY_CAC
 Export complete evidence for each episode from the repository root. The output file must not already exist:
 
 ```bash
-python M4/export_evidence.py PATH_TO_EPISODE_JSON PATH_TO_NEW_EVIDENCE_JSONL --run-id UNIQUE_RUN --episode-id 0
+python M4/export_evidence.py PATH_TO_EPISODE_JSON PATH_TO_NEW_EVIDENCE_JSONL --run-id UNIQUE_RUN --episode-id 0 --elements Mg Sn Sr
 ```
 
 ## Handoff scope
 
-M4/ contains the module, documentation, tests, synthetic examples, and deferred integration references. No credentials or raw real-experiment data are included. M5 format confirmation and M6's final text/slides and experiment handoffs remain on the original schedule.
+M4/ contains the module, documentation, tests, synthetic examples, and deferred integration references. No credentials or evaluation-only raw data are included. The derived queried-candidate evidence is available in evidence/real-workflow. M5 format confirmation and M6's final text/slides and experiment handoffs remain on the original schedule.
+
+## Schema update
+
+The adapter/exporter now share chemical-system, candidate-composition and observed-outcome fields. Export requires an explicit full chemical system. Existing run metrics and original trajectories remain unchanged. Updated evidence is regenerated from saved trajectories. This update does not enable M4 in M1 or capture runtime/rejection events automatically. See EVIDENCE_SCHEMA.md and VALIDATION.md.

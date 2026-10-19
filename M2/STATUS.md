@@ -9,8 +9,14 @@ Hydra configuration, and its contract tests. The project brief, team task split,
 step-by-step guide and updated submission notice were reconciled with this scope.
 
 - The M2 router, generator checkpoint adapters, Hydra profile, installer and
-  enabled/disabled tests are already present in the documented M1 slots.
+  enabled/disabled tests are packaged here. The development branch also contains
+  the installed copies in M1's documented slots.
 - Canonical additions, evidence and English documentation stay under M2.
+- The independent delivery adds `M2/` beside `M1/` and `M4/` on `main`.
+  It preserves all existing main-branch files and does not merge PR #2 or apply
+  the M1 integration configuration. `install.py` is the separate explicit
+  integration step. Workflow definitions are included under `M2/workflows/`;
+  existing experiments continue from their development-branch revisions.
 - The official runner, oracle, evaluator, environment, budget, candidate-pool
   settings and M1 protocol are unchanged by this handoff.
 - Process diagnostics are external to the scientific interaction. They measure
@@ -29,6 +35,7 @@ step-by-step guide and updated submission notice were reconciled with this scope
 | Offline Random result validation | One run accepted, zero issues, complete query history 1-20 |
 | Random result | mSUN@20=7, AUDC=55.5, driver wall time 952.717 s |
 | Actual live CPU diagnostic | Passed on GitHub Linux in run 39217841268 |
+| Complete continuation CI | Passed on run 39218278124, revision b8e2c0c; 17 M1 and 45 M2 tests, both Ruff checks, reproducible installation and original smoke |
 
 The raw Random ZIP and independently generated tables/curves are in
 [`verification/20261019-random-gate`](verification/20261019-random-gate/README.md).
@@ -42,9 +49,11 @@ reported as unknown on that host. The live-CPU assertion is skipped there and
 is mandatory on GitHub Actions Linux. It passed on run 39217841268, which ran
 17 M1 contract tests and 45 M2 tests successfully. That run then stopped on one
 test-import formatting issue; the import was fixed using MADE's Ruff settings.
-The subsequent complete CI run, including the original smoke script, remains
-the final integration acceptance gate. The namespace limitation does not affect
-the completed scientific result.
+The subsequent complete CI run 39218278124 passed every integration acceptance
+gate, including the original smoke script, on revision b8e2c0c. The namespace
+limitation does not affect the completed scientific result. The independent
+folder publication changes packaging and documentation, not the tested code or
+scientific settings.
 
 ## Still active / not yet verified
 

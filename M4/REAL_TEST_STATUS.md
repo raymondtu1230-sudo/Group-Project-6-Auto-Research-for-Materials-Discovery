@@ -10,6 +10,6 @@ Evidence validation: the official trajectory contains 20 observations; the onlin
 
 This test used no LLM/OpenRouter calls. The official cost record lists known ORB and Materials Project charges as zero, excluding electricity and equipment. LLM accounting fields are not_reported; that field alone is not an independent measurement of zero calls.
 
-Raw official outputs remain local at protocol_v1/m1_baseline/dev/Mg-Sn-Sr/seed_17/attempt_02/ and were not uploaded in this handoff. Evaluation metrics and ground-truth phase diagrams are for post-experiment analysis only and must not become retrieval inputs for later agents. The M4 evidence export extracts only queried observations.
+Raw official outputs remain local at protocol_v1/m1_baseline/dev/Mg-Sn-Sr/seed_17/attempt_02/ and remain local. Derived queried-candidate records are available in evidence/real-workflow; they exclude initialization and evaluation-only envelope data. Evaluation metrics and ground-truth phase diagrams are for post-experiment analysis only and must not become retrieval inputs for later agents. The M4 evidence export extracts only queried observations.
 
 Next: obtain M5's log-format confirmation, connect M3's Planner to m1_memory, and run Memory ON/OFF under the frozen protocol. Do not expand experiment volume yet.

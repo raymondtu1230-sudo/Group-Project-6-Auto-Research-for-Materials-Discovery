@@ -37,3 +37,16 @@
 Lessons: distinguish conversation connectivity, workflow status, actual process
 work and completed oracle queries. Treat unknown progress as unknown. Report
 unit-level scores only with their raw evidence and never as a full comparison.
+
+## 19 October 2026: independent folder delivery on main
+
+- Complete follow-up CI 39218278124 passed on b8e2c0c: 17 M1 contract tests,
+  45 M2 tests, both Ruff checks, reproducible installation and the unchanged
+  official smoke script. Updated the status to record this completed evidence.
+- The user confirmed that the delivery folder is the existing `M2/`, separate
+  from M1's work. Their screenshot showed `main` containing only M1 and M4;
+  the earlier M2 link pointed to the development branch instead of that view.
+- Prepared the independent M2 source/evidence folder for main, including copies
+  of its workflow definitions. Kept main's M1, M4 and root files unchanged and
+  kept PR #2's integration changes separate from this folder publication.
+- No scientific run was cancelled, restarted or duplicated for packaging.

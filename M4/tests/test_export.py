@@ -16,17 +16,40 @@ class ExportTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             source = Path(directory) / "episode.json"
             output = Path(directory) / "evidence.jsonl"
-            source.write_text(json.dumps([
-                {"is_stable": False, "phase_diagram_gt": "must-not-copy"},
-                {"is_stable": True, "proposal": {"synthetic": True}},
-            ]))
-            self.assertEqual(module.export_trajectory(source, output, "mock", 0), 2)
+            source.write_text(
+                json.dumps(
+                    [
+                        {"is_stable": False, "phase_diagram_gt": "must-not-copy"},
+                        {"is_stable": True, "proposal": {"synthetic": True}},
+                    ]
+                )
+            )
+            self.assertEqual(
+                module.export_trajectory(
+                    source, output, "mock", 0, elements=["Li", "O"]
+                ),
+                2,
+            )
             records = [json.loads(line) for line in output.read_text().splitlines()]
             self.assertEqual(records[-1]["step_id"], 2)
-            source.write_text(json.dumps({"trajectory": [{"is_stable": True}], "phase_diagram_gt": ["hidden"]}))
+            source.write_text(
+                json.dumps(
+                    {
+                        "trajectory": [{"is_stable": True}],
+                        "phase_diagram_gt": ["hidden"],
+                    }
+                )
+            )
             wrapped = Path(directory) / "wrapped.jsonl"
-            self.assertEqual(module.export_trajectory(source, wrapped, "mock", 0), 1)
+            self.assertEqual(
+                module.export_trajectory(
+                    source, wrapped, "mock", 0, elements=["Li", "O"]
+                ),
+                1,
+            )
             self.assertNotIn("hidden", wrapped.read_text())
             self.assertNotIn("must-not-copy", output.read_text())
             with self.assertRaises(FileExistsError):
-                module.export_trajectory(source, output, "mock", 0)
+                module.export_trajectory(
+                    source, output, "mock", 0, elements=["Li", "O"]
+                )
