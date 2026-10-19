@@ -67,3 +67,7 @@ Confirm the interface by 21 October; complete integration and pilot checks on 22
 ## Evidence schema and reporting
 
 See [EVIDENCE_SCHEMA.md](EVIDENCE_SCHEMA.md) for required fields and capture limits. The trajectory exporter requires `--elements` for the full chemical system. The adapter now records candidate composition and a factual observed-outcome explanation; it still does not perform target-composition retrieval through M1. See report/M4_METHOD.md for the current report text and the slide draft in report/.
+
+## Integration and experiment preparation
+
+Use [integration/ADOPTION.md](integration/ADOPTION.md) for the exact M1/M3 adoption and acceptance steps. Use [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md) for the gated paired pilot, M2-compatible result capture, complete evidence export and reporting checklist. These instructions do not activate M4 or constitute completed experiments.
