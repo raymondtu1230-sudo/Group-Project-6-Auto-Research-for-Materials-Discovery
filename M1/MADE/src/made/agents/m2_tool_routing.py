@@ -51,9 +51,10 @@ class CheckpointedChemeleonGenerator(ChemeleonGenerator):
     The shared protocol uses CPU. GPU kernels may be nondeterministic.
     """
 
-    def __init__(self, seed: int = 17, **kwargs: Any) -> None:
+    def __init__(self, seed: int | None = 17, **kwargs: Any) -> None:
         super().__init__(**kwargs)
-        self.seed = _integer(seed, "seed")
+        # Hydra also constructs disabled hooks; its unseeded default must load.
+        self.seed = _integer(0 if seed is None else seed, "seed")
         self.calls = 0
 
     def get_state(self) -> dict[str, Any]:
@@ -110,7 +111,7 @@ class OutcomeAwareToolRouter:
     def __init__(
         self,
         generator_names: Sequence[str] = ("default", "chemeleon"),
-        seed: int = 17,
+        seed: int | None = 17,
         exploration_weight: float = 0.5,
         stable_reward: float = 0.25,
         late_budget_threshold: int = 2,
@@ -127,7 +128,7 @@ class OutcomeAwareToolRouter:
         if not math.isfinite(stable_reward) or not 0 <= stable_reward <= 1:
             raise ValueError("stable_reward must be between 0 and 1")
         self.generator_names = names
-        self.seed = _integer(seed, "seed")
+        self.seed = _integer(0 if seed is None else seed, "seed")
         self.exploration_weight = float(exploration_weight)
         self.stable_reward = float(stable_reward)
         self.late_budget_threshold = _integer(

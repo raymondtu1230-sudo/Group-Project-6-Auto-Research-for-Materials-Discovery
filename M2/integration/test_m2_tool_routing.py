@@ -203,3 +203,16 @@ def test_hydra_instantiates_m2_with_only_its_switch_changed(oracle: str) -> None
     agent = instantiate(on.agent)
     assert isinstance(agent.tool_router, OutcomeAwareToolRouter)
     assert isinstance(agent.generators["chemeleon"], CheckpointedChemeleonGenerator)
+
+
+def test_default_unseeded_configuration_still_initializes_with_routing_off() -> None:
+    from pathlib import Path
+
+    configs = Path(__file__).resolve().parents[1] / "configs"
+    with initialize_config_dir(config_dir=str(configs), version_base=None):
+        config = compose(config_name="config", overrides=["agent=m1_integrated"])
+    assert config.experiment.seed is None
+    assert config.agent.enable_tool_routing is False
+    agent = instantiate(config.agent)
+    assert agent.tool_router.seed == 0
+    assert agent.generators["chemeleon"].seed == 0

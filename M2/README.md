@@ -51,6 +51,9 @@ The router and both generator adapters support JSON `get_state`/`load_state`.
 Random restores its own RNG; Chemeleon restores the seed and invocation counter
 and isolates Python, NumPy and Torch random streams for each sample. The official
 CPU configuration is the reproducibility target; GPU equality is not promised.
+With Hydra's unspecified seed, optional M2 components use a local seed 0 so the
+default disabled configuration remains loadable. Protocol experiments still use
+their explicitly configured seeds.
 
 ## Real experiments and credentials
 
