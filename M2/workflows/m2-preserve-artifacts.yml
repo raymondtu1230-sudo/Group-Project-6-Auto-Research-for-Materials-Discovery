@@ -41,7 +41,7 @@ jobs:
         working-directory: M1/MADE
         run: |
           uv sync --locked
-          uv run python ../../M2/prepare_missing.py --results-root ../../M2/results/preserved/raw --output ../../M2/results/preserved/inventory --import-only
+          uv run python ../../M2/prepare_missing.py --results-root ../../M2/results/preserved/raw --output ../../M2/results/preserved/inventory --manifest ../../M2/configs/original_baseline_pair.json --import-only
           uv run python ../../M2/evaluate.py --results-root ../../M2/results/preserved/raw --output ../../M2/results/preserved/report --split dev --allow-partial
       - uses: actions/upload-artifact@v4
         if: always()

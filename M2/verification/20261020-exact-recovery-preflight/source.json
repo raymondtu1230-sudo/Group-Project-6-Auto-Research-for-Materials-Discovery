@@ -1,0 +1,9 @@
+{
+  "pytest_exit_code": 0,
+  "ruff_exit_code": 0,
+  "sources": {
+    "M2/verify_batch_recovery.py": "658fca475c60d92d40ba96f4fa9e10ed9724f453fa1ab912221dc81a610ad523",
+    "M2/preserve_artifacts.py": "3cc8bf7b4582b9a50e78ee2757ae3749097515b3f457199c8e84d58f1f030f6f",
+    "M2/tests/test_recovery_evidence.py": "022bc24954a24196d52ccae5e0e99822754df810519d4b50cea70b796e1ab6ba"
+  }
+}
