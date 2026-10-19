@@ -1,0 +1,46 @@
+name: M2 experimental real batch recovery check
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths:
+      - M2/requests/batch-recovery-check.json
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  actual-recovery:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+    defaults:
+      run:
+        working-directory: M1/MADE
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - run: uv sync --locked
+      - name: Run synthetic recovery rejection and continuation tests
+        run: uv run pytest -q ../../M2/tests/test_generation_cache.py -o addopts=''
+      - name: Original continuous sampling in a fresh process
+        run: uv run python ../../M2/verify_batch_recovery.py --mode continuous --output ../../M2/results/real-batch-recovery
+      - name: Save the first real batch and deliberately interrupt before the next
+        run: uv run python ../../M2/verify_batch_recovery.py --mode interrupt --output ../../M2/results/real-batch-recovery
+      - name: Restart in another process, replay one batch and sample the next
+        run: uv run python ../../M2/verify_batch_recovery.py --mode resume --output ../../M2/results/real-batch-recovery
+      - name: Compare every structure and final RNG state
+        run: uv run python ../../M2/verify_batch_recovery.py --mode compare --output ../../M2/results/real-batch-recovery
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-real-batch-recovery-${{ github.run_id }}
+          path: M2/results/real-batch-recovery/
+          retention-days: 90

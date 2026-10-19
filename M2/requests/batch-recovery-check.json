@@ -1,0 +1,6 @@
+{
+  "scope": "actual-model recovery integration only",
+  "benchmark_score": false,
+  "small_fixture": "Li2O, two candidates, batch size one, original diffusion steps",
+  "admit_full_sweep": false
+}
