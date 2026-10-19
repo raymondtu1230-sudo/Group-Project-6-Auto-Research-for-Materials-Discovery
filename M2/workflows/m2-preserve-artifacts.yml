@@ -31,10 +31,24 @@ jobs:
         with:
           enable-cache: true
           cache-dependency-glob: M1/MADE/uv.lock
+      - name: Reuse existing immutable ZIP bytes without downloading again
+        run: |
+          python - <<'PY'
+          import hashlib, pathlib, shutil
+          target = pathlib.Path('M2/results/preserved')
+          target.mkdir(parents=True, exist_ok=True)
+          for archive in sorted(pathlib.Path('publication/M2/verification').glob('preserved-*/*.zip')):
+              dest = target / archive.name
+              if dest.exists():
+                  if hashlib.sha256(dest.read_bytes()).digest() != hashlib.sha256(archive.read_bytes()).digest():
+                      raise SystemExit('Conflicting preserved ZIP bytes: ' + archive.name)
+              else:
+                  shutil.copyfile(archive, dest)
+          PY
       - name: Download and verify exact ZIPs from existing runs
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python M2/preserve_artifacts.py --run-id 39286848821 --run-id 39286986254 --output M2/results/preserved
+        run: python M2/preserve_artifacts.py --run-id 39286848821 --run-id 39286986254 --run-id 39297647516 --output M2/results/preserved
       - name: Validate completed scientific records offline
         id: score
         continue-on-error: true

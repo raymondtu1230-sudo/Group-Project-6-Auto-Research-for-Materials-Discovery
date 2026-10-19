@@ -1,11 +1,12 @@
 {
-  "kind": "preserve_newly_completed_existing_units_only",
+  "kind": "final_existing_results_preservation_no_science",
   "run_ids": [
     39286848821,
-    39286986254
+    39286986254,
+    39297647516
   ],
   "scientific_experiments_to_start": 0,
-  "previous_capture": 39293506143,
-  "reason": "Additional Random units have completed since previous capture; preserve originals and rescore offline without rerunning science.",
-  "requested_at": "2026-10-20T01:52:00+08:00"
+  "previous_capture": 39297647452,
+  "reason": "All 17 missing Random jobs have completed; reuse prior ZIP bytes, capture final unit and all exact-recovery failure evidence, then offline audit. No scientific rerun.",
+  "requested_at": "2026-10-20T02:54:00+08:00"
 }
