@@ -1,7 +1,7 @@
 # Deferred M1 integration
 
-本次 main 仅新增 M4 文件夹，不修改 M1。
+The main-branch handoff adds only M4/ and leaves M1 unchanged.
 
-这里保存此前已验证的 M1 配置样例与集成测试。它们是后续接入参考，不会自动加载。M1/M3 确认后再把对应配置块和测试合入 M1；不要覆盖届时更新后的整个配置文件。
+This directory retains the M1 configuration example and integration test used in earlier validation. They are references for later adoption and are not loaded automatically. Once M1/M3 agree on integration, apply the relevant memory_manager block and test to M1. Do not overwrite a newer configuration with the entire saved example.
 
-当前主分支 M1 的默认 memory_manager 保持原样。M4 的 34 项测试和真实 ORB 运行记录针对之前临时接入配置，不代表当前 main 已启用 M4。核心独立测试可按 M4/README.md 运行。
+The main-branch M1 memory_manager setting remains unchanged. The 34-test integration result and real ORB run used the earlier temporary wiring; they do not mean M4 is enabled in the current main agent. Run standalone tests using M4/README.md.

@@ -1,15 +1,15 @@
-# M4 真实材料流程验证
+# M4 real-material workflow validation
 
-2026 年 10 月 19 日，团队提交 bf141ca，M1 protocol v1，m1_baseline，dev Mg–Sn–Sr，seed 17，1 episode，20 次预算内查询。Oracle 为 CPU ORB orb-v3-conservative-inf-omat；其他策略仍为现有默认配置。
+On 19 October 2026, the temporary integration based on team revision bf141ca ran M1 protocol v1, method m1_baseline, dev system Mg-Sn-Sr, seed 17, one episode, and 20 budgeted queries. The oracle was CPU ORB orb-v3-conservative-inf-omat; other policies used the existing defaults. GitHub authorship was later corrected without changing the tested code.
 
-状态 completed，官方记录耗时 157.193 秒，约 2 分 37 秒。203 条 MP 数据加载后筛选为 194 条；初始化阶段重新评估 112 个稳定/近稳定结构。20 次仅指正式搜索查询，不包含初始化的额外 Oracle 计算。第一次有效运行还包含约 102 MB 模型下载，不能将耗时直接当作所有后续运行的预测。
+Status: completed. Official wall time was 157.193 seconds, approximately 2 minutes 37 seconds. Materials Project returned 203 entries, filtered to 194. Initialization re-evaluated 112 stable/near-stable structures. The 20-query count covers campaign queries only, not the extra initialization computations. This first successful run also downloaded approximately 102 MB of model weights, so its duration is not a universal estimate for later runs.
 
-官方 mSUN 计数为 7，AUDC 为 49.5。它们仅是本次 M1 默认 Agent 加 M4 记录模块的结果；默认 Planner 未消费 m1_memory，因此不能归因于 Memory，更不是完整团队 Agent 的最终结果。没有 ON/OFF 对照。
+The official mSUN count was 7 and AUDC was 49.5. These are results from the existing M1 agent with M4 logging, not a Memory performance gain or the final full-team method. The default Planner did not consume m1_memory. No ON/OFF comparison was run.
 
-验收：官方 trajectory 有 20 条，M4 在线日志有 19 条（下一轮才更新观测），离线 evidence.jsonl 导出有 20 条且含最后一步。overview.csv 可供 M5 查看；proposal 结构保存在 JSONL 和官方轨迹中。策略选择理由/探索模式仍需 M5 在策略层提供，不能从当前日志推断。
+Evidence validation: the official trajectory contains 20 observations; the online M4 log contains 19 because updates occur on the next proposal. Offline evidence.jsonl contains all 20, including the final query. overview.csv is available locally for M5. Proposal structures are preserved in JSONL and the official trajectory. Selection rationale and exploration modes still require policy-layer records from M5 and cannot be inferred from the current logs.
 
-本测试没有使用 LLM/OpenRouter。官方费用记录中 ORB 和 MP 的已知费用为 0；不含电脑电力及设备成本。LLM 计量字段为 not_reported，不能把该字段当作独立测得的零调用。
+This test used no LLM/OpenRouter calls. The official cost record lists known ORB and Materials Project charges as zero, excluding electricity and equipment. LLM accounting fields are not_reported; that field alone is not an independent measurement of zero calls.
 
-原始官方输出保存在本地 protocol_v1/m1_baseline/dev/Mg-Sn-Sr/seed_17/attempt_02/；未上传原始数据到此 PR。该目录中的评估指标和 ground truth 相图仅供实验后分析，禁止作为后续 Agent 的检索输入。M4 证据导出只抽取已查询观测。
+Raw official outputs remain local at protocol_v1/m1_baseline/dev/Mg-Sn-Sr/seed_17/attempt_02/ and were not uploaded in this handoff. Evaluation metrics and ground-truth phase diagrams are for post-experiment analysis only and must not become retrieval inputs for later agents. The M4 evidence export extracts only queried observations.
 
-下一步：M5 确认日志格式；M3 的 Planner 消费 m1_memory；之后按冻结协议做 Memory ON/OFF。当前不扩大实验数量。
+Next: obtain M5's log-format confirmation, connect M3's Planner to m1_memory, and run Memory ON/OFF under the frozen protocol. Do not expand experiment volume yet.

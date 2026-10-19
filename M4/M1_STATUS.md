@@ -1,48 +1,53 @@
-**范围更新：为符合 M1 的文件夹交付要求，本次只合并 M4/。下述测试对应已验证的临时接入配置，配置和测试保存在 integration/；main 中的 M1 文件保持不变。**
+# M4 integration validation record
 
-# M4 接入验证记录 2026 年 10 月 19 日
+Updated 19 October 2026. The main-branch handoff adds only `M4/`; existing M1 files remain unchanged. The tests below used a temporary integration configuration, retained with its integration tests in `integration/` for later adoption.
 
-基于团队仓库 `ae10752`。此前缺少的 M1/MADE 已上传，已读取真实 Agent、配置和测试。
+The integration review used team revision `ae10752`, which contains the previously missing M1/MADE implementation, configuration, and tests. PR #1 subsequently delivered the M4 folder to main.
 
-## 本地已完成
+## Completed validation
 
-- M4MemoryManager 实现 M1 的四个 Memory 方法，白名单保存已查询观测，支持去重与 JSON checkpoint。
-- 配置通过现有 memory_manager 字段加载 M4；enable_memory 沿用 M1 独立开关。
-- 使用真实 M1 Agent 测试 ON/OFF、Planner 参数传递、checkpoint、无效观测、长度上限和 Hydra 构造。
-- M1 原有测试与 M4 全部测试、Ruff 代码检查通过，详情见 test_results.txt。
-- 官方 synthetic smoke 运行成功，analytic oracle，1 episode，2/2 queries。轨迹导出为两条证据，包含最后一次评估。样例见 evidence/synthetic-smoke；不是真实材料发现证据。
-- 首次 smoke 在两次查询结束后的 Chrome 出图阶段因执行权限失败；未改 runner，放行本地出图后重跑成功。
+- `M4MemoryManager` implements M1's four memory methods, allowlists queried observations, deduplicates events, and supports JSON checkpoints.
+- The temporary configuration loaded M4 through `memory_manager` and used M1's existing `enable_memory` switch.
+- Tests exercised the real M1 agent's ON/OFF behavior, Planner arguments, checkpoints, invalid observations, output bounds, and Hydra construction.
+- The combined M1/M4 suite passed 34 tests and Ruff checks; see test_results.txt. The folder-only handoff separately passed 12 standalone tests.
+- The official synthetic smoke workflow completed one analytic-oracle episode with 2/2 queries. Both observations, including the final evaluation, were exported. Samples in evidence/synthetic-smoke are not real discoveries.
+- The first smoke attempt completed its queries but failed at Chrome chart export because of execution permissions. The unchanged runner succeeded on retry after chart rendering was permitted.
 
-没有修改 Agent、官方 runner、Oracle、环境、评分或预算逻辑。发布状态以 GitHub 的 m4-memory 分支和 Pull Request 为准。
+No agent implementation, official runner, oracle, environment, scoring, or budget logic was modified. The temporary M1 configuration and new integration test are deferred rather than activated on main.
 
-## 必须明确的限制
+## Limits and remaining work
 
-1. 默认 GridSearchPlanner.propose 不读取 previous 或 m1_memory。因此本次证明接口通路及流程可运行，不证明 Memory 已影响默认 Agent 的选择。需 M3 的 Planner 消费该字段并验证实际决策差异。M4 不替换 M3 算法。
-2. M1 OFF 时不调用 Memory 插件，且 ON 时在下一次 proposal 才更新上一次结果。插件日志不含最后一次查询，也不能作为 OFF 的完整日志。两组统一使用 export_evidence.py 从官方 trajectory 导出；此工具只抽取查询观测，不读取 envelope 的 ground truth 字段用于决策。
-3. 为避免混用历史，每 episode 创建新实例；协议 v1 每进程仅一个 episode。多 episode 自动身份分配尚未接入。
-4. max_chars 约束返回记录序列化后的 JSON 字符长度，不等于模型 token 上限；M1/M3 负责最终 prompt 和 token 计量。
-5. 已完成一组 Materials Project/ORB 真实流程验证，详见 REAL_TEST_STATUS.md；尚无 Memory 性能提升证据。待 Planner 消费 Memory 后再做消融。
+1. The default `GridSearchPlanner.propose` does not consume `previous` or `m1_memory`. Validation establishes the interface and workflow, not a change in default agent choices. M3 must consume the records and verify decision effects; M4 does not replace M3's algorithm.
+2. M1 does not call the plugin when memory is OFF, and updates the last observation only on the next proposal when ON. Plugin logs therefore omit the final query and cannot provide complete OFF logs. Export the official trajectory with export_evidence.py for both groups. The exporter extracts queried observations rather than using envelope ground-truth fields for decisions.
+3. Create a fresh manager per episode. Protocol v1 runs one episode per process; automatic multi-episode identity assignment is not integrated.
+4. The adapter bounds returned records by serialized JSON character count using `max_chars`. This is not a model token limit; M1/M3 own the final prompt and token accounting.
+5. One real Materials Project/ORB workflow has completed; see REAL_TEST_STATUS.md. There is no evidence of a Memory performance gain. Run ablations only after the Planner consumes memory.
 
-## 复现
+## Reproduction
 
-从仓库根目录：
+Install the locked environment from the repository root:
 
 ```bash
 cd M1/MADE
 uv sync --frozen
+```
+
+The commands below reproduce the earlier temporary integration after M1/M3 adopt the saved `memory_manager` configuration block and place the saved test in `M1/MADE/tests/test_m4_memory.py`. They are not claims that the current main configuration automatically enables M4. See integration/README.md; do not overwrite newer M1 configuration wholesale.
+
+```bash
 PYTHONPATH=../../M4/src uv run --no-sync pytest -q -o addopts='' tests/test_m1_integrated.py tests/test_m4_memory.py ../../M4/tests
 uv run --no-sync ruff check ../../M4/src ../../M4/tests ../../M4/export_evidence.py tests/test_m4_memory.py
 PYTHONPATH=../../M4/src uv run --no-sync python ../run_smoke_test.py
 ```
 
-若系统不允许默认缓存目录，可将 MPLCONFIGDIR 和 DSPY_CACHEDIR 设为本地可写缓存目录；图表导出需要系统允许启动 Chrome。配置文件仍通过原字段加载 M4，运行时须保留上述 PYTHONPATH，或先将 M4 安装到同一 Python 环境。
+If default cache directories are unavailable, point `MPLCONFIGDIR` and `DSPY_CACHEDIR` to writable local directories. Chart export requires permission to launch Chrome. Keep the shown PYTHONPATH or install M4 into the same Python environment.
 
-导出两组共同日志（每个 episode 单独运行，目标文件必须尚不存在）：
+Export complete evidence for each episode from the repository root. The output file must not already exist:
 
 ```bash
 python M4/export_evidence.py PATH_TO_EPISODE_JSON PATH_TO_NEW_EVIDENCE_JSONL --run-id UNIQUE_RUN --episode-id 0
 ```
 
-## 交付范围
+## Handoff scope
 
-M4/ 为模块、说明、测试与合成样例。M1 的改动仅有配置中的 memory_manager 配置块和新增 tests/test_m4_memory.py。不包含密钥或真实实验结果。M5 格式确认、M6 最终文稿与实验结果仍按原计划交付。
+M4/ contains the module, documentation, tests, synthetic examples, and deferred integration references. No credentials or raw real-experiment data are included. M5 format confirmation and M6's final text/slides and experiment handoffs remain on the original schedule.
