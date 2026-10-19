@@ -1,0 +1,6 @@
+# Isolated M2 development profile. The eventual full agent is assembled by M1.
+defaults:
+  - m1_integrated
+  - _self_
+
+enable_tool_routing: true

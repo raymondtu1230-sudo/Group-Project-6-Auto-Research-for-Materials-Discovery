@@ -1,0 +1,66 @@
+name: M2 integration contract and official smoke test
+
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths:
+      - .github/workflows/m2-integration.yml
+      - M2/**
+      - M1/MADE/src/made/agents/m2_tool_routing.py
+      - M1/MADE/tests/test_m2_tool_routing.py
+      - M1/MADE/configs/agent/m1_integrated.yaml
+      - M1/MADE/configs/agent/m2_routing.yaml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract-and-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      UV_LINK_MODE: hardlink
+    defaults:
+      run:
+        working-directory: M1/MADE
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - name: Install the frozen MADE environment
+        run: uv sync --locked
+      - name: Verify the M2 installation is reproducible
+        run: |
+          uv run python ../../M2/install.py
+          git diff --exit-code -- src/made/agents/m2_tool_routing.py tests/test_m2_tool_routing.py configs/agent/m1_integrated.yaml configs/agent/m2_routing.yaml
+      - name: Run the required original M1 contract tests
+        run: uv run pytest -q tests/test_m1_integrated.py
+      - name: Run M2 switch, checkpoint and evaluation tests
+        run: uv run pytest -q tests/test_m2_tool_routing.py ../../M2/tests -o addopts='' --junitxml=../../M2/test-results.xml
+      - name: Run the required focused Ruff check
+        run: uv run ruff check src/made/agents/m2_tool_routing.py tests/test_m2_tool_routing.py
+      - name: Check all M2 source files
+        run: uv run ruff check ../../M2
+      - name: Install Chrome for official result figures
+        run: uv run python -c "import kaleido; kaleido.get_chrome_sync()"
+      - name: Run the unchanged official M1 smoke script
+        run: uv run python ../run_smoke_test.py
+      - name: Preserve verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2-integration-verification
+          path: |
+            M2/test-results.xml
+            M1/MADE/results/
+            M1/MADE/checkpoints/
+          if-no-files-found: warn
+          retention-days: 30

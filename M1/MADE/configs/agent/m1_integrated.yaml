@@ -13,11 +13,26 @@ enable_exploration: false
 enable_tool_routing: false
 query_budget: ${environment.budget}
 memory_size: 20
-generators: {}
+generators:
+  chemeleon:
+    _target_: made.agents.m2_tool_routing.CheckpointedChemeleonGenerator
+    task: csp
+    batch_size: 32
+    device: ${oc.select:oracle.device,cpu}
+    output_dir: null
+    seed: ${experiment.seed}
 memory_manager: null
 self_correction_policy: null
 exploration_policy: null
-tool_router: null
+tool_router:
+  _target_: made.agents.m2_tool_routing.OutcomeAwareToolRouter
+  generator_names:
+  - default
+  - chemeleon
+  seed: ${experiment.seed}
+  exploration_weight: 0.5
+  stable_reward: 0.25
+  late_budget_threshold: 2
 
 planner:
   seed: ${experiment.seed}
@@ -31,6 +46,7 @@ planner:
     mask_same_reduced_formula: true
 
 generator:
+  _target_: made.agents.m2_tool_routing.CheckpointedRandomGenerator
   seed: ${experiment.seed}
 
 scorer:
