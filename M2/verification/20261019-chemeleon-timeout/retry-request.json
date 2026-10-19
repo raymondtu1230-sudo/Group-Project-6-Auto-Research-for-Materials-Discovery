@@ -1,0 +1,25 @@
+{
+  "mode": "chemeleon_retry",
+  "source_failure_run": 39213257750,
+  "source_failure_job": 117931485315,
+  "reason": "The prior run advanced into sampling batch 4 and exceeded the external 165-minute action limit.",
+  "configured_source_revision": "ef7f8c20e96ea3caaf932558859bdf508036ac4b",
+  "validated_python_source_revision": "4284a7d86078f36625d28ec663755270be386a8f",
+  "validation_run": 39234330794,
+  "validation_scope": "17 M1 tests, 46 M2 tests, Ruff, reproducible installation and unchanged official smoke passed; final workflow trigger guards also checked locally",
+  "method": "chemeleon_generative_baseline",
+  "split": "dev",
+  "system": [
+    "Mg",
+    "Sn",
+    "Sr"
+  ],
+  "seed": 17,
+  "query_budget": 20,
+  "action_time_limit_minutes": 330,
+  "job_time_limit_minutes": 350,
+  "random_rerun": false,
+  "wider_sweep": false,
+  "automatic_retry": false,
+  "requested_at_utc": "2026-10-19T10:05:35.830Z"
+}
