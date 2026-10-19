@@ -1,0 +1,48 @@
+protocol_version: m1-v1
+made_upstream_commit: bffda0c9a1fa1904b35c0ef67b455881c975df86
+runner: scripts/run_benchmark.py
+oracle:
+  name: ORBOracle
+  model_name: orb-v3-conservative-inf-omat
+  device: cpu
+  relax: true
+  optimizer: fire
+  fmax: 0.02
+  max_steps: 500
+  relax_unit_cell: true
+materials_project:
+  thermo_types: [GGA_GGA+U]
+environment:
+  query_budget: 20
+  max_stoichiometry: 20
+  stability_tolerance_ev_per_atom: 0.1
+  filter_by_smact: true
+  include_near_stable_from_ground_truth: true
+systems:
+  source: MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json
+  dev_file: M1/protocol/dev_systems.json
+  check_file: M1/protocol/check_systems.json
+repeats:
+  seeds: [17, 29, 43]
+  episodes_per_process: 1
+methods:
+  runnable_m1_reference: m1_baseline
+  required: [m1_full, random_generator_baseline, chemeleon_generative_baseline]
+  ablations:
+    - planning_off
+    - memory_off
+    - self_correction_off
+    - exploration_off
+    - tool_routing_off
+metrics:
+  primary: final/novelty_stable_unique_novel_count
+  secondary:
+    - final/novelty_stable_unique_novel_fraction
+    - final/discovery_curve_area_under_discovery_curve
+    - final/discovery_curve_acceleration_factor
+    - final/discovery_curve_enhancement_factor
+logging:
+  use_wandb: false
+  save_trajectory: true
+  save_resolved_config: true
+  preserve_failed_runs: true
