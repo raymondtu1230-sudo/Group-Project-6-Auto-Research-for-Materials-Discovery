@@ -1,0 +1,95 @@
+name: M2 exact CIF and sample recovery evidence
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths: [M2/requests/batch256-evidence-check.json]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+env:
+  OMP_NUM_THREADS: '2'
+  MKL_NUM_THREADS: '2'
+  PYTHONUNBUFFERED: '1'
+concurrency:
+  group: m2-batch256-evidence-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  sample:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        mode: [continuous, interrupt]
+    defaults:
+      run:
+        working-directory: M1/MADE
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - run: uv sync --locked
+      - name: Verify cache rejection tests and current source formatting
+        run: |
+          uv run pytest -q ../../M2/tests/test_generation_cache.py ../../M2/tests/test_recovery_evidence.py -o addopts=''
+          uv run ruff check ../../M2
+      - name: Real unmodified diffusion at batch size 256; fixture is not a benchmark
+        timeout-minutes: 320
+        run: /usr/bin/time -v uv run python ../../M2/verify_batch_recovery.py --mode ${{ matrix.mode }} --batch-size 256 --num-candidates 512 --output ../../M2/results/batch256-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-batch256-evidence-${{ matrix.mode }}-${{ github.run_id }}
+          path: M2/results/batch256-evidence/
+          retention-days: 90
+          if-no-files-found: warn
+
+  restore-on-another-runner:
+    needs: sample
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    defaults:
+      run:
+        working-directory: M1/MADE
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - run: uv sync --locked
+      - uses: actions/download-artifact@v4
+        with:
+          name: m2-batch256-evidence-interrupt-${{ github.run_id }}
+          path: M2/results/batch256-evidence/
+      - uses: actions/download-artifact@v4
+        with:
+          name: m2-batch256-evidence-continuous-${{ github.run_id }}
+          path: M2/results/batch256-evidence/
+      - name: Replay downloaded first batch and generate second batch on a new runner
+        timeout-minutes: 320
+        run: /usr/bin/time -v uv run python ../../M2/verify_batch_recovery.py --mode resume --batch-size 256 --num-candidates 512 --output ../../M2/results/batch256-evidence
+      - name: Retain GitHub job and runner identity evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/jobs?per_page=100" > ../../M2/results/batch256-evidence/jobs.json
+      - name: Require exact atoms, CIFs, RNG and distinct GitHub runner IDs
+        run: uv run python ../../M2/verify_batch_recovery.py --mode compare --batch-size 256 --num-candidates 512 --require-cross-runner --runner-jobs ../../M2/results/batch256-evidence/jobs.json --output ../../M2/results/batch256-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-batch256-evidence-verification-${{ github.run_id }}
+          path: M2/results/batch256-evidence/
+          retention-days: 90
+          if-no-files-found: warn

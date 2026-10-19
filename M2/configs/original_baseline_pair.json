@@ -1,0 +1,12 @@
+{
+  "archives": [
+    {
+      "path": "M2/verification/20261019-random-gate/raw_artifact.zip",
+      "sha256": "b40ddad769698035e9f65d98f1310f932c9881a825d3be308c8ccd2300b1cd7e"
+    },
+    {
+      "path": "M2/verification/20261019-chemeleon-recovery/raw_artifact.zip",
+      "sha256": "17e1747473b60df105aca6de4f2f18449188122ac768e7747c1538b8cedb4c79"
+    }
+  ]
+}

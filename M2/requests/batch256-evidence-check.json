@@ -1,0 +1,10 @@
+{
+  "kind": "diagnose_exact_cif_atoms_and_rng_recovery",
+  "formula": "Li2O",
+  "batch_size": 256,
+  "num_candidates": 512,
+  "diffusion_steps": 256,
+  "scientific_scores": 0,
+  "reason": "Retain exact CIF and sample data; use actual distinct GitHub runner IDs instead of non-unique hostnames. Old strict failure remains unchanged.",
+  "requested_at": "2026-10-20T01:52:00+08:00"
+}

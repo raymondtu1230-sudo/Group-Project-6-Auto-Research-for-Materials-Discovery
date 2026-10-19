@@ -1,10 +1,11 @@
 {
-  "kind": "preserve_and_validate_existing_artifacts_only",
+  "kind": "preserve_newly_completed_existing_units_only",
   "run_ids": [
     39286848821,
     39286986254
   ],
   "scientific_experiments_to_start": 0,
-  "requested_at": "2026-10-20T01:22:00+08:00",
-  "reason": "User requested reliable unattended evidence saving; retain original ZIPs even if aggregation fails"
+  "previous_capture": 39293506143,
+  "reason": "Additional Random units have completed since previous capture; preserve originals and rescore offline without rerunning science.",
+  "requested_at": "2026-10-20T01:52:00+08:00"
 }

@@ -66,7 +66,7 @@ def main() -> None:
                 sha256 = hashlib.sha256(target.read_bytes()).hexdigest()
                 if artifact.get("digest") != f"sha256:{sha256}":
                     raise ValueError(f"Artifact checksum mismatch: {artifact['id']}")
-                extraction = args.output / "raw" / str(artifact["id"])
+                extraction = args.output / "raw" / sha256
                 with zipfile.ZipFile(target) as archive:
                     for member in archive.namelist():
                         path = Path(member)
