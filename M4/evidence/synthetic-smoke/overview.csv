@@ -1,0 +1,3 @@
+run_id,episode_id,step_id,candidate_id,status,reduced_formula,energy_per_atom,formation_energy_per_atom,e_above_hull,is_stable,is_newly_discovered
+synthetic-smoke-20261019,0,1,query:1,evaluated,Li2 O2,0.0,2.6020852139652106e-18,2.6020852139652106e-18,True,True
+synthetic-smoke-20261019,0,2,query:2,evaluated,Li2 O2,0.0,2.6020852139652106e-18,2.6020852139652106e-18,True,True

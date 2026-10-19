@@ -74,6 +74,41 @@ def preserve_history(
     return record
 
 
+def preserve_configuration(output_dir: Path, results_root: Path) -> bool:
+    """Copy the matching official Hydra configuration; never recompose a run."""
+    import yaml
+    from omegaconf import OmegaConf
+
+    for path in sorted(results_root.glob("*/.hydra/config.yaml")):
+        raw = path.read_text()
+        data = yaml.safe_load(raw)
+        configured = data.get("experiment", {}).get("output_dir")
+        if not isinstance(configured, str):
+            continue
+        candidate = Path(configured)
+        if not candidate.is_absolute():
+            candidate = MADE / candidate
+        if candidate.resolve() != output_dir.resolve():
+            continue
+        resolved = OmegaConf.to_yaml(OmegaConf.create(data), resolve=True)
+        secret = os.environ.get("MATERIALS_PROJECT_API_KEY")
+        if secret:
+            raw = raw.replace(secret, "[REDACTED]")
+            resolved = resolved.replace(secret, "[REDACTED]")
+        target = output_dir / "hydra"
+        target.mkdir(exist_ok=True)
+        (target / "config.yaml").write_text(raw)
+        (output_dir / "resolved_config.yaml").write_text(resolved)
+        overrides = path.with_name("overrides.yaml")
+        if overrides.is_file():
+            text = overrides.read_text()
+            if secret:
+                text = text.replace(secret, "[REDACTED]")
+            (target / "overrides.yaml").write_text(text)
+        return True
+    return False
+
+
 def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> int:
     output_dir = (
         MADE
@@ -106,6 +141,8 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
         str(attempt),
     ]
     history: list[dict[str, Any]] = []
+    started, last_progress = time.monotonic(), 0.0
+    print(f"Starting real protocol unit: {method} {system} seed={seed}", flush=True)
     with live_log.open("w") as log:
         process = subprocess.Popen(
             command,
@@ -119,6 +156,17 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
                 observed = checkpoint_history(output_dir, MADE / "checkpoints")
                 if len(observed) > len(history):
                     history = observed
+                    print(
+                        f"Official checkpoint: {history[-1].get('queries_used')} queries",
+                        flush=True,
+                    )
+                if time.monotonic() - last_progress >= 45:
+                    last_progress = time.monotonic()
+                    print(
+                        f"Process active; elapsed={int(last_progress - started)}s, "
+                        f"captured_queries={len(history)}",
+                        flush=True,
+                    )
                 time.sleep(0.1)
         except BaseException:
             process.terminate()
@@ -136,9 +184,11 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
     metadata = json.loads(metadata_path.read_text()) if metadata_path.is_file() else {}
     completed = process.returncode == 0 and metadata.get("status") == "completed"
     record = preserve_history(history, output_dir, completed)
+    config_saved = preserve_configuration(output_dir, MADE / "results")
     if metadata:
         metadata["m2_capture"] = {
             "complete_curve": record["complete_curve"],
+            "resolved_config_saved": config_saved,
             "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             "made_upstream_commit": metadata.get("protocol_settings", {}).get(
                 "made_upstream_commit"
@@ -165,7 +215,8 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
         # Output is already masked by Actions when it contains a configured secret.
         # The benchmark should never print credentials; retain its failure context.
         print(log_path.read_text()[-12000:], file=sys.stderr)
-    return process.returncode or (0 if completed else 1)
+    captured = record["complete_curve"] and config_saved
+    return process.returncode or (0 if completed and captured else 1)
 
 
 def main() -> None:

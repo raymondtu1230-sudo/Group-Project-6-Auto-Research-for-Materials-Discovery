@@ -1,0 +1,27 @@
+{
+  "kind": "real_chemeleon_checkpoint_integration",
+  "benchmark_score": false,
+  "completed_at_utc": "2026-10-19T06:52:06.243823+00:00",
+  "seed": 17,
+  "device": "cpu",
+  "torch_version": "2.9.1+cu128",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "model_class": "DiffusionModule",
+  "actual_sampling_calls": 3,
+  "samples_per_call": [
+    1,
+    1,
+    1
+  ],
+  "structure_continuation_equal": true,
+  "checkpoint_state_equal": true,
+  "external_random_streams_preserved": true,
+  "wall_time_seconds": 33.418,
+  "passed": true,
+  "initial_sha256": "fcbe2570fef4b9c54da61ad648327b1ddf00a8fd89127addae45fc929b2021ba",
+  "expected_sha256": "8249db86c0ba5548d17b0d5313879f1018eaeb8e3c10277e9dc4aeca6940a41d",
+  "resumed_sha256": "8249db86c0ba5548d17b0d5313879f1018eaeb8e3c10277e9dc4aeca6940a41d",
+  "github_run_id": 39212250266,
+  "revision": "722fc606413b175ca5bb39e9807186dc756299fd",
+  "source_url": "https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39212250266"
+}

@@ -56,6 +56,8 @@ class Run:
 
 
 def load_run(path: Path) -> Run:
+    import yaml
+
     metadata = read_json(path / "run_metadata.json")
     if metadata.get("status") != "completed":
         raise ValueError("Run is not marked completed")
@@ -72,6 +74,13 @@ def load_run(path: Path) -> Run:
         != budget
     ):
         raise ValueError("Query budget differs from the recorded protocol")
+    config = yaml.safe_load((path / "resolved_config.yaml").read_text())
+    if (
+        config.get("environment", {}).get("budget") != budget
+        or config.get("experiment", {}).get("seed") != metadata["seed"]
+        or config.get("dataset", {}).get("elements") != metadata["system"]
+    ):
+        raise ValueError("Resolved run configuration differs from metadata")
     payload = read_json(path / "trajectories/episode_000.json")
     if read_json(path / "summary/summary.json").get("episodes") != 1:
         raise ValueError("Exactly one episode per system and seed is required")
@@ -251,6 +260,62 @@ def summarize(runs: list[Run]) -> list[dict[str, Any]]:
     return result
 
 
+def summarize_methods(
+    runs: list[Run], systems: list[list[str]], seeds: list[int]
+) -> list[dict[str, Any]]:
+    """Equal-weight system means per seed, then mean/sample SD across seeds."""
+    expected = {("-".join(system), seed) for system in systems for seed in seeds}
+    groups: dict[tuple[str, str], list[Run]] = defaultdict(list)
+    for run in runs:
+        groups[(run.row["method"], run.row["split"])].append(run)
+    result = []
+    for (method, split), group in sorted(groups.items()):
+        index = {(r.row["system"], r.row["seed"]): r for r in group}
+        complete = expected == set(index)
+        row: dict[str, Any] = {
+            "method": method,
+            "split": split,
+            "runs_available": len(index),
+            "runs_expected": len(expected),
+            "systems_expected": len(systems),
+            "seeds_expected": len(seeds),
+            "complete_method_sweep": complete,
+            "aggregation": "equal_weight_system_mean_per_seed_then_seed_mean_and_sample_sd",
+        }
+        for field in (
+            "mSUN_at_B",
+            "AUDC",
+            "wall_time_seconds",
+            "known_cost_usd",
+            "AF_vs_random",
+            "EF_vs_random",
+            "AF_vs_chemeleon",
+            "EF_vs_chemeleon",
+        ):
+            seed_means = []
+            if complete:
+                for seed in seeds:
+                    values = [
+                        index[("-".join(system), seed)].row.get(field)
+                        for system in systems
+                    ]
+                    if all(
+                        isinstance(value, (int, float)) and math.isfinite(value)
+                        for value in values
+                    ):
+                        seed_means.append(statistics.mean(values))
+            row[f"{field}_seed_n"] = len(seed_means)
+            all_seeds = bool(seed_means) and len(seed_means) == len(seeds)
+            row[f"{field}_mean"] = statistics.mean(seed_means) if all_seeds else None
+            row[f"{field}_std"] = (
+                statistics.stdev(seed_means)
+                if all_seeds and len(seed_means) > 1
+                else None
+            )
+        result.append(row)
+    return result
+
+
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     if rows:
         fields = list(dict.fromkeys(key for row in rows for key in row))
@@ -315,6 +380,8 @@ def main() -> None:
         "--allow-partial", action="store_true", help="Development review only"
     )
     args = parser.parse_args()
+    if args.output.exists() and any(args.output.iterdir()):
+        parser.error("Report output already contains files; choose a new directory")
     runs, issues = collect(args.results_root, args.split)
     protocol = yaml.safe_load((M1_DIR / "protocol/protocol_v1.yaml").read_text())
     accepted = []
@@ -338,21 +405,35 @@ def main() -> None:
         for seed in protocol["repeats"]["seeds"]
     }
     missing = sorted(expected - {unit_key(run.metadata) for run in runs})
+    comparison_error = None
+    try:
+        compare(runs)
+    except ValueError as error:
+        comparison_error = str(error)
+        issues.append({"kind": "incomparable_runs", "error": comparison_error})
     args.output.mkdir(parents=True, exist_ok=True)
     audit = {
         "split": args.split,
         "validated_runs": len(runs),
         "missing_units": missing,
+        "missing_baseline_units": [unit for unit in missing if unit[0] in BASELINES],
         "issues": issues,
         "final_comparison_complete": not missing
+        and not any(x["kind"] != "superseded_attempt" for x in issues),
+        "baseline_sweep_complete": not any(unit[0] in BASELINES for unit in missing)
         and not any(x["kind"] != "superseded_attempt" for x in issues),
     }
     (args.output / "validation.json").write_text(json.dumps(audit, indent=2))
     if not runs:
         raise SystemExit("No complete real-material runs to score; see validation.json")
-    compare(runs)
+    if comparison_error:
+        raise SystemExit(comparison_error)
     write_csv(args.output / "per_run.csv", [run.row for run in runs])
     write_csv(args.output / "per_system_summary.csv", summarize(runs))
+    write_csv(
+        args.output / "per_method_summary.csv",
+        summarize_methods(runs, systems, protocol["repeats"]["seeds"]),
+    )
     plot_curves(runs, args.output)
     print(
         json.dumps(

@@ -78,7 +78,12 @@ development systems and seeds 17, 29, 43 in separate processes. Preserve every
 failed attempt and choose a new attempt number when retrying.
 
 The first development unit is an end-to-end gate, not the complete 36-unit
-baseline sweep. Official smoke tests use synthetic data and AnalyticOracle;
+baseline sweep. The workflow reads all units from the protocol, runs the two
+gates, then the remaining 34 units with at most four concurrent jobs. It preserves
+each attempt and automatically produces a development report after the sweep,
+including missing/failed units. `baseline_sweep_complete` is separate from
+`final_comparison_complete`, which also requires M1's full integrated method.
+Official smoke tests use synthetic data and AnalyticOracle;
 they verify integration and do not count as materials-discovery results.
 
 ## Offline reporting
@@ -92,7 +97,10 @@ uv run python ../../M2/evaluate.py \
 
 Without `--allow-partial`, all protocol-required methods/systems/seeds are
 required for a final comparison. The report includes validation findings,
-per-run CSV, per-system mean/sample-standard-deviation CSV, and PNG/SVG curves.
+per-run CSV, per-system mean/sample-standard-deviation CSV, a per-method table,
+and PNG/SVG curves. Method-level summaries first average systems equally for
+each seed, then report the mean and sample standard deviation across seeds.
+An incomplete method sweep has no claimed overall score.
 Single repeats have no estimated standard deviation. Missing paired baselines,
 token usage and dollar costs stay missing. Recorded model-inference prices do
 not represent hardware or electricity costs; wall time and oracle queries are
@@ -105,10 +113,23 @@ by system, seed and budget. Zero-baseline conventions are labelled. Counts can
 decrease when the hull changes; curves are not forced to be monotonic.
 
 The evaluator checks completed status, B queries, complete official history,
-matching final metrics, identical protocol settings and material-reference
+the actual saved resolved configuration, matching final metrics, identical
+protocol settings and material-reference
 snapshots. Only offline evaluation hashes the reference snapshot; the router
 cannot inspect it. A newer failed attempt is not silently replaced by an older
 success. Synthetic fixtures exist only in pytest temporary directories.
+
+## Verification evidence
+
+- [Required M1 checks and official smoke: passed](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39211626362).
+- [Actual Materials Project request and real Chemeleon continuation: passed](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39212250266).
+- Small machine-readable reports with the tested revisions are in
+  `verification/`; raw job artifacts contain the generated structures.
+
+The actual model check executes three CPU sampling calls and verifies identical
+continued/resumed structures, matching checkpoint state, and preservation of
+external Python/NumPy/Torch random streams. It is not a discovery benchmark.
+Materials performance numbers are populated only from completed protocol units.
 
 ## Handoff schedule
 
