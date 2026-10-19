@@ -1,0 +1,10 @@
+# M3 stuck detection and re-planning (called only when enable_reflection=true).
+_target_: made.agents.m3_planning.M3StuckReplanPolicy
+window: 6                      # K: stuck if no new discovery in the last K queries
+max_repeat: 2                  # stuck if a planned formula was tried this often in K
+cooldown: 3                    # queries between re-plans
+max_stoichiometry: ${agent.planner.max_stoichiometry}
+max_candidates: 32
+seed: ${experiment.seed}
+max_history: 64
+max_events: 50

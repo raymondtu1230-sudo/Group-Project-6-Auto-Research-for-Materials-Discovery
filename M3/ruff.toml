@@ -1,0 +1,6 @@
+# Same lint/format rules as M1/MADE. `made` is marked first-party explicitly so
+# import sorting is identical whether or not M3 is installed into M1.
+extend = "../M1/MADE/pyproject.toml"
+
+[lint.isort]
+known-first-party = ["made"]

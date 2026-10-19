@@ -1,0 +1,29 @@
+# M3 test record, 2026-10-19T11:45Z, Windows 11, Python 3.12.14, run from M1/MADE
+
+## On main as published (M3/ only, M1 unchanged)
+
+$ uv run pytest -q ../../M3/tests
+7 passed, 1 skipped in 0.23s
+
+$ uv run ruff check ../../M3 && uv run ruff format --check ../../M3
+All checks passed!
+9 files already formatted
+
+## After: uv run python ../../M3/install.py --install
+
+M1 now matches M3/integration
+
+$ uv run pytest -q tests/test_m1_integrated.py tests/test_m3_planning.py
+37 passed, 2 skipped, 3 warnings in 48.92s
+
+$ PYTHONPATH=../../M4/src uv run pytest -q tests/test_m3_planning.py
+22 passed, 3 warnings in 46.89s
+
+$ PYTHONPATH=.. uv run pytest -q ../tests
+7 passed in 0.50s
+
+$ uv run pytest -q ../../M3/tests
+8 passed in 0.24s
+
+$ uv run ruff check src/made/agents/m3_planning.py tests/test_m3_planning.py ../run_experiment.py ../tests/test_protocol.py
+All checks passed!

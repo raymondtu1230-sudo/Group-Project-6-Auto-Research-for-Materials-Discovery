@@ -1,0 +1,15 @@
+# M3 sub-goal research planner (plan -> propose batch -> review -> update plan).
+# Accepts every GridSearchPlanner field, so the planner block in
+# m1_integrated.yaml (seed, num_compositions, num_candidates, ...) still applies.
+_target_: made.agents.m3_planning.M3ResearchPlanner
+max_stoichiometry: 20
+num_compositions: 1
+num_candidates: 32
+seed: null
+selection_strategy: diversity
+batch_size: 4                  # queries per sub-goal before the plan is reviewed
+coverage_weight: 0.5           # bonus for unexplored share of a sub-goal
+near_hull_threshold: 0.1       # eV/atom; memory near-misses count as half a success
+max_attempts_per_composition: 2
+memory_failure_limit: 2        # skip formulas that memory shows failing this often
+max_trace: 20
