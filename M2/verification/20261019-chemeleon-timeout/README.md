@@ -54,8 +54,9 @@ diagnostics. The new fields never enter agent state or scientific metrics.
 The manual workflow defaults to `mode=chemeleon_retry`, which selects only
 the first development Chemeleon unit and skips the wider sweep. Random is
 not rerun. A rerun of the same retry workflow attempt is blocked. This is one
-retry, not an automatic retry loop. See `audit.json` for the actual launch
-status; preparation alone is not reported as a started or successful run.
+retry, not an automatic retry loop. The historical `audit.json` records preparation before launch. See
+[`retry-status.json`](retry-status.json) for the later observed launch and job
+status; a started workflow is not a successful scientific result.
 
 Because the active workflow exists only on the development branch, the same
 recovery can be launched by one explicit `retry-request.json` commit in this
