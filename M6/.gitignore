@@ -1,3 +1,7 @@
 logs/
 __pycache__/
 .pytest_cache/
+# Local only: drafts and generated outputs are not committed.
+comms/
+report/
+results/

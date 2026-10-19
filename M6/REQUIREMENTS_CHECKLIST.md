@@ -28,7 +28,7 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | # | Requirement | Owner | Status | File(s) |
 | --- | --- | --- | --- | --- |
 | P1 | Official `scripts/run_benchmark.py` runner | M1 | ✅ | `M1/run_experiment.py` |
-| P2 | Course-frozen commit, env, oracle, systems | TA → M1 | ⛔ not yet announced; asked in TA email | `M6/comms/TA_EMAIL.md` |
+| P2 | Course-frozen commit, env, oracle, systems | TA → M1 | ⛔ not yet announced; asked the TA (M6) | – |
 | P3 | Optimize on dev only; final ranking on held-out systems chosen by the teaching team | M6 | 🟡 rule adopted; hidden split not in runner | `M6/PROTOCOL_ADOPTION.md` |
 | P4 | Same model, oracle, budget, tools, systems, evaluator for all methods | M1, M6 | ✅ by protocol v1; checked by `M2/evaluate.py` | `M1/protocol/` |
 | P5 | Three repeats preferred; one allowed if stated | M6 | 🟡 3 seeds planned; 1-seed fallback defined for held-out | `M6/COMPUTE_PLAN.md` §4 |
@@ -40,28 +40,28 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 
 | # | Section (brief) | Owner | Status | File(s) |
 | --- | --- | --- | --- | --- |
-| R1 | Leaderboard: mSUN@B, AUDC, AF, EF, research cost for our method and both baselines | M2 data, M6 | ⬜ template ready | `M6/report/REPORT_TEMPLATE.md` §4 |
+| R1 | Leaderboard: mSUN@B, AUDC, AF, EF, research cost for our method and both baselines | M2 data, M6 | ⬜ M6 has a local template | – |
 | R2 | Discovery curves | M2 | 🟡 plotting works (`evaluate.py`); partial curve only | `M2/verification/20261019-chemeleon-recovery/discovery_curves.png` |
-| R3 | Component ablation | M3, M4, M5, M2; M6 combines | ⬜ after freeze; dev only | `M3/report/M3_RESULTS.md`, template §6 |
-| R4 | Generalization: dev vs held-out | M6 | 🟡 tool ready and tested; no held-out data yet | `M6/generalization.py`, `M6/results/20261019-dev-partial/` |
-| R5 | Failure classification: over-exploitation, one trajectory | M5, M4, M6 | ⬜ logging exists (`decision_log`) | template §8 |
-| R6 | Failure classification: wasteful exploration, one trajectory | M5, M4, M6 | ⬜ | template §8 |
-| R7 | Discussion: which mechanisms helped, remaining bottlenecks | M6 | ⬜ | template §9 |
-| R8 | Research cost: oracle calls, tokens/USD, wall time | M2, M6 | 🟡 recorded per run | `M1/cost_tracking.py`, template §10 |
-| R9 | Method text from each member (due 24 Oct) | M1–M5 | 🟡 M2, M3, M4 drafts exist; M1 short draft; M5 design doc | see template §2 |
-| R10 | Per-material table to M2 (27 Oct) | M6 | ⬜ | template Appendix A |
+| R3 | Component ablation | M3, M4, M5, M2; M6 combines | ⬜ after freeze; dev only | `M3/report/M3_RESULTS.md` |
+| R4 | Generalization: dev vs held-out | M6 | 🟡 tool ready and tested; no held-out data yet | `M6/generalization.py` (tested on `M2/verification/20261019-chemeleon-recovery/`) |
+| R5 | Failure classification: over-exploitation, one trajectory | M5, M4, M6 | ⬜ logging exists (`decision_log`) | – |
+| R6 | Failure classification: wasteful exploration, one trajectory | M5, M4, M6 | ⬜ | – |
+| R7 | Discussion: which mechanisms helped, remaining bottlenecks | M6 | ⬜ | – |
+| R8 | Research cost: oracle calls, tokens/USD, wall time | M2, M6 | 🟡 recorded per run | `M1/cost_tracking.py` |
+| R9 | Method text from each member (due 24 Oct) | M1–M5 | 🟡 M2, M3, M4 drafts exist; M1 short draft; M5 design doc | sent to M6 |
+| R10 | Per-material table to M2 (27 Oct) | M6 | ⬜ | – |
 
 ## 4.3 Presentation
 
 | # | Requirement | Owner | Status | File(s) |
 | --- | --- | --- | --- | --- |
-| S1 | 10 min talk + 5 min Q&A | M6 | 🟡 outline, 9:55 budget | `M6/report/SLIDES_OUTLINE.md` |
+| S1 | 10 min talk + 5 min Q&A | M6 | 🟡 M6 has a local outline, 9:55 budget | – |
 | S2 | Main idea and architecture | M1 + owners | 🟡 drafts exist | `M1/SLIDES_DRAFT.md`, `M3/report/*.pptx`, `M4/report/*.pptx` |
 | S3 | How the system uses MADE and manages the budget | M1 | 🟡 | `M1/SLIDES_DRAFT.md` slide 2 |
-| S4 | Key results vs both baselines | M6 | ⬜ | outline slides 9–12 |
-| S5 | Trajectories, discoveries, failure cases | M5, M6 | ⬜ | outline slide 13 |
-| S6 | Conclusions and lessons | M6 | ⬜ | outline slide 14 |
-| S7 | Rehearsal 29 Oct | M6 | ⬜ | outline "Rehearsal" |
+| S4 | Key results vs both baselines | M6 | ⬜ | – |
+| S5 | Trajectories, discoveries, failure cases | M5, M6 | ⬜ | – |
+| S6 | Conclusions and lessons | M6 | ⬜ | – |
+| S7 | Rehearsal 29 Oct | M6 | ⬜ | – |
 
 ## Submission
 

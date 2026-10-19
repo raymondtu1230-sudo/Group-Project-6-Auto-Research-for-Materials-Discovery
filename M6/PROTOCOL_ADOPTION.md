@@ -88,5 +88,4 @@ Until then: `run_check_baselines.sh` has `--split` and `generalization.py` has
 - Default: 3 seeds (17, 29, 43) on check and hidden, like dev.
 - Fallback if compute runs out: seed 17 only, for **every** method on that split, decided
   before the run starts and stated in the report and the leaderboard caption. The brief
-  allows one run if compute is limited and this is stated. The TA is asked to confirm
-  (`comms/TA_EMAIL.md`). With one seed there is no SD; `generalization.py` leaves it blank.
+  allows one run if compute is limited and this is stated. The TA is asked to confirm. With one seed there is no SD; `generalization.py` leaves it blank.

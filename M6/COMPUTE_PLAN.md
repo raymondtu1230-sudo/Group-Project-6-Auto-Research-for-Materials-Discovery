@@ -70,7 +70,7 @@ GitHub details:
   `m2/tool-routing-evaluation`) reads `dev_systems.json` and runs `--split dev`.
   It needs a `split` input (`dev|check|hidden`) that selects `<split>_systems.json`
   and passes `--split`. M2 owns that file and the Materials Project secret, so M6
-  is asking M2 to add the input and dispatch it (see `comms/GROUP_MESSAGE.md`).
+  is asking M2 to add the input and dispatch it.
 - Per-job limit: GitHub-hosted jobs stop at 6 h; M2's step timeout is 330 min. A
   4.4 h Chemeleon unit fits, but a slower system might not. One timeout already
   happened (`M2/verification/20261019-chemeleon-timeout/`). Follow the admission
