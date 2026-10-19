@@ -1,0 +1,21 @@
+{
+  "kind": "actual_materials_project_access_check",
+  "benchmark_score": false,
+  "system": [
+    "Mg",
+    "Sn",
+    "Sr"
+  ],
+  "endpoint": "materials/summary",
+  "max_documents": 1,
+  "status": "accepted",
+  "documents_returned": 1,
+  "material_ids": [
+    "mp-1028280"
+  ],
+  "database_version": "2026.04.13",
+  "checked_at_utc": "2026-10-19T06:51:15.300267+00:00",
+  "github_run_id": 39212250266,
+  "revision": "722fc606413b175ca5bb39e9807186dc756299fd",
+  "source_url": "https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39212250266"
+}
