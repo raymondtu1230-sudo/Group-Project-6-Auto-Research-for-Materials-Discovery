@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "run_id": 39234974449,
+  "job_id": 118001953048,
+  "scope": "Sampling progress notifications only; not oracle queries or discovery metrics.",
+  "baseline": {
+    "observed_at": "2026-10-19T10:24:00Z",
+    "batch": 1,
+    "sampling_step": 47,
+    "source": "Previously delivered manual live-log observation."
+  },
+  "previously_delivered_latest": {
+    "observed_at": "2026-10-19T12:00:00Z",
+    "batch": 2,
+    "sampling_step": 192,
+    "completed_batches": 1,
+    "source": "Previously delivered user conversation status; CPU and sampling advancement were reported."
+  },
+  "notifications": [
+    {
+      "observed_at": "2026-10-19T13:08:34.400Z",
+      "batch": 3,
+      "sampling_step": 202,
+      "sampling_total": 256,
+      "total_batches": 4,
+      "completed_batches": 2,
+      "captured_queries": 0,
+      "source": "GitHub live job UI, expanded experiment step",
+      "source_url": "https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39234974449/job/118001953048",
+      "reported_milestones": [
+        "batch2:200",
+        "batch2:250",
+        "batch2:256",
+        "batch2:complete",
+        "batch3:50",
+        "batch3:100",
+        "batch3:150",
+        "batch3:200"
+      ],
+      "diagnostics": [
+        {
+          "process_cpu_seconds": 21578.65,
+          "sampling_step": 193,
+          "elapsed_seconds": 10730
+        },
+        {
+          "process_cpu_seconds": 21668.84,
+          "sampling_step": 196,
+          "elapsed_seconds": 10775
+        },
+        {
+          "process_cpu_seconds": 21759.01,
+          "sampling_step": 199,
+          "elapsed_seconds": 10820
+        },
+        {
+          "process_cpu_seconds": 21849.18,
+          "sampling_step": 202,
+          "elapsed_seconds": 10865
+        }
+      ],
+      "user_report": "Batches 1 and 2 complete; batch 3 of 4 at 202/256. CPU and sampling advanced. Captured oracle queries remain 0."
+    }
+  ]
+}
