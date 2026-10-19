@@ -1,0 +1,1227 @@
+﻿2026-10-19T16:45:06.3686008Z Current runner version: '2.337.0'
+2026-10-19T16:45:06.3708527Z ##[group]Runner Image Provisioner
+2026-10-19T16:45:06.3709679Z Hosted Compute Agent
+2026-10-19T16:45:06.3710181Z Version: 20261012.601
+2026-10-19T16:45:06.3711020Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T16:45:06.3711682Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T16:45:06.3712272Z Worker ID: {7e75d874-3713-488e-9377-e5635cc7f386}
+2026-10-19T16:45:06.3712943Z Region: westus3
+2026-10-19T16:45:06.3713404Z Cloud: Azure
+2026-10-19T16:45:06.3713884Z ##[endgroup]
+2026-10-19T16:45:06.3715166Z ##[group]Operating System
+2026-10-19T16:45:06.3715721Z Ubuntu
+2026-10-19T16:45:06.3716218Z 24.04.5
+2026-10-19T16:45:06.3716715Z LTS
+2026-10-19T16:45:06.3717146Z ##[endgroup]
+2026-10-19T16:45:06.3717668Z ##[group]Runner Image
+2026-10-19T16:45:06.3718205Z Image: ubuntu-24.04
+2026-10-19T16:45:06.3718766Z Version: 20261012.334.1
+2026-10-19T16:45:06.3719800Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T16:45:06.3721370Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-19T16:45:06.3722224Z ##[endgroup]
+2026-10-19T16:45:06.3723177Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T16:45:06.3725032Z Contents: read
+2026-10-19T16:45:06.3725595Z Metadata: read
+2026-10-19T16:45:06.3726096Z ##[endgroup]
+2026-10-19T16:45:06.3727916Z Secret source: Actions
+2026-10-19T16:45:06.3728787Z Cache mode: write
+2026-10-19T16:45:06.3729366Z Prepare workflow directory
+2026-10-19T16:45:06.4104716Z Prepare all required actions
+2026-10-19T16:45:06.4144387Z Getting action download info
+2026-10-19T16:45:06.7509609Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-19T16:45:06.8805819Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-19T16:45:06.9858471Z Download action repository 'astral-sh/setup-uv@v6' (SHA:d0cc045d04ccac9d8b7881df0226f9e82c39688e)
+2026-10-19T16:45:07.9702292Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-10-19T16:45:08.9646537Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-19T16:45:10.0764292Z Complete job name: restore-on-another-runner
+2026-10-19T16:45:10.2094684Z ##[group]Run actions/checkout@v4
+2026-10-19T16:45:10.2095330Z with:
+2026-10-19T16:45:10.2095774Z   repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:45:10.2098161Z   token: ***
+2026-10-19T16:45:10.2098492Z   ssh-strict: true
+2026-10-19T16:45:10.2098772Z   ssh-user: git
+2026-10-19T16:45:10.2099100Z   persist-credentials: true
+2026-10-19T16:45:10.2099395Z   clean: true
+2026-10-19T16:45:10.2099657Z   sparse-checkout-cone-mode: true
+2026-10-19T16:45:10.2100045Z   fetch-depth: 1
+2026-10-19T16:45:10.2100332Z   fetch-tags: false
+2026-10-19T16:45:10.2100628Z   show-progress: true
+2026-10-19T16:45:10.2101232Z   lfs: false
+2026-10-19T16:45:10.2101614Z   submodules: false
+2026-10-19T16:45:10.2101994Z   set-safe-directory: true
+2026-10-19T16:45:10.2102309Z   allow-unsafe-pr-checkout: false
+2026-10-19T16:45:10.2102937Z env:
+2026-10-19T16:45:10.2103220Z   OMP_NUM_THREADS: 2
+2026-10-19T16:45:10.2103504Z   MKL_NUM_THREADS: 2
+2026-10-19T16:45:10.2103957Z   PYTHONUNBUFFERED: 1
+2026-10-19T16:45:10.2104240Z ##[endgroup]
+2026-10-19T16:45:10.3007569Z Syncing repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:45:10.3008969Z ##[group]Getting Git version info
+2026-10-19T16:45:10.3009571Z Working directory is '/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery'
+2026-10-19T16:45:10.3010379Z [command]/usr/bin/git version
+2026-10-19T16:45:10.3232565Z git version 2.55.0
+2026-10-19T16:45:10.3251164Z ##[endgroup]
+2026-10-19T16:45:10.3264847Z Temporarily overriding HOME='/home/runner/work/_temp/7b243d64-6d8c-46df-9ed9-29f085de67f3' before making global git config changes
+2026-10-19T16:45:10.3265925Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T16:45:10.3270575Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:45:10.3317922Z Deleting the contents of '/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery'
+2026-10-19T16:45:10.3322173Z ##[group]Initializing the repository
+2026-10-19T16:45:10.3326743Z [command]/usr/bin/git init /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:45:10.4484855Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T16:45:10.4486057Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T16:45:10.4487089Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T16:45:10.4487930Z hint: call:
+2026-10-19T16:45:10.4488501Z hint:
+2026-10-19T16:45:10.4490003Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T16:45:10.4492027Z hint:
+2026-10-19T16:45:10.4492419Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T16:45:10.4493042Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T16:45:10.4493514Z hint:
+2026-10-19T16:45:10.4493761Z hint: 	git branch -m <name>
+2026-10-19T16:45:10.4494033Z hint:
+2026-10-19T16:45:10.4494435Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T16:45:10.4495652Z Initialized empty Git repository in /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/.git/
+2026-10-19T16:45:10.4513009Z [command]/usr/bin/git remote add origin https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:45:10.4568722Z ##[endgroup]
+2026-10-19T16:45:10.4569135Z ##[group]Disabling automatic garbage collection
+2026-10-19T16:45:10.4574223Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T16:45:10.4621172Z ##[endgroup]
+2026-10-19T16:45:10.4621864Z ##[group]Setting up auth
+2026-10-19T16:45:10.4622264Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T16:45:10.4658797Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T16:45:10.4964318Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T16:45:10.4997253Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T16:45:10.5196528Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T16:45:10.5229922Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T16:45:10.5431591Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T16:45:10.5584026Z ##[endgroup]
+2026-10-19T16:45:10.5584443Z ##[group]Fetching the repository
+2026-10-19T16:45:10.5591833Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e30b5bb233842797f4ad90c80732bb327d07c0bf:refs/remotes/origin/m2/tool-routing-evaluation
+2026-10-19T16:45:11.9591892Z From https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:45:11.9592860Z  * [new ref]         e30b5bb233842797f4ad90c80732bb327d07c0bf -> origin/m2/tool-routing-evaluation
+2026-10-19T16:45:11.9595212Z ##[endgroup]
+2026-10-19T16:45:11.9595679Z ##[group]Determining the checkout info
+2026-10-19T16:45:11.9596984Z ##[endgroup]
+2026-10-19T16:45:11.9603849Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T16:45:11.9653654Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T16:45:11.9685605Z ##[group]Checking out the ref
+2026-10-19T16:45:11.9697995Z [command]/usr/bin/git checkout --progress --force -B m2/tool-routing-evaluation refs/remotes/origin/m2/tool-routing-evaluation
+2026-10-19T16:45:12.0795064Z Switched to a new branch 'm2/tool-routing-evaluation'
+2026-10-19T16:45:12.0797424Z branch 'm2/tool-routing-evaluation' set up to track 'origin/m2/tool-routing-evaluation'.
+2026-10-19T16:45:12.0812052Z ##[endgroup]
+2026-10-19T16:45:12.0849241Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T16:45:12.0874118Z e30b5bb233842797f4ad90c80732bb327d07c0bf
+2026-10-19T16:45:12.1095611Z ##[group]Run actions/setup-python@v5
+2026-10-19T16:45:12.1095915Z with:
+2026-10-19T16:45:12.1096094Z   python-version: 3.12
+2026-10-19T16:45:12.1096291Z   check-latest: false
+2026-10-19T16:45:12.1098183Z   token: ***
+2026-10-19T16:45:12.1098376Z   update-environment: true
+2026-10-19T16:45:12.1098583Z   allow-prereleases: false
+2026-10-19T16:45:12.1098778Z   freethreaded: false
+2026-10-19T16:45:12.1098959Z env:
+2026-10-19T16:45:12.1099120Z   OMP_NUM_THREADS: 2
+2026-10-19T16:45:12.1099304Z   MKL_NUM_THREADS: 2
+2026-10-19T16:45:12.1099486Z   PYTHONUNBUFFERED: 1
+2026-10-19T16:45:12.1099663Z ##[endgroup]
+2026-10-19T16:45:12.2183187Z ##[group]Installed versions
+2026-10-19T16:45:12.2250426Z (node:2085) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:45:12.2251587Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:45:12.2253500Z Successfully set up CPython (3.12.15)
+2026-10-19T16:45:12.2254249Z ##[endgroup]
+2026-10-19T16:45:12.2480610Z ##[group]Run astral-sh/setup-uv@v6
+2026-10-19T16:45:12.2481076Z with:
+2026-10-19T16:45:12.2481253Z   enable-cache: true
+2026-10-19T16:45:12.2481466Z   cache-dependency-glob: M1/MADE/uv.lock
+2026-10-19T16:45:12.2481712Z   activate-environment: false
+2026-10-19T16:45:12.2482256Z   working-directory: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:45:12.2482819Z   server-url: https://github.com
+2026-10-19T16:45:12.2484764Z   github-token: ***
+2026-10-19T16:45:12.2484962Z   restore-cache: true
+2026-10-19T16:45:12.2485157Z   save-cache: true
+2026-10-19T16:45:12.2485331Z   prune-cache: true
+2026-10-19T16:45:12.2485520Z   ignore-nothing-to-cache: false
+2026-10-19T16:45:12.2485739Z   ignore-empty-workdir: false
+2026-10-19T16:45:12.2485957Z   add-problem-matchers: true
+2026-10-19T16:45:12.2486159Z env:
+2026-10-19T16:45:12.2486324Z   OMP_NUM_THREADS: 2
+2026-10-19T16:45:12.2486568Z   MKL_NUM_THREADS: 2
+2026-10-19T16:45:12.2486761Z   PYTHONUNBUFFERED: 1
+2026-10-19T16:45:12.2487002Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:45:12.2487384Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:45:12.2487737Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:45:12.2488046Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:45:12.2488341Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:45:12.2488648Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:45:12.2488911Z ##[endgroup]
+2026-10-19T16:45:12.4052524Z (node:2094) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:45:12.4053170Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:45:12.4150172Z Trying to find version for uv in: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/uv.toml
+2026-10-19T16:45:12.4152682Z Could not find file: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/uv.toml
+2026-10-19T16:45:12.4154475Z Trying to find version for uv in: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/pyproject.toml
+2026-10-19T16:45:12.4156274Z Could not find file: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/pyproject.toml
+2026-10-19T16:45:12.4157551Z Could not determine uv version from uv.toml or pyproject.toml. Falling back to latest.
+2026-10-19T16:45:12.4158739Z Getting latest version from GitHub API...
+2026-10-19T16:45:12.7586071Z manifest-file not provided, reading from local file.
+2026-10-19T16:45:12.7619067Z manifest-file does not contain version 0.13.1, arch x86_64, platform unknown-linux-gnu. Falling back to GitHub releases.
+2026-10-19T16:45:12.7620623Z Downloading uv from "https://github.com/astral-sh/uv/releases/download/0.13.1/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-10-19T16:45:13.1690025Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/9d5a1ab5-1434-4423-ab1b-9b77a78d58ac -f /home/runner/work/_temp/fde48996-0ad2-4a9d-a774-797d6ca2c955
+2026-10-19T16:45:13.5462699Z Added /home/runner/.local/bin to the path
+2026-10-19T16:45:13.5471758Z Added /opt/hostedtoolcache/uv/0.13.1/x86_64 to the path
+2026-10-19T16:45:13.5485451Z Set UV_CACHE_DIR to /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:45:13.5486147Z Successfully installed uv version 0.13.1
+2026-10-19T16:45:13.5490873Z Searching files using cache dependency glob: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/uv.lock
+2026-10-19T16:45:13.5521253Z /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/uv.lock
+2026-10-19T16:45:13.5543375Z Found 1 files to hash.
+2026-10-19T16:45:13.6482054Z Trying to restore uv cache from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T16:45:13.8502482Z Cache hit for: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T16:45:13.8582187Z (node:2094) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T16:45:15.0921778Z Received 33675278 of 54646798 (61.6%), 32.1 MBs/sec
+2026-10-19T16:45:15.2520174Z Received 54646798 of 54646798 (100.0%), 44.9 MBs/sec
+2026-10-19T16:45:15.2521013Z Cache Size: ~52 MB (54646798 B)
+2026-10-19T16:45:15.2583418Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7dea9110-61bd-4a62-9a6e-da083385bf82/cache.tzst -P -C /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery --use-compress-program unzstd
+2026-10-19T16:45:15.4514693Z Cache restored successfully
+2026-10-19T16:45:15.4544034Z uv cache restored from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T16:45:15.5495990Z ##[group]Run uv sync --locked
+2026-10-19T16:45:15.5496360Z [36;1muv sync --locked[0m
+2026-10-19T16:45:15.8938826Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:45:15.8939100Z env:
+2026-10-19T16:45:15.8939286Z   OMP_NUM_THREADS: 2
+2026-10-19T16:45:15.8939481Z   MKL_NUM_THREADS: 2
+2026-10-19T16:45:15.8939686Z   PYTHONUNBUFFERED: 1
+2026-10-19T16:45:15.8939939Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:45:15.8940311Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:45:15.8941041Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:45:15.8941357Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:45:15.8941661Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:45:15.8941966Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:45:15.8942268Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:45:15.8942584Z ##[endgroup]
+2026-10-19T16:45:15.9194065Z Using CPython 3.12.15 interpreter at: /opt/hostedtoolcache/Python/3.12.15/x64/bin/python3.12
+2026-10-19T16:45:15.9194749Z Creating virtual environment at: .venv
+2026-10-19T16:45:15.9245618Z Resolved 298 packages in 1ms
+2026-10-19T16:45:16.0019068Z    Building made @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE
+2026-10-19T16:45:16.0166983Z Downloading numpy (15.8MiB)
+2026-10-19T16:45:16.0167596Z Downloading ruff (13.6MiB)
+2026-10-19T16:45:16.0181993Z Downloading pandas (11.8MiB)
+2026-10-19T16:45:16.0187972Z Downloading babel (9.7MiB)
+2026-10-19T16:45:16.0188243Z Downloading scikit-learn (8.5MiB)
+2026-10-19T16:45:16.0188643Z Downloading matplotlib (8.3MiB)
+2026-10-19T16:45:16.0188878Z Downloading sympy (6.0MiB)
+2026-10-19T16:45:16.0189237Z Downloading fonttools (4.7MiB)
+2026-10-19T16:45:16.0189604Z Downloading jedi (1.5MiB)
+2026-10-19T16:45:16.0189876Z Downloading pydantic-core (2.0MiB)
+2026-10-19T16:45:16.0190271Z Downloading widgetsnbextension (2.1MiB)
+2026-10-19T16:45:16.0190529Z Downloading tokenizers (3.1MiB)
+2026-10-19T16:45:16.0321640Z Downloading networkx (2.0MiB)
+2026-10-19T16:45:16.0348243Z Downloading nvidia-cusparselt-cu12 (273.9MiB)
+2026-10-19T16:45:16.0348817Z Downloading nvidia-cufft-cu12 (184.2MiB)
+2026-10-19T16:45:16.0349222Z Downloading nvidia-nvshmem-cu12 (118.9MiB)
+2026-10-19T16:45:16.0349634Z Downloading nvidia-curand-cu12 (60.7MiB)
+2026-10-19T16:45:16.0350021Z Downloading scipy (34.0MiB)
+2026-10-19T16:45:16.0350420Z Downloading smact (1.8MiB)
+2026-10-19T16:45:16.0350922Z Downloading nvidia-cuda-cupti-cu12 (9.8MiB)
+2026-10-19T16:45:16.0351317Z Downloading plotly (9.4MiB)
+2026-10-19T16:45:16.0351665Z Downloading debugpy (4.1MiB)
+2026-10-19T16:45:16.0352013Z Downloading botocore (13.9MiB)
+2026-10-19T16:45:16.0352343Z Downloading llvmlite (53.7MiB)
+2026-10-19T16:45:16.0352657Z Downloading wandb (21.8MiB)
+2026-10-19T16:45:16.0352971Z Downloading numba (3.6MiB)
+2026-10-19T16:45:16.0353303Z Downloading torch-geometric (1.2MiB)
+2026-10-19T16:45:16.0353602Z Downloading jupyterlab (11.8MiB)
+2026-10-19T16:45:16.0353816Z Downloading kiwisolver (1.4MiB)
+2026-10-19T16:45:16.0354023Z Downloading aiohttp (1.7MiB)
+2026-10-19T16:45:16.0354231Z Downloading hf-xet (3.2MiB)
+2026-10-19T16:45:16.0354438Z Downloading nvidia-nccl-cu12 (307.4MiB)
+2026-10-19T16:45:16.0354701Z Downloading gemmi (2.5MiB)
+2026-10-19T16:45:16.0355037Z Downloading pymatgen (4.4MiB)
+2026-10-19T16:45:16.0355275Z Downloading notebook (13.8MiB)
+2026-10-19T16:45:16.0355489Z Downloading black (1.7MiB)
+2026-10-19T16:45:16.0355688Z Downloading torch (858.1MiB)
+2026-10-19T16:45:16.0355904Z Downloading nvidia-cublas-cu12 (566.8MiB)
+2026-10-19T16:45:16.0356148Z Downloading nvidia-cudnn-cu12 (674.0MiB)
+2026-10-19T16:45:16.0356570Z Downloading nvidia-cusolver-cu12 (255.1MiB)
+2026-10-19T16:45:16.0367907Z Downloading nvidia-cusparse-cu12 (274.9MiB)
+2026-10-19T16:45:16.0375687Z Downloading sqlalchemy (3.2MiB)
+2026-10-19T16:45:16.0376317Z Downloading ase (2.8MiB)
+2026-10-19T16:45:16.0376895Z Downloading litellm (10.9MiB)
+2026-10-19T16:45:16.0377127Z Downloading grpcio (5.6MiB)
+2026-10-19T16:45:16.0380575Z Downloading triton (162.6MiB)
+2026-10-19T16:45:16.0382331Z Downloading h5py (4.9MiB)
+2026-10-19T16:45:16.0390410Z Downloading nvidia-nvjitlink-cu12 (37.4MiB)
+2026-10-19T16:45:16.0390977Z Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)
+2026-10-19T16:45:16.0396069Z Downloading pillow (6.7MiB)
+2026-10-19T16:45:16.5790614Z  Downloaded kiwisolver
+2026-10-19T16:45:16.6241441Z Downloading pygments (1.2MiB)
+2026-10-19T16:45:16.7677480Z  Downloaded aiohttp
+2026-10-19T16:45:16.7824604Z  Downloaded pydantic-core
+2026-10-19T16:45:16.7827116Z  Downloaded black
+2026-10-19T16:45:16.7827914Z  Downloaded smact
+2026-10-19T16:45:16.7989556Z  Downloaded widgetsnbextension
+2026-10-19T16:45:16.8060652Z Downloading tiktoken (1.1MiB)
+2026-10-19T16:45:16.8064401Z Downloading nvidia-cufile-cu12 (1.1MiB)
+2026-10-19T16:45:16.8068128Z Downloading setuptools (1.1MiB)
+2026-10-19T16:45:16.8125396Z Downloading openai (1.0MiB)
+2026-10-19T16:45:16.8894538Z  Downloaded gemmi
+2026-10-19T16:45:17.0072294Z  Downloaded torch-geometric
+2026-10-19T16:45:17.0588445Z  Downloaded networkx
+2026-10-19T16:45:17.0639829Z  Downloaded pygments
+2026-10-19T16:45:17.1624647Z  Downloaded tokenizers
+2026-10-19T16:45:17.1746681Z  Downloaded tiktoken
+2026-10-19T16:45:17.2144923Z  Downloaded nvidia-cufile-cu12
+2026-10-19T16:45:17.2267419Z  Downloaded hf-xet
+2026-10-19T16:45:17.3578916Z  Downloaded sqlalchemy
+2026-10-19T16:45:17.4265080Z  Downloaded setuptools
+2026-10-19T16:45:17.4565293Z  Downloaded openai
+2026-10-19T16:45:17.4882246Z  Downloaded ase
+2026-10-19T16:45:17.5747022Z  Downloaded numba
+2026-10-19T16:45:17.5925699Z  Downloaded debugpy
+2026-10-19T16:45:17.7958252Z  Downloaded fonttools
+2026-10-19T16:45:17.7958907Z  Downloaded h5py
+2026-10-19T16:45:17.7984667Z  Downloaded pymatgen
+2026-10-19T16:45:17.9242857Z  Downloaded jedi
+2026-10-19T16:45:18.0066767Z  Downloaded grpcio
+2026-10-19T16:45:18.1166709Z  Downloaded sympy
+2026-10-19T16:45:18.2267292Z  Downloaded pillow
+2026-10-19T16:45:18.8474873Z  Downloaded matplotlib
+2026-10-19T16:45:18.9371096Z  Downloaded scikit-learn
+2026-10-19T16:45:19.2058136Z  Downloaded babel
+2026-10-19T16:45:19.2608271Z  Downloaded nvidia-cuda-cupti-cu12
+2026-10-19T16:45:19.2608714Z  Downloaded plotly
+2026-10-19T16:45:19.7298823Z  Downloaded litellm
+2026-10-19T16:45:19.8763603Z  Downloaded jupyterlab
+2026-10-19T16:45:20.1735971Z  Downloaded ruff
+2026-10-19T16:45:20.1749810Z  Downloaded pandas
+2026-10-19T16:45:20.2084117Z  Downloaded botocore
+2026-10-19T16:45:20.2200519Z  Downloaded notebook
+2026-10-19T16:45:20.3035238Z  Downloaded numpy
+2026-10-19T16:45:20.5826226Z  Downloaded wandb
+2026-10-19T16:45:21.7091947Z  Downloaded nvidia-nvjitlink-cu12
+2026-10-19T16:45:21.9361424Z  Downloaded scipy
+2026-10-19T16:45:24.5256532Z       Built made @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE
+2026-10-19T16:45:27.3470337Z  Downloaded nvidia-curand-cu12
+2026-10-19T16:45:27.8521941Z  Downloaded llvmlite
+2026-10-19T16:45:31.7238184Z  Downloaded nvidia-cuda-nvrtc-cu12
+2026-10-19T16:45:35.1501577Z  Downloaded nvidia-nvshmem-cu12
+2026-10-19T16:45:38.4789009Z  Downloaded nvidia-cufft-cu12
+2026-10-19T16:45:42.4831829Z  Downloaded nvidia-cusolver-cu12
+2026-10-19T16:45:43.3695968Z  Downloaded nvidia-cusparse-cu12
+2026-10-19T16:45:44.0838386Z  Downloaded nvidia-cusparselt-cu12
+2026-10-19T16:45:44.1357339Z  Downloaded triton
+2026-10-19T16:45:44.9759581Z  Downloaded nvidia-nccl-cu12
+2026-10-19T16:45:51.7898964Z  Downloaded nvidia-cublas-cu12
+2026-10-19T16:45:54.0395324Z  Downloaded nvidia-cudnn-cu12
+2026-10-19T16:45:57.3902149Z  Downloaded torch
+2026-10-19T16:45:57.4629307Z Prepared 294 packages in 41.53s
+2026-10-19T16:46:01.7570273Z Installed 294 packages in 4.29s
+2026-10-19T16:46:01.7577526Z  + aiohappyeyeballs==2.6.1
+2026-10-19T16:46:01.7577842Z  + aiohttp==3.13.2
+2026-10-19T16:46:01.7578485Z  + aiosignal==1.4.0
+2026-10-19T16:46:01.7578768Z  + alembic==1.17.2
+2026-10-19T16:46:01.7579062Z  + annotated-types==0.7.0
+2026-10-19T16:46:01.7579400Z  + antlr4-python3-runtime==4.9.3
+2026-10-19T16:46:01.7591329Z  + anyio==4.12.0
+2026-10-19T16:46:01.7591634Z  + argon2-cffi==25.1.0
+2026-10-19T16:46:01.7591948Z  + argon2-cffi-bindings==25.1.0
+2026-10-19T16:46:01.7592264Z  + arrow==1.4.0
+2026-10-19T16:46:01.7592513Z  + ase==3.27.0
+2026-10-19T16:46:01.7592762Z  + ase-ga==1.0.3
+2026-10-19T16:46:01.7593031Z  + asttokens==3.0.1
+2026-10-19T16:46:01.7593566Z  + async-lru==2.0.5
+2026-10-19T16:46:01.7593833Z  + asyncer==0.0.8
+2026-10-19T16:46:01.7594096Z  + attrs==25.4.0
+2026-10-19T16:46:01.7594403Z  + average-minimum-distance==1.6.1
+2026-10-19T16:46:01.7594742Z  + babel==2.17.0
+2026-10-19T16:46:01.7595002Z  + backoff==2.2.1
+2026-10-19T16:46:01.7595278Z  + beautifulsoup4==4.14.3
+2026-10-19T16:46:01.7595590Z  + bibtexparser==1.4.3
+2026-10-19T16:46:01.7595873Z  + black==25.12.0
+2026-10-19T16:46:01.7596127Z  + blake3==1.0.8
+2026-10-19T16:46:01.7596395Z  + bleach==6.3.0
+2026-10-19T16:46:01.7596653Z  + boto3==1.42.18
+2026-10-19T16:46:01.7596919Z  + botocore==1.42.18
+2026-10-19T16:46:01.7597203Z  + cached-path==1.8.1
+2026-10-19T16:46:01.7597492Z  + cachetools==6.2.4
+2026-10-19T16:46:01.7597762Z  + cbor2==5.7.1
+2026-10-19T16:46:01.7598035Z  + certifi==2025.11.12
+2026-10-19T16:46:01.7598302Z  + cffi==2.0.0
+2026-10-19T16:46:01.7598570Z  + charset-normalizer==3.4.4
+2026-10-19T16:46:01.7599285Z  + chemeleon-dng==0.1.3 (from git+https://github.com/hspark1212/chemeleon-dng.git@a15307694ccbe3381f856560675aee468cda2aa9)
+2026-10-19T16:46:01.7600024Z  + choreographer==1.2.1
+2026-10-19T16:46:01.7600343Z  + click==8.3.1
+2026-10-19T16:46:01.7600618Z  + cloudpickle==3.1.2
+2026-10-19T16:46:01.7601019Z  + colorlog==6.10.1
+2026-10-19T16:46:01.7601292Z  + comm==0.2.3
+2026-10-19T16:46:01.7601553Z  + configargparse==1.7.1
+2026-10-19T16:46:01.7601841Z  + contourpy==1.3.3
+2026-10-19T16:46:01.7602101Z  + coverage==7.13.1
+2026-10-19T16:46:01.7602372Z  + cycler==0.12.1
+2026-10-19T16:46:01.7602628Z  + debugpy==1.8.19
+2026-10-19T16:46:01.7602889Z  + decorator==5.2.1
+2026-10-19T16:46:01.7603149Z  + defusedxml==0.7.1
+2026-10-19T16:46:01.7603407Z  + dill==0.4.0
+2026-10-19T16:46:01.7603660Z  + diskcache==5.6.3
+2026-10-19T16:46:01.7603913Z  + distro==1.9.0
+2026-10-19T16:46:01.7604160Z  + dm-tree==0.1.8
+2026-10-19T16:46:01.7604403Z  + dspy==3.0.4
+2026-10-19T16:46:01.7604648Z  + e3nn==0.4.4
+2026-10-19T16:46:01.7604895Z  + emmet-core==0.86.2
+2026-10-19T16:46:01.7605162Z  + executing==2.2.1
+2026-10-19T16:46:01.7605438Z  + fastjsonschema==2.21.2
+2026-10-19T16:46:01.7605728Z  + fastuuid==0.14.0
+2026-10-19T16:46:01.7605990Z  + filelock==3.20.1
+2026-10-19T16:46:01.7606241Z  + fire==0.7.1
+2026-10-19T16:46:01.7606484Z  + fonttools==4.61.1
+2026-10-19T16:46:01.7606740Z  + fqdn==1.5.1
+2026-10-19T16:46:01.7606987Z  + frozenlist==1.8.0
+2026-10-19T16:46:01.7607244Z  + fsspec==2025.12.0
+2026-10-19T16:46:01.7607496Z  + gemmi==0.7.4
+2026-10-19T16:46:01.7607735Z  + gepa==0.0.17
+2026-10-19T16:46:01.7607992Z  + gitdb==4.0.12
+2026-10-19T16:46:01.7608303Z  + gitpython==3.1.45
+2026-10-19T16:46:01.7608612Z  + google-api-core==2.28.1
+2026-10-19T16:46:01.7608908Z  + google-auth==2.45.0
+2026-10-19T16:46:01.7609199Z  + google-cloud-core==2.5.0
+2026-10-19T16:46:01.7609514Z  + google-cloud-storage==3.7.0
+2026-10-19T16:46:01.7609824Z  + google-crc32c==1.8.0
+2026-10-19T16:46:01.7610121Z  + google-resumable-media==2.8.0
+2026-10-19T16:46:01.7610473Z  + googleapis-common-protos==1.72.0
+2026-10-19T16:46:01.7610918Z  + greenlet==3.3.0
+2026-10-19T16:46:01.7611179Z  + grpcio==1.67.1
+2026-10-19T16:46:01.7611436Z  + grpclib==0.4.9
+2026-10-19T16:46:01.7611693Z  + h11==0.16.0
+2026-10-19T16:46:01.7611937Z  + h2==4.3.0
+2026-10-19T16:46:01.7612179Z  + h5py==3.15.1
+2026-10-19T16:46:01.7612421Z  + hf-xet==1.2.0
+2026-10-19T16:46:01.7612745Z  + hpack==4.1.0
+2026-10-19T16:46:01.7613001Z  + httpcore==1.0.9
+2026-10-19T16:46:01.7613256Z  + httpx==0.28.1
+2026-10-19T16:46:01.7613514Z  + huggingface-hub==1.2.3
+2026-10-19T16:46:01.7613963Z  + hydra-core==1.3.2
+2026-10-19T16:46:01.7614239Z  + hyperframe==6.1.0
+2026-10-19T16:46:01.7614495Z  + idna==3.11
+2026-10-19T16:46:01.7614758Z  + importlib-metadata==8.7.1
+2026-10-19T16:46:01.7615061Z  + iniconfig==2.3.0
+2026-10-19T16:46:01.7615318Z  + ipykernel==7.1.0
+2026-10-19T16:46:01.7615581Z  + ipython==9.8.0
+2026-10-19T16:46:01.7615861Z  + ipython-pygments-lexers==1.1.1
+2026-10-19T16:46:01.7621222Z  + ipywidgets==8.1.8
+2026-10-19T16:46:01.7631225Z  + isoduration==20.11.0
+2026-10-19T16:46:01.7631517Z  + isort==7.0.0
+2026-10-19T16:46:01.7631943Z  + jedi==0.19.2
+2026-10-19T16:46:01.7632190Z  + jinja2==3.1.6
+2026-10-19T16:46:01.7632452Z  + jiter==0.12.0
+2026-10-19T16:46:01.7632710Z  + jmespath==1.0.1
+2026-10-19T16:46:01.7632963Z  + joblib==1.5.3
+2026-10-19T16:46:01.7633215Z  + json-repair==0.54.3
+2026-10-19T16:46:01.7633489Z  + json5==0.12.1
+2026-10-19T16:46:01.7633751Z  + jsonpointer==3.0.0
+2026-10-19T16:46:01.7634036Z  + jsonschema==4.25.1
+2026-10-19T16:46:01.7634349Z  + jsonschema-specifications==2025.9.1
+2026-10-19T16:46:01.7634692Z  + jupyter==1.1.1
+2026-10-19T16:46:01.7634972Z  + jupyter-client==8.7.0
+2026-10-19T16:46:01.7635273Z  + jupyter-console==6.6.3
+2026-10-19T16:46:01.7635568Z  + jupyter-core==5.9.1
+2026-10-19T16:46:01.7635850Z  + jupyter-events==0.12.0
+2026-10-19T16:46:01.7636189Z  + jupyter-lsp==2.3.0
+2026-10-19T16:46:01.7636464Z  + jupyter-server==2.17.0
+2026-10-19T16:46:01.7636774Z  + jupyter-server-terminals==0.5.3
+2026-10-19T16:46:01.7637102Z  + jupyterlab==4.5.1
+2026-10-19T16:46:01.7637395Z  + jupyterlab-pygments==0.3.0
+2026-10-19T16:46:01.7637728Z  + jupyterlab-server==2.28.0
+2026-10-19T16:46:01.7638043Z  + jupyterlab-widgets==3.0.16
+2026-10-19T16:46:01.7638346Z  + kaleido==1.2.0
+2026-10-19T16:46:01.7638605Z  + kiwisolver==1.4.9
+2026-10-19T16:46:01.7638868Z  + lark==1.3.1
+2026-10-19T16:46:01.7639117Z  + latexcodec==3.0.1
+2026-10-19T16:46:01.7639399Z  + lightning-utilities==0.15.2
+2026-10-19T16:46:01.7639701Z  + litellm==1.80.11
+2026-10-19T16:46:01.7639967Z  + llvmlite==0.46.0
+2026-10-19T16:46:01.7640218Z  + lmdb==1.7.5
+2026-10-19T16:46:01.7640461Z  + logistro==2.0.1
+2026-10-19T16:46:01.7640836Z  + mace-torch==0.3.14
+2026-10-19T16:46:01.7641725Z  + made==0.1.0 (from file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE)
+2026-10-19T16:46:01.7642647Z  + magicattr==0.1.6
+2026-10-19T16:46:01.7642900Z  + mako==1.3.10
+2026-10-19T16:46:01.7643158Z  + markdown-it-py==4.0.0
+2026-10-19T16:46:01.7643456Z  + markupsafe==3.0.3
+2026-10-19T16:46:01.7643756Z  + matplotlib==3.10.8
+2026-10-19T16:46:01.7644036Z  + matplotlib-inline==0.2.1
+2026-10-19T16:46:01.7644331Z  + matscipy==1.2.0
+2026-10-19T16:46:01.7644590Z  + mdurl==0.1.2
+2026-10-19T16:46:01.7644844Z  + mistune==3.2.0
+2026-10-19T16:46:01.7645097Z  + modal==1.3.0.post1
+2026-10-19T16:46:01.7645359Z  + monty==2025.3.3
+2026-10-19T16:46:01.7645621Z  + mp-api==0.45.15
+2026-10-19T16:46:01.7645885Z  + mpmath==1.3.0
+2026-10-19T16:46:01.7646139Z  + msgpack==1.1.2
+2026-10-19T16:46:01.7646400Z  + multidict==6.7.0
+2026-10-19T16:46:01.7646667Z  + multiprocess==0.70.18
+2026-10-19T16:46:01.7646973Z  + mypy-extensions==1.1.0
+2026-10-19T16:46:01.7647258Z  + narwhals==2.14.0
+2026-10-19T16:46:01.7647509Z  + nbclient==0.10.4
+2026-10-19T16:46:01.7647762Z  + nbconvert==7.16.6
+2026-10-19T16:46:01.7648023Z  + nbformat==5.10.4
+2026-10-19T16:46:01.7648287Z  + nest-asyncio==1.6.0
+2026-10-19T16:46:01.7648562Z  + networkx==3.6.1
+2026-10-19T16:46:01.7648814Z  + notebook==7.5.1
+2026-10-19T16:46:01.7649069Z  + notebook-shim==0.2.4
+2026-10-19T16:46:01.7649355Z  + numba==0.63.1
+2026-10-19T16:46:01.7649607Z  + numpy==2.3.5
+2026-10-19T16:46:01.7649871Z  + nvidia-cublas-cu12==12.8.4.1
+2026-10-19T16:46:01.7650202Z  + nvidia-cuda-cupti-cu12==12.8.90
+2026-10-19T16:46:01.7650552Z  + nvidia-cuda-nvrtc-cu12==12.8.93
+2026-10-19T16:46:01.7651063Z  + nvidia-cuda-runtime-cu12==12.8.90
+2026-10-19T16:46:01.7651407Z  + nvidia-cudnn-cu12==9.10.2.21
+2026-10-19T16:46:01.7651726Z  + nvidia-cufft-cu12==11.3.3.83
+2026-10-19T16:46:01.7652191Z  + nvidia-cufile-cu12==1.13.1.3
+2026-10-19T16:46:01.7652512Z  + nvidia-curand-cu12==10.3.9.90
+2026-10-19T16:46:01.7652839Z  + nvidia-cusolver-cu12==11.7.3.90
+2026-10-19T16:46:01.7653175Z  + nvidia-cusparse-cu12==12.5.8.93
+2026-10-19T16:46:01.7653502Z  + nvidia-cusparselt-cu12==0.7.1
+2026-10-19T16:46:01.7653819Z  + nvidia-nccl-cu12==2.27.5
+2026-10-19T16:46:01.7654129Z  + nvidia-nvjitlink-cu12==12.8.93
+2026-10-19T16:46:01.7654462Z  + nvidia-nvshmem-cu12==3.3.20
+2026-10-19T16:46:01.7654781Z  + nvidia-nvtx-cu12==12.8.90
+2026-10-19T16:46:01.7655190Z  + omegaconf==2.3.0
+2026-10-19T16:46:01.7655434Z  + openai==2.14.0
+2026-10-19T16:46:01.7655662Z  + opt-einsum==3.4.0
+2026-10-19T16:46:01.7655906Z  + opt-einsum-fx==0.1.4
+2026-10-19T16:46:01.7656153Z  + optuna==4.6.0
+2026-10-19T16:46:01.7656398Z  + orb-models==0.5.5
+2026-10-19T16:46:01.7656641Z  + orjson==3.11.5
+2026-10-19T16:46:01.7656883Z  + packaging==25.0
+2026-10-19T16:46:01.7657134Z  + palettable==3.3.3
+2026-10-19T16:46:01.7657395Z  + pandarallel==1.6.5
+2026-10-19T16:46:01.7657657Z  + pandas==2.3.3
+2026-10-19T16:46:01.7657904Z  + pandocfilters==1.5.1
+2026-10-19T16:46:01.7658169Z  + parso==0.8.5
+2026-10-19T16:46:01.7658410Z  + pathos==0.3.4
+2026-10-19T16:46:01.7658646Z  + pathspec==0.12.1
+2026-10-19T16:46:01.7658893Z  + pexpect==4.9.0
+2026-10-19T16:46:01.7659137Z  + pillow==12.0.0
+2026-10-19T16:46:01.7659386Z  + platformdirs==4.5.1
+2026-10-19T16:46:01.7659643Z  + plotly==6.5.0
+2026-10-19T16:46:01.7659876Z  + pluggy==1.6.0
+2026-10-19T16:46:01.7660114Z  + pox==0.3.6
+2026-10-19T16:46:01.7660368Z  + ppft==1.7.7
+2026-10-19T16:46:01.7660614Z  + prettytable==3.17.0
+2026-10-19T16:46:01.7661043Z  + prometheus-client==0.23.1
+2026-10-19T16:46:01.7661339Z  + prompt-toolkit==3.0.52
+2026-10-19T16:46:01.7661597Z  + propcache==0.4.1
+2026-10-19T16:46:01.7661862Z  + proto-plus==1.27.0
+2026-10-19T16:46:01.7662118Z  + protobuf==6.33.2
+2026-10-19T16:46:01.7662347Z  + psutil==7.2.1
+2026-10-19T16:46:01.7662577Z  + ptyprocess==0.7.0
+2026-10-19T16:46:01.7662826Z  + pure-eval==0.2.3
+2026-10-19T16:46:01.7663073Z  + pyasn1==0.6.1
+2026-10-19T16:46:01.7663317Z  + pyasn1-modules==0.4.2
+2026-10-19T16:46:01.7663593Z  + pybtex==0.25.1
+2026-10-19T16:46:01.7663830Z  + pycparser==2.23
+2026-10-19T16:46:01.7664074Z  + pydantic==2.12.5
+2026-10-19T16:46:01.7664331Z  + pydantic-core==2.41.5
+2026-10-19T16:46:01.7664606Z  + pydantic-settings==2.12.0
+2026-10-19T16:46:01.7664892Z  + pygments==2.19.2
+2026-10-19T16:46:01.7665137Z  + pymatgen==2025.10.7
+2026-10-19T16:46:01.7665436Z  + pymatgen-io-validation==0.1.2
+2026-10-19T16:46:01.7665760Z  + pyparsing==3.3.1
+2026-10-19T16:46:01.7666011Z  + pytest==9.0.2
+2026-10-19T16:46:01.7666266Z  + pytest-asyncio==1.3.0
+2026-10-19T16:46:01.7666548Z  + pytest-cov==7.0.0
+2026-10-19T16:46:01.7666814Z  + pytest-timeout==2.4.0
+2026-10-19T16:46:01.7667106Z  + python-dateutil==2.9.0.post0
+2026-10-19T16:46:01.7667424Z  + python-dotenv==1.2.1
+2026-10-19T16:46:01.7667714Z  + python-hostlist==2.3.0
+2026-10-19T16:46:01.7668027Z  + python-json-logger==4.0.0
+2026-10-19T16:46:01.7668339Z  + pytokens==0.3.0
+2026-10-19T16:46:01.7668609Z  + pytorch-lightning==2.6.0
+2026-10-19T16:46:01.7668886Z  + pytz==2025.2
+2026-10-19T16:46:01.7670355Z  + pyyaml==6.0.3
+2026-10-19T16:46:01.7670603Z  + pyzmq==27.1.0
+2026-10-19T16:46:01.7671014Z  + referencing==0.37.0
+2026-10-19T16:46:01.7671216Z  + regex==2025.11.3
+2026-10-19T16:46:01.7671399Z  + requests==2.32.5
+2026-10-19T16:46:01.7671577Z  + rfc3339-validator==0.1.4
+2026-10-19T16:46:01.7671778Z  + rfc3986-validator==0.1.1
+2026-10-19T16:46:01.7671972Z  + rfc3987-syntax==1.1.0
+2026-10-19T16:46:01.7672171Z  + rich==13.9.4
+2026-10-19T16:46:01.7672347Z  + rpds-py==0.30.0
+2026-10-19T16:46:01.7672514Z  + rsa==4.9.1
+2026-10-19T16:46:01.7672684Z  + ruamel-yaml==0.18.17
+2026-10-19T16:46:01.7672876Z  + ruamel-yaml-clib==0.2.15
+2026-10-19T16:46:01.7673083Z  + ruff==0.14.10
+2026-10-19T16:46:01.7673255Z  + s3transfer==0.16.0
+2026-10-19T16:46:01.7673432Z  + scikit-learn==1.8.0
+2026-10-19T16:46:01.7673624Z  + scipy==1.16.3
+2026-10-19T16:46:01.7673946Z  + seaborn==0.13.2
+2026-10-19T16:46:01.7674119Z  + send2trash==1.8.3
+2026-10-19T16:46:01.7674293Z  + sentry-sdk==2.48.0
+2026-10-19T16:46:01.7674468Z  + setuptools==80.9.0
+2026-10-19T16:46:01.7674646Z  + shellingham==1.5.4
+2026-10-19T16:46:01.7674819Z  + simplejson==3.20.2
+2026-10-19T16:46:01.7674985Z  + six==1.17.0
+2026-10-19T16:46:01.7675148Z  + smact==3.2.0
+2026-10-19T16:46:01.7675324Z  + smart-open==7.5.0
+2026-10-19T16:46:01.7675496Z  + smmap==5.0.2
+2026-10-19T16:46:01.7675660Z  + sniffio==1.3.1
+2026-10-19T16:46:01.7675827Z  + soupsieve==2.8.1
+2026-10-19T16:46:01.7676100Z  + spglib==2.7.0
+2026-10-19T16:46:01.7676285Z  + sqlalchemy==2.0.45
+2026-10-19T16:46:01.7676464Z  + stack-data==0.6.3
+2026-10-19T16:46:01.7676637Z  + sympy==1.14.0
+2026-10-19T16:46:01.7676810Z  + synchronicity==0.11.1
+2026-10-19T16:46:01.7677004Z  + tabulate==0.9.0
+2026-10-19T16:46:01.7677172Z  + tenacity==9.1.2
+2026-10-19T16:46:01.7677338Z  + termcolor==3.3.0
+2026-10-19T16:46:01.7677508Z  + terminado==0.18.1
+2026-10-19T16:46:01.7677690Z  + threadpoolctl==3.6.0
+2026-10-19T16:46:01.7677877Z  + tiktoken==0.12.0
+2026-10-19T16:46:01.7678047Z  + tinycss2==1.4.0
+2026-10-19T16:46:01.7678215Z  + tokenizers==0.22.1
+2026-10-19T16:46:01.7678382Z  + toml==0.10.2
+2026-10-19T16:46:01.7678549Z  + torch==2.9.1
+2026-10-19T16:46:01.7678709Z  + torch-ema==0.3
+2026-10-19T16:46:01.7678885Z  + torch-geometric==2.7.0
+2026-10-19T16:46:01.7679074Z  + torchmetrics==1.8.2
+2026-10-19T16:46:01.7679258Z  + tornado==6.5.4
+2026-10-19T16:46:01.7679417Z  + tqdm==4.67.1
+2026-10-19T16:46:01.7679578Z  + traitlets==5.14.3
+2026-10-19T16:46:01.7679748Z  + triton==3.5.1
+2026-10-19T16:46:01.7679910Z  + typer==0.21.0
+2026-10-19T16:46:01.7680084Z  + typer-slim==0.21.0
+2026-10-19T16:46:01.7680265Z  + types-certifi==2021.10.8.3
+2026-10-19T16:46:01.7680468Z  + types-toml==0.10.8.20240310
+2026-10-19T16:46:01.7680671Z  + typing-extensions==4.15.0
+2026-10-19T16:46:01.7681061Z  + typing-inspection==0.4.2
+2026-10-19T16:46:01.7681250Z  + tzdata==2025.3
+2026-10-19T16:46:01.7681420Z  + uncertainties==3.2.3
+2026-10-19T16:46:01.7681606Z  + uri-template==1.3.0
+2026-10-19T16:46:01.7681789Z  + urllib3==2.6.2
+2026-10-19T16:46:01.7681950Z  + wandb==0.23.1
+2026-10-19T16:46:01.7682114Z  + watchfiles==1.1.1
+2026-10-19T16:46:01.7682281Z  + wcwidth==0.2.14
+2026-10-19T16:46:01.7682450Z  + webcolors==25.10.0
+2026-10-19T16:46:01.7682637Z  + webencodings==0.5.1
+2026-10-19T16:46:01.7682824Z  + websocket-client==1.9.0
+2026-10-19T16:46:01.7683027Z  + widgetsnbextension==4.0.15
+2026-10-19T16:46:01.7683224Z  + wrapt==2.0.1
+2026-10-19T16:46:01.7683400Z  + xxhash==3.6.0
+2026-10-19T16:46:01.7683569Z  + yarl==1.22.0
+2026-10-19T16:46:01.7683730Z  + zipp==3.23.0
+2026-10-19T16:46:02.1153682Z ##[group]Run actions/download-artifact@v4
+2026-10-19T16:46:02.1153935Z with:
+2026-10-19T16:46:02.1154123Z   name: m2-batch256-interrupt-39286986254
+2026-10-19T16:46:02.1154355Z   path: M2/results/batch256/
+2026-10-19T16:46:02.1154564Z   merge-multiple: false
+2026-10-19T16:46:02.1154905Z   repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:46:02.1155265Z   run-id: 39286986254
+2026-10-19T16:46:02.1155445Z env:
+2026-10-19T16:46:02.1155607Z   OMP_NUM_THREADS: 2
+2026-10-19T16:46:02.1155791Z   MKL_NUM_THREADS: 2
+2026-10-19T16:46:02.1155967Z   PYTHONUNBUFFERED: 1
+2026-10-19T16:46:02.1156201Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:02.1156543Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:46:02.1156885Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:02.1157210Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:02.1157553Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:02.1157859Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:46:02.1158161Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:46:02.1158417Z ##[endgroup]
+2026-10-19T16:46:02.2364494Z Downloading single artifact
+2026-10-19T16:46:02.2476973Z (node:2216) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:46:02.2477549Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:46:02.4834331Z Preparing to download the following artifacts:
+2026-10-19T16:46:02.4835276Z - m2-batch256-interrupt-39286986254 (ID: 12204176404, Size: 81524, Expected Digest: sha256:56a75003e0995a489d40cac721c4edcdf772f31450f0eef3111acbc0f686de68)
+2026-10-19T16:46:02.6934320Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/bb152299-21c1-8c84-a4b0-a99bf057b0dc/workflow-job-run-d3b45bea-40cb-5696-b518-d8c2391102e2/artifacts/9078a913b9f318cb2f22998adf34c7d03d1e31d7990598c6430b756fa51532fc.zip
+2026-10-19T16:46:02.6938171Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/batch256
+2026-10-19T16:46:02.9255295Z (node:2216) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-19T16:46:03.0257549Z SHA256 digest of downloaded artifact is 56a75003e0995a489d40cac721c4edcdf772f31450f0eef3111acbc0f686de68
+2026-10-19T16:46:03.0258348Z Artifact download completed successfully.
+2026-10-19T16:46:03.0258729Z Total of 1 artifact(s) downloaded
+2026-10-19T16:46:03.0262198Z Download artifact has finished successfully
+2026-10-19T16:46:03.0598393Z ##[group]Run actions/download-artifact@v4
+2026-10-19T16:46:03.0598657Z with:
+2026-10-19T16:46:03.0598845Z   name: m2-batch256-continuous-39286986254
+2026-10-19T16:46:03.0599089Z   path: M2/results/batch256/
+2026-10-19T16:46:03.0599307Z   merge-multiple: false
+2026-10-19T16:46:03.0599648Z   repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:46:03.0600019Z   run-id: 39286986254
+2026-10-19T16:46:03.0600197Z env:
+2026-10-19T16:46:03.0600361Z   OMP_NUM_THREADS: 2
+2026-10-19T16:46:03.0600548Z   MKL_NUM_THREADS: 2
+2026-10-19T16:46:03.0600921Z   PYTHONUNBUFFERED: 1
+2026-10-19T16:46:03.0601190Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:03.0601545Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:46:03.0601889Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:03.0602202Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:03.0602563Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:03.0602883Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:46:03.0603197Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:46:03.0603449Z ##[endgroup]
+2026-10-19T16:46:03.1769204Z Downloading single artifact
+2026-10-19T16:46:03.1914256Z (node:2228) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:46:03.1914932Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:46:03.4048279Z Preparing to download the following artifacts:
+2026-10-19T16:46:03.4049265Z - m2-batch256-continuous-39286986254 (ID: 12204631671, Size: 168230, Expected Digest: sha256:56967787c139046b3697170f4627dfb48e1883e5cb28c6f04d86f65280cc399d)
+2026-10-19T16:46:03.6144422Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/bb152299-21c1-8c84-a4b0-a99bf057b0dc/workflow-job-run-92353d2d-feb1-59b7-847f-47c83ed2cd48/artifacts/718316986b32900d192e0f3230af365cd592a56e5a1dc11038400f5f18f19de1.zip
+2026-10-19T16:46:03.6146662Z Starting download of artifact to: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/batch256
+2026-10-19T16:46:03.8423480Z (node:2228) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-19T16:46:03.9915734Z SHA256 digest of downloaded artifact is 56967787c139046b3697170f4627dfb48e1883e5cb28c6f04d86f65280cc399d
+2026-10-19T16:46:03.9916214Z Artifact download completed successfully.
+2026-10-19T16:46:03.9916498Z Total of 1 artifact(s) downloaded
+2026-10-19T16:46:03.9919731Z Download artifact has finished successfully
+2026-10-19T16:46:04.0116086Z ##[group]Run /usr/bin/time -v uv run python ../../M2/verify_batch_recovery.py --mode resume --batch-size 256 --num-candidates 512 --output ../../M2/results/batch256
+2026-10-19T16:46:04.0117240Z [36;1m/usr/bin/time -v uv run python ../../M2/verify_batch_recovery.py --mode resume --batch-size 256 --num-candidates 512 --output ../../M2/results/batch256[0m
+2026-10-19T16:46:04.0174313Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:46:04.0174555Z env:
+2026-10-19T16:46:04.0174729Z   OMP_NUM_THREADS: 2
+2026-10-19T16:46:04.0174931Z   MKL_NUM_THREADS: 2
+2026-10-19T16:46:04.0175122Z   PYTHONUNBUFFERED: 1
+2026-10-19T16:46:04.0175373Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:04.0175757Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:46:04.0176111Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:04.0176435Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:04.0176810Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:46:04.0177128Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:46:04.0177456Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:46:04.0177711Z ##[endgroup]
+2026-10-19T16:46:28.0233251Z UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:46:29.7615614Z cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-19T16:46:38.2442556Z Checkpoints not found. Downloading...
+2026-10-19T16:46:39.1659586Z 
+2026-10-19T16:46:39.2873480Z Downloading checkpoints.tar.gz:   0%|          | 0.00/523M [00:00<?, ?B/s]
+2026-10-19T16:46:39.4095106Z Downloading checkpoints.tar.gz:   0%|          | 24.0k/523M [00:00<45:05, 203kB/s]
+2026-10-19T16:46:39.5316791Z Downloading checkpoints.tar.gz:   0%|          | 72.0k/523M [00:00<28:31, 321kB/s]
+2026-10-19T16:46:39.6539805Z Downloading checkpoints.tar.gz:   0%|          | 160k/523M [00:00<17:53, 511kB/s] 
+2026-10-19T16:46:39.7761862Z Downloading checkpoints.tar.gz:   0%|          | 312k/523M [00:00<11:15, 812kB/s]
+2026-10-19T16:46:39.8983368Z Downloading checkpoints.tar.gz:   0%|          | 464k/523M [00:00<09:20, 979kB/s]
+2026-10-19T16:46:40.0206757Z Downloading checkpoints.tar.gz:   0%|          | 768k/523M [00:00<06:02, 1.51MB/s]
+2026-10-19T16:46:40.1428764Z Downloading checkpoints.tar.gz:   0%|          | 0.98M/523M [00:00<05:27, 1.68MB/s]
+2026-10-19T16:46:40.2652385Z Downloading checkpoints.tar.gz:   0%|          | 1.56M/523M [00:00<03:21, 2.72MB/s]
+2026-10-19T16:46:40.3874690Z Downloading checkpoints.tar.gz:   0%|          | 2.06M/523M [00:01<02:50, 3.21MB/s]
+2026-10-19T16:46:40.5101037Z Downloading checkpoints.tar.gz:   1%|          | 3.11M/523M [00:01<01:49, 4.99MB/s]
+2026-10-19T16:46:40.6320102Z Downloading checkpoints.tar.gz:   1%|          | 4.25M/523M [00:01<01:24, 6.45MB/s]
+2026-10-19T16:46:40.7542561Z Downloading checkpoints.tar.gz:   1%|          | 6.16M/523M [00:01<00:57, 9.47MB/s]
+2026-10-19T16:46:40.8764850Z Downloading checkpoints.tar.gz:   2%|▏         | 8.19M/523M [00:01<00:45, 11.9MB/s]
+2026-10-19T16:46:41.0046850Z Downloading checkpoints.tar.gz:   2%|▏         | 11.9M/523M [00:01<00:29, 17.9MB/s]
+2026-10-19T16:46:41.1311475Z Downloading checkpoints.tar.gz:   3%|▎         | 15.3M/523M [00:01<00:25, 21.1MB/s]
+2026-10-19T16:46:41.2572641Z Downloading checkpoints.tar.gz:   4%|▎         | 19.1M/523M [00:01<00:21, 24.2MB/s]
+2026-10-19T16:46:41.3825593Z Downloading checkpoints.tar.gz:   4%|▍         | 23.0M/523M [00:02<00:19, 26.6MB/s]
+2026-10-19T16:46:41.5051386Z Downloading checkpoints.tar.gz:   5%|▌         | 26.8M/523M [00:02<00:18, 28.2MB/s]
+2026-10-19T16:46:41.6336534Z Downloading checkpoints.tar.gz:   6%|▌         | 30.6M/523M [00:02<00:17, 29.5MB/s]
+2026-10-19T16:46:41.7605531Z Downloading checkpoints.tar.gz:   7%|▋         | 34.4M/523M [00:02<00:17, 30.1MB/s]
+2026-10-19T16:46:41.8854193Z Downloading checkpoints.tar.gz:   7%|▋         | 38.2M/523M [00:02<00:16, 30.5MB/s]
+2026-10-19T16:46:42.0112530Z Downloading checkpoints.tar.gz:   8%|▊         | 41.7M/523M [00:02<00:16, 30.1MB/s]
+2026-10-19T16:46:42.1362039Z Downloading checkpoints.tar.gz:   9%|▊         | 45.6M/523M [00:02<00:16, 30.7MB/s]
+2026-10-19T16:46:42.2621758Z Downloading checkpoints.tar.gz:   9%|▉         | 49.4M/523M [00:02<00:15, 31.1MB/s]
+2026-10-19T16:46:42.3872041Z Downloading checkpoints.tar.gz:  10%|█         | 53.2M/523M [00:03<00:15, 31.4MB/s]
+2026-10-19T16:46:42.5130377Z Downloading checkpoints.tar.gz:  11%|█         | 57.0M/523M [00:03<00:15, 31.5MB/s]
+2026-10-19T16:46:42.6378704Z Downloading checkpoints.tar.gz:  12%|█▏        | 60.8M/523M [00:03<00:15, 31.4MB/s]
+2026-10-19T16:46:42.7628484Z Downloading checkpoints.tar.gz:  12%|█▏        | 64.5M/523M [00:03<00:15, 31.5MB/s]
+2026-10-19T16:46:42.8890542Z Downloading checkpoints.tar.gz:  13%|█▎        | 68.2M/523M [00:03<00:15, 31.2MB/s]
+2026-10-19T16:46:43.0142914Z Downloading checkpoints.tar.gz:  14%|█▎        | 71.9M/523M [00:03<00:15, 31.2MB/s]
+2026-10-19T16:46:43.1400401Z Downloading checkpoints.tar.gz:  14%|█▍        | 75.7M/523M [00:03<00:15, 31.3MB/s]
+2026-10-19T16:46:43.2647182Z Downloading checkpoints.tar.gz:  15%|█▌        | 79.5M/523M [00:03<00:14, 31.4MB/s]
+2026-10-19T16:46:43.3894947Z Downloading checkpoints.tar.gz:  16%|█▌        | 83.3M/523M [00:04<00:14, 31.6MB/s]
+2026-10-19T16:46:43.5142897Z Downloading checkpoints.tar.gz:  17%|█▋        | 87.2M/523M [00:04<00:14, 31.8MB/s]
+2026-10-19T16:46:43.6391045Z Downloading checkpoints.tar.gz:  17%|█▋        | 91.0M/523M [00:04<00:14, 31.9MB/s]
+2026-10-19T16:46:43.7641815Z Downloading checkpoints.tar.gz:  18%|█▊        | 94.8M/523M [00:04<00:14, 31.9MB/s]
+2026-10-19T16:46:43.8889881Z Downloading checkpoints.tar.gz:  19%|█▉        | 98.6M/523M [00:04<00:13, 31.9MB/s]
+2026-10-19T16:46:44.0156703Z Downloading checkpoints.tar.gz:  20%|█▉        | 102M/523M [00:04<00:13, 32.0MB/s] 
+2026-10-19T16:46:44.1405224Z Downloading checkpoints.tar.gz:  20%|██        | 106M/523M [00:04<00:13, 31.7MB/s]
+2026-10-19T16:46:44.2654659Z Downloading checkpoints.tar.gz:  21%|██        | 110M/523M [00:04<00:13, 31.7MB/s]
+2026-10-19T16:46:44.3912220Z Downloading checkpoints.tar.gz:  22%|██▏       | 114M/523M [00:05<00:13, 31.8MB/s]
+2026-10-19T16:46:44.5166791Z Downloading checkpoints.tar.gz:  22%|██▏       | 117M/523M [00:05<00:13, 31.6MB/s]
+2026-10-19T16:46:44.6413994Z Downloading checkpoints.tar.gz:  23%|██▎       | 121M/523M [00:05<00:13, 31.8MB/s]
+2026-10-19T16:46:44.7665520Z Downloading checkpoints.tar.gz:  24%|██▍       | 125M/523M [00:05<00:13, 31.8MB/s]
+2026-10-19T16:46:44.8932253Z Downloading checkpoints.tar.gz:  25%|██▍       | 129M/523M [00:05<00:13, 31.8MB/s]
+2026-10-19T16:46:45.0192121Z Downloading checkpoints.tar.gz:  25%|██▌       | 133M/523M [00:05<00:12, 31.8MB/s]
+2026-10-19T16:46:45.1440586Z Downloading checkpoints.tar.gz:  26%|██▌       | 137M/523M [00:05<00:12, 31.6MB/s]
+2026-10-19T16:46:45.2697144Z Downloading checkpoints.tar.gz:  27%|██▋       | 140M/523M [00:05<00:12, 31.8MB/s]
+2026-10-19T16:46:45.3951699Z Downloading checkpoints.tar.gz:  28%|██▊       | 144M/523M [00:06<00:12, 31.9MB/s]
+2026-10-19T16:46:45.5203050Z Downloading checkpoints.tar.gz:  28%|██▊       | 148M/523M [00:06<00:12, 31.6MB/s]
+2026-10-19T16:46:45.6452341Z Downloading checkpoints.tar.gz:  29%|██▉       | 152M/523M [00:06<00:12, 31.6MB/s]
+2026-10-19T16:46:45.7703017Z Downloading checkpoints.tar.gz:  30%|██▉       | 155M/523M [00:06<00:12, 31.5MB/s]
+2026-10-19T16:46:45.8948079Z Downloading checkpoints.tar.gz:  30%|███       | 159M/523M [00:06<00:12, 31.5MB/s]
+2026-10-19T16:46:46.0197314Z Downloading checkpoints.tar.gz:  31%|███       | 163M/523M [00:06<00:11, 31.6MB/s]
+2026-10-19T16:46:46.1447388Z Downloading checkpoints.tar.gz:  32%|███▏      | 167M/523M [00:06<00:11, 31.7MB/s]
+2026-10-19T16:46:46.2705516Z Downloading checkpoints.tar.gz:  33%|███▎      | 170M/523M [00:06<00:11, 31.6MB/s]
+2026-10-19T16:46:46.3946460Z Downloading checkpoints.tar.gz:  33%|███▎      | 174M/523M [00:07<00:11, 31.7MB/s]
+2026-10-19T16:46:46.5196316Z Downloading checkpoints.tar.gz:  34%|███▍      | 177M/523M [00:07<00:12, 29.8MB/s]
+2026-10-19T16:46:46.6467497Z Downloading checkpoints.tar.gz:  35%|███▍      | 181M/523M [00:07<00:11, 30.4MB/s]
+2026-10-19T16:46:46.7721090Z Downloading checkpoints.tar.gz:  35%|███▌      | 185M/523M [00:07<00:11, 30.7MB/s]
+2026-10-19T16:46:46.8968627Z Downloading checkpoints.tar.gz:  36%|███▌      | 189M/523M [00:07<00:11, 31.1MB/s]
+2026-10-19T16:46:47.0225890Z Downloading checkpoints.tar.gz:  37%|███▋      | 192M/523M [00:07<00:11, 31.3MB/s]
+2026-10-19T16:46:47.1473135Z Downloading checkpoints.tar.gz:  37%|███▋      | 196M/523M [00:07<00:10, 31.3MB/s]
+2026-10-19T16:46:47.2722503Z Downloading checkpoints.tar.gz:  38%|███▊      | 200M/523M [00:07<00:10, 31.6MB/s]
+2026-10-19T16:46:47.3972850Z Downloading checkpoints.tar.gz:  39%|███▉      | 204M/523M [00:08<00:10, 31.6MB/s]
+2026-10-19T16:46:47.5224076Z Downloading checkpoints.tar.gz:  40%|███▉      | 208M/523M [00:08<00:10, 31.8MB/s]
+2026-10-19T16:46:47.6473794Z Downloading checkpoints.tar.gz:  40%|████      | 212M/523M [00:08<00:10, 31.9MB/s]
+2026-10-19T16:46:47.7723378Z Downloading checkpoints.tar.gz:  41%|████      | 215M/523M [00:08<00:10, 31.9MB/s]
+2026-10-19T16:46:47.8966436Z Downloading checkpoints.tar.gz:  42%|████▏     | 219M/523M [00:08<00:10, 31.9MB/s]
+2026-10-19T16:46:48.0200932Z Downloading checkpoints.tar.gz:  42%|████▏     | 222M/523M [00:08<00:10, 30.0MB/s]
+2026-10-19T16:46:48.1454754Z Downloading checkpoints.tar.gz:  43%|████▎     | 225M/523M [00:08<00:10, 29.3MB/s]
+2026-10-19T16:46:48.2709846Z Downloading checkpoints.tar.gz:  44%|████▍     | 229M/523M [00:08<00:10, 30.1MB/s]
+2026-10-19T16:46:48.3956950Z Downloading checkpoints.tar.gz:  45%|████▍     | 233M/523M [00:09<00:09, 30.5MB/s]
+2026-10-19T16:46:48.5211413Z Downloading checkpoints.tar.gz:  45%|████▌     | 237M/523M [00:09<00:09, 30.8MB/s]
+2026-10-19T16:46:48.6470538Z Downloading checkpoints.tar.gz:  46%|████▌     | 241M/523M [00:09<00:09, 31.0MB/s]
+2026-10-19T16:46:48.7718003Z Downloading checkpoints.tar.gz:  47%|████▋     | 244M/523M [00:09<00:09, 31.1MB/s]
+2026-10-19T16:46:48.8965623Z Downloading checkpoints.tar.gz:  47%|████▋     | 248M/523M [00:09<00:09, 31.4MB/s]
+2026-10-19T16:46:49.0217234Z Downloading checkpoints.tar.gz:  48%|████▊     | 252M/523M [00:09<00:09, 31.4MB/s]
+2026-10-19T16:46:49.1477255Z Downloading checkpoints.tar.gz:  49%|████▉     | 256M/523M [00:09<00:08, 31.7MB/s]
+2026-10-19T16:46:49.2726330Z Downloading checkpoints.tar.gz:  50%|████▉     | 260M/523M [00:09<00:08, 31.6MB/s]
+2026-10-19T16:46:49.3972750Z Downloading checkpoints.tar.gz:  50%|█████     | 263M/523M [00:10<00:08, 31.9MB/s]
+2026-10-19T16:46:49.5225059Z Downloading checkpoints.tar.gz:  51%|█████     | 267M/523M [00:10<00:08, 32.0MB/s]
+2026-10-19T16:46:49.6473678Z Downloading checkpoints.tar.gz:  52%|█████▏    | 271M/523M [00:10<00:08, 31.9MB/s]
+2026-10-19T16:46:49.7723819Z Downloading checkpoints.tar.gz:  52%|█████▏    | 275M/523M [00:10<00:08, 31.9MB/s]
+2026-10-19T16:46:49.8965128Z Downloading checkpoints.tar.gz:  53%|█████▎    | 279M/523M [00:10<00:08, 31.9MB/s]
+2026-10-19T16:46:50.0218039Z Downloading checkpoints.tar.gz:  54%|█████▍    | 282M/523M [00:10<00:08, 30.8MB/s]
+2026-10-19T16:46:50.1467461Z Downloading checkpoints.tar.gz:  55%|█████▍    | 286M/523M [00:10<00:07, 31.2MB/s]
+2026-10-19T16:46:50.2719716Z Downloading checkpoints.tar.gz:  55%|█████▌    | 290M/523M [00:10<00:07, 31.3MB/s]
+2026-10-19T16:46:50.3969982Z Downloading checkpoints.tar.gz:  56%|█████▌    | 293M/523M [00:11<00:07, 31.3MB/s]
+2026-10-19T16:46:50.5222580Z Downloading checkpoints.tar.gz:  57%|█████▋    | 297M/523M [00:11<00:07, 31.5MB/s]
+2026-10-19T16:46:50.6480222Z Downloading checkpoints.tar.gz:  57%|█████▋    | 301M/523M [00:11<00:07, 31.6MB/s]
+2026-10-19T16:46:50.7733540Z Downloading checkpoints.tar.gz:  58%|█████▊    | 305M/523M [00:11<00:07, 31.7MB/s]
+2026-10-19T16:46:50.8981855Z Downloading checkpoints.tar.gz:  59%|█████▉    | 309M/523M [00:11<00:07, 31.9MB/s]
+2026-10-19T16:46:51.0231836Z Downloading checkpoints.tar.gz:  60%|█████▉    | 312M/523M [00:11<00:06, 31.9MB/s]
+2026-10-19T16:46:51.1493652Z Downloading checkpoints.tar.gz:  60%|██████    | 316M/523M [00:11<00:06, 31.9MB/s]
+2026-10-19T16:46:51.2743795Z Downloading checkpoints.tar.gz:  61%|██████    | 320M/523M [00:11<00:06, 31.8MB/s]
+2026-10-19T16:46:51.3995728Z Downloading checkpoints.tar.gz:  62%|██████▏   | 324M/523M [00:12<00:06, 31.8MB/s]
+2026-10-19T16:46:51.5245603Z Downloading checkpoints.tar.gz:  63%|██████▎   | 327M/523M [00:12<00:06, 31.7MB/s]
+2026-10-19T16:46:51.6496676Z Downloading checkpoints.tar.gz:  63%|██████▎   | 331M/523M [00:12<00:06, 31.7MB/s]
+2026-10-19T16:46:51.7753370Z Downloading checkpoints.tar.gz:  64%|██████▍   | 335M/523M [00:12<00:06, 31.8MB/s]
+2026-10-19T16:46:51.9000554Z Downloading checkpoints.tar.gz:  65%|██████▍   | 339M/523M [00:12<00:06, 31.8MB/s]
+2026-10-19T16:46:52.0242052Z Downloading checkpoints.tar.gz:  65%|██████▌   | 343M/523M [00:12<00:05, 32.0MB/s]
+2026-10-19T16:46:52.1489092Z Downloading checkpoints.tar.gz:  66%|██████▌   | 346M/523M [00:12<00:06, 30.1MB/s]
+2026-10-19T16:46:52.2745513Z Downloading checkpoints.tar.gz:  67%|██████▋   | 349M/523M [00:12<00:06, 30.1MB/s]
+2026-10-19T16:46:52.3995697Z Downloading checkpoints.tar.gz:  67%|██████▋   | 353M/523M [00:13<00:05, 30.7MB/s]
+2026-10-19T16:46:52.5245278Z Downloading checkpoints.tar.gz:  68%|██████▊   | 357M/523M [00:13<00:05, 31.1MB/s]
+2026-10-19T16:46:52.6291376Z Downloading checkpoints.tar.gz:  69%|██████▉   | 361M/523M [00:13<00:05, 31.5MB/s]
+2026-10-19T16:46:52.7532398Z Downloading checkpoints.tar.gz:  70%|██████▉   | 364M/523M [00:13<00:05, 32.0MB/s]
+2026-10-19T16:46:52.8814495Z Downloading checkpoints.tar.gz:  70%|███████   | 368M/523M [00:13<00:05, 32.0MB/s]
+2026-10-19T16:46:53.0090606Z Downloading checkpoints.tar.gz:  71%|███████   | 372M/523M [00:13<00:05, 31.5MB/s]
+2026-10-19T16:46:53.1325334Z Downloading checkpoints.tar.gz:  72%|███████▏  | 376M/523M [00:13<00:04, 31.4MB/s]
+2026-10-19T16:46:53.2565511Z Downloading checkpoints.tar.gz:  72%|███████▏  | 379M/523M [00:13<00:05, 29.6MB/s]
+2026-10-19T16:46:53.3816931Z Downloading checkpoints.tar.gz:  73%|███████▎  | 382M/523M [00:14<00:04, 29.9MB/s]
+2026-10-19T16:46:53.5065476Z Downloading checkpoints.tar.gz:  74%|███████▎  | 386M/523M [00:14<00:04, 30.4MB/s]
+2026-10-19T16:46:53.6312404Z Downloading checkpoints.tar.gz:  74%|███████▍  | 390M/523M [00:14<00:04, 31.0MB/s]
+2026-10-19T16:46:53.7569298Z Downloading checkpoints.tar.gz:  75%|███████▌  | 394M/523M [00:14<00:04, 31.4MB/s]
+2026-10-19T16:46:53.8819727Z Downloading checkpoints.tar.gz:  76%|███████▌  | 397M/523M [00:14<00:04, 31.6MB/s]
+2026-10-19T16:46:54.0067585Z Downloading checkpoints.tar.gz:  77%|███████▋  | 401M/523M [00:14<00:04, 31.6MB/s]
+2026-10-19T16:46:54.1320185Z Downloading checkpoints.tar.gz:  77%|███████▋  | 405M/523M [00:14<00:03, 31.5MB/s]
+2026-10-19T16:46:54.2574850Z Downloading checkpoints.tar.gz:  78%|███████▊  | 409M/523M [00:14<00:03, 31.5MB/s]
+2026-10-19T16:46:54.3826188Z Downloading checkpoints.tar.gz:  79%|███████▉  | 412M/523M [00:15<00:03, 31.6MB/s]
+2026-10-19T16:46:54.5074988Z Downloading checkpoints.tar.gz:  80%|███████▉  | 416M/523M [00:15<00:03, 31.8MB/s]
+2026-10-19T16:46:54.6321095Z Downloading checkpoints.tar.gz:  80%|████████  | 420M/523M [00:15<00:03, 31.8MB/s]
+2026-10-19T16:46:54.7571309Z Downloading checkpoints.tar.gz:  81%|████████  | 424M/523M [00:15<00:03, 31.8MB/s]
+2026-10-19T16:46:54.8818138Z Downloading checkpoints.tar.gz:  82%|████████▏ | 428M/523M [00:15<00:03, 31.9MB/s]
+2026-10-19T16:46:55.0067828Z Downloading checkpoints.tar.gz:  82%|████████▏ | 432M/523M [00:15<00:03, 31.9MB/s]
+2026-10-19T16:46:55.1316106Z Downloading checkpoints.tar.gz:  83%|████████▎ | 435M/523M [00:15<00:02, 31.8MB/s]
+2026-10-19T16:46:55.2564797Z Downloading checkpoints.tar.gz:  84%|████████▍ | 439M/523M [00:15<00:02, 31.8MB/s]
+2026-10-19T16:46:55.3811803Z Downloading checkpoints.tar.gz:  85%|████████▍ | 443M/523M [00:16<00:02, 31.9MB/s]
+2026-10-19T16:46:55.5086213Z Downloading checkpoints.tar.gz:  85%|████████▌ | 447M/523M [00:16<00:02, 31.9MB/s]
+2026-10-19T16:46:55.6332493Z Downloading checkpoints.tar.gz:  86%|████████▌ | 450M/523M [00:16<00:02, 31.7MB/s]
+2026-10-19T16:46:55.7582878Z Downloading checkpoints.tar.gz:  87%|████████▋ | 454M/523M [00:16<00:02, 31.7MB/s]
+2026-10-19T16:46:55.8849086Z Downloading checkpoints.tar.gz:  87%|████████▋ | 458M/523M [00:16<00:02, 31.6MB/s]
+2026-10-19T16:46:56.0100194Z Downloading checkpoints.tar.gz:  88%|████████▊ | 462M/523M [00:16<00:02, 31.7MB/s]
+2026-10-19T16:46:56.1345119Z Downloading checkpoints.tar.gz:  89%|████████▉ | 466M/523M [00:16<00:01, 31.8MB/s]
+2026-10-19T16:46:56.2592096Z Downloading checkpoints.tar.gz:  90%|████████▉ | 469M/523M [00:16<00:01, 31.8MB/s]
+2026-10-19T16:46:56.3843967Z Downloading checkpoints.tar.gz:  90%|█████████ | 473M/523M [00:17<00:01, 31.9MB/s]
+2026-10-19T16:46:56.5078674Z Downloading checkpoints.tar.gz:  91%|█████████ | 477M/523M [00:17<00:01, 32.0MB/s]
+2026-10-19T16:46:56.6328815Z Downloading checkpoints.tar.gz:  92%|█████████▏| 480M/523M [00:17<00:01, 30.2MB/s]
+2026-10-19T16:46:56.7584693Z Downloading checkpoints.tar.gz:  92%|█████████▏| 484M/523M [00:17<00:01, 30.6MB/s]
+2026-10-19T16:46:56.8843649Z Downloading checkpoints.tar.gz:  93%|█████████▎| 488M/523M [00:17<00:01, 30.9MB/s]
+2026-10-19T16:46:57.0096281Z Downloading checkpoints.tar.gz:  94%|█████████▍| 492M/523M [00:17<00:01, 31.3MB/s]
+2026-10-19T16:46:57.1346178Z Downloading checkpoints.tar.gz:  95%|█████████▍| 495M/523M [00:17<00:00, 31.5MB/s]
+2026-10-19T16:46:57.2606196Z Downloading checkpoints.tar.gz:  95%|█████████▌| 499M/523M [00:17<00:00, 31.8MB/s]
+2026-10-19T16:46:57.3856391Z Downloading checkpoints.tar.gz:  96%|█████████▌| 503M/523M [00:18<00:00, 31.8MB/s]
+2026-10-19T16:46:57.5109612Z Downloading checkpoints.tar.gz:  97%|█████████▋| 507M/523M [00:18<00:00, 31.8MB/s]
+2026-10-19T16:46:57.6359124Z Downloading checkpoints.tar.gz:  98%|█████████▊| 511M/523M [00:18<00:00, 31.7MB/s]
+2026-10-19T16:46:57.7606546Z Downloading checkpoints.tar.gz:  98%|█████████▊| 514M/523M [00:18<00:00, 31.8MB/s]
+2026-10-19T16:46:57.8870487Z Downloading checkpoints.tar.gz:  99%|█████████▉| 518M/523M [00:18<00:00, 31.9MB/s]
+2026-10-19T16:46:57.8908948Z Downloading checkpoints.tar.gz: 100%|█████████▉| 522M/523M [00:18<00:00, 31.8MB/s]
+2026-10-19T16:46:57.8909780Z Downloading checkpoints.tar.gz: 100%|██████████| 523M/523M [00:18<00:00, 29.3MB/s]
+2026-10-19T16:46:57.8927923Z Extracting checkpoints...
+2026-10-19T16:47:00.5046255Z Checkpoints downloaded and extracted to ckpts
+2026-10-19T16:47:00.6296632Z /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py:73: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:47:00.7456756Z Generating 512 samples for each formula: ['Li2 O1']
+2026-10-19T16:47:00.7457822Z Generating batch #1 with 256 samples.
+2026-10-19T16:47:00.7901379Z M2 replayed verified generation batch 1
+2026-10-19T16:47:00.9346444Z Generating batch #2 with 256 samples.
+2026-10-19T16:47:00.9681361Z 
+2026-10-19T16:47:01.4465431Z Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+2026-10-19T16:47:01.9228433Z Sampling:   0%|          | 1/256 [00:00<02:01,  2.09it/s]
+2026-10-19T16:47:02.3992911Z Sampling:   1%|          | 2/256 [00:00<02:01,  2.10it/s]
+2026-10-19T16:47:02.9005768Z Sampling:   1%|          | 3/256 [00:01<02:00,  2.10it/s]
+2026-10-19T16:47:03.3736187Z Sampling:   2%|▏         | 4/256 [00:01<02:02,  2.06it/s]
+2026-10-19T16:47:03.8482062Z Sampling:   2%|▏         | 5/256 [00:02<02:00,  2.08it/s]
+2026-10-19T16:47:04.3244476Z Sampling:   2%|▏         | 6/256 [00:02<01:59,  2.09it/s]
+2026-10-19T16:47:04.8015038Z Sampling:   3%|▎         | 7/256 [00:03<01:59,  2.09it/s]
+2026-10-19T16:47:05.2787768Z Sampling:   3%|▎         | 8/256 [00:03<01:58,  2.09it/s]
+2026-10-19T16:47:05.7778724Z Sampling:   4%|▎         | 9/256 [00:04<01:57,  2.09it/s]
+2026-10-19T16:47:06.2547638Z Sampling:   4%|▍         | 10/256 [00:04<01:59,  2.06it/s]
+2026-10-19T16:47:06.7343132Z Sampling:   4%|▍         | 11/256 [00:05<01:58,  2.07it/s]
+2026-10-19T16:47:07.2078534Z Sampling:   5%|▍         | 12/256 [00:05<01:57,  2.08it/s]
+2026-10-19T16:47:07.6807624Z Sampling:   5%|▌         | 13/256 [00:06<01:56,  2.09it/s]
+2026-10-19T16:47:08.1540621Z Sampling:   5%|▌         | 14/256 [00:06<01:55,  2.10it/s]
+2026-10-19T16:47:08.6286430Z Sampling:   6%|▌         | 15/256 [00:07<01:54,  2.10it/s]
+2026-10-19T16:47:09.1110813Z Sampling:   6%|▋         | 16/256 [00:07<01:54,  2.10it/s]
+2026-10-19T16:47:09.5889944Z Sampling:   7%|▋         | 17/256 [00:08<01:54,  2.09it/s]
+2026-10-19T16:47:10.0660375Z Sampling:   7%|▋         | 18/256 [00:08<01:53,  2.09it/s]
+2026-10-19T16:47:10.5452216Z Sampling:   7%|▋         | 19/256 [00:09<01:53,  2.09it/s]
+2026-10-19T16:47:11.0191947Z Sampling:   8%|▊         | 20/256 [00:09<01:52,  2.09it/s]
+2026-10-19T16:47:11.4967674Z Sampling:   8%|▊         | 21/256 [00:10<01:52,  2.10it/s]
+2026-10-19T16:47:11.9799690Z Sampling:   9%|▊         | 22/256 [00:10<01:51,  2.10it/s]
+2026-10-19T16:47:12.4594378Z Sampling:   9%|▉         | 23/256 [00:11<01:51,  2.09it/s]
+2026-10-19T16:47:12.9355255Z Sampling:   9%|▉         | 24/256 [00:11<01:51,  2.09it/s]
+2026-10-19T16:47:13.4145163Z Sampling:  10%|▉         | 25/256 [00:11<01:50,  2.09it/s]
+2026-10-19T16:47:13.8926620Z Sampling:  10%|█         | 26/256 [00:12<01:50,  2.09it/s]
+2026-10-19T16:47:14.3677349Z Sampling:  11%|█         | 27/256 [00:12<01:49,  2.09it/s]
+2026-10-19T16:47:14.8423416Z Sampling:  11%|█         | 28/256 [00:13<01:48,  2.09it/s]
+2026-10-19T16:47:15.3199871Z Sampling:  11%|█▏        | 29/256 [00:13<01:48,  2.10it/s]
+2026-10-19T16:47:15.8315608Z Sampling:  12%|█▏        | 30/256 [00:14<01:47,  2.10it/s]
+2026-10-19T16:47:16.3126639Z Sampling:  12%|█▏        | 31/256 [00:14<01:49,  2.05it/s]
+2026-10-19T16:47:16.7887826Z Sampling:  12%|█▎        | 32/256 [00:15<01:48,  2.06it/s]
+2026-10-19T16:47:17.2643297Z Sampling:  13%|█▎        | 33/256 [00:15<01:47,  2.07it/s]
+2026-10-19T16:47:17.7386766Z Sampling:  13%|█▎        | 34/256 [00:16<01:46,  2.08it/s]
+2026-10-19T16:47:18.2098711Z Sampling:  14%|█▎        | 35/256 [00:16<01:45,  2.09it/s]
+2026-10-19T16:47:18.6846866Z Sampling:  14%|█▍        | 36/256 [00:17<01:44,  2.10it/s]
+2026-10-19T16:47:19.1640912Z Sampling:  14%|█▍        | 37/256 [00:17<01:44,  2.10it/s]
+2026-10-19T16:47:19.6445756Z Sampling:  15%|█▍        | 38/256 [00:18<01:43,  2.10it/s]
+2026-10-19T16:47:20.1169429Z Sampling:  15%|█▌        | 39/256 [00:18<01:43,  2.09it/s]
+2026-10-19T16:47:20.5926493Z Sampling:  16%|█▌        | 40/256 [00:19<01:42,  2.10it/s]
+2026-10-19T16:47:21.0724367Z Sampling:  16%|█▌        | 41/256 [00:19<01:42,  2.10it/s]
+2026-10-19T16:47:21.5467296Z Sampling:  16%|█▋        | 42/256 [00:20<01:42,  2.10it/s]
+2026-10-19T16:47:22.0243684Z Sampling:  17%|█▋        | 43/256 [00:20<01:41,  2.10it/s]
+2026-10-19T16:47:22.4985857Z Sampling:  17%|█▋        | 44/256 [00:21<01:41,  2.10it/s]
+2026-10-19T16:47:22.9792344Z Sampling:  18%|█▊        | 45/256 [00:21<01:40,  2.10it/s]
+2026-10-19T16:47:23.4555892Z Sampling:  18%|█▊        | 46/256 [00:22<01:40,  2.10it/s]
+2026-10-19T16:47:23.9343551Z Sampling:  18%|█▊        | 47/256 [00:22<01:39,  2.10it/s]
+2026-10-19T16:47:24.4122570Z Sampling:  19%|█▉        | 48/256 [00:22<01:39,  2.09it/s]
+2026-10-19T16:47:24.8894398Z Sampling:  19%|█▉        | 49/256 [00:23<01:38,  2.09it/s]
+2026-10-19T16:47:25.3645021Z Sampling:  20%|█▉        | 50/256 [00:23<01:38,  2.09it/s]
+2026-10-19T16:47:25.8844611Z Sampling:  20%|█▉        | 51/256 [00:24<01:37,  2.10it/s]
+2026-10-19T16:47:26.3612338Z Sampling:  20%|██        | 52/256 [00:24<01:39,  2.04it/s]
+2026-10-19T16:47:26.8395120Z Sampling:  21%|██        | 53/256 [00:25<01:38,  2.06it/s]
+2026-10-19T16:47:27.3178973Z Sampling:  21%|██        | 54/256 [00:25<01:37,  2.07it/s]
+2026-10-19T16:47:27.8271864Z Sampling:  21%|██▏       | 55/256 [00:26<01:36,  2.07it/s]
+2026-10-19T16:47:28.3070233Z Sampling:  22%|██▏       | 56/256 [00:26<01:38,  2.04it/s]
+2026-10-19T16:47:28.7882854Z Sampling:  22%|██▏       | 57/256 [00:27<01:36,  2.05it/s]
+2026-10-19T16:47:29.2667843Z Sampling:  23%|██▎       | 58/256 [00:27<01:36,  2.06it/s]
+2026-10-19T16:47:29.7546844Z Sampling:  23%|██▎       | 59/256 [00:28<01:35,  2.07it/s]
+2026-10-19T16:47:30.2331237Z Sampling:  23%|██▎       | 60/256 [00:28<01:34,  2.06it/s]
+2026-10-19T16:47:30.7093459Z Sampling:  24%|██▍       | 61/256 [00:29<01:34,  2.07it/s]
+2026-10-19T16:47:31.1926210Z Sampling:  24%|██▍       | 62/256 [00:29<01:33,  2.08it/s]
+2026-10-19T16:47:31.6743508Z Sampling:  25%|██▍       | 63/256 [00:30<01:32,  2.08it/s]
+2026-10-19T16:47:32.1553132Z Sampling:  25%|██▌       | 64/256 [00:30<01:32,  2.08it/s]
+2026-10-19T16:47:32.6349413Z Sampling:  25%|██▌       | 65/256 [00:31<01:31,  2.08it/s]
+2026-10-19T16:47:33.1129165Z Sampling:  26%|██▌       | 66/256 [00:31<01:31,  2.08it/s]
+2026-10-19T16:47:33.5897460Z Sampling:  26%|██▌       | 67/256 [00:32<01:30,  2.08it/s]
+2026-10-19T16:47:34.0704921Z Sampling:  27%|██▋       | 68/256 [00:32<01:30,  2.09it/s]
+2026-10-19T16:47:34.5499329Z Sampling:  27%|██▋       | 69/256 [00:33<01:29,  2.09it/s]
+2026-10-19T16:47:35.0245796Z Sampling:  27%|██▋       | 70/256 [00:33<01:29,  2.09it/s]
+2026-10-19T16:47:35.4985128Z Sampling:  28%|██▊       | 71/256 [00:34<01:28,  2.09it/s]
+2026-10-19T16:47:35.9811314Z Sampling:  28%|██▊       | 72/256 [00:34<01:27,  2.10it/s]
+2026-10-19T16:47:36.4644051Z Sampling:  29%|██▊       | 73/256 [00:35<01:27,  2.09it/s]
+2026-10-19T16:47:36.9401570Z Sampling:  29%|██▉       | 74/256 [00:35<01:27,  2.08it/s]
+2026-10-19T16:47:37.4136002Z Sampling:  29%|██▉       | 75/256 [00:35<01:26,  2.09it/s]
+2026-10-19T16:47:37.8892342Z Sampling:  30%|██▉       | 76/256 [00:36<01:25,  2.10it/s]
+2026-10-19T16:47:38.3667313Z Sampling:  30%|███       | 77/256 [00:36<01:25,  2.10it/s]
+2026-10-19T16:47:38.8474898Z Sampling:  30%|███       | 78/256 [00:37<01:24,  2.10it/s]
+2026-10-19T16:47:39.3289188Z Sampling:  31%|███       | 79/256 [00:37<01:24,  2.09it/s]
+2026-10-19T16:47:39.8080136Z Sampling:  31%|███▏      | 80/256 [00:38<01:24,  2.09it/s]
+2026-10-19T16:47:40.2861679Z Sampling:  32%|███▏      | 81/256 [00:38<01:23,  2.09it/s]
+2026-10-19T16:47:40.7628749Z Sampling:  32%|███▏      | 82/256 [00:39<01:23,  2.09it/s]
+2026-10-19T16:47:41.2358157Z Sampling:  32%|███▏      | 83/256 [00:39<01:22,  2.09it/s]
+2026-10-19T16:47:41.7086870Z Sampling:  33%|███▎      | 84/256 [00:40<01:21,  2.10it/s]
+2026-10-19T16:47:42.1805992Z Sampling:  33%|███▎      | 85/256 [00:40<01:21,  2.10it/s]
+2026-10-19T16:47:42.6539195Z Sampling:  34%|███▎      | 86/256 [00:41<01:20,  2.11it/s]
+2026-10-19T16:47:43.1260899Z Sampling:  34%|███▍      | 87/256 [00:41<01:20,  2.11it/s]
+2026-10-19T16:47:43.5983492Z Sampling:  34%|███▍      | 88/256 [00:42<01:19,  2.11it/s]
+2026-10-19T16:47:44.0717628Z Sampling:  35%|███▍      | 89/256 [00:42<01:19,  2.11it/s]
+2026-10-19T16:47:44.5450669Z Sampling:  35%|███▌      | 90/256 [00:43<01:18,  2.11it/s]
+2026-10-19T16:47:45.0214626Z Sampling:  36%|███▌      | 91/256 [00:43<01:18,  2.11it/s]
+2026-10-19T16:47:45.4982734Z Sampling:  36%|███▌      | 92/256 [00:44<01:17,  2.11it/s]
+2026-10-19T16:47:45.9740331Z Sampling:  36%|███▋      | 93/256 [00:44<01:17,  2.11it/s]
+2026-10-19T16:47:46.4500635Z Sampling:  37%|███▋      | 94/256 [00:45<01:16,  2.10it/s]
+2026-10-19T16:47:46.9273419Z Sampling:  37%|███▋      | 95/256 [00:45<01:16,  2.10it/s]
+2026-10-19T16:47:47.3977997Z Sampling:  38%|███▊      | 96/256 [00:45<01:16,  2.10it/s]
+2026-10-19T16:47:47.8700552Z Sampling:  38%|███▊      | 97/256 [00:46<01:15,  2.11it/s]
+2026-10-19T16:47:48.3439726Z Sampling:  38%|███▊      | 98/256 [00:46<01:14,  2.11it/s]
+2026-10-19T16:47:48.8159697Z Sampling:  39%|███▊      | 99/256 [00:47<01:14,  2.11it/s]
+2026-10-19T16:47:49.2876353Z Sampling:  39%|███▉      | 100/256 [00:47<01:13,  2.11it/s]
+2026-10-19T16:47:49.7605861Z Sampling:  39%|███▉      | 101/256 [00:48<01:13,  2.12it/s]
+2026-10-19T16:47:50.2358814Z Sampling:  40%|███▉      | 102/256 [00:48<01:12,  2.11it/s]
+2026-10-19T16:47:50.7097250Z Sampling:  40%|████      | 103/256 [00:49<01:12,  2.11it/s]
+2026-10-19T16:47:51.2199922Z Sampling:  41%|████      | 104/256 [00:49<01:11,  2.11it/s]
+2026-10-19T16:47:51.6989103Z Sampling:  41%|████      | 105/256 [00:50<01:13,  2.06it/s]
+2026-10-19T16:47:52.1745906Z Sampling:  41%|████▏     | 106/256 [00:50<01:12,  2.07it/s]
+2026-10-19T16:47:52.6477782Z Sampling:  42%|████▏     | 107/256 [00:51<01:11,  2.08it/s]
+2026-10-19T16:47:53.1213375Z Sampling:  42%|████▏     | 108/256 [00:51<01:10,  2.09it/s]
+2026-10-19T16:47:53.5958347Z Sampling:  43%|████▎     | 109/256 [00:52<01:10,  2.10it/s]
+2026-10-19T16:47:54.0726057Z Sampling:  43%|████▎     | 110/256 [00:52<01:09,  2.10it/s]
+2026-10-19T16:47:54.5497872Z Sampling:  43%|████▎     | 111/256 [00:53<01:09,  2.10it/s]
+2026-10-19T16:47:55.0302475Z Sampling:  44%|████▍     | 112/256 [00:53<01:08,  2.10it/s]
+2026-10-19T16:47:55.5324678Z Sampling:  44%|████▍     | 113/256 [00:54<01:08,  2.09it/s]
+2026-10-19T16:47:56.0373487Z Sampling:  45%|████▍     | 114/256 [00:54<01:08,  2.06it/s]
+2026-10-19T16:47:56.5115974Z Sampling:  45%|████▍     | 115/256 [00:55<01:09,  2.04it/s]
+2026-10-19T16:47:56.9870155Z Sampling:  45%|████▌     | 116/256 [00:55<01:08,  2.06it/s]
+2026-10-19T16:47:57.4614225Z Sampling:  46%|████▌     | 117/256 [00:56<01:07,  2.07it/s]
+2026-10-19T16:47:57.9365644Z Sampling:  46%|████▌     | 118/256 [00:56<01:06,  2.08it/s]
+2026-10-19T16:47:58.4115943Z Sampling:  46%|████▋     | 119/256 [00:56<01:05,  2.09it/s]
+2026-10-19T16:47:58.8846293Z Sampling:  47%|████▋     | 120/256 [00:57<01:04,  2.09it/s]
+2026-10-19T16:47:59.3589776Z Sampling:  47%|████▋     | 121/256 [00:57<01:04,  2.10it/s]
+2026-10-19T16:47:59.8426818Z Sampling:  48%|████▊     | 122/256 [00:58<01:03,  2.10it/s]
+2026-10-19T16:48:00.3329440Z Sampling:  48%|████▊     | 123/256 [00:58<01:03,  2.09it/s]
+2026-10-19T16:48:00.8135264Z Sampling:  48%|████▊     | 124/256 [00:59<01:03,  2.08it/s]
+2026-10-19T16:48:01.2903048Z Sampling:  49%|████▉     | 125/256 [00:59<01:03,  2.08it/s]
+2026-10-19T16:48:01.7964944Z Sampling:  49%|████▉     | 126/256 [01:00<01:02,  2.08it/s]
+2026-10-19T16:48:02.2797230Z Sampling:  50%|████▉     | 127/256 [01:00<01:02,  2.05it/s]
+2026-10-19T16:48:02.7605165Z Sampling:  50%|█████     | 128/256 [01:01<01:02,  2.06it/s]
+2026-10-19T16:48:03.2384265Z Sampling:  50%|█████     | 129/256 [01:01<01:01,  2.06it/s]
+2026-10-19T16:48:03.7175643Z Sampling:  51%|█████     | 130/256 [01:02<01:00,  2.07it/s]
+2026-10-19T16:48:04.2021294Z Sampling:  51%|█████     | 131/256 [01:02<01:00,  2.08it/s]
+2026-10-19T16:48:04.6793207Z Sampling:  52%|█████▏    | 132/256 [01:03<00:59,  2.07it/s]
+2026-10-19T16:48:05.1627455Z Sampling:  52%|█████▏    | 133/256 [01:03<00:59,  2.08it/s]
+2026-10-19T16:48:05.6403928Z Sampling:  52%|█████▏    | 134/256 [01:04<00:58,  2.08it/s]
+2026-10-19T16:48:06.1161843Z Sampling:  53%|█████▎    | 135/256 [01:04<00:58,  2.08it/s]
+2026-10-19T16:48:06.5929758Z Sampling:  53%|█████▎    | 136/256 [01:05<00:57,  2.09it/s]
+2026-10-19T16:48:07.0663903Z Sampling:  54%|█████▎    | 137/256 [01:05<00:56,  2.09it/s]
+2026-10-19T16:48:07.5441233Z Sampling:  54%|█████▍    | 138/256 [01:06<00:56,  2.10it/s]
+2026-10-19T16:48:08.0208444Z Sampling:  54%|█████▍    | 139/256 [01:06<00:55,  2.10it/s]
+2026-10-19T16:48:08.5212652Z Sampling:  55%|█████▍    | 140/256 [01:07<00:55,  2.10it/s]
+2026-10-19T16:48:08.9931719Z Sampling:  55%|█████▌    | 141/256 [01:07<00:55,  2.07it/s]
+2026-10-19T16:48:09.4636862Z Sampling:  55%|█████▌    | 142/256 [01:08<00:54,  2.08it/s]
+2026-10-19T16:48:09.9334281Z Sampling:  56%|█████▌    | 143/256 [01:08<00:53,  2.09it/s]
+2026-10-19T16:48:10.4043051Z Sampling:  56%|█████▋    | 144/256 [01:08<00:53,  2.10it/s]
+2026-10-19T16:48:10.8746130Z Sampling:  57%|█████▋    | 145/256 [01:09<00:52,  2.11it/s]
+2026-10-19T16:48:11.3453475Z Sampling:  57%|█████▋    | 146/256 [01:09<00:52,  2.12it/s]
+2026-10-19T16:48:11.8204307Z Sampling:  57%|█████▋    | 147/256 [01:10<00:51,  2.12it/s]
+2026-10-19T16:48:12.2906024Z Sampling:  58%|█████▊    | 148/256 [01:10<00:51,  2.11it/s]
+2026-10-19T16:48:12.7603432Z Sampling:  58%|█████▊    | 149/256 [01:11<00:50,  2.12it/s]
+2026-10-19T16:48:13.2310143Z Sampling:  59%|█████▊    | 150/256 [01:11<00:49,  2.12it/s]
+2026-10-19T16:48:13.7208708Z Sampling:  59%|█████▉    | 151/256 [01:12<00:49,  2.12it/s]
+2026-10-19T16:48:14.1908303Z Sampling:  59%|█████▉    | 152/256 [01:12<00:49,  2.10it/s]
+2026-10-19T16:48:14.6604284Z Sampling:  60%|█████▉    | 153/256 [01:13<00:48,  2.11it/s]
+2026-10-19T16:48:15.1322298Z Sampling:  60%|██████    | 154/256 [01:13<00:48,  2.11it/s]
+2026-10-19T16:48:15.6052395Z Sampling:  61%|██████    | 155/256 [01:14<00:47,  2.12it/s]
+2026-10-19T16:48:16.0769197Z Sampling:  61%|██████    | 156/256 [01:14<00:47,  2.11it/s]
+2026-10-19T16:48:16.5506288Z Sampling:  61%|██████▏   | 157/256 [01:15<00:46,  2.12it/s]
+2026-10-19T16:48:17.0228142Z Sampling:  62%|██████▏   | 158/256 [01:15<00:46,  2.11it/s]
+2026-10-19T16:48:17.4921675Z Sampling:  62%|██████▏   | 159/256 [01:16<00:45,  2.12it/s]
+2026-10-19T16:48:17.9887467Z Sampling:  62%|██████▎   | 160/256 [01:16<00:45,  2.12it/s]
+2026-10-19T16:48:18.4592207Z Sampling:  63%|██████▎   | 161/256 [01:17<00:45,  2.09it/s]
+2026-10-19T16:48:18.9441238Z Sampling:  63%|██████▎   | 162/256 [01:17<00:44,  2.10it/s]
+2026-10-19T16:48:19.4151009Z Sampling:  64%|██████▎   | 163/256 [01:17<00:44,  2.09it/s]
+2026-10-19T16:48:19.8845300Z Sampling:  64%|██████▍   | 164/256 [01:18<00:43,  2.10it/s]
+2026-10-19T16:48:20.3535315Z Sampling:  64%|██████▍   | 165/256 [01:18<00:43,  2.11it/s]
+2026-10-19T16:48:20.8271230Z Sampling:  65%|██████▍   | 166/256 [01:19<00:42,  2.11it/s]
+2026-10-19T16:48:21.3034046Z Sampling:  65%|██████▌   | 167/256 [01:19<00:42,  2.11it/s]
+2026-10-19T16:48:21.7732804Z Sampling:  66%|██████▌   | 168/256 [01:20<00:41,  2.11it/s]
+2026-10-19T16:48:22.2424738Z Sampling:  66%|██████▌   | 169/256 [01:20<00:41,  2.12it/s]
+2026-10-19T16:48:22.7170439Z Sampling:  66%|██████▋   | 170/256 [01:21<00:40,  2.12it/s]
+2026-10-19T16:48:23.1927420Z Sampling:  67%|██████▋   | 171/256 [01:21<00:40,  2.12it/s]
+2026-10-19T16:48:23.6616911Z Sampling:  67%|██████▋   | 172/256 [01:22<00:39,  2.11it/s]
+2026-10-19T16:48:24.1318288Z Sampling:  68%|██████▊   | 173/256 [01:22<00:39,  2.12it/s]
+2026-10-19T16:48:24.6019163Z Sampling:  68%|██████▊   | 174/256 [01:23<00:38,  2.12it/s]
+2026-10-19T16:48:25.0727237Z Sampling:  68%|██████▊   | 175/256 [01:23<00:38,  2.12it/s]
+2026-10-19T16:48:25.5421628Z Sampling:  69%|██████▉   | 176/256 [01:24<00:37,  2.12it/s]
+2026-10-19T16:48:26.0154810Z Sampling:  69%|██████▉   | 177/256 [01:24<00:37,  2.13it/s]
+2026-10-19T16:48:26.4873425Z Sampling:  70%|██████▉   | 178/256 [01:25<00:36,  2.12it/s]
+2026-10-19T16:48:26.9566082Z Sampling:  70%|██████▉   | 179/256 [01:25<00:36,  2.12it/s]
+2026-10-19T16:48:27.4292087Z Sampling:  70%|███████   | 180/256 [01:25<00:35,  2.12it/s]
+2026-10-19T16:48:27.8989462Z Sampling:  71%|███████   | 181/256 [01:26<00:35,  2.12it/s]
+2026-10-19T16:48:28.3686371Z Sampling:  71%|███████   | 182/256 [01:26<00:34,  2.12it/s]
+2026-10-19T16:48:28.8409210Z Sampling:  71%|███████▏  | 183/256 [01:27<00:34,  2.13it/s]
+2026-10-19T16:48:29.3138682Z Sampling:  72%|███████▏  | 184/256 [01:27<00:33,  2.12it/s]
+2026-10-19T16:48:29.7854877Z Sampling:  72%|███████▏  | 185/256 [01:28<00:33,  2.12it/s]
+2026-10-19T16:48:30.2549593Z Sampling:  73%|███████▎  | 186/256 [01:28<00:33,  2.12it/s]
+2026-10-19T16:48:30.7236482Z Sampling:  73%|███████▎  | 187/256 [01:29<00:32,  2.12it/s]
+2026-10-19T16:48:31.1941151Z Sampling:  73%|███████▎  | 188/256 [01:29<00:31,  2.13it/s]
+2026-10-19T16:48:31.6639552Z Sampling:  74%|███████▍  | 189/256 [01:30<00:31,  2.13it/s]
+2026-10-19T16:48:32.1352721Z Sampling:  74%|███████▍  | 190/256 [01:30<00:31,  2.13it/s]
+2026-10-19T16:48:32.6039815Z Sampling:  75%|███████▍  | 191/256 [01:31<00:30,  2.13it/s]
+2026-10-19T16:48:33.0719690Z Sampling:  75%|███████▌  | 192/256 [01:31<00:30,  2.13it/s]
+2026-10-19T16:48:33.5432745Z Sampling:  75%|███████▌  | 193/256 [01:32<00:29,  2.13it/s]
+2026-10-19T16:48:34.0125311Z Sampling:  76%|███████▌  | 194/256 [01:32<00:29,  2.13it/s]
+2026-10-19T16:48:34.4809533Z Sampling:  76%|███████▌  | 195/256 [01:33<00:28,  2.13it/s]
+2026-10-19T16:48:34.9491489Z Sampling:  77%|███████▋  | 196/256 [01:33<00:28,  2.13it/s]
+2026-10-19T16:48:35.4225345Z Sampling:  77%|███████▋  | 197/256 [01:33<00:27,  2.13it/s]
+2026-10-19T16:48:35.8953748Z Sampling:  77%|███████▋  | 198/256 [01:34<00:27,  2.13it/s]
+2026-10-19T16:48:36.3668923Z Sampling:  78%|███████▊  | 199/256 [01:34<00:26,  2.12it/s]
+2026-10-19T16:48:36.8369871Z Sampling:  78%|███████▊  | 200/256 [01:35<00:26,  2.12it/s]
+2026-10-19T16:48:37.3069458Z Sampling:  79%|███████▊  | 201/256 [01:35<00:25,  2.12it/s]
+2026-10-19T16:48:37.7786219Z Sampling:  79%|███████▉  | 202/256 [01:36<00:25,  2.12it/s]
+2026-10-19T16:48:38.2519278Z Sampling:  79%|███████▉  | 203/256 [01:36<00:24,  2.12it/s]
+2026-10-19T16:48:38.7217212Z Sampling:  80%|███████▉  | 204/256 [01:37<00:24,  2.12it/s]
+2026-10-19T16:48:39.1911312Z Sampling:  80%|████████  | 205/256 [01:37<00:24,  2.12it/s]
+2026-10-19T16:48:39.6615313Z Sampling:  80%|████████  | 206/256 [01:38<00:23,  2.13it/s]
+2026-10-19T16:48:40.1316336Z Sampling:  81%|████████  | 207/256 [01:38<00:23,  2.13it/s]
+2026-10-19T16:48:40.6011837Z Sampling:  81%|████████▏ | 208/256 [01:39<00:22,  2.13it/s]
+2026-10-19T16:48:41.0713782Z Sampling:  82%|████████▏ | 209/256 [01:39<00:22,  2.13it/s]
+2026-10-19T16:48:41.5384083Z Sampling:  82%|████████▏ | 210/256 [01:40<00:21,  2.13it/s]
+2026-10-19T16:48:42.0056053Z Sampling:  82%|████████▏ | 211/256 [01:40<00:21,  2.13it/s]
+2026-10-19T16:48:42.4743889Z Sampling:  83%|████████▎ | 212/256 [01:41<00:20,  2.13it/s]
+2026-10-19T16:48:42.9427156Z Sampling:  83%|████████▎ | 213/256 [01:41<00:20,  2.13it/s]
+2026-10-19T16:48:43.4106567Z Sampling:  84%|████████▎ | 214/256 [01:41<00:19,  2.13it/s]
+2026-10-19T16:48:43.8777502Z Sampling:  84%|████████▍ | 215/256 [01:42<00:19,  2.14it/s]
+2026-10-19T16:48:44.3472768Z Sampling:  84%|████████▍ | 216/256 [01:42<00:18,  2.14it/s]
+2026-10-19T16:48:44.8153300Z Sampling:  85%|████████▍ | 217/256 [01:43<00:18,  2.13it/s]
+2026-10-19T16:48:45.2838943Z Sampling:  85%|████████▌ | 218/256 [01:43<00:17,  2.14it/s]
+2026-10-19T16:48:45.7551345Z Sampling:  86%|████████▌ | 219/256 [01:44<00:17,  2.13it/s]
+2026-10-19T16:48:46.2291752Z Sampling:  86%|████████▌ | 220/256 [01:44<00:16,  2.13it/s]
+2026-10-19T16:48:46.7000971Z Sampling:  86%|████████▋ | 221/256 [01:45<00:16,  2.12it/s]
+2026-10-19T16:48:47.1712827Z Sampling:  87%|████████▋ | 222/256 [01:45<00:16,  2.12it/s]
+2026-10-19T16:48:47.6415583Z Sampling:  87%|████████▋ | 223/256 [01:46<00:15,  2.12it/s]
+2026-10-19T16:48:48.1124732Z Sampling:  88%|████████▊ | 224/256 [01:46<00:15,  2.12it/s]
+2026-10-19T16:48:48.6039828Z Sampling:  88%|████████▊ | 225/256 [01:47<00:14,  2.12it/s]
+2026-10-19T16:48:49.0723406Z Sampling:  88%|████████▊ | 226/256 [01:47<00:14,  2.10it/s]
+2026-10-19T16:48:49.5411700Z Sampling:  89%|████████▊ | 227/256 [01:48<00:13,  2.11it/s]
+2026-10-19T16:48:50.0090500Z Sampling:  89%|████████▉ | 228/256 [01:48<00:13,  2.12it/s]
+2026-10-19T16:48:50.4777698Z Sampling:  89%|████████▉ | 229/256 [01:49<00:12,  2.12it/s]
+2026-10-19T16:48:50.9528491Z Sampling:  90%|████████▉ | 230/256 [01:49<00:12,  2.13it/s]
+2026-10-19T16:48:51.4236317Z Sampling:  90%|█████████ | 231/256 [01:49<00:11,  2.12it/s]
+2026-10-19T16:48:51.8966651Z Sampling:  91%|█████████ | 232/256 [01:50<00:11,  2.12it/s]
+2026-10-19T16:48:52.3664138Z Sampling:  91%|█████████ | 233/256 [01:50<00:10,  2.12it/s]
+2026-10-19T16:48:52.8362033Z Sampling:  91%|█████████▏| 234/256 [01:51<00:10,  2.12it/s]
+2026-10-19T16:48:53.3058697Z Sampling:  92%|█████████▏| 235/256 [01:51<00:09,  2.12it/s]
+2026-10-19T16:48:53.7786447Z Sampling:  92%|█████████▏| 236/256 [01:52<00:09,  2.13it/s]
+2026-10-19T16:48:54.2494921Z Sampling:  93%|█████████▎| 237/256 [01:52<00:08,  2.12it/s]
+2026-10-19T16:48:54.7193779Z Sampling:  93%|█████████▎| 238/256 [01:53<00:08,  2.12it/s]
+2026-10-19T16:48:55.1894107Z Sampling:  93%|█████████▎| 239/256 [01:53<00:08,  2.12it/s]
+2026-10-19T16:48:55.6597055Z Sampling:  94%|█████████▍| 240/256 [01:54<00:07,  2.13it/s]
+2026-10-19T16:48:56.1314381Z Sampling:  94%|█████████▍| 241/256 [01:54<00:07,  2.13it/s]
+2026-10-19T16:48:56.6034433Z Sampling:  95%|█████████▍| 242/256 [01:55<00:06,  2.12it/s]
+2026-10-19T16:48:57.0767289Z Sampling:  95%|█████████▍| 243/256 [01:55<00:06,  2.12it/s]
+2026-10-19T16:48:57.5492264Z Sampling:  95%|█████████▌| 244/256 [01:56<00:05,  2.12it/s]
+2026-10-19T16:48:58.0205206Z Sampling:  96%|█████████▌| 245/256 [01:56<00:05,  2.12it/s]
+2026-10-19T16:48:58.4917486Z Sampling:  96%|█████████▌| 246/256 [01:57<00:04,  2.12it/s]
+2026-10-19T16:48:58.9654635Z Sampling:  96%|█████████▋| 247/256 [01:57<00:04,  2.12it/s]
+2026-10-19T16:48:59.4363647Z Sampling:  97%|█████████▋| 248/256 [01:57<00:03,  2.12it/s]
+2026-10-19T16:48:59.9097716Z Sampling:  97%|█████████▋| 249/256 [01:58<00:03,  2.12it/s]
+2026-10-19T16:49:00.3827548Z Sampling:  98%|█████████▊| 250/256 [01:58<00:02,  2.12it/s]
+2026-10-19T16:49:00.8561149Z Sampling:  98%|█████████▊| 251/256 [01:59<00:02,  2.12it/s]
+2026-10-19T16:49:01.3283972Z Sampling:  98%|█████████▊| 252/256 [01:59<00:01,  2.12it/s]
+2026-10-19T16:49:01.8034287Z Sampling:  99%|█████████▉| 253/256 [02:00<00:01,  2.12it/s]
+2026-10-19T16:49:02.2726041Z Sampling:  99%|█████████▉| 254/256 [02:00<00:00,  2.11it/s]
+2026-10-19T16:49:02.7409565Z Sampling: 100%|█████████▉| 255/256 [02:01<00:00,  2.12it/s]
+2026-10-19T16:49:02.7410163Z Sampling: 100%|██████████| 256/256 [02:01<00:00,  2.12it/s]
+2026-10-19T16:49:02.7410651Z Sampling: 100%|██████████| 256/256 [02:01<00:00,  2.10it/s]
+2026-10-19T16:49:02.8158751Z M2 atomically saved generation batch 2
+2026-10-19T16:49:02.9215549Z UserWarning: Issues encountered while parsing CIF: 1 fractional coordinates rounded to ideal values to avoid issues with finite precision.
+2026-10-19T16:49:05.7361804Z 	Command being timed: "uv run python ../../M2/verify_batch_recovery.py --mode resume --batch-size 256 --num-candidates 512 --output ../../M2/results/batch256"
+2026-10-19T16:49:05.7362668Z 	User time (seconds): 272.38
+2026-10-19T16:49:05.7363049Z 	System time (seconds): 3.28
+2026-10-19T16:49:05.7363393Z 	Percent of CPU this job got: 152%
+2026-10-19T16:49:05.7363794Z 	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:01.12
+2026-10-19T16:49:05.7364224Z 	Average shared text size (kbytes): 0
+2026-10-19T16:49:05.7364582Z 	Average unshared data size (kbytes): 0
+2026-10-19T16:49:05.7364932Z 	Average stack size (kbytes): 0
+2026-10-19T16:49:05.7365274Z 	Average total size (kbytes): 0
+2026-10-19T16:49:05.7365620Z 	Maximum resident set size (kbytes): 1451528
+2026-10-19T16:49:05.7365994Z 	Average resident set size (kbytes): 0
+2026-10-19T16:49:05.7366307Z 	Major (requiring I/O) page faults: 23
+2026-10-19T16:49:05.7366572Z 	Minor (reclaiming a frame) page faults: 291074
+2026-10-19T16:49:05.7366842Z 	Voluntary context switches: 2961
+2026-10-19T16:49:05.7367151Z 	Involuntary context switches: 2069
+2026-10-19T16:49:05.7367460Z 	Swaps: 0
+2026-10-19T16:49:05.7367699Z 	File system inputs: 37728
+2026-10-19T16:49:05.7368003Z 	File system outputs: 2625072
+2026-10-19T16:49:05.7368320Z 	Socket messages sent: 0
+2026-10-19T16:49:05.7368637Z 	Socket messages received: 0
+2026-10-19T16:49:05.7368948Z 	Signals delivered: 0
+2026-10-19T16:49:05.7369239Z 	Page size (bytes): 4096
+2026-10-19T16:49:05.7369572Z 	Exit status: 0
+2026-10-19T16:49:05.7398527Z ##[group]Run uv run python ../../M2/verify_batch_recovery.py --mode compare --batch-size 256 --num-candidates 512 --require-cross-runner --output ../../M2/results/batch256
+2026-10-19T16:49:05.7399423Z [36;1muv run python ../../M2/verify_batch_recovery.py --mode compare --batch-size 256 --num-candidates 512 --require-cross-runner --output ../../M2/results/batch256[0m
+2026-10-19T16:49:05.7456857Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:49:05.7457081Z env:
+2026-10-19T16:49:05.7457261Z   OMP_NUM_THREADS: 2
+2026-10-19T16:49:05.7457454Z   MKL_NUM_THREADS: 2
+2026-10-19T16:49:05.7457641Z   PYTHONUNBUFFERED: 1
+2026-10-19T16:49:05.7457888Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:49:05.7458257Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:49:05.7458607Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:49:05.7459122Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:49:05.7459465Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:49:05.7459777Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:49:05.7460081Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:49:05.7460333Z ##[endgroup]
+2026-10-19T16:49:11.2226872Z UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:49:11.7611194Z cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-19T16:49:15.0924031Z {
+2026-10-19T16:49:15.0924497Z   "kind": "real_cross_process_chemeleon_batch_recovery",
+2026-10-19T16:49:15.0924928Z   "benchmark_score": false,
+2026-10-19T16:49:15.0925153Z   "fixture": {
+2026-10-19T16:49:15.0925337Z     "batch_size": 256,
+2026-10-19T16:49:15.0925605Z     "diffusion_steps": "unchanged model default (256)",
+2026-10-19T16:49:15.0925875Z     "formula": "Li2O",
+2026-10-19T16:49:15.0926072Z     "num_candidates": 512,
+2026-10-19T16:49:15.0926274Z     "seed": 17
+2026-10-19T16:49:15.0926442Z   },
+2026-10-19T16:49:15.0926600Z   "checks": {
+2026-10-19T16:49:15.0926784Z     "structures_equal": false,
+2026-10-19T16:49:15.0926990Z     "rng_equal": true,
+2026-10-19T16:49:15.0927192Z     "first_batch_preserved": true,
+2026-10-19T16:49:15.0927437Z     "completed_batch_not_sampled_twice": true,
+2026-10-19T16:49:15.0927689Z     "candidate_count": true,
+2026-10-19T16:49:15.0927896Z     "fixture_equal": true,
+2026-10-19T16:49:15.0928103Z     "cache_source_equal": true,
+2026-10-19T16:49:15.0928330Z     "saved_batch_bytes_preserved": true,
+2026-10-19T16:49:15.0928573Z     "different_runner_hosts": false
+2026-10-19T16:49:15.0928783Z   },
+2026-10-19T16:49:15.0928951Z   "passed": false,
+2026-10-19T16:49:15.0929319Z   "scope": "Actual-model recovery fixture only; not a protocol score or complete protocol-pool validation."
+2026-10-19T16:49:15.0929720Z }
+2026-10-19T16:49:16.9716596Z ##[error]Process completed with exit code 1.
+2026-10-19T16:49:16.9772869Z ##[group]Run actions/upload-artifact@v4
+2026-10-19T16:49:16.9773135Z with:
+2026-10-19T16:49:16.9773342Z   name: m2-batch256-verification-39286986254
+2026-10-19T16:49:16.9773600Z   path: M2/results/batch256/
+2026-10-19T16:49:16.9773815Z   retention-days: 90
+2026-10-19T16:49:16.9774011Z   if-no-files-found: warn
+2026-10-19T16:49:16.9774215Z   compression-level: 6
+2026-10-19T16:49:16.9774414Z   overwrite: false
+2026-10-19T16:49:16.9774602Z   include-hidden-files: false
+2026-10-19T16:49:16.9774808Z env:
+2026-10-19T16:49:16.9774970Z   OMP_NUM_THREADS: 2
+2026-10-19T16:49:16.9775153Z   MKL_NUM_THREADS: 2
+2026-10-19T16:49:16.9775335Z   PYTHONUNBUFFERED: 1
+2026-10-19T16:49:16.9775579Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:49:16.9775950Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:49:16.9776317Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:49:16.9776664Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:49:16.9776974Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:49:16.9777289Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:49:16.9777591Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:49:16.9777848Z ##[endgroup]
+2026-10-19T16:49:17.1056963Z (node:2294) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:49:17.1057868Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:49:17.1118313Z With the provided path, there will be 6 files uploaded
+2026-10-19T16:49:17.1122771Z Artifact name is valid!
+2026-10-19T16:49:17.1123610Z Root directory input is valid!
+2026-10-19T16:49:17.4409886Z Beginning upload of artifact content to blob storage
+2026-10-19T16:49:17.5006820Z (node:2294) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T16:49:18.0148699Z Uploaded bytes 487768
+2026-10-19T16:49:18.0778815Z Finished uploading artifact content to blob storage!
+2026-10-19T16:49:18.0779614Z SHA256 digest of uploaded artifact zip is 13c1451afe8f91be68f8b3c1f2573d35e50fe8c7874715878fba08c3d24bd8fa
+2026-10-19T16:49:18.0780845Z Finalizing artifact upload
+2026-10-19T16:49:18.3678605Z Artifact m2-batch256-verification-39286986254.zip successfully finalized. Artifact ID 12204326974
+2026-10-19T16:49:18.3679709Z Artifact m2-batch256-verification-39286986254 has been successfully uploaded! Final size is 487768 bytes. Artifact ID is 12204326974
+2026-10-19T16:49:18.3685210Z Artifact download URL: https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39286986254/artifacts/12204326974
+2026-10-19T16:49:18.3854902Z Post job cleanup.
+2026-10-19T16:49:18.4552290Z [command]/usr/bin/git version
+2026-10-19T16:49:18.4578769Z git version 2.55.0
+2026-10-19T16:49:18.4607516Z Temporarily overriding HOME='/home/runner/work/_temp/d30c52f2-197a-4074-8a55-3599418ce680' before making global git config changes
+2026-10-19T16:49:18.4608821Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T16:49:18.4612945Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:49:18.4646166Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T16:49:18.4681250Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T16:49:18.4889576Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T16:49:18.4912923Z http.https://github.com/.extraheader
+2026-10-19T16:49:18.4922370Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T16:49:18.4955782Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T16:49:18.5206416Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T16:49:18.5238393Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T16:49:18.5589157Z Cleaning up orphan processes
+2026-10-19T16:49:18.5837616Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/download-artifact@v4, actions/setup-python@v5, actions/upload-artifact@v4, astral-sh/setup-uv@v6. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

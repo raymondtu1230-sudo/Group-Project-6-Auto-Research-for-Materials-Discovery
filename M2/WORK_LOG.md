@@ -205,3 +205,15 @@ The original small-model recovery ZIP has now been independently downloaded and 
 The reviewed M6-format draft, native chart input and speaker notes are in report/. The binary draft and original small-recovery ZIP are deterministically published from checksum-verified encoded bytes by the separate assets workflow. This creates no scientific workload. M2's local Ruff configuration makes namespace import classification explicit. Current local rerun:17 M1 passes,52 M2 passes,one CPU-namespace skip. The new source still requires its own GitHub acceptance; prior source-specific checks remain historical.
 
 M1's shared configuration advanced independently with M5 wiring during the takeover. M2 publication preserves that current tree and does not modify the shared configuration. No active scientific workflow is restarted for these source/documentation updates.
+
+
+### 19 October 2026, 16:55 UTC — preserve failed large recovery validation
+
+Accepted scientific units remain **2/36**. In missing-only Random run [39286848821](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39286848821), four new jobs have succeeded, four are running and nine queued at this snapshot. The four successful jobs await artifact/protocol/official-metric verification and are not counted as accepted results.
+
+The stronger batch256 recovery run [39286986254](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39286986254) **failed its final admission check**: full structure dictionaries differ and runner hostnames repeat. Final RNG, preserved batch bytes, candidate counts and no-repeat sampling checks passed. Read-only inspection found only very small numeric differences (maximum absolute difference 2.8422e-14), and distinct runner names despite the shared hostname; these observations do not override the failure. Three original artifacts were downloaded and their SHA256 digests verified. See `verification/20261020-batch256-recovery-failure/`. No production Chemeleon recovery workflow is admitted; 17 formal Chemeleon dev units remain missing.
+
+The colleague's request for 12 Chemeleon check units is an additional evaluation request, not a launched experiment. The colleague offers to run 12 Random check units locally. M1 retains ownership of hidden-split driver support and the frozen full-system reference. No check/hidden jobs were dispatched from the screenshot alone.
+
+Older job snapshots below are historical and superseded by this update.
+

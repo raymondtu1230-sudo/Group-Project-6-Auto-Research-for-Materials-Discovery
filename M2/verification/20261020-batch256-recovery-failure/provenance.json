@@ -1,0 +1,41 @@
+{
+  "run_id": 39286986254,
+  "source": "e30b5bb233842797f4ad90c80732bb327d07c0bf",
+  "accepted_scientific_units": 0,
+  "production_admitted": false,
+  "checks": {
+    "structures_equal": false,
+    "rng_equal": true,
+    "first_batch_preserved": true,
+    "completed_batch_not_sampled_twice": true,
+    "candidate_count": true,
+    "fixture_equal": true,
+    "cache_source_equal": true,
+    "saved_batch_bytes_preserved": true,
+    "different_runner_hosts": false
+  },
+  "raw_artifacts": [
+    {
+      "id": 12204631671,
+      "sha256": "56967787c139046b3697170f4627dfb48e1883e5cb28c6f04d86f65280cc399d"
+    },
+    {
+      "id": 12204326974,
+      "sha256": "13c1451afe8f91be68f8b3c1f2573d35e50fe8c7874715878fba08c3d24bd8fa"
+    },
+    {
+      "id": 12204176404,
+      "sha256": "56a75003e0995a489d40cac721c4edcdf772f31450f0eef3111acbc0f686de68"
+    }
+  ],
+  "initial_read_only_diagnosis": {
+    "equal_structure_dicts": 15,
+    "total_structures": 512,
+    "different_numeric_leaves": 4210,
+    "max_absolute_numeric_difference": 2.842170943040401e-14,
+    "species_order_equal": true,
+    "runner_names_differ": true,
+    "hostnames_differ": false,
+    "interpretation": "Very small numerical representation differences and repeated hostnames warrant diagnosis. This does not override the failed gate or demonstrate a safe full production workflow."
+  }
+}
