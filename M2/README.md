@@ -1,8 +1,10 @@
-# Current M2 delivery — 20 October 2026
+# M2 当前交付 — 2026年10月20日
 
-**19/36 dev baseline units accepted: Random18/18;Chemeleon1/18;zeroauditissues.** The remaining17Chemeleonunits are blocked at recoveryadmission,notrunning. This isnotcompletionofallM2work. See [STATUS](STATUS.md), [closeout and blockers](verification/20261020-overnight-closeout/README.md), [complete preserved audit](verification/preserved-39306348134/report/validation.json), and [unexecuted4070pilotguide](GPU_PILOT_GUIDE_4070.md). Main's19-archive reusemanifest iscurrent;do not rerun acceptedunits. NoM1sharedintegration,check/hidden,GPUorpaidresourceaction occurred.
+dev基线已核验 **19/36**：Random 18/18、Chemeleon 1/18，零审计问题。剩余17项Chemeleon受恢复验收阻塞，尚未启动；整个M2任务尚未完成。
 
-## Preserved earlier documentation
+请查看 [当前状态](STATUS.md)、[本轮收尾和待办](verification/20261020-overnight-closeout/README.md)、[最新审计](verification/preserved-39306348134/report/validation.json) 和 [尚未执行的4070试跑准备](GPU_PILOT_GUIDE_4070.md)。main的19份归档复用清单为准，不得重复运行已验收单元。本轮未改动共享M1集成，未启动check/hidden、GPU或付费资源。
+
+## 历史说明
 
 # M2: Tool routing and evaluation
 

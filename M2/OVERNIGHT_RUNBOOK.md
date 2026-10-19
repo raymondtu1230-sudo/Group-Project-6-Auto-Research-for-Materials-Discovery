@@ -1,15 +1,15 @@
-# M2 continuation is paused after bounded closeout
+# M2 本轮收尾与暂停规则
 
-Latest audited state: **19/36** dev baselines: Random18/18 and Chemeleon1/18; 17 Chemeleon missing. No scientific jobs remain active. Read STATUS.md and verification/20261020-overnight-closeout/README.md as current authority; older hourly continuation instructions and snapshots are superseded.
+最新核验：dev 基线 **19/36**，其中 Random 18/18，Chemeleon 1/18；剩余17项 Chemeleon 尚未启动。科学作业已全部退出，没有需要取消的健康实验。以 STATUS.md 和 verification/20261020-overnight-closeout/README.md 为准，旧的每小时继续执行要求已被本节替代。
 
-Evidence-only run39306348134 succeeded and published23 exact SHA256-verified originalZIPs. Its current official-metric audit accepts19 distinct units with zero issues. Main's checksum-pinned verified_baselines manifest now has19 entries. Existing archives are not new experiments.
+证据归档作业 39306348134 已成功：复用已保存的 ZIP 字节，核对23份原始ZIP的 GitHub SHA256，运行当前离线审计及官方指标，核验19个不同单元、零问题。main 的 configs/verified_baselines.json 现固定19份已验收归档。复制文件和恢复验证不增加实验成绩。
 
-Exact-recovery run39297647516 failed its identity guard before comparison. Do not rerun unchanged, remove the guard, declare success, or launch the17 formalChemeleon units. The blocker and resume requirements are documented. Full1024 protocolwrapper and stage-cost validation remain unproven. An alternative needs adequately long persistent CPU runtime within existing authorization; no paid resources or GPU execution is implied.
+恢复验证 39297647516 在重放身份校验处明确失败，最终精确比较未执行。不能原样重跑、删除保护条件或贸然启动17项正式实验。必须先查明哪项身份信息不同，再证明原子/CIF/RNG、跨机器恢复、完整1024候选池生产入口和分阶段成本；或者安排有足够时限的持久CPU运行。不得擅自购买算力或改用GPU。
 
-The user's highest-priority stop rule requires ending this bounded work and pausing the existing follow-up after evidence and CI verification. Do not create another automation, restart polling or launch experiments merely because this file is read. Reopening a future task must retain completed results and stop/retry limits. No healthy process was cancelled; no cancellation was needed.
+按照用户睡前停止规则，本轮证据与CI核验完成后，关闭已有自动跟进，不再空轮询。阅读本文件不构成重启自动任务或科学实验的授权。后续接手必须保留19项已验收结果及有限重试规则，不得从头再跑。
 
-M1/M5 own their shared integration issue; M1 owns integration,freeze and complete reference. Routing-off awaits that same frozenreference. Check/hidden remainhold. GPU_PILOT_GUIDE_4070.md is unexecuted preparation for later user involvement, not a formalprotocol amendment.
+M1/M5处理共享配置问题；M1负责全组集成、冻结及完整系统reference，routing关闭消融等待同一冻结版本。check/hidden继续暂停。GPU_PILOT_GUIDE_4070.md仅为未执行的准备清单，用户醒来确认系统后再细化；不迁移个人全部数据、不复制旧环境或续接CPU缓存。
 
-Delivery stays main/M2 only; install into an isolatedtestcopy and keep draftPR2 unmerged. Code/tests go toM1 and methods/draftslides toM6 by24October,final results/curves/costs toM6 by27October. The user sends any groupnotice; all messages remain unsentdrafts and acceptance unconfirmed.
+交付全部放main/M2；只在隔离副本安装。保留开发分支及草稿PR2，不合并。10月24日前代码/测试交M1、方法/幻灯片草稿交M6；10月27日前最终结果/曲线/成本交M6。群消息由用户发送，目前仅有草稿，没有接收或验收确认。
 
-Completed source-specific cloudCI39306348142 on78346d6:17M1 tests,62M2 tests,bothRuffchecks,reproducibleinstallation and officialsyntheticsmoke. It does not override the separately failed shared-mainM1/M5 check. Knownmodel/APIfees0 is not total economiccost0.
+开发源78346d6的CI 39306348142已通过：17项M1测试、62项M2测试、两项Ruff、可复现安装及官方合成smoke。这不覆盖此前单独失败的共享main M1/M5默认配置。模型/API已知费用为0，不等于硬件、电费及失败尝试的总经济成本为0。

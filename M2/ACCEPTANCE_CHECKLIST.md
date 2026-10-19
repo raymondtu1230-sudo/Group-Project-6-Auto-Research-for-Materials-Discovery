@@ -1,13 +1,14 @@
-# Current closeout acceptance — 20 October 2026, 02:57 Asia/Singapore
+# 当前验收状态 — 2026年10月20日02:57（新加坡）
 
-- Scientific audit: **19/36** distinct devbaselines accepted,issues0;Random18/18,Chemeleon1/18. Noqueued,activeorunverifiedRandomunits remain. Main/M2/verification/preserved-39306348134 contains23 checksumverifiedoriginalZIPs;originalpair countedonce.
-- Devsource78346d6 CI39306348142 passed17 originalM1 tests+62M2tests,no skips,focused/allM2Ruff,reproducibleinstaller and unchangedofficialsyntheticsmoke. Saved logs in verification/20261020-overnight-closeout/. This is not validation of the separate shared-mainM1/M5unseededdefault;thatownerissue remains.
-- Exactrecovery39297647516 explicitlyfailedatidentityguardbeforecomparison. No fullpoolproductionwrapperor17formalChemeleonunitsadmitted. No fabricatedpass,unchangedretry,scientificconfigreduction,GPUorchecklaunch.
-- Main19-archive verified_baselines manifest is canonical. Donotuse the olderbranchmanifestto rerunnewlyacceptedunits. Existing slidesremainhistoricalpartialdrafts.
-- M1integration/freeze/reference and M6check/hidden responsibilities unchanged;unsentprogressdraft in handoffs/20261020_PROGRESS_FOR_M1_M6_ZH.md. Recipientacceptance isunconfirmed. KeepPR2draft/unmerged.
-- Allindependentrawpreservation/currentCIcomplete;peruserstoprulepausefollowupwith remainingrecovery/runtime/owner/userdependencies. This is not wholeM2completion.
+- 科学基线核验 **19/36**，零审计问题：Random 18/18、Chemeleon 1/18。没有排队、运行或待验收的Random。原始首轮两项只计一次。
+- main/M2/verification/preserved-39306348134/ 保存23份SHA256核对通过的原始ZIP，包括17份补跑Random和两次恢复验证的6份归档。恢复验证本身不算基线成绩。
+- 开发源78346d6、CI 39306348142：17项原M1测试、62项M2测试均通过，无跳过；focused/all-M2 Ruff、安装复现、官方合成smoke通过。日志在 verification/20261020-overnight-closeout/。这不是对共享main M1/M5默认配置的重新验收，该项已知失败仍待其负责人处理。
+- 恢复验证39297647516在身份保护检查失败，最终比较未执行；完整候选池生产入口及剩余17项Chemeleon均未获准开跑。不得把失败说成通过、原样重试或降低科学设置。
+- main的 verified_baselines.json 已固定19份归档；旧开发分支清单不能覆盖它或导致重复派发。现有幻灯片仍是原始两项结果的历史草稿。
+- M1负责正式集成、冻结和完整reference；M6负责check/hidden。新进度消息仅保存于 handoffs/20261020_PROGRESS_FOR_M1_M6_ZH.md，尚未发送/确认。PR2保留草稿、未合并。
+- 本轮可独立完成的原始归档和CI已核验。按照用户停止规则暂停后续轮询，保留恢复、运行时限和成员/用户依赖；这不代表整个M2完成。
 
-## Historical checklist (superseded where inconsistent)
+## 历史清单（与上文不一致时以上文为准）
 
 # Current acceptance update: 20 October 2026
 
