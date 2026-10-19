@@ -1,9 +1,0 @@
-{
-  "scope": "real execution recovery validation only, no oracle calls or protocol scores",
-  "samples": 512,
-  "batch_size": 256,
-  "diffusion_steps": "unchanged original model default",
-  "cross_runner": true,
-  "require_all_structures_order_rng_equal": true,
-  "formal_chemeleon_sweep_admitted": false
-}

@@ -1,6 +1,16 @@
 {
   "scope": "M2 missing dev Random units only",
+  "reuse_manifest": "M2/configs/verified_baselines.json",
   "expected_completed": 2,
   "expected_missing_random": 17,
-  "capacity_blocked_chemeleon": 17
+  "expected_capacity_blocked_chemeleon": 17,
+  "max_parallel": 4,
+  "scientific_parameters_changed": false,
+  "launch_gate": "Fresh M1/M2 tests and official smoke must pass in prepare before any scientific job",
+  "rerun_same_workflow_attempt": false,
+  "preflight_retry": {
+    "previous_run": 39284865198,
+    "reason": "Previous prepare failed Ruff before scheduling any scientific unit; import sorting fixed without changing science.",
+    "request_revision": 2
+  }
 }

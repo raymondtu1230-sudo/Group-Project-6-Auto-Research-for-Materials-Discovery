@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import Any
 
 import pytest
+
+from M2 import evaluate
 from M2.evaluate import (
     CURVE,
     MSUN,
@@ -21,8 +23,6 @@ from M2.run_baselines import (
     preserve_configuration,
     preserve_history,
 )
-
-from M2 import evaluate
 
 
 def write(path: Path, value: Any) -> None:

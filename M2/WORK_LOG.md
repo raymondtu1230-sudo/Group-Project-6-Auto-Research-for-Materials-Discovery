@@ -195,3 +195,13 @@ unit-level scores only with their raw evidence and never as a full comparison.
 - Corrected obsolete reference ownership and branch-count statements. M1 still integrates/freezes/supplies the full reference. M6 still owns check/hidden evaluation. No group message was sent and no receipt/acceptance was claimed.
 
 Lesson: prevent repetition at the expensive model-batch boundary and validate exact continuation before trusting it. Preserve model outputs and RNG, not just activity logs. An execution-recovery fixture does not replace a completed 20-query scientific unit.
+
+## Current independent verification update
+
+Scientific coverage remains 2/36. Corrected Random run39286848821 has released 17 missing-only units; the latest observed matrix has four running job environments and 13 queued, with no new accepted result. Original Mg-Sn-Sr/17 units are excluded. Running-job log download currently returns BlobNotFound, so query/CPU counts are not inferred from workflow status.
+
+The original small-model recovery ZIP has now been independently downloaded and SHA256-verified in verification/20261020-batch-recovery-small/. All four exact continuation checks pass on source639f47b3. Batch256 validation39286986254 has completed the continuous and deliberately interrupted stages; restoration on a separate runner is in progress. It must still pass the final exact comparison. No formal Chemeleon unit uses this cache yet.
+
+The reviewed M6-format draft, native chart input and speaker notes are in report/. The binary draft and original small-recovery ZIP are deterministically published from checksum-verified encoded bytes by the separate assets workflow. This creates no scientific workload. M2's local Ruff configuration makes namespace import classification explicit. Current local rerun:17 M1 passes,52 M2 passes,one CPU-namespace skip. The new source still requires its own GitHub acceptance; prior source-specific checks remain historical.
+
+M1's shared configuration advanced independently with M5 wiring during the takeover. M2 publication preserves that current tree and does not modify the shared configuration. No active scientific workflow is restarted for these source/documentation updates.

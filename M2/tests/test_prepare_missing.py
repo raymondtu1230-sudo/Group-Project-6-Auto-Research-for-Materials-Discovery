@@ -6,9 +6,9 @@ from zipfile import ZipFile
 
 import pytest
 import yaml
-from M2.tests.test_evaluation import fixture_run, write
 
 from M2 import prepare_missing as scheduling
+from M2.tests.test_evaluation import fixture_run, write
 
 
 def protocol(tmp_path: Path):

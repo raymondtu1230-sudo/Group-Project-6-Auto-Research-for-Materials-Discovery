@@ -1,4 +1,4 @@
-name: M2 publish reviewed slide draft
+name: M2 publish reviewed draft and recovery evidence
 on:
   push:
     branches: [m2/tool-routing-evaluation]
@@ -25,11 +25,18 @@ jobs:
           content = base64.b64decode((folder/metadata['encoding_source']).read_text().strip(), validate=True)
           assert hashlib.sha256(content).hexdigest() == metadata['sha256']
           (folder/metadata['file']).write_bytes(content)
+          evidence = Path('M2/verification/20261020-batch-recovery-small')
+          proof = json.loads((evidence/'provenance.json').read_text())
+          content = base64.b64decode((evidence/'raw_artifact.zip.b64').read_text().strip(), validate=True)
+          assert hashlib.sha256(content).hexdigest() == proof['raw_sha256']
+          (evidence/'raw_artifact.zip').write_bytes(content)
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: m2-reviewed-slide-draft-${{ github.run_id }}
-          path: M2/report/M2_Method_and_Partial_Results_Draft.pptx
+          path: |
+            M2/report/M2_Method_and_Partial_Results_Draft.pptx
+            M2/verification/20261020-batch-recovery-small/raw_artifact.zip
           retention-days: 90
       - uses: actions/checkout@v4
         with:
@@ -42,7 +49,9 @@ jobs:
           cd publication
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- M2/report/M2_Method_and_Partial_Results_Draft.pptx
+          mkdir -p M2/verification/20261020-batch-recovery-small
+          cp ../M2/verification/20261020-batch-recovery-small/raw_artifact.zip M2/verification/20261020-batch-recovery-small/
+          git add -- M2/report/M2_Method_and_Partial_Results_Draft.pptx M2/verification/20261020-batch-recovery-small/raw_artifact.zip
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Publish reviewed M2 editable method and partial-results slide draft'
           git pull --rebase origin main

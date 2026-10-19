@@ -1,0 +1,14 @@
+{
+  "workflow_run": 39285316913,
+  "source_revision": "639f47b301d71cc7bd7c66c7832f0ecb75bb5e9d",
+  "artifact_id": 12201404998,
+  "raw_sha256": "8570dbc27d6a286c60a994ccb4d704169ef4f0c58247c9a0c926ff88a65eace9",
+  "benchmark_score": false,
+  "verified_checks": [
+    "structures_equal",
+    "rng_equal",
+    "first_batch_preserved",
+    "completed_batch_not_sampled_twice"
+  ],
+  "scope": "Two Li2O candidates, batch1, all original diffusion steps, three separate Python processes on one runner. Does not establish batch256 or cross-host recovery."
+}
