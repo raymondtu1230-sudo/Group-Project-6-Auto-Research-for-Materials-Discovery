@@ -7,11 +7,9 @@
 | [COMPUTE_PLAN.md](COMPUTE_PLAN.md) | Unit counts, time estimates, laptop vs GitHub Actions, 1-seed fallback |
 | [run_check_baselines.sh](run_check_baselines.sh) | Serial Random + Chemeleon over check (or hidden) systems × seeds; dry run unless `--execute` |
 | [generalization.py](generalization.py) | Dev vs held-out table + chart from M2 `per_run.csv` (stdlib only) |
-| [results/20261019-dev-partial/](results/20261019-dev-partial/) | `generalization.py` on the 2 accepted dev units (no held-out data yet) |
-| [report/REPORT_TEMPLATE.md](report/REPORT_TEMPLATE.md) | Report skeleton with owners and sources |
-| [report/SLIDES_OUTLINE.md](report/SLIDES_OUTLINE.md) | 14 slides, 9:55 |
 | [REQUIREMENTS_CHECKLIST.md](REQUIREMENTS_CHECKLIST.md) | Brief deliverables → owner, status, file |
-| [comms/](comms/) | Drafts: TA email, group message (not sent) |
+
+Only project files are committed. Personal drafts, notes and scratch outputs live in `M6/local/`, which git ignores. Real generalization outputs for the report go in `M6/results/` and are committed.
 
 Checks (from the repo root):
 
