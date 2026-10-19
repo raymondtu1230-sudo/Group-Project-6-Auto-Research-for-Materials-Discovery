@@ -12,6 +12,9 @@ repository's `main` branch. M2 sources, tests, evidence and documentation belong
 here. Publishing this folder does not install files into M1 or complete the
 team's full integration.
 
+See [ACCEPTANCE_CHECKLIST.md](ACCEPTANCE_CHECKLIST.md) for the requirement-by-
+requirement audit, actual passing checks, integration boundary and branch policy.
+
 | Contents | Location in this folder |
 | --- | --- |
 | Router, generator adapters and component contract tests | `integration/` |

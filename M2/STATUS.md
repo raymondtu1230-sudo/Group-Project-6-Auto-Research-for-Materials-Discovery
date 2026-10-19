@@ -36,6 +36,12 @@ step-by-step guide and updated submission notice were reconciled with this scope
 | Random result | mSUN@20=7, AUDC=55.5, driver wall time 952.717 s |
 | Actual live CPU diagnostic | Passed on GitHub Linux in run 39217841268 |
 | Complete continuation CI | Passed on run 39218278124, revision b8e2c0c; 17 M1 and 45 M2 tests, both Ruff checks, reproducible installation and original smoke |
+| Latest handoff acceptance CI | Passed on run 39221672640, revision 2b2c6753; 17 M1 and 45 M2 tests with no skips, Ruff, reproducible installation and original smoke |
+
+The exact user-supplied handoff requirements and branch-retention decision are
+mapped in [ACCEPTANCE_CHECKLIST.md](ACCEPTANCE_CHECKLIST.md). The M2 development
+branch now includes current main's published M2 folder and M4 contents; the three
+documentation conflicts were resolved using the published main versions.
 
 The raw Random ZIP and independently generated tables/curves are in
 [`verification/20261019-random-gate`](verification/20261019-random-gate/README.md).

@@ -50,3 +50,21 @@ unit-level scores only with their raw evidence and never as a full comparison.
   of its workflow definitions. Kept main's M1, M4 and root files unchanged and
   kept PR #2's integration changes separate from this folder publication.
 - No scientific run was cancelled, restarted or duplicated for packaging.
+
+## 19 October 2026: exact M1 handoff acceptance audit
+
+- Reconciled the user's pasted handoff requirements with all five required M1
+  files and the actual M2 implementation. Recorded the requirement-to-file
+  mapping and remaining gates in `ACCEPTANCE_CHECKLIST.md`.
+- Synced current main into the existing M2 development branch. Resolved three
+  documentation add/add conflicts using main's published M2 versions; preserved
+  current M4 contents and the previously tested M1 integration code exactly.
+- Local repeat: 17 M1 and 44 M2 tests passed, with the incompatible local CPU
+  namespace check explicitly skipped. Ruff and installation reproducibility
+  passed. No skipped local test is represented as a pass.
+- GitHub run 39221672640 passed on 2b2c6753: 17 M1 and 45 M2 tests with no
+  skips, both Ruff checks, reproducible installation and original smoke. Actual
+  test logs and artifact 12172061499 preserve the evidence.
+- Retained main and the one M2 development branch because integration review
+  and scientific experiments remain open. The independent main/M2 package is
+  available; full baseline and full-reference comparisons remain incomplete.
