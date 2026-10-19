@@ -1,0 +1,49 @@
+name: M2 publish reviewed slide draft
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths: [M2/requests/publish-reviewed-slides.json]
+permissions:
+  contents: write
+jobs:
+  publish:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Decode the exact reviewed bytes and check the checksum
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json
+          from pathlib import Path
+          folder = Path('M2/report')
+          metadata = json.loads((folder/'slides_checksum.json').read_text())
+          content = base64.b64decode((folder/metadata['encoding_source']).read_text().strip(), validate=True)
+          assert hashlib.sha256(content).hexdigest() == metadata['sha256']
+          (folder/metadata['file']).write_bytes(content)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: m2-reviewed-slide-draft-${{ github.run_id }}
+          path: M2/report/M2_Method_and_Partial_Results_Draft.pptx
+          retention-days: 90
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: publication
+      - name: Publish only the reviewed M2 slide file
+        run: |
+          mkdir -p publication/M2/report
+          cp M2/report/M2_Method_and_Partial_Results_Draft.pptx publication/M2/report/
+          cd publication
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- M2/report/M2_Method_and_Partial_Results_Draft.pptx
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish reviewed M2 editable method and partial-results slide draft'
+          git pull --rebase origin main
+          git push origin HEAD:main

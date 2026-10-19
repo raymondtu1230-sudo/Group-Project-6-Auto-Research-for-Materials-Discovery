@@ -1,0 +1,6 @@
+{
+  "scope": "M2 missing dev Random units only",
+  "expected_completed": 2,
+  "expected_missing_random": 17,
+  "capacity_blocked_chemeleon": 17
+}

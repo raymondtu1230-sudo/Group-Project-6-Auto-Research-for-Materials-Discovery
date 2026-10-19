@@ -1,5 +1,28 @@
 # M2: Tool routing and evaluation
 
+## 20 October continuation
+
+Accepted scientific coverage remains **2/36** until new raw units pass validation.
+`prepare_missing.py` checksum-verifies the retained pair, imports any later M2-only
+published archives and creates `inventory.json` / `units.csv`. It refuses invalid
+or newer failed evidence rather than silently scheduling over it. Only missing
+units enter the matrix. `workflows/m2-missing-baselines.yml` requests the 17 missing
+Random dev units, after fresh tests and official smoke. The legacy
+`baseline_sweep` below is historical and must not be used for this continuation.
+
+`generation_cache.py`, `cache_protocol.py`, `verify_batch_recovery.py` and the
+batch-recovery workflows are **experimental execution recovery**. They do not
+change the delivered router, official generators or scientific settings. Batch
+outputs and Python/NumPy/Torch RNG can be saved and checked at original sampling
+boundaries. Actual-model batch256 and cross-runner verification must pass before
+formal Chemeleon experiments use this mechanism. A log file is not a checkpoint.
+Until admission, 17 missing Chemeleon units remain blocked on safe execution capacity.
+
+Current evidence and environment failures: `verification/20261020-takeover/`.
+M6's actual slide mapping and an editable draft: `report/`. M1 remains responsible
+for shared integration, freezing and the full-system reference. PR #2 stays open.
+
+
 M2 owns the Random/Chemeleon baselines, tool selection, official metric reporting,
 discovery curves and cost analysis. Planning/reflection (M3), memory (M4), and
 composition exploration (M5) remain their owners' components. The full reference
@@ -197,7 +220,6 @@ for the complete handoff state.
 
 - By 24 October: module, configuration, tests and method note to M1; baseline
   and evaluation material to M6.
-- After M1's 25 October freeze: record the reference revision and run the full
-  integrated reference on 26 October, then the routing-off ablation.
+- After M1's 25 October freeze: receive and validate M1's frozen full-system reference on 26 October, then run the routing-off ablation.
 - By 27 October: collect team results and deliver the validated table, discovery
   curves and cost analysis to M6. Never label a partial development run as final.

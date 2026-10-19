@@ -1,0 +1,77 @@
+name: M2 batch256 recovery across runners
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths: [M2/requests/batch256-recovery-check.json]
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  OMP_NUM_THREADS: '2'
+  MKL_NUM_THREADS: '2'
+jobs:
+  continuous-and-interrupt:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    defaults:
+      run:
+        working-directory: M1/MADE
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - run: uv sync --locked
+      - name: Recovery mechanics, incompatible state and focused lint
+        run: |
+          uv run pytest -q ../../M2/tests/test_generation_cache.py -o addopts=''
+          uv run ruff check ../../M2/generation_cache.py ../../M2/verify_batch_recovery.py ../../M2/tests/test_generation_cache.py
+      - name: Continuous original batch256 sampling, two batches, full diffusion steps
+        timeout-minutes: 210
+        run: uv run python ../../M2/verify_batch_recovery.py --mode continuous --batch-size 256 --num-candidates 512 --output ../../M2/results/batch256-recovery
+      - name: Save one full batch256 and pause before the next
+        timeout-minutes: 110
+        run: uv run python ../../M2/verify_batch_recovery.py --mode interrupt --batch-size 256 --num-candidates 512 --output ../../M2/results/batch256-recovery
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-batch256-input-${{ github.run_id }}
+          path: M2/results/batch256-recovery/
+          retention-days: 90
+  resume-on-another-runner:
+    needs: continuous-and-interrupt
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    defaults:
+      run:
+        working-directory: M1/MADE
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - run: uv sync --locked
+      - uses: actions/download-artifact@v4
+        with:
+          name: m2-batch256-input-${{ github.run_id }}
+          path: M2/results/batch256-recovery/
+      - name: Replay completed batch and compute only the missing batch256
+        timeout-minutes: 150
+        run: uv run python ../../M2/verify_batch_recovery.py --mode resume --batch-size 256 --num-candidates 512 --output ../../M2/results/batch256-recovery
+      - name: Require all 512 structures, their order and final RNG to match
+        run: uv run python ../../M2/verify_batch_recovery.py --mode compare --batch-size 256 --num-candidates 512 --output ../../M2/results/batch256-recovery
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-batch256-proof-${{ github.run_id }}
+          path: M2/results/batch256-recovery/
+          retention-days: 90

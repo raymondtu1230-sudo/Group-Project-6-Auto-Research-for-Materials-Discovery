@@ -125,3 +125,18 @@ unit-level scores only with their raw evidence and never as a full comparison.
 - Published evidence/status on main/M2 and the existing development branch,
   retaining PR #2 without merging. With no active monitored science left,
   pause this result-recovery monitor after publication verification.
+
+## 20 October 2026: current takeover and safe missing-only continuation
+
+- Reread the five M1 contract/source files, all requested M2 records, formal protocol, course brief, task split and guide. Inspected all four M1 message screenshots and M6's newly available report/slide/compute formats.
+- Preserved the M2 branch and draft PR #2. Main advanced independently through M6 publication/removal of comms files; do not overwrite those or merge the development branch.
+- Rechecked original archive SHA256 values and executed official metrics again. Two accepted baseline units, zero issues, no new score, 34 missing baselines and 18 missing frozen full-method units. Current installed source matches all 69 Chemeleon M1 hashes. Random's sole differing hash is the unused M2 router from an earlier revision.
+- Added checksum-pinned imports and a missing-only 36-unit inventory. Tests protect against rescheduling a completed pair, invalid/newer failed evidence, corrupted archives and overwriting existing evidence. Historical failures stay in their original package. A latest failed attempt requires explicit review, not silent fallback.
+- Requested run 39284865198 at source 955bdca9: only 17 missing Random units, fresh acceptance gates, max four concurrent processes, automatic raw retention/offline reporting and M2-only publication on main. Queued is not running. Scientific configuration and run_baselines.py are unchanged.
+- Local locked environment installed successfully. Original M1 tests: 17 passed. Combined current M2 tests including new recovery mechanics: 52 passed, 1 CPU-namespace skip. Focused/all-M2 Ruff passed. The original smoke failed at Chrome socket creation (Operation not permitted), despite Chrome installation and no missing shared libraries. Kept the original failed log; GitHub CI is separately queued.
+- User asked how to prevent losing another long Chemeleon initialization. Implemented experimental batch-level output/RNG replay outside official source and four passing synthetic continuation/rejection tests. It refuses changed identity, RNG or corrupted bytes. Actual local model download returned upstream HTTP 403 before sampling; no bypass or fabricated real result.
+- Requested actual small recovery check 39285316913 at source 639f47b3. Prepared stronger full-batch256/cross-runner artifact recovery validation. Formal Chemeleon remains blocked until admission; no reduced candidate pool, batch size, diffusion steps or query budget is used for a claimed protocol result. Small recovery fixtures are labelled integration tests.
+- Produced a four-slide editable M6 draft: routing and paired discovery curves for M6 slots 7/10 (40 seconds each), protocol/cost backups and speaker notes. Native charts carry the exact official curve data and embedded workbooks. Rendered/inspected all four slides; package/layout/chart validation passed. This creates a draft deliverable, not a final team presentation.
+- Corrected obsolete reference ownership and branch-count statements. M1 still integrates/freezes/supplies the full reference. M6 still owns check/hidden evaluation. No group message was sent and no receipt/acceptance was claimed.
+
+Lesson: prevent repetition at the expensive model-batch boundary and validate exact continuation before trusting it. Preserve model outputs and RNG, not just activity logs. An execution-recovery fixture does not replace a completed 20-query scientific unit.

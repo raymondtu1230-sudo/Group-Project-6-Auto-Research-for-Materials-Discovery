@@ -1,3 +1,12 @@
+# Current acceptance update: 20 October 2026
+
+The source revision `2b2c6753` and CI counts below are historical evidence.
+Current reruns, skipped checks and the local smoke failure are recorded in
+`verification/20261020-takeover/`. Current GitHub CI must be checked by revision.
+Do not treat any old CI as proof of the newly added scheduler or recovery prototype.
+The router itself and all five M1 switches are unchanged. Experimental batch
+replay is a separate admission gate, not an accepted scientific result.
+
 # M2 handoff acceptance checklist
 
 Reviewed on 19 October 2026 against the user's supplied M1 handoff instructions.
@@ -91,8 +100,7 @@ performance is accepted only from completed, validated protocol experiments.
   method score exists. Another 34 baseline units, the full integrated reference
   and routing-off comparison remain incomplete.
 - Keep `main`: it is the shared delivery branch. Keep the single M2 development
-  branch while PR review/integration and experiment work remain active. The
-  repository has two branches in total, not two separate M2 branches.
+  branch while PR review/integration and experiment work remain active. Other members also have their own branches; retain them.
 - Retire the M2 branch only after its required changes are accepted into the
   shared branch, checks pass, and experiment evidence and remaining workflow
   needs are accounted for. Folder delivery alone is not a reason to delete it.

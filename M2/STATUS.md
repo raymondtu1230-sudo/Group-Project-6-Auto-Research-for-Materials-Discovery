@@ -1,121 +1,107 @@
-# M2 handoff status
+# M2 status: 20 October 2026 takeover
 
-## Verified implementation and boundaries
+## Accepted science: 2/36 development baseline units
 
-The conversation handoff starts from repository revision `5c09abd` and preserves
-the existing M2 branch and PR #2. The required five M1 documents/source files
-were reread: `PLUGIN_INTERFACE.md`, `INTEGRATION.md`, `m1_integrated.py`, its
-Hydra configuration, and its contract tests. The project brief, team task split,
-step-by-step guide and updated submission notice were reconciled with this scope.
+| Method | System / seed | B | mSUN@B | AUDC | Driver seconds |
+| --- | --- | --- | --- | --- | --- |
+| Random | Mg-Sn-Sr / 17 | 20 | 7 | 55.5 | 952.717 |
+| Chemeleon | Mg-Sn-Sr / 17 | 20 | 16 | 161 | 15767.025 |
 
-- The M2 router, generator checkpoint adapters, Hydra profile, installer and
-  enabled/disabled tests are packaged here. The development branch also contains
-  the installed copies in M1's documented slots.
-- Canonical additions, evidence and English documentation stay under M2.
-- The independent delivery adds `M2/` beside `M1/` and `M4/` on `main`.
-  It preserves all existing main-branch files and does not merge PR #2 or apply
-  the M1 integration configuration. `install.py` is the separate explicit
-  integration step. Workflow definitions are included under `M2/workflows/`;
-  existing experiments continue from their development-branch revisions.
-- The official runner, oracle, evaluator, environment, budget, candidate-pool
-  settings and M1 protocol are unchanged by this handoff.
-- Process diagnostics are external to the scientific interaction. They measure
-  CPU/log/generation activity and never read labels or change proposal decisions.
-- Original checkpoints, failed attempts, revisions and raw results are retained.
-  Secrets stay in the existing GitHub Secret and are never copied into files.
+The original ZIPs were checksum-verified and rescored with the unchanged official
+metrics in this takeover. Two runs accepted, zero issues. Single-pair Chemeleon
+AF/EF versus Random are 2.375 / 2.2857142857142856. Overall method means and SD
+remain unavailable. Known inference fees are USD 0, while hardware, electricity,
+interrupted-attempt charges and unreported usage remain unknown.
 
-## Actual completed evidence
+Original evidence is preserved in `verification/20261019-random-gate/`,
+`verification/20261019-chemeleon-recovery/` and the separate timeout audit.
+New read-only review, 36-unit inventory and actual local failures are in
+`verification/20261020-takeover/`. These reviews do not add new scientific units.
 
-| Item | Evidence / scope |
-| --- | --- |
-| M1 contracts and original smoke | Passed on run 39213883707, revision 8fdcaaf |
-| Latest upstream integration checks | Passed on run 39214658007, revision 5c09abd |
-| Actual API / model continuation | Passed on run 39214657963; three real sampling calls |
-| Random Mg-Sn-Sr / seed 17 / B=20 | Completed on run 39213257750, job 117931485324 |
-| Offline Random result validation | One run accepted, zero issues, complete query history 1-20 |
-| Random result | mSUN@20=7, AUDC=55.5, driver wall time 952.717 s |
-| Actual live CPU diagnostic | Passed on GitHub Linux in run 39217841268 |
-| Complete continuation CI | Passed on run 39218278124, revision b8e2c0c; 17 M1 and 45 M2 tests, both Ruff checks, reproducible installation and original smoke |
-| Latest handoff acceptance CI | Passed on run 39221672640, revision 2b2c6753; 17 M1 and 45 M2 tests with no skips, Ruff, reproducible installation and original smoke |
+## Missing-only work actually requested
 
-The exact user-supplied handoff requirements and branch-retention decision are
-mapped in [ACCEPTANCE_CHECKLIST.md](ACCEPTANCE_CHECKLIST.md). The M2 development
-branch now includes current main's published M2 folder and M4 contents; the three
-documentation conflicts were resolved using the published main versions.
+- [Run 39284865198](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39284865198),
+  fixed source `955bdca92b732c7d4fef64928df35fc15320fe85`, requests only the 17
+  missing Random dev units. Four jobs at most run concurrently, one episode per
+  process, unchanged official driver/configuration and B=20. Fresh M1/M2 checks
+  and the original smoke must pass in `prepare` before science starts.
+- At this status snapshot it is **queued**, with no new completed scientific
+  result and no allocated scientific job. Queue state is not active computation.
+- Reused archives are checksum-pinned. Later published result bundles can be
+  imported too. Invalid/newer failed attempts stop rescheduling for explicit
+  review. The completed first pair is excluded. The legacy `baseline_sweep`
+  would rerun that pair and must not be launched for this continuation.
+- Each job retains raw data, diagnostics, configuration, provenance and failure
+  attempts. The report job uses the official metrics, uploads artifacts and
+  publishes only a new `main/M2/verification/missing-<run_id>/` folder. This does
+  not merge PR #2 or change main's M1 configuration.
 
-The raw Random ZIP and independently generated tables/curves are in
-[`verification/20261019-random-gate`](verification/20261019-random-gate/README.md).
-That historical package contains one unit. The later paired recovery package
-now accepts two of 36 baseline units; only single-pair AF/EF are available.
-Overall method means and standard deviations remain unavailable. Recorded
-zero inference fees do not establish zero total compute cost.
+## Chemeleon continuity: prototype, not yet admitted
 
-The local diagnostic test exposed a real namespace limitation: `/proc/self`
-reports a host PID different from `os.getpid()`. CPU counters are therefore
-reported as unknown on that host. The live-CPU assertion is skipped there and
-is mandatory on GitHub Actions Linux. It passed on run 39217841268, which ran
-17 M1 contract tests and 45 M2 tests successfully. That run then stopped on one
-test-import formatting issue; the import was fixed using MADE's Ruff settings.
-The subsequent complete CI run 39218278124 passed every integration acceptance
-gate, including the original smoke script, on revision b8e2c0c. The namespace
-limitation does not affect the completed scientific result. The independent
-folder publication changes packaging and documentation, not the tested code or
-scientific settings.
+Seventeen Chemeleon units remain missing. A measured unit took 263 minutes.
+Other systems may be slower than a hosted six-hour job allows, and the original
+initial pool has no verified mid-generation recovery. No full Chemeleon sweep
+was dispatched under those conditions.
 
-## Current experiment status (2026-10-19 14:38 UTC)
+The user explicitly requested avoiding another full restart after timeout.
+`generation_cache.py` therefore experiments with saving outputs of each original
+`DiffusionModule.sample` batch, its exact inputs, model/source fingerprints and
+Python/NumPy/Torch RNG before/after the batch. Replaying a verified batch restores
+its post-call RNG and lets the original generator write/read the same CIFs in
+the original order. It changes no pool size, batch size, diffusion steps, oracle
+budget or official source file. A planned pause occurs before the next sampling
+call. Logs alone do not establish recoverability.
 
-[Recovery run 39234974449](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39234974449)
-completed successfully at 22:30 Singapore time, fixed source `3e07d9f0`.
-Four batches finished and all 20 oracle queries completed. The independent
-[paired report and original artifacts](verification/20261019-chemeleon-recovery/README.md)
-validate Chemeleon Mg-Sn-Sr/17: mSUN@20=16, AUDC=161, wall=15767.025 s.
-The existing Random unit remains mSUN@20=7, AUDC=55.5, wall=952.717 s.
-Their protocol and 194-entry material reference snapshots match. Official
-single-pair Chemeleon AF/EF vs Random are 2.375 / 2.2857142857142856.
-No method-level aggregate score is available.
+Four synthetic recovery/rejection tests pass. Actual-model cross-process check
+[39285316913](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39285316913),
+source `639f47b301d71cc7bd7c66c7832f0ecb75bb5e9d`, is queued. This is a small
+integration fixture, not a baseline score. The local actual-model check was
+blocked by an upstream model-download HTTP 403; no actual sample completed locally.
+A separate batch256/cross-runner workflow is prepared for the necessary stronger
+admission check. Its proof must match all generated structures/order and final
+RNG across actual artifact upload/download and a different runner. Until those
+checks and production-wrapper integration pass, the 17 formal units remain
+capacity-blocked. `cache_protocol.py` is experimental and has not been used for
+accepted science. An adequately long persistent CPU host remains an alternative.
 
-There are now **2/36 accepted baseline units**, 34 missing baseline units and
-18 missing frozen full-method units (52 missing protocol-required units in
-all). The original timeout/cancelled attempts remain in the
-[failure audit](verification/20261019-chemeleon-timeout/README.md), excluded from
-accepted results. No further experiment was launched. The one authorized retry
-is consumed; the wider sweep was skipped. The monitored workflow has no active
-scientific jobs. Final M2 comparison and M1 integration remain incomplete.
+## Component verification and ownership
 
-## Next required handovers
+The delivered router, generator adapters, installer, M1 agent contract and all
+five switches are preserved. The installer was executed only in our checkout,
+not on shared main. It produced the documented four integration slots; no
+official runner/oracle/evaluator/environment/budget or M1 contract source changed.
 
-1. By 20 October: share the currently available development baseline evidence,
-   explicitly flagging the 34 missing baseline units and the single-pair scope.
-2. By 24 October: M1 reviews and integrates PR #2; M6 receives the method and
-   slide material in `METHODS_AND_M6_HANDOFF.md`.
-3. After M1 integrates the other owners and freezes the full agent on 25 October:
-   record that release revision, receive the full reference by 26 October noon,
-   and run the routing-off ablation changing only its switch.
-4. By 27 October: validate the other owners' results, paired reference/baseline
-   comparisons, discovery curves, costs and failed-run audit; deliver to M6.
-5. M6 owns public-check and course hidden-test work. A public check split must
-   never be described as a hidden test. The full report/slides remain due for
-   rehearsal on 29 October; presentations are 31 October or 1 November. The
-   individual report is at most three pages, due by the end of 3 November.
+Current local M1 contracts: 17 passed. Current combined M2 suite: 52 passed and
+one CPU-namespace skip. Focused/all-M2 Ruff passed. Original smoke failed because
+this host denies Chrome socket creation, even after Chrome installation. Its
+failure is retained and is not a pass. Source-specific GitHub CI is queued;
+old passing CI is historical evidence only. See the actual logs/JUnit in the
+current takeover package.
 
-The full reference and routing-off comparison cannot honestly be completed
-before the other owners' components and the frozen reference exist. Their
-absence is a team dependency, not a reason to invent or substitute scores.
+## Handoffs and dependencies
 
-The recovery implementation passed fresh GitHub CI 39234330794 (4284a7d8):
-17 original M1 tests, 46 M2 tests without skips, Ruff, reproducible installation
-and unchanged official smoke. The final launch-trigger revision ef7f8c2 also
-passed complete CI 39234757674. Source details are in the timeout folder
-`recovery_ci.json`. The observer now also emits numeric sampling steps, totals
-and elapsed sampling seconds. No additional retry is authorized automatically.
+- By 24 October, M1 receives component/config/installer/test evidence in M2.
+  M1 owns shared integration and the 25 October freeze. PR #2 remains a draft,
+  unmerged, and the development branch is retained.
+- M6's current format is `M6/report/SLIDES_OUTLINE.md`: M2 slide 7 (routing) and
+  slide 10 (curves), 40 seconds each. `report/` contains the editable draft and
+  speaker notes, plus protocol/cost backups. This is an actual draft, not the
+  final group deck. Current numerical slides explicitly show one pair / 2 of 36.
+- M1 supplies the frozen full-system reference by 26 October noon. M2 validates
+  it and only then runs routing-off at the same revision/conditions with one
+  switch changed. Do not substitute `m1_baseline` or run M1's reference for him.
+- M2 collects all member results and produces final tables, curves and costs for
+  M6 by 27 October. M6 owns public-check/hidden tests. No such evaluation is
+  claimed here. No recipient has yet confirmed receipt or acceptance.
+- The earlier recovery monitor has been updated and resumed for current runs.
+  It checks at most hourly and reports meaningful new evidence. It does not
+  promise an immediate notification at the exact sampling/completion instant.
 
-Runtime continuity is a user requirement. The completed retry was preserved
-without restarting it for timeout edits. Its limits were fixed at launch;
-GitHub-hosted jobs also have a six-hour hard cap. Initial generation has no
-verified mid-batch restart point. See `verification/20261019-chemeleon-timeout/RUNTIME_SAFEGUARDS.md`
-for admission and preservation rules before later experiments.
+## Superseded instructions, retained historical records
 
-At the subsequent live-log check, CPU counters increased and sampling batch 1
-advanced from step 4/256 to 7/256. The actual numerical observations are in
-`verification/20261019-chemeleon-timeout/live-progress.json`; this establishes
-sampling activity, not a completed query or final performance score.
+Old one-retry-only scope and the stopped recovery monitor describe 19 October.
+The user's 20 October handoff authorizes completing missing development units.
+Old CI revisions/counts in earlier checklist/log entries remain dated evidence,
+not current acceptance. main now contains multiple member folders and branches;
+the old statement that only two repository branches exist is obsolete. The old
+README sentence assigning the full reference run to M2 has been corrected.

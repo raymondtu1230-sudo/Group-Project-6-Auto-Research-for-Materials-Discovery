@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Chemeleon",
+    "history": [
+      {
+        "queries_used": 1,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 2,
+        "novelty_stable_unique_novel_count": 2.0,
+        "num_newly_discovered_stable": 2
+      },
+      {
+        "queries_used": 3,
+        "novelty_stable_unique_novel_count": 3.0,
+        "num_newly_discovered_stable": 3
+      },
+      {
+        "queries_used": 4,
+        "novelty_stable_unique_novel_count": 4.0,
+        "num_newly_discovered_stable": 4
+      },
+      {
+        "queries_used": 5,
+        "novelty_stable_unique_novel_count": 4.0,
+        "num_newly_discovered_stable": 4
+      },
+      {
+        "queries_used": 6,
+        "novelty_stable_unique_novel_count": 5.0,
+        "num_newly_discovered_stable": 5
+      },
+      {
+        "queries_used": 7,
+        "novelty_stable_unique_novel_count": 6.0,
+        "num_newly_discovered_stable": 6
+      },
+      {
+        "queries_used": 8,
+        "novelty_stable_unique_novel_count": 7.0,
+        "num_newly_discovered_stable": 7
+      },
+      {
+        "queries_used": 9,
+        "novelty_stable_unique_novel_count": 8.0,
+        "num_newly_discovered_stable": 8
+      },
+      {
+        "queries_used": 10,
+        "novelty_stable_unique_novel_count": 9.0,
+        "num_newly_discovered_stable": 9
+      },
+      {
+        "queries_used": 11,
+        "novelty_stable_unique_novel_count": 9.0,
+        "num_newly_discovered_stable": 9
+      },
+      {
+        "queries_used": 12,
+        "novelty_stable_unique_novel_count": 9.0,
+        "num_newly_discovered_stable": 9
+      },
+      {
+        "queries_used": 13,
+        "novelty_stable_unique_novel_count": 10.0,
+        "num_newly_discovered_stable": 10
+      },
+      {
+        "queries_used": 14,
+        "novelty_stable_unique_novel_count": 11.0,
+        "num_newly_discovered_stable": 11
+      },
+      {
+        "queries_used": 15,
+        "novelty_stable_unique_novel_count": 11.0,
+        "num_newly_discovered_stable": 11
+      },
+      {
+        "queries_used": 16,
+        "novelty_stable_unique_novel_count": 12.0,
+        "num_newly_discovered_stable": 12
+      },
+      {
+        "queries_used": 17,
+        "novelty_stable_unique_novel_count": 13.0,
+        "num_newly_discovered_stable": 13
+      },
+      {
+        "queries_used": 18,
+        "novelty_stable_unique_novel_count": 14.0,
+        "num_newly_discovered_stable": 14
+      },
+      {
+        "queries_used": 19,
+        "novelty_stable_unique_novel_count": 15.0,
+        "num_newly_discovered_stable": 15
+      },
+      {
+        "queries_used": 20,
+        "novelty_stable_unique_novel_count": 16.0,
+        "num_newly_discovered_stable": 16
+      }
+    ],
+    "wall_seconds": 15767.025
+  },
+  {
+    "name": "Random",
+    "history": [
+      {
+        "queries_used": 1,
+        "novelty_stable_unique_novel_count": 0.0,
+        "num_newly_discovered_stable": 0
+      },
+      {
+        "queries_used": 2,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 3,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 4,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 5,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 6,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 7,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 8,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 9,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 10,
+        "novelty_stable_unique_novel_count": 1.0,
+        "num_newly_discovered_stable": 1
+      },
+      {
+        "queries_used": 11,
+        "novelty_stable_unique_novel_count": 2.0,
+        "num_newly_discovered_stable": 2
+      },
+      {
+        "queries_used": 12,
+        "novelty_stable_unique_novel_count": 3.0,
+        "num_newly_discovered_stable": 3
+      },
+      {
+        "queries_used": 13,
+        "novelty_stable_unique_novel_count": 4.0,
+        "num_newly_discovered_stable": 4
+      },
+      {
+        "queries_used": 14,
+        "novelty_stable_unique_novel_count": 5.0,
+        "num_newly_discovered_stable": 5
+      },
+      {
+        "queries_used": 15,
+        "novelty_stable_unique_novel_count": 5.0,
+        "num_newly_discovered_stable": 5
+      },
+      {
+        "queries_used": 16,
+        "novelty_stable_unique_novel_count": 5.0,
+        "num_newly_discovered_stable": 5
+      },
+      {
+        "queries_used": 17,
+        "novelty_stable_unique_novel_count": 6.0,
+        "num_newly_discovered_stable": 6
+      },
+      {
+        "queries_used": 18,
+        "novelty_stable_unique_novel_count": 6.0,
+        "num_newly_discovered_stable": 6
+      },
+      {
+        "queries_used": 19,
+        "novelty_stable_unique_novel_count": 7.0,
+        "num_newly_discovered_stable": 7
+      },
+      {
+        "queries_used": 20,
+        "novelty_stable_unique_novel_count": 7.0,
+        "num_newly_discovered_stable": 7
+      }
+    ],
+    "wall_seconds": 952.717
+  }
+]

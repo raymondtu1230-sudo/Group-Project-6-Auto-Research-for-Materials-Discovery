@@ -1,0 +1,9 @@
+# 20 October M2 takeover audit
+
+The original two raw ZIP checksums match their pinned manifests. The current unchanged official evaluator accepted both units with zero issues, retaining 34 missing baseline units and 18 missing full-method units. The reproduced partial report is in `paired-review/`. It does not introduce a new scientific unit. Current installation matches all 69 Chemeleon M1 input hashes. Random differs in one unused M2 router file from its earlier version; its official baseline sources and scientific configuration match. The two reference snapshots match.
+
+Executed current checks: original M1 contracts 17 passed; M2 contracts/reporting/scheduling 48 passed and one CPU-namespace skip. The subsequently added experimental batch-cache tests passed 4/4. See current logs/JUnit for the combined count. Focused and all-M2 Ruff passed. Original smoke failed locally because this execution host disallows Chrome's socket creation. Installing Chrome did not remove that host restriction. This failure is retained, not called a pass. GitHub acceptance remains the source of truth for its own revision.
+
+Local actual batch-recovery sampling did not start: the upstream Figshare checkpoint download returned HTTP 403. No bypass was attempted. The failure log is preserved. Separate GitHub actual-model verification is queued and must pass before this experimental execution mechanism can be admitted to scientific runs.
+
+`inventory.json` and `units.csv` enumerate all 36 protocol units: two completed, 34 missing. Failed historical attempts belong to the earlier completed Chemeleon unit and remain in the original timeout audit. No baseline unit is currently classified as a failed final result in this offline input set. GitHub queue/running state must be read live; this inventory alone cannot establish activity.

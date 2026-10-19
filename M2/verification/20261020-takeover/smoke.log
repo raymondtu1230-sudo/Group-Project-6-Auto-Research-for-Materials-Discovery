@@ -1,0 +1,436 @@
+
+Running episodes:   0%|          | 0/1 [00:00<?, ?it/s]/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/modal/_functions.py:1826: UserWarning: The run_episode function is executing locally and will not have access to the mounted Volume or NetworkFileSystem data
+  warnings.warn(
+UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+[2026-10-19 19:17:19] [WARNING] [made.oracles.ase_potential] No elemental reference energies provided, make sure to compute them using compute_elemental_energies_from_structures using the oracle
+[2026-10-19 19:17:19] [INFO] [made.envs.convex_hull] Filtered ground truth PD from 3 to 3 entries (SMACT-valid, num_atoms<=4)
+[2026-10-19 19:17:19] [INFO] [made.envs.convex_hull] Computing elemental energies using oracle from dataset structures...
+[2026-10-19 19:17:19] [INFO] [made.oracles.ase_potential] Computed elemental energy for O: -0.000000 eV/atom
+[2026-10-19 19:17:19] [INFO] [made.oracles.ase_potential] Computed elemental energy for Li: -0.000000 eV/atom
+[2026-10-19 19:17:19] [INFO] [made.envs.convex_hull] Computed elemental energies: {'O': -2.6020852139652106e-18, 'Li': -2.6020852139652106e-18}
+[2026-10-19 19:17:19] [INFO] [made.envs.convex_hull] Starting PD with 2 elemental reference entries
+[2026-10-19 19:17:19] [INFO] [__main__] Starting new episode 0
+[2026-10-19 19:17:19] [INFO] [made.agents.planners.grid_search] Enumerated 3 SMACT-valid compositions from 6 total compositions
+[2026-10-19 19:17:19] [WARNING] [made.agents.planners.grid_search] Composition O1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 4)
+[2026-10-19 19:17:19] [WARNING] [made.agents.planners.grid_search] Composition Li1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 4)
+[2026-10-19 19:17:19] [INFO] [made.agents.planners.grid_search] Initialized composition stats with {'Li1 O1': CompositionStats(composition=Composition('Li1 O1'), num_attempts=0, num_successes=0, best_score=-10000000, last_score=-10000000, last_attempted_step=-1), 'Li2 O1': CompositionStats(composition=Composition('Li2 O1'), num_attempts=0, num_successes=0, best_score=-10000000, last_score=-10000000, last_attempted_step=-1), 'Li2 O2': CompositionStats(composition=Composition('Li2 O2'), num_attempts=0, num_successes=0, best_score=-10000000, last_score=-10000000, last_attempted_step=-1)}
+[2026-10-19 19:17:19] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-19 19:17:19] [INFO] [made.agents.base] Scorer.select(): Selected candidate 1/1 (composition: Li1 O1, score: 0.530587, score range: [0.294665, 0.530587], mean: 0.412626)
+[2026-10-19 19:17:19] [INFO] [__main__] Saved checkpoint to checkpoints/20261019_191707/episode_000/checkpoint.json (query_count=1)
+[2026-10-19 19:17:19] [INFO] [__main__] Observation: {'proposal': {'@module': 'pymatgen.core.structure', '@class': 'Structure', 'charge': 0.0, 'lattice': {'matrix': [[8.971381973465629, 0.0, 0.9278212114928278], [-3.096580817899685, 5.235313077330413, -3.0607476253445625], [0.0, 0.0, 13.155933709541088]], 'pbc': (True, True, True), 'a': 9.019232046816406, 'b': 6.809221086548996, 'c': 13.155933709541088, 'alpha': 116.71163487029337, 'beta': 84.09545621464018, 'gamma': 119.90682030522126, 'volume': 617.9078072118238}, 'properties': {}, 'sites': [{'species': [{'element': 'Li', 'occu': 1}], 'abc': [0.0621927912524467, 0.8126090004416155, 0.8753165021282806], 'properties': {}, 'label': 'Li', 'xyz': [-1.9583541568984324, 4.254262526768385, 9.086118599357713]}, {'species': [{'element': 'O', 'occu': 1}], 'abc': [0.1509154802769801, 0.7055686155919507, 0.5588918686046748], 'properties': {}, 'label': 'O', 'xyz': [-0.8309298214802643, 3.6938726001624547, 5.3331994932175455]}]}, 'oracle_result': {'energy': 0.0, 'energy_per_atom': 0.0, 'natoms': 2, 'formula': 'Li1 O1'}, 'reduced_formula': 'Li2 O2', 'formation_energy_per_atom': 2.6020852139652106e-18, 'energy_per_atom': 0.0, 'e_above_hull': 2.6020852139652106e-18, 'is_stable': True, 'is_newly_discovered': True, 'validity_distance_valid_count': 1.0, 'validity_distance_valid_fraction': 1.0, 'validity_min_interatomic_distance_min': 3.958474999184207, 'validity_min_interatomic_distance_mean': 3.958474999184207, 'validity_min_interatomic_distance_std': 0.0, 'validity_smact_valid_count': 1.0, 'validity_smact_valid_fraction': 1.0, 'validity_distance_and_smact_valid_count': 1.0, 'validity_distance_and_smact_valid_fraction': 1.0}
+[2026-10-19 19:17:19] [INFO] [__main__] Metrics: {
+  "queries_used": 1,
+  "num_observed_stable_formulas": 3,
+  "num_ground_truth_stable_formulas": 3,
+  "num_gt_formulas_missing_initial": 1,
+  "num_correct_stable_formulas": 1,
+  "recall_formula": 1.0,
+  "precision_formula": 1.0,
+  "num_newly_discovered_structures": 1,
+  "num_newly_discovered_stable": 1,
+  "discovery_efficiency": 1.0,
+  "stable_discovery_efficiency": 1.0,
+  "num_initial_structures": 2,
+  "num_ground_truth_stable_structures": 3,
+  "num_gt_structures_missing_initial": 1,
+  "num_correct_stable_structures": 0,
+  "recall_structure": 0.0,
+  "precision_structure": 0.0,
+  "reference_composition_precision": 1.0,
+  "reference_composition_recall": 1.0,
+  "reference_structure_precision": 0.0,
+  "reference_structure_recall": 0.0,
+  "validity_distance_valid_count": 1.0,
+  "validity_distance_valid_fraction": 1.0,
+  "validity_min_interatomic_distance_min": 3.958474999184207,
+  "validity_min_interatomic_distance_mean": 3.958474999184207,
+  "validity_min_interatomic_distance_std": 0.0,
+  "validity_smact_valid_count": 1.0,
+  "validity_smact_valid_fraction": 1.0,
+  "validity_distance_and_smact_valid_count": 1.0,
+  "validity_distance_and_smact_valid_fraction": 1.0,
+  "diversity_all_composition_unique_composition_count": 1.0,
+  "diversity_all_composition_unique_composition_fraction": 1.0,
+  "diversity_all_composition_l1_distance_min": 0.0,
+  "diversity_all_composition_l1_distance_mean": 0.0,
+  "diversity_all_composition_l1_distance_max": 0.0,
+  "diversity_all_composition_l1_distance_std": 0.0,
+  "diversity_all_composition_l2_distance_min": 0.0,
+  "diversity_all_composition_l2_distance_mean": 0.0,
+  "diversity_all_composition_l2_distance_max": 0.0,
+  "diversity_all_composition_l2_distance_std": 0.0,
+  "diversity_all_structure_unique_structure_count": 1.0,
+  "diversity_all_structure_unique_structure_fraction": 1.0,
+  "diversity_all_structure_spacegroup_entropy": -0.0,
+  "diversity_all_structure_unique_spacegroups_count": 1.0,
+  "diversity_all_structure_unique_spacegroups_fraction": 1.0,
+  "diversity_all_structure_lattice_parameter_variance": 0.0,
+  "diversity_all_structure_amd_distance_min": 0.0,
+  "diversity_all_structure_amd_distance_mean": 0.0,
+  "diversity_all_structure_amd_distance_max": 0.0,
+  "diversity_stable_composition_unique_composition_count": 1.0,
+  "diversity_stable_composition_unique_composition_fraction": 1.0,
+  "diversity_stable_composition_l1_distance_min": 0.0,
+  "diversity_stable_composition_l1_distance_mean": 0.0,
+  "diversity_stable_composition_l1_distance_max": 0.0,
+  "diversity_stable_composition_l1_distance_std": 0.0,
+  "diversity_stable_composition_l2_distance_min": 0.0,
+  "diversity_stable_composition_l2_distance_mean": 0.0,
+  "diversity_stable_composition_l2_distance_max": 0.0,
+  "diversity_stable_composition_l2_distance_std": 0.0,
+  "diversity_stable_structure_unique_structure_count": 1.0,
+  "diversity_stable_structure_unique_structure_fraction": 1.0,
+  "diversity_stable_structure_spacegroup_entropy": -0.0,
+  "diversity_stable_structure_unique_spacegroups_count": 1.0,
+  "diversity_stable_structure_unique_spacegroups_fraction": 1.0,
+  "diversity_stable_structure_lattice_parameter_variance": 0.0,
+  "diversity_stable_structure_amd_distance_min": 0.0,
+  "diversity_stable_structure_amd_distance_mean": 0.0,
+  "diversity_stable_structure_amd_distance_max": 0.0,
+  "novelty_unique_structure_count": 1.0,
+  "novelty_unique_structure_fraction": 1.0,
+  "novelty_novel_structure_count": 1.0,
+  "novelty_novel_structure_fraction": 1.0,
+  "novelty_stable_count": 1.0,
+  "novelty_stable_unique_count": 1.0,
+  "novelty_stable_novel_count": 1.0,
+  "novelty_stable_unique_novel_count": 1.0,
+  "novelty_stable_fraction": 1.0,
+  "novelty_stable_unique_fraction": 1.0,
+  "novelty_stable_novel_fraction": 1.0,
+  "novelty_stable_unique_novel_fraction": 1.0,
+  "convex_hull_e_above_hull_min": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_mean": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_max": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_std": 0.0,
+  "convex_hull_energy_per_atom_min": 0.0,
+  "convex_hull_energy_per_atom_max": 0.0,
+  "convex_hull_energy_per_atom_mean": 0.0,
+  "convex_hull_energy_per_atom_std": 0.0,
+  "convex_hull_formation_energy_per_atom_min": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_mean": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_std": 0.0,
+  "convex_hull_stable_fraction": 1.0,
+  "convex_hull_stable_count": 1.0,
+  "discovery_curve_area_under_discovery_curve": 0.5,
+  "discovery_curve_area_under_discovery_curve_normalized": 1.0,
+  "discovery_curve_enhancement_factor": 0.0,
+  "discovery_curve_acceleration_factor": 0.0
+}
+[2026-10-19 19:17:19] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-19 19:17:19] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: Li2 O2, score: 0.191521, score range: [0.191521, 0.191521], mean: 0.191521)
+[2026-10-19 19:17:26] [INFO] [__main__] Saved checkpoint to checkpoints/20261019_191707/episode_000/checkpoint.json (query_count=2)
+[2026-10-19 19:17:26] [INFO] [__main__] Observation: {'proposal': {'@module': 'pymatgen.core.structure', '@class': 'Structure', 'charge': 0.0, 'lattice': {'matrix': [[14.309810508900796, 0.0, -2.0943075228927723], [0.7923130988009516, 5.021149353101014, -2.1522140225855098], [0.0, 0.0, 9.479560207441484]], 'pbc': (True, True, True), 'a': 14.462254347130425, 'b': 5.520120113882667, 'c': 9.479560207441484, 'alpha': 112.94736640852203, 'beta': 98.32639086358778, 'gamma': 78.5519717974995, 'volume': 681.1224761510546}, 'properties': {}, 'sites': [{'species': [{'element': 'Li', 'occu': 1}], 'abc': [0.08186385413474262, 0.939776047011715, 0.47409847110640535], 'properties': {}, 'label': 'Li', 'xyz': [1.9160531121832225, 4.718755890512701, 2.300197729073146]}, {'species': [{'element': 'Li', 'occu': 1}], 'abc': [0.9963261827822232, 0.14160714062013535, 0.812204252248064], 'properties': {}, 'label': 'Li', 'xyz': [14.369436073067154, 0.7110306025192769, 5.30795681632877]}, {'species': [{'element': 'O', 'occu': 1}], 'abc': [0.8133781217490886, 0.9199750224976402, 0.0178343164383028], 'properties': {}, 'label': 'O', 'xyz': [12.36819505520968, 4.619331989083117, -3.514385586747896]}, {'species': [{'element': 'O', 'occu': 1}], 'abc': [0.3721928415574348, 0.051668993360395654, 0.7520348335719639], 'properties': {}, 'label': 'O', 'xyz': [5.366947055697531, 0.2594377325869312, 6.238270482854973]}]}, 'oracle_result': {'energy': 0.0, 'energy_per_atom': 0.0, 'natoms': 4, 'formula': 'Li2 O2'}, 'reduced_formula': 'Li2 O2', 'formation_energy_per_atom': 2.6020852139652106e-18, 'energy_per_atom': 0.0, 'e_above_hull': 2.6020852139652106e-18, 'is_stable': True, 'is_newly_discovered': True, 'validity_distance_valid_count': 1.0, 'validity_distance_valid_fraction': 1.0, 'validity_min_interatomic_distance_min': 3.295602856097915, 'validity_min_interatomic_distance_mean': 3.295602856097915, 'validity_min_interatomic_distance_std': 0.0, 'validity_smact_valid_count': 1.0, 'validity_smact_valid_fraction': 1.0, 'validity_distance_and_smact_valid_count': 1.0, 'validity_distance_and_smact_valid_fraction': 1.0}
+[2026-10-19 19:17:26] [INFO] [__main__] Metrics: {
+  "queries_used": 2,
+  "num_observed_stable_formulas": 3,
+  "num_ground_truth_stable_formulas": 3,
+  "num_gt_formulas_missing_initial": 1,
+  "num_correct_stable_formulas": 1,
+  "recall_formula": 1.0,
+  "precision_formula": 0.5,
+  "num_newly_discovered_structures": 2,
+  "num_newly_discovered_stable": 2,
+  "discovery_efficiency": 1.0,
+  "stable_discovery_efficiency": 1.0,
+  "num_initial_structures": 2,
+  "num_ground_truth_stable_structures": 3,
+  "num_gt_structures_missing_initial": 1,
+  "num_correct_stable_structures": 0,
+  "recall_structure": 0.0,
+  "precision_structure": 0.0,
+  "reference_composition_precision": 0.5,
+  "reference_composition_recall": 1.0,
+  "reference_structure_precision": 0.0,
+  "reference_structure_recall": 0.0,
+  "validity_distance_valid_count": 2.0,
+  "validity_distance_valid_fraction": 1.0,
+  "validity_min_interatomic_distance_min": 3.295602856097915,
+  "validity_min_interatomic_distance_mean": 3.627038927641061,
+  "validity_min_interatomic_distance_std": 0.33143607154314614,
+  "validity_smact_valid_count": 2.0,
+  "validity_smact_valid_fraction": 1.0,
+  "validity_distance_and_smact_valid_count": 2.0,
+  "validity_distance_and_smact_valid_fraction": 1.0,
+  "diversity_all_composition_unique_composition_count": 1.0,
+  "diversity_all_composition_unique_composition_fraction": 0.5,
+  "diversity_all_composition_l1_distance_min": 0.0,
+  "diversity_all_composition_l1_distance_mean": 0.0,
+  "diversity_all_composition_l1_distance_max": 0.0,
+  "diversity_all_composition_l1_distance_std": 0.0,
+  "diversity_all_composition_l2_distance_min": 0.0,
+  "diversity_all_composition_l2_distance_mean": 0.0,
+  "diversity_all_composition_l2_distance_max": 0.0,
+  "diversity_all_composition_l2_distance_std": 0.0,
+  "diversity_all_structure_unique_structure_count": 2.0,
+  "diversity_all_structure_unique_structure_fraction": 1.0,
+  "diversity_all_structure_spacegroup_entropy": -0.0,
+  "diversity_all_structure_unique_spacegroups_count": 1.0,
+  "diversity_all_structure_unique_spacegroups_fraction": 0.5,
+  "diversity_all_structure_lattice_parameter_variance": 3.733666267198759,
+  "diversity_all_structure_amd_distance_min": 3.2219719864865333,
+  "diversity_all_structure_amd_distance_mean": 3.2219719864865333,
+  "diversity_all_structure_amd_distance_max": 3.2219719864865333,
+  "diversity_stable_composition_unique_composition_count": 1.0,
+  "diversity_stable_composition_unique_composition_fraction": 0.5,
+  "diversity_stable_composition_l1_distance_min": 0.0,
+  "diversity_stable_composition_l1_distance_mean": 0.0,
+  "diversity_stable_composition_l1_distance_max": 0.0,
+  "diversity_stable_composition_l1_distance_std": 0.0,
+  "diversity_stable_composition_l2_distance_min": 0.0,
+  "diversity_stable_composition_l2_distance_mean": 0.0,
+  "diversity_stable_composition_l2_distance_max": 0.0,
+  "diversity_stable_composition_l2_distance_std": 0.0,
+  "diversity_stable_structure_unique_structure_count": 2.0,
+  "diversity_stable_structure_unique_structure_fraction": 1.0,
+  "diversity_stable_structure_spacegroup_entropy": -0.0,
+  "diversity_stable_structure_unique_spacegroups_count": 1.0,
+  "diversity_stable_structure_unique_spacegroups_fraction": 0.5,
+  "diversity_stable_structure_lattice_parameter_variance": 3.733666267198759,
+  "diversity_stable_structure_amd_distance_min": 3.2219719864865333,
+  "diversity_stable_structure_amd_distance_mean": 3.2219719864865333,
+  "diversity_stable_structure_amd_distance_max": 3.2219719864865333,
+  "novelty_unique_structure_count": 2.0,
+  "novelty_unique_structure_fraction": 1.0,
+  "novelty_novel_structure_count": 2.0,
+  "novelty_novel_structure_fraction": 1.0,
+  "novelty_stable_count": 2.0,
+  "novelty_stable_unique_count": 2.0,
+  "novelty_stable_novel_count": 2.0,
+  "novelty_stable_unique_novel_count": 2.0,
+  "novelty_stable_fraction": 1.0,
+  "novelty_stable_unique_fraction": 1.0,
+  "novelty_stable_novel_fraction": 1.0,
+  "novelty_stable_unique_novel_fraction": 1.0,
+  "convex_hull_e_above_hull_min": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_mean": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_max": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_std": 0.0,
+  "convex_hull_energy_per_atom_min": 0.0,
+  "convex_hull_energy_per_atom_max": 0.0,
+  "convex_hull_energy_per_atom_mean": 0.0,
+  "convex_hull_energy_per_atom_std": 0.0,
+  "convex_hull_formation_energy_per_atom_min": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_mean": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_std": 0.0,
+  "convex_hull_stable_fraction": 1.0,
+  "convex_hull_stable_count": 2.0,
+  "discovery_curve_area_under_discovery_curve": 2.0,
+  "discovery_curve_area_under_discovery_curve_normalized": 1.0,
+  "discovery_curve_enhancement_factor": 0.0,
+  "discovery_curve_acceleration_factor": 0.0
+}
+[2026-10-19 19:17:26] [INFO] [__main__] Final metrics: {
+  "episode_id": 0,
+  "final/queries_used": 2,
+  "final/num_observed_stable_formulas": 3,
+  "final/num_ground_truth_stable_formulas": 3,
+  "final/num_gt_formulas_missing_initial": 1,
+  "final/num_correct_stable_formulas": 1,
+  "final/recall_formula": 1.0,
+  "final/precision_formula": 0.5,
+  "final/num_newly_discovered_structures": 2,
+  "final/num_newly_discovered_stable": 2,
+  "final/discovery_efficiency": 1.0,
+  "final/stable_discovery_efficiency": 1.0,
+  "final/num_initial_structures": 2,
+  "final/num_ground_truth_stable_structures": 3,
+  "final/num_gt_structures_missing_initial": 1,
+  "final/num_correct_stable_structures": 0,
+  "final/recall_structure": 0.0,
+  "final/precision_structure": 0.0,
+  "final/reference_composition_precision": 0.5,
+  "final/reference_composition_recall": 1.0,
+  "final/reference_structure_precision": 0.0,
+  "final/reference_structure_recall": 0.0,
+  "final/validity_distance_valid_count": 2.0,
+  "final/validity_distance_valid_fraction": 1.0,
+  "final/validity_min_interatomic_distance_min": 3.295602856097915,
+  "final/validity_min_interatomic_distance_mean": 3.627038927641061,
+  "final/validity_min_interatomic_distance_std": 0.33143607154314614,
+  "final/validity_smact_valid_count": 2.0,
+  "final/validity_smact_valid_fraction": 1.0,
+  "final/validity_distance_and_smact_valid_count": 2.0,
+  "final/validity_distance_and_smact_valid_fraction": 1.0,
+  "final/diversity_all_composition_unique_composition_count": 1.0,
+  "final/diversity_all_composition_unique_composition_fraction": 0.5,
+  "final/diversity_all_composition_l1_distance_min": 0.0,
+  "final/diversity_all_composition_l1_distance_mean": 0.0,
+  "final/diversity_all_composition_l1_distance_max": 0.0,
+  "final/diversity_all_composition_l1_distance_std": 0.0,
+  "final/diversity_all_composition_l2_distance_min": 0.0,
+  "final/diversity_all_composition_l2_distance_mean": 0.0,
+  "final/diversity_all_composition_l2_distance_max": 0.0,
+  "final/diversity_all_composition_l2_distance_std": 0.0,
+  "final/diversity_all_structure_unique_structure_count": 2.0,
+  "final/diversity_all_structure_unique_structure_fraction": 1.0,
+  "final/diversity_all_structure_spacegroup_entropy": -0.0,
+  "final/diversity_all_structure_unique_spacegroups_count": 1.0,
+  "final/diversity_all_structure_unique_spacegroups_fraction": 0.5,
+  "final/diversity_all_structure_lattice_parameter_variance": 3.733666267198759,
+  "final/diversity_all_structure_amd_distance_min": 3.2219719864865333,
+  "final/diversity_all_structure_amd_distance_mean": 3.2219719864865333,
+  "final/diversity_all_structure_amd_distance_max": 3.2219719864865333,
+  "final/diversity_stable_composition_unique_composition_count": 1.0,
+  "final/diversity_stable_composition_unique_composition_fraction": 0.5,
+  "final/diversity_stable_composition_l1_distance_min": 0.0,
+  "final/diversity_stable_composition_l1_distance_mean": 0.0,
+  "final/diversity_stable_composition_l1_distance_max": 0.0,
+  "final/diversity_stable_composition_l1_distance_std": 0.0,
+  "final/diversity_stable_composition_l2_distance_min": 0.0,
+  "final/diversity_stable_composition_l2_distance_mean": 0.0,
+  "final/diversity_stable_composition_l2_distance_max": 0.0,
+  "final/diversity_stable_composition_l2_distance_std": 0.0,
+  "final/diversity_stable_structure_unique_structure_count": 2.0,
+  "final/diversity_stable_structure_unique_structure_fraction": 1.0,
+  "final/diversity_stable_structure_spacegroup_entropy": -0.0,
+  "final/diversity_stable_structure_unique_spacegroups_count": 1.0,
+  "final/diversity_stable_structure_unique_spacegroups_fraction": 0.5,
+  "final/diversity_stable_structure_lattice_parameter_variance": 3.733666267198759,
+  "final/diversity_stable_structure_amd_distance_min": 3.2219719864865333,
+  "final/diversity_stable_structure_amd_distance_mean": 3.2219719864865333,
+  "final/diversity_stable_structure_amd_distance_max": 3.2219719864865333,
+  "final/novelty_unique_structure_count": 2.0,
+  "final/novelty_unique_structure_fraction": 1.0,
+  "final/novelty_novel_structure_count": 2.0,
+  "final/novelty_novel_structure_fraction": 1.0,
+  "final/novelty_stable_count": 2.0,
+  "final/novelty_stable_unique_count": 2.0,
+  "final/novelty_stable_novel_count": 2.0,
+  "final/novelty_stable_unique_novel_count": 2.0,
+  "final/novelty_stable_fraction": 1.0,
+  "final/novelty_stable_unique_fraction": 1.0,
+  "final/novelty_stable_novel_fraction": 1.0,
+  "final/novelty_stable_unique_novel_fraction": 1.0,
+  "final/convex_hull_e_above_hull_min": 2.6020852139652106e-18,
+  "final/convex_hull_e_above_hull_mean": 2.6020852139652106e-18,
+  "final/convex_hull_e_above_hull_max": 2.6020852139652106e-18,
+  "final/convex_hull_e_above_hull_std": 0.0,
+  "final/convex_hull_energy_per_atom_min": 0.0,
+  "final/convex_hull_energy_per_atom_max": 0.0,
+  "final/convex_hull_energy_per_atom_mean": 0.0,
+  "final/convex_hull_energy_per_atom_std": 0.0,
+  "final/convex_hull_formation_energy_per_atom_min": 2.6020852139652106e-18,
+  "final/convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+  "final/convex_hull_formation_energy_per_atom_mean": 2.6020852139652106e-18,
+  "final/convex_hull_formation_energy_per_atom_std": 0.0,
+  "final/convex_hull_stable_fraction": 1.0,
+  "final/convex_hull_stable_count": 2.0,
+  "final/discovery_curve_area_under_discovery_curve": 2.0,
+  "final/discovery_curve_area_under_discovery_curve_normalized": 1.0,
+  "final/discovery_curve_enhancement_factor": 0.0,
+  "final/discovery_curve_acceleration_factor": 0.0
+}
+[2026-10-19 19:17:26] [INFO] [__main__] Removed checkpoint file checkpoints/20261019_191707/episode_000/checkpoint.json after successful completion
+[2026-10-19 19:17:26] [INFO] [choreographer.browsers.chromium] Chromium init'ed with kwargs {}
+[2026-10-19 19:17:26] [INFO] [choreographer.browsers.chromium] Found chromium path: /workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+[2026-10-19 19:17:26] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmpinsuvvew.
+[2026-10-19 19:17:26] [INFO] [choreographer.browser_async] Opening browser.
+[2026-10-19 19:17:26] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmptxfe0pp9.
+[2026-10-19 19:17:26] [INFO] [choreographer.browsers.chromium] Temporary directory at: /tmp/tmptxfe0pp9
+[2026-10-19 19:17:31] [INFO] [choreographer.browser_async] Closing browser.
+[2026-10-19 19:17:31] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-19 19:17:31] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-19 19:17:31] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-19 19:17:31] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-19 19:17:31] [INFO] [kaleido.kaleido] Cancelling tasks.
+[2026-10-19 19:17:31] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+
+Running episodes:   0%|          | 0/1 [00:24<?, ?it/s]
+Error executing job with overrides: ['agent=m1_integrated', 'dataset._target_=smoke_dataset.SmokeDataset', 'dataset.elements=[Li,O]', 'oracle=analytic', 'oracle.relax=false', 'oracle.element_reference_energies_path=null', 'environment.budget=2', 'environment.start_with_all_stable=false', 'environment.compute_elemental_from_oracle=true', 'environment.filter_by_smact=true', 'environment.max_stoichiometry=4', 'agent.planner.max_stoichiometry=4', 'agent.planner.num_candidates=4', 'experiment.num_episodes=1', 'experiment.seed=17', 'logger.use_wandb=false']
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Traceback (most recent call last):
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/browser_async.py", line 167, in open
+    await self.populate_targets()
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/kaleido/kaleido.py", line 232, in populate_targets
+    await super().populate_targets()
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/browser_async.py", line 348, in populate_targets
+    response = await self.send_command("Target.getTargets")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/protocol/devtools_async.py", line 222, in send_command
+    return await session.send_command(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/protocol/devtools_async.py", line 95, in send_command
+    return await self._broker.write_json(json_command)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/_brokers/_async.py", line 273, in write_json
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/../run_smoke_test.py", line 47, in <module>
+    main()
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/../run_smoke_test.py", line 43, in main
+    runpy.run_path(str(RUNNER), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/scripts/run_benchmark.py", line 635, in <module>
+    run_benchmark()
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+           ^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+            ^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+        ^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/scripts/run_benchmark.py", line 524, in run_benchmark
+    fig.write_image(
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/plotly/basedatatypes.py", line 3895, in write_image
+    return pio.write_image(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/plotly/io/_kaleido.py", line 528, in write_image
+    img_data = to_image(
+               ^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/plotly/io/_kaleido.py", line 398, in to_image
+    img_bytes = kaleido.calc_fig_sync(
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/kaleido/__init__.py", line 171, in calc_fig_sync
+    return _sync_server.oneshot_async_run(calc_fig, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/kaleido/_sync_server.py", line 131, in oneshot_async_run
+    raise res
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/kaleido/_sync_server.py", line 122, in run
+    q.put(asyncio.run(func(*args, **kwargs)))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/kaleido/__init__.py", line 101, in calc_fig
+    async with Kaleido(**kopts) as k:
+               ^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/browser_async.py", line 187, in __aenter__
+    await self.open()
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/kaleido/kaleido.py", line 198, in open
+    await super().open()
+  File "/workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/browser_async.py", line 174, in open
+    raise BrowserFailedError(
+choreographer.browsers._errors.BrowserFailedError: ('The browser seemed to close immediately after starting.', 'You can set the `logging.Logger` level lower to see more output.', 'You may try installing a known working copy of Chrome by running ', '`$ choreo_get_chrome`.It may be your browser auto-updated and will now work upon restart. The browser we tried to start is located at /workspace/scratch/c2414a758051/repo/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome.')
+[2026-10-19 19:17:33] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-19 19:17:33] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
