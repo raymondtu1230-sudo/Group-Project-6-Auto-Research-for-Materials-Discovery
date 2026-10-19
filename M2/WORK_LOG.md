@@ -103,3 +103,25 @@ unit-level scores only with their raw evidence and never as a full comparison.
 - Launched run 39234974449 at source 3e07d9f0. It has entered the official protocol step, not a
   completed performance result. The existing result monitor follows this run
   and is instructed not to spend the once-only retry authorization again.
+
+## 19 October 2026, 22:38 Singapore: completed recovery received
+
+- Downloaded unchanged artifacts 12194049480 and 12194876393; both SHA256
+  digests match GitHub. Saved original job logs and source-CI job conclusions.
+- The sole retry completed all four generation batches and 20 oracle queries.
+  No new science run was launched. Random was neither rerun nor counted twice.
+- Reviewed the fixed source `3e07d9f0`, all 69 recorded M1 hashes, capture hash,
+  resolved Hydra configuration, raw trajectory and full query history 1..20.
+- Ran the unchanged M2 evaluator and official MADE metrics offline in its
+  locked environment. Two real runs accepted, zero issues; the protocol and
+  material-reference snapshots match. Visually inspected the paired curves.
+- Chemeleon Mg-Sn-Sr/17: mSUN=16, AUDC=161, wall=15767.025 s; the existing
+  Random pair has 7 / 55.5 / 952.717 s. These are partial development results.
+  AF=2.375 and EF=2.2857142857142856 refer only to the official paired curve.
+- The partial package reports 34 missing baselines and 18 missing m1_full
+  units; overall method means/SD stay blank. Original failed/cancelled attempts,
+  null usage fields and unknown compute charges are retained. No source code,
+  scientific settings, retry request or M1/M4/root files were changed.
+- Published evidence/status on main/M2 and the existing development branch,
+  retaining PR #2 without merging. With no active monitored science left,
+  pause this result-recovery monitor after publication verification.

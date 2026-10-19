@@ -64,3 +64,13 @@ folder. Its push trigger is restricted to that exact path and the M2 branch.
 Ordinary code, documentation and result updates do not trigger materials runs.
 The record will be added only after fresh checks pass; a missing record means
 that this explicit launch has not been requested.
+
+## Recovery outcome — 19 October 2026, 22:30 Singapore
+
+The single authorized retry, run 39234974449 at source `3e07d9f0`, completed
+all four batches and B=20. The [independent recovery package](../20261019-chemeleon-recovery/README.md)
+preserves the original completed artifact, hashes, query history and paired
+report. Chemeleon mSUN@20=16 and AUDC=161 are now accepted alongside the
+previous Random unit: 2/36 baseline units, not a full sweep. Statements above
+about the sole accepted Random unit describe the original timeout audit.
+Both failed attempts remain unaltered. No second retry was launched.

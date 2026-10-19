@@ -133,6 +133,32 @@
         }
       ],
       "user_report": "First three batches complete; batch 4 of 4 at 40/256. CPU and sampling advanced. Captured oracle queries remain 0."
+    },
+    {
+      "observed_at": "2026-10-19T14:38:56Z",
+      "run_id": 39234974449,
+      "job_id": 118001953048,
+      "batch": 4,
+      "sampling_step": 256,
+      "sampling_total": 256,
+      "total_batches": 4,
+      "completed_batches": 4,
+      "captured_queries": 20,
+      "reported_milestones": [
+        "batch4:50",
+        "batch4:100",
+        "batch4:150",
+        "batch4:200",
+        "batch4:250",
+        "batch4:256",
+        "batch4:complete",
+        "oracle:start",
+        "experiment:complete"
+      ],
+      "milestone_evidence": "Completed raw artifact and complete 1..20 official query history establish all batches finished; intermediate milestone times are not individually claimed. Job logs record query 1 at 14:25:53Z and completed unit at 14:30:02Z.",
+      "source": "Downloaded GitHub job logs, original artifact 12194049480 and offline official-metric verification",
+      "source_url": "https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39234974449/job/118001953048",
+      "user_report": "Completed four generation batches and 20 queries. Chemeleon single-unit mSUN=16, AUDC=161. Paired report accepts 2/36 baseline units; final comparison incomplete."
     }
   ]
 }

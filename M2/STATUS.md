@@ -45,8 +45,9 @@ documentation conflicts were resolved using the published main versions.
 
 The raw Random ZIP and independently generated tables/curves are in
 [`verification/20261019-random-gate`](verification/20261019-random-gate/README.md).
-Only one of 36 development baseline units is available here. Overall means,
-standard deviations and paired Chemeleon AF/EF remain unavailable. Recorded
+That historical package contains one unit. The later paired recovery package
+now accepts two of 36 baseline units; only single-pair AF/EF are available.
+Overall method means and standard deviations remain unavailable. Recorded
 zero inference fees do not establish zero total compute cost.
 
 The local diagnostic test exposed a real namespace limitation: `/proc/self`
@@ -61,38 +62,30 @@ limitation does not affect the completed scientific result. The independent
 folder publication changes packaging and documentation, not the tested code or
 scientific settings.
 
-## Current experiment status (2026-10-19 10:07 UTC)
+## Current experiment status (2026-10-19 14:38 UTC)
 
-The original run 39213257750 ended with a failed Chemeleon gate after the
-external 165-minute action limit. Its model log completed three generation
-batches and entered batch four; this establishes actual computation during
-that attempt, rather than a deadlock. The older run 39211212095 ended with a
-cancelled conclusion. Its log does not establish who or what cancelled it.
+[Recovery run 39234974449](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39234974449)
+completed successfully at 22:30 Singapore time, fixed source `3e07d9f0`.
+Four batches finished and all 20 oracle queries completed. The independent
+[paired report and original artifacts](verification/20261019-chemeleon-recovery/README.md)
+validate Chemeleon Mg-Sn-Sr/17: mSUN@20=16, AUDC=161, wall=15767.025 s.
+The existing Random unit remains mSUN@20=7, AUDC=55.5, wall=952.717 s.
+Their protocol and 194-entry material reference snapshots match. Official
+single-pair Chemeleon AF/EF vs Random are 2.375 / 2.2857142857142856.
+No method-level aggregate score is available.
 
-The [failure audit and original archives](verification/20261019-chemeleon-timeout/README.md)
-preserve both attempts, SHA256 checksums, absent fields and the partial report.
-Neither Chemeleon attempt has a completed trajectory or accepted metrics.
-The report accepts one Random unit and records 35 missing baseline units.
-
-Exactly one bounded Chemeleon retry has now started:
-[run 39234974449](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39234974449),
-revision `3e07d9f0`, job `118001953048`. At 10:07 UTC, environment and
-Chrome installation had completed and the full-budget action step was in
-progress. No sampling/query progress or completed artifact was independently
-visible through the jobs API at that check; this is a launch confirmation,
-not a claim of scientific progress or completion.
-
-The retry retains the original scientific settings and raises only the
-external action/job limits to 330/350 minutes with batch/CPU/log diagnostics.
-It selects one Chemeleon Mg-Sn-Sr / seed 17 / B=20 unit; Random and the wider
-sweep are excluded. The original launch request is preserved unchanged.
-No new experiment was started by this status check. See the timestamped
-[retry receipt](verification/20261019-chemeleon-timeout/retry-status.json).
+There are now **2/36 accepted baseline units**, 34 missing baseline units and
+18 missing frozen full-method units (52 missing protocol-required units in
+all). The original timeout/cancelled attempts remain in the
+[failure audit](verification/20261019-chemeleon-timeout/README.md), excluded from
+accepted results. No further experiment was launched. The one authorized retry
+is consumed; the wider sweep was skipped. The monitored workflow has no active
+scientific jobs. Final M2 comparison and M1 integration remain incomplete.
 
 ## Next required handovers
 
 1. By 20 October: share the currently available development baseline evidence,
-   explicitly flagging missing Chemeleon/remaining units.
+   explicitly flagging the 34 missing baseline units and the single-pair scope.
 2. By 24 October: M1 reviews and integrates PR #2; M6 receives the method and
    slide material in `METHODS_AND_M6_HANDOFF.md`.
 3. After M1 integrates the other owners and freezes the full agent on 25 October:
@@ -116,8 +109,8 @@ passed complete CI 39234757674. Source details are in the timeout folder
 `recovery_ci.json`. The observer now also emits numeric sampling steps, totals
 and elapsed sampling seconds. No additional retry is authorized automatically.
 
-Runtime continuity is a user requirement. Preserve the current retry instead of
-restarting it for timeout edits. The current run's limits are fixed at launch;
+Runtime continuity is a user requirement. The completed retry was preserved
+without restarting it for timeout edits. Its limits were fixed at launch;
 GitHub-hosted jobs also have a six-hour hard cap. Initial generation has no
 verified mid-batch restart point. See `verification/20261019-chemeleon-timeout/RUNTIME_SAFEGUARDS.md`
 for admission and preservation rules before later experiments.
