@@ -9,7 +9,7 @@
 | [generalization.py](generalization.py) | Dev vs held-out table + chart from M2 `per_run.csv` (stdlib only) |
 | [REQUIREMENTS_CHECKLIST.md](REQUIREMENTS_CHECKLIST.md) | Brief deliverables → owner, status, file |
 
-`comms/`, `report/` and `results/` are kept local (git-ignored). Report text and slides are sent to M6 directly.
+Only project files are committed. Personal drafts, notes and scratch outputs live in `M6/local/`, which git ignores. Real generalization outputs for the report go in `M6/results/` and are committed.
 
 Checks (from the repo root):
 
