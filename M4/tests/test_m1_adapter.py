@@ -16,7 +16,9 @@ class AdapterTests(unittest.TestCase):
             "elements": ["Li", "O"],
             "query_count": 1,
             "last_observation": {
-                "reduced_formula": "Li2O", "is_stable": False, "e_above_hull": 0.3
+                "reduced_formula": "Li2O",
+                "is_stable": False,
+                "e_above_hull": 0.3,
             },
         }
 
@@ -50,7 +52,7 @@ class AdapterTests(unittest.TestCase):
             self.adapter.update_state({**self.state, "query_count": 0})
 
     def test_published_switch_contract_simulation(self):
-        # Simulates the documented boundary, not the unavailable real M1 agent.
+        # Unit-level switch simulation; real-agent coverage is in integration tests.
         self.adapter.update_state(self.state)
         for enabled in (True, False):
             context = {"m1_memory": self.adapter.get_memory() if enabled else []}

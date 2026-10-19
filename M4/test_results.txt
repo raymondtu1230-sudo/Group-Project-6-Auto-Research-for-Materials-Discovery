@@ -1,4 +1,4 @@
-..................................                                       [100%]
+....................................                                     [100%]
 =============================== warnings summary ===============================
 src/made/agents/base.py:19
 src/made/agents/base.py:35
@@ -8,4 +8,4 @@ src/made/agents/base.py:35
   UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-34 passed, 3 warnings in 14.68s
+36 passed, 1 deselected, 3 warnings in 16.10s

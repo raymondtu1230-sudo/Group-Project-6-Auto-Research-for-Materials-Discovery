@@ -1,0 +1,17 @@
+{
+  "source_trajectory_sha256": "3c1f62d9da8f29a8fb4e8e41f6d4f1273f7abaaddff5e692a836e9fe9e8c99ab",
+  "system": [
+    "Mg",
+    "Sn",
+    "Sr"
+  ],
+  "seed": 17,
+  "campaign_queries": 20,
+  "original_wall_time_seconds": 157.193,
+  "original_msun_count": 7,
+  "original_audc": 49.5,
+  "purpose": "workflow and evidence validation; no Memory effect comparison",
+  "schema_version": 1,
+  "exporter_sha256": "dca9c114010e20aa3d619051c3183d2eff756a9842e50c24ded04346c40b82c7",
+  "evidence_module_sha256": "e953d2a71e9a0e536daea8888e0a6ad3dc90c11cb78102d82139beac4ad6df9c"
+}
