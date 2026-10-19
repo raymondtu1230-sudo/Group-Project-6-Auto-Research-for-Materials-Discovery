@@ -1,0 +1,7 @@
+# Next recovery diagnostic, before production admission
+
+The failed gate is preserved; no formal Chemeleon unit is admitted yet. Last-bit structure dictionary differences (maximum 2.8422e-14) and repeated hostnames require diagnosis rather than an identical rerun or arbitrary numeric tolerance.
+
+In a new actual-model fixture, retain all original generated CIF files and exact ASE sample representations for both uninterrupted and interrupted/resumed paths. Compare exact ordered CIF hashes and exact underlying generated atom data, along with final RNG, full candidate count, unchanged model/step/batch/source identity and proof that the saved batch was replayed once. Keep full dictionary equality as a reported diagnostic. Any revised scientific equivalence criterion needs an explicit rationale and exact independent-data evidence; do not merely round away differences. Runner names in the failed run are distinct although hostnames repeat; verify separate runner/job identities from GitHub job metadata, not hostname inequality alone. Preserve old failures and the new source-specific proof.
+
+After fixture admission, separately verify the full-pool protocol wrapper, all stage costs and durable artifact restore. Keep pool1024, original batch256, diffusion steps, B20, seeds and CPU settings unchanged. Only then start missing formal dev Chemeleon units. Check/hidden dispatch remains held for the colleague's reply and user-confirmed arrangement.

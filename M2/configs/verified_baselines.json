@@ -7,6 +7,42 @@
     {
       "path": "M2/verification/20261019-chemeleon-recovery/raw_artifact.zip",
       "sha256": "17e1747473b60df105aca6de4f2f18449188122ac768e7747c1538b8cedb4c79"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205882338-m2-missing-raw-Co-Dy-W-29-39286848821.zip",
+      "sha256": "fd29c8a7db133fbfd5b6fc5e51f197b76ced48730ce6c1a63fd346e524acdad9"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205518875-m2-missing-raw-Co-Mg-Na-43-39286848821.zip",
+      "sha256": "083f811035ec0b187c7f09350ef3a80cf3331cbadf830937342bbf8784528d19"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205318451-m2-missing-raw-Co-Dy-W-43-39286848821.zip",
+      "sha256": "c5b93361adf59efcf339e3edc35b54de13e71b04f02e81de41ec337ab28e7c0f"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205295837-m2-missing-raw-Au-K-Tb-43-39286848821.zip",
+      "sha256": "3287431bd96a5019ee1fda5c83cfa5395a4239f3dcd7fb36615c9322f594cdd1"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205233016-m2-missing-raw-Co-Mg-Na-29-39286848821.zip",
+      "sha256": "81e3f883915f3969d34d6771af42ab650af4d5a1842ea7c1e7193cc61ed32aea"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205132959-m2-missing-raw-Co-Mg-Na-17-39286848821.zip",
+      "sha256": "9711aaf9f30d56aacf0d968f448bb7f63f68aa01754a347dc46381283eae3c2b"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205130735-m2-missing-raw-Au-K-Tb-17-39286848821.zip",
+      "sha256": "f9ca80dae172ffbc6e0c1b49d36a5b59db46bb70d2c11524b7d96fc1e248d7ff"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12204713320-m2-missing-raw-Au-K-Tb-29-39286848821.zip",
+      "sha256": "239417a8cba3f2fcd947632e8ec9c3383d36d463becb94723cf0c11052abd555"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12203084390-m2-missing-raw-Co-Dy-W-17-39286848821.zip",
+      "sha256": "bad74aa61ac1c4ae3711f6af05ee0101c219e153e5d6d71599845448720117e6"
     }
   ]
 }
