@@ -1,0 +1,1000 @@
+﻿2026-10-19T16:25:32.0400571Z Current runner version: '2.337.0'
+2026-10-19T16:25:32.0416403Z ##[group]Runner Image Provisioner
+2026-10-19T16:25:32.0416989Z Hosted Compute Agent
+2026-10-19T16:25:32.0417452Z Version: 20261012.601
+2026-10-19T16:25:32.0417873Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T16:25:32.0418366Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T16:25:32.0419154Z Worker ID: {57341956-6712-4b39-a2a4-a7be65217ff8}
+2026-10-19T16:25:32.0419637Z Region: centralus
+2026-10-19T16:25:32.0420023Z Cloud: Azure
+2026-10-19T16:25:32.0420383Z ##[endgroup]
+2026-10-19T16:25:32.0421390Z ##[group]Operating System
+2026-10-19T16:25:32.0421840Z Ubuntu
+2026-10-19T16:25:32.0422188Z 24.04.5
+2026-10-19T16:25:32.0422823Z LTS
+2026-10-19T16:25:32.0423178Z ##[endgroup]
+2026-10-19T16:25:32.0423531Z ##[group]Runner Image
+2026-10-19T16:25:32.0423981Z Image: ubuntu-24.04
+2026-10-19T16:25:32.0424358Z Version: 20261012.334.1
+2026-10-19T16:25:32.0425224Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T16:25:32.0426241Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-19T16:25:32.0426900Z ##[endgroup]
+2026-10-19T16:25:32.0427636Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T16:25:32.0429512Z Contents: read
+2026-10-19T16:25:32.0429902Z Metadata: read
+2026-10-19T16:25:32.0430304Z ##[endgroup]
+2026-10-19T16:25:32.0431788Z Secret source: Actions
+2026-10-19T16:25:32.0432429Z Cache mode: write
+2026-10-19T16:25:32.0432955Z Prepare workflow directory
+2026-10-19T16:25:32.1835820Z Prepare all required actions
+2026-10-19T16:25:32.1883899Z Getting action download info
+2026-10-19T16:25:32.4440984Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-19T16:25:32.8486409Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-19T16:25:33.0624755Z Download action repository 'astral-sh/setup-uv@v6' (SHA:d0cc045d04ccac9d8b7881df0226f9e82c39688e)
+2026-10-19T16:25:33.8173575Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-19T16:25:34.0433929Z Complete job name: actual-recovery
+2026-10-19T16:25:34.1095706Z ##[group]Run actions/checkout@v4
+2026-10-19T16:25:34.1096718Z with:
+2026-10-19T16:25:34.1097718Z   repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:25:34.1104210Z   token: ***
+2026-10-19T16:25:34.1104844Z   ssh-strict: true
+2026-10-19T16:25:34.1105491Z   ssh-user: git
+2026-10-19T16:25:34.1106149Z   persist-credentials: true
+2026-10-19T16:25:34.1106837Z   clean: true
+2026-10-19T16:25:34.1107532Z   sparse-checkout-cone-mode: true
+2026-10-19T16:25:34.1108325Z   fetch-depth: 1
+2026-10-19T16:25:34.1109105Z   fetch-tags: false
+2026-10-19T16:25:34.1109760Z   show-progress: true
+2026-10-19T16:25:34.1110413Z   lfs: false
+2026-10-19T16:25:34.1111077Z   submodules: false
+2026-10-19T16:25:34.1111730Z   set-safe-directory: true
+2026-10-19T16:25:34.1112496Z   allow-unsafe-pr-checkout: false
+2026-10-19T16:25:34.1113458Z env:
+2026-10-19T16:25:34.1114044Z   OMP_NUM_THREADS: 2
+2026-10-19T16:25:34.1114726Z   MKL_NUM_THREADS: 2
+2026-10-19T16:25:34.1115468Z ##[endgroup]
+2026-10-19T16:25:34.1890547Z Syncing repository: raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:25:34.1894254Z ##[group]Getting Git version info
+2026-10-19T16:25:34.1896794Z Working directory is '/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery'
+2026-10-19T16:25:34.1900519Z [command]/usr/bin/git version
+2026-10-19T16:25:34.1948924Z git version 2.55.0
+2026-10-19T16:25:34.1967876Z ##[endgroup]
+2026-10-19T16:25:34.1974435Z Temporarily overriding HOME='/home/runner/work/_temp/d662d4ee-8cce-4d30-a948-97d4654c5dc3' before making global git config changes
+2026-10-19T16:25:34.1977862Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T16:25:34.1983746Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:25:34.2013061Z Deleting the contents of '/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery'
+2026-10-19T16:25:34.2018812Z ##[group]Initializing the repository
+2026-10-19T16:25:34.2028213Z [command]/usr/bin/git init /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:25:34.2097353Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T16:25:34.2099576Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T16:25:34.2103938Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T16:25:34.2106639Z hint: call:
+2026-10-19T16:25:34.2107757Z hint:
+2026-10-19T16:25:34.2109011Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T16:25:34.2110393Z hint:
+2026-10-19T16:25:34.2111562Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T16:25:34.2113934Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T16:25:34.2115462Z hint:
+2026-10-19T16:25:34.2116477Z hint: 	git branch -m <name>
+2026-10-19T16:25:34.2117508Z hint:
+2026-10-19T16:25:34.2118969Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T16:25:34.2122189Z Initialized empty Git repository in /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/.git/
+2026-10-19T16:25:34.2127595Z [command]/usr/bin/git remote add origin https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:25:34.2232037Z ##[endgroup]
+2026-10-19T16:25:34.2233910Z ##[group]Disabling automatic garbage collection
+2026-10-19T16:25:34.2235387Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T16:25:34.2262565Z ##[endgroup]
+2026-10-19T16:25:34.2265697Z ##[group]Setting up auth
+2026-10-19T16:25:34.2268297Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T16:25:34.2289511Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T16:25:34.2545534Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T16:25:34.2566183Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T16:25:34.2702017Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T16:25:34.2723516Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T16:25:34.2857819Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T16:25:34.2886633Z ##[endgroup]
+2026-10-19T16:25:34.2888002Z ##[group]Fetching the repository
+2026-10-19T16:25:34.2895373Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +639f47b301d71cc7bd7c66c7832f0ecb75bb5e9d:refs/remotes/origin/m2/tool-routing-evaluation
+2026-10-19T16:25:35.1469763Z From https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:25:35.1470826Z  * [new ref]         639f47b301d71cc7bd7c66c7832f0ecb75bb5e9d -> origin/m2/tool-routing-evaluation
+2026-10-19T16:25:35.1476369Z ##[endgroup]
+2026-10-19T16:25:35.1479627Z ##[group]Determining the checkout info
+2026-10-19T16:25:35.1480672Z ##[endgroup]
+2026-10-19T16:25:35.1485633Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T16:25:35.1531367Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T16:25:35.1561653Z ##[group]Checking out the ref
+2026-10-19T16:25:35.1565722Z [command]/usr/bin/git checkout --progress --force -B m2/tool-routing-evaluation refs/remotes/origin/m2/tool-routing-evaluation
+2026-10-19T16:25:35.2832070Z Switched to a new branch 'm2/tool-routing-evaluation'
+2026-10-19T16:25:35.2836176Z branch 'm2/tool-routing-evaluation' set up to track 'origin/m2/tool-routing-evaluation'.
+2026-10-19T16:25:35.2843627Z ##[endgroup]
+2026-10-19T16:25:35.2871337Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T16:25:35.2887649Z 639f47b301d71cc7bd7c66c7832f0ecb75bb5e9d
+2026-10-19T16:25:35.3080673Z ##[group]Run actions/setup-python@v5
+2026-10-19T16:25:35.3080960Z with:
+2026-10-19T16:25:35.3081227Z   python-version: 3.12
+2026-10-19T16:25:35.3081457Z   check-latest: false
+2026-10-19T16:25:35.3083479Z   token: ***
+2026-10-19T16:25:35.3083722Z   update-environment: true
+2026-10-19T16:25:35.3083968Z   allow-prereleases: false
+2026-10-19T16:25:35.3084205Z   freethreaded: false
+2026-10-19T16:25:35.3084401Z env:
+2026-10-19T16:25:35.3084594Z   OMP_NUM_THREADS: 2
+2026-10-19T16:25:35.3084801Z   MKL_NUM_THREADS: 2
+2026-10-19T16:25:35.3085018Z ##[endgroup]
+2026-10-19T16:25:35.3999046Z ##[group]Installed versions
+2026-10-19T16:25:35.4063993Z (node:1955) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:25:35.4064866Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:25:35.4065431Z Successfully set up CPython (3.12.15)
+2026-10-19T16:25:35.4066119Z ##[endgroup]
+2026-10-19T16:25:35.4208296Z ##[group]Run astral-sh/setup-uv@v6
+2026-10-19T16:25:35.4208846Z with:
+2026-10-19T16:25:35.4209115Z   enable-cache: true
+2026-10-19T16:25:35.4209401Z   cache-dependency-glob: M1/MADE/uv.lock
+2026-10-19T16:25:35.4209727Z   activate-environment: false
+2026-10-19T16:25:35.4210360Z   working-directory: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:25:35.4211009Z   server-url: https://github.com
+2026-10-19T16:25:35.4213105Z   github-token: ***
+2026-10-19T16:25:35.4213362Z   restore-cache: true
+2026-10-19T16:25:35.4213626Z   save-cache: true
+2026-10-19T16:25:35.4213882Z   prune-cache: true
+2026-10-19T16:25:35.4214152Z   ignore-nothing-to-cache: false
+2026-10-19T16:25:35.4214452Z   ignore-empty-workdir: false
+2026-10-19T16:25:35.4214792Z   add-problem-matchers: true
+2026-10-19T16:25:35.4215059Z env:
+2026-10-19T16:25:35.4215292Z   OMP_NUM_THREADS: 2
+2026-10-19T16:25:35.4215579Z   MKL_NUM_THREADS: 2
+2026-10-19T16:25:35.4215892Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:25:35.4216328Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:25:35.4216745Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:25:35.4217136Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:25:35.4217519Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:25:35.4217921Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:25:35.4218260Z ##[endgroup]
+2026-10-19T16:25:35.5496550Z (node:1963) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:25:35.5497421Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:25:35.5580030Z Trying to find version for uv in: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/uv.toml
+2026-10-19T16:25:35.5600278Z Could not find file: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/uv.toml
+2026-10-19T16:25:35.5620228Z Trying to find version for uv in: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/pyproject.toml
+2026-10-19T16:25:35.5650078Z Could not find file: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/pyproject.toml
+2026-10-19T16:25:35.5659901Z Could not determine uv version from uv.toml or pyproject.toml. Falling back to latest.
+2026-10-19T16:25:35.5660997Z Getting latest version from GitHub API...
+2026-10-19T16:25:35.9561910Z manifest-file not provided, reading from local file.
+2026-10-19T16:25:35.9589186Z manifest-file does not contain version 0.13.1, arch x86_64, platform unknown-linux-gnu. Falling back to GitHub releases.
+2026-10-19T16:25:35.9596657Z Downloading uv from "https://github.com/astral-sh/uv/releases/download/0.13.1/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-10-19T16:25:36.4085706Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8b9a7ce2-e8aa-4673-b750-c35811430b2a -f /home/runner/work/_temp/4f9b98c2-5e59-4dac-a0e8-68385a16c9cd
+2026-10-19T16:25:36.7801682Z Added /home/runner/.local/bin to the path
+2026-10-19T16:25:36.7806920Z Added /opt/hostedtoolcache/uv/0.13.1/x86_64 to the path
+2026-10-19T16:25:36.7816297Z Set UV_CACHE_DIR to /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:25:36.7816813Z Successfully installed uv version 0.13.1
+2026-10-19T16:25:36.7817723Z Searching files using cache dependency glob: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/uv.lock
+2026-10-19T16:25:36.7850254Z /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/uv.lock
+2026-10-19T16:25:36.7874038Z Found 1 files to hash.
+2026-10-19T16:25:36.8691287Z Trying to restore uv cache from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T16:25:36.9989737Z Cache hit for: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T16:25:37.0085288Z (node:1963) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T16:25:37.8211065Z Received 54646798 of 54646798 (100.0%), 77.6 MBs/sec
+2026-10-19T16:25:37.8211613Z Cache Size: ~52 MB (54646798 B)
+2026-10-19T16:25:37.8236961Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c23d25e5-e558-4a57-bb4b-dba897e215f5/cache.tzst -P -C /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery --use-compress-program unzstd
+2026-10-19T16:25:37.9223807Z Cache restored successfully
+2026-10-19T16:25:37.9296329Z uv cache restored from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80
+2026-10-19T16:25:37.9404794Z ##[group]Run uv sync --locked
+2026-10-19T16:25:37.9405101Z [36;1muv sync --locked[0m
+2026-10-19T16:25:37.9553213Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:25:37.9553436Z env:
+2026-10-19T16:25:37.9553589Z   OMP_NUM_THREADS: 2
+2026-10-19T16:25:37.9553753Z   MKL_NUM_THREADS: 2
+2026-10-19T16:25:37.9553984Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:25:37.9554292Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:25:37.9554592Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:25:37.9554862Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:25:37.9555148Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:25:37.9555440Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:25:37.9555708Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:25:37.9556077Z ##[endgroup]
+2026-10-19T16:25:37.9686956Z Using CPython 3.12.15 interpreter at: /opt/hostedtoolcache/Python/3.12.15/x64/bin/python3.12
+2026-10-19T16:25:37.9687336Z Creating virtual environment at: .venv
+2026-10-19T16:25:37.9731476Z Resolved 298 packages in 1ms
+2026-10-19T16:25:38.0066272Z    Building made @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE
+2026-10-19T16:25:38.0625525Z Downloading babel (9.7MiB)
+2026-10-19T16:25:38.0626662Z Downloading numpy (15.8MiB)
+2026-10-19T16:25:38.0627001Z Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)
+2026-10-19T16:25:38.0627389Z Downloading nvidia-cufft-cu12 (184.2MiB)
+2026-10-19T16:25:38.0627745Z Downloading nvidia-cusolver-cu12 (255.1MiB)
+2026-10-19T16:25:38.0628181Z Downloading nvidia-cusparselt-cu12 (273.9MiB)
+2026-10-19T16:25:38.0631321Z Downloading nvidia-cusparse-cu12 (274.9MiB)
+2026-10-19T16:25:38.0631591Z Downloading nvidia-nccl-cu12 (307.4MiB)
+2026-10-19T16:25:38.0631822Z Downloading nvidia-cublas-cu12 (566.8MiB)
+2026-10-19T16:25:38.0632065Z Downloading nvidia-cudnn-cu12 (674.0MiB)
+2026-10-19T16:25:38.0632269Z Downloading plotly (9.4MiB)
+2026-10-19T16:25:38.0797907Z Downloading nvidia-nvjitlink-cu12 (37.4MiB)
+2026-10-19T16:25:38.0799129Z Downloading matplotlib (8.3MiB)
+2026-10-19T16:25:38.0799422Z Downloading widgetsnbextension (2.1MiB)
+2026-10-19T16:25:38.0799845Z Downloading pandas (11.8MiB)
+2026-10-19T16:25:38.0800426Z Downloading sympy (6.0MiB)
+2026-10-19T16:25:38.0800855Z Downloading nvidia-cuda-cupti-cu12 (9.8MiB)
+2026-10-19T16:25:38.0801500Z Downloading scikit-learn (8.5MiB)
+2026-10-19T16:25:38.0802125Z Downloading grpcio (5.6MiB)
+2026-10-19T16:25:38.0802811Z Downloading ruff (13.6MiB)
+2026-10-19T16:25:38.0803488Z Downloading jedi (1.5MiB)
+2026-10-19T16:25:38.0804160Z Downloading pydantic-core (2.0MiB)
+2026-10-19T16:25:38.0804878Z Downloading tokenizers (3.1MiB)
+2026-10-19T16:25:38.0805564Z Downloading pillow (6.7MiB)
+2026-10-19T16:25:38.0806280Z Downloading fonttools (4.7MiB)
+2026-10-19T16:25:38.0807541Z Downloading wandb (21.8MiB)
+2026-10-19T16:25:38.0807914Z Downloading aiohttp (1.7MiB)
+2026-10-19T16:25:38.0809307Z Downloading debugpy (4.1MiB)
+2026-10-19T16:25:38.0809527Z Downloading black (1.7MiB)
+2026-10-19T16:25:38.0810204Z Downloading kiwisolver (1.4MiB)
+2026-10-19T16:25:38.0810992Z Downloading networkx (2.0MiB)
+2026-10-19T16:25:38.0811764Z Downloading llvmlite (53.7MiB)
+2026-10-19T16:25:38.0812457Z Downloading nvidia-curand-cu12 (60.7MiB)
+2026-10-19T16:25:38.0813133Z Downloading hf-xet (3.2MiB)
+2026-10-19T16:25:38.0813926Z Downloading botocore (13.9MiB)
+2026-10-19T16:25:38.0814616Z Downloading notebook (13.8MiB)
+2026-10-19T16:25:38.0815239Z Downloading scipy (34.0MiB)
+2026-10-19T16:25:38.0816050Z Downloading nvidia-nvshmem-cu12 (118.9MiB)
+2026-10-19T16:25:38.0816758Z Downloading litellm (10.9MiB)
+2026-10-19T16:25:38.0817550Z Downloading h5py (4.9MiB)
+2026-10-19T16:25:38.0818372Z Downloading jupyterlab (11.8MiB)
+2026-10-19T16:25:38.0819273Z Downloading pymatgen (4.4MiB)
+2026-10-19T16:25:38.0820311Z Downloading triton (162.6MiB)
+2026-10-19T16:25:38.0820911Z Downloading sqlalchemy (3.2MiB)
+2026-10-19T16:25:38.0823123Z Downloading smact (1.8MiB)
+2026-10-19T16:25:38.0823481Z Downloading numba (3.6MiB)
+2026-10-19T16:25:38.0824402Z Downloading ase (2.8MiB)
+2026-10-19T16:25:38.0825395Z Downloading gemmi (2.5MiB)
+2026-10-19T16:25:38.0826224Z Downloading torch-geometric (1.2MiB)
+2026-10-19T16:25:38.0827151Z Downloading torch (858.1MiB)
+2026-10-19T16:25:38.3785108Z  Downloaded torch-geometric
+2026-10-19T16:25:38.3996766Z  Downloaded kiwisolver
+2026-10-19T16:25:38.4104473Z Downloading pygments (1.2MiB)
+2026-10-19T16:25:38.4329631Z  Downloaded jedi
+2026-10-19T16:25:38.4386001Z Downloading setuptools (1.1MiB)
+2026-10-19T16:25:38.4702039Z  Downloaded aiohttp
+2026-10-19T16:25:38.4709781Z  Downloaded black
+2026-10-19T16:25:38.4871099Z  Downloaded smact
+2026-10-19T16:25:38.4993577Z Downloading nvidia-cufile-cu12 (1.1MiB)
+2026-10-19T16:25:38.5249389Z  Downloaded pydantic-core
+2026-10-19T16:25:38.5287860Z  Downloaded networkx
+2026-10-19T16:25:38.5453000Z  Downloaded widgetsnbextension
+2026-10-19T16:25:38.5623566Z Downloading openai (1.0MiB)
+2026-10-19T16:25:38.5629382Z Downloading tiktoken (1.1MiB)
+2026-10-19T16:25:38.6939312Z  Downloaded gemmi
+2026-10-19T16:25:38.7144677Z  Downloaded pygments
+2026-10-19T16:25:38.7452468Z  Downloaded ase
+2026-10-19T16:25:38.7557895Z  Downloaded setuptools
+2026-10-19T16:25:38.8075020Z  Downloaded tokenizers
+2026-10-19T16:25:38.8300327Z  Downloaded nvidia-cufile-cu12
+2026-10-19T16:25:38.8328998Z  Downloaded hf-xet
+2026-10-19T16:25:38.8336472Z  Downloaded sqlalchemy
+2026-10-19T16:25:38.8349196Z  Downloaded openai
+2026-10-19T16:25:38.8684686Z  Downloaded tiktoken
+2026-10-19T16:25:38.9010826Z  Downloaded numba
+2026-10-19T16:25:38.9651838Z  Downloaded debugpy
+2026-10-19T16:25:39.0471512Z  Downloaded pymatgen
+2026-10-19T16:25:39.0832390Z  Downloaded fonttools
+2026-10-19T16:25:39.0990165Z  Downloaded h5py
+2026-10-19T16:25:39.2185669Z  Downloaded grpcio
+2026-10-19T16:25:39.2619420Z  Downloaded sympy
+2026-10-19T16:25:39.3689504Z  Downloaded pillow
+2026-10-19T16:25:39.9351361Z  Downloaded scikit-learn
+2026-10-19T16:25:40.0173105Z  Downloaded matplotlib
+2026-10-19T16:25:40.1639961Z  Downloaded plotly
+2026-10-19T16:25:40.1943453Z  Downloaded nvidia-cuda-cupti-cu12
+2026-10-19T16:25:40.1970103Z  Downloaded babel
+2026-10-19T16:25:40.3083331Z  Downloaded litellm
+2026-10-19T16:25:40.4159817Z  Downloaded pandas
+2026-10-19T16:25:40.4170019Z  Downloaded jupyterlab
+2026-10-19T16:25:40.5579885Z  Downloaded ruff
+2026-10-19T16:25:40.5650414Z  Downloaded notebook
+2026-10-19T16:25:40.5804102Z  Downloaded botocore
+2026-10-19T16:25:40.7234886Z  Downloaded numpy
+2026-10-19T16:25:41.0134199Z  Downloaded wandb
+2026-10-19T16:25:41.6487519Z  Downloaded scipy
+2026-10-19T16:25:41.7204406Z  Downloaded nvidia-nvjitlink-cu12
+2026-10-19T16:25:42.1180431Z       Built made @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE
+2026-10-19T16:25:44.4093275Z  Downloaded nvidia-curand-cu12
+2026-10-19T16:25:44.8906505Z  Downloaded llvmlite
+2026-10-19T16:25:47.2396651Z  Downloaded nvidia-cuda-nvrtc-cu12
+2026-10-19T16:25:51.3873202Z  Downloaded nvidia-nvshmem-cu12
+2026-10-19T16:25:58.3655751Z  Downloaded nvidia-cufft-cu12
+2026-10-19T16:26:02.2797160Z  Downloaded nvidia-cusolver-cu12
+2026-10-19T16:26:02.7855140Z  Downloaded triton
+2026-10-19T16:26:02.7894892Z  Downloaded nvidia-cusparse-cu12
+2026-10-19T16:26:03.8236661Z  Downloaded nvidia-cusparselt-cu12
+2026-10-19T16:26:04.3713663Z  Downloaded nvidia-nccl-cu12
+2026-10-19T16:26:11.4959090Z  Downloaded nvidia-cublas-cu12
+2026-10-19T16:26:13.8804933Z  Downloaded nvidia-cudnn-cu12
+2026-10-19T16:26:16.1842384Z  Downloaded torch
+2026-10-19T16:26:16.1843045Z Prepared 294 packages in 38.20s
+2026-10-19T16:26:18.9394606Z Installed 294 packages in 2.75s
+2026-10-19T16:26:18.9396234Z  + aiohappyeyeballs==2.6.1
+2026-10-19T16:26:18.9396509Z  + aiohttp==3.13.2
+2026-10-19T16:26:18.9396763Z  + aiosignal==1.4.0
+2026-10-19T16:26:18.9397170Z  + alembic==1.17.2
+2026-10-19T16:26:18.9397403Z  + annotated-types==0.7.0
+2026-10-19T16:26:18.9397765Z  + antlr4-python3-runtime==4.9.3
+2026-10-19T16:26:18.9398093Z  + anyio==4.12.0
+2026-10-19T16:26:18.9398314Z  + argon2-cffi==25.1.0
+2026-10-19T16:26:18.9399586Z  + argon2-cffi-bindings==25.1.0
+2026-10-19T16:26:18.9399874Z  + arrow==1.4.0
+2026-10-19T16:26:18.9400046Z  + ase==3.27.0
+2026-10-19T16:26:18.9400208Z  + ase-ga==1.0.3
+2026-10-19T16:26:18.9400378Z  + asttokens==3.0.1
+2026-10-19T16:26:18.9400553Z  + async-lru==2.0.5
+2026-10-19T16:26:18.9400732Z  + asyncer==0.0.8
+2026-10-19T16:26:18.9400914Z  + attrs==25.4.0
+2026-10-19T16:26:18.9401117Z  + average-minimum-distance==1.6.1
+2026-10-19T16:26:18.9401334Z  + babel==2.17.0
+2026-10-19T16:26:18.9401509Z  + backoff==2.2.1
+2026-10-19T16:26:18.9401700Z  + beautifulsoup4==4.14.3
+2026-10-19T16:26:18.9401904Z  + bibtexparser==1.4.3
+2026-10-19T16:26:18.9402086Z  + black==25.12.0
+2026-10-19T16:26:18.9402488Z  + blake3==1.0.8
+2026-10-19T16:26:18.9402654Z  + bleach==6.3.0
+2026-10-19T16:26:18.9402829Z  + boto3==1.42.18
+2026-10-19T16:26:18.9402998Z  + botocore==1.42.18
+2026-10-19T16:26:18.9419162Z  + cached-path==1.8.1
+2026-10-19T16:26:18.9429294Z  + cachetools==6.2.4
+2026-10-19T16:26:18.9429574Z  + cbor2==5.7.1
+2026-10-19T16:26:18.9429771Z  + certifi==2025.11.12
+2026-10-19T16:26:18.9429972Z  + cffi==2.0.0
+2026-10-19T16:26:18.9430200Z  + charset-normalizer==3.4.4
+2026-10-19T16:26:18.9430721Z  + chemeleon-dng==0.1.3 (from git+https://github.com/hspark1212/chemeleon-dng.git@a15307694ccbe3381f856560675aee468cda2aa9)
+2026-10-19T16:26:18.9431234Z  + choreographer==1.2.1
+2026-10-19T16:26:18.9431453Z  + click==8.3.1
+2026-10-19T16:26:18.9431651Z  + cloudpickle==3.1.2
+2026-10-19T16:26:18.9431852Z  + colorlog==6.10.1
+2026-10-19T16:26:18.9432048Z  + comm==0.2.3
+2026-10-19T16:26:18.9432236Z  + configargparse==1.7.1
+2026-10-19T16:26:18.9432446Z  + contourpy==1.3.3
+2026-10-19T16:26:18.9432641Z  + coverage==7.13.1
+2026-10-19T16:26:18.9432838Z  + cycler==0.12.1
+2026-10-19T16:26:18.9433028Z  + debugpy==1.8.19
+2026-10-19T16:26:18.9433216Z  + decorator==5.2.1
+2026-10-19T16:26:18.9433412Z  + defusedxml==0.7.1
+2026-10-19T16:26:18.9433597Z  + dill==0.4.0
+2026-10-19T16:26:18.9433772Z  + diskcache==5.6.3
+2026-10-19T16:26:18.9434094Z  + distro==1.9.0
+2026-10-19T16:26:18.9434431Z  + dm-tree==0.1.8
+2026-10-19T16:26:18.9434586Z  + dspy==3.0.4
+2026-10-19T16:26:18.9434726Z  + e3nn==0.4.4
+2026-10-19T16:26:18.9434872Z  + emmet-core==0.86.2
+2026-10-19T16:26:18.9435018Z  + executing==2.2.1
+2026-10-19T16:26:18.9435173Z  + fastjsonschema==2.21.2
+2026-10-19T16:26:18.9435333Z  + fastuuid==0.14.0
+2026-10-19T16:26:18.9435475Z  + filelock==3.20.1
+2026-10-19T16:26:18.9435615Z  + fire==0.7.1
+2026-10-19T16:26:18.9435826Z  + fonttools==4.61.1
+2026-10-19T16:26:18.9435990Z  + fqdn==1.5.1
+2026-10-19T16:26:18.9436136Z  + frozenlist==1.8.0
+2026-10-19T16:26:18.9436337Z  + fsspec==2025.12.0
+2026-10-19T16:26:18.9436488Z  + gemmi==0.7.4
+2026-10-19T16:26:18.9436675Z  + gepa==0.0.17
+2026-10-19T16:26:18.9436825Z  + gitdb==4.0.12
+2026-10-19T16:26:18.9437084Z  + gitpython==3.1.45
+2026-10-19T16:26:18.9437281Z  + google-api-core==2.28.1
+2026-10-19T16:26:18.9437451Z  + google-auth==2.45.0
+2026-10-19T16:26:18.9437629Z  + google-cloud-core==2.5.0
+2026-10-19T16:26:18.9437813Z  + google-cloud-storage==3.7.0
+2026-10-19T16:26:18.9437992Z  + google-crc32c==1.8.0
+2026-10-19T16:26:18.9438165Z  + google-resumable-media==2.8.0
+2026-10-19T16:26:18.9438377Z  + googleapis-common-protos==1.72.0
+2026-10-19T16:26:18.9438570Z  + greenlet==3.3.0
+2026-10-19T16:26:18.9438885Z  + grpcio==1.67.1
+2026-10-19T16:26:18.9439045Z  + grpclib==0.4.9
+2026-10-19T16:26:18.9439198Z  + h11==0.16.0
+2026-10-19T16:26:18.9439360Z  + h2==4.3.0
+2026-10-19T16:26:18.9439508Z  + h5py==3.15.1
+2026-10-19T16:26:18.9439660Z  + hf-xet==1.2.0
+2026-10-19T16:26:18.9439818Z  + hpack==4.1.0
+2026-10-19T16:26:18.9439969Z  + httpcore==1.0.9
+2026-10-19T16:26:18.9440116Z  + httpx==0.28.1
+2026-10-19T16:26:18.9440272Z  + huggingface-hub==1.2.3
+2026-10-19T16:26:18.9440438Z  + hydra-core==1.3.2
+2026-10-19T16:26:18.9440756Z  + hyperframe==6.1.0
+2026-10-19T16:26:18.9440908Z  + idna==3.11
+2026-10-19T16:26:18.9441067Z  + importlib-metadata==8.7.1
+2026-10-19T16:26:18.9441239Z  + iniconfig==2.3.0
+2026-10-19T16:26:18.9441392Z  + ipykernel==7.1.0
+2026-10-19T16:26:18.9441549Z  + ipython==9.8.0
+2026-10-19T16:26:18.9441713Z  + ipython-pygments-lexers==1.1.1
+2026-10-19T16:26:18.9441895Z  + ipywidgets==8.1.8
+2026-10-19T16:26:18.9442048Z  + isoduration==20.11.0
+2026-10-19T16:26:18.9442209Z  + isort==7.0.0
+2026-10-19T16:26:18.9442347Z  + jedi==0.19.2
+2026-10-19T16:26:18.9442482Z  + jinja2==3.1.6
+2026-10-19T16:26:18.9442618Z  + jiter==0.12.0
+2026-10-19T16:26:18.9442758Z  + jmespath==1.0.1
+2026-10-19T16:26:18.9442901Z  + joblib==1.5.3
+2026-10-19T16:26:18.9443039Z  + json-repair==0.54.3
+2026-10-19T16:26:18.9443182Z  + json5==0.12.1
+2026-10-19T16:26:18.9443318Z  + jsonpointer==3.0.0
+2026-10-19T16:26:18.9443483Z  + jsonschema==4.25.1
+2026-10-19T16:26:18.9443730Z  + jsonschema-specifications==2025.9.1
+2026-10-19T16:26:18.9443918Z  + jupyter==1.1.1
+2026-10-19T16:26:18.9444069Z  + jupyter-client==8.7.0
+2026-10-19T16:26:18.9444246Z  + jupyter-console==6.6.3
+2026-10-19T16:26:18.9444415Z  + jupyter-core==5.9.1
+2026-10-19T16:26:18.9444573Z  + jupyter-events==0.12.0
+2026-10-19T16:26:18.9444736Z  + jupyter-lsp==2.3.0
+2026-10-19T16:26:18.9444893Z  + jupyter-server==2.17.0
+2026-10-19T16:26:18.9445063Z  + jupyter-server-terminals==0.5.3
+2026-10-19T16:26:18.9445231Z  + jupyterlab==4.5.1
+2026-10-19T16:26:18.9445393Z  + jupyterlab-pygments==0.3.0
+2026-10-19T16:26:18.9445574Z  + jupyterlab-server==2.28.0
+2026-10-19T16:26:18.9445761Z  + jupyterlab-widgets==3.0.16
+2026-10-19T16:26:18.9445927Z  + kaleido==1.2.0
+2026-10-19T16:26:18.9446075Z  + kiwisolver==1.4.9
+2026-10-19T16:26:18.9446218Z  + lark==1.3.1
+2026-10-19T16:26:18.9446371Z  + latexcodec==3.0.1
+2026-10-19T16:26:18.9446531Z  + lightning-utilities==0.15.2
+2026-10-19T16:26:18.9446702Z  + litellm==1.80.11
+2026-10-19T16:26:18.9446850Z  + llvmlite==0.46.0
+2026-10-19T16:26:18.9446981Z  + lmdb==1.7.5
+2026-10-19T16:26:18.9447126Z  + logistro==2.0.1
+2026-10-19T16:26:18.9447272Z  + mace-torch==0.3.14
+2026-10-19T16:26:18.9447743Z  + made==0.1.0 (from file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE)
+2026-10-19T16:26:18.9448227Z  + magicattr==0.1.6
+2026-10-19T16:26:18.9448377Z  + mako==1.3.10
+2026-10-19T16:26:18.9448520Z  + markdown-it-py==4.0.0
+2026-10-19T16:26:18.9448818Z  + markupsafe==3.0.3
+2026-10-19T16:26:18.9448979Z  + matplotlib==3.10.8
+2026-10-19T16:26:18.9449150Z  + matplotlib-inline==0.2.1
+2026-10-19T16:26:18.9449318Z  + matscipy==1.2.0
+2026-10-19T16:26:18.9449467Z  + mdurl==0.1.2
+2026-10-19T16:26:18.9449612Z  + mistune==3.2.0
+2026-10-19T16:26:18.9449769Z  + modal==1.3.0.post1
+2026-10-19T16:26:18.9449915Z  + monty==2025.3.3
+2026-10-19T16:26:18.9450059Z  + mp-api==0.45.15
+2026-10-19T16:26:18.9450203Z  + mpmath==1.3.0
+2026-10-19T16:26:18.9450348Z  + msgpack==1.1.2
+2026-10-19T16:26:18.9450501Z  + multidict==6.7.0
+2026-10-19T16:26:18.9450654Z  + multiprocess==0.70.18
+2026-10-19T16:26:18.9450819Z  + mypy-extensions==1.1.0
+2026-10-19T16:26:18.9450976Z  + narwhals==2.14.0
+2026-10-19T16:26:18.9451129Z  + nbclient==0.10.4
+2026-10-19T16:26:18.9451274Z  + nbconvert==7.16.6
+2026-10-19T16:26:18.9451423Z  + nbformat==5.10.4
+2026-10-19T16:26:18.9451571Z  + nest-asyncio==1.6.0
+2026-10-19T16:26:18.9451723Z  + networkx==3.6.1
+2026-10-19T16:26:18.9451874Z  + notebook==7.5.1
+2026-10-19T16:26:18.9452022Z  + notebook-shim==0.2.4
+2026-10-19T16:26:18.9452206Z  + numba==0.63.1
+2026-10-19T16:26:18.9452351Z  + numpy==2.3.5
+2026-10-19T16:26:18.9452515Z  + nvidia-cublas-cu12==12.8.4.1
+2026-10-19T16:26:18.9452701Z  + nvidia-cuda-cupti-cu12==12.8.90
+2026-10-19T16:26:18.9452899Z  + nvidia-cuda-nvrtc-cu12==12.8.93
+2026-10-19T16:26:18.9453094Z  + nvidia-cuda-runtime-cu12==12.8.90
+2026-10-19T16:26:18.9453294Z  + nvidia-cudnn-cu12==9.10.2.21
+2026-10-19T16:26:18.9453475Z  + nvidia-cufft-cu12==11.3.3.83
+2026-10-19T16:26:18.9453647Z  + nvidia-cufile-cu12==1.13.1.3
+2026-10-19T16:26:18.9453911Z  + nvidia-curand-cu12==10.3.9.90
+2026-10-19T16:26:18.9454113Z  + nvidia-cusolver-cu12==11.7.3.90
+2026-10-19T16:26:18.9454302Z  + nvidia-cusparse-cu12==12.5.8.93
+2026-10-19T16:26:18.9454494Z  + nvidia-cusparselt-cu12==0.7.1
+2026-10-19T16:26:18.9454676Z  + nvidia-nccl-cu12==2.27.5
+2026-10-19T16:26:18.9454856Z  + nvidia-nvjitlink-cu12==12.8.93
+2026-10-19T16:26:18.9455050Z  + nvidia-nvshmem-cu12==3.3.20
+2026-10-19T16:26:18.9455233Z  + nvidia-nvtx-cu12==12.8.90
+2026-10-19T16:26:18.9455400Z  + omegaconf==2.3.0
+2026-10-19T16:26:18.9455544Z  + openai==2.14.0
+2026-10-19T16:26:18.9455698Z  + opt-einsum==3.4.0
+2026-10-19T16:26:18.9455850Z  + opt-einsum-fx==0.1.4
+2026-10-19T16:26:18.9456005Z  + optuna==4.6.0
+2026-10-19T16:26:18.9456149Z  + orb-models==0.5.5
+2026-10-19T16:26:18.9456305Z  + orjson==3.11.5
+2026-10-19T16:26:18.9456449Z  + packaging==25.0
+2026-10-19T16:26:18.9456603Z  + palettable==3.3.3
+2026-10-19T16:26:18.9456835Z  + pandarallel==1.6.5
+2026-10-19T16:26:18.9456991Z  + pandas==2.3.3
+2026-10-19T16:26:18.9457154Z  + pandocfilters==1.5.1
+2026-10-19T16:26:18.9457310Z  + parso==0.8.5
+2026-10-19T16:26:18.9457455Z  + pathos==0.3.4
+2026-10-19T16:26:18.9457600Z  + pathspec==0.12.1
+2026-10-19T16:26:18.9457757Z  + pexpect==4.9.0
+2026-10-19T16:26:18.9457900Z  + pillow==12.0.0
+2026-10-19T16:26:18.9458050Z  + platformdirs==4.5.1
+2026-10-19T16:26:18.9458203Z  + plotly==6.5.0
+2026-10-19T16:26:18.9458344Z  + pluggy==1.6.0
+2026-10-19T16:26:18.9458495Z  + pox==0.3.6
+2026-10-19T16:26:18.9462032Z  + ppft==1.7.7
+2026-10-19T16:26:18.9462244Z  + prettytable==3.17.0
+2026-10-19T16:26:18.9462463Z  + prometheus-client==0.23.1
+2026-10-19T16:26:18.9462652Z  + prompt-toolkit==3.0.52
+2026-10-19T16:26:18.9462820Z  + propcache==0.4.1
+2026-10-19T16:26:18.9462984Z  + proto-plus==1.27.0
+2026-10-19T16:26:18.9463139Z  + protobuf==6.33.2
+2026-10-19T16:26:18.9463291Z  + psutil==7.2.1
+2026-10-19T16:26:18.9463436Z  + ptyprocess==0.7.0
+2026-10-19T16:26:18.9463608Z  + pure-eval==0.2.3
+2026-10-19T16:26:18.9463752Z  + pyasn1==0.6.1
+2026-10-19T16:26:18.9463911Z  + pyasn1-modules==0.4.2
+2026-10-19T16:26:18.9464071Z  + pybtex==0.25.1
+2026-10-19T16:26:18.9464216Z  + pycparser==2.23
+2026-10-19T16:26:18.9464373Z  + pydantic==2.12.5
+2026-10-19T16:26:18.9464523Z  + pydantic-core==2.41.5
+2026-10-19T16:26:18.9464691Z  + pydantic-settings==2.12.0
+2026-10-19T16:26:18.9464858Z  + pygments==2.19.2
+2026-10-19T16:26:18.9465008Z  + pymatgen==2025.10.7
+2026-10-19T16:26:18.9465173Z  + pymatgen-io-validation==0.1.2
+2026-10-19T16:26:18.9465350Z  + pyparsing==3.3.1
+2026-10-19T16:26:18.9465489Z  + pytest==9.0.2
+2026-10-19T16:26:18.9465633Z  + pytest-asyncio==1.3.0
+2026-10-19T16:26:18.9465801Z  + pytest-cov==7.0.0
+2026-10-19T16:26:18.9465954Z  + pytest-timeout==2.4.0
+2026-10-19T16:26:18.9466123Z  + python-dateutil==2.9.0.post0
+2026-10-19T16:26:18.9466300Z  + python-dotenv==1.2.1
+2026-10-19T16:26:18.9466471Z  + python-hostlist==2.3.0
+2026-10-19T16:26:18.9466649Z  + python-json-logger==4.0.0
+2026-10-19T16:26:18.9466819Z  + pytokens==0.3.0
+2026-10-19T16:26:18.9466978Z  + pytorch-lightning==2.6.0
+2026-10-19T16:26:18.9467149Z  + pytz==2025.2
+2026-10-19T16:26:18.9467290Z  + pyyaml==6.0.3
+2026-10-19T16:26:18.9467434Z  + pyzmq==27.1.0
+2026-10-19T16:26:18.9467585Z  + referencing==0.37.0
+2026-10-19T16:26:18.9467742Z  + regex==2025.11.3
+2026-10-19T16:26:18.9467895Z  + requests==2.32.5
+2026-10-19T16:26:18.9468045Z  + rfc3339-validator==0.1.4
+2026-10-19T16:26:18.9468213Z  + rfc3986-validator==0.1.1
+2026-10-19T16:26:18.9468426Z  + rfc3987-syntax==1.1.0
+2026-10-19T16:26:18.9468600Z  + rich==13.9.4
+2026-10-19T16:26:18.9468964Z  + rpds-py==0.30.0
+2026-10-19T16:26:18.9469125Z  + rsa==4.9.1
+2026-10-19T16:26:18.9469277Z  + ruamel-yaml==0.18.17
+2026-10-19T16:26:18.9469450Z  + ruamel-yaml-clib==0.2.15
+2026-10-19T16:26:18.9469614Z  + ruff==0.14.10
+2026-10-19T16:26:18.9469759Z  + s3transfer==0.16.0
+2026-10-19T16:26:18.9469912Z  + scikit-learn==1.8.0
+2026-10-19T16:26:18.9470064Z  + scipy==1.16.3
+2026-10-19T16:26:18.9470224Z  + seaborn==0.13.2
+2026-10-19T16:26:18.9470519Z  + send2trash==1.8.3
+2026-10-19T16:26:18.9470674Z  + sentry-sdk==2.48.0
+2026-10-19T16:26:18.9470829Z  + setuptools==80.9.0
+2026-10-19T16:26:18.9470992Z  + shellingham==1.5.4
+2026-10-19T16:26:18.9471143Z  + simplejson==3.20.2
+2026-10-19T16:26:18.9471292Z  + six==1.17.0
+2026-10-19T16:26:18.9471432Z  + smact==3.2.0
+2026-10-19T16:26:18.9471576Z  + smart-open==7.5.0
+2026-10-19T16:26:18.9471726Z  + smmap==5.0.2
+2026-10-19T16:26:18.9471866Z  + sniffio==1.3.1
+2026-10-19T16:26:18.9472009Z  + soupsieve==2.8.1
+2026-10-19T16:26:18.9472151Z  + spglib==2.7.0
+2026-10-19T16:26:18.9472300Z  + sqlalchemy==2.0.45
+2026-10-19T16:26:18.9472448Z  + stack-data==0.6.3
+2026-10-19T16:26:18.9472594Z  + sympy==1.14.0
+2026-10-19T16:26:18.9472739Z  + synchronicity==0.11.1
+2026-10-19T16:26:18.9472899Z  + tabulate==0.9.0
+2026-10-19T16:26:18.9473043Z  + tenacity==9.1.2
+2026-10-19T16:26:18.9473185Z  + termcolor==3.3.0
+2026-10-19T16:26:18.9473330Z  + terminado==0.18.1
+2026-10-19T16:26:18.9473548Z  + threadpoolctl==3.6.0
+2026-10-19T16:26:18.9473716Z  + tiktoken==0.12.0
+2026-10-19T16:26:18.9473858Z  + tinycss2==1.4.0
+2026-10-19T16:26:18.9474004Z  + tokenizers==0.22.1
+2026-10-19T16:26:18.9474152Z  + toml==0.10.2
+2026-10-19T16:26:18.9474304Z  + torch==2.9.1
+2026-10-19T16:26:18.9474445Z  + torch-ema==0.3
+2026-10-19T16:26:18.9474596Z  + torch-geometric==2.7.0
+2026-10-19T16:26:18.9474757Z  + torchmetrics==1.8.2
+2026-10-19T16:26:18.9474907Z  + tornado==6.5.4
+2026-10-19T16:26:18.9475060Z  + tqdm==4.67.1
+2026-10-19T16:26:18.9475209Z  + traitlets==5.14.3
+2026-10-19T16:26:18.9475358Z  + triton==3.5.1
+2026-10-19T16:26:18.9475493Z  + typer==0.21.0
+2026-10-19T16:26:18.9475748Z  + typer-slim==0.21.0
+2026-10-19T16:26:18.9476090Z  + types-certifi==2021.10.8.3
+2026-10-19T16:26:18.9476290Z  + types-toml==0.10.8.20240310
+2026-10-19T16:26:18.9476473Z  + typing-extensions==4.15.0
+2026-10-19T16:26:18.9476663Z  + typing-inspection==0.4.2
+2026-10-19T16:26:18.9476828Z  + tzdata==2025.3
+2026-10-19T16:26:18.9476980Z  + uncertainties==3.2.3
+2026-10-19T16:26:18.9477136Z  + uri-template==1.3.0
+2026-10-19T16:26:18.9477285Z  + urllib3==2.6.2
+2026-10-19T16:26:18.9477434Z  + wandb==0.23.1
+2026-10-19T16:26:18.9477575Z  + watchfiles==1.1.1
+2026-10-19T16:26:18.9477719Z  + wcwidth==0.2.14
+2026-10-19T16:26:18.9477861Z  + webcolors==25.10.0
+2026-10-19T16:26:18.9478020Z  + webencodings==0.5.1
+2026-10-19T16:26:18.9478182Z  + websocket-client==1.9.0
+2026-10-19T16:26:18.9478353Z  + widgetsnbextension==4.0.15
+2026-10-19T16:26:18.9478519Z  + wrapt==2.0.1
+2026-10-19T16:26:18.9478865Z  + xxhash==3.6.0
+2026-10-19T16:26:18.9479032Z  + yarl==1.22.0
+2026-10-19T16:26:18.9479174Z  + zipp==3.23.0
+2026-10-19T16:26:19.0570332Z ##[group]Run uv run pytest -q ../../M2/tests/test_generation_cache.py -o addopts=''
+2026-10-19T16:26:19.0571029Z [36;1muv run pytest -q ../../M2/tests/test_generation_cache.py -o addopts=''[0m
+2026-10-19T16:26:19.0605189Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:26:19.0605383Z env:
+2026-10-19T16:26:19.0605559Z   OMP_NUM_THREADS: 2
+2026-10-19T16:26:19.0605721Z   MKL_NUM_THREADS: 2
+2026-10-19T16:26:19.0605923Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:26:19.0606217Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:26:19.0606505Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:26:19.0606778Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:26:19.0607037Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:26:19.0607305Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:26:19.0607605Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:26:19.0607818Z ##[endgroup]
+2026-10-19T16:26:26.4656360Z ....                                                                     [100%]
+2026-10-19T16:26:26.4656647Z 4 passed in 4.59s
+2026-10-19T16:26:26.7733691Z ##[group]Run uv run python ../../M2/verify_batch_recovery.py --mode continuous --output ../../M2/results/real-batch-recovery
+2026-10-19T16:26:26.7734716Z [36;1muv run python ../../M2/verify_batch_recovery.py --mode continuous --output ../../M2/results/real-batch-recovery[0m
+2026-10-19T16:26:26.7770208Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:26:26.7770422Z env:
+2026-10-19T16:26:26.7770577Z   OMP_NUM_THREADS: 2
+2026-10-19T16:26:26.7770744Z   MKL_NUM_THREADS: 2
+2026-10-19T16:26:26.7770953Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:26:26.7771256Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:26:26.7771551Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:26:26.7771824Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:26:26.7772094Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:26:26.7772422Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:26:26.7772677Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:26:26.7773034Z ##[endgroup]
+2026-10-19T16:26:36.6979361Z UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:26:45.1022771Z cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-19T16:26:45.1023511Z Checkpoints not found. Downloading...
+2026-10-19T16:26:45.1023979Z 
+2026-10-19T16:26:45.2970881Z Downloading checkpoints.tar.gz:   0%|          | 0.00/523M [00:00<?, ?B/s]
+2026-10-19T16:26:45.4923792Z Downloading checkpoints.tar.gz:   0%|          | 56.0k/523M [00:00<31:01, 295kB/s]
+2026-10-19T16:26:45.6882981Z Downloading checkpoints.tar.gz:   0%|          | 192k/523M [00:00<16:54, 541kB/s] 
+2026-10-19T16:26:45.8832496Z Downloading checkpoints.tar.gz:   0%|          | 448k/523M [00:00<10:05, 906kB/s]
+2026-10-19T16:26:45.9832029Z Downloading checkpoints.tar.gz:   0%|          | 872k/523M [00:00<06:24, 1.43MB/s]
+2026-10-19T16:26:46.1769103Z Downloading checkpoints.tar.gz:   0%|          | 1.52M/523M [00:00<03:25, 2.67MB/s]
+2026-10-19T16:26:46.2770041Z Downloading checkpoints.tar.gz:   0%|          | 2.16M/523M [00:01<03:02, 2.99MB/s]
+2026-10-19T16:26:46.3770380Z Downloading checkpoints.tar.gz:   1%|          | 3.67M/523M [00:01<01:33, 5.81MB/s]
+2026-10-19T16:26:46.5700883Z Downloading checkpoints.tar.gz:   1%|          | 5.38M/523M [00:01<01:02, 8.71MB/s]
+2026-10-19T16:26:46.6701799Z Downloading checkpoints.tar.gz:   1%|▏         | 7.38M/523M [00:01<00:56, 9.55MB/s]
+2026-10-19T16:26:46.7714248Z Downloading checkpoints.tar.gz:   2%|▏         | 11.2M/523M [00:01<00:32, 16.4MB/s]
+2026-10-19T16:26:46.8729475Z Downloading checkpoints.tar.gz:   3%|▎         | 14.6M/523M [00:01<00:25, 21.1MB/s]
+2026-10-19T16:26:46.9751652Z Downloading checkpoints.tar.gz:   3%|▎         | 17.9M/523M [00:01<00:21, 24.5MB/s]
+2026-10-19T16:26:47.0772590Z Downloading checkpoints.tar.gz:   4%|▍         | 21.6M/523M [00:01<00:18, 28.4MB/s]
+2026-10-19T16:26:47.1774440Z Downloading checkpoints.tar.gz:   5%|▍         | 25.5M/523M [00:01<00:16, 31.5MB/s]
+2026-10-19T16:26:47.2788154Z Downloading checkpoints.tar.gz:   6%|▌         | 29.2M/523M [00:02<00:15, 33.7MB/s]
+2026-10-19T16:26:47.3807023Z Downloading checkpoints.tar.gz:   6%|▋         | 33.0M/523M [00:02<00:14, 35.3MB/s]
+2026-10-19T16:26:47.4816041Z Downloading checkpoints.tar.gz:   7%|▋         | 36.9M/523M [00:02<00:13, 36.5MB/s]
+2026-10-19T16:26:47.5829070Z Downloading checkpoints.tar.gz:   8%|▊         | 40.7M/523M [00:02<00:13, 37.4MB/s]
+2026-10-19T16:26:47.6849521Z Downloading checkpoints.tar.gz:   9%|▊         | 44.5M/523M [00:02<00:13, 38.1MB/s]
+2026-10-19T16:26:47.7848206Z Downloading checkpoints.tar.gz:   9%|▉         | 48.2M/523M [00:02<00:13, 38.0MB/s]
+2026-10-19T16:26:47.8869671Z Downloading checkpoints.tar.gz:  10%|▉         | 51.9M/523M [00:02<00:12, 38.3MB/s]
+2026-10-19T16:26:47.9887705Z Downloading checkpoints.tar.gz:  11%|█         | 55.6M/523M [00:02<00:12, 38.1MB/s]
+2026-10-19T16:26:48.0914035Z Downloading checkpoints.tar.gz:  11%|█▏        | 59.2M/523M [00:02<00:12, 37.9MB/s]
+2026-10-19T16:26:48.1932029Z Downloading checkpoints.tar.gz:  12%|█▏        | 62.8M/523M [00:02<00:12, 37.7MB/s]
+2026-10-19T16:26:48.2937533Z Downloading checkpoints.tar.gz:  13%|█▎        | 66.6M/523M [00:03<00:12, 38.2MB/s]
+2026-10-19T16:26:48.3992380Z Downloading checkpoints.tar.gz:  13%|█▎        | 70.6M/523M [00:03<00:12, 39.2MB/s]
+2026-10-19T16:26:48.5034439Z Downloading checkpoints.tar.gz:  14%|█▍        | 74.4M/523M [00:03<00:12, 38.6MB/s]
+2026-10-19T16:26:48.6077674Z Downloading checkpoints.tar.gz:  15%|█▍        | 78.1M/523M [00:03<00:12, 38.1MB/s]
+2026-10-19T16:26:48.7097299Z Downloading checkpoints.tar.gz:  16%|█▌        | 82.0M/523M [00:03<00:11, 38.6MB/s]
+2026-10-19T16:26:48.8132440Z Downloading checkpoints.tar.gz:  16%|█▋        | 85.8M/523M [00:03<00:11, 38.6MB/s]
+2026-10-19T16:26:48.9141156Z Downloading checkpoints.tar.gz:  17%|█▋        | 89.6M/523M [00:03<00:11, 38.7MB/s]
+2026-10-19T16:26:49.0177522Z Downloading checkpoints.tar.gz:  18%|█▊        | 93.4M/523M [00:03<00:11, 39.0MB/s]
+2026-10-19T16:26:49.1250857Z Downloading checkpoints.tar.gz:  19%|█▊        | 97.3M/523M [00:03<00:11, 38.9MB/s]
+2026-10-19T16:26:49.2249816Z Downloading checkpoints.tar.gz:  19%|█▉        | 101M/523M [00:04<00:11, 38.4MB/s] 
+2026-10-19T16:26:49.3279379Z Downloading checkpoints.tar.gz:  20%|██        | 105M/523M [00:04<00:11, 39.5MB/s]
+2026-10-19T16:26:49.4305608Z Downloading checkpoints.tar.gz:  21%|██        | 109M/523M [00:04<00:11, 39.2MB/s]
+2026-10-19T16:26:49.5324102Z Downloading checkpoints.tar.gz:  22%|██▏       | 113M/523M [00:04<00:11, 39.0MB/s]
+2026-10-19T16:26:49.6341467Z Downloading checkpoints.tar.gz:  22%|██▏       | 116M/523M [00:04<00:11, 38.8MB/s]
+2026-10-19T16:26:49.7354048Z Downloading checkpoints.tar.gz:  23%|██▎       | 120M/523M [00:04<00:10, 39.1MB/s]
+2026-10-19T16:26:49.8379411Z Downloading checkpoints.tar.gz:  24%|██▎       | 124M/523M [00:04<00:10, 39.0MB/s]
+2026-10-19T16:26:49.9393601Z Downloading checkpoints.tar.gz:  24%|██▍       | 128M/523M [00:04<00:10, 39.0MB/s]
+2026-10-19T16:26:50.0410026Z Downloading checkpoints.tar.gz:  25%|██▌       | 132M/523M [00:04<00:10, 39.2MB/s]
+2026-10-19T16:26:50.1419948Z Downloading checkpoints.tar.gz:  26%|██▌       | 135M/523M [00:04<00:10, 39.3MB/s]
+2026-10-19T16:26:50.2449450Z Downloading checkpoints.tar.gz:  27%|██▋       | 139M/523M [00:05<00:10, 39.4MB/s]
+2026-10-19T16:26:50.3466121Z Downloading checkpoints.tar.gz:  27%|██▋       | 143M/523M [00:05<00:10, 39.4MB/s]
+2026-10-19T16:26:50.4502738Z Downloading checkpoints.tar.gz:  28%|██▊       | 147M/523M [00:05<00:09, 39.5MB/s]
+2026-10-19T16:26:50.5518147Z Downloading checkpoints.tar.gz:  29%|██▉       | 151M/523M [00:05<00:09, 39.3MB/s]
+2026-10-19T16:26:50.6525111Z Downloading checkpoints.tar.gz:  30%|██▉       | 155M/523M [00:05<00:09, 39.4MB/s]
+2026-10-19T16:26:50.7536796Z Downloading checkpoints.tar.gz:  30%|███       | 158M/523M [00:05<00:09, 39.5MB/s]
+2026-10-19T16:26:50.8556622Z Downloading checkpoints.tar.gz:  31%|███       | 162M/523M [00:05<00:09, 39.5MB/s]
+2026-10-19T16:26:50.9567066Z Downloading checkpoints.tar.gz:  32%|███▏      | 167M/523M [00:05<00:09, 40.8MB/s]
+2026-10-19T16:26:51.0728978Z Downloading checkpoints.tar.gz:  33%|███▎      | 170M/523M [00:05<00:09, 40.7MB/s]
+2026-10-19T16:26:51.1732658Z Downloading checkpoints.tar.gz:  33%|███▎      | 174M/523M [00:05<00:09, 38.9MB/s]
+2026-10-19T16:26:51.2733185Z Downloading checkpoints.tar.gz:  34%|███▍      | 178M/523M [00:06<00:09, 38.9MB/s]
+2026-10-19T16:26:51.3752067Z Downloading checkpoints.tar.gz:  35%|███▍      | 182M/523M [00:06<00:09, 38.9MB/s]
+2026-10-19T16:26:51.4765781Z Downloading checkpoints.tar.gz:  35%|███▌      | 186M/523M [00:06<00:09, 38.8MB/s]
+2026-10-19T16:26:51.5766260Z Downloading checkpoints.tar.gz:  36%|███▌      | 189M/523M [00:06<00:09, 38.6MB/s]
+2026-10-19T16:26:51.6779835Z Downloading checkpoints.tar.gz:  37%|███▋      | 193M/523M [00:06<00:08, 38.7MB/s]
+2026-10-19T16:26:51.7790487Z Downloading checkpoints.tar.gz:  38%|███▊      | 197M/523M [00:06<00:08, 38.6MB/s]
+2026-10-19T16:26:51.8804114Z Downloading checkpoints.tar.gz:  38%|███▊      | 200M/523M [00:06<00:08, 38.8MB/s]
+2026-10-19T16:26:51.9824297Z Downloading checkpoints.tar.gz:  39%|███▉      | 204M/523M [00:06<00:08, 39.1MB/s]
+2026-10-19T16:26:52.0841655Z Downloading checkpoints.tar.gz:  40%|███▉      | 208M/523M [00:06<00:08, 39.2MB/s]
+2026-10-19T16:26:52.1856161Z Downloading checkpoints.tar.gz:  40%|████      | 212M/523M [00:06<00:08, 39.3MB/s]
+2026-10-19T16:26:52.2865843Z Downloading checkpoints.tar.gz:  41%|████      | 216M/523M [00:07<00:08, 39.4MB/s]
+2026-10-19T16:26:52.3874196Z Downloading checkpoints.tar.gz:  42%|████▏     | 220M/523M [00:07<00:08, 39.6MB/s]
+2026-10-19T16:26:52.4891301Z Downloading checkpoints.tar.gz:  43%|████▎     | 224M/523M [00:07<00:07, 39.7MB/s]
+2026-10-19T16:26:52.5912513Z Downloading checkpoints.tar.gz:  43%|████▎     | 227M/523M [00:07<00:07, 39.7MB/s]
+2026-10-19T16:26:52.6917033Z Downloading checkpoints.tar.gz:  44%|████▍     | 231M/523M [00:07<00:07, 39.6MB/s]
+2026-10-19T16:26:52.7917205Z Downloading checkpoints.tar.gz:  45%|████▍     | 235M/523M [00:07<00:07, 39.8MB/s]
+2026-10-19T16:26:52.8923070Z Downloading checkpoints.tar.gz:  46%|████▌     | 239M/523M [00:07<00:07, 40.0MB/s]
+2026-10-19T16:26:53.0864683Z Downloading checkpoints.tar.gz:  46%|████▋     | 243M/523M [00:07<00:07, 39.9MB/s]
+2026-10-19T16:26:53.2210078Z Downloading checkpoints.tar.gz:  47%|████▋     | 247M/523M [00:07<00:09, 31.2MB/s]
+2026-10-19T16:26:53.3247236Z Downloading checkpoints.tar.gz:  48%|████▊     | 252M/523M [00:08<00:08, 34.5MB/s]
+2026-10-19T16:26:53.4269686Z Downloading checkpoints.tar.gz:  49%|████▉     | 256M/523M [00:08<00:07, 35.5MB/s]
+2026-10-19T16:26:53.5274172Z Downloading checkpoints.tar.gz:  50%|████▉     | 260M/523M [00:08<00:07, 36.4MB/s]
+2026-10-19T16:26:53.6287803Z Downloading checkpoints.tar.gz:  50%|█████     | 263M/523M [00:08<00:07, 37.3MB/s]
+2026-10-19T16:26:53.7290289Z Downloading checkpoints.tar.gz:  51%|█████     | 267M/523M [00:08<00:07, 37.8MB/s]
+2026-10-19T16:26:53.8297082Z Downloading checkpoints.tar.gz:  52%|█████▏    | 271M/523M [00:08<00:06, 38.3MB/s]
+2026-10-19T16:26:53.9303774Z Downloading checkpoints.tar.gz:  52%|█████▏    | 275M/523M [00:08<00:06, 38.8MB/s]
+2026-10-19T16:26:54.0327108Z Downloading checkpoints.tar.gz:  53%|█████▎    | 278M/523M [00:08<00:06, 38.9MB/s]
+2026-10-19T16:26:54.1333913Z Downloading checkpoints.tar.gz:  54%|█████▍    | 282M/523M [00:08<00:06, 39.0MB/s]
+2026-10-19T16:26:54.2350823Z Downloading checkpoints.tar.gz:  55%|█████▍    | 286M/523M [00:09<00:06, 39.2MB/s]
+2026-10-19T16:26:54.3376257Z Downloading checkpoints.tar.gz:  55%|█████▌    | 290M/523M [00:09<00:06, 39.4MB/s]
+2026-10-19T16:26:54.4387622Z Downloading checkpoints.tar.gz:  56%|█████▌    | 294M/523M [00:09<00:06, 39.4MB/s]
+2026-10-19T16:26:54.5429349Z Downloading checkpoints.tar.gz:  57%|█████▋    | 298M/523M [00:09<00:05, 39.6MB/s]
+2026-10-19T16:26:54.6464791Z Downloading checkpoints.tar.gz:  58%|█████▊    | 301M/523M [00:09<00:05, 39.1MB/s]
+2026-10-19T16:26:54.7479556Z Downloading checkpoints.tar.gz:  58%|█████▊    | 305M/523M [00:09<00:05, 38.8MB/s]
+2026-10-19T16:26:54.8490749Z Downloading checkpoints.tar.gz:  59%|█████▉    | 309M/523M [00:09<00:05, 38.6MB/s]
+2026-10-19T16:26:54.9493881Z Downloading checkpoints.tar.gz:  60%|█████▉    | 313M/523M [00:09<00:05, 38.5MB/s]
+2026-10-19T16:26:55.0505006Z Downloading checkpoints.tar.gz:  60%|██████    | 316M/523M [00:09<00:05, 38.5MB/s]
+2026-10-19T16:26:55.1521501Z Downloading checkpoints.tar.gz:  61%|██████    | 320M/523M [00:09<00:05, 38.4MB/s]
+2026-10-19T16:26:55.2536928Z Downloading checkpoints.tar.gz:  62%|██████▏   | 324M/523M [00:10<00:05, 38.2MB/s]
+2026-10-19T16:26:55.3545992Z Downloading checkpoints.tar.gz:  63%|██████▎   | 327M/523M [00:10<00:05, 38.0MB/s]
+2026-10-19T16:26:55.4561149Z Downloading checkpoints.tar.gz:  63%|██████▎   | 331M/523M [00:10<00:05, 38.0MB/s]
+2026-10-19T16:26:55.5583728Z Downloading checkpoints.tar.gz:  64%|██████▍   | 335M/523M [00:10<00:05, 37.8MB/s]
+2026-10-19T16:26:55.6604868Z Downloading checkpoints.tar.gz:  65%|██████▍   | 338M/523M [00:10<00:05, 37.6MB/s]
+2026-10-19T16:26:55.7611947Z Downloading checkpoints.tar.gz:  65%|██████▌   | 342M/523M [00:10<00:05, 37.3MB/s]
+2026-10-19T16:26:55.8615114Z Downloading checkpoints.tar.gz:  66%|██████▌   | 345M/523M [00:10<00:05, 37.3MB/s]
+2026-10-19T16:26:55.9625693Z Downloading checkpoints.tar.gz:  67%|██████▋   | 349M/523M [00:10<00:04, 37.5MB/s]
+2026-10-19T16:26:56.0640764Z Downloading checkpoints.tar.gz:  67%|██████▋   | 353M/523M [00:10<00:04, 38.1MB/s]
+2026-10-19T16:26:56.1650405Z Downloading checkpoints.tar.gz:  68%|██████▊   | 357M/523M [00:10<00:04, 38.4MB/s]
+2026-10-19T16:26:56.2680801Z Downloading checkpoints.tar.gz:  69%|██████▉   | 360M/523M [00:11<00:04, 38.6MB/s]
+2026-10-19T16:26:56.3710903Z Downloading checkpoints.tar.gz:  70%|██████▉   | 364M/523M [00:11<00:04, 38.5MB/s]
+2026-10-19T16:26:56.4719063Z Downloading checkpoints.tar.gz:  70%|███████   | 368M/523M [00:11<00:04, 38.4MB/s]
+2026-10-19T16:26:56.5728889Z Downloading checkpoints.tar.gz:  71%|███████   | 372M/523M [00:11<00:04, 38.7MB/s]
+2026-10-19T16:26:56.6729084Z Downloading checkpoints.tar.gz:  72%|███████▏  | 375M/523M [00:11<00:03, 38.9MB/s]
+2026-10-19T16:26:56.7777993Z Downloading checkpoints.tar.gz:  72%|███████▏  | 379M/523M [00:11<00:03, 39.3MB/s]
+2026-10-19T16:26:56.8791835Z Downloading checkpoints.tar.gz:  73%|███████▎  | 383M/523M [00:11<00:03, 38.7MB/s]
+2026-10-19T16:26:56.9799352Z Downloading checkpoints.tar.gz:  74%|███████▍  | 387M/523M [00:11<00:03, 38.8MB/s]
+2026-10-19T16:26:57.0815621Z Downloading checkpoints.tar.gz:  75%|███████▍  | 391M/523M [00:11<00:03, 39.1MB/s]
+2026-10-19T16:26:57.1821143Z Downloading checkpoints.tar.gz:  75%|███████▌  | 394M/523M [00:11<00:03, 39.2MB/s]
+2026-10-19T16:26:57.2833596Z Downloading checkpoints.tar.gz:  76%|███████▌  | 398M/523M [00:12<00:03, 39.2MB/s]
+2026-10-19T16:26:57.3923060Z Downloading checkpoints.tar.gz:  77%|███████▋  | 402M/523M [00:12<00:03, 39.1MB/s]
+2026-10-19T16:26:57.4927614Z Downloading checkpoints.tar.gz:  77%|███████▋  | 406M/523M [00:12<00:03, 38.1MB/s]
+2026-10-19T16:26:57.5929174Z Downloading checkpoints.tar.gz:  78%|███████▊  | 409M/523M [00:12<00:03, 38.1MB/s]
+2026-10-19T16:26:57.6928515Z Downloading checkpoints.tar.gz:  79%|███████▉  | 413M/523M [00:12<00:02, 39.1MB/s]
+2026-10-19T16:26:57.7953574Z Downloading checkpoints.tar.gz:  80%|███████▉  | 417M/523M [00:12<00:02, 39.6MB/s]
+2026-10-19T16:26:57.8971913Z Downloading checkpoints.tar.gz:  80%|████████  | 421M/523M [00:12<00:02, 39.3MB/s]
+2026-10-19T16:26:57.9976037Z Downloading checkpoints.tar.gz:  81%|████████  | 425M/523M [00:12<00:02, 39.1MB/s]
+2026-10-19T16:26:58.0976885Z Downloading checkpoints.tar.gz:  82%|████████▏ | 428M/523M [00:12<00:02, 39.1MB/s]
+2026-10-19T16:26:58.1990629Z Downloading checkpoints.tar.gz:  83%|████████▎ | 432M/523M [00:12<00:02, 39.0MB/s]
+2026-10-19T16:26:58.2993798Z Downloading checkpoints.tar.gz:  83%|████████▎ | 436M/523M [00:13<00:02, 38.9MB/s]
+2026-10-19T16:26:58.4009040Z Downloading checkpoints.tar.gz:  84%|████████▍ | 440M/523M [00:13<00:02, 39.1MB/s]
+2026-10-19T16:26:58.5030383Z Downloading checkpoints.tar.gz:  85%|████████▍ | 443M/523M [00:13<00:02, 39.2MB/s]
+2026-10-19T16:26:58.6115730Z Downloading checkpoints.tar.gz:  85%|████████▌ | 447M/523M [00:13<00:02, 39.0MB/s]
+2026-10-19T16:26:58.7130831Z Downloading checkpoints.tar.gz:  86%|████████▌ | 451M/523M [00:13<00:01, 38.3MB/s]
+2026-10-19T16:26:58.8136310Z Downloading checkpoints.tar.gz:  87%|████████▋ | 455M/523M [00:13<00:01, 38.7MB/s]
+2026-10-19T16:26:58.9180090Z Downloading checkpoints.tar.gz:  88%|████████▊ | 459M/523M [00:13<00:01, 38.9MB/s]
+2026-10-19T16:26:59.0194800Z Downloading checkpoints.tar.gz:  88%|████████▊ | 462M/523M [00:13<00:01, 38.5MB/s]
+2026-10-19T16:26:59.1203771Z Downloading checkpoints.tar.gz:  89%|████████▉ | 466M/523M [00:13<00:01, 38.5MB/s]
+2026-10-19T16:26:59.2210372Z Downloading checkpoints.tar.gz:  90%|████████▉ | 470M/523M [00:14<00:01, 38.8MB/s]
+2026-10-19T16:26:59.3216057Z Downloading checkpoints.tar.gz:  90%|█████████ | 474M/523M [00:14<00:01, 39.0MB/s]
+2026-10-19T16:26:59.4241582Z Downloading checkpoints.tar.gz:  91%|█████████ | 478M/523M [00:14<00:01, 39.2MB/s]
+2026-10-19T16:26:59.5249024Z Downloading checkpoints.tar.gz:  92%|█████████▏| 481M/523M [00:14<00:01, 39.2MB/s]
+2026-10-19T16:26:59.6253879Z Downloading checkpoints.tar.gz:  93%|█████████▎| 485M/523M [00:14<00:01, 39.2MB/s]
+2026-10-19T16:26:59.7258742Z Downloading checkpoints.tar.gz:  93%|█████████▎| 489M/523M [00:14<00:00, 39.2MB/s]
+2026-10-19T16:26:59.8283766Z Downloading checkpoints.tar.gz:  94%|█████████▍| 493M/523M [00:14<00:00, 39.2MB/s]
+2026-10-19T16:26:59.9292009Z Downloading checkpoints.tar.gz:  95%|█████████▍| 496M/523M [00:14<00:00, 39.0MB/s]
+2026-10-19T16:27:00.0303401Z Downloading checkpoints.tar.gz:  96%|█████████▌| 500M/523M [00:14<00:00, 39.2MB/s]
+2026-10-19T16:27:00.1311570Z Downloading checkpoints.tar.gz:  96%|█████████▋| 504M/523M [00:14<00:00, 39.3MB/s]
+2026-10-19T16:27:00.2316962Z Downloading checkpoints.tar.gz:  97%|█████████▋| 508M/523M [00:15<00:00, 39.3MB/s]
+2026-10-19T16:27:00.3317596Z Downloading checkpoints.tar.gz:  98%|█████████▊| 512M/523M [00:15<00:00, 39.4MB/s]
+2026-10-19T16:27:00.4324621Z Downloading checkpoints.tar.gz:  98%|█████████▊| 515M/523M [00:15<00:00, 39.8MB/s]
+2026-10-19T16:27:00.5336745Z Downloading checkpoints.tar.gz:  99%|█████████▉| 519M/523M [00:15<00:00, 39.7MB/s]
+2026-10-19T16:27:00.5349101Z Downloading checkpoints.tar.gz: 100%|█████████▉| 523M/523M [00:15<00:00, 39.7MB/s]
+2026-10-19T16:27:00.5349628Z Downloading checkpoints.tar.gz: 100%|██████████| 523M/523M [00:15<00:00, 35.6MB/s]
+2026-10-19T16:27:03.7225309Z /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py:73: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:27:03.8433685Z 
+2026-10-19T16:27:03.8434468Z Extracting checkpoints...
+2026-10-19T16:27:03.8434981Z Checkpoints downloaded and extracted to ckpts
+2026-10-19T16:27:03.8435663Z Generating 2 samples for each formula: ['Li2 O1']
+2026-10-19T16:27:03.8436127Z Generating batch #1 with 1 samples.
+2026-10-19T16:27:03.9465173Z Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+2026-10-19T16:27:04.0507957Z Sampling:   5%|▌         | 13/256 [00:00<00:01, 126.67it/s]
+2026-10-19T16:27:04.1524504Z Sampling:  11%|█         | 27/256 [00:00<00:01, 130.97it/s]
+2026-10-19T16:27:04.2536482Z Sampling:  16%|█▌        | 41/256 [00:00<00:01, 134.01it/s]
+2026-10-19T16:27:04.3545567Z Sampling:  21%|██▏       | 55/256 [00:00<00:01, 135.70it/s]
+2026-10-19T16:27:04.4550887Z Sampling:  27%|██▋       | 69/256 [00:00<00:01, 136.81it/s]
+2026-10-19T16:27:04.5558331Z Sampling:  32%|███▏      | 83/256 [00:00<00:01, 137.63it/s]
+2026-10-19T16:27:04.6567418Z Sampling:  38%|███▊      | 97/256 [00:00<00:01, 138.06it/s]
+2026-10-19T16:27:04.7633221Z Sampling:  43%|████▎     | 111/256 [00:00<00:01, 138.29it/s]
+2026-10-19T16:27:04.8661012Z Sampling:  49%|████▉     | 126/256 [00:00<00:00, 139.05it/s]
+2026-10-19T16:27:04.9674407Z Sampling:  55%|█████▍    | 140/256 [00:01<00:00, 138.18it/s]
+2026-10-19T16:27:05.0678108Z Sampling:  61%|██████    | 155/256 [00:01<00:00, 141.16it/s]
+2026-10-19T16:27:05.1680799Z Sampling:  66%|██████▋   | 170/256 [00:01<00:00, 143.66it/s]
+2026-10-19T16:27:05.2689675Z Sampling:  72%|███████▏  | 185/256 [00:01<00:00, 145.43it/s]
+2026-10-19T16:27:05.3743488Z Sampling:  78%|███████▊  | 200/256 [00:01<00:00, 146.42it/s]
+2026-10-19T16:27:05.4804741Z Sampling:  84%|████████▍ | 216/256 [00:01<00:00, 148.09it/s]
+2026-10-19T16:27:05.5867241Z Sampling:  91%|█████████ | 232/256 [00:01<00:00, 148.92it/s]
+2026-10-19T16:27:05.6398198Z Sampling:  97%|█████████▋| 248/256 [00:01<00:00, 149.44it/s]
+2026-10-19T16:27:05.6398961Z Sampling: 100%|██████████| 256/256 [00:01<00:00, 142.52it/s]
+2026-10-19T16:27:05.6656694Z Generating batch #2 with 1 samples.
+2026-10-19T16:27:05.6657256Z 
+2026-10-19T16:27:05.7678893Z Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+2026-10-19T16:27:05.8688072Z Sampling:   6%|▌         | 15/256 [00:00<00:01, 147.03it/s]
+2026-10-19T16:27:05.9697704Z Sampling:  12%|█▏        | 30/256 [00:00<00:01, 148.02it/s]
+2026-10-19T16:27:06.0756666Z Sampling:  18%|█▊        | 45/256 [00:00<00:01, 148.23it/s]
+2026-10-19T16:27:06.1977596Z Sampling:  23%|██▎       | 60/256 [00:00<00:01, 145.56it/s]
+2026-10-19T16:27:06.3066881Z Sampling:  29%|██▉       | 75/256 [00:00<00:01, 136.47it/s]
+2026-10-19T16:27:06.4085137Z Sampling:  35%|███▍      | 89/256 [00:00<00:01, 133.78it/s]
+2026-10-19T16:27:06.5086230Z Sampling:  40%|████      | 103/256 [00:00<00:01, 134.93it/s]
+2026-10-19T16:27:06.6088259Z Sampling:  46%|████▌     | 117/256 [00:00<00:01, 136.42it/s]
+2026-10-19T16:27:06.7102925Z Sampling:  51%|█████     | 131/256 [00:00<00:00, 137.44it/s]
+2026-10-19T16:27:06.8111160Z Sampling:  57%|█████▋    | 145/256 [00:01<00:00, 137.59it/s]
+2026-10-19T16:27:06.9172574Z Sampling:  62%|██████▏   | 159/256 [00:01<00:00, 137.99it/s]
+2026-10-19T16:27:07.0178330Z Sampling:  68%|██████▊   | 174/256 [00:01<00:00, 139.00it/s]
+2026-10-19T16:27:07.1243234Z Sampling:  74%|███████▍  | 189/256 [00:01<00:00, 142.01it/s]
+2026-10-19T16:27:07.2244302Z Sampling:  80%|████████  | 205/256 [00:01<00:00, 144.56it/s]
+2026-10-19T16:27:07.3301939Z Sampling:  86%|████████▌ | 220/256 [00:01<00:00, 146.12it/s]
+2026-10-19T16:27:07.4361818Z Sampling:  92%|█████████▏| 236/256 [00:01<00:00, 147.71it/s]
+2026-10-19T16:27:07.4632888Z Sampling:  98%|█████████▊| 252/256 [00:01<00:00, 148.75it/s]
+2026-10-19T16:27:07.4633503Z Sampling: 100%|██████████| 256/256 [00:01<00:00, 142.42it/s]
+2026-10-19T16:27:09.1332904Z ##[group]Run uv run python ../../M2/verify_batch_recovery.py --mode interrupt --output ../../M2/results/real-batch-recovery
+2026-10-19T16:27:09.1333648Z [36;1muv run python ../../M2/verify_batch_recovery.py --mode interrupt --output ../../M2/results/real-batch-recovery[0m
+2026-10-19T16:27:09.1366803Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:27:09.1367139Z env:
+2026-10-19T16:27:09.1367359Z   OMP_NUM_THREADS: 2
+2026-10-19T16:27:09.1367629Z   MKL_NUM_THREADS: 2
+2026-10-19T16:27:09.1367911Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:09.1368273Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:27:09.1368741Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:09.1369175Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:09.1369525Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:09.1369962Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:27:09.1370408Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:27:09.1370732Z ##[endgroup]
+2026-10-19T16:27:13.7826883Z UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:27:17.2105623Z /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py:73: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:27:17.3574571Z cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-19T16:27:17.3574951Z 
+2026-10-19T16:27:17.3575111Z Checkpoints already exist.
+2026-10-19T16:27:17.3575548Z Generating 2 samples for each formula: ['Li2 O1']
+2026-10-19T16:27:17.3576002Z Generating batch #1 with 1 samples.
+2026-10-19T16:27:17.4605686Z Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+2026-10-19T16:27:17.5656543Z Sampling:   6%|▌         | 15/256 [00:00<00:01, 145.84it/s]
+2026-10-19T16:27:17.6712382Z Sampling:  12%|█▏        | 31/256 [00:00<00:01, 149.62it/s]
+2026-10-19T16:27:17.7786034Z Sampling:  18%|█▊        | 47/256 [00:00<00:01, 150.47it/s]
+2026-10-19T16:27:17.8834097Z Sampling:  25%|██▍       | 63/256 [00:00<00:01, 149.92it/s]
+2026-10-19T16:27:17.9880628Z Sampling:  31%|███       | 79/256 [00:00<00:01, 150.89it/s]
+2026-10-19T16:27:18.0926795Z Sampling:  37%|███▋      | 95/256 [00:00<00:01, 151.58it/s]
+2026-10-19T16:27:18.1972069Z Sampling:  43%|████▎     | 111/256 [00:00<00:00, 152.03it/s]
+2026-10-19T16:27:18.3027090Z Sampling:  50%|████▉     | 127/256 [00:00<00:00, 152.35it/s]
+2026-10-19T16:27:18.4075392Z Sampling:  56%|█████▌    | 143/256 [00:00<00:00, 152.16it/s]
+2026-10-19T16:27:18.5110978Z Sampling:  62%|██████▏   | 159/256 [00:01<00:00, 152.31it/s]
+2026-10-19T16:27:18.6155835Z Sampling:  68%|██████▊   | 175/256 [00:01<00:00, 152.99it/s]
+2026-10-19T16:27:18.7199364Z Sampling:  75%|███████▍  | 191/256 [00:01<00:00, 153.01it/s]
+2026-10-19T16:27:18.8247461Z Sampling:  81%|████████  | 207/256 [00:01<00:00, 153.11it/s]
+2026-10-19T16:27:18.9311761Z Sampling:  87%|████████▋ | 223/256 [00:01<00:00, 152.97it/s]
+2026-10-19T16:27:19.0357346Z Sampling:  93%|█████████▎| 239/256 [00:01<00:00, 152.17it/s]
+2026-10-19T16:27:19.0424838Z Sampling: 100%|█████████▉| 255/256 [00:01<00:00, 152.43it/s]
+2026-10-19T16:27:19.0822406Z Sampling: 100%|██████████| 256/256 [00:01<00:00, 151.94it/s]
+2026-10-19T16:27:19.0822810Z M2 atomically saved generation batch 1
+2026-10-19T16:27:19.1152325Z Generating batch #2 with 1 samples.
+2026-10-19T16:27:20.6098742Z ##[group]Run uv run python ../../M2/verify_batch_recovery.py --mode resume --output ../../M2/results/real-batch-recovery
+2026-10-19T16:27:20.6099371Z [36;1muv run python ../../M2/verify_batch_recovery.py --mode resume --output ../../M2/results/real-batch-recovery[0m
+2026-10-19T16:27:20.6134852Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:27:20.6135209Z env:
+2026-10-19T16:27:20.6135473Z   OMP_NUM_THREADS: 2
+2026-10-19T16:27:20.6135699Z   MKL_NUM_THREADS: 2
+2026-10-19T16:27:20.6135982Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:20.6136398Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:27:20.6136753Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:20.6137109Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:20.6137457Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:20.6137991Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:27:20.6138315Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:27:20.6138810Z ##[endgroup]
+2026-10-19T16:27:25.2098976Z UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:27:28.5865253Z /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py:73: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:27:28.7345355Z cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-19T16:27:28.7346000Z Checkpoints already exist.
+2026-10-19T16:27:28.7346584Z Generating 2 samples for each formula: ['Li2 O1']
+2026-10-19T16:27:28.7347083Z Generating batch #1 with 1 samples.
+2026-10-19T16:27:28.7347487Z M2 replayed verified generation batch 1
+2026-10-19T16:27:28.7676300Z Generating batch #2 with 1 samples.
+2026-10-19T16:27:28.7676628Z 
+2026-10-19T16:27:28.8709494Z Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+2026-10-19T16:27:28.9772091Z Sampling:   6%|▌         | 15/256 [00:00<00:01, 145.55it/s]
+2026-10-19T16:27:29.0823330Z Sampling:  12%|█▏        | 31/256 [00:00<00:01, 148.50it/s]
+2026-10-19T16:27:29.1886923Z Sampling:  18%|█▊        | 47/256 [00:00<00:01, 150.18it/s]
+2026-10-19T16:27:29.2946446Z Sampling:  25%|██▍       | 63/256 [00:00<00:01, 150.28it/s]
+2026-10-19T16:27:29.3997415Z Sampling:  31%|███       | 79/256 [00:00<00:01, 150.54it/s]
+2026-10-19T16:27:29.5043449Z Sampling:  37%|███▋      | 95/256 [00:00<00:01, 151.11it/s]
+2026-10-19T16:27:29.6091236Z Sampling:  43%|████▎     | 111/256 [00:00<00:00, 151.71it/s]
+2026-10-19T16:27:29.7135998Z Sampling:  50%|████▉     | 127/256 [00:00<00:00, 152.03it/s]
+2026-10-19T16:27:29.8201855Z Sampling:  56%|█████▌    | 143/256 [00:00<00:00, 152.38it/s]
+2026-10-19T16:27:29.9254501Z Sampling:  62%|██████▏   | 159/256 [00:01<00:00, 151.67it/s]
+2026-10-19T16:27:30.0296624Z Sampling:  68%|██████▊   | 175/256 [00:01<00:00, 151.77it/s]
+2026-10-19T16:27:30.1343076Z Sampling:  75%|███████▍  | 191/256 [00:01<00:00, 152.31it/s]
+2026-10-19T16:27:30.2384432Z Sampling:  81%|████████  | 207/256 [00:01<00:00, 152.47it/s]
+2026-10-19T16:27:30.3422914Z Sampling:  87%|████████▋ | 223/256 [00:01<00:00, 152.83it/s]
+2026-10-19T16:27:30.4461731Z Sampling:  93%|█████████▎| 239/256 [00:01<00:00, 153.20it/s]
+2026-10-19T16:27:30.4529262Z Sampling: 100%|█████████▉| 255/256 [00:01<00:00, 153.45it/s]
+2026-10-19T16:27:30.4529815Z Sampling: 100%|██████████| 256/256 [00:01<00:00, 151.92it/s]
+2026-10-19T16:27:30.4885639Z M2 atomically saved generation batch 2
+2026-10-19T16:27:32.0603294Z ##[group]Run uv run python ../../M2/verify_batch_recovery.py --mode compare --output ../../M2/results/real-batch-recovery
+2026-10-19T16:27:32.0603917Z [36;1muv run python ../../M2/verify_batch_recovery.py --mode compare --output ../../M2/results/real-batch-recovery[0m
+2026-10-19T16:27:32.0639281Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:27:32.0639600Z env:
+2026-10-19T16:27:32.0639833Z   OMP_NUM_THREADS: 2
+2026-10-19T16:27:32.0640095Z   MKL_NUM_THREADS: 2
+2026-10-19T16:27:32.0640395Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:32.0640760Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:27:32.0641164Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:32.0641515Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:32.0641848Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:32.0642393Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:27:32.0642715Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:27:32.0643055Z ##[endgroup]
+2026-10-19T16:27:37.7454753Z UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+2026-10-19T16:27:40.9084158Z cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-19T16:27:40.9084763Z {
+2026-10-19T16:27:40.9085245Z   "kind": "real_cross_process_chemeleon_batch_recovery",
+2026-10-19T16:27:40.9085664Z   "benchmark_score": false,
+2026-10-19T16:27:40.9086136Z   "fixture": "Li2O, two candidates, batch size 1, original 256 diffusion steps",
+2026-10-19T16:27:40.9086901Z   "checks": {
+2026-10-19T16:27:40.9087192Z     "structures_equal": true,
+2026-10-19T16:27:40.9087484Z     "rng_equal": true,
+2026-10-19T16:27:40.9087760Z     "first_batch_preserved": true,
+2026-10-19T16:27:40.9088220Z     "completed_batch_not_sampled_twice": true
+2026-10-19T16:27:40.9088553Z   },
+2026-10-19T16:27:40.9089105Z   "passed": true,
+2026-10-19T16:27:40.9089570Z   "scope": "Small actual-model integration check. Full protocol pool/batch-scale validation still required."
+2026-10-19T16:27:40.9090116Z }
+2026-10-19T16:27:42.2417070Z ##[group]Run actions/upload-artifact@v4
+2026-10-19T16:27:42.2417353Z with:
+2026-10-19T16:27:42.2417624Z   name: m2-real-batch-recovery-39285316913
+2026-10-19T16:27:42.2417939Z   path: M2/results/real-batch-recovery/
+2026-10-19T16:27:42.2418252Z   retention-days: 90
+2026-10-19T16:27:42.2418495Z   if-no-files-found: warn
+2026-10-19T16:27:42.2418971Z   compression-level: 6
+2026-10-19T16:27:42.2419240Z   overwrite: false
+2026-10-19T16:27:42.2419506Z   include-hidden-files: false
+2026-10-19T16:27:42.2419752Z env:
+2026-10-19T16:27:42.2419993Z   OMP_NUM_THREADS: 2
+2026-10-19T16:27:42.2420194Z   MKL_NUM_THREADS: 2
+2026-10-19T16:27:42.2420519Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:42.2420873Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T16:27:42.2421234Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:42.2421559Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:42.2422005Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T16:27:42.2422327Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T16:27:42.2422645Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-10-19T16:27:42.2422929Z ##[endgroup]
+2026-10-19T16:27:42.3713408Z (node:2286) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:27:42.3714363Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:27:42.3802365Z With the provided path, there will be 6 files uploaded
+2026-10-19T16:27:42.3803363Z Artifact name is valid!
+2026-10-19T16:27:42.3803841Z Root directory input is valid!
+2026-10-19T16:27:42.6746447Z Beginning upload of artifact content to blob storage
+2026-10-19T16:27:42.7014854Z (node:2286) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T16:27:42.8933680Z Uploaded bytes 86846
+2026-10-19T16:27:42.9314991Z Finished uploading artifact content to blob storage!
+2026-10-19T16:27:42.9315754Z SHA256 digest of uploaded artifact zip is 8570dbc27d6a286c60a994ccb4d704169ef4f0c58247c9a0c926ff88a65eace9
+2026-10-19T16:27:42.9317293Z Finalizing artifact upload
+2026-10-19T16:27:43.1822678Z Artifact m2-real-batch-recovery-39285316913.zip successfully finalized. Artifact ID 12201404998
+2026-10-19T16:27:43.1823577Z Artifact m2-real-batch-recovery-39285316913 has been successfully uploaded! Final size is 86846 bytes. Artifact ID is 12201404998
+2026-10-19T16:27:43.1826967Z Artifact download URL: https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39285316913/artifacts/12201404998
+2026-10-19T16:27:43.1967659Z Post job cleanup.
+2026-10-19T16:27:43.2881678Z Cache hit occurred on key setup-uv-1-x86_64-unknown-linux-gnu-3.12.15-pruned-d786ad77a9ac2cacd5e52283d4221a36bd9f9bf345a695d125b34eb9bae47e80, not saving cache.
+2026-10-19T16:27:43.2882622Z (node:2298) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:27:43.2883437Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:27:43.2955435Z Post job cleanup.
+2026-10-19T16:27:43.3792057Z (node:2306) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:27:43.3793099Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:27:43.3894389Z Post job cleanup.
+2026-10-19T16:27:43.4589070Z [command]/usr/bin/git version
+2026-10-19T16:27:43.4639890Z git version 2.55.0
+2026-10-19T16:27:43.4654340Z Temporarily overriding HOME='/home/runner/work/_temp/6d13b078-5c19-4b43-be7c-d75a7a1c56fe' before making global git config changes
+2026-10-19T16:27:43.4660808Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T16:27:43.4671531Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery
+2026-10-19T16:27:43.4721071Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T16:27:43.4771656Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T16:27:43.5029869Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T16:27:43.5073744Z http.https://github.com/.extraheader
+2026-10-19T16:27:43.5084974Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T16:27:43.5125278Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T16:27:43.5311351Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T16:27:43.5334012Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T16:27:43.5563125Z Cleaning up orphan processes
+2026-10-19T16:27:43.5785813Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4, astral-sh/setup-uv@v6. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

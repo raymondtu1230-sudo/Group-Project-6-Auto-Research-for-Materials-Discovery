@@ -1,0 +1,397 @@
+{
+  "jobs": [
+    {
+      "id": 118175838594,
+      "name": "prepare",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run astral-sh/setup-uv@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Install the locked environment and M2 slots in this isolated checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run current M1 and M2 checks before spending scientific compute",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Verify reused evidence and emit only missing Random units",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        }
+      ]
+    },
+    {
+      "id": 118177370387,
+      "name": "missing-random (random_generator_baseline, Ga-Pt-Tm, 17)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370403,
+      "name": "missing-random (random_generator_baseline, Au-K-Tb, 29)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run astral-sh/setup-uv@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Check credential without disclosing it",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Install locked MADE and Chrome for official figures",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Record runtime admission and available disk",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run one missing unchanged full-budget protocol unit",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 8
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 9
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@v6",
+          "status": "pending",
+          "conclusion": null,
+          "number": 16
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "pending",
+          "conclusion": null,
+          "number": 17
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 18
+        }
+      ]
+    },
+    {
+      "id": 118177370441,
+      "name": "missing-random (random_generator_baseline, Co-Dy-W, 29)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370456,
+      "name": "missing-random (random_generator_baseline, Co-Mg-Na, 43)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370529,
+      "name": "missing-random (random_generator_baseline, Co-Mg-Na, 17)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370541,
+      "name": "missing-random (random_generator_baseline, Co-Dy-W, 17)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370548,
+      "name": "missing-random (random_generator_baseline, Co-Mg-Na, 29)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370619,
+      "name": "missing-random (random_generator_baseline, Au-K-Tb, 43)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run astral-sh/setup-uv@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Check credential without disclosing it",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Install locked MADE and Chrome for official figures",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Record runtime admission and available disk",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run one missing unchanged full-budget protocol unit",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 8
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 9
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@v6",
+          "status": "pending",
+          "conclusion": null,
+          "number": 16
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "pending",
+          "conclusion": null,
+          "number": 17
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 18
+        }
+      ]
+    },
+    {
+      "id": 118177370647,
+      "name": "missing-random (random_generator_baseline, Co-Dy-W, 43)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370675,
+      "name": "missing-random (random_generator_baseline, Au-K-Tb, 17)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370700,
+      "name": "missing-random (random_generator_baseline, Hf-Ni-Zr, 17)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370768,
+      "name": "missing-random (random_generator_baseline, Ga-Pt-Tm, 43)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370878,
+      "name": "missing-random (random_generator_baseline, Ga-Pt-Tm, 29)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177370928,
+      "name": "missing-random (random_generator_baseline, Hf-Ni-Zr, 29)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177374257,
+      "name": "missing-random (random_generator_baseline, Mg-Sn-Sr, 29)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177374272,
+      "name": "missing-random (random_generator_baseline, Mg-Sn-Sr, 43)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    },
+    {
+      "id": 118177374493,
+      "name": "missing-random (random_generator_baseline, Hf-Ni-Zr, 43)",
+      "status": "queued",
+      "conclusion": null,
+      "run_id": 39286848821,
+      "logs_url": null,
+      "steps": null
+    }
+  ]
+}

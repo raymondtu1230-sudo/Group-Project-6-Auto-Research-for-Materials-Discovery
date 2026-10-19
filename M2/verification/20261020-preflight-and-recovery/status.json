@@ -1,0 +1,64 @@
+{
+  "observed_at": "2026-10-19 16:40:37 UTC",
+  "accepted_baseline_units": 2,
+  "expected_baseline_units": 36,
+  "missing": {
+    "random": 17,
+    "chemeleon": 17
+  },
+  "old_random_run": {
+    "id": 39284865198,
+    "scientific_units_started": 0,
+    "failed_step": "all-M2 Ruff import ordering",
+    "retained": true
+  },
+  "ci_failures": [
+    39284459462,
+    39284865097,
+    39285316822
+  ],
+  "random_continuation": {
+    "id": 39286848821,
+    "source": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+    "prepare_gate": "passed",
+    "retained_evidence_validation": "passed",
+    "max_parallel": 4,
+    "jobs": {
+      "running": 2,
+      "queued": 15
+    }
+  },
+  "small_recovery": {
+    "id": 39285316913,
+    "benchmark_score": false,
+    "passed_in_raw_logs": true,
+    "batch_size": 1,
+    "num_candidates": 2,
+    "artifact_id": 12201404998,
+    "github_sha256": "8570dbc27d6a286c60a994ccb4d704169ef4f0c58247c9a0c926ff88a65eace9",
+    "independent_zip_hash_verified": false
+  },
+  "batch256_validation": {
+    "id": 39286986254,
+    "source": "e30b5bb233842797f4ad90c80732bb327d07c0bf",
+    "sampling_jobs_queued": 2,
+    "sampling_jobs_running": 0,
+    "benchmark_score": false,
+    "passed": false,
+    "formal_chemeleon_admitted": false
+  },
+  "local_checks": {
+    "m1_passed": 17,
+    "m2_passed": 53,
+    "skipped": 0,
+    "ruff": "passed",
+    "official_smoke": "incomplete: Chrome export stalled; synthetic process terminated",
+    "total_compute_cost_usd": null
+  },
+  "boundaries": {
+    "main_only": "M2/",
+    "official_scientific_parameters_modified": false,
+    "pr2_merged": false,
+    "branches_deleted": false
+  }
+}
