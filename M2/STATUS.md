@@ -36,6 +36,12 @@ step-by-step guide and updated submission notice were reconciled with this scope
 | Random result | mSUN@20=7, AUDC=55.5, driver wall time 952.717 s |
 | Actual live CPU diagnostic | Passed on GitHub Linux in run 39217841268 |
 | Complete continuation CI | Passed on run 39218278124, revision b8e2c0c; 17 M1 and 45 M2 tests, both Ruff checks, reproducible installation and original smoke |
+| Latest handoff acceptance CI | Passed on run 39221672640, revision 2b2c6753; 17 M1 and 45 M2 tests with no skips, Ruff, reproducible installation and original smoke |
+
+The exact user-supplied handoff requirements and branch-retention decision are
+mapped in [ACCEPTANCE_CHECKLIST.md](ACCEPTANCE_CHECKLIST.md). The M2 development
+branch now includes current main's published M2 folder and M4 contents; the three
+documentation conflicts were resolved using the published main versions.
 
 The raw Random ZIP and independently generated tables/curves are in
 [`verification/20261019-random-gate`](verification/20261019-random-gate/README.md).
@@ -55,19 +61,29 @@ limitation does not affect the completed scientific result. The independent
 folder publication changes packaging and documentation, not the tested code or
 scientific settings.
 
-## Still active / not yet verified
+## Ended Chemeleon attempts and bounded recovery
 
-At the handoff, run 39213257750's Chemeleon gate is still executing. Its older
-observer reports heartbeats with zero completed oracle queries, which cannot
-distinguish slow initial generation from a stall. The official configuration
-first generates a cached pool and the M1 protocol forces CPU; no pool, seed,
-batch-size or scientific setting has been reduced to obtain a faster score.
-The older run 39211212095 also remains part of the failed/completed-run audit.
+At 17:47 Singapore time on 19 October, run 39213257750's Chemeleon gate
+failed at the external 165-minute action limit. Older run 39211212095 ended
+with a cancelled conclusion at 17:40, near its 180-minute job limit. Neither
+remains active. The raw model logs show three complete sampling batches in
+each attempt and actual progress into batch 4. These logs establish substantial
+computation; the earlier zero-query heartbeat did not establish a deadlock.
 
-The active workflow is pinned to `bf62711`; new code commits do not update its
-running jobs. Its remaining 34 baseline units depend on both initial gates.
-Do not launch a duplicate sweep or label an active run completed. Inspect real
-query/checkpoint output and the final artifacts before accepting each result.
+The [timeout audit](verification/20261019-chemeleon-timeout/README.md) retains
+both untouched artifacts, GitHub logs, checksums and the original partial report.
+No complete Chemeleon trajectory, generator checkpoint, resolved configuration
+or 1–20 query history was produced. The report accepts only the already verified
+Random unit: one of 36 baseline units, with 35 still missing.
+
+One Chemeleon-only recovery attempt is prepared, pending checks and actual
+launch. The manual workflow defaults to that single first development unit;
+it skips Random and the wider sweep and blocks a rerun of the same retry run.
+Its external action limit is 330 minutes inside a 350-minute job. Numeric
+sampling-step diagnostics supplement the existing CPU/log/batch observation.
+M1's official scientific settings, CPU, seed, 1024-candidate pool and batch
+size 256 remain unchanged. Recovery status is recorded in the audit JSON;
+preparation is not a completed result. No automatic retry loop is enabled.
 
 ## Next required handovers
 

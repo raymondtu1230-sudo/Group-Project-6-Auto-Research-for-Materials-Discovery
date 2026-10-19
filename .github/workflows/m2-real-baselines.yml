@@ -1,8 +1,20 @@
 name: M2 real materials baselines
 'on':
-  workflow_dispatch: null
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Single failed Chemeleon gate retry or explicit full baseline sweep
+        type: choice
+        required: true
+        default: chemeleon_retry
+        options:
+        - chemeleon_retry
+        - baseline_sweep
 permissions:
   contents: read
+concurrency:
+  group: m2-real-baselines-${{ github.ref }}
+  cancel-in-progress: false
 env:
   OMP_NUM_THREADS: '2'
   MKL_NUM_THREADS: '2'
@@ -31,6 +43,8 @@ jobs:
     - name: Read all development units from the M1 protocol
       id: units
       working-directory: M1/MADE
+      env:
+        M2_BASELINE_MODE: ${{ inputs.mode }}
       run: |
         uv run python - <<'PY_UNITS'
         import json, os
@@ -42,9 +56,15 @@ jobs:
         methods = [m for m in protocol['methods']['required'] if m in (
             'random_generator_baseline', 'chemeleon_generative_baseline')]
         assert len(methods) == 2 and systems and seeds
+        mode = os.environ['M2_BASELINE_MODE']
+        assert mode in ('chemeleon_retry', 'baseline_sweep')
+        if mode == 'chemeleon_retry':
+            methods = ['chemeleon_generative_baseline']
         units = [{'method': m, 'system': '-'.join(s), 'seed': seed}
                  for m in methods for s in systems for seed in seeds
                  if (s, seed) != (systems[0], seeds[0])]
+        if mode == 'chemeleon_retry':
+            units = []
         outputs = {
             'gate_matrix': json.dumps({'method': methods}),
             'sweep_matrix': json.dumps({'include': units}),
@@ -54,12 +74,14 @@ jobs:
         with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
             for name, value in outputs.items():
                 print(name + '=' + value, file=stream)
-        print(f'Full development baseline sweep: {len(units) + len(methods)} units')
+        count = 1 if mode == 'chemeleon_retry' else len(units) + len(methods)
+        print(f'Requested mode: {mode}; scientific units: {count}')
         PY_UNITS
   real-baseline:
     needs: prepare
+    if: inputs.mode != 'chemeleon_retry' || github.run_attempt == 1
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 350
     strategy:
       fail-fast: false
       max-parallel: 2
@@ -84,7 +106,7 @@ jobs:
       working-directory: M1/MADE
       run: uv run python -c "import kaleido; kaleido.get_chrome_sync()"
     - name: Complete one real full-budget unit before the wider sweep
-      timeout-minutes: 165
+      timeout-minutes: 330
       working-directory: M1/MADE
       run: uv run python ../../M2/run_baselines.py --method ${{ matrix.method }} --split dev --system
         ${{ needs.prepare.outputs.first_system }} --seed ${{ needs.prepare.outputs.first_seed }} --attempt
@@ -103,8 +125,9 @@ jobs:
     needs:
     - prepare
     - real-baseline
+    if: inputs.mode == 'baseline_sweep'
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 350
     strategy:
       fail-fast: false
       max-parallel: 4
@@ -129,7 +152,7 @@ jobs:
       working-directory: M1/MADE
       run: uv run python -c "import kaleido; kaleido.get_chrome_sync()"
     - name: Run one unchanged M1 protocol unit
-      timeout-minutes: 165
+      timeout-minutes: 330
       working-directory: M1/MADE
       run: uv run python ../../M2/run_baselines.py --method ${{ matrix.method }} --split dev --system
         ${{ matrix.system }} --seed ${{ matrix.seed }} --attempt $((GITHUB_RUN_NUMBER * 1000 + GITHUB_RUN_ATTEMPT))

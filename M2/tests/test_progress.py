@@ -82,3 +82,21 @@ def test_an_orphaned_live_log_cannot_be_overwritten(
     with pytest.raises(ValueError, match="preserve it"):
         run_unit("random_generator_baseline", "dev", "Mg-Sn-Sr", 17, 1)
     assert log_path.read_text() == "original failed attempt evidence"
+
+
+def test_numeric_sampling_progress_survives_verbose_batch_output(tmp_path: Path) -> None:
+    log_path = tmp_path / "sampling.log"
+    log_path.write_text(
+        "Generating batch #4 with 256 samples.\n"
+        + "unrelated verbose output\n" * 1000
+        + "\rSampling:  98%|█████████▊| 251/256 [1:43:34<00:52, 10.50s/it]\n"
+        + "private synthetic credential: NEVER_PRINT_THIS\n"
+    )
+    snapshot = process_progress(999999999, log_path)
+    assert snapshot["generation_batch"] == 4
+    assert snapshot["generation_batch_size"] == 256
+    assert snapshot["sampling_step"] == 251
+    assert snapshot["sampling_total"] == 256
+    assert snapshot["sampling_elapsed_seconds"] == 6214
+    assert "NEVER_PRINT_THIS" not in json.dumps(snapshot)
+    assert process_progress(999999999, tmp_path / "absent")["sampling_step"] is None

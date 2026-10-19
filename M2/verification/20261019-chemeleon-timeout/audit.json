@@ -1,0 +1,145 @@
+{
+  "audited_at_utc": "2026-10-19T09:53:48.822663+00:00",
+  "scope": "Two ended Chemeleon attempts; no new completed performance result",
+  "runs": [
+    {
+      "run_id": 39213257750,
+      "job_id": 117931485315,
+      "source_revision": "bf62711f9b29b56490ac0e0ad7c14f00decc88f8",
+      "artifact_id": 12177571578,
+      "artifact_sha256": "0fc3b5489343ec5a19cf1cd81b19bda6e5b3e3a45606a6273a70c33ace4e06fa",
+      "github_conclusion": "failure",
+      "stopped_at_utc": "2026-10-19T09:47:19.5161395Z",
+      "raw_metadata_status": null,
+      "unit": {
+        "method": "chemeleon_generative_baseline",
+        "system": [
+          "Mg",
+          "Sn",
+          "Sr"
+        ],
+        "seed": 17,
+        "attempt": 4001,
+        "query_budget": 20
+      },
+      "artifact_files": [
+        "results/protocol_v1/chemeleon_generative_baseline/dev/Mg-Sn-Sr/seed_17/attempt_4001/run_metadata.json",
+        "results/protocol_v1/chemeleon_generative_baseline/dev/Mg-Sn-Sr/seed_17/attempt_4001.process.log"
+      ],
+      "sampling_batches": [
+        {
+          "marker": "Generating batch #1 with 256 samples.",
+          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [52:38<00:00, 12.34s/it]"
+        },
+        {
+          "marker": "Generating batch #2 with 256 samples.",
+          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [51:28<00:00, 12.06s/it]"
+        },
+        {
+          "marker": "Generating batch #3 with 256 samples.",
+          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [55:28<00:00, 13.00s/it]"
+        },
+        {
+          "marker": "Generating batch #4 with 256 samples.",
+          "last_sampling_line": "Sampling:   1%|          | 3/256 [00:37<53:00, 12.57s/it]"
+        }
+      ],
+      "complete_query_history_present": false,
+      "resolved_configuration_present": false,
+      "checkpoint_present": false,
+      "accepted_as_scientific_result": false,
+      "scientific_metrics": null,
+      "billed_compute_cost_usd": null
+    },
+    {
+      "run_id": 39211212095,
+      "job_id": 117924795008,
+      "source_revision": "6ab82de53dba70cdfdeb55c4bc4d15cb62dd603e",
+      "artifact_id": 12177865607,
+      "artifact_sha256": "4c34f1870dcdb630c788bd8ea797d4b9d0bbbdd2bb882619d92637ea1c8b0f7c",
+      "github_conclusion": "cancelled",
+      "stopped_at_utc": "2026-10-19T09:40:22.2291471Z",
+      "raw_metadata_status": null,
+      "unit": {
+        "method": "chemeleon_generative_baseline",
+        "system": [
+          "Mg",
+          "Sn",
+          "Sr"
+        ],
+        "seed": 17,
+        "attempt": 3001,
+        "query_budget": 20
+      },
+      "artifact_files": [
+        "results/protocol_v1/chemeleon_generative_baseline/dev/Mg-Sn-Sr/seed_17/attempt_3001/run_metadata.json",
+        "results/protocol_v1/chemeleon_generative_baseline/dev/Mg-Sn-Sr/seed_17/attempt_3001.process.log"
+      ],
+      "sampling_batches": [
+        {
+          "marker": "Generating batch #1 with 256 samples.",
+          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [43:26<00:00, 10.18s/it]"
+        },
+        {
+          "marker": "Generating batch #2 with 256 samples.",
+          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [42:53<00:00, 10.05s/it]"
+        },
+        {
+          "marker": "Generating batch #3 with 256 samples.",
+          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [46:25<00:00, 10.88s/it]"
+        },
+        {
+          "marker": "Generating batch #4 with 256 samples.",
+          "last_sampling_line": "Sampling:  98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 251/256 [43:34<00:52, 10.50s/it]"
+        }
+      ],
+      "complete_query_history_present": false,
+      "resolved_configuration_present": false,
+      "checkpoint_present": false,
+      "accepted_as_scientific_result": false,
+      "scientific_metrics": null,
+      "billed_compute_cost_usd": null
+    }
+  ],
+  "finding": "Sampling progressed through three full batches. The newer attempt reached batch 4 step 3/256 before the 165-minute action limit. This is evidence of substantial computation, not a deadlock. The older job ended with a cancelled conclusion near its 180-minute job limit; its log does not establish who or what cancelled it.",
+  "workflow_report": {
+    "artifact_id": 12176904574,
+    "sha256": "edc5efca98580e1ef5e885b6ebcb9ab3fd19366df6ae40253095affd62a6ee14",
+    "validated_runs": 1,
+    "missing_baseline_units": 35,
+    "baseline_sweep_complete": false,
+    "final_comparison_complete": false,
+    "issues": [
+      {
+        "kind": "incomplete_or_invalid_run",
+        "source": "../../M2/results/downloaded/m2-real-chemeleon_generative_baseline-gate-39213257750-1/results/protocol_v1/chemeleon_generative_baseline/dev/Mg-Sn-Sr/seed_17/attempt_4001",
+        "error": "Run is not marked completed"
+      }
+    ]
+  },
+  "one_retry": {
+    "status": "prepared_not_started",
+    "method": "chemeleon_generative_baseline",
+    "split": "dev",
+    "system": [
+      "Mg",
+      "Sn",
+      "Sr"
+    ],
+    "seed": 17,
+    "query_budget": 20,
+    "action_time_limit_minutes": 330,
+    "job_time_limit_minutes": 350,
+    "scientific_settings_changed": false,
+    "random_rerun": false,
+    "wider_sweep_started": false,
+    "automatic_retry": false
+  },
+  "github_job_logs_sha256": "d8641626247636683507dffaf69ed385d77e13aa96013aecb10a75ceb8bd4e09",
+  "source_comparison": {
+    "changed_recorded_m1_inputs": [
+      "MADE/src/made/agents/m2_tool_routing.py"
+    ],
+    "explanation": "Only the unused optional M2 integration module differs from the original gate inputs; official baseline inputs are unchanged."
+  }
+}

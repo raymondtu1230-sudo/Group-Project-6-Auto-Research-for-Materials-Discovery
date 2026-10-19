@@ -1,0 +1,24 @@
+{
+  "executed_checks": [
+    {
+      "mode": "chemeleon_retry",
+      "gate_methods": [
+        "chemeleon_generative_baseline"
+      ],
+      "wider_units": 0
+    },
+    {
+      "mode": "baseline_sweep",
+      "gate_methods": [
+        "random_generator_baseline",
+        "chemeleon_generative_baseline"
+      ],
+      "wider_units": 34
+    }
+  ],
+  "raw_timeout_log_sampling_parse": "passed",
+  "long_verbose_numeric_only_parse": "passed",
+  "M1_files_changed": false,
+  "python_syntax": "passed",
+  "pytest_and_official_smoke": "pending fresh GitHub Actions run"
+}
