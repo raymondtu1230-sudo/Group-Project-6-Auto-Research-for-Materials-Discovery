@@ -56,3 +56,10 @@ the first development Chemeleon unit and skips the wider sweep. Random is
 not rerun. A rerun of the same retry workflow attempt is blocked. This is one
 retry, not an automatic retry loop. See `audit.json` for the actual launch
 status; preparation alone is not reported as a started or successful run.
+
+Because the active workflow exists only on the development branch, the same
+recovery can be launched by one explicit `retry-request.json` commit in this
+folder. Its push trigger is restricted to that exact path and the M2 branch.
+Ordinary code, documentation and result updates do not trigger materials runs.
+The record will be added only after fresh checks pass; a missing record means
+that this explicit launch has not been requested.

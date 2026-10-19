@@ -1,5 +1,9 @@
 name: M2 real materials baselines
 'on':
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths:
+    - M2/verification/20261019-chemeleon-timeout/retry-request.json
   workflow_dispatch:
     inputs:
       mode:
@@ -44,7 +48,7 @@ jobs:
       id: units
       working-directory: M1/MADE
       env:
-        M2_BASELINE_MODE: ${{ inputs.mode }}
+        M2_BASELINE_MODE: ${{ inputs.mode || 'chemeleon_retry' }}
       run: |
         uv run python - <<'PY_UNITS'
         import json, os
@@ -79,7 +83,7 @@ jobs:
         PY_UNITS
   real-baseline:
     needs: prepare
-    if: inputs.mode != 'chemeleon_retry' || github.run_attempt == 1
+    if: (inputs.mode || 'chemeleon_retry') != 'chemeleon_retry' || github.run_attempt == 1
     runs-on: ubuntu-latest
     timeout-minutes: 350
     strategy:
