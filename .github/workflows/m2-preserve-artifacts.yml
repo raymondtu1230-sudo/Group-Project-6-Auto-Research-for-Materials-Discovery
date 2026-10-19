@@ -1,0 +1,78 @@
+name: M2 preserve existing results without new experiments
+
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths: [M2/requests/preserve-existing-results.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: m2-evidence-publication
+  cancel-in-progress: false
+
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: publication
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - name: Download and verify exact ZIPs from existing runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python M2/preserve_artifacts.py --run-id 39286848821 --run-id 39286986254 --output M2/results/preserved
+      - name: Validate completed scientific records offline
+        id: score
+        continue-on-error: true
+        working-directory: M1/MADE
+        run: |
+          uv sync --locked
+          uv run python ../../M2/prepare_missing.py --results-root ../../M2/results/preserved/raw --output ../../M2/results/preserved/inventory --import-only
+          uv run python ../../M2/evaluate.py --results-root ../../M2/results/preserved/raw --output ../../M2/results/preserved/report --split dev --allow-partial
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-preserved-existing-results-${{ github.run_id }}
+          path: M2/results/preserved/
+          retention-days: 90
+      - name: Save raw evidence on main even if offline scoring failed
+        if: always()
+        env:
+          CAPTURE_ID: ${{ github.run_id }}
+          SCORE_OUTCOME: ${{ steps.score.outcome }}
+        run: |
+          python - <<'PY'
+          import os, pathlib, shutil
+          source = pathlib.Path('M2/results/preserved')
+          if not (source / 'provenance.json').exists():
+              raise SystemExit('Preservation incomplete; retain failed job artifact and investigate')
+          dest = pathlib.Path('publication/M2/verification') / ('preserved-' + os.environ['CAPTURE_ID'])
+          dest.mkdir(parents=True, exist_ok=True)
+          for archive in source.glob('*.zip'):
+              shutil.copyfile(archive, dest / archive.name)
+          shutil.copyfile(source / 'provenance.json', dest / 'provenance.json')
+          if (source / 'report').exists():
+              shutil.copytree(source / 'report', dest / 'report', dirs_exist_ok=True)
+          (dest / 'README.md').write_text('# Existing artifact preservation\n\nExact original ZIPs and their GitHub digests are preserved here. These are copies, not additional experiments. Source run status and revision are in provenance.json. Offline scoring outcome: ' + os.environ['SCORE_OUTCOME'] + '. Raw evidence is saved regardless of the scoring outcome. Running source jobs may produce further artifacts after this snapshot.\n')
+          PY
+          cd publication
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- "M2/verification/preserved-$CAPTURE_ID"
+          git commit -m "Preserve original M2 experiment and recovery artifacts ($CAPTURE_ID)"
+          git pull --rebase origin main
+          git push origin HEAD:main

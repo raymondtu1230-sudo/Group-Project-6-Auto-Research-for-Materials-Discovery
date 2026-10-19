@@ -1,0 +1,10 @@
+{
+  "kind": "preserve_and_validate_existing_artifacts_only",
+  "run_ids": [
+    39286848821,
+    39286986254
+  ],
+  "scientific_experiments_to_start": 0,
+  "requested_at": "2026-10-20T01:22:00+08:00",
+  "reason": "User requested reliable unattended evidence saving; retain original ZIPs even if aggregation fails"
+}

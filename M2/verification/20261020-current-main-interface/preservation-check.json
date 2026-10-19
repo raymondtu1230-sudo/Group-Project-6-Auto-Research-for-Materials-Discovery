@@ -1,0 +1,20 @@
+{
+  "non_m2_fields_preserved": true,
+  "field_checks": {
+    "_target_": true,
+    "defaults": true,
+    "enable_planning": true,
+    "enable_memory": true,
+    "enable_reflection": true,
+    "enable_exploration": true,
+    "enable_tool_routing": true,
+    "query_budget": true,
+    "memory_size": true,
+    "memory_manager": true,
+    "self_correction_policy": true,
+    "exploration_policy": true,
+    "planner": true,
+    "scorer": true
+  },
+  "all_five_switches_preserved": true
+}

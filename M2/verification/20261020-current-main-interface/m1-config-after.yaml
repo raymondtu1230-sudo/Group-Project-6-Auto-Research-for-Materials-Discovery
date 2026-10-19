@@ -1,0 +1,64 @@
+_target_: made.agents.m1_integrated.M1IntegratedAgent
+
+defaults:
+  - planner: diversity
+  - generator: random
+  - filter: smact
+  - scorer: random
+
+enable_planning: true
+enable_memory: true
+enable_reflection: false
+enable_exploration: false
+enable_tool_routing: false
+query_budget: ${environment.budget}
+memory_size: 20
+generators:
+  chemeleon:
+    _target_: made.agents.m2_tool_routing.CheckpointedChemeleonGenerator
+    task: csp
+    batch_size: 32
+    device: ${oc.select:oracle.device,cpu}
+    output_dir: null
+    seed: ${experiment.seed}
+memory_manager: null
+self_correction_policy: null
+# M5 UCB exploration policy, wired and ready; flip enable_exploration for the
+# ablation pair. Switch defaults off so the M1 reference is unchanged.
+exploration_policy:
+  _target_: made.agents.m5_exploration.UCBExplorationPolicy
+  seed: ${experiment.seed}
+  alpha0: 0.5
+  gamma: 1.0
+  beta0: 2.0
+  max_stoichiometry: 8
+  length_scale: 0.35
+  noise: 0.0001
+  max_pool: 512
+tool_router:
+  _target_: made.agents.m2_tool_routing.OutcomeAwareToolRouter
+  generator_names:
+  - default
+  - chemeleon
+  seed: ${experiment.seed}
+  exploration_weight: 0.5
+  stable_reward: 0.25
+  late_budget_threshold: 2
+
+planner:
+  seed: ${experiment.seed}
+  num_compositions: 1
+  num_candidates: 8
+  selection_strategy_kwargs:
+    distance_metric: euclidean
+    unattempted_weight: 5.0
+    attempt_weight_factor: 0.7
+    failure_weight_factor: 0.3
+    mask_same_reduced_formula: true
+
+generator:
+  _target_: made.agents.m2_tool_routing.CheckpointedRandomGenerator
+  seed: ${experiment.seed}
+
+scorer:
+  seed: ${experiment.seed}

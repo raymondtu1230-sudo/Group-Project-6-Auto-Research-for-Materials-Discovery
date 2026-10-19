@@ -7,6 +7,7 @@ missing costs and missing paired baselines remain explicit.
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import hashlib
 import json
@@ -30,8 +31,26 @@ def read_json(path: Path) -> Any:
 
 
 def snapshot_hash(entries: list[dict[str, Any]]) -> str:
+    # Pymatgen also serializes lengths/angles/volume and Cartesian positions
+    # derived from its lattice matrix and fractional coordinates. Those values
+    # can differ at the last floating-point bit across CPU implementations.
+    # Compare the exact independent data, without rounding energies, matrices,
+    # fractional coordinates, species, site properties or other metadata.
+    canonical = copy.deepcopy(entries)
+    for entry in canonical:
+        attribute = entry.get("attribute")
+        structure = attribute.get("structure") if isinstance(attribute, dict) else None
+        if not isinstance(structure, dict):
+            continue
+        lattice = structure.get("lattice", {})
+        if "matrix" in lattice:
+            for field in ("a", "b", "c", "alpha", "beta", "gamma", "volume"):
+                lattice.pop(field, None)
+        for site in structure.get("sites", []):
+            if "matrix" in lattice and "abc" in site:
+                site.pop("xyz", None)
     values = sorted(
-        json.dumps(e, sort_keys=True, separators=(",", ":")) for e in entries
+        json.dumps(e, sort_keys=True, separators=(",", ":")) for e in canonical
     )
     return hashlib.sha256("\n".join(values).encode()).hexdigest()
 
