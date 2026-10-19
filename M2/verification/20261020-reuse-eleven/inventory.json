@@ -1,0 +1,763 @@
+{
+  "protocol_sha256": "e9305aefd75fc32612729b7cfd760817234ad006bae99594271badbd69ca7cef",
+  "expected_baseline_units": 36,
+  "completed_baseline_units": 11,
+  "missing_baseline_units": 25,
+  "running_units": [],
+  "failed_units": [],
+  "scope": "Validated inputs only. Query GitHub before dispatch for active jobs. Historical failed attempts remain in verification/20261019-chemeleon-timeout.",
+  "units": [
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/17e1747473b60df105aca6de4f2f18449188122ac768e7747c1538b8cedb4c79/results/protocol_v1/chemeleon_generative_baseline/dev/Mg-Sn-Sr/seed_17/attempt_5001"
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/f9ca80dae172ffbc6e0c1b49d36a5b59db46bb70d2c11524b7d96fc1e248d7ff/M1/MADE/results/protocol_v1/random_generator_baseline/dev/Au-K-Tb/seed_17/attempt_39286848821"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/239417a8cba3f2fcd947632e8ec9c3383d36d463becb94723cf0c11052abd555/M1/MADE/results/protocol_v1/random_generator_baseline/dev/Au-K-Tb/seed_29/attempt_39286848821"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/3287431bd96a5019ee1fda5c83cfa5395a4239f3dcd7fb36615c9322f594cdd1/M1/MADE/results/protocol_v1/random_generator_baseline/dev/Au-K-Tb/seed_43/attempt_39286848821"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/bad74aa61ac1c4ae3711f6af05ee0101c219e153e5d6d71599845448720117e6/M1/MADE/results/protocol_v1/random_generator_baseline/dev/Co-Dy-W/seed_17/attempt_39286848821"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/fd29c8a7db133fbfd5b6fc5e51f197b76ced48730ce6c1a63fd346e524acdad9/M1/MADE/results/protocol_v1/random_generator_baseline/dev/Co-Dy-W/seed_29/attempt_39286848821"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/c5b93361adf59efcf339e3edc35b54de13e71b04f02e81de41ec337ab28e7c0f/M1/MADE/results/protocol_v1/random_generator_baseline/dev/Co-Dy-W/seed_43/attempt_39286848821"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/9711aaf9f30d56aacf0d968f448bb7f63f68aa01754a347dc46381283eae3c2b/M1/MADE/results/protocol_v1/random_generator_baseline/dev/Co-Mg-Na/seed_17/attempt_39286848821"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/81e3f883915f3969d34d6771af42ab650af4d5a1842ea7c1e7193cc61ed32aea/M1/MADE/results/protocol_v1/random_generator_baseline/dev/Co-Mg-Na/seed_29/attempt_39286848821"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/083f811035ec0b187c7f09350ef3a80cf3331cbadf830937342bbf8784528d19/M1/MADE/results/protocol_v1/random_generator_baseline/dev/Co-Mg-Na/seed_43/attempt_39286848821"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "B": 20,
+      "status": "completed",
+      "source": "../../M2/results/reused-eleven/b40ddad769698035e9f65d98f1310f932c9881a825d3be308c8ccd2300b1cd7e/results/protocol_v1/random_generator_baseline/dev/Mg-Sn-Sr/seed_17/attempt_4001"
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    }
+  ],
+  "missing_units": [
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "random_generator_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    }
+  ],
+  "hosted_random_matrix": {
+    "include": [
+      {
+        "method": "random_generator_baseline",
+        "system": "Ga-Pt-Tm",
+        "seed": 17
+      },
+      {
+        "method": "random_generator_baseline",
+        "system": "Ga-Pt-Tm",
+        "seed": 29
+      },
+      {
+        "method": "random_generator_baseline",
+        "system": "Ga-Pt-Tm",
+        "seed": 43
+      },
+      {
+        "method": "random_generator_baseline",
+        "system": "Hf-Ni-Zr",
+        "seed": 17
+      },
+      {
+        "method": "random_generator_baseline",
+        "system": "Hf-Ni-Zr",
+        "seed": 29
+      },
+      {
+        "method": "random_generator_baseline",
+        "system": "Hf-Ni-Zr",
+        "seed": 43
+      },
+      {
+        "method": "random_generator_baseline",
+        "system": "Mg-Sn-Sr",
+        "seed": 29
+      },
+      {
+        "method": "random_generator_baseline",
+        "system": "Mg-Sn-Sr",
+        "seed": 43
+      }
+    ]
+  },
+  "capacity_blocked_chemeleon_units": [
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    }
+  ],
+  "capacity_reason": "Initial sampling is not resumable. Need a verified persistent CPU host with enough runtime and result-save margin before admitting these units.",
+  "superseded_attempts": []
+}

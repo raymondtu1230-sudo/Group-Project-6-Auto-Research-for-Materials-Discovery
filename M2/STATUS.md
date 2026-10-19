@@ -1,5 +1,15 @@
 # M2 status: 20 October 2026 takeover
 
+## Confirmed durable snapshot — 20 October 2026, 01:27 Asia/Singapore
+
+**11/36 distinct dev baseline units validated, zero issues: 10 Random + 1 Chemeleon.** [Preservation run 39293506143](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39293506143) succeeded. Its exact original ZIPs are now committed under `verification/preserved-39293506143/`: nine new Random ZIPs plus all three failed batch256 recovery ZIPs, each matched to its GitHub SHA256. The original two accepted archives remain in their original folders. Official per-unit scores, curves, costs-as-recorded and audit are in that snapshot's `report/`.
+
+All eleven accepted ZIPs are now pinned in `configs/verified_baselines.json`. The reuse planner was actually executed against these exact bytes: completed=11, missing=25. Evidence is in `verification/20261020-reuse-eleven/`. It therefore excludes all eleven accepted units from future missing-only plans. Current source sweep snapshot: four Random units running, four queued; no new Chemeleon unit dispatched. The 25 remaining baseline units comprise eight Random and 17 Chemeleon. Copies of existing artifacts add zero experiments.
+
+The known-cost fields of the original records report zero model/API fees; compute, electricity and interruption costs have not all been priced, so do not interpret the metadata's cost_status=complete as a complete economic cost estimate. The current shared M1/M5 default failure and local smoke failures remain unresolved and explicitly logged. Latest-source cloud CI is still pending; historical passes are not used as its result. M1/M5 issue message is prepared, not sent through WeChat.
+
+Older snapshots below are superseded by this confirmed snapshot.
+
 ## Overnight audit update — 20 October 2026, 01:22 Asia/Singapore
 
 **Nine distinct dev baseline units have passed offline validation (9/36): eight Random and one Chemeleon.** Seven new Random ZIPs from run 39286848821 matched GitHub artifact SHA256; each has complete B=20 history, matching protocol/config and official metrics. The original verified pair is reused once. Remaining baseline units: 27 (10 Random and 17 Chemeleon). The latest job snapshot has one additional Random success awaiting audit, four running and five queued; these counts can change while the run continues.
