@@ -28,6 +28,7 @@ step-by-step guide and updated submission notice were reconciled with this scope
 | Random Mg-Sn-Sr / seed 17 / B=20 | Completed on run 39213257750, job 117931485324 |
 | Offline Random result validation | One run accepted, zero issues, complete query history 1-20 |
 | Random result | mSUN@20=7, AUDC=55.5, driver wall time 952.717 s |
+| Actual live CPU diagnostic | Passed on GitHub Linux in run 39217841268 |
 
 The raw Random ZIP and independently generated tables/curves are in
 [`verification/20261019-random-gate`](verification/20261019-random-gate/README.md).
@@ -38,9 +39,12 @@ zero inference fees do not establish zero total compute cost.
 The local diagnostic test exposed a real namespace limitation: `/proc/self`
 reports a host PID different from `os.getpid()`. CPU counters are therefore
 reported as unknown on that host. The live-CPU assertion is skipped there and
-is mandatory on GitHub Actions Linux; it must pass in CI before this feature is
-claimed verified. This limitation does not affect the generation-marker and
-log-preservation checks or the completed scientific result.
+is mandatory on GitHub Actions Linux. It passed on run 39217841268, which ran
+17 M1 contract tests and 45 M2 tests successfully. That run then stopped on one
+test-import formatting issue; the import was fixed using MADE's Ruff settings.
+The subsequent complete CI run, including the original smoke script, remains
+the final integration acceptance gate. The namespace limitation does not affect
+the completed scientific result.
 
 ## Still active / not yet verified
 

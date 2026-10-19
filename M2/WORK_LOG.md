@@ -25,6 +25,11 @@
   that namespace limitation. After the guard, focused diagnostics: two passed,
   one explicitly skipped. Ruff passed. Keep the subsequent CI run as the source
   of truth for the complete handoff verification.
+- GitHub run 39217841268 executed 17 original M1 contracts and 45 M2 tests,
+  including actual live CPU-counter growth, with no failures or skips. Its next
+  lint step found one import-group formatting issue under MADE's Ruff config.
+  Fixed that formatting and reran the exact lint command from `M1/MADE`; it
+  passed. A follow-up CI run must complete the remaining original smoke gate.
 - Chemeleon's full protocol unit remains separate from the earlier three-call
   model-continuation check. A generation check does not establish discovery
   performance. Preserve the active frozen run rather than duplicate it.
