@@ -60,6 +60,79 @@
         }
       ],
       "user_report": "Batches 1 and 2 complete; batch 3 of 4 at 202/256. CPU and sampling advanced. Captured oracle queries remain 0."
+    },
+    {
+      "observed_at": "2026-10-19T13:32:55.650Z",
+      "batch": 4,
+      "sampling_step": 40,
+      "sampling_total": 256,
+      "total_batches": 4,
+      "completed_batches": 3,
+      "captured_queries": 0,
+      "source": "GitHub live job UI, expanded experiment step",
+      "source_url": "https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39234974449/job/118001953048",
+      "reported_milestones": [
+        "batch3:250",
+        "batch3:256",
+        "batch3:complete",
+        "batch4:start"
+      ],
+      "milestone_evidence": "Batch 4 at step 40 confirms completion of batch 3; intermediate batch-3 milestone timestamps were not individually observed.",
+      "diagnostics": [
+        {
+          "process_cpu_seconds": 23021.36,
+          "process_log_bytes": 554147,
+          "generation_batch": 3,
+          "generation_batch_size": 256,
+          "sampling_step": 240,
+          "sampling_total": 256,
+          "sampling_elapsed_seconds": 3726,
+          "elapsed_seconds": 11451,
+          "captured_queries": 0,
+          "cpu_advanced": true,
+          "scope": "process_diagnostics_not_discovery_metrics"
+        },
+        {
+          "process_cpu_seconds": 23111.54,
+          "process_log_bytes": 554319,
+          "generation_batch": 3,
+          "generation_batch_size": 256,
+          "sampling_step": 242,
+          "sampling_total": 256,
+          "sampling_elapsed_seconds": 3757,
+          "elapsed_seconds": 11496,
+          "captured_queries": 0,
+          "cpu_advanced": true,
+          "scope": "process_diagnostics_not_discovery_metrics"
+        },
+        {
+          "process_cpu_seconds": 23201.72,
+          "process_log_bytes": 554577,
+          "generation_batch": 3,
+          "generation_batch_size": 256,
+          "sampling_step": 245,
+          "sampling_total": 256,
+          "sampling_elapsed_seconds": 3803,
+          "elapsed_seconds": 11541,
+          "captured_queries": 0,
+          "cpu_advanced": true,
+          "scope": "process_diagnostics_not_discovery_metrics"
+        },
+        {
+          "process_cpu_seconds": 24734.52,
+          "process_log_bytes": 558337,
+          "generation_batch": 4,
+          "generation_batch_size": 256,
+          "sampling_step": 40,
+          "sampling_total": 256,
+          "sampling_elapsed_seconds": 596,
+          "elapsed_seconds": 12308,
+          "captured_queries": 0,
+          "cpu_advanced": true,
+          "scope": "process_diagnostics_not_discovery_metrics"
+        }
+      ],
+      "user_report": "First three batches complete; batch 4 of 4 at 40/256. CPU and sampling advanced. Captured oracle queries remain 0."
     }
   ]
 }
