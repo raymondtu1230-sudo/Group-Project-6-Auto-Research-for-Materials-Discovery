@@ -1,0 +1,19 @@
+{
+  "run_id": 39211626362,
+  "revision": "ba02f9cecaf58ecac0e0bb7bf553972666b1577a",
+  "url": "https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39211626362",
+  "conclusion": "success",
+  "pytest_tests": 51,
+  "required_m1_contract": "passed",
+  "required_focused_ruff": "passed",
+  "required_unchanged_smoke": "passed",
+  "smoke_dataset": "synthetic; not a materials benchmark",
+  "log_excerpts": [
+    "2026-10-19T06:45:43.0264419Z 17 passed, 3 warnings in 41.61s",
+    "2026-10-19T06:46:02.1427027Z 34 passed, 3 warnings in 14.38s",
+    "2026-10-19T06:46:04.1552350Z All checks passed!",
+    "2026-10-19T06:46:04.2384269Z All checks passed!",
+    "2026-10-19T06:46:06.7865817Z ##[group]Run uv run python ../run_smoke_test.py",
+    "2026-10-19T06:46:32.0669360Z [2026-10-19 06:46:32] [INFO] [__main__] Saved results to /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/results/20261019-064609-analytic-m1_integrated (episodes.json, episodes.csv, summary.json, trajectories/*.json)"
+  ]
+}
