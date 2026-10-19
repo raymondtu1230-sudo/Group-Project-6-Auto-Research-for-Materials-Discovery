@@ -45,16 +45,27 @@ def process_progress(pid: int, log_path: Path) -> dict[str, Any]:
     except (OSError, ValueError, IndexError, AttributeError):
         pass
     log_bytes, generation_batch, generation_batch_size = 0, None, None
+    sampling_step, sampling_total, sampling_elapsed_seconds = None, None, None
     try:
         with log_path.open("rb") as stream:
             log_bytes = stream.seek(0, os.SEEK_END)
-            stream.seek(max(0, log_bytes - 16384))
+            stream.seek(max(0, log_bytes - 65536))
             tail = stream.read().decode("utf-8", errors="replace")
         # Emit only the known numeric marker, not arbitrary log content which
         # might contain credentials, private paths, or thousands of formulas.
         batches = re.findall(r"Generating batch #(\d+) with (\d+) samples", tail)
         if batches:
             generation_batch, generation_batch_size = map(int, batches[-1])
+        samples = re.findall(
+            r"Sampling:\s+\d+%\|[^\r\n]*?\|\s*(\d+)/(\d+)\s+\[([\d:]+)<",
+            tail,
+        )
+        if samples:
+            step, total, elapsed = samples[-1]
+            sampling_step, sampling_total = int(step), int(total)
+            sampling_elapsed_seconds = 0
+            for part in elapsed.split(":"):
+                sampling_elapsed_seconds = sampling_elapsed_seconds * 60 + int(part)
     except OSError:
         pass
     return {
@@ -62,6 +73,9 @@ def process_progress(pid: int, log_path: Path) -> dict[str, Any]:
         "process_log_bytes": log_bytes,
         "generation_batch": generation_batch,
         "generation_batch_size": generation_batch_size,
+        "sampling_step": sampling_step,
+        "sampling_total": sampling_total,
+        "sampling_elapsed_seconds": sampling_elapsed_seconds,
     }
 
 

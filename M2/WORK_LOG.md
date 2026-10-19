@@ -51,6 +51,30 @@ unit-level scores only with their raw evidence and never as a full comparison.
   kept PR #2's integration changes separate from this folder publication.
 - No scientific run was cancelled, restarted or duplicated for packaging.
 
+## 19 October 2026: verified timeout cause and one-unit recovery
+
+- Read actual jobs/artifacts after the Chemeleon gate ended at 17:47 Singapore
+  time. Its action log explicitly states a 165-minute timeout. Older job
+  117924795008 ended with a cancelled conclusion at 17:40; its available log
+  does not identify a cancellation actor.
+- Downloaded artifacts 12177571578, 12177865607 and 12176904574 and verified
+  all three SHA-256 digests against GitHub. Preserved untouched ZIPs, both job
+  logs and source provenance in `verification/20261019-chemeleon-timeout/`.
+- Model process logs show three complete batches in both attempts and progress
+  in batch 4. The new gate completed its first three batches in 52:38, 51:28
+  and 55:28, then reached step 3/256 in batch 4. This establishes computation,
+  not a deadlock. No complete candidate-generation checkpoint was preserved.
+- Kept missing final metrics/configuration/query histories explicit. The
+  original partial report accepts only the existing Random unit and records
+  the incomplete Chemeleon attempt. Baseline completion remains 1/36.
+- Prepared one bounded Chemeleon-only retry with 330/350-minute action/job
+  limits. The manual input defaults to recovery; Random and the wider sweep
+  are excluded, and a rerun of the same recovery run is blocked. Model, seed,
+  pool, batch size, CPU, official science code and B=20 are unchanged.
+- Extended only external diagnostics to expose numeric diffusion sampling
+  steps and elapsed time. New tests/checks must run before launch; the earlier
+  CI is not represented as verification of this modification.
+
 ## 19 October 2026: exact M1 handoff acceptance audit
 
 - Reconciled the user's pasted handoff requirements with all five required M1
@@ -68,3 +92,14 @@ unit-level scores only with their raw evidence and never as a full comparison.
 - Retained main and the one M2 development branch because integration review
   and scientific experiments remain open. The independent main/M2 package is
   available; full baseline and full-reference comparisons remain incomplete.
+
+- Recovery-code CI 39234330794 passed: 17 M1 and 46 M2 tests without skips,
+  Ruff, reproducible installation and unchanged official smoke. Preserved the
+  actual CI source/hash/artifact identity in `recovery_ci.json`.
+- The default branch does not activate M2 workflow files. A single immutable
+  `retry-request.json` commit therefore requests the one authorized recovery
+  on the development branch. The exact-path push trigger excludes ordinary
+  changes; its empty-input fallback selects Chemeleon only and no sweep.
+- Launched run 39234974449 at source 3e07d9f0. It has entered the official protocol step, not a
+  completed performance result. The existing result monitor follows this run
+  and is instructed not to spend the once-only retry authorization again.

@@ -92,8 +92,9 @@ configuration, logs or chat. The format check does not establish API access;
 only an actual Materials Project request does.
 
 The observer now emits separate process diagnostics: process CPU seconds, log
-bytes, and Chemeleon's numeric generation-batch marker, together with completed
-query counts. Its child output is unbuffered. A heartbeat is not evidence of a
+bytes, Chemeleon's numeric generation-batch marker, latest sampling step/total,
+and elapsed sampling seconds, together with completed query counts. Its child
+output is unbuffered. A heartbeat is not evidence of a
 completed query; CPU/log activity is not a discovery score. Unavailable or
 incompatible `/proc` namespaces leave CPU counters unknown. Diagnostic JSONL
 files accompany each new attempt and never enter agent state or official metrics.
@@ -119,14 +120,18 @@ development systems and seeds 17, 29, 43 in separate processes. Preserve every
 failed attempt and choose a new attempt number when retrying.
 
 The first development unit is an end-to-end gate, not the complete 36-unit
-baseline sweep. The workflow reads all units from the protocol, runs the two
-gates, then the remaining 34 units with at most four concurrent jobs. It preserves
-each attempt and automatically produces a development report after the sweep,
-including missing/failed units. `baseline_sweep_complete` is separate from
-`final_comparison_complete`, which also requires M1's full integrated method.
-The sweep is manually triggered after adopting the workflow; code-only pushes
-run the lightweight integration checks. The already-started sweep continues at
-its recorded revision. Results retain the capture source hash: wall-time claims
+baseline sweep. The manual workflow now defaults to `mode=chemeleon_retry`:
+one first-development Chemeleon unit, no Random rerun and no wider sweep. A
+rerun of that same recovery run is blocked; there is no automatic retry loop.
+The action/job limits are 330/350 minutes; these external limits do not alter
+scientific settings. See the [real timeout audit](verification/20261019-chemeleon-timeout/README.md).
+
+Only the explicitly selected `mode=baseline_sweep` reads all protocol units,
+runs both gates and then the remaining 34 units with at most four concurrent
+jobs. Each attempt is retained, including missing/failed units in its report.
+`baseline_sweep_complete` is separate from `final_comparison_complete`, which
+also requires M1's full integrated method. Code-only pushes run lightweight
+integration checks. Results retain the capture source hash: wall-time claims
 must also account for observer version, hardware and initial model downloads.
 Official smoke tests use synthetic data and AnalyticOracle;
 they verify integration and do not count as materials-discovery results.

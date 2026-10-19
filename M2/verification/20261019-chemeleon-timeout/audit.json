@@ -29,15 +29,15 @@
       "sampling_batches": [
         {
           "marker": "Generating batch #1 with 256 samples.",
-          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [52:38<00:00, 12.34s/it]"
+          "last_sampling_line": "Sampling: 100%|██████████| 256/256 [52:38<00:00, 12.34s/it]"
         },
         {
           "marker": "Generating batch #2 with 256 samples.",
-          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [51:28<00:00, 12.06s/it]"
+          "last_sampling_line": "Sampling: 100%|██████████| 256/256 [51:28<00:00, 12.06s/it]"
         },
         {
           "marker": "Generating batch #3 with 256 samples.",
-          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [55:28<00:00, 13.00s/it]"
+          "last_sampling_line": "Sampling: 100%|██████████| 256/256 [55:28<00:00, 13.00s/it]"
         },
         {
           "marker": "Generating batch #4 with 256 samples.",
@@ -78,19 +78,19 @@
       "sampling_batches": [
         {
           "marker": "Generating batch #1 with 256 samples.",
-          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [43:26<00:00, 10.18s/it]"
+          "last_sampling_line": "Sampling: 100%|██████████| 256/256 [43:26<00:00, 10.18s/it]"
         },
         {
           "marker": "Generating batch #2 with 256 samples.",
-          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [42:53<00:00, 10.05s/it]"
+          "last_sampling_line": "Sampling: 100%|██████████| 256/256 [42:53<00:00, 10.05s/it]"
         },
         {
           "marker": "Generating batch #3 with 256 samples.",
-          "last_sampling_line": "Sampling: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [46:25<00:00, 10.88s/it]"
+          "last_sampling_line": "Sampling: 100%|██████████| 256/256 [46:25<00:00, 10.88s/it]"
         },
         {
           "marker": "Generating batch #4 with 256 samples.",
-          "last_sampling_line": "Sampling:  98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 251/256 [43:34<00:52, 10.50s/it]"
+          "last_sampling_line": "Sampling:  98%|█████████▊| 251/256 [43:34<00:52, 10.50s/it]"
         }
       ],
       "complete_query_history_present": false,
@@ -118,7 +118,7 @@
     ]
   },
   "one_retry": {
-    "status": "prepared_not_started",
+    "status": "running_official_protocol_step",
     "method": "chemeleon_generative_baseline",
     "split": "dev",
     "system": [
@@ -133,7 +133,14 @@
     "scientific_settings_changed": false,
     "random_rerun": false,
     "wider_sweep_started": false,
-    "automatic_retry": false
+    "automatic_retry": false,
+    "run_id": 39234974449,
+    "source_revision": "3e07d9f0f35a5d0bc21321c2044f798e9ab1a16a",
+    "url": "https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39234974449",
+    "retry_authorization_consumed": true,
+    "verified_scientific_completion": false,
+    "validation_run_id": 39234330794,
+    "job_id": 118001953048
   },
   "github_job_logs_sha256": "d8641626247636683507dffaf69ed385d77e13aa96013aecb10a75ceb8bd4e09",
   "source_comparison": {

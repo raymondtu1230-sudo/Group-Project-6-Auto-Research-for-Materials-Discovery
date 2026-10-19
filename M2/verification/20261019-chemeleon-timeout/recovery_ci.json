@@ -1,0 +1,21 @@
+{
+  "run_id": 39234330794,
+  "job_id": 117999633444,
+  "commit": "4284a7d86078f36625d28ec663755270be386a8f",
+  "conclusion": "success",
+  "M1_contract_tests_passed": 17,
+  "M2_tests_passed": 46,
+  "skips": 0,
+  "ruff": "passed",
+  "installation_reproducibility": "passed",
+  "unchanged_official_smoke": "passed",
+  "artifact_id": 12178840159,
+  "artifact_sha256": "9b3f3bed130abd9b6067c7c19a19776a7da4fa77380f8e67ee6b494ee39a2e77",
+  "science_result": false,
+  "run_baselines_py_sha256": "92588c907aad0960ac72636b2012b5acdcdd7861c5701ac5994e8de270e0f835",
+  "final_workflow_trigger_ci": {
+    "run_id": 39234757674,
+    "commit": "ef7f8c20e96ea3caaf932558859bdf508036ac4b",
+    "conclusion": "success"
+  }
+}
