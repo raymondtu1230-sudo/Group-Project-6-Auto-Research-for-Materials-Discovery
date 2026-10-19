@@ -12,6 +12,7 @@ import hashlib
 import inspect
 import json
 import os
+import platform
 import random
 from pathlib import Path
 
@@ -94,6 +95,11 @@ class BatchCache:
                 "numpy": np.__version__,
                 "threads": torch.get_num_threads(),
                 "source": source_hash,
+                "module_source": hashlib.sha256(
+                    Path(inspect.getfile(model_class)).read_bytes()
+                ).hexdigest(),
+                "cpu_capability": torch.backends.cpu.get_cpu_capability(),
+                "architecture": platform.machine(),
                 "weights": model_digest(model),
             }
             key = digest(identity)

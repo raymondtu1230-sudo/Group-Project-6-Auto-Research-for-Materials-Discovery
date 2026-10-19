@@ -1,4 +1,15 @@
-# M2 handoff acceptance checklist
+# Current acceptance update: 20 October 2026
+
+## Current independent verification update
+
+Scientific coverage remains 2/36. Corrected Random run39286848821 has released 17 missing-only units; the latest observed matrix has four running job environments and 13 queued, with no new accepted result. Original Mg-Sn-Sr/17 units are excluded. Running-job log download currently returns BlobNotFound, so query/CPU counts are not inferred from workflow status.
+
+The original small-model recovery ZIP has now been independently downloaded and SHA256-verified in verification/20261020-batch-recovery-small/. All four exact continuation checks pass on source639f47b3. Batch256 validation39286986254 has completed the continuous and deliberately interrupted stages; restoration on a separate runner is in progress. It must still pass the final exact comparison. No formal Chemeleon unit uses this cache yet.
+
+The reviewed M6-format draft, native chart input and speaker notes are in report/. The binary draft and original small-recovery ZIP are deterministically published from checksum-verified encoded bytes by the separate assets workflow. This creates no scientific workload. M2's local Ruff configuration makes namespace import classification explicit. Current local rerun:17 M1 passes,52 M2 passes,one CPU-namespace skip. The new source still requires its own GitHub acceptance; prior source-specific checks remain historical.
+
+M1's shared configuration advanced independently with M5 wiring during the takeover. M2 publication preserves that current tree and does not modify the shared configuration. No active scientific workflow is restarted for these source/documentation updates.
+
 
 ## Latest continuation — 20 October 2026, Singapore time
 
@@ -18,8 +29,9 @@ attempts. Main changes remain under M2; M1 integration and freeze stay with M1.
   Revision `b3f68f274373d4599a7e026cd0f3cf5a9889e977` starts
   [missing-only Random run 39286848821](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39286848821).
   Its prepare job has now passed the current checks including official smoke,
-  and retained-evidence validation. The 17-unit matrix is now released;
-  2 Random jobs are running and 15 are queued at this observation. Its matrix admits only missing Random
+  and retained-evidence validation. The 17-unit matrix is released;
+  two Random jobs were performing scientific computation and 15 were queued
+  at the 16:40 UTC observation. Its matrix admits only missing Random
   units, at most four concurrently; an existing completed pair is never rerun.
 - Actual small-model recovery run
   [39285316913](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39285316913)
@@ -36,20 +48,32 @@ attempts. Main changes remain under M2; M1 integration and freeze stay with M1.
   preserved first-batch bytes and distinct runner hostnames. This is **not a
   benchmark result or proof of full protocol-pool compatibility**. No formal
   Chemeleon unit has been scheduled using this experimental cache.
-- Fresh isolated local checks: 17 M1 tests and 53 M2 tests passed, no skips in
+- Fresh isolated local checks for this turn's development source (not the
+  concurrently published main prototype): 17 M1 tests and 53 M2 tests passed, no skips in
   this host invocation; focused and complete M2 Ruff passed. Local official
   smoke reached Chrome export but stalled and was terminated as an incomplete
   synthetic check. The earlier local CPU-namespace skip and Chrome socket
   failure remain historical records, not passes. Current GitHub gate is the
   source of truth for hosted smoke.
-- Current-source CIs: 39286848820 (`b3f68f2`) and 39286986328 (`e30b5bb`)
-  were queued at last inspection; no final success is asserted for them.
+- Current-source CI [39286986328](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39286986328)
+  at `e30b5bb` now passed all gates, including reproducible installation,
+  original M1 tests, all M2 tests, both Ruff checks and unchanged official smoke.
+  CI 39286848820 was still pending at its earlier inspection.
 - Keep the M2 development branch and draft PR #2. Do not merge, delete branches,
   change official parameters, or edit the old retry-request.json. Routing-off
   still depends on M1's frozen full-method reference; M6 owns check/hidden tests.
 
 
-## Historical record retained below
+## Earlier takeover snapshot (preserved)
+
+The source revision `2b2c6753` and CI counts below are historical evidence.
+Current reruns, skipped checks and the local smoke failure are recorded in
+`verification/20261020-takeover/`. Current GitHub CI must be checked by revision.
+Do not treat any old CI as proof of the newly added scheduler or recovery prototype.
+The router itself and all five M1 switches are unchanged. Experimental batch
+replay is a separate admission gate, not an accepted scientific result.
+
+# M2 handoff acceptance checklist
 
 Reviewed on 19 October 2026 against the user's supplied M1 handoff instructions.
 This checklist covers the M2 component handoff. Completion of the team's full
@@ -142,8 +166,7 @@ performance is accepted only from completed, validated protocol experiments.
   method score exists. Another 34 baseline units, the full integrated reference
   and routing-off comparison remain incomplete.
 - Keep `main`: it is the shared delivery branch. Keep the single M2 development
-  branch while PR review/integration and experiment work remain active. The
-  repository has two branches in total, not two separate M2 branches.
+  branch while PR review/integration and experiment work remain active. Other members also have their own branches; retain them.
 - Retire the M2 branch only after its required changes are accepted into the
   shared branch, checks pass, and experiment evidence and remaining workflow
   needs are accounted for. Folder delivery alone is not a reason to delete it.

@@ -18,8 +18,9 @@ attempts. Main changes remain under M2; M1 integration and freeze stay with M1.
   Revision `b3f68f274373d4599a7e026cd0f3cf5a9889e977` starts
   [missing-only Random run 39286848821](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39286848821).
   Its prepare job has now passed the current checks including official smoke,
-  and retained-evidence validation. The 17-unit matrix is now released;
-  2 Random jobs are running and 15 are queued at this observation. Its matrix admits only missing Random
+  and retained-evidence validation. The 17-unit matrix is released;
+  two Random jobs were performing scientific computation and 15 were queued
+  at the 16:40 UTC observation. Its matrix admits only missing Random
   units, at most four concurrently; an existing completed pair is never rerun.
 - Actual small-model recovery run
   [39285316913](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39285316913)
@@ -36,20 +37,23 @@ attempts. Main changes remain under M2; M1 integration and freeze stay with M1.
   preserved first-batch bytes and distinct runner hostnames. This is **not a
   benchmark result or proof of full protocol-pool compatibility**. No formal
   Chemeleon unit has been scheduled using this experimental cache.
-- Fresh isolated local checks: 17 M1 tests and 53 M2 tests passed, no skips in
+- Fresh isolated local checks for this turn's development source (not the
+  concurrently published main prototype): 17 M1 tests and 53 M2 tests passed, no skips in
   this host invocation; focused and complete M2 Ruff passed. Local official
   smoke reached Chrome export but stalled and was terminated as an incomplete
   synthetic check. The earlier local CPU-namespace skip and Chrome socket
   failure remain historical records, not passes. Current GitHub gate is the
   source of truth for hosted smoke.
-- Current-source CIs: 39286848820 (`b3f68f2`) and 39286986328 (`e30b5bb`)
-  were queued at last inspection; no final success is asserted for them.
+- Current-source CI [39286986328](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39286986328)
+  at `e30b5bb` now passed all gates, including reproducible installation,
+  original M1 tests, all M2 tests, both Ruff checks and unchanged official smoke.
+  CI 39286848820 was still pending at its earlier inspection.
 - Keep the M2 development branch and draft PR #2. Do not merge, delete branches,
   change official parameters, or edit the old retry-request.json. Routing-off
   still depends on M1's frozen full-method reference; M6 owns check/hidden tests.
 
 
-## Historical record retained below
+## Earlier takeover snapshot (preserved)
 
 ## 19 October 2026: continuation after interrupted conversation
 
@@ -176,3 +180,28 @@ unit-level scores only with their raw evidence and never as a full comparison.
 - Published evidence/status on main/M2 and the existing development branch,
   retaining PR #2 without merging. With no active monitored science left,
   pause this result-recovery monitor after publication verification.
+
+## 20 October 2026: current takeover and safe missing-only continuation
+
+- Reread the five M1 contract/source files, all requested M2 records, formal protocol, course brief, task split and guide. Inspected all four M1 message screenshots and M6's newly available report/slide/compute formats.
+- Preserved the M2 branch and draft PR #2. Main advanced independently through M6 publication/removal of comms files; do not overwrite those or merge the development branch.
+- Rechecked original archive SHA256 values and executed official metrics again. Two accepted baseline units, zero issues, no new score, 34 missing baselines and 18 missing frozen full-method units. Current installed source matches all 69 Chemeleon M1 hashes. Random's sole differing hash is the unused M2 router from an earlier revision.
+- Added checksum-pinned imports and a missing-only 36-unit inventory. Tests protect against rescheduling a completed pair, invalid/newer failed evidence, corrupted archives and overwriting existing evidence. Historical failures stay in their original package. A latest failed attempt requires explicit review, not silent fallback.
+- Requested run 39284865198 at source 955bdca9: only 17 missing Random units, fresh acceptance gates, max four concurrent processes, automatic raw retention/offline reporting and M2-only publication on main. Queued is not running. Scientific configuration and run_baselines.py are unchanged.
+- Local locked environment installed successfully. Original M1 tests: 17 passed. Combined current M2 tests including new recovery mechanics: 52 passed, 1 CPU-namespace skip. Focused/all-M2 Ruff passed. The original smoke failed at Chrome socket creation (Operation not permitted), despite Chrome installation and no missing shared libraries. Kept the original failed log; GitHub CI is separately queued.
+- User asked how to prevent losing another long Chemeleon initialization. Implemented experimental batch-level output/RNG replay outside official source and four passing synthetic continuation/rejection tests. It refuses changed identity, RNG or corrupted bytes. Actual local model download returned upstream HTTP 403 before sampling; no bypass or fabricated real result.
+- Requested actual small recovery check 39285316913 at source 639f47b3. Prepared stronger full-batch256/cross-runner artifact recovery validation. Formal Chemeleon remains blocked until admission; no reduced candidate pool, batch size, diffusion steps or query budget is used for a claimed protocol result. Small recovery fixtures are labelled integration tests.
+- Produced a four-slide editable M6 draft: routing and paired discovery curves for M6 slots 7/10 (40 seconds each), protocol/cost backups and speaker notes. Native charts carry the exact official curve data and embedded workbooks. Rendered/inspected all four slides; package/layout/chart validation passed. This creates a draft deliverable, not a final team presentation.
+- Corrected obsolete reference ownership and branch-count statements. M1 still integrates/freezes/supplies the full reference. M6 still owns check/hidden evaluation. No group message was sent and no receipt/acceptance was claimed.
+
+Lesson: prevent repetition at the expensive model-batch boundary and validate exact continuation before trusting it. Preserve model outputs and RNG, not just activity logs. An execution-recovery fixture does not replace a completed 20-query scientific unit.
+
+## Current independent verification update
+
+Scientific coverage remains 2/36. Corrected Random run39286848821 has released 17 missing-only units; the latest observed matrix has four running job environments and 13 queued, with no new accepted result. Original Mg-Sn-Sr/17 units are excluded. Running-job log download currently returns BlobNotFound, so query/CPU counts are not inferred from workflow status.
+
+The original small-model recovery ZIP has now been independently downloaded and SHA256-verified in verification/20261020-batch-recovery-small/. All four exact continuation checks pass on source639f47b3. Batch256 validation39286986254 has completed the continuous and deliberately interrupted stages; restoration on a separate runner is in progress. It must still pass the final exact comparison. No formal Chemeleon unit uses this cache yet.
+
+The reviewed M6-format draft, native chart input and speaker notes are in report/. The binary draft and original small-recovery ZIP are deterministically published from checksum-verified encoded bytes by the separate assets workflow. This creates no scientific workload. M2's local Ruff configuration makes namespace import classification explicit. Current local rerun:17 M1 passes,52 M2 passes,one CPU-namespace skip. The new source still requires its own GitHub acceptance; prior source-specific checks remain historical.
+
+M1's shared configuration advanced independently with M5 wiring during the takeover. M2 publication preserves that current tree and does not modify the shared configuration. No active scientific workflow is restarted for these source/documentation updates.

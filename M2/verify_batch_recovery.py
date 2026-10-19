@@ -26,7 +26,6 @@ from M2.generation_cache import (  # noqa: E402
     GenerationPausedError,
     rng_state,
 )
-
 from made.agents.base import Plan  # noqa: E402
 from made.agents.generators.chemeleon import ChemeleonGenerator  # noqa: E402
 
@@ -51,16 +50,21 @@ def main() -> None:
         actual = json.loads((args.output / "resume.json").read_text())
         interrupted = json.loads((args.output / "interrupt.json").read_text())
         checks = {
+            "diffusion_steps_equal": expected["diffusion_steps"]
+            == actual["diffusion_steps"]
+            and expected["diffusion_steps"] > 0,
             "structures_equal": expected["structures"] == actual["structures"],
             "rng_equal": expected["rng"] == actual["rng"],
             "first_batch_preserved": interrupted["new_batches"] == 1,
             "completed_batch_not_sampled_twice": actual["replayed_batches"] == 1
             and actual["new_batches"] == 1,
             "candidate_count": len(actual["structures"]) == args.num_candidates,
-            "fixture_equal": expected["fixture"] == actual["fixture"]
+            "fixture_equal": expected["fixture"]
+            == actual["fixture"]
             == interrupted["fixture"],
             "cache_source_equal": expected["cache_source_sha256"]
-            == actual["cache_source_sha256"] == interrupted["cache_source_sha256"],
+            == actual["cache_source_sha256"]
+            == interrupted["cache_source_sha256"],
             "saved_batch_bytes_preserved": interrupted["first_batch_sha256"]
             == actual["first_batch_sha256"],
         }
@@ -89,8 +93,10 @@ def main() -> None:
     np.random.seed(17)
     torch.manual_seed(17)
     fixture = {
-        "formula": "Li2O", "batch_size": args.batch_size,
-        "num_candidates": args.num_candidates, "seed": 17,
+        "formula": "Li2O",
+        "batch_size": args.batch_size,
+        "num_candidates": args.num_candidates,
+        "seed": 17,
         "diffusion_steps": "unchanged model default (256)",
     }
     generator = ChemeleonGenerator(task="csp", batch_size=args.batch_size, device="cpu")
@@ -112,6 +118,7 @@ def main() -> None:
                     raise
     record = {
         "fixture": fixture,
+        "diffusion_steps": generator.dm.num_timesteps,
         "runner": {"hostname": socket.gethostname(), "name": os.getenv("RUNNER_NAME")},
         "structures": [s.as_dict() for s in result] if result else None,
         "rng": rng_state(),
@@ -122,7 +129,9 @@ def main() -> None:
         ).hexdigest(),
         "first_batch_sha256": hashlib.sha256(
             (args.output / "cache/batch_0000.json").read_bytes()
-        ).hexdigest() if args.mode != "continuous" else None,
+        ).hexdigest()
+        if args.mode != "continuous"
+        else None,
     }
     target = args.output / f"{args.mode}.json"
     if target.exists():
@@ -132,4 +141,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

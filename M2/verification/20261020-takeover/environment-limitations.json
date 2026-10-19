@@ -1,0 +1,25 @@
+{
+  "m1_contracts": {
+    "passed": 17,
+    "failed": 0
+  },
+  "m2_contracts_and_reporting": {
+    "passed": 48,
+    "skipped": 1,
+    "failed": 0
+  },
+  "skip_reason": "Local /proc namespace does not match process IDs. Not counted as passed.",
+  "official_smoke": {
+    "status": "failed_environment",
+    "reason": "Chrome process_singleton socket() failed: Operation not permitted. Chrome installed and ldd reports no missing libraries. Original smoke and runner unchanged."
+  },
+  "real_batch_recovery_local": {
+    "status": "blocked_environment",
+    "reason": "Official model checkpoint download from Figshare returned HTTP 403. No real sample completed locally."
+  },
+  "retained_baselines": 2,
+  "total_baselines": 36,
+  "random_request_source": "955bdca92b732c7d4fef64928df35fc15320fe85",
+  "random_workflow_run": 39284865198,
+  "new_scientific_units_completed": 0
+}

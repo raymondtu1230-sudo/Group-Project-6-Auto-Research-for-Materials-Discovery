@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 import pytest
+
 from M2 import evaluate
 from M2.evaluate import (
     CURVE,
@@ -384,4 +385,3 @@ def test_incomparable_references_cannot_leave_a_successful_final_audit(
     assert audit["final_comparison_complete"] is False
     assert any(i["kind"] == "incomparable_runs" for i in audit["issues"])
     assert not (output / "per_run.csv").exists()
-

@@ -1,0 +1,3 @@
+method,split,system,n,mSUN_at_B_n,mSUN_at_B_mean,mSUN_at_B_std,AUDC_n,AUDC_mean,AUDC_std,wall_time_seconds_n,wall_time_seconds_mean,wall_time_seconds_std,known_cost_usd_n,known_cost_usd_mean,known_cost_usd_std,AF_vs_random_n,AF_vs_random_mean,AF_vs_random_std,EF_vs_random_n,EF_vs_random_mean,EF_vs_random_std,AF_vs_chemeleon_n,AF_vs_chemeleon_mean,AF_vs_chemeleon_std,EF_vs_chemeleon_n,EF_vs_chemeleon_mean,EF_vs_chemeleon_std
+chemeleon_generative_baseline,dev,Mg-Sn-Sr,1,1,16.0,,1,161.0,,1,15767.025,,1,0.0,,1,2.375,,1,2.2857142857142856,,1,1.0,,1,1.0,
+random_generator_baseline,dev,Mg-Sn-Sr,1,1,7.0,,1,55.5,,1,952.717,,1,0.0,,1,1.0,,1,1.0,,1,0.0,,1,0.4375,

@@ -1,0 +1,13 @@
+{
+  "kind": "real_cross_process_chemeleon_batch_recovery",
+  "benchmark_score": false,
+  "fixture": "Li2O, two candidates, batch size 1, original 256 diffusion steps",
+  "checks": {
+    "structures_equal": true,
+    "rng_equal": true,
+    "first_batch_preserved": true,
+    "completed_batch_not_sampled_twice": true
+  },
+  "passed": true,
+  "scope": "Small actual-model integration check. Full protocol pool/batch-scale validation still required."
+}

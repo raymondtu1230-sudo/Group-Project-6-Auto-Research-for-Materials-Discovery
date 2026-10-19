@@ -6,6 +6,7 @@ from zipfile import ZipFile
 
 import pytest
 import yaml
+
 from M2 import prepare_missing as scheduling
 from M2.tests.test_evaluation import fixture_run, write
 
@@ -76,4 +77,3 @@ def test_archive_hash_and_existing_bytes_are_protected(tmp_path, monkeypatch):
     write(manifest, {"archives": [{"path": "raw.zip", "sha256": "wrong"}]})
     with pytest.raises(ValueError, match="checksum mismatch"):
         scheduling.import_verified_archives(manifest, tmp_path / "dest")
-

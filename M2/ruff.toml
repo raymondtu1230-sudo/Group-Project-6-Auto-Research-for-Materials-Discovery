@@ -1,0 +1,5 @@
+# Make namespace-package import classification independent of checkout location.
+extend = "../M1/MADE/pyproject.toml"
+
+[lint.isort]
+known-first-party = ["made", "M2"]

@@ -8,6 +8,7 @@ import pytest
 import torch
 from ase import Atoms
 from ase.io.jsonio import encode
+
 from M2.generation_cache import BatchCache, GenerationPausedError, rng_state
 
 
