@@ -1,0 +1,179 @@
+name: M2 missing-only development baselines
+
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths: [M2/requests/dev-random-missing.json]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: m2-real-baselines-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  OMP_NUM_THREADS: '2'
+  MKL_NUM_THREADS: '2'
+  UV_LINK_MODE: hardlink
+
+jobs:
+  prepare:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      has_work: ${{ steps.plan.outputs.has_work }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - name: Install the locked environment and M2 slots in this isolated checkout
+        working-directory: M1/MADE
+        run: |
+          uv sync --locked
+          uv run python ../../M2/install.py
+      - name: Run current M1 and M2 checks before spending scientific compute
+        working-directory: M1/MADE
+        run: |
+          uv run pytest -q tests/test_m1_integrated.py
+          uv run pytest -q tests/test_m2_tool_routing.py ../../M2/tests -o addopts='' --junitxml=../../M2/results/acceptance.xml
+          uv run ruff check src/made/agents/m2_tool_routing.py tests/test_m2_tool_routing.py ../../M2
+          uv run python -c 'import kaleido; kaleido.get_chrome_sync()'
+          uv run python ../run_smoke_test.py
+      - name: Verify reused evidence and emit only missing Random units
+        id: plan
+        working-directory: M1/MADE
+        run: uv run python ../../M2/prepare_missing.py --results-root ../../M2/results/reused --output ../../M2/results/plan --published-root ../../published/M2/verification --github-output "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-missing-plan-${{ github.run_id }}
+          path: |
+            M2/results/plan/
+            M2/results/acceptance.xml
+          retention-days: 90
+
+  missing-random:
+    needs: prepare
+    if: needs.prepare.outputs.has_work == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    env:
+      MATERIALS_PROJECT_API_KEY: ${{ secrets.TUWEIKANG_MATERIALS_PROJECT_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - name: Check credential without disclosing it
+        run: python M2/check_key.py
+      - name: Install locked MADE and Chrome for official figures
+        working-directory: M1/MADE
+        run: |
+          uv sync --locked
+          uv run python -c 'import kaleido; kaleido.get_chrome_sync()'
+      - name: Record runtime admission and available disk
+        run: |
+          python - <<'PY'
+          import json, os, shutil
+          from pathlib import Path
+          record = {'method': 'random_generator_baseline', 'measured_prior_seconds': 952.717,
+                    'step_limit_minutes': 330, 'job_limit_minutes': 350, 'artifact_margin_minutes': 20,
+                    'max_parallel': 4, 'cpu_count': os.cpu_count(), 'disk_free_bytes': shutil.disk_usage('.').free,
+                    'initial_pool_resume': False, 'source_revision': os.environ['GITHUB_SHA']}
+          if record['disk_free_bytes'] < 8 * 1024 ** 3:
+              raise SystemExit('Insufficient free disk before scientific launch')
+          Path('M2/results').mkdir(parents=True, exist_ok=True)
+          Path('M2/results/runtime-admission.json').write_text(json.dumps(record, indent=2))
+          PY
+      - name: Run one missing unchanged full-budget protocol unit
+        timeout-minutes: 330
+        working-directory: M1/MADE
+        run: uv run python ../../M2/run_baselines.py --method ${{ matrix.method }} --split dev --system ${{ matrix.system }} --seed ${{ matrix.seed }} --attempt ${{ github.run_id }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-missing-raw-${{ matrix.system }}-${{ matrix.seed }}-${{ github.run_id }}
+          path: |
+            M1/MADE/results/protocol_v1/
+            M1/MADE/checkpoints/
+            M2/results/runtime-admission.json
+          if-no-files-found: warn
+          retention-days: 90
+
+  report-and-publish:
+    needs: [prepare, missing-random]
+    if: always() && needs.prepare.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: m2-missing-raw-*
+          path: M2/results/downloaded
+      - name: Reuse existing pair, validate all completed units and keep failures explicit
+        working-directory: M1/MADE
+        run: |
+          uv sync --locked
+          uv run python ../../M2/prepare_missing.py --results-root ../../M2/results/downloaded --output ../../M2/results/plan-final --published-root ../../published/M2/verification --import-only
+          uv run python ../../M2/evaluate.py --results-root ../../M2/results/downloaded --output ../../M2/results/report --split dev --allow-partial
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-missing-report-${{ github.run_id }}
+          path: |
+            M2/results/report/
+            M2/results/plan-final/
+          retention-days: 90
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: publication
+      - name: Save only M2 evidence on main without merging integration files
+        env:
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python M2/publish_sweep.py --downloads M2/results/downloaded --report M2/results/report --destination publication/M2/verification/missing-$RUN_ID --run-id "$RUN_ID"
+          cd publication
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- "M2/verification/missing-$RUN_ID"
+          git commit -m "Preserve M2 missing-only baseline evidence from run $RUN_ID"
+          git pull --rebase origin main
+          git push origin HEAD:main
