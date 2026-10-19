@@ -1,0 +1,128 @@
+{
+  "kind": "exact_original_artifact_preservation",
+  "capture_complete": true,
+  "new_scientific_units": 0,
+  "artifacts": [
+    {
+      "source_run_id": 39286848821,
+      "source_revision": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+      "run_status_at_capture": "queued",
+      "run_conclusion_at_capture": null,
+      "artifact_id": 12205882338,
+      "artifact_name": "m2-missing-raw-Co-Dy-W-29-39286848821",
+      "file": "12205882338-m2-missing-raw-Co-Dy-W-29-39286848821.zip",
+      "sha256": "fd29c8a7db133fbfd5b6fc5e51f197b76ced48730ce6c1a63fd346e524acdad9"
+    },
+    {
+      "source_run_id": 39286848821,
+      "source_revision": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+      "run_status_at_capture": "queued",
+      "run_conclusion_at_capture": null,
+      "artifact_id": 12205518875,
+      "artifact_name": "m2-missing-raw-Co-Mg-Na-43-39286848821",
+      "file": "12205518875-m2-missing-raw-Co-Mg-Na-43-39286848821.zip",
+      "sha256": "083f811035ec0b187c7f09350ef3a80cf3331cbadf830937342bbf8784528d19"
+    },
+    {
+      "source_run_id": 39286848821,
+      "source_revision": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+      "run_status_at_capture": "queued",
+      "run_conclusion_at_capture": null,
+      "artifact_id": 12205318451,
+      "artifact_name": "m2-missing-raw-Co-Dy-W-43-39286848821",
+      "file": "12205318451-m2-missing-raw-Co-Dy-W-43-39286848821.zip",
+      "sha256": "c5b93361adf59efcf339e3edc35b54de13e71b04f02e81de41ec337ab28e7c0f"
+    },
+    {
+      "source_run_id": 39286848821,
+      "source_revision": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+      "run_status_at_capture": "queued",
+      "run_conclusion_at_capture": null,
+      "artifact_id": 12205295837,
+      "artifact_name": "m2-missing-raw-Au-K-Tb-43-39286848821",
+      "file": "12205295837-m2-missing-raw-Au-K-Tb-43-39286848821.zip",
+      "sha256": "3287431bd96a5019ee1fda5c83cfa5395a4239f3dcd7fb36615c9322f594cdd1"
+    },
+    {
+      "source_run_id": 39286848821,
+      "source_revision": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+      "run_status_at_capture": "queued",
+      "run_conclusion_at_capture": null,
+      "artifact_id": 12205233016,
+      "artifact_name": "m2-missing-raw-Co-Mg-Na-29-39286848821",
+      "file": "12205233016-m2-missing-raw-Co-Mg-Na-29-39286848821.zip",
+      "sha256": "81e3f883915f3969d34d6771af42ab650af4d5a1842ea7c1e7193cc61ed32aea"
+    },
+    {
+      "source_run_id": 39286848821,
+      "source_revision": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+      "run_status_at_capture": "queued",
+      "run_conclusion_at_capture": null,
+      "artifact_id": 12205132959,
+      "artifact_name": "m2-missing-raw-Co-Mg-Na-17-39286848821",
+      "file": "12205132959-m2-missing-raw-Co-Mg-Na-17-39286848821.zip",
+      "sha256": "9711aaf9f30d56aacf0d968f448bb7f63f68aa01754a347dc46381283eae3c2b"
+    },
+    {
+      "source_run_id": 39286848821,
+      "source_revision": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+      "run_status_at_capture": "queued",
+      "run_conclusion_at_capture": null,
+      "artifact_id": 12205130735,
+      "artifact_name": "m2-missing-raw-Au-K-Tb-17-39286848821",
+      "file": "12205130735-m2-missing-raw-Au-K-Tb-17-39286848821.zip",
+      "sha256": "f9ca80dae172ffbc6e0c1b49d36a5b59db46bb70d2c11524b7d96fc1e248d7ff"
+    },
+    {
+      "source_run_id": 39286848821,
+      "source_revision": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+      "run_status_at_capture": "queued",
+      "run_conclusion_at_capture": null,
+      "artifact_id": 12204713320,
+      "artifact_name": "m2-missing-raw-Au-K-Tb-29-39286848821",
+      "file": "12204713320-m2-missing-raw-Au-K-Tb-29-39286848821.zip",
+      "sha256": "239417a8cba3f2fcd947632e8ec9c3383d36d463becb94723cf0c11052abd555"
+    },
+    {
+      "source_run_id": 39286848821,
+      "source_revision": "b3f68f274373d4599a7e026cd0f3cf5a9889e977",
+      "run_status_at_capture": "queued",
+      "run_conclusion_at_capture": null,
+      "artifact_id": 12203084390,
+      "artifact_name": "m2-missing-raw-Co-Dy-W-17-39286848821",
+      "file": "12203084390-m2-missing-raw-Co-Dy-W-17-39286848821.zip",
+      "sha256": "bad74aa61ac1c4ae3711f6af05ee0101c219e153e5d6d71599845448720117e6"
+    },
+    {
+      "source_run_id": 39286986254,
+      "source_revision": "e30b5bb233842797f4ad90c80732bb327d07c0bf",
+      "run_status_at_capture": "completed",
+      "run_conclusion_at_capture": "failure",
+      "artifact_id": 12204631671,
+      "artifact_name": "m2-batch256-continuous-39286986254",
+      "file": "12204631671-m2-batch256-continuous-39286986254.zip",
+      "sha256": "56967787c139046b3697170f4627dfb48e1883e5cb28c6f04d86f65280cc399d"
+    },
+    {
+      "source_run_id": 39286986254,
+      "source_revision": "e30b5bb233842797f4ad90c80732bb327d07c0bf",
+      "run_status_at_capture": "completed",
+      "run_conclusion_at_capture": "failure",
+      "artifact_id": 12204326974,
+      "artifact_name": "m2-batch256-verification-39286986254",
+      "file": "12204326974-m2-batch256-verification-39286986254.zip",
+      "sha256": "13c1451afe8f91be68f8b3c1f2573d35e50fe8c7874715878fba08c3d24bd8fa"
+    },
+    {
+      "source_run_id": 39286986254,
+      "source_revision": "e30b5bb233842797f4ad90c80732bb327d07c0bf",
+      "run_status_at_capture": "completed",
+      "run_conclusion_at_capture": "failure",
+      "artifact_id": 12204176404,
+      "artifact_name": "m2-batch256-interrupt-39286986254",
+      "file": "12204176404-m2-batch256-interrupt-39286986254.zip",
+      "sha256": "56a75003e0995a489d40cac721c4edcdf772f31450f0eef3111acbc0f686de68"
+    }
+  ],
+  "note": "Copies of existing runs; do not count these as additional experiments."
+}
