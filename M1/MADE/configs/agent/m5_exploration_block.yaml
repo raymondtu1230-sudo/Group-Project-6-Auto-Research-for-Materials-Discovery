@@ -1,0 +1,18 @@
+# M5 exploration policy wiring for m1_integrated.yaml.
+# Copy this block into M1/MADE/configs/agent/m1_integrated.yaml (or use
+# install.py), keeping M1's field names unchanged.
+
+enable_exploration: true
+
+exploration_policy:
+  _target_: made.agents.m5_exploration.UCBExplorationPolicy
+  seed: ${experiment.seed}
+  alpha0: 0.5
+  gamma: 1.0
+  beta0: 2.0
+  max_stoichiometry: 8
+  length_scale: 0.35
+  noise: 0.0001
+  max_pool: 512
+
+# Ablation: set `enable_exploration: false` and keep every other setting fixed.
