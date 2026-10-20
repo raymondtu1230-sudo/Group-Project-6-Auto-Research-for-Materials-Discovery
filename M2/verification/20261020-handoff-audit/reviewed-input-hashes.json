@@ -1,0 +1,11 @@
+{
+  "M1/PLUGIN_INTERFACE.md": "9cbbf7c9d7cca87068264717c716fe5d30f8c5e2202cee4a02be15d08bd4f3fc",
+  "M1/INTEGRATION.md": "09bbef91935d2b6971d04f6217bdc928028c78edc72dd926ac46b4ded87f1a78",
+  "M1/MADE/src/made/agents/m1_integrated.py": "a4528b90af04e09d6fb3878284d0ff6f211a6d433424d47d8d149bbe35877b60",
+  "M1/MADE/configs/agent/m1_integrated.yaml": "3700712b3839776c03433799637c096b72be1bdd6295311ef395f826d4b72491",
+  "M1/MADE/tests/test_m1_integrated.py": "e790baa0ecb8c238627e9d8ed4952a9a224d2fa6928a3cc1583bee49f2d42749",
+  "M2/integration/m2_tool_routing.py": "03fab495c4f271dc330a1680dd1f527a21dd40dbfc9f1d7bffca23a031566899",
+  "M2/integration/test_m2_tool_routing.py": "d037535145f702c12e283b73013020154b683e1cd4347229e5d0e6aadc7bc214",
+  "M1/protocol/protocol_v1.yaml": "e9305aefd75fc32612729b7cfd760817234ad006bae99594271badbd69ca7cef",
+  "M1/protocol/dev_systems.json": "d933c1754b632e19a4a74fd5f42d2bcc84ec851beffed8cfa7979efcb16791d1"
+}

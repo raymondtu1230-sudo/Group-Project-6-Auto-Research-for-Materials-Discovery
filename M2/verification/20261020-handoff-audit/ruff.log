@@ -1,0 +1,19 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> M2/verification/20261020-preflight-and-recovery/fixed-source-verify_batch_recovery.py:24:1
+   |
+22 |   REPO = Path(__file__).resolve().parents[1]
+23 |   sys.path.insert(0, str(REPO))
+24 | / from M2.generation_cache import (  # noqa: E402
+25 | |     BatchCache,
+26 | |     GenerationPausedError,
+27 | |     rng_state,
+28 | | )
+29 | |
+30 | | from made.agents.base import Plan  # noqa: E402
+31 | | from made.agents.generators.chemeleon import ChemeleonGenerator  # noqa: E402
+   | |_______________________________________________________________^
+   |
+help: Organize imports
+
+Found 1 error.
+[*] 1 fixable with the `--fix` option.

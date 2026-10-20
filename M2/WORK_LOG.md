@@ -1,3 +1,23 @@
+> 交付方式：本轮材料通过 PR #5 单独交付至 `main/M2/`；用户已于2026年10月20日授权合并。共享框架接入仍由M1负责，PR #2 保留草稿。下述验收数字及失败对应审计时版本；本次文件交付不包含对后续共享代码变更的复验。
+
+## 2026年10月20日：用户授权发布独立M2交付
+
+用户明确授权将收尾草稿合入自己的M2文件夹。PR #5 的全部改动均在 M2/，与此后其他成员的提交没有文件冲突。只更新本轮发布说明；原始结果、历史验收日志、其他成员目录及 PR #2 保持原状。本次不启动实验或定时跟进，群消息仍由用户发送，未获接收确认。
+
+# 2026年10月20日：M2职责复核和独立交付收尾
+
+重新读取两份分工PDF、四张微信要求及M1接口文件。确认M2负责dev基线、工具路由、指标/曲线/成本和自己的方法/幻灯片材料。M1负责正式集成和reference，M6负责check/hidden及组稿。没有启动曾讨论的12项check Random；不把该项作为M2漏做。
+
+19份固定原始ZIP逐一核对SHA256和CRC，原始字节不变。重新导入并使用原有官方指标离线评分，复现19项以及已发布数值表，issues=[]；没有新增实验或重复计数。
+
+在全新main70e8a7e的隔离副本安装M2槽位并实际执行全部M1/M2测试：77通过、M5 seed=None失败1项、此容器/proc观测跳过1项。保存完整日志/JUnit，未修改M5或M1的共享配置来隐藏失败。当前Ruff初扫误入历史快照；M2配置仅排除verification不可变证据，当前源码仍全查，随后通过。
+
+更新M2 README、独立交付映射、职责表、方法和讲稿、群消息草稿与结果接收规范。幻灯片更新为19/36，Random完整dev汇总和Chemeleon单项的覆盖差异明确标注，示例曲线的原始图表数据及工作簿保留。旧版本保留供追溯。恢复测试失败仍如实列明。
+
+所有交付只写main/M2，正式M1集成和其他成员记录不动。消息不代发，PR2不合并，不声称对方收到。未开新Chemeleon、check/hidden、GPU或付费任务。完成交付即停止，不安排后续轮询。
+
+## 以下为保留的历史工作日志
+
 # Latest bounded closeout — 20 October 2026, 02:57 Asia/Singapore
 
 Accepted development baseline coverage is **19/36**: Random 18 and Chemeleon 1, with zero audit issues. All 17 missing Random jobs succeeded. Their frozen-source final aggregation failed; no science was rerun. Evidence-only capture 39306348134 reused existing ZIP bytes, preserved 23 original archives with matching GitHub SHA256, executed the current offline audit and unchanged official metrics, and published to main/M2/verification/preserved-39306348134/. The original pair is counted once. The reuse manifest now pins 19 accepted archives; all paths are present on main.

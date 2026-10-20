@@ -1,0 +1,5 @@
+Matplotlib is building the font cache; this may take a moment.
+Failed to initialize disk cache, falling back to memory-only cache: disk I/O error
+UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+{"completed_baseline_units": 19, "missing_baseline_units": 17}

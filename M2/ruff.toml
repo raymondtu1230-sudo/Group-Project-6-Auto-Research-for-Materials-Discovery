@@ -1,5 +1,7 @@
 # Make namespace-package import classification independent of checkout location.
 extend = "../M1/MADE/pyproject.toml"
+# Immutable source snapshots are evidence, not the current executable package.
+extend-exclude = ["verification/**"]
 
 [lint.isort]
 known-first-party = ["made", "M2"]

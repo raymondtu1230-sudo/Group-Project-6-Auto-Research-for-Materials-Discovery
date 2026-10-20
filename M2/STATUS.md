@@ -1,3 +1,19 @@
+> 交付方式：本轮材料通过 PR #5 单独交付至 `main/M2/`；用户已于2026年10月20日授权合并。共享框架接入仍由M1负责，PR #2 保留草稿。下述验收数字及失败对应审计时版本；本次文件交付不包含对后续共享代码变更的复验。
+
+## 本轮M2独立收尾 — 2026年10月20日
+
+- dev基线保持19/36：Random18/18、Chemeleon1/18。19份固定原始ZIP的SHA256与CRC重新通过；独立重评分的数值表与先前发布一致，issues=[]。证据：verification/20261020-handoff-audit/。
+- 当前可独立交付的组件、配置、安装映射、方法文字、讲稿、交接草稿和结果接收规范已整理。report/M2_Method_and_Partial_Results_20261020.pptx为当前草稿；旧2/36版保留为历史。
+- 新增DELIVERY_STATUS.md明确M2工作范围。check Random12项属于M6，未代跑；check/hidden、正式集成、他人成员的实验和记录均不在本轮改动范围。
+- 实测共享配置测试77通过、1失败、1跳过。失败为M5的seed=None初始化，跳过为本容器/proc计数不可见。该依赖交M1/M5，不用旧源码CI的通过替代当前失败。
+- M2/ruff.toml只排除不可变的verification历史证据，当前源代码、integration和tests仍检查，Ruff通过。官方源码、科学参数和19份原始归档不变。
+- 群消息只保存草稿，未发送、未获确认；PR2仍为草稿、未合并。M1冻结版reference、routing-off及各成员最终结果仍待后续。整个M2未完成。
+- 本轮不启动Chemeleon、check、hidden、GPU或付费任务。交付后停止，不增加定时跟进。
+
+本次本地官方合成smoke还在Chrome图片导出阶段失败，原始日志已保存；不算通过。旧源码云端smoke通过记录仅对应其源版本。
+
+## 以下为已保留的历史状态
+
 ## Verified overnight closeout — 20 October 2026, 02:56 Asia/Singapore
 
 **19/36 distinct dev baseline units accepted: Random 18/18; Chemeleon 1/18. Zero validation issues.** All 17 missing Random jobs in run 39286848821 succeeded. Its old-source final aggregation failed with "Protocol or material reference revision differs"; no scientific unit was rerun for that report failure. Preservation-only run [39306348134](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39306348134) reused existing ZIP bytes, checksum-verified 23 originals (17 Random plus six archives from the two failed recovery fixtures), published them to main/M2, and executed the current offline evaluator plus unchanged official metrics. The original Mg-Sn-Sr/17 pair is retained and counted once.
