@@ -1,0 +1,10 @@
+{
+  "status": "verified_completed",
+  "exit_code": 0,
+  "unit": "Ga-Pt-Tm-43",
+  "attempt": 3938733161401,
+  "archive": "M2/verification/direct-39387331614-1/m2-direct-Ga-Pt-Tm-43-39387331614-1/packaged/Ga-Pt-Tm-43-attempt-3938733161401.zip",
+  "sha256": "f81716c77fcd9e0563b5933bf9db2dc28ad89868e1355befd7f9d454746bc441",
+  "validation_error": null,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}
