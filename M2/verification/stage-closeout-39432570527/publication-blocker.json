@@ -1,0 +1,7 @@
+{
+  "resolved": true,
+  "previous_blocker_record": "publication-blocker-history.json",
+  "scientific_results_already_published": 36,
+  "publication_strategy": "Small content-addressed objects followed by a SHA-only tree and guarded main ref update. No resubmission of the interrupted oversized inline payload.",
+  "scope": "main/M2 only; explicit user authorization remains in force"
+}

@@ -6,5 +6,10 @@
   "issues": [],
   "baseline_sweep_complete": true,
   "report": "M2/verification/direct-39432570527-1/final-report",
-  "scope": "dev baselines only; M1 reference and M6 check/hidden are separate"
+  "scope": "dev baselines only; M1 reference and M6 check/hidden are separate",
+  "current_stage_closeout": "M2/CURRENT_STAGE_CLOSEOUT.md",
+  "terminal_validation": "M2/verification/stage-closeout-39432570527/terminal-validation.json",
+  "current_stage_complete": true,
+  "whole_M2_complete": false,
+  "current_slides": "M2/report/M2_Method_and_Dev_Baselines_20261021_36of36.pptx"
 }

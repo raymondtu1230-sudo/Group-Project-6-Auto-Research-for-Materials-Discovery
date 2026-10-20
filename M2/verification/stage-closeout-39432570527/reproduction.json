@@ -1,0 +1,17 @@
+{
+  "scientific_source": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "controller": "e22cfb145466c056cee5ce8f4de8b75a6d15d1df",
+  "published_report_commit": "d890daf3d8259412d7d01b9a5264e098dbb736c0",
+  "run_id": 39432570527,
+  "attempt": 3943257052701,
+  "original_manifest_sha256": "11c6e0dfd27c7c57d1b51d31cdd588be6475e0c804d4069e5e88d8522f4f2fee",
+  "source_data_protocol_hashes": "M2/verification/direct-39432570527-1/final-report/reuse-plan.json",
+  "environment_and_api": "M2/verification/direct-39432570527-1/m2-direct-{unit}-39432570527-1/runtime/",
+  "tests": "M2/verification/stage-closeout-39432570527/closeout-tests.log and M2/verification/final-two-start-39432570527/",
+  "offline_commands": [
+    "uv sync --locked --project M1/MADE",
+    "uv run --locked --project M1/MADE python M2/chemeleon_preflight.py plan --published /path/to/published-main --output M2/runtime/final-recheck-plan",
+    "uv run --locked --project M1/MADE python M2/evaluate.py --results-root M2/runtime/final-recheck-plan/reused --output M2/runtime/final-recheck-report --split dev --allow-partial"
+  ],
+  "no_new_scientific_attempt": true
+}

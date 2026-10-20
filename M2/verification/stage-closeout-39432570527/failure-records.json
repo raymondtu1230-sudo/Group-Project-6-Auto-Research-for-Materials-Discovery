@@ -1,0 +1,28 @@
+{
+  "current_final_two": {
+    "Au-K-Tb-17": {
+      "status": "verified_completed",
+      "exit_code": 0,
+      "unit": "Au-K-Tb-17",
+      "attempt": 3943257052701,
+      "archive": "M2/verification/direct-39432570527-1/m2-direct-Au-K-Tb-17-39432570527-1/packaged/Au-K-Tb-17-attempt-3943257052701.zip",
+      "sha256": "f622a61048e24f7b9369e2a1a27ea5e613b10270df1842d5507f4f6e5d8baad8",
+      "validation_error": null,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+    },
+    "Co-Dy-W-43": {
+      "status": "verified_completed",
+      "exit_code": 0,
+      "unit": "Co-Dy-W-43",
+      "attempt": 3943257052701,
+      "archive": "M2/verification/direct-39432570527-1/m2-direct-Co-Dy-W-43-39432570527-1/packaged/Co-Dy-W-43-attempt-3943257052701.zip",
+      "sha256": "062baac56095deff9691d39c6f37e175d90e28abfd59df2fab6eb63fb22ee911",
+      "validation_error": null,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+    }
+  },
+  "prior_timeout_evidence": "M2/verification/direct-39386589324-1",
+  "native_resume": "Not safe in actual saved-state test. Sentinel probe success was not recovery success. No further recovery experiments in this closeout.",
+  "prior_publication_block": "User explicitly authorized original raw archives, logs and delivery files at 2026-10-21 02:28. Previous denial preserved in auktb17-closeout-20261021.",
+  "failed_attempt_costs": "Not fully priced; excluded from successful scientific-score aggregation, retained as separate evidence."
+}

@@ -1,0 +1,9 @@
+{
+  "confirmed_at": "2026-10-21T02:28:45+08:00",
+  "user_confirmation": "确认 可以并入 并且把我们现有的结果全部收尾",
+  "scope_presented_before_confirmation": "New Au-K-Tb/17 original results archive including runtime/environment logs, plus 30 prepared score/chart/presentation/handoff files; only main/M2 in the named project repository.",
+  "repository": "raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery",
+  "destination": "main/M2/",
+  "other_members_files": "excluded",
+  "remaining_live_experiment": "Co-Dy-W/43; no restart or new scientific attempt"
+}

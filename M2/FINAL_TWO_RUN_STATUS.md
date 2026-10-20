@@ -1,3 +1,11 @@
+> **2026-10-21终态：36/36项独立dev基线验收并完成本阶段收尾。** Random18/18、Chemeleon18/18，720次成功查询；两项最终attempt均exit_code=0，官方复评issues=[]，SHA256/CRC与终态receipt核验通过。最新入口：[CURRENT_STAGE_CLOSEOUT.md](CURRENT_STAGE_CLOSEOUT.md)。仅M2范围。M1 reference、routing-off和M6 check/hidden为后续。以下旧状态保留为历史快照。
+
+## 历史记录（下文按原日期保留）
+
+> **保存状态：** 用户于2026-10-21 02:28明确授权并入main/M2。现有35项的原始归档、日志、官方评分和M2交付材料已纳入本次保存；最后一项Co-Dy-W/43仍在原任务计算，尚不计为完成。原审批拦截作为历史记录保留。
+
+> **2026-10-21 当前：35/36项dev基线已验收。** Random18/18、Chemeleon17/18。Au-K-Tb/17完整20/20查询，mSUN3、AUDC33.5；35项官方复评、曲线、成本及M2自己的4页PPT已更新，原始包及必要日志已纳入本次保存，证据见[CURRENT_STAGE_CLOSEOUT.md](CURRENT_STAGE_CLOSEOUT.md)。Co-Dy-W/43仍在既有run39432570527计算，不重新派发。下列旧19/34项及未启动描述均为历史快照，不是当前状态。最终36项阶段收尾和M1 reference/routing-off等后续任务尚未完成。
+
 # 最后两项重试与34项结果收尾
 
 2026-10-20，用户21:27:24（Asia/Singapore）授权后执行。此文件记录本次启动快照，结束后的最新评分报告由工作流自动写入`M2/LATEST_BASELINE_RUN.json`，不把运行中任务记为成功。

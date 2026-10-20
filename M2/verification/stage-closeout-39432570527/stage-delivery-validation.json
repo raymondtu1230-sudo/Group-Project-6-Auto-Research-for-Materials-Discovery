@@ -1,0 +1,15 @@
+{
+  "stage": "independent dev baselines only",
+  "verified_units": 36,
+  "official_report_issues": [],
+  "archive_SHA256_CRC_and_terminal_receipts": "terminal-validation.json",
+  "protocol_version_input_hash_checks": "protocol-version-check.json",
+  "deck_validation": "deck-validation.json",
+  "rendered_all_four_final_slides": true,
+  "visual_review": "No clipping or overlap observed. Existing chart example remains labelled Mg-Sn-Sr/17. Editable chart workbooks preserved.",
+  "handoff_prepared": true,
+  "messages_sent": false,
+  "other_members_modified": false,
+  "new_scientific_attempts": 0,
+  "whole_M2_complete": false
+}

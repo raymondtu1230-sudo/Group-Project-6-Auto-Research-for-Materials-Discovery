@@ -1,3 +1,11 @@
+> **2026-10-21终态：36/36项独立dev基线验收并完成本阶段收尾。** Random18/18、Chemeleon18/18，720次成功查询；两项最终attempt均exit_code=0，官方复评issues=[]，SHA256/CRC与终态receipt核验通过。最新入口：[CURRENT_STAGE_CLOSEOUT.md](CURRENT_STAGE_CLOSEOUT.md)。仅M2范围。M1 reference、routing-off和M6 check/hidden为后续。以下旧状态保留为历史快照。
+
+## 历史记录（下文按原日期保留）
+
+> **保存状态：** 用户于2026-10-21 02:28明确授权并入main/M2。现有35项的原始归档、日志、官方评分和M2交付材料已纳入本次保存；最后一项Co-Dy-W/43仍在原任务计算，尚不计为完成。原审批拦截作为历史记录保留。
+
+> **2026-10-21 当前：35/36项dev基线已验收。** Random18/18、Chemeleon17/18。Au-K-Tb/17完整20/20查询，mSUN3、AUDC33.5；35项官方复评、曲线、成本及M2自己的4页PPT已更新，原始包及必要日志已纳入本次保存，证据见[CURRENT_STAGE_CLOSEOUT.md](CURRENT_STAGE_CLOSEOUT.md)。Co-Dy-W/43仍在既有run39432570527计算，不重新派发。下列旧19/34项及未启动描述均为历史快照，不是当前状态。最终36项阶段收尾和M1 reference/routing-off等后续任务尚未完成。
+
 > **2026-10-20 22:14 最新：用户已授权睡眠期间继续本次两项监控和阶段收尾。** 已启用有限次数的每小时复核；即时归档仍由GitHub工作流完成。所有收尾新增/修改严格限定main/M2，不改其他成员、共享记录或根目录工作流。见 [本次自动收尾要求](OVERNIGHT_FINAL_CLOSEOUT.md) 与 [两项启动记录](FINAL_TWO_RUN_STATUS.md)。当前已核验34/36；最终状态须等两项终止后按真实产物更新，不把定时任务启用算作科学完成。以下保留历史快照。
 
 > 2026-10-20 最新状态：已有 **34/36** 项基线，本轮官方离线重新评分34项，`issues=[]`。剩余Au-K-Tb/17、Co-Dy-W/43在原生恢复验证未通过后，按授权使用新attempt `3943257052701` 从头运行；两项均已通过本次真实API和模型检查，进入独立云端runner计算，尚未计为完成。总job 360分钟，按实际安装耗时动态预留5分30秒退出/保存窗口。见[最后两项启动及34项收尾记录](FINAL_TWO_RUN_STATUS.md)、[34项评分证据](verification/final-two-preparation-20261020/closeout-34/)和[本次云端运行](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39432570527)。以下保留历史记录。

@@ -1,0 +1,175 @@
+{
+  "scope": "Only final36 M2 materials; raw results and official report already on main d890daf",
+  "files": [
+    {
+      "path": "M2/ACCEPTANCE_CHECKLIST.md",
+      "size": 18743,
+      "sha256": "58a5268eeead1495c5f777e86fe7acdccb2acd6daa49c9eddcdb30f4608003f6"
+    },
+    {
+      "path": "M2/CURRENT_STAGE_CLOSEOUT.md",
+      "size": 4546,
+      "sha256": "0c493bae16b3db929432367645417183e8e2509ee75e1d2cf87a22b54735c2de"
+    },
+    {
+      "path": "M2/DELIVERY_STATUS.md",
+      "size": 7445,
+      "sha256": "cbc7b9c62b1e33ed60e0a6ce595ad2a6ebc7f97b4546ccc51bfa3006573daead"
+    },
+    {
+      "path": "M2/FINAL_TWO_RUN_STATUS.md",
+      "size": 5908,
+      "sha256": "118064281e312daac49ab2c60cd717232d6ca67649516c6077cfac8076a01ee2"
+    },
+    {
+      "path": "M2/LATEST_BASELINE_RUN.json",
+      "size": 649,
+      "sha256": "7db05d4b198dca2267e5eb9bd1b1911c0e0acbb9c609337b0e9cf74d04439735"
+    },
+    {
+      "path": "M2/METHODS_AND_M6_HANDOFF.md",
+      "size": 8090,
+      "sha256": "ca74d941c770aab692496ea2acbed96436f7ea390c03c48b9036ffe27f753b99"
+    },
+    {
+      "path": "M2/OVERNIGHT_FINAL_CLOSEOUT.md",
+      "size": 11710,
+      "sha256": "eb490e415df4362609db6e972b9c577b50a086e93a50871e0566c783a2e4cba3"
+    },
+    {
+      "path": "M2/README.md",
+      "size": 1339,
+      "sha256": "fac0465d009485b1e15493c0413a7552b542b9aa6ed41236ed29a2004b1cd564"
+    },
+    {
+      "path": "M2/STATUS.md",
+      "size": 27043,
+      "sha256": "22c49e73152b3b9afb40b18dedb7eb97dbb2b7696b45d1449cc199faa07000bf"
+    },
+    {
+      "path": "M2/WORK_LOG.md",
+      "size": 29172,
+      "sha256": "1dad17b907e600bd7a675efd32b81288b135f282ebcd6abf51e930340d870020"
+    },
+    {
+      "path": "M2/configs/current_stage_verified_baselines.json",
+      "size": 8189,
+      "sha256": "cb2f824f3e7bef7aaa273f17e03a3492ea7c0220df662bbdf40021ea557048b0"
+    },
+    {
+      "path": "M2/configs/overnight-closeout-watch.json",
+      "size": 1931,
+      "sha256": "91775fffc17db083f48e638006e4075712bdb6d442265069537f79c909a2632a"
+    },
+    {
+      "path": "M2/handoffs/CURRENT_STAGE_HANDOFF.md",
+      "size": 1446,
+      "sha256": "9a3e6d1d819d42b8cf58b36b0c33af164de36c456bc4b4ef8cc85afa65451aaf"
+    },
+    {
+      "path": "M2/report/M2_Method_and_Dev_Baselines_20261021_36of36.pptx",
+      "size": 37260,
+      "sha256": "e13eec9ff1c1013afde5adcac49eafe4cf7ddc403e6c0779a547cc2d72f9ee9a"
+    },
+    {
+      "path": "M2/report/M2_SPEAKER_NOTES.md",
+      "size": 2231,
+      "sha256": "df2c04b356593c86ba95b045d1c765bfc4cd54abbdb53395643808b66825ddc5"
+    },
+    {
+      "path": "M2/report/README.md",
+      "size": 1597,
+      "sha256": "4902d93e3935229a030639d5d7ac69cf25e9b83b557923e97655b3af8812c5dc"
+    },
+    {
+      "path": "M2/report/current_results_data.json",
+      "size": 5250,
+      "sha256": "2d8d53fd65c50ceaa90e7b72b55863f2a717c913e7b3219720903aa229f08186"
+    },
+    {
+      "path": "M2/report/current_slides_checksum.json",
+      "size": 508,
+      "sha256": "ba5d99b7b81b0194a624db87425b2a1fbf9068713931432f266c58dd06a8e074"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/closeout-tests.log",
+      "size": 98,
+      "sha256": "a4ce3c4d2d126cf54794b588fe0568dcf174b80e68913316f73e0da7b9f1c64b"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/co-dy-w43-completed-job.log",
+      "size": 241421,
+      "sha256": "a44a4326867572e927619beb9a1546465cf4bb018944fcba9f078e549a18cb07"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/cost-scope.json",
+      "size": 1759,
+      "sha256": "7727fa599ce91b2e393acb2913bea0ed90f6d8a3135b726e4029e2345f3560e8"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/cost.csv",
+      "size": 2677,
+      "sha256": "aaf5024238c0b9ade65283280c7c0a19fd04ac32fe92d47cf79b60dcedcba02e"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/deck-validation.json",
+      "size": 6172,
+      "sha256": "ddfd5f9099d667cf909af84cbdaa6356441a18f800f0d588869f5763596e7bf3"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/failure-records.json",
+      "size": 1502,
+      "sha256": "673e063a5ebd65eb632ca8c194149b7b308da6659d53af40dc4dc7b3de4539a9"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/final-publication-validation.json",
+      "size": 11347,
+      "sha256": "66d78416bfc898c80aa4e9d159a0cc080f98871c5d51aad1ab39ca94ccb01f7d"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/github-terminal-jobs.json",
+      "size": 13605,
+      "sha256": "8f0cca6ec48fb61719487a645f28bbb56c5a626defe8b28c29ac4ff9d93be07c"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/preserve-completed-job.log",
+      "size": 60443,
+      "sha256": "8b437453d462556028f21df2c7e0f63bfae21e63c59b4aa57ac4cdd7bae00d0b"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/protocol-version-check.json",
+      "size": 656,
+      "sha256": "7c6f31488f2bbe4649d2c6070f7324b294708d6913bc251a5b2a62c8967af6f6"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/publication-authorization.json",
+      "size": 603,
+      "sha256": "f6d5ff8fc81062c39cb083c81213fde9ff927df727b35e5b18057ede2c831cf3"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/publication-blocker-history.json",
+      "size": 624,
+      "sha256": "6e05e81ac07cb5547fc78df035a6a2846b4e44fc17a3fcaf311e126826a0ed3e"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/publication-blocker.json",
+      "size": 386,
+      "sha256": "8bf8ef24e7d05c5e76bbf3ad97c29625ea45e3a4271a951faed50a8a6b5cbeba"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/reproduction.json",
+      "size": 1131,
+      "sha256": "7caf90327e55de4a93eb98f0a4ed885f8707b52050bf26393933b57c153b0337"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/stage-delivery-validation.json",
+      "size": 631,
+      "sha256": "927e6584a81097835fdf3e03ad35d6fe0e4b448f9caec345b9129e2394748591"
+    },
+    {
+      "path": "M2/verification/stage-closeout-39432570527/terminal-validation.json",
+      "size": 11347,
+      "sha256": "7738ba9d2907d861fa61220143c9c5dab4519ce523d15daad6861a05c36d5e6d"
+    }
+  ]
+}

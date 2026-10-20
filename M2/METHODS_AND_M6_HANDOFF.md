@@ -1,3 +1,11 @@
+> **2026-10-21终态：36/36项独立dev基线验收并完成本阶段收尾。** Random18/18、Chemeleon18/18，720次成功查询；两项最终attempt均exit_code=0，官方复评issues=[]，SHA256/CRC与终态receipt核验通过。最新入口：[CURRENT_STAGE_CLOSEOUT.md](CURRENT_STAGE_CLOSEOUT.md)。仅M2范围。M1 reference、routing-off和M6 check/hidden为后续。以下旧状态保留为历史快照。
+
+## 历史记录（下文按原日期保留）
+
+> **保存状态补充：本次原始压缩包的手动持久上传被自动审批拒绝。** 理由是包中含运行/环境日志，审批系统认为未明确授权这份具体载荷的外部披露。30个文本成员及结束日志的凭据模式检查未发现匹配，但不能据此绕过拒绝。原始包仍在GitHub Actions artifact12283509799（90天副本）和本次本地下载中；本次只发布评分、图表、状态和交付文档。**因此Au-K-Tb/17已完成科学验收，完整原始包写入main的收尾仍待允许，不能称单项已彻底收尾。** 原有34项的持久归档不受影响。
+
+> **2026-10-21 当前：35/36项dev基线已验收。** Random18/18、Chemeleon17/18。Au-K-Tb/17完整20/20查询，mSUN3、AUDC33.5；35项官方复评、曲线、成本及M2自己的4页PPT已更新，原始包上传受阻，证据见[CURRENT_STAGE_CLOSEOUT.md](CURRENT_STAGE_CLOSEOUT.md)。Co-Dy-W/43仍在既有run39432570527计算，不重新派发。下列旧19/34项及未启动描述均为历史快照，不是当前状态。最终36项阶段收尾和M1 reference/routing-off等后续任务尚未完成。
+
 > **2026-10-20 22:14 最新：用户已授权睡眠期间继续本次两项监控和阶段收尾。** 已启用有限次数的每小时复核；即时归档仍由GitHub工作流完成。所有收尾新增/修改严格限定main/M2，不改其他成员、共享记录或根目录工作流。见 [本次自动收尾要求](OVERNIGHT_FINAL_CLOSEOUT.md) 与 [两项启动记录](FINAL_TWO_RUN_STATUS.md)。当前已核验34/36；最终状态须等两项终止后按真实产物更新，不把定时任务启用算作科学完成。以下保留历史快照。
 
 # M2 methods and slides material for M6
@@ -80,10 +88,12 @@ Collect the other owners' ablations and deliver the complete validated table,
 curves, cost analysis, failed-run audit and reproducibility details by 27 October.
 M6 owns check/hidden-test handling. No hidden test system is encoded in M2 code.
 
-## Current independent delivery, 20 October
+## Current independent delivery, 21 October
 
-The current editable draft is report/M2_Method_and_Partial_Results_20261020.pptx, with four slides and speaker notes. Dev coverage is19/36: Random18/18 and Chemeleon1/18. Random has a complete dev aggregate, while Chemeleon has only a labelled Mg-Sn-Sr/17 example. The initial matching-pair curves are retained and explicitly labelled as a single pair. No overall Chemeleon, full-method ranking or routing-effect claim is made.
+The independent development baseline stage is complete:36/36 units,18 for each method,720 oracle queries, official validation issues=[]. Use report/M2_Method_and_Dev_Baselines_20261021_36of36.pptx and report/M2_SPEAKER_NOTES.md for the current four-slide contribution. Earlier slides and state entries remain historical snapshots.
 
-Latest verified tables and curves are in verification/20261020-handoff-audit/report/. The19 checksum-pinned originals remain unchanged. The earlier two-unit presentation is historical. Suggested M6 insertion positions7/10 come from the prior outline and need confirmation against M6's current deck, which is not present in this repository.
+Official final data: verification/direct-39432570527-1/final-report/. Random mean mSUN4.0556 and AUDC40.5833; Chemeleon6.9444 and71.3056. Aggregation gives equal weights to systems within each seed, then uses the three-seed mean and sample SD. The labelled editable curves show the Mg-Sn-Sr/17 example, while all-system curves remain in the report. The official AF/EF zero-baseline convention remains unchanged. EF100 at Co-Dy-W/17 is not a measured compute speedup.
 
-Checkpointable adapter state does not prove resumability during initial baseline pool generation. Full-pool recovery has not passed admission. No new Chemeleon or check/hidden scientific job was launched in this closeout. Check/hidden execution remains with M6, shared integration and the frozen full reference with M1. M2's final routing-off comparison waits for that reference.
+Archive checksums/CRC, uniqueness and final receipts: verification/stage-closeout-39432570527/terminal-validation.json. Original19 manifest unchanged. The current reuse manifest contains36 persistent archives. Known model feesUSD0 exclude hardware, electricity and all unpriced failures. Mean driver times16.0/234.3 minutes are separate from complete Actions job times.
+
+M1 receives integration code and existing test evidence. M6 receives validated baseline data, curves, methods, cost caveats and M2's slides. This stage does not measure routing benefit. Same frozen M1 reference, routing-off and check/hidden remain later work. No messages were sent and no recipient acceptance is claimed.

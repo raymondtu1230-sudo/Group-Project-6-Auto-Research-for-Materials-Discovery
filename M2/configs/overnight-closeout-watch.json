@@ -26,7 +26,19 @@
     "A documented external blocker remains after independent work is complete",
     "Ten scheduled checks exhausted; never create replacement loops"
   ],
-  "notify_on": "Substantive failure requiring attention or final closeout only",
+  "notify_on": "Every scheduled check: actual time, verified scientific coverage, per-unit status and observed counters; final closeout or concrete blocker.",
   "scientific_redispatch_authorized": false,
-  "final_result_not_yet_known": true
+  "final_result_not_yet_known": false,
+  "last_manual_observation": "2026-10-21T03:23:12+08:00",
+  "scientifically_verified_units": 36,
+  "durable_archive_units": 36,
+  "pending_raw_archive": null,
+  "publication_authorized_at": "2026-10-21T02:28:45+08:00",
+  "manual_closeout_directory": "M2/verification/stage-closeout-39432570527/",
+  "terminal_audit": "M2/verification/stage-closeout-39432570527/terminal-validation.json",
+  "current_stage_complete": true,
+  "remaining_work": "Save and read back this M2-only closeout, then disable current watch.",
+  "is_enabled": false,
+  "stop_reason": "Both scientific attempts terminal and successfully archived; final 36-unit stage materials completed.",
+  "final_scientific_units": 36
 }

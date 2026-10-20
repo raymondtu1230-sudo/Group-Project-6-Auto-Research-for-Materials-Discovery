@@ -1,0 +1,14 @@
+{
+  "observed_main": "d890daf3d8259412d7d01b9a5264e098dbb736c0",
+  "scientific_results_published": 36,
+  "scientific_report_issues": [],
+  "local_closeout_commit": "b5c4934b596f1c52f64960df44f91bcf5ac67ed0",
+  "closeout_files_published": false,
+  "blocker": [
+    "git push: could not read Username for https://github.com",
+    "GitHub create_tree call aborted before a commit/ref publication; latest main read back unchanged"
+  ],
+  "no_retry_after_interruption": true,
+  "science_restarts": 0,
+  "stop_reason": "Scientific run terminal. Current delivery publication blocked; preserve local materials and pause monitor."
+}

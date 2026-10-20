@@ -1,0 +1,26 @@
+{
+  "final_two_input_manifests_identical": true,
+  "locked_source_file_hash_matches": 105,
+  "mismatches": [],
+  "missing": [],
+  "scientific_source": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "unique_scientific_units": 36,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "systems": [
+    "Au-K-Tb",
+    "Co-Dy-W",
+    "Co-Mg-Na",
+    "Ga-Pt-Tm",
+    "Hf-Ni-Zr",
+    "Mg-Sn-Sr"
+  ],
+  "all_B20_and_query20": true,
+  "source_manifests": [
+    "M2/verification/direct-39432570527-1/m2-direct-Au-K-Tb-17-39432570527-1/runtime/science-inputs.json",
+    "M2/verification/direct-39432570527-1/m2-direct-Co-Dy-W-43-39432570527-1/runtime/science-inputs.json"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "successful_units": 36,
+  "oracle_queries": 720,
+  "successful_driver_seconds": 270322.49199999997,
+  "known_recorded_model_fees_usd": 0.0,
+  "final_two_actual_job_timings": [
+    {
+      "unit": "Au-K-Tb-17",
+      "job_id": 118662188428,
+      "started_at": "2026-10-20T13:43:31Z",
+      "completed_at": "2026-10-20T17:23:57Z",
+      "complete_job_seconds": 13226.0,
+      "budget": {
+        "job_limit_minutes": 360,
+        "compute_step_limit_minutes": 360,
+        "compute_seconds": 21137,
+        "setup_elapsed_seconds": 133,
+        "termination_reserve_seconds": 60,
+        "package_limit_seconds": 60,
+        "upload_limit_seconds": 180,
+        "cleanup_reserve_seconds": 30,
+        "total_reserve_seconds": 330,
+        "scientific_budget": 20,
+        "scientific_settings_changed": false
+      }
+    },
+    {
+      "unit": "Co-Dy-W-43",
+      "job_id": 118662188480,
+      "started_at": "2026-10-20T13:43:30Z",
+      "completed_at": "2026-10-20T19:07:45Z",
+      "complete_job_seconds": 19455.0,
+      "budget": {
+        "job_limit_minutes": 360,
+        "compute_step_limit_minutes": 360,
+        "compute_seconds": 21160,
+        "setup_elapsed_seconds": 110,
+        "termination_reserve_seconds": 60,
+        "package_limit_seconds": 60,
+        "upload_limit_seconds": 180,
+        "cleanup_reserve_seconds": 30,
+        "total_reserve_seconds": 330,
+        "scientific_budget": 20,
+        "scientific_settings_changed": false
+      }
+    }
+  ],
+  "unpriced": [
+    "hardware",
+    "electricity",
+    "all failed attempts"
+  ],
+  "tokens": "unreported fields remain blank",
+  "prior_timeout_archive": "M2/verification/direct-39386589324-1",
+  "AF_EF": "official paired discovery metrics, not wall-clock or hardware speedups"
+}

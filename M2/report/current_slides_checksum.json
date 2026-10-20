@@ -1,7 +1,13 @@
 {
-  "file": "M2_Method_and_Partial_Results_20261020.pptx",
-  "sha256": "9a9a0557be2cdff044f25eb9b20983259b4dc63b3854187685b9daac30361472",
-  "scope": "dev Random18/18; Chemeleon1/18; example pair explicitly labelled",
-  "status": "editable M2 contribution draft, four slides; not final group deck",
-  "original_chart_workbooks_preserved_exactly": true
+  "file": "M2/report/M2_Method_and_Dev_Baselines_20261021_36of36.pptx",
+  "sha256": "e13eec9ff1c1013afde5adcac49eafe4cf7ddc403e6c0779a547cc2d72f9ee9a",
+  "slide_count": 4,
+  "native_chart_count": 2,
+  "native_table_slides": [
+    4
+  ],
+  "example_chart_source": "M2/report/verified_pair_chart_data.json",
+  "official_result_source": "M2/verification/direct-39432570527-1/final-report",
+  "validation": "M2/verification/stage-closeout-39432570527/deck-validation.json",
+  "previous_decks_retained": true
 }
