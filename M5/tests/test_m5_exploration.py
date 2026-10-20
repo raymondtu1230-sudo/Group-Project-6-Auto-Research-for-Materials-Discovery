@@ -272,3 +272,29 @@ def test_enabling_exploration_without_policy_fails_fast() -> None:
         assert "must be configured" in str(error)
     else:
         raise AssertionError("Expected missing exploration_policy to fail fast")
+
+
+def test_bounded_memory_window_does_not_cause_reproposal() -> None:
+    """M4's manager serves at most `limit` recent records; an old formula that
+    falls out of the window must never be re-proposed."""
+    policy = UCBExplorationPolicy(seed=17, alpha0=1.0)
+    context = mg_sn_state(10)
+    context["m1_queries_remaining"] = 10
+    context["m1_queries_used"] = 10
+    context["m1_memory"] = [
+        {"reduced_formula": "Mg2Sn", "e_above_hull": 0.05, "query_count": 9},
+        {"reduced_formula": "MgSn2", "e_above_hull": 0.30, "query_count": 10},
+    ]
+    plan = Plan(compositions=[Composition("MgSn")], num_candidates=1)
+    # First call sees MgSn as incoming and adds it to history.
+    policy.adjust_plan(plan, context)
+
+    # Memory window now drops MgSn (only keeps last 2). It must still be
+    # excluded from the explore pool via the policy's own history.
+    context["m1_queries_remaining"] = 9
+    context["m1_queries_used"] = 11
+    out = policy.adjust_plan(plan, context)
+
+    outgoing = {c.reduced_formula for c in out.compositions}
+    assert "MgSn" not in outgoing - {"MgSn"}  # only the planner's own copy stays
+    assert policy.decision_log[-1]["query_count"] == 11

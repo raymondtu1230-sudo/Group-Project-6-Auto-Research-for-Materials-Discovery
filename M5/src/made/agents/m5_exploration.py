@@ -134,6 +134,11 @@ class UCBExplorationPolicy:
         self.noise = float(noise)
         self.max_pool = int(max_pool)
         self.decision_log: list[dict[str, Any]] = []
+        # Cumulative queried-formula set. ``m1_memory`` may be bounded (e.g.
+        # M4's manager serves at most `limit` recent records), so formulas that
+        # fall out of memory would otherwise be re-proposable. The policy
+        # accumulates every formula it ever observes across the episode.
+        self._queried_history: set[str] = set()
 
     # -- surrogate inputs -------------------------------------------------
 
@@ -185,6 +190,9 @@ class UCBExplorationPolicy:
         stats: dict[str, Any] = {}
         if n_explore > 0:
             xs, ys, queried = self._observations(context)
+            # Never re-propose a formula seen this episode, even if it fell out
+            # of the bounded m1_memory window.
+            queried = queried | self._queried_history
             pool = [
                 comp
                 for comp in _enumerate_stoichiometries(
@@ -240,6 +248,11 @@ class UCBExplorationPolicy:
                 **stats,
             }
         )
+        # Record this decision's outgoing formulas as attempted, so later
+        # steps never re-propose them even if memory forgets.
+        self._queried_history.update(
+            c.reduced_formula for c in incoming + picks
+        )
         return Plan(
             compositions=incoming + picks,
             num_candidates=int(plan.num_candidates),
@@ -249,7 +262,11 @@ class UCBExplorationPolicy:
     # -- checkpointing ------------------------------------------------------
 
     def get_state(self) -> dict[str, Any]:
-        return {"decision_log": list(self.decision_log)}
+        return {
+            "decision_log": list(self.decision_log),
+            "queried_formulas": sorted(self._queried_history),
+        }
 
     def load_state(self, state: dict[str, Any]) -> None:
         self.decision_log = list(state.get("decision_log", []))
+        self._queried_history = set(state.get("queried_formulas", []))
