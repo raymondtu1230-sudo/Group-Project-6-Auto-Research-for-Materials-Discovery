@@ -1,0 +1,10 @@
+{
+  "status": "verified_completed",
+  "exit_code": 0,
+  "unit": "Au-K-Tb-17",
+  "attempt": 3943257052701,
+  "archive": "Au-K-Tb-17-attempt-3943257052701.zip",
+  "sha256": "f622a61048e24f7b9369e2a1a27ea5e613b10270df1842d5507f4f6e5d8baad8",
+  "validation_error": null,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}

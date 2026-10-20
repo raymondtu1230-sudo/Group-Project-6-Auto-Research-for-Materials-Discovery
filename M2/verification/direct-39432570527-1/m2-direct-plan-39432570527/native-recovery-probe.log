@@ -1,0 +1,24 @@
+UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+{
+  "scope": "real_saved_checkpoint_interface_probe_no_scientific_experiment",
+  "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Dy-W-43-39386589324-1/packaged/Co-Dy-W-43-attempt-3938658932401.zip",
+  "archive_sha256": "5273f6d69e8ac45af53800a71eafcbf2ecaac8dd4fcb072bd46aa43126b4162c",
+  "checkpoint_member": "M1/MADE/checkpoints/20261020_073056/episode_000/checkpoint.json",
+  "candidate_payloads_present": 1024,
+  "saved_queries": 1,
+  "native_cache_keys": [
+    "null"
+  ],
+  "native_global_none_key_present": false,
+  "attempted_new_generation_in_probe": true,
+  "native_error": "native_cached_generator_miss_after_json_null_key_roundtrip",
+  "random_selector_state_saved": false,
+  "recovery_admitted": false,
+  "reason": "Native JSON cache-key restore misses the global cache; scorer RNG state is also absent. Exact continuation is not established without changing the restore path.",
+  "action": "authorized_fallback_new_attempt_from_scratch_only_Co-Dy-W-43",
+  "generation_sentinel_test_only": true,
+  "real_models_loaded": false,
+  "real_oracle_queries": 0,
+  "scientific_files_modified": false
+}

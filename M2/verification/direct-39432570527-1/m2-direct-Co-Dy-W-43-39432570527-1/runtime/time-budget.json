@@ -1,0 +1,13 @@
+{
+  "job_limit_minutes": 360,
+  "compute_step_limit_minutes": 360,
+  "compute_seconds": 21160,
+  "setup_elapsed_seconds": 110,
+  "termination_reserve_seconds": 60,
+  "package_limit_seconds": 60,
+  "upload_limit_seconds": 180,
+  "cleanup_reserve_seconds": 30,
+  "total_reserve_seconds": 330,
+  "scientific_budget": 20,
+  "scientific_settings_changed": false
+}

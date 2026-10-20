@@ -1,0 +1,10 @@
+{
+  "status": "verified_completed",
+  "exit_code": 0,
+  "unit": "Co-Dy-W-43",
+  "attempt": 3943257052701,
+  "archive": "Co-Dy-W-43-attempt-3943257052701.zip",
+  "sha256": "062baac56095deff9691d39c6f37e175d90e28abfd59df2fab6eb63fb22ee911",
+  "validation_error": null,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}

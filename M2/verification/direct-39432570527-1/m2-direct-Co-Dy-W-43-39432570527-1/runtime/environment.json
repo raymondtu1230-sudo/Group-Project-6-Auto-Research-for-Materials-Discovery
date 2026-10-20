@@ -1,0 +1,22 @@
+{
+  "scope": "real_weight_load_no_sampling_no_oracle_query",
+  "chemeleon_loaded": true,
+  "chemeleon_checkpoint_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+  "chemeleon_sample_source_sha256": "3720e0586947d2c02fed9be3159ab347c0e4844e60d8309c52e0d2882985d430",
+  "orb_loaded": true,
+  "device": "cpu",
+  "num_initial_candidates": 1024,
+  "batch_size": 256,
+  "cpu_count": 4,
+  "torch_threads": 2,
+  "disk_free_bytes": 81237499904,
+  "python": "3.12.15",
+  "versions": {
+    "chemeleon-dng": "0.1.3",
+    "torch": "2.9.1",
+    "orb-models": "0.5.5",
+    "mp-api": "0.45.15",
+    "numpy": "2.3.5",
+    "pymatgen": "2025.10.7"
+  }
+}
