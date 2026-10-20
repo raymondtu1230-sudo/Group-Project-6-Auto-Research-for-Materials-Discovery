@@ -1,0 +1,23 @@
+{
+  "mode": "formal_direct",
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "max_parallel": 2,
+  "units": [
+    {
+      "system": "Au-K-Tb",
+      "seed": 17
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 43
+    }
+  ],
+  "retry_of": {
+    "Au-K-Tb-17": 3938658932401,
+    "Co-Dy-W-43": 3938658932401
+  },
+  "request_id": "20261020-final-two-validated-native-restore-fallback-extended-time",
+  "acknowledgement": "RUN_ONLY_MISSING_DEV_CHEMELEON_B20_NO_RESUME",
+  "recovery_policy": "native_saved_checkpoint_probe_then_fallback_to_fresh_if_not_exact",
+  "time_policy": "360-minute-job-dynamic-330-second-total-exit-and-save-reserve"
+}

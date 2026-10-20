@@ -1,0 +1,43 @@
+{
+  "scientific_source": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "published_input": "df593ef41737950b47e948fa052d7d0045d1a682",
+  "local_python": "Python 3.12.14",
+  "local_tests_passed": 7,
+  "ruff_passed": true,
+  "actionlint": "1.7.7 passed",
+  "official_offline_validated_runs": 34,
+  "official_offline_issues": [],
+  "formal_units_selected": [
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "split": "dev",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "B": 20,
+      "status": "missing",
+      "source": null
+    }
+  ],
+  "recovery_admitted": false,
+  "fallback_authorized": true,
+  "total_reserve_seconds": 330,
+  "compute_step_limit_minutes": 360,
+  "job_limit_minutes": 360,
+  "original_scientific_files_changed": false,
+  "code_sha256": {
+    "M2/retry_budget.py": "79faf219d8e42627f81e5c104207e33611cebd4eb4435c7a19bed2ec263fbf30",
+    "M2/verify_saved_pool.py": "094c3c0620de73a0e45740f3f3995316162f7dcf59f16f718c0182ce8273e58f",
+    "M2/tests/test_retry_budget.py": "7a12018e0ada8ce6702aebc3f94c9cc6d2e234b3e15f8bc5c668c9b951691eee",
+    "M2/workflows/m2-chemeleon-final-two.yml": "413c021a16947b42e29c8bc9ea310d6f6463e96faf5ecf68694a1a27398a5773"
+  },
+  "user_authorization": "2026-10-20 21:27:24 Asia/Singapore: validate recovery, continue or rerun if not recoverable, use less conservative timing, close out existing results"
+}
