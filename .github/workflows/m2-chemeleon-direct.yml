@@ -46,7 +46,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.12.15'
       - uses: astral-sh/setup-uv@v6
         with:
           version: '0.9.18'
@@ -104,7 +104,7 @@ jobs:
           python M2/execution_ledger.py claim --publication publication --unit "$SYSTEM-$SEED" --attempt "$M2_ATTEMPT" --source "$SOURCE" "${EXTRA[@]}"
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.12.15'
       - uses: astral-sh/setup-uv@v6
         with:
           version: '0.9.18'
