@@ -1,0 +1,346 @@
+{
+  "artifacts": [
+    {
+      "id": 12247765033,
+      "name": "m2-preflight-probe-Mg-Sn-Sr-43-39384607532",
+      "size_in_bytes": 441,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247765033",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247765033/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:43Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:43Z",
+      "digest": "sha256:36462f8728ba85ec06f44c27fbdb28bd213c205a4097c126a09379a5b9713cdb",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12247735127,
+      "name": "m2-preflight-probe-Hf-Ni-Zr-17-39384607532",
+      "size_in_bytes": 441,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247735127",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247735127/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:45Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:45Z",
+      "digest": "sha256:91ec2a10041248616437d7af1887b09ae22b94c49d20d2dc441b5fde49542537",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12247710264,
+      "name": "m2-preflight-probe-Hf-Ni-Zr-43-39384607532",
+      "size_in_bytes": 442,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247710264",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247710264/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:44Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:44Z",
+      "digest": "sha256:a9ea02013a0fb4f7da6497cdd3d57b5b2b2e9728446a218dbee8b475d5c555b1",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12247520593,
+      "name": "m2-preflight-probe-Co-Mg-Na-43-39384607532",
+      "size_in_bytes": 439,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247520593",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247520593/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:46Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:46Z",
+      "digest": "sha256:09bf9b85361a3fbc555591d976e8547a85d7de29bed413ba8bfb461574e4d90a",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12247395459,
+      "name": "m2-preflight-probe-Au-K-Tb-43-39384607532",
+      "size_in_bytes": 437,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247395459",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247395459/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:45Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:45Z",
+      "digest": "sha256:71f4a66a29f507b18d2a72a0c64b449e9fad8794f13a2d72ad59d1c30ddd5d36",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12247246942,
+      "name": "m2-preflight-probe-Au-K-Tb-17-39384607532",
+      "size_in_bytes": 438,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247246942",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247246942/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:45Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:45Z",
+      "digest": "sha256:cd696614d27fec2579452f866266492112d2fe9f81f4b88702f8ecfae8c44118",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12247191121,
+      "name": "m2-preflight-probe-Co-Mg-Na-29-39384607532",
+      "size_in_bytes": 442,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247191121",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247191121/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:44Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:44Z",
+      "digest": "sha256:4775fcc5e4274b91a4554b89fb0121e395d95aa6b499befaf09af79bcea512a3",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12247157077,
+      "name": "m2-preflight-probe-Co-Mg-Na-17-39384607532",
+      "size_in_bytes": 441,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247157077",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247157077/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:43Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:43Z",
+      "digest": "sha256:0a3cf4b734b3161ff3c971c546b76308310562ec87161813d90db04ec6258288",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12247041123,
+      "name": "m2-preflight-probe-Ga-Pt-Tm-29-39384607532",
+      "size_in_bytes": 440,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247041123",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12247041123/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:44Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:44Z",
+      "digest": "sha256:9f76b10d5b44e7f222540386abfbded3e825b8c453714f8b4460c98467c33748",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12246972369,
+      "name": "m2-preflight-probe-Au-K-Tb-29-39384607532",
+      "size_in_bytes": 438,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246972369",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246972369/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:45Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:45Z",
+      "digest": "sha256:632675bd980810c8791467ccccaf73522d4e3e9da6259313c5cfb331c4527e80",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12246962411,
+      "name": "m2-preflight-probe-Hf-Ni-Zr-29-39384607532",
+      "size_in_bytes": 442,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246962411",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246962411/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:43Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:43Z",
+      "digest": "sha256:1f88573f69dafb9eaf4b8464b0ea860d00812aa05f20b46a65cf2bc56efc948c",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12246916806,
+      "name": "m2-preflight-probe-Co-Dy-W-43-39384607532",
+      "size_in_bytes": 439,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246916806",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246916806/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:46Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:46Z",
+      "digest": "sha256:b8e5de006b0d1d563e440f261836d1c77154ee882f66bb9a5bf70ceb56485ba2",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12246857922,
+      "name": "m2-preflight-probe-Co-Dy-W-17-39384607532",
+      "size_in_bytes": 440,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246857922",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246857922/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:44Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:44Z",
+      "digest": "sha256:badf23cb4e14882d76e723d59404694484e7b9fc560556f1d161384ecb91402f",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12246773029,
+      "name": "m2-preflight-ci-39384607532",
+      "size_in_bytes": 8963870,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246773029",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246773029/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:12:49Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:12:49Z",
+      "digest": "sha256:f03157019af103149e6899ffe8bb7547f1c7a7191502e9dc936cefde4612a50d",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12246758201,
+      "name": "m2-preflight-probe-Ga-Pt-Tm-17-39384607532",
+      "size_in_bytes": 441,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246758201",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246758201/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:45Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:45Z",
+      "digest": "sha256:10aaa1ec016ada48d59d1269516f2b8abbac8a489855f6dfd036ecc336809314",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12246739556,
+      "name": "m2-preflight-probe-Co-Dy-W-29-39384607532",
+      "size_in_bytes": 439,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246739556",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246739556/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:44Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:44Z",
+      "digest": "sha256:cace0a7876165bc06ad922b74b366aec141c2a1a63b9070f471f4a7e81ba3aa1",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12246563693,
+      "name": "m2-preflight-probe-Ga-Pt-Tm-43-39384607532",
+      "size_in_bytes": 441,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246563693",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246563693/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:43Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:43Z",
+      "digest": "sha256:1722df330c4cbfae104a262c4c3f8133f90029cafef24417c538a30d62f54814",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    },
+    {
+      "id": 12246533729,
+      "name": "m2-preflight-probe-Mg-Sn-Sr-29-39384607532",
+      "size_in_bytes": 442,
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246533729",
+      "archive_download_url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/artifacts/12246533729/zip",
+      "expired": false,
+      "created_at": "2026-10-20T07:13:43Z",
+      "expires_at": "2027-01-18T07:08:34Z",
+      "updated_at": "2026-10-20T07:13:43Z",
+      "digest": "sha256:7cd5f9348469578e59a0e38d91421fb746e6ea65aa45d3694a5284ae704ed2db",
+      "workflow_run": {
+        "id": 39384607532,
+        "repository_id": 1423130957,
+        "head_repository_id": 1423130957,
+        "head_branch": "m2/tool-routing-evaluation",
+        "head_sha": "199b714810f9bc061315c3ca9371f16ed5118126"
+      }
+    }
+  ]
+}

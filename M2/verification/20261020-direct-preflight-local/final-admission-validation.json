@@ -1,0 +1,9 @@
+{
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "validated_direct_source": true,
+  "selected_missing_units": 17,
+  "completed_units_excluded": 19,
+  "Mg_Sn_Sr_17_excluded": true,
+  "formal_runner_invoked": false,
+  "check": "Offline final request admission only; no subprocess/model/oracle started"
+}

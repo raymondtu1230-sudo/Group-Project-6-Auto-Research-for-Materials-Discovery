@@ -1,0 +1,947 @@
+{
+  "observed_at": "2026-10-20T07:13:43.390Z",
+  "jobs": [
+    {
+      "id": 118501341661,
+      "name": "prepare-and-ci",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Start actual setup clock",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Read infrastructure-only request and pin source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run astral-sh/setup-uv@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Install locked environment plus existing M4 interface dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "M2 installation and repeatability in isolated checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Current M1 contracts and scoped M2 tests (synthetic, no benchmark)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Record shared unseeded integration separately (not a direct-baseline gate)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Chrome and unchanged official synthetic smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Real credential format and authenticated Materials Project query",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Actual official Chemeleon and ORB weight load; no sampling",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Verify dynamic time budget after actual setup (no compute launched)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Verify retained archives and generate actual missing-only matrix",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Record actual API/model outcomes separately from infrastructure",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Preserve source-specific preflight checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 38
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 39
+        }
+      ]
+    },
+    {
+      "id": 118502786193,
+      "name": "probe (Co-Mg-Na, 17)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786264,
+      "name": "probe (Ga-Pt-Tm, 17)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786292,
+      "name": "probe (Au-K-Tb, 43)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786299,
+      "name": "probe (Co-Dy-W, 17)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786302,
+      "name": "probe (Hf-Ni-Zr, 43)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786303,
+      "name": "probe (Mg-Sn-Sr, 43)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786326,
+      "name": "probe (Au-K-Tb, 17)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786336,
+      "name": "probe (Hf-Ni-Zr, 29)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786340,
+      "name": "probe (Co-Dy-W, 43)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786343,
+      "name": "probe (Co-Mg-Na, 43)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786365,
+      "name": "probe (Ga-Pt-Tm, 29)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786370,
+      "name": "probe (Co-Dy-W, 29)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786372,
+      "name": "probe (Mg-Sn-Sr, 29)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786411,
+      "name": "probe (Co-Mg-Na, 29)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786458,
+      "name": "probe (Au-K-Tb, 29)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786465,
+      "name": "probe (Ga-Pt-Tm, 43)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": 118502786484,
+      "name": "probe (Hf-Ni-Zr, 17)",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_id": 39384607532,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Independent directory and 45 second infrastructure task",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 3
+        },
+        {
+          "name": "Always upload including the intentionally failed task",
+          "status": "pending",
+          "conclusion": null,
+          "number": 4
+        },
+        {
+          "name": "Keep expected failure visible in actual GitHub job conclusion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10
+        }
+      ]
+    }
+  ]
+}
