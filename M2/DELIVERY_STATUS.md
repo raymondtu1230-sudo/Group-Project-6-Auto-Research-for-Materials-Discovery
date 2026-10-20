@@ -1,3 +1,5 @@
+> 2026-10-20 最新状态：已有 **34/36** 项基线，本轮官方离线重新评分34项，`issues=[]`。剩余Au-K-Tb/17、Co-Dy-W/43在原生恢复验证未通过后，按授权使用新attempt `3943257052701` 从头运行；两项均已通过本次真实API和模型检查，进入独立云端runner计算，尚未计为完成。总job 360分钟，按实际安装耗时动态预留5分30秒退出/保存窗口。见[最后两项启动及34项收尾记录](FINAL_TWO_RUN_STATUS.md)、[34项评分证据](verification/final-two-preparation-20261020/closeout-34/)和[本次云端运行](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39432570527)。以下保留历史记录。
+
 > **2026-10-20 最新：独立Chemeleon启动准备已完成。** 固定源63077ea：云端17项M1测试、77项M2测试、真实API、模型加载、smoke和17并发短任务已验证，产物已保存main/M2。正式17项仍未启动。完整参数、证据与后续启动命令见 [CHEMELEON_PREFLIGHT_READY.md](CHEMELEON_PREFLIGHT_READY.md)。共享默认未设seed测试的单独失败保留；整个M2、routing-off及其他成员工作未宣称完成。以下原记录按其版本保留。
 
 > 交付方式：本轮材料通过 PR #5 单独交付至 `main/M2/`；用户已于2026年10月20日授权合并。共享框架接入仍由M1负责，PR #2 保留草稿。下述验收数字及失败对应审计时版本；本次文件交付不包含对后续共享代码变更的复验。
