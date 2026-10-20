@@ -77,3 +77,18 @@ what is still open. Used for the individual report.
 - M1: allow-list for check/hidden methods, hidden split, which planner gets frozen.
 - M4: rejected/error event capture before 26 Oct.
 - Collect M1, M2, M4 and M5 method text by 24 Oct.
+
+### 2026-10-20 (afternoon)
+
+- Checked `main` at `60d2c2a` against the team's messages:
+  - M1: frozen `m1_full` uses M3's planner (confirmed in `run_experiment.py`). The
+    held-out allow-list M1 described is **not on main yet**. M5's `log_path` and
+    M4's capture overrides are not in `m1_integrated.yaml` yet.
+  - M2: dev Random 18/18 accepted; the 17 missing dev Chemeleon units have been
+    running on GitHub since 15:24. M2's delivery scope says check/hidden belongs to
+    M6, so nobody is running Chemeleon × check yet.
+  - M3 labels its results "vs M1 reference" and refuses non-dev systems. M4's
+    rejected/error capture and M5's decision-log sidecar are on main.
+- Updated `REQUIREMENTS_CHECKLIST.md` and `COMPUTE_PLAN.md` to match.
+- Started setting up the MADE environment locally (`uv sync --locked`) for the
+  Random × check runs.

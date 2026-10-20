@@ -103,7 +103,7 @@ Decide **before** starting a split, the same for every method on it:
 
 | Date | Action | Owner |
 | --- | --- | --- |
-| **19–20 Oct (now)** | Dispatch Chemeleon × check (12 units) on GitHub Actions | M2 dispatches, M6 tracks |
+| **19–20 Oct (now)** | Dispatch Chemeleon × check (12 units) on GitHub Actions | M6 owns it (M2's 20 Oct scope excludes check/hidden). Ask M2 to dispatch with `M2/prepare_split.py --split check` after their 17 dev Chemeleon jobs; otherwise M6 runs it |
 | 20 Oct | Random × check (12 units), laptop or GitHub | M6 |
 | 24 Oct | Check baselines complete and scored with `M2/evaluate.py --split check` | M6 |
 | 25 Oct | Agent freeze; record revision | M1 |
