@@ -298,3 +298,29 @@ def test_bounded_memory_window_does_not_cause_reproposal() -> None:
     outgoing = {c.reduced_formula for c in out.compositions}
     assert "MgSn" not in outgoing - {"MgSn"}  # only the planner's own copy stays
     assert policy.decision_log[-1]["query_count"] == 11
+
+
+def test_jsonl_sidecar_appends_one_line_per_decision(tmp_path) -> None:
+    """M4 requested a per-episode JSONL sidecar; each adjust_plan call must
+    append exactly one line, and the file must parse as JSONL."""
+    import json as jsonlib
+
+    log_file = tmp_path / "m5_decisions.jsonl"
+    policy = UCBExplorationPolicy(seed=17, log_path=str(log_file))
+    context = dict(mg_sn_state(0))
+    context["m1_queries_remaining"] = 20
+    context["m1_queries_used"] = 0
+    plan = Plan(compositions=[Composition("MgSn")], num_candidates=1)
+
+    policy.adjust_plan(plan, context)
+    policy.adjust_plan(plan, context)
+
+    lines = log_file.read_text(encoding="utf-8").strip().splitlines()
+    assert len(lines) == 2
+    for line in lines:
+        record = jsonlib.loads(line)
+        assert record["mode"] in {"mixed", "explore", "exploit"}
+        assert "m1_queries_remaining" in record
+        assert "rationale" in record
+    # In-memory log and sidecar stay in sync.
+    assert len(policy.decision_log) == 2
