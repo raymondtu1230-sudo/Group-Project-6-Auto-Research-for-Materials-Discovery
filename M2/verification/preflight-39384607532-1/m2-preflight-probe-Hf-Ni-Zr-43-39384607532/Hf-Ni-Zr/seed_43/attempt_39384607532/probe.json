@@ -1,0 +1,13 @@
+{
+  "scope": "infrastructure_only_not_science",
+  "system": "Hf-Ni-Zr",
+  "seed": 43,
+  "attempt": 39384607532,
+  "runner_name": "GitHub Actions 1000000082",
+  "hostname": "runnervm8k3b6",
+  "job_id": "probe",
+  "run_id": "39384607532",
+  "started_at": "2026-10-20T07:12:58.843299+00:00",
+  "completed_at": "2026-10-20T07:13:43.843489+00:00",
+  "intentional_failure": false
+}

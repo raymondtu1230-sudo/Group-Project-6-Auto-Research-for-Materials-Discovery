@@ -1,0 +1,32 @@
+{
+  "scope": "infrastructure_only_not_science",
+  "probe_records": 17,
+  "unique_unit_directories": 17,
+  "matrix_jobs": 17,
+  "unique_runner_names": 17,
+  "observed_probe_peak_concurrency": 17,
+  "matrix_successes": 16,
+  "matrix_expected_failures": 1,
+  "job_durations_seconds": {
+    "probe (Co-Mg-Na, 17)": 50.0,
+    "probe (Ga-Pt-Tm, 17)": 52.0,
+    "probe (Au-K-Tb, 43)": 52.0,
+    "probe (Co-Dy-W, 17)": 51.0,
+    "probe (Hf-Ni-Zr, 43)": 52.0,
+    "probe (Mg-Sn-Sr, 43)": 50.0,
+    "probe (Au-K-Tb, 17)": 53.0,
+    "probe (Hf-Ni-Zr, 29)": 50.0,
+    "probe (Co-Dy-W, 43)": 54.0,
+    "probe (Co-Mg-Na, 43)": 53.0,
+    "probe (Ga-Pt-Tm, 29)": 51.0,
+    "probe (Co-Dy-W, 29)": 51.0,
+    "probe (Mg-Sn-Sr, 29)": 50.0,
+    "probe (Co-Mg-Na, 29)": 51.0,
+    "probe (Au-K-Tb, 29)": 52.0,
+    "probe (Ga-Pt-Tm, 43)": 50.0,
+    "probe (Hf-Ni-Zr, 17)": 52.0
+  },
+  "account_plan": "unknown; connector does not expose billing or global slots",
+  "future_free_slots": "unknown; observed overlap is a point-in-time measurement",
+  "passed": true
+}

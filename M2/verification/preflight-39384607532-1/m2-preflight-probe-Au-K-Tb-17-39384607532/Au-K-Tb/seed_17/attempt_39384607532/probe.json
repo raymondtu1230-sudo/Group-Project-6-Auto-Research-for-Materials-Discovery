@@ -1,0 +1,13 @@
+{
+  "scope": "infrastructure_only_not_science",
+  "system": "Au-K-Tb",
+  "seed": 17,
+  "attempt": 39384607532,
+  "runner_name": "GitHub Actions 1000000085",
+  "hostname": "runnervm8k3b6",
+  "job_id": "probe",
+  "run_id": "39384607532",
+  "started_at": "2026-10-20T07:12:59.185167+00:00",
+  "completed_at": "2026-10-20T07:13:44.185341+00:00",
+  "intentional_failure": true
+}
