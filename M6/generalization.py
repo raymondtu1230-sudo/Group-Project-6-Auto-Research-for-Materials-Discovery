@@ -142,7 +142,18 @@ def split_stats(
     mean = sd = None
     if complete and systems:
         mean, sd = seed_aggregate(runs, method, systems, seeds, field)
+    # AF/EF pairs where the baseline found nothing use MADE's zero-baseline
+    # convention (M2 labels them); count them so the report can footnote them.
+    zero_baseline = None
+    if field.startswith(("AF_vs_", "EF_vs_")):
+        column = "comparison_" + field.split("_vs_", 1)[1]
+        zero_baseline = sum(
+            1
+            for (m, _, _), row in runs.items()
+            if m == method and row.get(column) == "official_zero_baseline_convention"
+        )
     return {
+        "zero_baseline_pairs": zero_baseline,
         "runs": len(present),
         "values": len(available),
         "expected": expected,
@@ -262,6 +273,8 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
                     "gap_heldout_minus_dev": gap,
                     "relative_gap": rel,
                     "gap_status": status,
+                    "dev_zero_baseline_pairs": d["zero_baseline_pairs"],
+                    "heldout_zero_baseline_pairs": h["zero_baseline_pairs"],
                 }
             )
 
@@ -414,6 +427,20 @@ def write_markdown(path: Path, result: dict[str, Any], heldout_split: str) -> No
             f"| {SHORT_NAMES.get(row['method'], row['method'])} | {row['split']} | {row['system']} "
             f"| {seeds} of {row['seeds_expected']} | {show(row, 'mSUN_at_B')} | {show(row, 'AUDC')} |"
         )
+    zero = [
+        f"{SHORT_NAMES.get(r['method'], r['method'])} {r['metric_label']} "
+        f"(dev {r['dev_zero_baseline_pairs']}, held-out {r['heldout_zero_baseline_pairs']})"
+        for r in result["summary"]
+        if r["dev_zero_baseline_pairs"] or r["heldout_zero_baseline_pairs"]
+    ]
+    if zero:
+        lines += [
+            "",
+            "Zero-baseline pairs (the baseline found nothing; MADE's official convention "
+            "sets the factor, see `comparison_*` in M2's per_run.csv): "
+            + "; ".join(zero)
+            + ".",
+        ]
     lines += ["", f"Missing units: {len(result['missing'])} (see `missing_units.csv`)."]
     if result["mixed_revisions"]:
         lines.append(

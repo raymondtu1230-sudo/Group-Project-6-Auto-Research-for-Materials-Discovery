@@ -21,7 +21,7 @@ SPEC.loader.exec_module(gen)
 
 FIELDS = ["method", "split", "system", "seed", "attempt", "B", "mSUN_at_B", "AUDC",
           "repository_revision", "AF_vs_random", "EF_vs_random",
-          "AF_vs_chemeleon", "EF_vs_chemeleon"]  # fmt: skip
+          "AF_vs_chemeleon", "EF_vs_chemeleon", "comparison_random"]  # fmt: skip
 
 
 def write_runs(path: Path, rows: list[dict]) -> Path:
@@ -150,6 +150,7 @@ def test_real_recovery_package(tmp_path):
     assert chem["dev_runs"] == "1" and chem["dev_mean"] == ""
     assert float(chem["dev_available_mean_partial"]) == 16
     assert all(r["gap_heldout_minus_dev"] == "" for r in rows)
+    assert chem["dev_zero_baseline_pairs"] == ""  # not an AF/EF metric
     with (tmp_path / "out" / "missing_units.csv").open() as stream:
         assert len(list(csv.DictReader(stream))) == 88
     assert (tmp_path / "out" / "generalization.svg").read_text().startswith("<svg")
@@ -184,3 +185,14 @@ def test_check_script_refuses_ablations():
         text=True,
     )
     assert out.returncode == 2 and "Refusing" in out.stderr
+
+
+def test_zero_baseline_pairs_are_counted(tmp_path, systems):
+    rows = grid("dev", ["A-B-C"], [17, 29], "m1_full", lambda i, s: 5)
+    rows[0]["EF_vs_random"] = 0
+    rows[0]["comparison_random"] = "official_zero_baseline_convention"
+    rows[1]["EF_vs_random"] = 2
+    rows[1]["comparison_random"] = "paired_system_seed_budget"
+    out = run(tmp_path, rows, None, systems, "--dev-seeds", "17", "29")
+    assert out["EF_vs_random"]["dev_zero_baseline_pairs"] == "1"
+    assert "Zero-baseline pairs" in (tmp_path / "out" / "generalization.md").read_text()
