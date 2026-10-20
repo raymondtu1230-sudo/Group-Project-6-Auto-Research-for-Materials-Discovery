@@ -1,0 +1,6 @@
+The first offline audit invocation exited 1 with KeyError: 'status' at
+verify_preserved.py line 49 (metadata["status"]).
+The interrupted archive's original M1 metadata has no finalized status field.
+The audit reader was corrected to allow an absent status for timeout archives;
+successful archives still strictly require metadata status='completed'.
+No experimental metadata or archived bytes were changed to pass the audit.

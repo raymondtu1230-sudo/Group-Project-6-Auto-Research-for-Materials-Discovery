@@ -1,0 +1,5 @@
+The second offline audit invocation exited 1 with TypeError: unhashable type:
+'list' while making the unique (method, system, seed) set.
+Official run_metadata stores system as an element list, not a hyphenated string.
+The audit reader now joins that list only for unit identity comparison/output.
+Original experimental metadata and archived bytes remain untouched.
