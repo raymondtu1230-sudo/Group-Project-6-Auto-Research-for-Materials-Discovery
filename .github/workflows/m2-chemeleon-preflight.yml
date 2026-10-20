@@ -1,0 +1,197 @@
+name: M2 direct Chemeleon infrastructure preflight
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths: [M2/requests/chemeleon-preflight.json]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  OMP_NUM_THREADS: '2'
+  MKL_NUM_THREADS: '2'
+  UV_LINK_MODE: hardlink
+  PYTHONUNBUFFERED: '1'
+
+# No workflow-wide cancellation: a newer request cannot cancel healthy jobs.
+jobs:
+  prepare-and-ci:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      parallel: ${{ steps.plan.outputs.parallel }}
+      source: ${{ steps.request.outputs.source }}
+    steps:
+      - name: Start actual setup clock
+        run: echo "M2_JOB_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v4
+      - id: request
+        name: Read infrastructure-only request and pin source
+        run: |
+          cp M2/requests/chemeleon-preflight.json "$RUNNER_TEMP/m2-request.json"
+          test "$(jq -r .mode "$RUNNER_TEMP/m2-request.json")" = infrastructure_only
+          SOURCE=$(jq -er '.source_sha | select(test("^[0-9a-f]{40}$"))' "$RUNNER_TEMP/m2-request.json")
+          echo "source=$SOURCE" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.request.outputs.source }}
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.9.18'
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - name: Install locked environment plus existing M4 interface dependency
+        timeout-minutes: 10
+        run: |
+          mkdir -p M2/runtime
+          uv --version > M2/runtime/uv-version.txt
+          START=$(date +%s)
+          uv sync --locked --project M1/MADE 2>&1 | tee M2/runtime/install.log
+          uv pip install --python M1/MADE/.venv/bin/python --no-deps -e M4 2>&1 | tee M2/runtime/m4-dependency-install.log
+          echo "$(($(date +%s)-START))" > M2/runtime/install-seconds.txt
+          uv pip check --python M1/MADE/.venv/bin/python > M2/runtime/dependencies.log
+      - name: M2 installation and repeatability in isolated checkout
+        run: |
+          M1/MADE/.venv/bin/python M2/install.py > M2/runtime/installation-first.json
+          M1/MADE/.venv/bin/python M2/install.py > M2/runtime/installation-second.json
+          cmp M2/runtime/installation-first.json M2/runtime/installation-second.json
+      - name: Current M1 contracts and scoped M2 tests (synthetic, no benchmark)
+        working-directory: M1/MADE
+        run: |
+          set -o pipefail
+          uv run --locked pytest -q tests/test_m1_integrated.py -o addopts='' --junitxml=../../M2/runtime/m1.xml 2>&1 | tee ../../M2/runtime/m1-tests.log
+          uv run --locked pytest -q tests/test_m2_tool_routing.py ../../M2/tests -k 'not default_unseeded_configuration_still_initializes_with_routing_off' -o addopts='' --junitxml=../../M2/runtime/m2.xml 2>&1 | tee ../../M2/runtime/m2-tests.log
+          uv run --locked ruff check src/made/agents/m2_tool_routing.py tests/test_m2_tool_routing.py ../../M2 2>&1 | tee ../../M2/runtime/ruff.log
+      - name: Record shared unseeded integration separately (not a direct-baseline gate)
+        id: shared
+        continue-on-error: true
+        working-directory: M1/MADE
+        run: |
+          set -o pipefail
+          uv run --locked pytest -q tests/test_m2_tool_routing.py -k default_unseeded_configuration_still_initializes_with_routing_off -o addopts='' --junitxml=../../M2/runtime/shared-default.xml 2>&1 | tee ../../M2/runtime/shared-default.log
+      - name: Chrome and unchanged official synthetic smoke
+        working-directory: M1/MADE
+        timeout-minutes: 4
+        run: |
+          set -o pipefail
+          uv run --locked python -c 'import kaleido; kaleido.get_chrome_sync()'
+          uv run --locked python ../run_smoke_test.py 2>&1 | tee ../../M2/runtime/smoke.log
+      - name: Real credential format and authenticated Materials Project query
+        timeout-minutes: 3
+        env:
+          MATERIALS_PROJECT_API_KEY: ${{ secrets.TUWEIKANG_MATERIALS_PROJECT_API_KEY }}
+        run: |
+          M1/MADE/.venv/bin/python M2/check_key.py
+          timeout 90 M1/MADE/.venv/bin/python M2/chemeleon_preflight.py api --output M2/runtime/api.json
+      - name: Actual official Chemeleon and ORB weight load; no sampling
+        timeout-minutes: 5
+        working-directory: M1/MADE
+        run: |
+          set -o pipefail
+          timeout 240 uv run --locked python ../../M2/check_direct_environment.py 2>&1 | tee ../../M2/runtime/environment.log
+      - name: Verify dynamic time budget after actual setup (no compute launched)
+        run: M1/MADE/.venv/bin/python M2/chemeleon_preflight.py budget --output M2/runtime/time-budget.json
+      - name: Verify retained archives and generate actual missing-only matrix
+        id: plan
+        working-directory: M1/MADE
+        run: |
+          uv run --locked python ../../M2/chemeleon_preflight.py plan --published ../../published --output ../../M2/runtime/plan --request "$RUNNER_TEMP/m2-request.json"
+          uv run --locked python ../../M2/evaluate.py --results-root ../../M2/runtime/plan/reused --output ../../M2/runtime/offline-report --split dev --allow-partial
+          git rev-parse HEAD > ../../M2/runtime/actual-source-sha.txt
+          git diff --name-only > ../../M2/runtime/isolated-install-changes.txt
+      - name: Preserve source-specific preflight checks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2-preflight-ci-${{ github.run_id }}
+          path: M2/runtime/
+          retention-days: 90
+          if-no-files-found: error
+
+  probe:
+    needs: prepare-and-ci
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    name: probe (${{ matrix.system }}, ${{ matrix.seed }})
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(needs.prepare-and-ci.outputs.parallel) }}
+      matrix: ${{ fromJSON(needs.prepare-and-ci.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare-and-ci.outputs.source }}
+      - name: Independent directory and 45 second infrastructure task
+        id: probe
+        continue-on-error: true
+        env:
+          SYSTEM: ${{ matrix.system }}
+          SEED: ${{ matrix.seed }}
+        run: |
+          EXTRA=()
+          if [ "$SYSTEM/$SEED" = 'Au-K-Tb/17' ]; then EXTRA+=(--fail); fi
+          python M2/chemeleon_preflight.py probe --output M2/runtime/probes --system "$SYSTEM" --seed "$SEED" --attempt "${{ github.run_id }}" "${EXTRA[@]}"
+      - name: Always upload including the intentionally failed task
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2-preflight-probe-${{ matrix.system }}-${{ matrix.seed }}-${{ github.run_id }}
+          path: M2/runtime/probes/
+          retention-days: 90
+          if-no-files-found: error
+      - name: Keep expected failure visible in actual GitHub job conclusion
+        if: steps.probe.outcome == 'failure'
+        run: exit 23
+
+  preserve:
+    needs: [prepare-and-ci, probe]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare-and-ci.outputs.source || github.sha }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: m2-preflight-*
+          path: downloads
+      - name: Record real GitHub job metadata and audit overlap
+        id: audit
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api 'repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs?per_page=100' > downloads/github-jobs.json
+          python M2/validate_preflight_evidence.py --downloads downloads --jobs downloads/github-jobs.json
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: publication
+      - name: Commit infrastructure evidence to main/M2 only, even on failed CI
+        run: python M2/execution_ledger.py publish --publication publication --downloads downloads --kind preflight --run-id '${{ github.run_id }}-${{ github.run_attempt }}'
+      - name: Validate persisted bytes in main
+        run: |
+          git -C publication fetch origin main
+          git -C publication diff --exit-code HEAD origin/main -- 'M2/verification/preflight-${{ github.run_id }}-${{ github.run_attempt }}'
+      - name: Report failed audit honestly after saving evidence
+        if: steps.audit.outcome == 'failure'
+        run: exit 1

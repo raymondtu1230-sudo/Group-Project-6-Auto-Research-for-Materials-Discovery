@@ -1,0 +1,8 @@
+{
+  "mode": "infrastructure_only",
+  "source_sha": "71ad47298e1e89c6977fb6c30ba23001ab5373f2",
+  "max_parallel": 17,
+  "units": "all_missing",
+  "request_id": "20261020-direct-preflight-v1",
+  "formal_science_authorized": false
+}
