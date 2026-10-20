@@ -1,0 +1,264 @@
+name: M2 final two retries after native saved-pool recovery check
+on:
+  push:
+    branches: [m2/tool-routing-evaluation]
+    paths: [M2/requests/chemeleon-final-two.json]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  OMP_NUM_THREADS: '2'
+  MKL_NUM_THREADS: '2'
+  UV_LINK_MODE: hardlink
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  prepare:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      parallel: ${{ steps.plan.outputs.parallel }}
+      source: ${{ steps.request.outputs.source }}
+      retry_of: ${{ steps.plan.outputs.retry_of }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: request
+        run: |
+          cp M2/requests/chemeleon-final-two.json "$RUNNER_TEMP/m2-request.json"
+          mkdir -p "$RUNNER_TEMP/m2-controls"
+          cp M2/retry_budget.py M2/verify_saved_pool.py M2/tests/test_retry_budget.py "$RUNNER_TEMP/m2-controls/"
+          git rev-parse HEAD > "$RUNNER_TEMP/m2-controls/controller-source.txt"
+          test "$(jq -r .mode "$RUNNER_TEMP/m2-request.json")" = formal_direct
+          SOURCE=$(jq -er '.source_sha | select(test("^[0-9a-f]{40}$"))' "$RUNNER_TEMP/m2-request.json")
+          echo "source=$SOURCE" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.request.outputs.source }}
+      - name: Install only M2 retry controls; retain unchanged scientific source
+        run: |
+          cp "$RUNNER_TEMP/m2-controls/retry_budget.py" "$RUNNER_TEMP/m2-controls/verify_saved_pool.py" M2/
+          cp "$RUNNER_TEMP/m2-controls/test_retry_budget.py" M2/tests/
+          mkdir -p M2/runtime
+          cp "$RUNNER_TEMP/m2-controls/controller-source.txt" M2/runtime/
+          sha256sum M2/retry_budget.py M2/verify_saved_pool.py > M2/runtime/controller-sha256.txt
+          test -z "$(git diff --name-only -- M1)"
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.15'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.9.18'
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - run: uv sync --locked --project M1/MADE
+      - name: Current budget tests and actual native checkpoint recovery gate
+        timeout-minutes: 5
+        run: |
+          uv run --locked --project M1/MADE python -m pytest M2/tests/test_retry_budget.py -q 2>&1 | tee M2/runtime/retry-tests.log
+          uv run --locked --project M1/MADE python M2/verify_saved_pool.py --published published --output M2/runtime/native-recovery-probe.json 2>&1 | tee M2/runtime/native-recovery-probe.log
+      - id: plan
+        working-directory: M1/MADE
+        run: uv run --locked python ../../M2/chemeleon_preflight.py plan --published ../../published --output ../../M2/runtime/plan --request "$RUNNER_TEMP/m2-request.json" --formal
+      - name: Revalidate and close out the existing 34 results offline
+        timeout-minutes: 5
+        run: |
+          uv run --locked --project M1/MADE python M2/evaluate.py --results-root M2/runtime/plan/reused --output M2/runtime/closeout --split dev --allow-partial
+          python - <<'CHECK'
+          import json
+          from pathlib import Path
+          result=json.loads(Path('M2/runtime/closeout/validation.json').read_text())
+          assert result['validated_runs']==34 and result['issues']==[]
+          assert len(result['missing_baseline_units'])==2
+          CHECK
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2-direct-plan-${{ github.run_id }}
+          path: |
+            M2/runtime/plan/plan.json
+            M2/runtime/plan/input-manifest.json
+            M2/runtime/closeout/
+            M2/runtime/native-recovery-probe.json
+            M2/runtime/native-recovery-probe.log
+            M2/runtime/retry-tests.log
+            M2/runtime/controller-source.txt
+            M2/runtime/controller-sha256.txt
+          retention-days: 90
+
+  direct:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    name: direct (${{ matrix.system }}, ${{ matrix.seed }})
+    concurrency:
+      group: m2-direct-dev-${{ matrix.system }}-${{ matrix.seed }}
+      cancel-in-progress: false
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(needs.prepare.outputs.parallel) }}
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    env:
+      MATERIALS_PROJECT_API_KEY: ${{ secrets.TUWEIKANG_MATERIALS_PROJECT_API_KEY }}
+      SYSTEM: ${{ matrix.system }}
+      SEED: ${{ matrix.seed }}
+      SOURCE: ${{ needs.prepare.outputs.source }}
+      RETRIES: ${{ needs.prepare.outputs.retry_of }}
+    steps:
+      - name: Start complete job clock and unique attempt
+        run: |
+          echo "M2_JOB_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
+          echo "M2_ATTEMPT=$(( ${{ github.run_id }} * 100 + ${{ github.run_attempt }} ))" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare.outputs.source }}
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          path: workflow-controls
+          sparse-checkout: M2/retry_budget.py
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: publication
+      - name: Atomically claim unit before setup or scientific work
+        id: claim
+        run: |
+          RETRY=$(jq -r --arg key "$SYSTEM-$SEED" '.[$key] // empty' <<< "$RETRIES")
+          EXTRA=()
+          if [ -n "$RETRY" ]; then EXTRA+=(--retry-of "$RETRY"); fi
+          python M2/execution_ledger.py claim --publication publication --unit "$SYSTEM-$SEED" --attempt "$M2_ATTEMPT" --source "$SOURCE" "${EXTRA[@]}"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.15'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.9.18'
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - name: Locked environment and Chrome
+        timeout-minutes: 15
+        run: |
+          mkdir -p M2/runtime
+          uv sync --locked --project M1/MADE 2>&1 | tee M2/runtime/install.log
+          cd M1/MADE
+          uv run --locked python -c 'import kaleido; kaleido.get_chrome_sync()'
+      - name: Real API and actual model/config admission (no sampling)
+        timeout-minutes: 6
+        working-directory: M1/MADE
+        run: |
+          uv run --locked python ../../M2/check_key.py
+          timeout 90 uv run --locked python ../../M2/chemeleon_preflight.py api --output ../../M2/runtime/api.json
+          timeout 240 uv run --locked python ../../M2/check_direct_environment.py > ../../M2/runtime/environment.log 2>&1
+      - name: Record inputs and reserve only five minutes thirty seconds for exit and saving
+        id: budget
+        working-directory: M1/MADE
+        run: |
+          uv run --locked python ../../workflow-controls/M2/retry_budget.py
+          git -C ../../workflow-controls rev-parse HEAD > ../../M2/runtime/controller-source.txt
+          sha256sum ../../workflow-controls/M2/retry_budget.py > ../../M2/runtime/controller-sha256.txt
+          uv run --locked python -c 'import json,sys;sys.path.insert(0,"../..");from M2.chemeleon_preflight import fingerprint;from pathlib import Path;Path("../../M2/runtime/science-inputs.json").write_text(json.dumps(fingerprint(),indent=2))'
+      - name: Full unchanged B20 Chemeleon; no generation-cache or resume injection
+        id: compute
+        continue-on-error: true
+        timeout-minutes: 360
+        working-directory: M1/MADE
+        run: |
+          set +e
+          uv run --locked python ../../M2/run_baselines.py --method chemeleon_generative_baseline --split dev --system "$SYSTEM" --seed "$SEED" --attempt "$M2_ATTEMPT" --max-seconds '${{ steps.budget.outputs.seconds }}'
+          CODE=$?
+          echo "exit_code=$CODE" >> "$GITHUB_OUTPUT"
+          exit "$CODE"
+      - name: Package success, failure or timeout with its own receipt
+        timeout-minutes: 1
+        if: always() && steps.claim.outcome == 'success'
+        run: |
+          # Packaging failures without a usable locked environment still retain
+          # raw runtime files in the always-upload step below.
+          PYTHON=M1/MADE/.venv/bin/python
+          if [ ! -x "$PYTHON" ]; then PYTHON=python; fi
+          "$PYTHON" M2/chemeleon_preflight.py package --output M2/packaged --system "$SYSTEM" --seed "$SEED" --attempt "$M2_ATTEMPT" --exit-code '${{ steps.compute.outputs.exit_code || 1 }}'
+      - name: Preserve every attempt before runner teardown
+        timeout-minutes: 3
+        if: always() && steps.claim.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2-direct-${{ matrix.system }}-${{ matrix.seed }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            M2/packaged/
+            M2/runtime/
+          retention-days: 90
+          if-no-files-found: error
+      - name: Keep failed computation visible after upload
+        if: always() && (steps.compute.outcome != 'success' || steps.claim.outcome != 'success')
+        run: exit 1
+
+  preserve:
+    needs: [prepare, direct]
+    if: always() && needs.prepare.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare.outputs.source }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: m2-direct-*
+          path: downloads
+      - name: Preserve actual job metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api 'repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs?per_page=100' > downloads/github-jobs.json
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: publication
+      - name: Durable M2-only publication independent of scientific success
+        run: python M2/execution_ledger.py publish --publication publication --downloads downloads --kind direct --run-id '${{ github.run_id }}-${{ github.run_attempt }}'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.15'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.9.18'
+          enable-cache: true
+          cache-dependency-glob: M1/MADE/uv.lock
+      - name: Recompute the latest baseline report after raw evidence is durable
+        run: |
+          uv sync --locked --project M1/MADE
+          uv run --locked --project M1/MADE python M2/chemeleon_preflight.py plan --published publication --output M2/runtime/final-plan
+          uv run --locked --project M1/MADE python M2/evaluate.py --results-root M2/runtime/final-plan/reused --output M2/runtime/final-report --split dev --allow-partial
+          python - <<'REPORT'
+          import json, shutil, sys
+          from pathlib import Path
+          sys.path.insert(0, '.')
+          from M2.execution_ledger import commit
+          root=Path('publication')
+          target=Path('M2/verification/direct-${{ github.run_id }}-${{ github.run_attempt }}/final-report')
+          shutil.copytree('M2/runtime/final-report',root/target)
+          shutil.copyfile('M2/runtime/final-plan/plan.json',root/target/'reuse-plan.json')
+          validation=json.loads((root/target/'validation.json').read_text())
+          latest={'run_id':${{ github.run_id }},'scientific_source':'${{ needs.prepare.outputs.source }}','validated_runs':validation['validated_runs'],'missing_baseline_units':validation['missing_baseline_units'],'issues':validation['issues'],'baseline_sweep_complete':validation['baseline_sweep_complete'],'report':str(target),'scope':'dev baselines only; M1 reference and M6 check/hidden are separate'}
+          (root/'M2/LATEST_BASELINE_RUN.json').write_text(json.dumps(latest,indent=2)+'\n')
+          commit(root,[str(target),'M2/LATEST_BASELINE_RUN.json'],'M2: publish post-retry offline baseline report')
+          REPORT
