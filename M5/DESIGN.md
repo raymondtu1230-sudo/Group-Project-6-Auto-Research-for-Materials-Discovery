@@ -78,11 +78,18 @@ M1's contract test). ON vs OFF at identical seeds/budgets is the ablation pair.
 2. May `plan.constraints` carry generator hints (e.g. preferred spacegroups), or
    do the configured generators ignore it? (Affects how much the explore pool can
    steer structure generation vs only composition choice.)
-3. Confirm `m1_memory` contents when M4's `memory_manager` is enabled: do we get
-   M4's records (richer) or M1's bounded list? UCB quality depends on having
-   `e_above_hull` per queried composition.
+
+## Resolved (20 Oct)
+
+3. ~~`m1_memory` contents under M4's memory_manager~~ — **Confirmed: M4's
+   records are served, and they include `e_above_hull`** (M4's
+   `OBSERVATION_FIELDS` exposes it). GP training inputs are complete under
+   `m1_full`. One caveat found while verifying: M4's manager bounds the window
+   to `limit` (default 8) records, so the policy now keeps its own cumulative
+   `_queried_history` so nothing re-enters the explore pool when records age
+   out of the window (commit `bc97609`).
 
 ## Dependencies
 
-- sklearn (GP regression) — lightweight, CPU; add to component env only.
+- numpy only (GP regression implemented directly); no new heavy dependencies.
 - M4 log format: confirmation sent separately (M5/M4_LOG_CONFIRMATION.md).
