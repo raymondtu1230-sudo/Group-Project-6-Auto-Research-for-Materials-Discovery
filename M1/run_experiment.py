@@ -24,10 +24,14 @@ MADE_DIR = M1_DIR / "MADE"
 RUNNER = MADE_DIR / "scripts" / "run_benchmark.py"
 PROTOCOL = yaml.safe_load((M1_DIR / "protocol" / "protocol_v1.yaml").read_text())
 SEEDS = tuple(PROTOCOL["repeats"]["seeds"])
+# M3 component ablations, measured against m1_baseline so they do not wait for
+# the plugin-complete m1_full: M3 planner + self-correction on top of the
+# baseline, then each M3 part switched off.
+M3_METHODS = ("m3_full", "m3_planning_off", "m3_self_correction_off")
 METHODS = tuple(
     PROTOCOL["methods"]["required"]
     + PROTOCOL["methods"]["ablations"]
-    + ["m1_baseline"]
+    + ["m1_baseline", *M3_METHODS]
 )
 QUERY_BUDGET = int(PROTOCOL["environment"]["query_budget"])
 SWITCHES = (
@@ -37,6 +41,35 @@ SWITCHES = (
     "enable_exploration",
     "enable_tool_routing",
 )
+
+
+def m1_agent_overrides(method: str) -> list[str]:
+    """Switch and planner overrides for methods run with ``agent=m1_integrated``."""
+    if method == "m1_baseline" or method in M3_METHODS:
+        # m1_baseline is the currently runnable M1 reference: planning and
+        # bounded memory are active; future member plug-ins remain disabled.
+        flags = dict.fromkeys(SWITCHES, False)
+        flags["enable_planning"] = True
+        flags["enable_memory"] = True
+        flags["enable_reflection"] = method != "m1_baseline"
+    else:
+        flags = dict.fromkeys(SWITCHES, True)
+    if method in ("planning_off", "m3_planning_off"):
+        flags["enable_planning"] = False
+    elif method == "memory_off":
+        flags["enable_memory"] = False
+    elif method in ("self_correction_off", "m3_self_correction_off"):
+        flags["enable_reflection"] = False
+    elif method == "exploration_off":
+        flags["enable_exploration"] = False
+    elif method == "tool_routing_off":
+        flags["enable_tool_routing"] = False
+    overrides = [f"agent.{key}={str(value).lower()}" for key, value in flags.items()]
+    # m1_baseline keeps the diversity planner its recorded runs used; every
+    # plug-in method plans with M3's sub-goal planner.
+    if method != "m1_baseline":
+        overrides.append("agent/planner=m3_research")
+    return overrides
 
 
 def parse_args() -> argparse.Namespace:
@@ -89,6 +122,7 @@ def main() -> None:
     if args.method in {
         "m1_full",
         "m1_baseline",
+        *M3_METHODS,
         *[m for m in METHODS if m.endswith("_off")],
     }:
         agent = "m1_integrated"
@@ -121,25 +155,7 @@ def main() -> None:
     ]
 
     if agent == "m1_integrated":
-        # m1_baseline is the currently runnable M1 reference: planning and
-        # bounded memory are active; future member plug-ins remain disabled.
-        flags = dict.fromkeys(SWITCHES, args.method != "m1_baseline")
-        if args.method == "m1_baseline":
-            flags["enable_planning"] = True
-            flags["enable_memory"] = True
-        if args.method == "planning_off":
-            flags["enable_planning"] = False
-        elif args.method == "memory_off":
-            flags["enable_memory"] = False
-        elif args.method == "self_correction_off":
-            flags["enable_reflection"] = False
-        elif args.method == "exploration_off":
-            flags["enable_exploration"] = False
-        elif args.method == "tool_routing_off":
-            flags["enable_tool_routing"] = False
-        overrides.extend(
-            f"agent.{key}={str(value).lower()}" for key, value in flags.items()
-        )
+        overrides.extend(m1_agent_overrides(args.method))
         overrides.append("agent.generator.seed=${experiment.seed}")
         overrides.append("agent.planner.seed=${experiment.seed}")
         overrides.append("agent.scorer.seed=${experiment.seed}")

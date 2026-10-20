@@ -76,6 +76,14 @@ Run the following methods with the same systems, oracle, evaluator, budget, and 
 | Self-correction ablation | M1 full with `enable_reflection=false` |
 | Exploration ablation | M1 full with `enable_exploration=false` |
 | Tool-routing ablation | M1 full with `enable_tool_routing=false` |
+| M3 full (`m3_full`) | `m1_baseline` with the M3 planner (`agent/planner=m3_research`) and M3 self-correction on |
+| M3 planning ablation (`m3_planning_off`) | `m3_full` with `enable_planning=false` |
+| M3 self-correction ablation (`m3_self_correction_off`) | `m3_full` with `enable_reflection=false` |
+
+`m1_baseline` keeps MADE's diversity planner, which its recorded runs used. Every
+plug-in method above (M1 full, its ablations and the `m3_*` methods) plans with
+the M3 planner. The `m3_*` methods measure M3 against `m1_baseline` on the
+development systems, so they do not wait for the plugin-complete `m1_full`.
 
 Run the three required comparisons (M1 full and both baselines) on development and public-check systems. Run component ablations on development systems only. Each seed is a separate one-episode invocation, not three episodes under a single seed. For a defensible paired comparison, every method uses the same seed list. If a component is not delivered by its owner, mark that method unavailable; do not claim its switch-on result represents that component.
 

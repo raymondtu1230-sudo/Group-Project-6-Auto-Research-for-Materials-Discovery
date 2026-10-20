@@ -5,6 +5,7 @@ defaults:
   - generator: random
   - filter: smact
   - scorer: random
+  - self_correction_policy: m3_stuck_replan
 
 enable_planning: true
 enable_memory: true
@@ -23,7 +24,7 @@ memory_manager:
   episode_id: ${oc.env:M4_EPISODE_ID,0}
   limit: 8
   max_chars: 4000
-self_correction_policy: null
+# M3 policy is configured but remains inactive unless enable_reflection is on.
 # M5 UCB exploration policy, wired and ready; flip enable_exploration for the
 # ablation pair. Switch defaults off so the M1 reference is unchanged.
 exploration_policy:
