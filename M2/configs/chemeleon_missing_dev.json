@@ -1,0 +1,163 @@
+{
+  "scope": "Snapshot only; executable workflow regenerates from latest main evidence",
+  "completed": 19,
+  "missing": 17,
+  "matrix": {
+    "include": [
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Au-K-Tb",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Au-K-Tb",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Au-K-Tb",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Dy-W",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Dy-W",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Dy-W",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Mg-Na",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Mg-Na",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Mg-Na",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Ga-Pt-Tm",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Ga-Pt-Tm",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Ga-Pt-Tm",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Hf-Ni-Zr",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Hf-Ni-Zr",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Hf-Ni-Zr",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Mg-Sn-Sr",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Mg-Sn-Sr",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      }
+    ]
+  },
+  "protocol_sha256": "e9305aefd75fc32612729b7cfd760817234ad006bae99594271badbd69ca7cef"
+}

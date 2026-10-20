@@ -1,0 +1,436 @@
+...................................FF................................... [ 77%]
+...............s.....                                                    [100%]
+=================================== FAILURES ===================================
+_________ test_hydra_instantiates_m2_with_only_its_switch_changed[orb] _________
+
+self = {'_target_': 'm4_memory.m1_adapter.M4MemoryManager', 'log_path': '${hydra:runtime.output_dir}/m4_evidence.jsonl', 'run_id': '${oc.env:M4_RUN_ID,m4-local}', 'episode_id': '${oc.env:M4_EPISODE_ID,0}', 'limit': 8, 'max_chars': 4000}
+parse_tree = <omegaconf.grammar.gen.OmegaConfGrammarParser.OmegaConfGrammarParser.ConfigValueContext object at 0x7f9ae8885160>
+node = '${hydra:runtime.output_dir}/m4_evidence.jsonl', memo = None
+key = 'log_path'
+
+    def resolve_parse_tree(
+        self,
+        parse_tree: ParserRuleContext,
+        node: Node,
+        memo: Optional[Set[int]] = None,
+        key: Optional[Any] = None,
+    ) -> Any:
+        """
+        Resolve a given parse tree into its value.
+    
+        We make no assumption here on the type of the tree's root, so that the
+        return value may be of any type.
+        """
+    
+        def node_interpolation_callback(
+            inter_key: str, memo: Optional[Set[int]]
+        ) -> Optional["Node"]:
+            return self._resolve_node_interpolation(inter_key=inter_key, memo=memo)
+    
+        def resolver_interpolation_callback(
+            name: str, args: Tuple[Any, ...], args_str: Tuple[str, ...]
+        ) -> Any:
+            return self._evaluate_custom_resolver(
+                key=key,
+                node=node,
+                inter_type=name,
+                inter_args=args,
+                inter_args_str=args_str,
+            )
+    
+        visitor = GrammarVisitor(
+            node_interpolation_callback=node_interpolation_callback,
+            resolver_interpolation_callback=resolver_interpolation_callback,
+            memo=memo,
+        )
+        try:
+>           return visitor.visit(parse_tree)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:764: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:206: in accept
+    return visitor.visitConfigValue(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:101: in visitConfigValue
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:342: in accept
+    return visitor.visitText(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:301: in visitText
+    return self._unescape(list(ctx.getChildren()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:389: in _unescape
+    text = str(self.visitInterpolation(node))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:125: in visitInterpolation
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:1041: in accept
+    return visitor.visitInterpolationResolver(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:179: in visitInterpolationResolver
+    return self.resolver_interpolation_callback(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:750: in resolver_interpolation_callback
+    return self._evaluate_custom_resolver(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:694: in _evaluate_custom_resolver
+    return resolver(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/omegaconf.py:445: in resolver_wrapper
+    ret = resolver(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/utils.py:220: in <lambda>
+    lambda path: OmegaConf.select(cast(DictConfig, HydraConfig.get()), path),
+                                                   ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @staticmethod
+    def get() -> HydraConf:
+        instance = HydraConfig.instance()
+        if instance.cfg is None:
+>           raise ValueError("HydraConfig was not set")
+E           ValueError: HydraConfig was not set
+
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/hydra_config.py:31: ValueError
+
+During handling of the above exception, another exception occurred:
+
+oracle = 'orb'
+
+    @pytest.mark.parametrize("oracle", ["orb", "analytic"])
+    def test_hydra_instantiates_m2_with_only_its_switch_changed(oracle: str) -> None:
+        from pathlib import Path
+    
+        configs = Path(__file__).resolve().parents[1] / "configs"
+        with initialize_config_dir(config_dir=str(configs), version_base=None):
+            off = compose(
+                config_name="config",
+                overrides=["agent=m1_integrated", "experiment.seed=17", f"oracle={oracle}"],
+            )
+            on = compose(
+                config_name="config",
+                overrides=["agent=m2_routing", "experiment.seed=17", f"oracle={oracle}"],
+            )
+        assert on.agent.enable_tool_routing is True
+        assert off.agent.enable_tool_routing is False
+        for field in (
+            "enable_planning",
+            "enable_memory",
+            "enable_reflection",
+            "enable_exploration",
+        ):
+            assert on.agent[field] == off.agent[field]
+>       agent = instantiate(on.agent)
+                ^^^^^^^^^^^^^^^^^^^^^
+
+../m2-validation/M1/MADE/tests/test_m2_tool_routing.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:220: in instantiate
+    OmegaConf.resolve(config)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/omegaconf.py:785: in resolve
+    omegaconf._impl._resolve(cfg)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/_impl.py:40: in _resolve
+    _resolve_container_value(cfg, k)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/_impl.py:25: in _resolve_container_value
+    _resolve(node)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/_impl.py:40: in _resolve
+    _resolve_container_value(cfg, k)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/_impl.py:14: in _resolve_container_value
+    resolved = node._dereference_node()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:246: in _dereference_node
+    node = self._dereference_node_impl(throw_on_resolution_failure=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:277: in _dereference_node_impl
+    return parent._resolve_interpolation_from_parse_tree(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:584: in _resolve_interpolation_from_parse_tree
+    resolved = self.resolve_parse_tree(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:769: in resolve_parse_tree
+    raise InterpolationResolutionError(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:764: in resolve_parse_tree
+    return visitor.visit(parse_tree)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:206: in accept
+    return visitor.visitConfigValue(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:101: in visitConfigValue
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:342: in accept
+    return visitor.visitText(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:301: in visitText
+    return self._unescape(list(ctx.getChildren()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:389: in _unescape
+    text = str(self.visitInterpolation(node))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:125: in visitInterpolation
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:1041: in accept
+    return visitor.visitInterpolationResolver(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:179: in visitInterpolationResolver
+    return self.resolver_interpolation_callback(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:750: in resolver_interpolation_callback
+    return self._evaluate_custom_resolver(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:694: in _evaluate_custom_resolver
+    return resolver(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/omegaconf.py:445: in resolver_wrapper
+    ret = resolver(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/utils.py:220: in <lambda>
+    lambda path: OmegaConf.select(cast(DictConfig, HydraConfig.get()), path),
+                                                   ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @staticmethod
+    def get() -> HydraConf:
+        instance = HydraConfig.instance()
+        if instance.cfg is None:
+>           raise ValueError("HydraConfig was not set")
+E           omegaconf.errors.InterpolationResolutionError: ValueError raised while resolving interpolation: HydraConfig was not set
+
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/hydra_config.py:31: InterpolationResolutionError
+______ test_hydra_instantiates_m2_with_only_its_switch_changed[analytic] _______
+
+self = {'_target_': 'm4_memory.m1_adapter.M4MemoryManager', 'log_path': '${hydra:runtime.output_dir}/m4_evidence.jsonl', 'run_id': '${oc.env:M4_RUN_ID,m4-local}', 'episode_id': '${oc.env:M4_EPISODE_ID,0}', 'limit': 8, 'max_chars': 4000}
+parse_tree = <omegaconf.grammar.gen.OmegaConfGrammarParser.OmegaConfGrammarParser.ConfigValueContext object at 0x7f9ae87710f0>
+node = '${hydra:runtime.output_dir}/m4_evidence.jsonl', memo = None
+key = 'log_path'
+
+    def resolve_parse_tree(
+        self,
+        parse_tree: ParserRuleContext,
+        node: Node,
+        memo: Optional[Set[int]] = None,
+        key: Optional[Any] = None,
+    ) -> Any:
+        """
+        Resolve a given parse tree into its value.
+    
+        We make no assumption here on the type of the tree's root, so that the
+        return value may be of any type.
+        """
+    
+        def node_interpolation_callback(
+            inter_key: str, memo: Optional[Set[int]]
+        ) -> Optional["Node"]:
+            return self._resolve_node_interpolation(inter_key=inter_key, memo=memo)
+    
+        def resolver_interpolation_callback(
+            name: str, args: Tuple[Any, ...], args_str: Tuple[str, ...]
+        ) -> Any:
+            return self._evaluate_custom_resolver(
+                key=key,
+                node=node,
+                inter_type=name,
+                inter_args=args,
+                inter_args_str=args_str,
+            )
+    
+        visitor = GrammarVisitor(
+            node_interpolation_callback=node_interpolation_callback,
+            resolver_interpolation_callback=resolver_interpolation_callback,
+            memo=memo,
+        )
+        try:
+>           return visitor.visit(parse_tree)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:764: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:206: in accept
+    return visitor.visitConfigValue(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:101: in visitConfigValue
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:342: in accept
+    return visitor.visitText(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:301: in visitText
+    return self._unescape(list(ctx.getChildren()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:389: in _unescape
+    text = str(self.visitInterpolation(node))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:125: in visitInterpolation
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:1041: in accept
+    return visitor.visitInterpolationResolver(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:179: in visitInterpolationResolver
+    return self.resolver_interpolation_callback(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:750: in resolver_interpolation_callback
+    return self._evaluate_custom_resolver(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:694: in _evaluate_custom_resolver
+    return resolver(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/omegaconf.py:445: in resolver_wrapper
+    ret = resolver(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/utils.py:220: in <lambda>
+    lambda path: OmegaConf.select(cast(DictConfig, HydraConfig.get()), path),
+                                                   ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @staticmethod
+    def get() -> HydraConf:
+        instance = HydraConfig.instance()
+        if instance.cfg is None:
+>           raise ValueError("HydraConfig was not set")
+E           ValueError: HydraConfig was not set
+
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/hydra_config.py:31: ValueError
+
+During handling of the above exception, another exception occurred:
+
+oracle = 'analytic'
+
+    @pytest.mark.parametrize("oracle", ["orb", "analytic"])
+    def test_hydra_instantiates_m2_with_only_its_switch_changed(oracle: str) -> None:
+        from pathlib import Path
+    
+        configs = Path(__file__).resolve().parents[1] / "configs"
+        with initialize_config_dir(config_dir=str(configs), version_base=None):
+            off = compose(
+                config_name="config",
+                overrides=["agent=m1_integrated", "experiment.seed=17", f"oracle={oracle}"],
+            )
+            on = compose(
+                config_name="config",
+                overrides=["agent=m2_routing", "experiment.seed=17", f"oracle={oracle}"],
+            )
+        assert on.agent.enable_tool_routing is True
+        assert off.agent.enable_tool_routing is False
+        for field in (
+            "enable_planning",
+            "enable_memory",
+            "enable_reflection",
+            "enable_exploration",
+        ):
+            assert on.agent[field] == off.agent[field]
+>       agent = instantiate(on.agent)
+                ^^^^^^^^^^^^^^^^^^^^^
+
+../m2-validation/M1/MADE/tests/test_m2_tool_routing.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:220: in instantiate
+    OmegaConf.resolve(config)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/omegaconf.py:785: in resolve
+    omegaconf._impl._resolve(cfg)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/_impl.py:40: in _resolve
+    _resolve_container_value(cfg, k)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/_impl.py:25: in _resolve_container_value
+    _resolve(node)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/_impl.py:40: in _resolve
+    _resolve_container_value(cfg, k)
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/_impl.py:14: in _resolve_container_value
+    resolved = node._dereference_node()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:246: in _dereference_node
+    node = self._dereference_node_impl(throw_on_resolution_failure=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:277: in _dereference_node_impl
+    return parent._resolve_interpolation_from_parse_tree(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:584: in _resolve_interpolation_from_parse_tree
+    resolved = self.resolve_parse_tree(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:769: in resolve_parse_tree
+    raise InterpolationResolutionError(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:764: in resolve_parse_tree
+    return visitor.visit(parse_tree)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:206: in accept
+    return visitor.visitConfigValue(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:101: in visitConfigValue
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:342: in accept
+    return visitor.visitText(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:301: in visitText
+    return self._unescape(list(ctx.getChildren()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:389: in _unescape
+    text = str(self.visitInterpolation(node))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:125: in visitInterpolation
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/antlr4/tree/Tree.py:34: in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py:1041: in accept
+    return visitor.visitInterpolationResolver(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py:179: in visitInterpolationResolver
+    return self.resolver_interpolation_callback(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:750: in resolver_interpolation_callback
+    return self._evaluate_custom_resolver(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/base.py:694: in _evaluate_custom_resolver
+    return resolver(
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/omegaconf/omegaconf.py:445: in resolver_wrapper
+    ret = resolver(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/utils.py:220: in <lambda>
+    lambda path: OmegaConf.select(cast(DictConfig, HydraConfig.get()), path),
+                                                   ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @staticmethod
+    def get() -> HydraConf:
+        instance = HydraConfig.instance()
+        if instance.cfg is None:
+>           raise ValueError("HydraConfig was not set")
+E           omegaconf.errors.InterpolationResolutionError: ValueError raised while resolving interpolation: HydraConfig was not set
+
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/hydra/core/hydra_config.py:31: InterpolationResolutionError
+=============================== warnings summary ===============================
+../m2-validation/M1/MADE/src/made/agents/base.py:19
+../m2-validation/M1/MADE/src/made/agents/base.py:35
+  PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+
+../m2-validation/M1/MADE/.venv/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10
+  UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../m2-validation/M1/MADE/tests/test_m2_tool_routing.py::test_hydra_instantiates_m2_with_only_its_switch_changed[orb]
+FAILED ../m2-validation/M1/MADE/tests/test_m2_tool_routing.py::test_hydra_instantiates_m2_with_only_its_switch_changed[analytic]
+2 failed, 90 passed, 1 skipped, 1 deselected, 3 warnings in 12.42s

@@ -8,10 +8,12 @@ the runner, environment, oracle, evaluator, agent state, or query budget.
 from __future__ import annotations
 
 import argparse
+import contextlib
 import hashlib
 import json
 import os
 import re
+import signal
 import subprocess
 import sys
 import time
@@ -176,7 +178,27 @@ def preserve_configuration(output_dir: Path, results_root: Path) -> bool:
     return False
 
 
-def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> int:
+def stop_process(process: subprocess.Popen) -> None:
+    """Stop the entire driver/runner process group before saving partial evidence."""
+    if process.poll() is not None:
+        return
+    with contextlib.suppress(ProcessLookupError):
+        os.killpg(process.pid, signal.SIGTERM)
+    try:
+        process.wait(timeout=30)
+    except subprocess.TimeoutExpired:
+        os.killpg(process.pid, signal.SIGKILL)
+        process.wait(timeout=10)
+
+
+def run_unit(
+    method: str,
+    split: str,
+    system: str,
+    seed: int,
+    attempt: int,
+    max_seconds: int | None = None,
+) -> int:
     output_dir = (
         MADE
         / "results/protocol_v1"
@@ -216,6 +238,7 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
     seen: dict[Path, tuple[int, int]] = {}
     previous_cpu = None
     started, last_progress = time.monotonic(), 0.0
+    termination = None
     print(f"Starting real protocol unit: {method} {system} seed={seed}", flush=True)
     with live_log.open("w") as log:
         process = subprocess.Popen(
@@ -224,9 +247,17 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
             stdout=log,
             stderr=subprocess.STDOUT,
             env={**os.environ, "PYTHONUNBUFFERED": "1"},
+            start_new_session=True,
         )
         try:
             while process.poll() is None:
+                if (
+                    max_seconds is not None
+                    and time.monotonic() - started >= max_seconds
+                ):
+                    termination = "compute_time_limit"
+                    stop_process(process)
+                    break
                 observed = checkpoint_history(output_dir, MADE / "checkpoints", seen)
                 if len(observed) > len(history):
                     history = observed
@@ -254,13 +285,11 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
                         stream.write(encoded + "\n")
                     print(f"Progress diagnostics: {encoded}", flush=True)
                 time.sleep(0.1)
+        except (KeyboardInterrupt, SystemExit):
+            termination = "interrupted"
+            stop_process(process)
         except BaseException:
-            process.terminate()
-            try:
-                process.wait(timeout=30)
-            except subprocess.TimeoutExpired:
-                process.kill()
-                process.wait()
+            stop_process(process)
             raise
     secret = os.environ.get("MATERIALS_PROJECT_API_KEY")
     if secret:
@@ -271,8 +300,24 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
     metadata_path = output_dir / "run_metadata.json"
     metadata = json.loads(metadata_path.read_text()) if metadata_path.is_file() else {}
     completed = process.returncode == 0 and metadata.get("status") == "completed"
+    observed = checkpoint_history(output_dir, MADE / "checkpoints")
+    if len(observed) > len(history):
+        history = observed
     record = preserve_history(history, output_dir, completed)
     config_saved = preserve_configuration(output_dir, MADE / "results")
+    (output_dir / "m2_exit.json").write_text(
+        json.dumps(
+            {
+                "returncode": process.returncode,
+                "termination": termination,
+                "elapsed_seconds": round(time.monotonic() - started, 3),
+                "max_seconds": max_seconds,
+                "initial_pool_resume": False,
+            },
+            indent=2,
+        )
+        + "\n"
+    )
     if metadata:
         metadata["m2_capture"] = {
             "complete_curve": record["complete_curve"],
@@ -305,7 +350,11 @@ def run_unit(method: str, split: str, system: str, seed: int, attempt: int) -> i
         # The benchmark should never print credentials; retain its failure context.
         print(log_path.read_text()[-12000:], file=sys.stderr)
     captured = record["complete_curve"] and config_saved
-    return process.returncode or (0 if completed and captured else 1)
+    return (
+        124
+        if termination == "compute_time_limit"
+        else (process.returncode or (0 if completed and captured else 1))
+    )
 
 
 def main() -> None:
@@ -318,11 +367,22 @@ def main() -> None:
     parser.add_argument("--system", required=True)
     parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--attempt", type=int, default=1)
+    parser.add_argument("--max-seconds", type=int)
     args = parser.parse_args()
     if args.attempt < 1:
         parser.error("attempt must be positive")
+    if args.max_seconds is not None and args.max_seconds < 1:
+        parser.error("max-seconds must be positive")
+    signal.signal(signal.SIGTERM, lambda *_: sys.exit(143))
     raise SystemExit(
-        run_unit(args.method, args.split, args.system, args.seed, args.attempt)
+        run_unit(
+            args.method,
+            args.split,
+            args.system,
+            args.seed,
+            args.attempt,
+            args.max_seconds,
+        )
     )
 
 

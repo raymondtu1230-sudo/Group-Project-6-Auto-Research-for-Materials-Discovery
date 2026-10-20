@@ -1,0 +1,15 @@
+{
+  "checksum_match": true,
+  "current_slide_metadata": {
+    "file": "M2_Method_and_Partial_Results_20261020.pptx",
+    "sha256": "9a9a0557be2cdff044f25eb9b20983259b4dc63b3854187685b9daac30361472",
+    "scope": "dev Random18/18; Chemeleon1/18; example pair explicitly labelled",
+    "status": "editable M2 contribution draft, four slides; not final group deck",
+    "original_chart_workbooks_preserved_exactly": true
+  },
+  "coverage": {
+    "random": 18,
+    "chemeleon": 1
+  },
+  "report_and_slides_present": true
+}

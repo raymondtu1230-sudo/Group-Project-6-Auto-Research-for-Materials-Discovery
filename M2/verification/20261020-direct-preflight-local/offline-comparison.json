@@ -1,0 +1,9 @@
+{
+  "19_archives_valid": true,
+  "tables": {
+    "per_run.csv": "All fields equal except local source path",
+    "per_method_summary.csv": "All fields equal except local source path",
+    "per_system_summary.csv": "All fields equal except local source path"
+  },
+  "official_metrics_unchanged": true
+}

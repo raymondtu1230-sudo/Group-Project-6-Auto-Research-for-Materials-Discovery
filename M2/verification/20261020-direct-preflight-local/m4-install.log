@@ -1,0 +1,7 @@
+Using Python 3.12.14 environment at: /workspace/scratch/0231a7e5677b/m2-validation/M1/MADE/.venv
+Resolved 1 package in 2ms
+   Building pe6203-m4-memory @ file:///workspace/scratch/0231a7e5677b/m2-validation/M4
+      Built pe6203-m4-memory @ file:///workspace/scratch/0231a7e5677b/m2-validation/M4
+Prepared 1 package in 483ms
+Installed 1 package in 0.52ms
+ + pe6203-m4-memory==0.2.0 (from file:///workspace/scratch/0231a7e5677b/m2-validation/M4)

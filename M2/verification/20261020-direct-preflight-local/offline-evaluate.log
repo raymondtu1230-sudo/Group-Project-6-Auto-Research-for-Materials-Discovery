@@ -1,0 +1,3 @@
+UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+{"validated_runs": 19, "missing_units": 35, "output": "M2/verification/20261020-direct-preflight-local/offline-report"}

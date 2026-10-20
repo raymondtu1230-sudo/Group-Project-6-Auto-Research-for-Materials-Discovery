@@ -7,6 +7,7 @@ from typing import Any
 
 import pytest
 from hydra import compose, initialize_config_dir
+from hydra.core.hydra_config import HydraConfig
 from hydra.utils import instantiate
 from pymatgen.core.composition import Composition
 from test_m1_integrated import FakeFilter, FakePlanner, FakeScorer
@@ -178,7 +179,9 @@ def test_m1_rejects_invalid_router_outputs(invalid: Any) -> None:
 
 
 @pytest.mark.parametrize("oracle", ["orb", "analytic"])
-def test_hydra_instantiates_m2_with_only_its_switch_changed(oracle: str) -> None:
+def test_hydra_instantiates_m2_with_only_its_switch_changed(
+    oracle: str, tmp_path
+) -> None:
     from pathlib import Path
 
     configs = Path(__file__).resolve().parents[1] / "configs"
@@ -190,7 +193,12 @@ def test_hydra_instantiates_m2_with_only_its_switch_changed(oracle: str) -> None
         on = compose(
             config_name="config",
             overrides=["agent=m2_routing", "experiment.seed=17", f"oracle={oracle}"],
+            return_hydra_config=True,
         )
+    # The current M4 interface uses hydra:runtime.output_dir. Supply the same
+    # runtime context as the official CLI; this is a synthetic contract fixture.
+    on.hydra.runtime.output_dir = str(tmp_path)
+    HydraConfig.instance().set_config(on)
     assert on.agent.enable_tool_routing is True
     assert off.agent.enable_tool_routing is False
     for field in (
@@ -205,12 +213,20 @@ def test_hydra_instantiates_m2_with_only_its_switch_changed(oracle: str) -> None
     assert isinstance(agent.generators["chemeleon"], CheckpointedChemeleonGenerator)
 
 
-def test_default_unseeded_configuration_still_initializes_with_routing_off() -> None:
+def test_default_unseeded_configuration_still_initializes_with_routing_off(
+    tmp_path,
+) -> None:
     from pathlib import Path
 
     configs = Path(__file__).resolve().parents[1] / "configs"
     with initialize_config_dir(config_dir=str(configs), version_base=None):
-        config = compose(config_name="config", overrides=["agent=m1_integrated"])
+        config = compose(
+            config_name="config",
+            overrides=["agent=m1_integrated"],
+            return_hydra_config=True,
+        )
+    config.hydra.runtime.output_dir = str(tmp_path)
+    HydraConfig.instance().set_config(config)
     assert config.experiment.seed is None
     assert config.agent.enable_tool_routing is False
     agent = instantiate(config.agent)

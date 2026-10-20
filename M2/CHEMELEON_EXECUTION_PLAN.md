@@ -1,3 +1,5 @@
+> 本次直接完整运行准备请先读 [CHEMELEON_PREFLIGHT_READY.md](CHEMELEON_PREFLIGHT_READY.md)。下述旧续跑容量门禁针对恢复路径，不能用于断言独立完整运行必须先实现续跑。
+
 # Chemeleon后续执行准备：本轮不启动
 
 日期：2026年10月20日。以下是准备与待办，不是已启动任务或已验证恢复能力。
