@@ -14,7 +14,7 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | C2c | Exploration vs exploitation | M5 | 🟡 wired in `m1_integrated.yaml` (switch off by default, on for `m1_full`); decision-log JSONL sidecar on main, `log_path` not yet set in the config | `M5/README.md` |
 | C2d | Candidate proposal / tool routing | M2 | 🟡 code + tests; PR #2 unmerged | `M2/STATUS.md` |
 | C2e | Reflection and failure recovery | M3 | 🟡 as C2a | `M3/README.md` |
-| C3 | Random-generator baseline (official) | M2 | 🟡 dev 18/18 ✅; check 0/12 (M6 runs these locally) | `M2/verification/20261020-handoff-audit/` |
+| C3 | Random-generator baseline (official) | M2 | ✅ dev 18/18; check 12/12 (M6, 20 Oct): mSUN@20 5.58 ± 0.63 | `M2/verification/20261020-handoff-audit/`, `M6/results/20261020-check-random/` |
 | C4 | Chemeleon generative baseline (official) | M2 | 🟡 dev 1/18; remaining 17 running on GitHub since 20 Oct 15:24. Check 0/12: no owner yet (M2 scope excludes check/hidden) | `M2/launches/20261020-152457/` |
 | C5 | Frozen configs | M1 | 🟡 protocol frozen; agent freeze 25 Oct | `M1/protocol/protocol_v1.yaml`, `M1/MADE/configs/` |
 | C6 | Run commands | M1, M2, M6 | ✅ | `M1/EXPERIMENT_PROTOCOL.md`, `M1/REPRODUCE.md`, `M6/run_check_baselines.sh` |
@@ -33,7 +33,7 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | P4 | Same model, oracle, budget, tools, systems, evaluator for all methods | M1, M6 | ✅ by protocol v1; checked by `M2/evaluate.py` | `M1/protocol/` |
 | P5 | Three repeats preferred; one allowed if stated | M6 | 🟡 3 seeds planned; 1-seed fallback defined for held-out | `M6/COMPUTE_PLAN.md` §4, `M6/PROTOCOL_ADOPTION.md` §6 |
 | P6 | Hidden-split support in runner/evaluator | M1, M2 | 🟡 M1 says the allow-list is done, but it is not on main yet (checked 20 Oct). Hidden split waits for the TA | `M6/PROTOCOL_ADOPTION.md` §4 |
-| P7 | Check baselines (24 units) | M6 (+M2 GitHub) | ⬜ Random (12): M6 locally. Chemeleon (12): needs GitHub runners; M6 to ask M2 to dispatch it after their dev batch, otherwise M6 runs it on GitHub Actions | `M6/run_check_baselines.sh`, `M2/prepare_split.py` |
+| P7 | Check baselines (24 units) | M6 (+M2 GitHub) | 🟡 Random (12): ✅ done 20 Oct, all validated. Chemeleon (12): needs GitHub runners; M6 to ask M2 to dispatch it after their dev batch, otherwise M6 runs it on GitHub Actions | `M6/run_check_baselines.sh`, `M2/prepare_split.py` |
 | P8 | Frozen agent on check (12) and hidden (9·H) | M6 | ⬜ after 25 Oct | `M6/COMPUTE_PLAN.md` |
 
 ## 3.1 / 4.2 Report
@@ -43,7 +43,7 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | R1 | Leaderboard: mSUN@B, AUDC, AF, EF, research cost for our method and both baselines | M2 data, M6 | ⬜ M6 has a local template | – |
 | R2 | Discovery curves | M2 | 🟡 plotting works (`evaluate.py`); partial curve only | `M2/verification/20261019-chemeleon-recovery/discovery_curves.png` |
 | R3 | Component ablation | M3, M4, M5, M2; M6 combines | ⬜ after freeze; dev only. M3's results compare with `m1_baseline`, so they go in a separate table, not Table 2 (`M6/PROTOCOL_ADOPTION.md` §5) | `M3/report/M3_RESULTS.md` |
-| R4 | Generalization: dev vs held-out | M6 | 🟡 tool ready and tested; no held-out data yet | `M6/generalization.py` (tested on `M2/verification/20261019-chemeleon-recovery/`) |
+| R4 | Generalization: dev vs held-out | M6 | 🟡 Random dev vs check done (check easier by +1.53 mSUN, +38 %); Chemeleon and agent pending | `M6/generalization.py`, `M6/results/20261020-generalization-random/` |
 | R5 | Failure classification: over-exploitation, one trajectory | M5, M4, M6 | ⬜ logging exists (`decision_log`) | – |
 | R6 | Failure classification: wasteful exploration, one trajectory | M5, M4, M6 | ⬜ M4 capture of filter rejections, exceptions and empty batches is on main (not oracle errors); M1 must apply `m4_capture_overrides.yaml` and M5's `log_path` before the freeze | `M4/integration/EVENT_CAPTURE.md` |
 | R7 | Discussion: which mechanisms helped, remaining bottlenecks | M6 | ⬜ | – |

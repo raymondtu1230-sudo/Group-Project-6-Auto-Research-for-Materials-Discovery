@@ -10,6 +10,7 @@ Status: 2026-10-19. Owner: M6. Timings come from the two accepted dev units
 | Chemeleon (`chemeleon_generative_baseline`) | 15 767 s ≈ **4.4 h** | Mg-Sn-Sr/17 |
 | `m1_baseline` (reference only, not `m1_full`) | 304.9 s ≈ 5 min | `M1/WORK_LOG.md`, local CPU |
 | `m1_full` (frozen agent) | **unknown** until 25 Oct freeze | see note below |
+| Random, measured locally (check set, 12 units) | 147–263 s, median 203 s ≈ **3.4 min** | `M6/results/20261020-check-random/`, MacBook Air arm64 CPU |
 
 These are one measurement each. Other systems may be slower (more structures
 to relax, larger cells). Treat every estimate as ±50 %.

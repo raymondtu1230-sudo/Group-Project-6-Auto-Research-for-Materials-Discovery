@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888 600" width="888" height="600" font-family="Helvetica, Arial, sans-serif">
+<rect width="888" height="600" fill="#fcfcfb"/>
+<text x="16" y="26" font-size="16" font-weight="600" fill="#0b0b0b">Development vs held-out (Public check set)</text>
+<text x="16" y="45" font-size="11" fill="#52514e">Bar = mean of available runs (faded = incomplete). Dots = per-system means. Dashed = no runs. Counts = runs present / expected.</text>
+<rect x="16" y="59" width="12" height="12" rx="2" fill="#2a78d6"/>
+<text x="34" y="69" font-size="12" fill="#0b0b0b">Dev</text>
+<rect x="96" y="59" width="12" height="12" rx="2" fill="#eb6834"/>
+<text x="114" y="69" font-size="12" fill="#0b0b0b">Public check set</text>
+<text x="48" y="104" font-size="13" font-weight="600" fill="#0b0b0b">mSUN@B</text>
+<line x1="48" x2="428" y1="282.0" y2="282.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="285.0" font-size="10" text-anchor="end" fill="#52514e">0</text>
+<line x1="48" x2="428" y1="239.5" y2="239.5" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="242.5" font-size="10" text-anchor="end" fill="#52514e">4.4</text>
+<line x1="48" x2="428" y1="197.0" y2="197.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="200.0" font-size="10" text-anchor="end" fill="#52514e">8.8</text>
+<line x1="48" x2="428" y1="154.5" y2="154.5" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="157.5" font-size="10" text-anchor="end" fill="#52514e">13.2</text>
+<line x1="48" x2="428" y1="112.0" y2="112.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="115.0" font-size="10" text-anchor="end" fill="#52514e">17.6</text>
+<text x="93.3" y="295" font-size="9" text-anchor="middle" fill="#52514e">18/18</text>
+<path d="M76.3,282 v-35.2 q0,-4 4,-4 h26.0 q4,0 4,4 v35.2 z" fill="#2a78d6" fill-opacity="1"><title>Random dev: 4.056 (18/18 runs)</title></path>
+<circle cx="93.3" cy="191.8" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Mg-Sn-Sr: 9.333</title></circle>
+<circle cx="93.3" cy="259.5" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Au-K-Tb: 2.333</title></circle>
+<circle cx="93.3" cy="259.5" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Mg-Na: 2.333</title></circle>
+<circle cx="93.3" cy="220.8" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Hf-Ni-Zr: 6.333</title></circle>
+<circle cx="93.3" cy="272.3" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Dy-W: 1</title></circle>
+<circle cx="93.3" cy="253.0" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Ga-Pt-Tm: 3</title></circle>
+<text x="129.3" y="295" font-size="9" text-anchor="middle" fill="#52514e">12/12</text>
+<path d="M112.3,282 v-49.9 q0,-4 4,-4 h26.0 q4,0 4,4 v49.9 z" fill="#eb6834" fill-opacity="1"><title>Random heldout: 5.583 (12/12 runs)</title></path>
+<circle cx="129.3" cy="211.2" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Ga-Ho-Lu: 7.333</title></circle>
+<circle cx="129.3" cy="259.5" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Al-Li-V: 2.333</title></circle>
+<circle cx="129.3" cy="185.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Al-V-Zn: 10</title></circle>
+<circle cx="129.3" cy="256.2" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Pd-Tl: 2.667</title></circle>
+<text x="111.3" y="312" font-size="11" text-anchor="middle" fill="#0b0b0b">Random</text>
+<text x="220.0" y="295" font-size="9" text-anchor="middle" fill="#52514e">1/18</text>
+<path d="M203.0,282 v-150.5 q0,-4 4,-4 h26.0 q4,0 4,4 v150.5 z" fill="#2a78d6" fill-opacity="0.4"><title>Chemeleon dev: 16 (1/18 runs, incomplete)</title></path>
+<circle cx="220.0" cy="127.5" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Mg-Sn-Sr: 16</title></circle>
+<text x="256.0" y="295" font-size="9" text-anchor="middle" fill="#52514e">0/12</text>
+<rect x="240.0" y="272" width="32.0" height="10" fill="none" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="3 2"><title>Chemeleon heldout: no runs (0/12)</title></rect>
+<text x="238.0" y="312" font-size="11" text-anchor="middle" fill="#0b0b0b">Chemeleon</text>
+<text x="346.7" y="295" font-size="9" text-anchor="middle" fill="#52514e">0/18</text>
+<rect x="330.7" y="272" width="32.0" height="10" fill="none" stroke="#2a78d6" stroke-width="1.5" stroke-dasharray="3 2"><title>Agent (m1_full) dev: no runs (0/18)</title></rect>
+<text x="382.7" y="295" font-size="9" text-anchor="middle" fill="#52514e">0/12</text>
+<rect x="366.7" y="272" width="32.0" height="10" fill="none" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="3 2"><title>Agent (m1_full) heldout: no runs (0/12)</title></rect>
+<text x="364.7" y="312" font-size="11" text-anchor="middle" fill="#0b0b0b">Agent</text>
+<line x1="48" x2="428" y1="282" y2="282" stroke="#52514e" stroke-width="1"/>
+<text x="484" y="104" font-size="13" font-weight="600" fill="#0b0b0b">AUDC</text>
+<line x1="484" x2="864" y1="282.0" y2="282.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="285.0" font-size="10" text-anchor="end" fill="#52514e">0</text>
+<line x1="484" x2="864" y1="239.5" y2="239.5" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="242.5" font-size="10" text-anchor="end" fill="#52514e">44.3</text>
+<line x1="484" x2="864" y1="197.0" y2="197.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="200.0" font-size="10" text-anchor="end" fill="#52514e">88.6</text>
+<line x1="484" x2="864" y1="154.5" y2="154.5" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="157.5" font-size="10" text-anchor="end" fill="#52514e">132.8</text>
+<line x1="484" x2="864" y1="112.0" y2="112.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="115.0" font-size="10" text-anchor="end" fill="#52514e">177.1</text>
+<text x="529.3" y="295" font-size="9" text-anchor="middle" fill="#52514e">18/18</text>
+<path d="M512.3,282 v-35.0 q0,-4 4,-4 h26.0 q4,0 4,4 v35.0 z" fill="#2a78d6" fill-opacity="1"><title>Random dev: 40.583 (18/18 runs)</title></path>
+<circle cx="529.3" cy="197.2" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Mg-Sn-Sr: 88.333</title></circle>
+<circle cx="529.3" cy="264.2" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Au-K-Tb: 18.5</title></circle>
+<circle cx="529.3" cy="248.6" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Mg-Na: 34.833</title></circle>
+<circle cx="529.3" cy="220.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Hf-Ni-Zr: 64.167</title></circle>
+<circle cx="529.3" cy="276.1" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Dy-W: 6.167</title></circle>
+<circle cx="529.3" cy="251.8" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Ga-Pt-Tm: 31.5</title></circle>
+<text x="565.3" y="295" font-size="9" text-anchor="middle" fill="#52514e">12/12</text>
+<path d="M548.3,282 v-54.4 q0,-4 4,-4 h26.0 q4,0 4,4 v54.4 z" fill="#eb6834" fill-opacity="1"><title>Random heldout: 60.792 (12/12 runs)</title></path>
+<circle cx="565.3" cy="213.8" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Ga-Ho-Lu: 71</title></circle>
+<circle cx="565.3" cy="255.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Al-Li-V: 27.167</title></circle>
+<circle cx="565.3" cy="179.6" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Al-V-Zn: 106.667</title></circle>
+<circle cx="565.3" cy="245.2" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Pd-Tl: 38.333</title></circle>
+<text x="547.3" y="312" font-size="11" text-anchor="middle" fill="#0b0b0b">Random</text>
+<text x="656.0" y="295" font-size="9" text-anchor="middle" fill="#52514e">1/18</text>
+<path d="M639.0,282 v-150.5 q0,-4 4,-4 h26.0 q4,0 4,4 v150.5 z" fill="#2a78d6" fill-opacity="0.4"><title>Chemeleon dev: 161 (1/18 runs, incomplete)</title></path>
+<circle cx="656.0" cy="127.5" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Mg-Sn-Sr: 161</title></circle>
+<text x="692.0" y="295" font-size="9" text-anchor="middle" fill="#52514e">0/12</text>
+<rect x="676.0" y="272" width="32.0" height="10" fill="none" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="3 2"><title>Chemeleon heldout: no runs (0/12)</title></rect>
+<text x="674.0" y="312" font-size="11" text-anchor="middle" fill="#0b0b0b">Chemeleon</text>
+<text x="782.7" y="295" font-size="9" text-anchor="middle" fill="#52514e">0/18</text>
+<rect x="766.7" y="272" width="32.0" height="10" fill="none" stroke="#2a78d6" stroke-width="1.5" stroke-dasharray="3 2"><title>Agent (m1_full) dev: no runs (0/18)</title></rect>
+<text x="818.7" y="295" font-size="9" text-anchor="middle" fill="#52514e">0/12</text>
+<rect x="802.7" y="272" width="32.0" height="10" fill="none" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="3 2"><title>Agent (m1_full) heldout: no runs (0/12)</title></rect>
+<text x="800.7" y="312" font-size="11" text-anchor="middle" fill="#0b0b0b">Agent</text>
+<line x1="484" x2="864" y1="282" y2="282" stroke="#52514e" stroke-width="1"/>
+<text x="48" y="354" font-size="13" font-weight="600" fill="#0b0b0b">AF vs Random</text>
+<line x1="48" x2="428" y1="532.0" y2="532.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="535.0" font-size="10" text-anchor="end" fill="#52514e">0</text>
+<line x1="48" x2="428" y1="489.5" y2="489.5" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="492.5" font-size="10" text-anchor="end" fill="#52514e">0.7</text>
+<line x1="48" x2="428" y1="447.0" y2="447.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="450.0" font-size="10" text-anchor="end" fill="#52514e">1.3</text>
+<line x1="48" x2="428" y1="404.5" y2="404.5" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="407.5" font-size="10" text-anchor="end" fill="#52514e">2</text>
+<line x1="48" x2="428" y1="362.0" y2="362.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="42" y="365.0" font-size="10" text-anchor="end" fill="#52514e">2.6</text>
+<text x="93.3" y="545" font-size="9" text-anchor="middle" fill="#52514e">18/18</text>
+<path d="M76.3,532 v-61.1 q0,-4 4,-4 h26.0 q4,0 4,4 v61.1 z" fill="#2a78d6" fill-opacity="1"><title>Random dev: 1 (18/18 runs)</title></path>
+<circle cx="93.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Mg-Sn-Sr: 1</title></circle>
+<circle cx="93.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Au-K-Tb: 1</title></circle>
+<circle cx="93.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Mg-Na: 1</title></circle>
+<circle cx="93.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Hf-Ni-Zr: 1</title></circle>
+<circle cx="93.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Dy-W: 1</title></circle>
+<circle cx="93.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Ga-Pt-Tm: 1</title></circle>
+<text x="129.3" y="545" font-size="9" text-anchor="middle" fill="#52514e">12/12</text>
+<path d="M112.3,532 v-61.1 q0,-4 4,-4 h26.0 q4,0 4,4 v61.1 z" fill="#eb6834" fill-opacity="1"><title>Random heldout: 1 (12/12 runs)</title></path>
+<circle cx="129.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Ga-Ho-Lu: 1</title></circle>
+<circle cx="129.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Al-Li-V: 1</title></circle>
+<circle cx="129.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Al-V-Zn: 1</title></circle>
+<circle cx="129.3" cy="466.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Pd-Tl: 1</title></circle>
+<text x="111.3" y="562" font-size="11" text-anchor="middle" fill="#0b0b0b">Random</text>
+<text x="220.0" y="545" font-size="9" text-anchor="middle" fill="#52514e">1/18</text>
+<path d="M203.0,532 v-150.5 q0,-4 4,-4 h26.0 q4,0 4,4 v150.5 z" fill="#2a78d6" fill-opacity="0.4"><title>Chemeleon dev: 2.375 (1/18 runs, incomplete)</title></path>
+<circle cx="220.0" cy="377.5" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Mg-Sn-Sr: 2.375</title></circle>
+<text x="256.0" y="545" font-size="9" text-anchor="middle" fill="#52514e">0/12</text>
+<rect x="240.0" y="522" width="32.0" height="10" fill="none" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="3 2"><title>Chemeleon heldout: no runs (0/12)</title></rect>
+<text x="238.0" y="562" font-size="11" text-anchor="middle" fill="#0b0b0b">Chemeleon</text>
+<text x="346.7" y="545" font-size="9" text-anchor="middle" fill="#52514e">0/18</text>
+<rect x="330.7" y="522" width="32.0" height="10" fill="none" stroke="#2a78d6" stroke-width="1.5" stroke-dasharray="3 2"><title>Agent (m1_full) dev: no runs (0/18)</title></rect>
+<text x="382.7" y="545" font-size="9" text-anchor="middle" fill="#52514e">0/12</text>
+<rect x="366.7" y="522" width="32.0" height="10" fill="none" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="3 2"><title>Agent (m1_full) heldout: no runs (0/12)</title></rect>
+<text x="364.7" y="562" font-size="11" text-anchor="middle" fill="#0b0b0b">Agent</text>
+<line x1="48" x2="428" y1="532" y2="532" stroke="#52514e" stroke-width="1"/>
+<text x="484" y="354" font-size="13" font-weight="600" fill="#0b0b0b">EF vs Random</text>
+<line x1="484" x2="864" y1="532.0" y2="532.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="535.0" font-size="10" text-anchor="end" fill="#52514e">0</text>
+<line x1="484" x2="864" y1="489.5" y2="489.5" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="492.5" font-size="10" text-anchor="end" fill="#52514e">0.6</text>
+<line x1="484" x2="864" y1="447.0" y2="447.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="450.0" font-size="10" text-anchor="end" fill="#52514e">1.3</text>
+<line x1="484" x2="864" y1="404.5" y2="404.5" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="407.5" font-size="10" text-anchor="end" fill="#52514e">1.9</text>
+<line x1="484" x2="864" y1="362.0" y2="362.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="478" y="365.0" font-size="10" text-anchor="end" fill="#52514e">2.5</text>
+<text x="529.3" y="545" font-size="9" text-anchor="middle" fill="#52514e">18/18</text>
+<path d="M512.3,532 v-59.9 q0,-4 4,-4 h26.0 q4,0 4,4 v59.9 z" fill="#2a78d6" fill-opacity="1"><title>Random dev: 0.944 (18/18 runs)</title></path>
+<circle cx="529.3" cy="464.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Mg-Sn-Sr: 1</title></circle>
+<circle cx="529.3" cy="464.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Au-K-Tb: 1</title></circle>
+<circle cx="529.3" cy="464.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Mg-Na: 1</title></circle>
+<circle cx="529.3" cy="464.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Hf-Ni-Zr: 1</title></circle>
+<circle cx="529.3" cy="486.9" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Dy-W: 0.667</title></circle>
+<circle cx="529.3" cy="464.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Ga-Pt-Tm: 1</title></circle>
+<text x="565.3" y="545" font-size="9" text-anchor="middle" fill="#52514e">12/12</text>
+<path d="M548.3,532 v-63.6 q0,-4 4,-4 h26.0 q4,0 4,4 v63.6 z" fill="#eb6834" fill-opacity="1"><title>Random heldout: 1 (12/12 runs)</title></path>
+<circle cx="565.3" cy="464.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Ga-Ho-Lu: 1</title></circle>
+<circle cx="565.3" cy="464.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Al-Li-V: 1</title></circle>
+<circle cx="565.3" cy="464.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Al-V-Zn: 1</title></circle>
+<circle cx="565.3" cy="464.4" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Co-Pd-Tl: 1</title></circle>
+<text x="547.3" y="562" font-size="11" text-anchor="middle" fill="#0b0b0b">Random</text>
+<text x="656.0" y="545" font-size="9" text-anchor="middle" fill="#52514e">1/18</text>
+<path d="M639.0,532 v-150.5 q0,-4 4,-4 h26.0 q4,0 4,4 v150.5 z" fill="#2a78d6" fill-opacity="0.4"><title>Chemeleon dev: 2.286 (1/18 runs, incomplete)</title></path>
+<circle cx="656.0" cy="377.5" r="3" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="1.5"><title>Mg-Sn-Sr: 2.286</title></circle>
+<text x="692.0" y="545" font-size="9" text-anchor="middle" fill="#52514e">0/12</text>
+<rect x="676.0" y="522" width="32.0" height="10" fill="none" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="3 2"><title>Chemeleon heldout: no runs (0/12)</title></rect>
+<text x="674.0" y="562" font-size="11" text-anchor="middle" fill="#0b0b0b">Chemeleon</text>
+<text x="782.7" y="545" font-size="9" text-anchor="middle" fill="#52514e">0/18</text>
+<rect x="766.7" y="522" width="32.0" height="10" fill="none" stroke="#2a78d6" stroke-width="1.5" stroke-dasharray="3 2"><title>Agent (m1_full) dev: no runs (0/18)</title></rect>
+<text x="818.7" y="545" font-size="9" text-anchor="middle" fill="#52514e">0/12</text>
+<rect x="802.7" y="522" width="32.0" height="10" fill="none" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="3 2"><title>Agent (m1_full) heldout: no runs (0/12)</title></rect>
+<text x="800.7" y="562" font-size="11" text-anchor="middle" fill="#0b0b0b">Agent</text>
+<line x1="484" x2="864" y1="532" y2="532" stroke="#52514e" stroke-width="1"/>
+</svg>

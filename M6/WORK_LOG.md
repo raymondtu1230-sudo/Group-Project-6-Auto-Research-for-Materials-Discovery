@@ -92,3 +92,25 @@ what is still open. Used for the individual report.
 - Updated `REQUIREMENTS_CHECKLIST.md` and `COMPUTE_PLAN.md` to match.
 - Started setting up the MADE environment locally (`uv sync --locked`) for the
   Random × check runs.
+
+### 2026-10-20 (evening): Random × check set
+
+- Ran Random on all 12 check units on this laptop (MacBook Air, arm64, CPU) with
+  `run_check_baselines.sh`. **12/12 accepted** by `M2/evaluate.py --split check`.
+  mSUN@20 = 5.583 ± 0.629, AUDC = 60.79 ± 0.51. Per system: Ga-Ho-Lu 7.33,
+  Al-Li-V 2.33, Al-V-Zn 10.00, Co-Pd-Tl 2.67.
+- Dev vs check for Random: 4.056 → 5.583 mSUN@20 (+1.53, +37.7 %). The check systems
+  are easier for an untuned baseline, so the agent's held-out result must be read
+  against the baselines' own gap.
+- Local runs are fast: median 203 s per unit (GitHub runner: 953 s).
+- Problems and fixes, all failed attempts kept (`results/20261020-check-random/README.md`):
+  - First ORB checkpoint download stalled at 56 MB → stopped, downloaded it separately.
+  - Co-Pd-Tl/43 hung twice after finishing, while kaleido closed the system Brave
+    browser it used for chart export. Fixed by installing kaleido's own headless
+    Chrome for Testing and setting `BROWSER_PATH`; attempt 03 accepted.
+  - The laptop slept and ran low on battery (10 %) during the rerun, which slowed it.
+    Long local runs need the charger plugged in.
+- Fixed `generalization.py` to count zero-baseline AF/EF pairs (Random found 0 on
+  Co-Dy-W/17 in dev, which gives EF = 0 under MADE's convention).
+- Raw runs preserved as `results/20261020-check-random/raw_artifact.zip` (checked: no
+  API key inside).

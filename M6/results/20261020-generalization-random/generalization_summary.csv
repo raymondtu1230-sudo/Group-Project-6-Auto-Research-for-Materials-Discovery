@@ -1,0 +1,19 @@
+method,metric,metric_label,dev_runs,dev_expected,dev_complete,dev_mean,dev_sd,dev_available_mean_partial,heldout_split,heldout_runs,heldout_expected,heldout_complete,heldout_mean,heldout_sd,heldout_available_mean_partial,gap_heldout_minus_dev,relative_gap,gap_status,dev_zero_baseline_pairs,heldout_zero_baseline_pairs
+random_generator_baseline,mSUN_at_B,mSUN@B,18,18,True,4.055555555555555,0.6309898162000303,,check,12,12,True,5.583333333333333,0.6291528696058958,,1.5277777777777777,0.3767123287671233,complete,,
+random_generator_baseline,AUDC,AUDC,18,18,True,40.583333333333336,9.458608659722517,,check,12,12,True,60.791666666666664,0.5051814855409226,,20.20833333333333,0.4979466119096508,complete,,
+random_generator_baseline,AF_vs_random,AF vs Random,18,18,True,1.0,0.0,,check,12,12,True,1.0,0.0,,0.0,0.0,complete,1,0
+random_generator_baseline,EF_vs_random,EF vs Random,18,18,True,0.9444444444444444,0.0962250448649376,,check,12,12,True,1.0,0.0,,0.05555555555555558,0.05882352941176473,complete,1,0
+random_generator_baseline,AF_vs_chemeleon,AF vs Chemeleon,18,18,False,,,0.0,check,12,12,False,,,,,,"incomplete: dev 18/18, check 12/12",0,0
+random_generator_baseline,EF_vs_chemeleon,EF vs Chemeleon,18,18,False,,,0.4375,check,12,12,False,,,,,,"incomplete: dev 18/18, check 12/12",0,0
+chemeleon_generative_baseline,mSUN_at_B,mSUN@B,1,18,False,,,16.0,check,0,12,False,,,,,,"incomplete: dev 1/18, check 0/12",,
+chemeleon_generative_baseline,AUDC,AUDC,1,18,False,,,161.0,check,0,12,False,,,,,,"incomplete: dev 1/18, check 0/12",,
+chemeleon_generative_baseline,AF_vs_random,AF vs Random,1,18,False,,,2.375,check,0,12,False,,,,,,"incomplete: dev 1/18, check 0/12",0,0
+chemeleon_generative_baseline,EF_vs_random,EF vs Random,1,18,False,,,2.2857142857142856,check,0,12,False,,,,,,"incomplete: dev 1/18, check 0/12",0,0
+chemeleon_generative_baseline,AF_vs_chemeleon,AF vs Chemeleon,1,18,False,,,1.0,check,0,12,False,,,,,,"incomplete: dev 1/18, check 0/12",0,0
+chemeleon_generative_baseline,EF_vs_chemeleon,EF vs Chemeleon,1,18,False,,,1.0,check,0,12,False,,,,,,"incomplete: dev 1/18, check 0/12",0,0
+m1_full,mSUN_at_B,mSUN@B,0,18,False,,,,check,0,12,False,,,,,,"incomplete: dev 0/18, check 0/12",,
+m1_full,AUDC,AUDC,0,18,False,,,,check,0,12,False,,,,,,"incomplete: dev 0/18, check 0/12",,
+m1_full,AF_vs_random,AF vs Random,0,18,False,,,,check,0,12,False,,,,,,"incomplete: dev 0/18, check 0/12",0,0
+m1_full,EF_vs_random,EF vs Random,0,18,False,,,,check,0,12,False,,,,,,"incomplete: dev 0/18, check 0/12",0,0
+m1_full,AF_vs_chemeleon,AF vs Chemeleon,0,18,False,,,,check,0,12,False,,,,,,"incomplete: dev 0/18, check 0/12",0,0
+m1_full,EF_vs_chemeleon,EF vs Chemeleon,0,18,False,,,,check,0,12,False,,,,,,"incomplete: dev 0/18, check 0/12",0,0
