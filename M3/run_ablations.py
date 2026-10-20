@@ -121,10 +121,19 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def check_dev_only(systems: list[str]) -> None:
+    # M6's protocol: m1_baseline and the m3_* methods run on dev systems only,
+    # never on check or hidden systems.
+    outside = [s for s in systems if s not in dev_systems()]
+    if outside:
+        raise SystemExit(f"M3 ablations run on dev systems only; not dev: {outside}")
+
+
 def main() -> None:
     args = parse_args()
     if Path.cwd().resolve() != MADE_DIR:
         raise SystemExit(f"Run from {MADE_DIR}")
+    check_dev_only(args.systems)
     methods = ([] if args.no_baseline else [BASELINE]) + [
         m for m in args.methods if m != BASELINE
     ]

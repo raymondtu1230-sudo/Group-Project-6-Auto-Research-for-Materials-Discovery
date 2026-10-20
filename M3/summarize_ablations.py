@@ -232,7 +232,11 @@ def render_markdown(rows: list[dict[str, Any]], table: list[dict[str, Any]]) -> 
         ]
     lines += [
         "",
-        "## Paired comparisons (same system and seed)",
+        "## Component vs M1 reference (paired by system and seed)",
+        "",
+        "Following M6's `PROTOCOL_ADOPTION.md` section 5, this table compares M3"
+        " configurations with `m1_baseline`. It is not the frozen agent's component"
+        " ablation (`m1_full` with one switch off), which is reported separately.",
         "",
         "| Comparison | Measures | Pairs | Δ mSUN (mean ± std) | Better / same / worse | Δ AUDC |",
         "| --- | --- | --- | --- | --- | --- |",

@@ -33,10 +33,21 @@ still in place.
     current configuration, with M4 memory on in both. M1's 19 Oct baseline
     predates M4 memory, so it is listed for context only and never paired.
   - Per `PROTOCOL_ADOPTION.md` §5, these go in the "component vs M1
-    reference" table, not the frozen agent's ablation table.
+    reference" table, not the frozen agent's ablation table. `M3_RESULTS.md`
+    titles its table that way.
+  - **Planner in the frozen agent (your question to M1):** on current `main`,
+    `run_experiment.py` already gives `m1_full` and every `*_off` ablation,
+    including `memory_off`, the M3 planner (`agent/planner=m3_research`). Only
+    `m1_baseline` keeps `diversity`. The memory ablation therefore runs with a
+    planner that reads `m1_memory`. M1 confirms this at the 25 Oct freeze.
+  - M3 runs only on dev systems. `run_ablations.py` refuses any other system,
+    and the `m3_*` methods are not part of the check/hidden allow-list.
 - **M4:** the M3 planner reads `context["m1_memory"]` in its review, which is
-  the planner consumption the memory ablation needs. Every M3 run sets its own
-  `M4_RUN_ID`, as `M4/integration/ADOPTION.md` requires.
+  the planner consumption the memory ablation needs. M4 confirmed on 20 Oct
+  that M3's decision trace uses memory when it is on and has none when it is
+  off. Every M3 run sets its own `M4_RUN_ID`, as `M4/integration/ADOPTION.md`
+  requires. If M1 applies M4's capture overrides before the runs, they apply
+  equally to every M3 arm, because all arms run from the same revision.
 - **M5:** exploration runs after M3's self-correction and receives its revised
   plan. M3's ablation methods keep exploration off.
 - **M2:** M3's ablations keep tool routing off and use the default generator.

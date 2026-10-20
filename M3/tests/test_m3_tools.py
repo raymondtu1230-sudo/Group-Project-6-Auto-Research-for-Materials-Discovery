@@ -239,3 +239,18 @@ def test_installer_replaces_unchanged_m1_files_and_refuses_changed_ones(
     with pytest.raises(SystemExit, match="merge the M3 edit"):
         install.main()
     assert (repo / edited).read_text() == "m1 newer version\n"
+
+
+def test_runner_refuses_non_dev_systems() -> None:
+    run_ablations.check_dev_only(run_ablations.dev_systems())
+    with pytest.raises(SystemExit, match="dev systems only"):
+        run_ablations.check_dev_only(["Mg-Sn-Sr", "Ba-Sc-Si"])
+
+
+def test_results_text_is_labelled_vs_m1_reference(tmp_path: Path) -> None:
+    make_run(tmp_path, "m1_baseline", "Mg-Sn-Sr", 17, 5)
+    make_run(tmp_path, "m3_full", "Mg-Sn-Sr", 17, 6)
+    rows = summ.collect(tmp_path, tmp_path / "none.csv")
+    text = summ.render_markdown(rows, summ.summarize(rows))
+    assert "## Component vs M1 reference" in text
+    assert "not the frozen agent's component ablation" in text
