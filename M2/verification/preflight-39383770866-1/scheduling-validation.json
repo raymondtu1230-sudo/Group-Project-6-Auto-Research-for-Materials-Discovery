@@ -1,0 +1,16 @@
+{
+  "scope": "infrastructure_only_not_science",
+  "probe_records": 0,
+  "unique_unit_directories": 0,
+  "matrix_jobs": 1,
+  "unique_runner_names": 1,
+  "observed_probe_peak_concurrency": 0,
+  "matrix_successes": 0,
+  "matrix_expected_failures": 0,
+  "job_durations_seconds": {
+    "probe (${{ matrix.system }}, ${{ matrix.seed }})": 0.0
+  },
+  "account_plan": "unknown; connector does not expose billing or global slots",
+  "future_free_slots": "unknown; observed overlap is a point-in-time measurement",
+  "passed": false
+}

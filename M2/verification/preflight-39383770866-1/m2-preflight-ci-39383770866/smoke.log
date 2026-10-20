@@ -1,0 +1,884 @@
+Running episodes:   0%|          | 0/1 [00:00<?, ?it/s]/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/modal/_functions.py:1826: UserWarning: The run_episode function is executing locally and will not have access to the mounted Volume or NetworkFileSystem data
+  warnings.warn(
+UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+[2026-10-20 07:03:25] [WARNING] [made.oracles.ase_potential] No elemental reference energies provided, make sure to compute them using compute_elemental_energies_from_structures using the oracle
+[2026-10-20 07:03:25] [INFO] [made.envs.convex_hull] Filtered ground truth PD from 3 to 3 entries (SMACT-valid, num_atoms<=4)
+[2026-10-20 07:03:25] [INFO] [made.envs.convex_hull] Computing elemental energies using oracle from dataset structures...
+[2026-10-20 07:03:25] [INFO] [made.oracles.ase_potential] Computed elemental energy for O: -0.000000 eV/atom
+[2026-10-20 07:03:25] [INFO] [made.oracles.ase_potential] Computed elemental energy for Li: -0.000000 eV/atom
+[2026-10-20 07:03:25] [INFO] [made.envs.convex_hull] Computed elemental energies: {'O': -2.6020852139652106e-18, 'Li': -2.6020852139652106e-18}
+[2026-10-20 07:03:25] [INFO] [made.envs.convex_hull] Starting PD with 2 elemental reference entries
+[2026-10-20 07:03:25] [INFO] [__main__] Starting new episode 0
+[2026-10-20 07:03:25] [INFO] [made.agents.planners.grid_search] Enumerated 3 SMACT-valid compositions from 6 total compositions
+[2026-10-20 07:03:25] [WARNING] [made.agents.planners.grid_search] Composition O1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 4)
+[2026-10-20 07:03:25] [WARNING] [made.agents.planners.grid_search] Composition Li1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 4)
+[2026-10-20 07:03:25] [INFO] [made.agents.planners.grid_search] Initialized composition stats with {'Li1 O1': CompositionStats(composition=Composition('Li1 O1'), num_attempts=0, num_successes=0, best_score=-10000000, last_score=-10000000, last_attempted_step=-1), 'Li2 O1': CompositionStats(composition=Composition('Li2 O1'), num_attempts=0, num_successes=0, best_score=-10000000, last_score=-10000000, last_attempted_step=-1), 'Li2 O2': CompositionStats(composition=Composition('Li2 O2'), num_attempts=0, num_successes=0, best_score=-10000000, last_score=-10000000, last_attempted_step=-1)}
+[2026-10-20 07:03:25] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-20 07:03:25] [INFO] [made.agents.base] Scorer.select(): Selected candidate 1/1 (composition: Li1 O1, score: 0.530587, score range: [0.294665, 0.530587], mean: 0.412626)
+[2026-10-20 07:03:25] [INFO] [__main__] Saved checkpoint to checkpoints/20261020_070309/episode_000/checkpoint.json (query_count=1)
+[2026-10-20 07:03:25] [INFO] [__main__] Observation: {'proposal': {'@module': 'pymatgen.core.structure', '@class': 'Structure', 'charge': 0.0, 'lattice': {'matrix': [[8.971381973465629, 0.0, 0.9278212114928278], [-3.096580817899685, 5.235313077330413, -3.0607476253445625], [0.0, 0.0, 13.155933709541088]], 'pbc': (True, True, True), 'a': 9.019232046816406, 'b': 6.809221086548996, 'c': 13.155933709541088, 'alpha': 116.71163487029337, 'beta': 84.09545621464018, 'gamma': 119.90682030522126, 'volume': 617.9078072118238}, 'properties': {}, 'sites': [{'species': [{'element': 'Li', 'occu': 1}], 'abc': [0.0621927912524467, 0.8126090004416155, 0.8753165021282806], 'properties': {}, 'label': 'Li', 'xyz': [-1.9583541568984322, 4.254262526768385, 9.086118599357713]}, {'species': [{'element': 'O', 'occu': 1}], 'abc': [0.1509154802769801, 0.7055686155919507, 0.5588918686046748], 'properties': {}, 'label': 'O', 'xyz': [-0.8309298214802643, 3.6938726001624547, 5.3331994932175455]}]}, 'oracle_result': {'energy': 0.0, 'energy_per_atom': 0.0, 'natoms': 2, 'formula': 'Li1 O1'}, 'reduced_formula': 'Li2 O2', 'formation_energy_per_atom': 2.6020852139652106e-18, 'energy_per_atom': 0.0, 'e_above_hull': 2.6020852139652106e-18, 'is_stable': True, 'is_newly_discovered': True, 'validity_distance_valid_count': 1.0, 'validity_distance_valid_fraction': 1.0, 'validity_min_interatomic_distance_min': 3.958474999184207, 'validity_min_interatomic_distance_mean': 3.958474999184207, 'validity_min_interatomic_distance_std': 0.0, 'validity_smact_valid_count': 1.0, 'validity_smact_valid_fraction': 1.0, 'validity_distance_and_smact_valid_count': 1.0, 'validity_distance_and_smact_valid_fraction': 1.0}
+[2026-10-20 07:03:25] [INFO] [__main__] Metrics: {
+  "queries_used": 1,
+  "num_observed_stable_formulas": 3,
+  "num_ground_truth_stable_formulas": 3,
+  "num_gt_formulas_missing_initial": 1,
+  "num_correct_stable_formulas": 1,
+  "recall_formula": 1.0,
+  "precision_formula": 1.0,
+  "num_newly_discovered_structures": 1,
+  "num_newly_discovered_stable": 1,
+  "discovery_efficiency": 1.0,
+  "stable_discovery_efficiency": 1.0,
+  "num_initial_structures": 2,
+  "num_ground_truth_stable_structures": 3,
+  "num_gt_structures_missing_initial": 1,
+  "num_correct_stable_structures": 0,
+  "recall_structure": 0.0,
+  "precision_structure": 0.0,
+  "reference_composition_precision": 1.0,
+  "reference_composition_recall": 1.0,
+  "reference_structure_precision": 0.0,
+  "reference_structure_recall": 0.0,
+  "validity_distance_valid_count": 1.0,
+  "validity_distance_valid_fraction": 1.0,
+  "validity_min_interatomic_distance_min": 3.958474999184207,
+  "validity_min_interatomic_distance_mean": 3.958474999184207,
+  "validity_min_interatomic_distance_std": 0.0,
+  "validity_smact_valid_count": 1.0,
+  "validity_smact_valid_fraction": 1.0,
+  "validity_distance_and_smact_valid_count": 1.0,
+  "validity_distance_and_smact_valid_fraction": 1.0,
+  "diversity_all_composition_unique_composition_count": 1.0,
+  "diversity_all_composition_unique_composition_fraction": 1.0,
+  "diversity_all_composition_l1_distance_min": 0.0,
+  "diversity_all_composition_l1_distance_mean": 0.0,
+  "diversity_all_composition_l1_distance_max": 0.0,
+  "diversity_all_composition_l1_distance_std": 0.0,
+  "diversity_all_composition_l2_distance_min": 0.0,
+  "diversity_all_composition_l2_distance_mean": 0.0,
+  "diversity_all_composition_l2_distance_max": 0.0,
+  "diversity_all_composition_l2_distance_std": 0.0,
+  "diversity_all_structure_unique_structure_count": 1.0,
+  "diversity_all_structure_unique_structure_fraction": 1.0,
+  "diversity_all_structure_spacegroup_entropy": -0.0,
+  "diversity_all_structure_unique_spacegroups_count": 1.0,
+  "diversity_all_structure_unique_spacegroups_fraction": 1.0,
+  "diversity_all_structure_lattice_parameter_variance": 0.0,
+  "diversity_all_structure_amd_distance_min": 0.0,
+  "diversity_all_structure_amd_distance_mean": 0.0,
+  "diversity_all_structure_amd_distance_max": 0.0,
+  "diversity_stable_composition_unique_composition_count": 1.0,
+  "diversity_stable_composition_unique_composition_fraction": 1.0,
+  "diversity_stable_composition_l1_distance_min": 0.0,
+  "diversity_stable_composition_l1_distance_mean": 0.0,
+  "diversity_stable_composition_l1_distance_max": 0.0,
+  "diversity_stable_composition_l1_distance_std": 0.0,
+  "diversity_stable_composition_l2_distance_min": 0.0,
+  "diversity_stable_composition_l2_distance_mean": 0.0,
+  "diversity_stable_composition_l2_distance_max": 0.0,
+  "diversity_stable_composition_l2_distance_std": 0.0,
+  "diversity_stable_structure_unique_structure_count": 1.0,
+  "diversity_stable_structure_unique_structure_fraction": 1.0,
+  "diversity_stable_structure_spacegroup_entropy": -0.0,
+  "diversity_stable_structure_unique_spacegroups_count": 1.0,
+  "diversity_stable_structure_unique_spacegroups_fraction": 1.0,
+  "diversity_stable_structure_lattice_parameter_variance": 0.0,
+  "diversity_stable_structure_amd_distance_min": 0.0,
+  "diversity_stable_structure_amd_distance_mean": 0.0,
+  "diversity_stable_structure_amd_distance_max": 0.0,
+  "novelty_unique_structure_count": 1.0,
+  "novelty_unique_structure_fraction": 1.0,
+  "novelty_novel_structure_count": 1.0,
+  "novelty_novel_structure_fraction": 1.0,
+  "novelty_stable_count": 1.0,
+  "novelty_stable_unique_count": 1.0,
+  "novelty_stable_novel_count": 1.0,
+  "novelty_stable_unique_novel_count": 1.0,
+  "novelty_stable_fraction": 1.0,
+  "novelty_stable_unique_fraction": 1.0,
+  "novelty_stable_novel_fraction": 1.0,
+  "novelty_stable_unique_novel_fraction": 1.0,
+  "convex_hull_e_above_hull_min": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_mean": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_max": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_std": 0.0,
+  "convex_hull_energy_per_atom_min": 0.0,
+  "convex_hull_energy_per_atom_max": 0.0,
+  "convex_hull_energy_per_atom_mean": 0.0,
+  "convex_hull_energy_per_atom_std": 0.0,
+  "convex_hull_formation_energy_per_atom_min": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_mean": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_std": 0.0,
+  "convex_hull_stable_fraction": 1.0,
+  "convex_hull_stable_count": 1.0,
+  "discovery_curve_area_under_discovery_curve": 0.5,
+  "discovery_curve_area_under_discovery_curve_normalized": 1.0,
+  "discovery_curve_enhancement_factor": 0.0,
+  "discovery_curve_acceleration_factor": 0.0
+}
+[2026-10-20 07:03:25] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-20 07:03:25] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: Li2 O2, score: 0.191521, score range: [0.191521, 0.191521], mean: 0.191521)
+[2026-10-20 07:03:33] [INFO] [__main__] Saved checkpoint to checkpoints/20261020_070309/episode_000/checkpoint.json (query_count=2)
+[2026-10-20 07:03:33] [INFO] [__main__] Observation: {'proposal': {'@module': 'pymatgen.core.structure', '@class': 'Structure', 'charge': 0.0, 'lattice': {'matrix': [[14.309810508900796, 0.0, -2.0943075228927723], [0.7923130988009516, 5.021149353101014, -2.1522140225855098], [0.0, 0.0, 9.479560207441484]], 'pbc': (True, True, True), 'a': 14.462254347130425, 'b': 5.520120113882667, 'c': 9.479560207441484, 'alpha': 112.94736640852203, 'beta': 98.32639086358778, 'gamma': 78.5519717974995, 'volume': 681.1224761510546}, 'properties': {}, 'sites': [{'species': [{'element': 'Li', 'occu': 1}], 'abc': [0.08186385413474262, 0.939776047011715, 0.47409847110640535], 'properties': {}, 'label': 'Li', 'xyz': [1.9160531121832225, 4.718755890512701, 2.300197729073146]}, {'species': [{'element': 'Li', 'occu': 1}], 'abc': [0.9963261827822232, 0.14160714062013535, 0.812204252248064], 'properties': {}, 'label': 'Li', 'xyz': [14.369436073067154, 0.7110306025192769, 5.307956816328771]}, {'species': [{'element': 'O', 'occu': 1}], 'abc': [0.8133781217490886, 0.9199750224976402, 0.0178343164383028], 'properties': {}, 'label': 'O', 'xyz': [12.36819505520968, 4.619331989083117, -3.514385586747896]}, {'species': [{'element': 'O', 'occu': 1}], 'abc': [0.3721928415574348, 0.051668993360395654, 0.7520348335719639], 'properties': {}, 'label': 'O', 'xyz': [5.366947055697531, 0.2594377325869312, 6.238270482854973]}]}, 'oracle_result': {'energy': 0.0, 'energy_per_atom': 0.0, 'natoms': 4, 'formula': 'Li2 O2'}, 'reduced_formula': 'Li2 O2', 'formation_energy_per_atom': 2.6020852139652106e-18, 'energy_per_atom': 0.0, 'e_above_hull': 2.6020852139652106e-18, 'is_stable': True, 'is_newly_discovered': True, 'validity_distance_valid_count': 1.0, 'validity_distance_valid_fraction': 1.0, 'validity_min_interatomic_distance_min': 3.295602856097915, 'validity_min_interatomic_distance_mean': 3.295602856097915, 'validity_min_interatomic_distance_std': 0.0, 'validity_smact_valid_count': 1.0, 'validity_smact_valid_fraction': 1.0, 'validity_distance_and_smact_valid_count': 1.0, 'validity_distance_and_smact_valid_fraction': 1.0}
+[2026-10-20 07:03:33] [INFO] [__main__] Metrics: {
+  "queries_used": 2,
+  "num_observed_stable_formulas": 3,
+  "num_ground_truth_stable_formulas": 3,
+  "num_gt_formulas_missing_initial": 1,
+  "num_correct_stable_formulas": 1,
+  "recall_formula": 1.0,
+  "precision_formula": 0.5,
+  "num_newly_discovered_structures": 2,
+  "num_newly_discovered_stable": 2,
+  "discovery_efficiency": 1.0,
+  "stable_discovery_efficiency": 1.0,
+  "num_initial_structures": 2,
+  "num_ground_truth_stable_structures": 3,
+  "num_gt_structures_missing_initial": 1,
+  "num_correct_stable_structures": 0,
+  "recall_structure": 0.0,
+  "precision_structure": 0.0,
+  "reference_composition_precision": 0.5,
+  "reference_composition_recall": 1.0,
+  "reference_structure_precision": 0.0,
+  "reference_structure_recall": 0.0,
+  "validity_distance_valid_count": 2.0,
+  "validity_distance_valid_fraction": 1.0,
+  "validity_min_interatomic_distance_min": 3.295602856097915,
+  "validity_min_interatomic_distance_mean": 3.627038927641061,
+  "validity_min_interatomic_distance_std": 0.33143607154314614,
+  "validity_smact_valid_count": 2.0,
+  "validity_smact_valid_fraction": 1.0,
+  "validity_distance_and_smact_valid_count": 2.0,
+  "validity_distance_and_smact_valid_fraction": 1.0,
+  "diversity_all_composition_unique_composition_count": 1.0,
+  "diversity_all_composition_unique_composition_fraction": 0.5,
+  "diversity_all_composition_l1_distance_min": 0.0,
+  "diversity_all_composition_l1_distance_mean": 0.0,
+  "diversity_all_composition_l1_distance_max": 0.0,
+  "diversity_all_composition_l1_distance_std": 0.0,
+  "diversity_all_composition_l2_distance_min": 0.0,
+  "diversity_all_composition_l2_distance_mean": 0.0,
+  "diversity_all_composition_l2_distance_max": 0.0,
+  "diversity_all_composition_l2_distance_std": 0.0,
+  "diversity_all_structure_unique_structure_count": 2.0,
+  "diversity_all_structure_unique_structure_fraction": 1.0,
+  "diversity_all_structure_spacegroup_entropy": -0.0,
+  "diversity_all_structure_unique_spacegroups_count": 1.0,
+  "diversity_all_structure_unique_spacegroups_fraction": 0.5,
+  "diversity_all_structure_lattice_parameter_variance": 3.733666267198759,
+  "diversity_all_structure_amd_distance_min": 3.2219719864865333,
+  "diversity_all_structure_amd_distance_mean": 3.2219719864865333,
+  "diversity_all_structure_amd_distance_max": 3.2219719864865333,
+  "diversity_stable_composition_unique_composition_count": 1.0,
+  "diversity_stable_composition_unique_composition_fraction": 0.5,
+  "diversity_stable_composition_l1_distance_min": 0.0,
+  "diversity_stable_composition_l1_distance_mean": 0.0,
+  "diversity_stable_composition_l1_distance_max": 0.0,
+  "diversity_stable_composition_l1_distance_std": 0.0,
+  "diversity_stable_composition_l2_distance_min": 0.0,
+  "diversity_stable_composition_l2_distance_mean": 0.0,
+  "diversity_stable_composition_l2_distance_max": 0.0,
+  "diversity_stable_composition_l2_distance_std": 0.0,
+  "diversity_stable_structure_unique_structure_count": 2.0,
+  "diversity_stable_structure_unique_structure_fraction": 1.0,
+  "diversity_stable_structure_spacegroup_entropy": -0.0,
+  "diversity_stable_structure_unique_spacegroups_count": 1.0,
+  "diversity_stable_structure_unique_spacegroups_fraction": 0.5,
+  "diversity_stable_structure_lattice_parameter_variance": 3.733666267198759,
+  "diversity_stable_structure_amd_distance_min": 3.2219719864865333,
+  "diversity_stable_structure_amd_distance_mean": 3.2219719864865333,
+  "diversity_stable_structure_amd_distance_max": 3.2219719864865333,
+  "novelty_unique_structure_count": 2.0,
+  "novelty_unique_structure_fraction": 1.0,
+  "novelty_novel_structure_count": 2.0,
+  "novelty_novel_structure_fraction": 1.0,
+  "novelty_stable_count": 2.0,
+  "novelty_stable_unique_count": 2.0,
+  "novelty_stable_novel_count": 2.0,
+  "novelty_stable_unique_novel_count": 2.0,
+  "novelty_stable_fraction": 1.0,
+  "novelty_stable_unique_fraction": 1.0,
+  "novelty_stable_novel_fraction": 1.0,
+  "novelty_stable_unique_novel_fraction": 1.0,
+  "convex_hull_e_above_hull_min": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_mean": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_max": 2.6020852139652106e-18,
+  "convex_hull_e_above_hull_std": 0.0,
+  "convex_hull_energy_per_atom_min": 0.0,
+  "convex_hull_energy_per_atom_max": 0.0,
+  "convex_hull_energy_per_atom_mean": 0.0,
+  "convex_hull_energy_per_atom_std": 0.0,
+  "convex_hull_formation_energy_per_atom_min": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_mean": 2.6020852139652106e-18,
+  "convex_hull_formation_energy_per_atom_std": 0.0,
+  "convex_hull_stable_fraction": 1.0,
+  "convex_hull_stable_count": 2.0,
+  "discovery_curve_area_under_discovery_curve": 2.0,
+  "discovery_curve_area_under_discovery_curve_normalized": 1.0,
+  "discovery_curve_enhancement_factor": 0.0,
+  "discovery_curve_acceleration_factor": 0.0
+}
+[2026-10-20 07:03:33] [INFO] [__main__] Final metrics: {
+  "episode_id": 0,
+  "final/queries_used": 2,
+  "final/num_observed_stable_formulas": 3,
+  "final/num_ground_truth_stable_formulas": 3,
+  "final/num_gt_formulas_missing_initial": 1,
+  "final/num_correct_stable_formulas": 1,
+  "final/recall_formula": 1.0,
+  "final/precision_formula": 0.5,
+  "final/num_newly_discovered_structures": 2,
+  "final/num_newly_discovered_stable": 2,
+  "final/discovery_efficiency": 1.0,
+  "final/stable_discovery_efficiency": 1.0,
+  "final/num_initial_structures": 2,
+  "final/num_ground_truth_stable_structures": 3,
+  "final/num_gt_structures_missing_initial": 1,
+  "final/num_correct_stable_structures": 0,
+  "final/recall_structure": 0.0,
+  "final/precision_structure": 0.0,
+  "final/reference_composition_precision": 0.5,
+  "final/reference_composition_recall": 1.0,
+  "final/reference_structure_precision": 0.0,
+  "final/reference_structure_recall": 0.0,
+  "final/validity_distance_valid_count": 2.0,
+  "final/validity_distance_valid_fraction": 1.0,
+  "final/validity_min_interatomic_distance_min": 3.295602856097915,
+  "final/validity_min_interatomic_distance_mean": 3.627038927641061,
+  "final/validity_min_interatomic_distance_std": 0.33143607154314614,
+  "final/validity_smact_valid_count": 2.0,
+  "final/validity_smact_valid_fraction": 1.0,
+  "final/validity_distance_and_smact_valid_count": 2.0,
+  "final/validity_distance_and_smact_valid_fraction": 1.0,
+  "final/diversity_all_composition_unique_composition_count": 1.0,
+  "final/diversity_all_composition_unique_composition_fraction": 0.5,
+  "final/diversity_all_composition_l1_distance_min": 0.0,
+  "final/diversity_all_composition_l1_distance_mean": 0.0,
+  "final/diversity_all_composition_l1_distance_max": 0.0,
+  "final/diversity_all_composition_l1_distance_std": 0.0,
+  "final/diversity_all_composition_l2_distance_min": 0.0,
+  "final/diversity_all_composition_l2_distance_mean": 0.0,
+  "final/diversity_all_composition_l2_distance_max": 0.0,
+  "final/diversity_all_composition_l2_distance_std": 0.0,
+  "final/diversity_all_structure_unique_structure_count": 2.0,
+  "final/diversity_all_structure_unique_structure_fraction": 1.0,
+  "final/diversity_all_structure_spacegroup_entropy": -0.0,
+  "final/diversity_all_structure_unique_spacegroups_count": 1.0,
+  "final/diversity_all_structure_unique_spacegroups_fraction": 0.5,
+  "final/diversity_all_structure_lattice_parameter_variance": 3.733666267198759,
+  "final/diversity_all_structure_amd_distance_min": 3.2219719864865333,
+  "final/diversity_all_structure_amd_distance_mean": 3.2219719864865333,
+  "final/diversity_all_structure_amd_distance_max": 3.2219719864865333,
+  "final/diversity_stable_composition_unique_composition_count": 1.0,
+  "final/diversity_stable_composition_unique_composition_fraction": 0.5,
+  "final/diversity_stable_composition_l1_distance_min": 0.0,
+  "final/diversity_stable_composition_l1_distance_mean": 0.0,
+  "final/diversity_stable_composition_l1_distance_max": 0.0,
+  "final/diversity_stable_composition_l1_distance_std": 0.0,
+  "final/diversity_stable_composition_l2_distance_min": 0.0,
+  "final/diversity_stable_composition_l2_distance_mean": 0.0,
+  "final/diversity_stable_composition_l2_distance_max": 0.0,
+  "final/diversity_stable_composition_l2_distance_std": 0.0,
+  "final/diversity_stable_structure_unique_structure_count": 2.0,
+  "final/diversity_stable_structure_unique_structure_fraction": 1.0,
+  "final/diversity_stable_structure_spacegroup_entropy": -0.0,
+  "final/diversity_stable_structure_unique_spacegroups_count": 1.0,
+  "final/diversity_stable_structure_unique_spacegroups_fraction": 0.5,
+  "final/diversity_stable_structure_lattice_parameter_variance": 3.733666267198759,
+  "final/diversity_stable_structure_amd_distance_min": 3.2219719864865333,
+  "final/diversity_stable_structure_amd_distance_mean": 3.2219719864865333,
+  "final/diversity_stable_structure_amd_distance_max": 3.2219719864865333,
+  "final/novelty_unique_structure_count": 2.0,
+  "final/novelty_unique_structure_fraction": 1.0,
+  "final/novelty_novel_structure_count": 2.0,
+  "final/novelty_novel_structure_fraction": 1.0,
+  "final/novelty_stable_count": 2.0,
+  "final/novelty_stable_unique_count": 2.0,
+  "final/novelty_stable_novel_count": 2.0,
+  "final/novelty_stable_unique_novel_count": 2.0,
+  "final/novelty_stable_fraction": 1.0,
+  "final/novelty_stable_unique_fraction": 1.0,
+  "final/novelty_stable_novel_fraction": 1.0,
+  "final/novelty_stable_unique_novel_fraction": 1.0,
+  "final/convex_hull_e_above_hull_min": 2.6020852139652106e-18,
+  "final/convex_hull_e_above_hull_mean": 2.6020852139652106e-18,
+  "final/convex_hull_e_above_hull_max": 2.6020852139652106e-18,
+  "final/convex_hull_e_above_hull_std": 0.0,
+  "final/convex_hull_energy_per_atom_min": 0.0,
+  "final/convex_hull_energy_per_atom_max": 0.0,
+  "final/convex_hull_energy_per_atom_mean": 0.0,
+  "final/convex_hull_energy_per_atom_std": 0.0,
+  "final/convex_hull_formation_energy_per_atom_min": 2.6020852139652106e-18,
+  "final/convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+  "final/convex_hull_formation_energy_per_atom_mean": 2.6020852139652106e-18,
+  "final/convex_hull_formation_energy_per_atom_std": 0.0,
+  "final/convex_hull_stable_fraction": 1.0,
+  "final/convex_hull_stable_count": 2.0,
+  "final/discovery_curve_area_under_discovery_curve": 2.0,
+  "final/discovery_curve_area_under_discovery_curve_normalized": 1.0,
+  "final/discovery_curve_enhancement_factor": 0.0,
+  "final/discovery_curve_acceleration_factor": 0.0
+}
+[2026-10-20 07:03:33] [INFO] [__main__] Removed checkpoint file checkpoints/20261020_070309/episode_000/checkpoint.json after successful completion
+[2026-10-20 07:03:34] [INFO] [choreographer.browsers.chromium] Chromium init'ed with kwargs {}
+[2026-10-20 07:03:34] [INFO] [choreographer.browsers.chromium] Found chromium path: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+[2026-10-20 07:03:34] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmppemwvin0.
+[2026-10-20 07:03:34] [INFO] [choreographer.browser_async] Opening browser.
+[2026-10-20 07:03:34] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmpeqlo7q0_.
+[2026-10-20 07:03:34] [INFO] [choreographer.browsers.chromium] Temporary directory at: /tmp/tmpeqlo7q0_
+[2026-10-20 07:03:34] [INFO] [kaleido.kaleido] Conforming 1 to file:///tmp/tmppemwvin0/index.html
+[2026-10-20 07:03:34] [INFO] [kaleido.kaleido] Waiting on all navigates
+[2026-10-20 07:03:35] [INFO] [kaleido.kaleido] All navigates done, putting them all in queue.
+[2026-10-20 07:03:35] [INFO] [kaleido.kaleido] Getting tab from queue (has 1)
+[2026-10-20 07:03:35] [INFO] [kaleido.kaleido] Got 4BED
+[2026-10-20 07:03:35] [INFO] [kaleido._kaleido_tab] Processing fig.png
+[2026-10-20 07:03:35] [INFO] [kaleido._kaleido_tab] Sending big command for fig.png.
+[2026-10-20 07:03:36] [INFO] [kaleido._kaleido_tab] Sent big command for fig.png.
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Reloading tab 4BED before return.
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Putting tab 4BED back (queue size: 0).
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Waiting for all cleanups to finish.
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Exiting Kaleido
+[2026-10-20 07:03:36] [INFO] [choreographer.browser_async] Closing browser.
+[2026-10-20 07:03:36] [INFO] [choreographer.browser_async] Closing browser.
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Cancelling tasks.
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Cancelling tasks.
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+Running episodes: 100%|██████████| 1/1 [00:26<00:00, 26.98s/it]Running episodes: 100%|██████████| 1/1 [00:26<00:00, 26.98s/it]
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-20 07:03:36] [INFO] [choreographer.browsers.chromium] Chromium init'ed with kwargs {}
+[2026-10-20 07:03:36] [INFO] [choreographer.browsers.chromium] Found chromium path: /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmp855e5b6z.
+[2026-10-20 07:03:36] [INFO] [choreographer.browser_async] Opening browser.
+[2026-10-20 07:03:36] [INFO] [choreographer.utils._tmpfile] Temp directory created: /tmp/tmpeu33v8w1.
+[2026-10-20 07:03:36] [INFO] [choreographer.browsers.chromium] Temporary directory at: /tmp/tmpeu33v8w1
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Conforming 1 to file:///tmp/tmp855e5b6z/index.html
+[2026-10-20 07:03:36] [INFO] [kaleido.kaleido] Waiting on all navigates
+[2026-10-20 07:03:37] [INFO] [kaleido.kaleido] All navigates done, putting them all in queue.
+[2026-10-20 07:03:37] [INFO] [kaleido.kaleido] Getting tab from queue (has 1)
+[2026-10-20 07:03:37] [INFO] [kaleido.kaleido] Got 3C0C
+[2026-10-20 07:03:37] [INFO] [kaleido._kaleido_tab] Processing fig.png
+[2026-10-20 07:03:37] [INFO] [kaleido._kaleido_tab] Sending big command for fig.png.
+[2026-10-20 07:03:37] [INFO] [kaleido._kaleido_tab] Sent big command for fig.png.
+[2026-10-20 07:03:37] [INFO] [kaleido.kaleido] Reloading tab 3C0C before return.
+[2026-10-20 07:03:37] [INFO] [kaleido.kaleido] Putting tab 3C0C back (queue size: 0).
+[2026-10-20 07:03:37] [INFO] [kaleido.kaleido] Waiting for all cleanups to finish.
+[2026-10-20 07:03:37] [INFO] [kaleido.kaleido] Exiting Kaleido
+[2026-10-20 07:03:37] [INFO] [choreographer.browser_async] Closing browser.
+[2026-10-20 07:03:37] [INFO] [choreographer.browser_async] Closing browser.
+[2026-10-20 07:03:37] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-20 07:03:37] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-20 07:03:37] [INFO] [kaleido.kaleido] Cancelling tasks.
+[2026-10-20 07:03:37] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+[2026-10-20 07:03:38] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-20 07:03:38] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-20 07:03:38] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-20 07:03:38] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-20 07:03:38] [INFO] [kaleido.kaleido] Cancelling tasks.
+[2026-10-20 07:03:38] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+[2026-10-20 07:03:38] [INFO] [__main__] Summary results: {
+  "final/convex_hull_e_above_hull_max": {
+    "mean": 2.6020852139652106e-18,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_e_above_hull_mean": {
+    "mean": 2.6020852139652106e-18,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_e_above_hull_min": {
+    "mean": 2.6020852139652106e-18,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_e_above_hull_std": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_energy_per_atom_max": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_energy_per_atom_mean": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_energy_per_atom_min": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_energy_per_atom_std": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_formation_energy_per_atom_max": {
+    "mean": 2.6020852139652106e-18,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_formation_energy_per_atom_mean": {
+    "mean": 2.6020852139652106e-18,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_formation_energy_per_atom_min": {
+    "mean": 2.6020852139652106e-18,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_formation_energy_per_atom_std": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_stable_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_stable_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_curve_acceleration_factor": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_curve_area_under_discovery_curve": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_curve_area_under_discovery_curve_normalized": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_curve_enhancement_factor": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_efficiency": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l1_distance_max": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l1_distance_mean": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l1_distance_min": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l1_distance_std": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l2_distance_max": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l2_distance_mean": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l2_distance_min": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l2_distance_std": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_unique_composition_count": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_unique_composition_fraction": {
+    "mean": 0.5,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_amd_distance_max": {
+    "mean": 3.2219719864865333,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_amd_distance_mean": {
+    "mean": 3.2219719864865333,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_amd_distance_min": {
+    "mean": 3.2219719864865333,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_lattice_parameter_variance": {
+    "mean": 3.733666267198759,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_spacegroup_entropy": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_unique_spacegroups_count": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_unique_spacegroups_fraction": {
+    "mean": 0.5,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_unique_structure_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_unique_structure_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l1_distance_max": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l1_distance_mean": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l1_distance_min": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l1_distance_std": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l2_distance_max": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l2_distance_mean": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l2_distance_min": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l2_distance_std": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_unique_composition_count": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_unique_composition_fraction": {
+    "mean": 0.5,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_amd_distance_max": {
+    "mean": 3.2219719864865333,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_amd_distance_mean": {
+    "mean": 3.2219719864865333,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_amd_distance_min": {
+    "mean": 3.2219719864865333,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_lattice_parameter_variance": {
+    "mean": 3.733666267198759,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_spacegroup_entropy": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_unique_spacegroups_count": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_unique_spacegroups_fraction": {
+    "mean": 0.5,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_unique_structure_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_unique_structure_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_novel_structure_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_novel_structure_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_novel_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_novel_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_unique_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_unique_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_unique_novel_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_unique_novel_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_unique_structure_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_unique_structure_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_correct_stable_formulas": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_correct_stable_structures": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_ground_truth_stable_formulas": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_ground_truth_stable_structures": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_gt_formulas_missing_initial": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_gt_structures_missing_initial": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_initial_structures": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_newly_discovered_stable": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_newly_discovered_structures": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_observed_stable_formulas": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/precision_formula": {
+    "mean": 0.5,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/precision_structure": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/queries_used": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/recall_formula": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/recall_structure": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/reference_composition_precision": {
+    "mean": 0.5,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/reference_composition_recall": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/reference_structure_precision": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/reference_structure_recall": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/stable_discovery_efficiency": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_distance_and_smact_valid_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_distance_and_smact_valid_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_distance_valid_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_distance_valid_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_min_interatomic_distance_mean": {
+    "mean": 3.627038927641061,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_min_interatomic_distance_min": {
+    "mean": 3.295602856097915,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_min_interatomic_distance_std": {
+    "mean": 0.33143607154314614,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_smact_valid_count": {
+    "mean": 2.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_smact_valid_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  }
+}
+[2026-10-20 07:03:38] [INFO] [__main__] Saved results to /home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/results/20261020-070309-analytic-m1_integrated (episodes.json, episodes.csv, summary.json, trajectories/*.json)
+[2026-10-20 07:03:38] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-20 07:03:38] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.

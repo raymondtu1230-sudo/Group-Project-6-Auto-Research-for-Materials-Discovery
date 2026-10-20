@@ -1,0 +1,7 @@
+Using Python 3.12.15 environment at: M1/MADE/.venv
+Resolved 1 package in 1ms
+   Building pe6203-m4-memory @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M4
+      Built pe6203-m4-memory @ file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M4
+Prepared 1 package in 715ms
+Installed 1 package in 0.79ms
+ + pe6203-m4-memory==0.2.0 (from file:///home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M4)

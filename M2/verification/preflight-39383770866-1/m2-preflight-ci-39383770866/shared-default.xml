@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="17.718" timestamp="2026-10-20T07:02:41.219781+00:00" hostname="runnervm8k3b6"><testcase classname="tests.test_m2_tool_routing" name="test_default_unseeded_configuration_still_initializes_with_routing_off" time="0.162"><failure message="hydra.errors.InstantiationException: Error in call to target 'made.agents.m5_exploration.UCBExplorationPolicy':&#10;TypeError(&quot;int() argument must be a string, a bytes-like object or a real number, not 'NoneType'&quot;)&#10;full_key: agent.exploration_policy">_target_ = &lt;class 'made.agents.m5_exploration.UCBExplorationPolicy'&gt;
+_partial_ = False, args = ()
+kwargs = {'alpha0': 0.5, 'beta0': 2.0, 'gamma': 1.0, 'length_scale': 0.35, ...}
+full_key = 'agent.exploration_policy'
+
+    def _call_target(
+        _target_: Callable[..., Any],
+        _partial_: bool,
+        args: Tuple[Any, ...],
+        kwargs: Dict[str, Any],
+        full_key: str,
+    ) -&gt; Any:
+        """Call target (type) with args and kwargs."""
+        try:
+            args, kwargs = _extract_pos_args(args, kwargs)
+            # detaching configs from parent.
+            # At this time, everything is resolved and the parent link can cause
+            # issues when serializing objects in some scenarios.
+            for arg in args:
+                if OmegaConf.is_config(arg):
+                    arg._set_parent(None)
+            for v in kwargs.values():
+                if OmegaConf.is_config(v):
+                    v._set_parent(None)
+        except Exception as e:
+            msg = (
+                f"Error in collecting args and kwargs for '{_convert_target_to_string(_target_)}':"
+                + f"\n{repr(e)}"
+            )
+            if full_key:
+                msg += f"\nfull_key: {full_key}"
+    
+            raise InstantiationException(msg) from e
+    
+        if _partial_:
+            try:
+                return functools.partial(_target_, *args, **kwargs)
+            except Exception as e:
+                msg = (
+                    f"Error in creating partial({_convert_target_to_string(_target_)}, ...) object:"
+                    + f"\n{repr(e)}"
+                )
+                if full_key:
+                    msg += f"\nfull_key: {full_key}"
+                raise InstantiationException(msg) from e
+        else:
+            try:
+&gt;               return _target_(*args, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;made.agents.m5_exploration.UCBExplorationPolicy object at 0x7f325fa6f830&gt;
+alpha0 = 0.5, gamma = 1.0, beta0 = 2.0, seed = None, max_stoichiometry = 8
+length_scale = 0.35, noise = 0.0001, max_pool = 512
+
+    def __init__(
+        self,
+        alpha0: float = 0.5,
+        gamma: float = 1.0,
+        beta0: float = 2.0,
+        seed: int = 0,
+        max_stoichiometry: int = 8,
+        length_scale: float = 0.35,
+        noise: float = 1e-4,
+        max_pool: int = 512,
+    ) -&gt; None:
+        if not 0.0 &lt;= alpha0 &lt;= 1.0:
+            raise ValueError("alpha0 must be in [0, 1]")
+        if gamma &lt;= 0 or beta0 &lt; 0:
+            raise ValueError("gamma must be positive and beta0 non-negative")
+        self.alpha0 = float(alpha0)
+        self.gamma = float(gamma)
+        self.beta0 = float(beta0)
+&gt;       self.seed = int(seed)
+                    ^^^^^^^^^
+E       TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+
+src/made/agents/m5_exploration.py:131: TypeError
+
+The above exception was the direct cause of the following exception:
+
+tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-1/test_default_unseeded_configur0')
+
+    def test_default_unseeded_configuration_still_initializes_with_routing_off(
+        tmp_path,
+    ) -&gt; None:
+        from pathlib import Path
+    
+        configs = Path(__file__).resolve().parents[1] / "configs"
+        with initialize_config_dir(config_dir=str(configs), version_base=None):
+            config = compose(
+                config_name="config",
+                overrides=["agent=m1_integrated"],
+                return_hydra_config=True,
+            )
+        config.hydra.runtime.output_dir = str(tmp_path)
+        HydraConfig.instance().set_config(config)
+        assert config.experiment.seed is None
+        assert config.agent.enable_tool_routing is False
+&gt;       agent = instantiate(config.agent)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_m2_tool_routing.py:232: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:226: in instantiate
+    return instantiate_node(
+.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:342: in instantiate_node
+    value = instantiate_node(
+.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:347: in instantiate_node
+    return _call_target(_target_, partial, args, kwargs, full_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+_target_ = &lt;class 'made.agents.m5_exploration.UCBExplorationPolicy'&gt;
+_partial_ = False, args = ()
+kwargs = {'alpha0': 0.5, 'beta0': 2.0, 'gamma': 1.0, 'length_scale': 0.35, ...}
+full_key = 'agent.exploration_policy'
+
+    def _call_target(
+        _target_: Callable[..., Any],
+        _partial_: bool,
+        args: Tuple[Any, ...],
+        kwargs: Dict[str, Any],
+        full_key: str,
+    ) -&gt; Any:
+        """Call target (type) with args and kwargs."""
+        try:
+            args, kwargs = _extract_pos_args(args, kwargs)
+            # detaching configs from parent.
+            # At this time, everything is resolved and the parent link can cause
+            # issues when serializing objects in some scenarios.
+            for arg in args:
+                if OmegaConf.is_config(arg):
+                    arg._set_parent(None)
+            for v in kwargs.values():
+                if OmegaConf.is_config(v):
+                    v._set_parent(None)
+        except Exception as e:
+            msg = (
+                f"Error in collecting args and kwargs for '{_convert_target_to_string(_target_)}':"
+                + f"\n{repr(e)}"
+            )
+            if full_key:
+                msg += f"\nfull_key: {full_key}"
+    
+            raise InstantiationException(msg) from e
+    
+        if _partial_:
+            try:
+                return functools.partial(_target_, *args, **kwargs)
+            except Exception as e:
+                msg = (
+                    f"Error in creating partial({_convert_target_to_string(_target_)}, ...) object:"
+                    + f"\n{repr(e)}"
+                )
+                if full_key:
+                    msg += f"\nfull_key: {full_key}"
+                raise InstantiationException(msg) from e
+        else:
+            try:
+                return _target_(*args, **kwargs)
+            except Exception as e:
+                msg = f"Error in call to target '{_convert_target_to_string(_target_)}':\n{repr(e)}"
+                if full_key:
+                    msg += f"\nfull_key: {full_key}"
+&gt;               raise InstantiationException(msg) from e
+E               hydra.errors.InstantiationException: Error in call to target 'made.agents.m5_exploration.UCBExplorationPolicy':
+E               TypeError("int() argument must be a string, a bytes-like object or a real number, not 'NoneType'")
+E               full_key: agent.exploration_policy
+
+.venv/lib/python3.12/site-packages/hydra/_internal/instantiate/_instantiate2.py:97: InstantiationException</failure></testcase></testsuite></testsuites>
