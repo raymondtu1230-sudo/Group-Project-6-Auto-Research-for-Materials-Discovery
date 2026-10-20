@@ -284,3 +284,20 @@ class UCBExplorationPolicy:
     def load_state(self, state: dict[str, Any]) -> None:
         self.decision_log = list(state.get("decision_log", []))
         self._queried_history = set(state.get("queried_formulas", []))
+        # Resume consistency: after a checkpoint restore, replayed steps must
+        # not duplicate sidecar lines. Truncate the JSONL to the restored
+        # decision count so the file and in-memory log stay in lockstep.
+        if self.log_path:
+            self._truncate_jsonl(len(self.decision_log))
+
+    def _truncate_jsonl(self, keep: int) -> None:
+        """Keep only the first `keep` lines of the sidecar (resume safety)."""
+        path = Path(self.log_path)
+        if not path.exists():
+            return
+        lines = path.read_text(encoding="utf-8").splitlines()
+        if len(lines) <= keep:
+            return
+        path.write_text(
+            "\n".join(lines[:keep]) + ("\n" if keep else ""), encoding="utf-8"
+        )

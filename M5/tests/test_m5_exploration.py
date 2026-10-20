@@ -324,3 +324,32 @@ def test_jsonl_sidecar_appends_one_line_per_decision(tmp_path) -> None:
         assert "rationale" in record
     # In-memory log and sidecar stay in sync.
     assert len(policy.decision_log) == 2
+
+
+def test_resume_after_checkpoint_restore_does_not_duplicate_sidecar(tmp_path) -> None:
+    """M4's reproduction: replaying a step after checkpoint restore appended
+    the decision twice. load_state must truncate the sidecar so file and
+    in-memory log stay in lockstep."""
+    import json as jsonlib
+
+    log_file = tmp_path / "m5_decisions.jsonl"
+    policy = UCBExplorationPolicy(seed=17, log_path=str(log_file))
+    context = dict(mg_sn_state(0))
+    context["m1_queries_remaining"] = 20
+    context["m1_queries_used"] = 0
+    plan = Plan(compositions=[Composition("MgSn")], num_candidates=1)
+    policy.adjust_plan(plan, context)
+    policy.adjust_plan(plan, context)
+    assert len(log_file.read_text(encoding="utf-8").strip().splitlines()) == 2
+
+    # Simulate crash + checkpoint restore, then replay step 2.
+    checkpoint = policy.get_state()
+    restored = UCBExplorationPolicy(seed=17, log_path=str(log_file))
+    restored.load_state(checkpoint)
+    # Sidecar must be truncated back to 2 lines, not 4 after replay.
+    restored.adjust_plan(plan, context)
+    lines = log_file.read_text(encoding="utf-8").strip().splitlines()
+    assert len(lines) == 3  # 2 restored + 1 new, no duplicates
+    assert len(restored.decision_log) == 3
+    for line in lines:
+        jsonlib.loads(line)  # still valid JSONL
