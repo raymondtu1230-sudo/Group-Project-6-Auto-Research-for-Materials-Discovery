@@ -190,7 +190,7 @@ def api_check(output: Path) -> None:
         raise ValueError("Repository API secret is unavailable")
     started = time.monotonic()
     try:
-        with MPRester(api_key=key, timeout=30, mute_progress_bars=True) as client:
+        with MPRester(api_key=key, mute_progress_bars=True) as client:
             docs = client.materials.summary.search(
                 material_ids=["mp-149"],
                 fields=["material_id"],

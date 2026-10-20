@@ -1,0 +1,27 @@
+{
+  "source_files_reviewed": [
+    "M2/generation_cache.py",
+    "M2/verify_batch_recovery.py"
+  ],
+  "failed_run": 39297647516,
+  "failure": "Batch model, input or execution identity mismatch",
+  "full_compare_executed": false,
+  "identity_fields": [
+    "execution",
+    "request",
+    "torch",
+    "numpy",
+    "threads",
+    "source",
+    "module_source",
+    "cpu_capability",
+    "architecture",
+    "weights"
+  ],
+  "specific_mismatching_field": "unknown; old artifact stores only combined identity SHA",
+  "optional_recovery_admitted": false,
+  "new_direct_path_imports_generation_cache": false,
+  "previous_capacity_policy": "263 minutes multiplied by assumed 1.5 uncertainty exceeded hosted limit; sizing policy, not a proof direct runs cannot finish",
+  "direct_mode": "bounded attempt from scratch; no guaranteed continuation of partially generated candidate pool",
+  "old_failure_evidence_unchanged": true
+}

@@ -1,0 +1,81 @@
+{
+  "inputs": [
+    {
+      "name": "01-Week12_Industry_Applications.pdf",
+      "sha256": "28a9686e0030fe89c9d487b5f114a797885204f5b961cb2437b29fc0ce42eb67",
+      "kind": "course/source file"
+    },
+    {
+      "name": "02-Week11_Training.pdf",
+      "sha256": "991e57aadb86e269472ba970e2001c40bd741ae6470574c4f92dfc59faabf10d",
+      "kind": "course/source file"
+    },
+    {
+      "name": "03-Week10_Harness.pdf",
+      "sha256": "684195a4769516f1e0608aaf15497bd7cde91c9cdf2cf1b5abe910bc2d45819c",
+      "kind": "course/source file"
+    },
+    {
+      "name": "04-Week09_Memory.pdf",
+      "sha256": "90c848368d9d766a565f6628f3735df0be33d99d431030e64b6307316eb5d345",
+      "kind": "course/source file"
+    },
+    {
+      "name": "05-Week08_Tools.pdf",
+      "sha256": "f429068f4872fce5cc7520c7abbd71009d833a52252e6628c8a6fd05630c6f93",
+      "kind": "course/source file"
+    },
+    {
+      "name": "06-Week07_Introduction.pdf",
+      "sha256": "ac9c306b68b4105723c1b735c2c563dce4dae1df748f735b59e71218e14676fc",
+      "kind": "course/source file"
+    },
+    {
+      "name": "07-Course-Outline-for-Student_PE6203.pdf",
+      "sha256": "fe73e971939aa613c3bf87f633eb0a425c3388251618f4b7630bf30ab87101f1",
+      "kind": "course/source file"
+    },
+    {
+      "name": "08-PE6203-Group-Project-6-Auto-Research-for-Materials-Discovery.docx.pdf",
+      "sha256": "7693479c85a53b83b79d2328726021bdb3b8e2795cf05db39e3c7b3fc053ffd7",
+      "kind": "course/source file"
+    },
+    {
+      "name": "09-10-16-2026-Project-Presentations-and-Submission-Requirements.txt",
+      "sha256": "7c4ee825fef8a262106d0a45e17c9d5c5d97882e9a9132e694dffe2ae2386b99",
+      "kind": "course/source file"
+    },
+    {
+      "name": "10-Project6_Task_Split-2-.pdf",
+      "sha256": "9f8ec489a1dc295031968220940fc60726b3a19609e6f2b937f0b0c48aa9fe0f",
+      "kind": "course/source file"
+    },
+    {
+      "name": "11-Project6_Step_by_Step_Guide.pdf",
+      "sha256": "35216c8fcd7b85bd0f88368fffd1a423ad0e77590d109826f306b29f9d1641ad",
+      "kind": "course/source file"
+    },
+    {
+      "name": "\u622a\u5c4f2026-10-19 \u4e0b\u53481.30.22(7).png",
+      "sha256": "934619c67d2595451c605a44e054cf78f19e242870130be87ae069682b8c91f1",
+      "kind": "original screenshot visually read"
+    },
+    {
+      "name": "\u622a\u5c4f2026-10-19 \u4e0b\u53481.30.34(7).png",
+      "sha256": "78103ed2b982b695a652b68b056a8412441acd0abf2bea442eb74d55dbcd1595",
+      "kind": "original screenshot visually read"
+    },
+    {
+      "name": "\u622a\u5c4f2026-10-19 \u4e0b\u53481.30.42(7).png",
+      "sha256": "b9ae3d72eccf27d39ce8cecf33da7569f0cc190b59b8002ac70b10678b3ea138",
+      "kind": "original screenshot visually read"
+    },
+    {
+      "name": "\u622a\u5c4f2026-10-19 \u4e0b\u53481.30.48(6).png",
+      "sha256": "8845bb53d8dfe10f959185da83afea741305184064587c0aab4a42f7395a3662",
+      "kind": "original screenshot visually read"
+    }
+  ],
+  "M2_scope": "dev baselines/evaluation/tool routing; no M1 integration/freeze/reference or M6 check/hidden work",
+  "messages_not_sent": true
+}

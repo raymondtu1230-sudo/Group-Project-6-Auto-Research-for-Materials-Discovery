@@ -168,3 +168,15 @@ def test_failed_archive_masks_secret_and_preserves_attempt(tmp_path, monkeypatch
     assert result["status"] == "timeout"
     with pytest.raises(ValueError, match="overwrite"):
         preflight.package(tmp_path / "package", "Mg-Sn-Sr-29", 1, 1)
+
+
+def test_locked_mp_api_constructor_contract():
+    import inspect
+
+    from mp_api.client import MPRester
+
+    # The client version is fixed by uv.lock. Bind the real public constructor
+    # before any authenticated cloud request; no API call occurs here.
+    inspect.signature(MPRester).bind(
+        api_key="synthetic-not-a-key", mute_progress_bars=True
+    )

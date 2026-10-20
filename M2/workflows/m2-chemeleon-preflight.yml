@@ -49,7 +49,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.12.15'
       - uses: astral-sh/setup-uv@v6
         with:
           version: '0.9.18'
@@ -92,6 +92,8 @@ jobs:
           uv run --locked python -c 'import kaleido; kaleido.get_chrome_sync()'
           uv run --locked python ../run_smoke_test.py 2>&1 | tee ../../M2/runtime/smoke.log
       - name: Real credential format and authenticated Materials Project query
+        id: api
+        continue-on-error: true
         timeout-minutes: 3
         env:
           MATERIALS_PROJECT_API_KEY: ${{ secrets.TUWEIKANG_MATERIALS_PROJECT_API_KEY }}
@@ -99,6 +101,8 @@ jobs:
           M1/MADE/.venv/bin/python M2/check_key.py
           timeout 90 M1/MADE/.venv/bin/python M2/chemeleon_preflight.py api --output M2/runtime/api.json
       - name: Actual official Chemeleon and ORB weight load; no sampling
+        id: model
+        continue-on-error: true
         timeout-minutes: 5
         working-directory: M1/MADE
         run: |
@@ -114,6 +118,11 @@ jobs:
           uv run --locked python ../../M2/evaluate.py --results-root ../../M2/runtime/plan/reused --output ../../M2/runtime/offline-report --split dev --allow-partial
           git rev-parse HEAD > ../../M2/runtime/actual-source-sha.txt
           git diff --name-only > ../../M2/runtime/isolated-install-changes.txt
+      - name: Record actual API/model outcomes separately from infrastructure
+        if: always()
+        run: |
+          mkdir -p M2/runtime
+          echo '{"api_outcome":"${{ steps.api.outcome }}","model_outcome":"${{ steps.model.outcome }}","formal_experiments_started":false}' > M2/runtime/admission-outcomes.json
       - name: Preserve source-specific preflight checks
         if: always()
         uses: actions/upload-artifact@v4

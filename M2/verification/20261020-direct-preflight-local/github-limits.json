@@ -1,0 +1,11 @@
+{
+  "official_url": "https://docs.github.com/en/actions/reference/limits",
+  "checked_date": "2026-10-20",
+  "standard_free_concurrency": 20,
+  "standard_pro_concurrency": 40,
+  "matrix_max_jobs": 256,
+  "hosted_job_max_minutes": 360,
+  "account_plan": "unreadable/unknown",
+  "other_repository_jobs": "unreadable/unknown",
+  "no_claim_of_six_hour_scientific_completion": true
+}

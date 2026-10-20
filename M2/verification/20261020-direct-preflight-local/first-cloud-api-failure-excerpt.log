@@ -1,0 +1,16 @@
+2026-10-20T07:01:32.2829857Z  + mp-api==0.45.15
+2026-10-20T07:02:58.9424832Z E       TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-10-20T07:02:58.9425744Z src/made/agents/m5_exploration.py:131: TypeError
+2026-10-20T07:02:58.9460758Z E               TypeError("int() argument must be a string, a bytes-like object or a real number, not 'NoneType'")
+2026-10-20T07:02:58.9469815Z TypeError("int() argument must be a string, a bytes-like object or a real number, not 'NoneType'")
+2026-10-20T07:03:03.0217061Z ##[error]Process completed with exit code 1.
+2026-10-20T07:03:40.4672588Z [36;1mtimeout 90 M1/MADE/.venv/bin/python M2/chemeleon_preflight.py api --output M2/runtime/api.json[0m
+2026-10-20T07:03:40.4964015Z Credential format accepted; the real API request will verify access.
+2026-10-20T07:03:45.6318751Z Traceback (most recent call last):
+2026-10-20T07:03:45.6329845Z   File "/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/chemeleon_preflight.py", line 355, in <module>
+2026-10-20T07:03:45.6332302Z   File "/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/chemeleon_preflight.py", line 338, in main
+2026-10-20T07:03:45.6333453Z     api_check(args.output)
+2026-10-20T07:03:45.6334373Z   File "/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/chemeleon_preflight.py", line 211, in api_check
+2026-10-20T07:03:45.6335672Z     raise RuntimeError("Real API query failed; see redacted result") from None
+2026-10-20T07:03:45.6336149Z RuntimeError: Real API query failed; see redacted result
+2026-10-20T07:03:46.3402498Z ##[error]Process completed with exit code 1.
