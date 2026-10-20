@@ -1,0 +1,10 @@
+{
+  "unit": "Mg-Sn-Sr-29",
+  "attempt": 3938733161401,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "retry_of": null,
+  "run_id": "39387331614",
+  "status": "claimed",
+  "mode": "direct_from_scratch",
+  "initial_pool_resume": false
+}
