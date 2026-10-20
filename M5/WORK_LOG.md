@@ -52,10 +52,10 @@ explain why and what you'd change.
 - Wired the component into `m1_integrated.yaml` (switch defaults off so M1's
   reference behavior is unchanged). Verified a full smoke run with only the
   switch flipped — no extra Hydra overrides needed. Pushed to main.
-- M6 asked for the wiring ETA and for `decision_log` to stay in the checkpoint
-  (it already does — `get_state`/`load_state` round-trip is tested).
-- M1 announced `m1_full` will use M3's planner + M4's memory; held-out runs
-  will only execute `m1_full`, Random, Chemeleon.
+- Overheard M1's reply to M6 in the group chat: `m1_full` will use M3's
+  planner + M4's memory; held-out runs will only execute `m1_full`, Random,
+  Chemeleon. Freeze date is **25 Oct**. No action needed from me, but it
+  confirmed which memory format my policy must handle.
 
 **Real bug found by reading teammate code (Lesson #1)**
 - Verified whether M4's `memory_manager` output includes `e_above_hull` (it
