@@ -14,7 +14,15 @@ enable_tool_routing: false
 query_budget: ${environment.budget}
 memory_size: 20
 generators: {}
-memory_manager: null
+# M4 package: install editable from ../../M4 before running this config.
+# Use a fresh manager and unique run ID for each experiment attempt.
+memory_manager:
+  _target_: m4_memory.m1_adapter.M4MemoryManager
+  log_path: ${hydra:runtime.output_dir}/m4_evidence.jsonl
+  run_id: ${oc.env:M4_RUN_ID,m4-local}
+  episode_id: ${oc.env:M4_EPISODE_ID,0}
+  limit: 8
+  max_chars: 4000
 self_correction_policy: null
 # M5 UCB exploration policy, wired and ready; flip enable_exploration for the
 # ablation pair. Switch defaults off so the M1 reference is unchanged.
