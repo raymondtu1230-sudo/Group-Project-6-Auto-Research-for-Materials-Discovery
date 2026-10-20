@@ -1,0 +1,10 @@
+{
+  "unit": "Ga-Pt-Tm-17",
+  "attempt": 3938658932401,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "retry_of": null,
+  "run_id": "39386589324",
+  "status": "claimed",
+  "mode": "direct_from_scratch",
+  "initial_pool_resume": false
+}
