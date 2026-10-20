@@ -254,3 +254,16 @@ def test_results_text_is_labelled_vs_m1_reference(tmp_path: Path) -> None:
     text = summ.render_markdown(rows, summ.summarize(rows))
     assert "## Component vs M1 reference" in text
     assert "not the frozen agent's component ablation" in text
+
+
+def test_runner_orders_paired_sets_together_and_fixes_threads() -> None:
+    order = run_ablations.order_runs(["m1_baseline", "m3_full"], ["A-B-C"], [17, 29])
+    assert order == [
+        ("m1_baseline", "A-B-C", 17),
+        ("m3_full", "A-B-C", 17),
+        ("m1_baseline", "A-B-C", 29),
+        ("m3_full", "A-B-C", 29),
+    ]
+    env = run_ablations.run_env("m3_full", "A-B-C", 17, 1, threads=4)
+    assert env["OMP_NUM_THREADS"] == env["MKL_NUM_THREADS"] == "4"
+    assert env["PYTHONUNBUFFERED"] == "1"

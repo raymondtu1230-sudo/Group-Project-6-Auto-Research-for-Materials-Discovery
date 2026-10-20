@@ -9,6 +9,9 @@ memory manager becoming the default in ``m1_integrated.yaml``, so a fair paired
 comparison needs a baseline run under the same configuration as the M3 runs.
 Each run gets its own ``M4_RUN_ID``, as M4's adoption notes require.
 
+Use ``--jobs N`` to run N episodes at once; each gets ``cores // N`` CPU
+threads, the same for every arm.
+
 Run from ``M1/MADE`` after putting ``MATERIALS_PROJECT_API_KEY`` in
 ``M1/MADE/.env`` and installing M4 (``uv pip install --no-deps -e ../../M4``)::
 
@@ -24,7 +27,9 @@ import json
 import os
 import subprocess
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import yaml
@@ -97,12 +102,35 @@ def m4_missing() -> bool:
     return uses_m4 and importlib.util.find_spec("m4_memory") is None
 
 
-def run_env(method: str, system: str, seed: int, attempt: int) -> dict[str, str]:
+def run_env(
+    method: str, system: str, seed: int, attempt: int, threads: int | None = None
+) -> dict[str, str]:
     # M4 asks for a unique run ID per experiment attempt; one episode per run.
     env = dict(os.environ)
     env["M4_RUN_ID"] = f"{method}-{system}-seed{seed}-attempt{attempt:02d}"
     env["M4_EPISODE_ID"] = "0"
+    env["PYTHONUNBUFFERED"] = "1"  # stream the console log while the run is going
+    if threads:
+        # Same CPU thread count for every arm, so parallel runs stay comparable.
+        for name in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS"):
+            env[name] = str(threads)
     return env
+
+
+def order_runs(
+    methods: list[str], systems: list[str], seeds: list[int]
+) -> list[tuple[str, str, int]]:
+    """System by system, seed by seed, all methods together.
+
+    Complete paired sets (baseline + every M3 arm) finish early, so a partial
+    sweep is still analysable.
+    """
+    return [
+        (method, system, seed)
+        for system in systems
+        for seed in seeds
+        for method in methods
+    ]
 
 
 def parse_args() -> argparse.Namespace:
@@ -116,6 +144,15 @@ def parse_args() -> argparse.Namespace:
         "--no-baseline",
         action="store_true",
         help="skip re-running m1_baseline under the current configuration",
+    )
+    parser.add_argument(
+        "--jobs", type=int, default=1, help="runs to execute at the same time"
+    )
+    parser.add_argument(
+        "--threads",
+        type=int,
+        default=None,
+        help="CPU threads per run (default: cores // jobs when --jobs > 1)",
     )
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
@@ -138,11 +175,9 @@ def main() -> None:
         m for m in args.methods if m != BASELINE
     ]
     todo = [
-        (method, system, seed)
-        for method in methods
-        for system in args.systems
-        for seed in args.seeds
-        if not any(is_completed(p) for p in attempts(method, system, seed))
+        run
+        for run in order_runs(methods, args.systems, args.seeds)
+        if not any(is_completed(p) for p in attempts(*run))
     ]
     total = len(methods) * len(args.systems) * len(args.seeds)
     print(f"{total - len(todo)} of {total} runs already completed; {len(todo)} to run")
@@ -160,16 +195,27 @@ def main() -> None:
             f"  {M4_INSTALL}"
         )
 
-    failures = []
-    for index, (method, system, seed) in enumerate(todo, start=1):
-        attempt = next_attempt(method, system, seed)
-        print(
-            f"[{index}/{len(todo)}] {method} {system} seed {seed} attempt {attempt}",
-            flush=True,
-        )
+    jobs = max(args.jobs, 1)
+    threads = args.threads or (
+        max((os.cpu_count() or 1) // jobs, 1) if jobs > 1 else None
+    )
+    print(f"jobs={jobs} threads_per_run={threads or 'default'}", flush=True)
+    failures: list[tuple[str, str, int, int]] = []
+    lock = threading.Lock()
+
+    def run_one(index: int, method: str, system: str, seed: int) -> None:
+        with lock:  # attempt numbers and folders are claimed one run at a time
+            attempt = next_attempt(method, system, seed)
+            log_path = console_log(
+                run_dir(method, system, seed) / f"attempt_{attempt:02d}"
+            )
+            log_path.parent.mkdir(parents=True, exist_ok=True)
+            print(
+                f"[{index}/{len(todo)}] start {method} {system} seed {seed}"
+                f" attempt {attempt}",
+                flush=True,
+            )
         started = time.monotonic()
-        log_path = console_log(run_dir(method, system, seed) / f"attempt_{attempt:02d}")
-        log_path.parent.mkdir(parents=True, exist_ok=True)
         process = subprocess.Popen(
             [
                 sys.executable,
@@ -185,7 +231,7 @@ def main() -> None:
                 "--attempt",
                 str(attempt),
             ],
-            env=run_env(method, system, seed, attempt),
+            env=run_env(method, system, seed, attempt, threads),
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
@@ -195,16 +241,23 @@ def main() -> None:
         with log_path.open("w", encoding="utf-8") as log:
             for line in process.stdout:  # type: ignore[union-attr]
                 log.write(line)
-                if "M3 re-plan" in line or "Traceback" in line or "Error" in line:
-                    print(f"    {line.rstrip()[-160:]}", flush=True)
+                if "M3 re-plan" in line or "Traceback" in line:
+                    print(f"    {method} {system} {seed}: {line.rstrip()[-140:]}")
         returncode = process.wait()
         elapsed = time.monotonic() - started
-        status = (
-            "ok" if returncode == 0 else f"FAILED ({returncode}, see {log_path.name})"
-        )
-        print(f"    {status} in {elapsed:.0f}s", flush=True)
-        if returncode != 0:
-            failures.append((method, system, seed, attempt))
+        status = "ok" if returncode == 0 else f"FAILED ({returncode}, see {log_path})"
+        with lock:
+            print(
+                f"[{index}/{len(todo)}] {status}: {method} {system} seed {seed}"
+                f" in {elapsed:.0f}s",
+                flush=True,
+            )
+            if returncode != 0:
+                failures.append((method, system, seed, attempt))
+
+    with ThreadPoolExecutor(max_workers=jobs) as pool:
+        for index, run in enumerate(todo, start=1):
+            pool.submit(run_one, index, *run)
 
     if failures:
         print("Failed runs (rerun this script to retry under a new attempt):")
