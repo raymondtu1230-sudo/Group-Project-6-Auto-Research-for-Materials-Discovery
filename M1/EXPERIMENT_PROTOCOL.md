@@ -19,6 +19,11 @@ This is the group default protocol authored by M1. All group comparisons should 
 | Cost | Record model/API tokens and dollars (zero for ORB inference), Materials Project calls if available, wall time, and machine; report compute hardware separately |
 | Logging | W&B off by default; raw trajectories, resolved configs, and summaries remain under `M1/MADE/results/` |
 
+The `B=20` query budget is a team protocol choice set by the M1 lead for v1; it
+is not represented as a TA-mandated value. Apply it uniformly across methods.
+Any course-published requirement that conflicts with it requires a versioned
+protocol amendment before affected comparisons are run.
+
 The upstream MADE snapshot is currently at the revision above. M1's integration code is maintained in this workspace and must be included in the shared release/freeze revision before the reference run. Do not describe this upstream hash alone as the full agent revision.
 
 ## Running one protocol unit
@@ -57,6 +62,12 @@ The source is MADE's committed `systems_10_mp_20/systems_ternary_n10_maxatoms20_
 
 This public check set is not the course's hidden test set. If the teaching team supplies held-out systems, run the frozen reference and required baselines on them without tuning and use that result for the held-out comparison. If no held-out set is released, report the limitation; do not relabel the public check set as hidden test.
 
+Following M6's held-out rule, only `m1_full`, Random, and Chemeleon may run on
+check/hidden systems. The untuned Random and Chemeleon baselines may run before
+the freeze; `m1_full` may run on check only after the 25 Oct freeze. Do not
+change the agent after inspecting check results. Add a hidden split only after
+the teaching team publishes its systems.
+
 ## Methods
 
 Until M2/M3/M5 plug-ins are merged, `m1_baseline` is the runnable M1 reference:
@@ -84,6 +95,9 @@ Run the following methods with the same systems, oracle, evaluator, budget, and 
 plug-in method above (M1 full, its ablations and the `m3_*` methods) plans with
 the M3 planner. The `m3_*` methods measure M3 against `m1_baseline` on the
 development systems, so they do not wait for the plugin-complete `m1_full`.
+The frozen `m1_full` agent will use the M3 planner so its M4 memory records are
+consumed during proposal decisions; `m1_baseline` remains the historical
+diversity-planner reference.
 
 Run the three required comparisons (M1 full and both baselines) on development and public-check systems. Run component ablations on development systems only. Each seed is a separate one-episode invocation, not three episodes under a single seed. For a defensible paired comparison, every method uses the same seed list. If a component is not delivered by its owner, mark that method unavailable; do not claim its switch-on result represents that component.
 

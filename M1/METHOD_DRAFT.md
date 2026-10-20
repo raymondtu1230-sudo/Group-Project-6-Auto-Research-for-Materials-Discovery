@@ -14,4 +14,4 @@ The official environment enforces the query budget and each environment step eva
 
 ## Reproducibility and current status
 
-Each run will be associated with the MADE commit, resolved configuration, system, seed, budget, raw trajectory, official metrics, runtime, machine, and available token/API-cost information. The frozen course commit, base model/settings, systems, budget, seeds, and repeat count remain to be confirmed with the teaching team. No benchmark result is reported in this draft.
+Each run will be associated with the MADE commit, resolved configuration, system, seed, budget, raw trajectory, official metrics, runtime, machine, and available token/API-cost information. B=20 is the team protocol-v1 budget set by the M1 lead, not a TA-mandated value. The frozen course commit, base model/settings, systems, seeds, and repeat count remain to be confirmed with the teaching team. No benchmark result is reported in this draft.

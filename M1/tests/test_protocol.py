@@ -4,6 +4,7 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
 import yaml
 
 M1_DIR = Path(__file__).resolve().parents[1]
@@ -58,6 +59,26 @@ def test_check_split_excludes_ablations_and_snapshot_hash_ignores_entry_order() 
         {"composition": {"O": 1}, "energy": 0.0},
     ]
     assert canonical_hash(entries) == canonical_hash(list(reversed(entries)))
+
+
+def test_heldout_runner_allows_only_frozen_agent_and_baselines() -> None:
+    from run_experiment import HELDOUT_METHODS, validate_method_for_split
+
+    assert {
+        "m1_full",
+        "random_generator_baseline",
+        "chemeleon_generative_baseline",
+    } == HELDOUT_METHODS
+    for method in HELDOUT_METHODS:
+        validate_method_for_split(method, "check")
+        validate_method_for_split(method, "hidden")
+
+    for method in ("m1_baseline", "planning_off", "m3_full"):
+        with pytest.raises(SystemExit, match="not allowed"):
+            validate_method_for_split(method, "check")
+        with pytest.raises(SystemExit, match="not allowed"):
+            validate_method_for_split(method, "hidden")
+        validate_method_for_split(method, "dev")
 
 
 def test_m3_methods_run_against_m1_baseline_without_other_plugins() -> None:

@@ -28,6 +28,9 @@ SEEDS = tuple(PROTOCOL["repeats"]["seeds"])
 # the plugin-complete m1_full: M3 planner + self-correction on top of the
 # baseline, then each M3 part switched off.
 M3_METHODS = ("m3_full", "m3_planning_off", "m3_self_correction_off")
+HELDOUT_METHODS = frozenset(
+    {"m1_full", "random_generator_baseline", "chemeleon_generative_baseline"}
+)
 METHODS = tuple(
     PROTOCOL["methods"]["required"]
     + PROTOCOL["methods"]["ablations"]
@@ -72,6 +75,15 @@ def m1_agent_overrides(method: str) -> list[str]:
     return overrides
 
 
+def validate_method_for_split(method: str, split: str) -> None:
+    """Keep ablations and development methods off held-out system splits."""
+    if split in {"check", "hidden"} and method not in HELDOUT_METHODS:
+        allowed = ", ".join(sorted(HELDOUT_METHODS))
+        raise SystemExit(
+            f"Method {method!r} is not allowed on the {split} split; allowed: {allowed}"
+        )
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--method", choices=METHODS, required=True)
@@ -96,6 +108,7 @@ def installed_versions(names: tuple[str, ...]) -> dict[str, str]:
 
 def main() -> None:
     args = parse_args()
+    validate_method_for_split(args.method, args.split)
     if args.attempt < 1:
         raise SystemExit("--attempt must be a positive integer")
     if Path.cwd().resolve() != MADE_DIR:

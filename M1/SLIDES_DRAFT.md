@@ -16,7 +16,7 @@ Speaker note: Explain that MADE owns the interaction loop and scientific feedbac
 - Checkpoints include planner/generator/filter/scorer state, memory state, and optional router/exploration state.
 - Run record: commit, resolved config, system, seed, budget, trajectory, metrics, cost, wall time, and machine.
 
-Speaker note: Keep query count separate from LLM tokens, API cost, and wall-clock time. State clearly that the current config's default budget is provisional until the team confirms the protocol.
+Speaker note: Keep query count separate from LLM tokens, API cost, and wall-clock time. B=20 is the M1 lead's team-selected protocol-v1 budget, not a TA-mandated value.
 
 ## Slide 3 - Results and ablations (populate after frozen runs)
 
