@@ -1,0 +1,18 @@
+{
+  "mode": "formal_direct",
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "max_parallel": 17,
+  "units": [
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 43
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 29
+    }
+  ],
+  "retry_of": {},
+  "request_id": "20261020-retry-two-precompute-claim-conflicts",
+  "acknowledgement": "RUN_ONLY_MISSING_DEV_CHEMELEON_B20_NO_RESUME"
+}

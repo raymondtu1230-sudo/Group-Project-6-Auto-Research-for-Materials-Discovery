@@ -1,0 +1,176 @@
+{
+  "published_main": "cd15f644e7b3d2ebf85609e2564797f2ed70860c",
+  "count": 17,
+  "claims": [
+    {
+      "unit": "Au-K-Tb-17",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Au-K-Tb-29",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Au-K-Tb-43",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Co-Dy-W-17",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Co-Dy-W-29",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Co-Dy-W-43",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Co-Mg-Na-17",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Co-Mg-Na-29",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Co-Mg-Na-43",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Ga-Pt-Tm-17",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Ga-Pt-Tm-29",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Ga-Pt-Tm-43",
+      "attempt": 3938733161401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39387331614",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Hf-Ni-Zr-17",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Hf-Ni-Zr-29",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Hf-Ni-Zr-43",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Mg-Sn-Sr-29",
+      "attempt": 3938733161401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39387331614",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    },
+    {
+      "unit": "Mg-Sn-Sr-43",
+      "attempt": 3938658932401,
+      "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+      "retry_of": null,
+      "run_id": "39386589324",
+      "status": "claimed",
+      "mode": "direct_from_scratch",
+      "initial_pool_resume": false
+    }
+  ]
+}

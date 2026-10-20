@@ -1,0 +1,25 @@
+{
+  "failed_jobs": [
+    118508244178,
+    118508244445
+  ],
+  "failed_units": [
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 43
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 29
+    }
+  ],
+  "failure_step": "Atomically claim unit before setup or scientific work",
+  "error": "git push HEAD:main exit 1 after bounded retries while 17 claims contend for main",
+  "actual_failure_detail_limit": "helper captures Git stderr; final exception does not include the remote message; other 15 claims succeeded and failed units have no published claim",
+  "scientific_compute_step": "skipped in both jobs",
+  "api_model_admission_step": "skipped in both jobs",
+  "both_unit_claims_absent_on_latest_main": true,
+  "safe_relaunch": "fresh request selecting only these two; new run/attempt; no retry_of because neither failed claim was published",
+  "healthy_15_jobs_left_running": true,
+  "scientific_source_unchanged": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}

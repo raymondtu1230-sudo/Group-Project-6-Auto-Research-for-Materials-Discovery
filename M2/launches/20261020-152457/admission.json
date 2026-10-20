@@ -1,0 +1,168 @@
+{
+  "completed_excluded": 19,
+  "missing_submitted": 17,
+  "validated_direct_source": true,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "published_sha": "44447594666b4108ea94fb98d3511e3a7023bdcb",
+  "manifest_sha256": "11c6e0dfd27c7c57d1b51d31cdd588be6475e0c804d4069e5e88d8522f4f2fee",
+  "matrix": {
+    "include": [
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Au-K-Tb",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Au-K-Tb",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Au-K-Tb",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Dy-W",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Dy-W",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Dy-W",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Mg-Na",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Mg-Na",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Co-Mg-Na",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Ga-Pt-Tm",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Ga-Pt-Tm",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Ga-Pt-Tm",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Hf-Ni-Zr",
+        "seed": 17,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Hf-Ni-Zr",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Hf-Ni-Zr",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Mg-Sn-Sr",
+        "seed": 29,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      },
+      {
+        "method": "chemeleon_generative_baseline",
+        "split": "dev",
+        "system": "Mg-Sn-Sr",
+        "seed": 43,
+        "B": 20,
+        "status": "missing",
+        "source": null
+      }
+    ]
+  },
+  "formal_results_accepted_at_launch": 0,
+  "total_completed_at_launch": 19,
+  "user_authorization": "2026-10-20 15:24:57 Asia/Singapore: direct instruction to start parallel GitHub cloud experiments"
+}
