@@ -45,6 +45,40 @@ COMPARISONS = (
 )
 REPLAN = re.compile(r"M3 re-plan: .*reason=(\w+)")
 REVIEW = re.compile(r"M3 review: ")
+# MADE names a run's checkpoint folder after the second the run starts
+# (checkpoints/<YYYYmmdd_HHMMSS>/...). Runs that share a name write the same
+# checkpoint file, and a run that finds a checkpoint resumes from it.
+CHECKPOINT_NAME = re.compile(r"checkpoints[\\/](\d{8}_\d{6})")
+RESUMED = re.compile(r"Resuming episode|Loaded checkpoint from")
+
+
+def console_log(attempt: Path) -> Path:
+    return attempt.parent / f"console_{attempt.name}.log"
+
+
+def checkpoint_name(attempt: Path) -> str | None:
+    log = console_log(attempt)
+    if not log.is_file():
+        return None
+    match = CHECKPOINT_NAME.search(log.read_text(errors="ignore"))
+    return match.group(1) if match else None
+
+
+def run_problem(attempt: Path, results: Path) -> str | None:
+    """Why a completed run cannot be used, or None if it is clean."""
+    log = console_log(attempt)
+    if log.is_file() and RESUMED.search(log.read_text(errors="ignore")):
+        return "resumed from a checkpoint"
+    name = checkpoint_name(attempt)
+    if name is None:
+        return None
+    for other_log in results.glob("*/dev/*/seed_*/console_attempt_*.log"):
+        other = other_log.parent / other_log.stem.removeprefix("console_")
+        if other.resolve() != attempt.resolve() and checkpoint_name(other) == name:
+            return f"shared checkpoint folder {name} with {other.relative_to(results)}"
+    return None
+
+
 RUN_FIELDS = [
     "method",
     "system",
@@ -66,6 +100,8 @@ def latest_completed(method_dir: Path) -> dict[tuple[str, int], Path]:
         if json.loads(metadata.read_text()).get("status") != "completed":
             continue
         attempt = metadata.parent
+        if run_problem(attempt, method_dir.parent):
+            continue
         system = attempt.parent.parent.name
         seed = int(attempt.parent.name.removeprefix("seed_"))
         runs[(system, seed)] = attempt  # sorted, so the latest attempt wins

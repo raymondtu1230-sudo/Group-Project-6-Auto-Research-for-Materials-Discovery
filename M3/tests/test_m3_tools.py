@@ -267,3 +267,31 @@ def test_runner_orders_paired_sets_together_and_fixes_threads() -> None:
     env = run_ablations.run_env("m3_full", "A-B-C", 17, 1, threads=4)
     assert env["OMP_NUM_THREADS"] == env["MKL_NUM_THREADS"] == "4"
     assert env["PYTHONUNBUFFERED"] == "1"
+
+
+def test_runs_sharing_a_checkpoint_folder_or_resuming_are_invalid(
+    tmp_path: Path,
+) -> None:
+    a = make_run(tmp_path, "m1_baseline", "Mg-Sn-Sr", 17, 5)
+    b = make_run(tmp_path, "m3_full", "Mg-Sn-Sr", 17, 6)
+    c = make_run(tmp_path, "m3_full", "Mg-Sn-Sr", 29, 6)
+    for attempt, name in (
+        (a, "20261020_154717"),
+        (b, "20261020_154717"),
+        (c, "20261020_160000"),
+    ):
+        log = run_ablations.console_log(attempt)
+        log.write_text(
+            log.read_text() + rf"Saved checkpoint to checkpoints\{name}\episode_000"
+            "\n"
+        )
+    assert "shared checkpoint folder" in summ.run_problem(a, tmp_path)
+    assert "shared checkpoint folder" in summ.run_problem(b, tmp_path)
+    assert summ.run_problem(c, tmp_path) is None
+    # Excluded from the summary, so the pair is not used.
+    rows = summ.collect(tmp_path, tmp_path / "none.csv")
+    assert [(r["method"], r["seed"]) for r in rows] == [("m3_full", 29)]
+
+    log = run_ablations.console_log(c)
+    log.write_text(log.read_text() + "Resuming episode 0 from checkpoint\n")
+    assert summ.run_problem(c, tmp_path) == "resumed from a checkpoint"

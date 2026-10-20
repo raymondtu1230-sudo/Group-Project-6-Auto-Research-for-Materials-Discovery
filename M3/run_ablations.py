@@ -34,6 +34,8 @@ from pathlib import Path
 
 import yaml
 
+from summarize_ablations import run_problem
+
 M3_DIR = Path(__file__).resolve().parent
 M1_DIR = M3_DIR.parent / "M1"
 MADE_DIR = M1_DIR / "MADE"
@@ -44,6 +46,9 @@ BASELINE = "m1_baseline"
 AGENT_CONFIG = MADE_DIR / "configs" / "agent" / "m1_integrated.yaml"
 M4_INSTALL = "uv pip install --no-deps -e ../../M4"
 KEY_NAME = "MATERIALS_PROJECT_API_KEY"
+# MADE names each run's checkpoint folder after its start second; runs started
+# in the same second would share (and could resume from) one checkpoint file.
+LAUNCH_GAP_SECONDS = 30
 
 
 def dev_systems() -> list[str]:
@@ -69,10 +74,13 @@ def console_log(attempt_dir: Path) -> Path:
 
 
 def is_completed(path: Path) -> bool:
+    """Completed and clean (no checkpoint resume, no shared checkpoint folder)."""
     metadata = path / "run_metadata.json"
     if not metadata.is_file():
         return False
-    return json.loads(metadata.read_text()).get("status") == "completed"
+    if json.loads(metadata.read_text()).get("status") != "completed":
+        return False
+    return run_problem(path, RESULTS) is None
 
 
 def next_attempt(method: str, system: str, seed: int) -> int:
@@ -202,9 +210,15 @@ def main() -> None:
     print(f"jobs={jobs} threads_per_run={threads or 'default'}", flush=True)
     failures: list[tuple[str, str, int, int]] = []
     lock = threading.Lock()
+    launch_lock = threading.Lock()
+    last_launch = [0.0]
 
     def run_one(index: int, method: str, system: str, seed: int) -> None:
-        with lock:  # attempt numbers and folders are claimed one run at a time
+        with launch_lock:  # stagger starts so checkpoint folder names never clash
+            wait = last_launch[0] + LAUNCH_GAP_SECONDS - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+            last_launch[0] = time.monotonic()
             attempt = next_attempt(method, system, seed)
             log_path = console_log(
                 run_dir(method, system, seed) / f"attempt_{attempt:02d}"
@@ -245,7 +259,17 @@ def main() -> None:
                     print(f"    {method} {system} {seed}: {line.rstrip()[-140:]}")
         returncode = process.wait()
         elapsed = time.monotonic() - started
-        status = "ok" if returncode == 0 else f"FAILED ({returncode}, see {log_path})"
+        attempt_dir = run_dir(method, system, seed) / f"attempt_{attempt:02d}"
+        problem = run_problem(attempt_dir, RESULTS) if returncode == 0 else None
+        if problem:
+            returncode = -1  # completed but unusable; rerun under a new attempt
+        status = (
+            "ok"
+            if returncode == 0
+            else f"INVALID ({problem})"
+            if problem
+            else f"FAILED ({returncode}, see {log_path})"
+        )
         with lock:
             print(
                 f"[{index}/{len(todo)}] {status}: {method} {system} seed {seed}"
