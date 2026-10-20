@@ -1,9 +1,11 @@
 """Summarize M3 ablation runs into CSV tables and the results section draft.
 
 Reads completed protocol runs under ``M1/MADE/results/protocol_v1`` for
-``m1_baseline`` and the three ``m3_*`` methods. When M1's baseline result
-folders are not on this machine, ``M1/m1_baseline_dev_summary.csv`` supplies
-the baseline mSUN and AUDC values.
+``m1_baseline`` and the three ``m3_*`` methods. Paired comparisons use only
+``m1_baseline`` runs made under the same configuration as the M3 runs (re-run by
+``run_ablations.py``). M1's recorded reference (``M1/m1_baseline_dev_summary.csv``,
+19 Oct, before M4's memory manager became the default) is listed separately as
+``m1_baseline_recorded`` and never paired.
 
 Writes ``M3/results/m3_ablation_runs.csv``, ``M3/results/m3_ablation_summary.csv``
 and ``M3/report/M3_RESULTS.md``. Uses only the Python standard library::
@@ -25,6 +27,9 @@ M1_DIR = M3_DIR.parent / "M1"
 RESULTS = M1_DIR / "MADE" / "results" / "protocol_v1"
 BASELINE_CSV = M1_DIR / "m1_baseline_dev_summary.csv"
 METHODS = ("m1_baseline", "m3_full", "m3_planning_off", "m3_self_correction_off")
+RECORDED = "m1_baseline_recorded"
+BASELINES = ("m1_baseline", RECORDED)
+TABLE_METHODS = (RECORDED, *METHODS)
 METRICS = {
     "msun": "final/novelty_stable_unique_novel_count",
     "msun_fraction": "final/novelty_stable_unique_novel_fraction",
@@ -101,7 +106,7 @@ def baseline_from_csv(csv_path: Path) -> list[dict[str, Any]]:
         for record in csv.DictReader(stream):
             rows.append(
                 {
-                    "method": "m1_baseline",
+                    "method": RECORDED,
                     "system": record["system"],
                     "seed": int(record["seed"]),
                     "msun": float(record["msun_at_20"]),
@@ -124,12 +129,7 @@ def collect(
     for method in METHODS:
         for (system, seed), path in sorted(latest_completed(results / method).items()):
             rows.append(read_run(method, system, seed, path))
-    have = {(r["system"], r["seed"]) for r in rows if r["method"] == "m1_baseline"}
-    rows.extend(
-        r
-        for r in baseline_from_csv(baseline_csv)
-        if (r["system"], r["seed"]) not in have
-    )
+    rows.extend(baseline_from_csv(baseline_csv))
     return rows
 
 
@@ -139,7 +139,7 @@ def _values(rows: list[dict[str, Any]], method: str, metric: str) -> list[float]
 
 def summarize(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     table = []
-    for method in METHODS:
+    for method in TABLE_METHODS:
         runs = [r for r in rows if r["method"] == method]
         if not runs:
             continue
@@ -152,7 +152,7 @@ def summarize(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
             )
         entry["replans_mean"] = (
             statistics.fmean(r.get("replans") or 0 for r in runs)
-            if method != "m1_baseline"
+            if method not in BASELINES
             else None
         )
         table.append(entry)
@@ -192,7 +192,7 @@ def render_markdown(rows: list[dict[str, Any]], table: list[dict[str, Any]]) -> 
         " edit the interpretation section by hand._",
         "",
     ]
-    m3_runs = [r for r in rows if r["method"] != "m1_baseline"]
+    m3_runs = [r for r in rows if r["method"] not in BASELINES]
     if not m3_runs:
         lines += [
             "**Status: no completed M3 ablation runs yet.** Run"
@@ -222,6 +222,14 @@ def render_markdown(rows: list[dict[str, Any]], table: list[dict[str, Any]]) -> 
             + " | ".join(cells)
             + f" | {_fmt(entry['replans_mean'], 1)} |"
         )
+    if any(r["method"] == RECORDED for r in rows):
+        lines += [
+            "",
+            f"`{RECORDED}` is M1's reference as recorded on 19 Oct"
+            " (`M1/m1_baseline_dev_summary.csv`). It ran before M4's memory manager"
+            " became the default memory in `m1_integrated.yaml`, so it is shown for"
+            " context only and is not used in the paired comparisons below.",
+        ]
     lines += [
         "",
         "## Paired comparisons (same system and seed)",
@@ -305,7 +313,7 @@ def write_outputs(rows: list[dict[str, Any]], out_dir: Path, report: Path) -> No
 def main() -> None:
     rows = collect()
     write_outputs(rows, M3_DIR / "results", M3_DIR / "report" / "M3_RESULTS.md")
-    counts = {m: sum(r["method"] == m for r in rows) for m in METHODS}
+    counts = {m: sum(r["method"] == m for r in rows) for m in TABLE_METHODS}
     print("Completed runs:", ", ".join(f"{m}={n}" for m, n in counts.items()))
     print(f"Wrote {M3_DIR / 'results'} and {M3_DIR / 'report' / 'M3_RESULTS.md'}")
 

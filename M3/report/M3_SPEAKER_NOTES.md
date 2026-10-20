@@ -30,12 +30,13 @@ followed a re-plan.
 
 ## Slide 3: Two ablations against M1's reference (~35 s)
 
-We measure M3 against M1's reference agent. It has already run on all six
-development systems and three seeds, and found 5 stable, unique, novel
-structures per run on average, with a wide spread. M3 adds three
-configurations on exactly the same systems, seeds, budget and oracle: full
-M3, M3 with planning off, and M3 with self-correction off. Each is paired with
-the reference by system and seed. The difference between full M3 and each
-ablation isolates what planning and self-correction contribute. Those 54 runs
-happen on the 26th and 27th. This slide will then show the paired differences
+We measure M3 against M1's reference agent. In its first runs on all six
+development systems and three seeds, it found 5 stable, unique, novel
+structures per run on average, with a wide spread. Since then the team added
+M4's memory, so I re-run the reference under the same setup as M3. M3 adds
+three configurations on exactly the same systems, seeds, budget and oracle:
+full M3, M3 with planning off, and M3 with self-correction off. Each is paired
+with the re-run reference by system and seed. The difference between full M3
+and each ablation isolates what planning and self-correction contribute. Those
+runs happen on the 26th and 27th. This slide will then show the paired differences
 and one or two traced re-plan cases. No result is claimed yet.

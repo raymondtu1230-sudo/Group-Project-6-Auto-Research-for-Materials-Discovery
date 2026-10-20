@@ -91,7 +91,8 @@ def test_summarizer_pairs_runs_and_counts_replans(tmp_path: Path) -> None:
     assert methods == list(summ.METHODS)
 
 
-def test_summarizer_uses_m1_baseline_csv_when_folders_absent(tmp_path: Path) -> None:
+def test_summarizer_lists_recorded_baseline_but_never_pairs_it(tmp_path: Path) -> None:
+    # M1's 19 Oct CSV predates M4 memory in m1_integrated.yaml: context only.
     baseline = tmp_path / "baseline.csv"
     baseline.write_text(
         "system,seed,queries,msun_at_20,msun_fraction,audc,wall_time_seconds,"
@@ -99,7 +100,34 @@ def test_summarizer_uses_m1_baseline_csv_when_folders_absent(tmp_path: Path) -> 
     )
     make_run(tmp_path / "results", "m3_full", "Mg-Sn-Sr", 17, 9)
     rows = summ.collect(tmp_path / "results", baseline)
-    assert summ.paired(rows, "m3_full", "m1_baseline")["mean_diff"] == 2.0
+    assert [r["method"] for r in rows].count(summ.RECORDED) == 1
+    assert summ.paired(rows, "m3_full", "m1_baseline") is None
+    text = summ.render_markdown(rows, summ.summarize(rows))
+    assert "context only" in text
+
+    make_run(tmp_path / "results", "m1_baseline", "Mg-Sn-Sr", 17, 6)
+    rows = summ.collect(tmp_path / "results", baseline)
+    assert summ.paired(rows, "m3_full", "m1_baseline")["mean_diff"] == 3.0
+
+
+def test_runner_gives_each_run_its_own_m4_run_id() -> None:
+    env = run_ablations.run_env("m3_full", "Mg-Sn-Sr", 17, 2)
+    assert env["M4_RUN_ID"] == "m3_full-Mg-Sn-Sr-seed17-attempt02"
+    assert env["M4_EPISODE_ID"] == "0"
+    other = run_ablations.run_env("m1_baseline", "Mg-Sn-Sr", 17, 2)
+    assert other["M4_RUN_ID"] != env["M4_RUN_ID"]
+
+
+def test_runner_requires_m4_only_when_config_uses_it(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    config = tmp_path / "m1_integrated.yaml"
+    monkeypatch.setattr(run_ablations, "AGENT_CONFIG", config)
+    monkeypatch.setattr(run_ablations.importlib.util, "find_spec", lambda name: None)
+    config.write_text("memory_manager: null\n")
+    assert run_ablations.m4_missing() is False
+    config.write_text("memory_manager:\n  _target_: m4_memory.m1_adapter.X\n")
+    assert run_ablations.m4_missing() is True
 
 
 def test_summarizer_reports_pending_without_runs(tmp_path: Path) -> None:
@@ -149,6 +177,38 @@ def test_installed_m1_copies_match_integration() -> None:
     if not (install.REPO / install.NEW_FILES[0]).is_file():
         pytest.skip("M3 not installed in M1 (main branch); run M3/install.py --install")
     assert install.mismatches() == []
+
+
+def test_m3_markers_are_in_the_integration_templates() -> None:
+    for relative in install.EDITED_FILES:
+        assert install.has_m3_edit(install.SOURCE / relative, relative), relative
+
+
+def test_installer_accepts_m1_merge_that_keeps_m3_edit(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    # M1 integrated M3, then merged M4/M5 settings into m1_integrated.yaml.
+    relative = "M1/MADE/configs/agent/m1_integrated.yaml"
+    template = (install.SOURCE / relative).read_text(encoding="utf-8")
+    merged = template.replace(
+        "exploration_policy: null", "exploration_policy:\n  _target_: m5.Policy"
+    )
+    assert merged != template
+    repo = tmp_path / "repo"
+    (repo / relative).parent.mkdir(parents=True)
+    (repo / relative).write_text(merged, encoding="utf-8")
+    monkeypatch.setattr(install, "REPO", repo)
+
+    assert install.status(relative) == "merged"
+    assert relative not in install.conflicts()
+
+    # Dropping M3's wiring is a real conflict.
+    (repo / relative).write_text(
+        merged.replace("  - self_correction_policy: m3_stuck_replan\n", ""),
+        encoding="utf-8",
+    )
+    assert install.status(relative) == "changed by M1"
+    assert relative in install.conflicts()
 
 
 def test_installer_replaces_unchanged_m1_files_and_refuses_changed_ones(

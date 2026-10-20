@@ -7,13 +7,15 @@ until this installer is run.
 - New M3 files (module, configs, tests) are copied in.
 - M1-owned files that M3 edits (``m1_integrated.yaml``, ``run_experiment.py``,
   M1's protocol test and protocol doc) are replaced only if they are still
-  the version M3 was prepared against (M1 revision ``fcaaccc``). If M1 has
-  changed one since, the installer stops and names it so the edit can be
-  merged by hand.
+  the version M3 was prepared against (M1 revision ``fcaaccc``). Once M1 has
+  integrated M3, M1 owns these files and may merge other members' settings
+  into them. A file counts as "merged" when it still contains every M3 edit
+  (``M3_MARKERS``), and the installer leaves it alone. Any other change stops
+  the installer, which names the file so the edit can be merged by hand.
 
 From the repository root or anywhere::
 
-    python M3/install.py            # check whether M1 matches M3/integration
+    python M3/install.py            # check whether M3 is in M1
     python M3/install.py --install  # install
 """
 
@@ -43,6 +45,28 @@ EDITED_FILES = {
     "M1/EXPERIMENT_PROTOCOL.md": "ebfa91c190379aba50aacc683b3510eb427bfdd31bc8e72273b8d2c8386ee026",
 }
 FILES = (*NEW_FILES, *EDITED_FILES)
+# Lines that carry M3's edit in each M1-owned file. M1 may add its own settings
+# around them (e.g. M4's memory manager, M5's exploration policy).
+M3_MARKERS = {
+    "M1/MADE/configs/agent/m1_integrated.yaml": (
+        "- planner: diversity",
+        "- self_correction_policy: m3_stuck_replan",
+    ),
+    "M1/run_experiment.py": (
+        'M3_METHODS = ("m3_full", "m3_planning_off", "m3_self_correction_off")',
+        'overrides.append("agent/planner=m3_research")',
+        "overrides.extend(m1_agent_overrides(args.method))",
+    ),
+    "M1/tests/test_protocol.py": (
+        "def test_m3_methods_run_against_m1_baseline_without_other_plugins",
+        "def test_plugin_complete_methods_keep_all_switches_and_use_m3_planner",
+    ),
+    "M1/EXPERIMENT_PROTOCOL.md": (
+        "| M3 full (`m3_full`) |",
+        "| M3 planning ablation (`m3_planning_off`) |",
+        "| M3 self-correction ablation (`m3_self_correction_off`) |",
+    ),
+}
 
 
 def _text_hash(path: Path) -> str | None:
@@ -57,17 +81,35 @@ def _same(a: Path, b: Path) -> bool:
     return _text_hash(a) is not None and _text_hash(a) == _text_hash(b)
 
 
+def has_m3_edit(path: Path, relative: str) -> bool:
+    if not path.is_file():
+        return False
+    text = path.read_text(encoding="utf-8")
+    return all(marker in text for marker in M3_MARKERS[relative])
+
+
+def status(relative: str) -> str:
+    """ok | merged | not installed | changed by M1 | missing."""
+    target = REPO / relative
+    if _same(SOURCE / relative, target):
+        return "ok"
+    if relative in EDITED_FILES:
+        if has_m3_edit(target, relative):
+            return "merged"
+        if _text_hash(target) == EDITED_FILES[relative]:
+            return "not installed"
+        return "changed by M1" if target.is_file() else "missing"
+    return "not installed"
+
+
 def mismatches() -> list[str]:
-    return [f for f in FILES if not _same(SOURCE / f, REPO / f)]
+    """Files where M3 is not (fully) present in M1."""
+    return [f for f in FILES if status(f) not in ("ok", "merged")]
 
 
 def conflicts() -> list[str]:
-    """M1-owned files changed by M1 since M3's edit was prepared."""
-    return [
-        f
-        for f, base in EDITED_FILES.items()
-        if not _same(SOURCE / f, REPO / f) and _text_hash(REPO / f) != base
-    ]
+    """M1-owned files changed by M1 without M3's edit; merge by hand."""
+    return [f for f in EDITED_FILES if status(f) in ("changed by M1", "missing")]
 
 
 def main() -> None:
@@ -86,13 +128,15 @@ def main() -> None:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(SOURCE / relative, target)
             print(f"installed {relative}")
-        print("M1 now matches M3/integration")
+        print("M3 is installed in M1")
         return
-    bad = mismatches()
     for relative in FILES:
-        print(f"{'differs' if relative in bad else 'ok     '}  {relative}")
-    if bad:
+        print(f"{status(relative):<14} {relative}")
+    if conflicts():
+        sys.exit("M1 files changed without M3's edit; merge from M3/integration")
+    if mismatches():
         sys.exit("M3 is not installed in M1; run: python M3/install.py --install")
+    print("M3 is installed in M1 ('merged' = M1's file with M3's edit kept)")
 
 
 if __name__ == "__main__":

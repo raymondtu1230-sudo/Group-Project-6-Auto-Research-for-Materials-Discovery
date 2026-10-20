@@ -4,8 +4,13 @@ Each (method, system, seed) is one official one-episode invocation. Completed
 runs are skipped, and a failed run is retried under the next attempt number so
 the failure stays on disk, as the protocol requires.
 
+``m1_baseline`` is re-run by default. M1's recorded baseline runs predate M4's
+memory manager becoming the default in ``m1_integrated.yaml``, so a fair paired
+comparison needs a baseline run under the same configuration as the M3 runs.
+Each run gets its own ``M4_RUN_ID``, as M4's adoption notes require.
+
 Run from ``M1/MADE`` after putting ``MATERIALS_PROJECT_API_KEY`` in
-``M1/MADE/.env``::
+``M1/MADE/.env`` and installing M4 (``uv pip install --no-deps -e ../../M4``)::
 
     uv run python ../../M3/run_ablations.py --dry-run
     uv run python ../../M3/run_ablations.py
@@ -14,6 +19,7 @@ Run from ``M1/MADE`` after putting ``MATERIALS_PROJECT_API_KEY`` in
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import os
 import subprocess
@@ -29,6 +35,9 @@ MADE_DIR = M1_DIR / "MADE"
 RESULTS = MADE_DIR / "results" / "protocol_v1"
 PROTOCOL = yaml.safe_load((M1_DIR / "protocol" / "protocol_v1.yaml").read_text())
 M3_METHODS = ("m3_full", "m3_planning_off", "m3_self_correction_off")
+BASELINE = "m1_baseline"
+AGENT_CONFIG = MADE_DIR / "configs" / "agent" / "m1_integrated.yaml"
+M4_INSTALL = "uv pip install --no-deps -e ../../M4"
 KEY_NAME = "MATERIALS_PROJECT_API_KEY"
 
 
@@ -82,6 +91,20 @@ def has_api_key() -> bool:
     return False
 
 
+def m4_missing() -> bool:
+    """True if the agent config uses M4's memory manager but M4 is not installed."""
+    uses_m4 = "m4_memory" in AGENT_CONFIG.read_text(encoding="utf-8")
+    return uses_m4 and importlib.util.find_spec("m4_memory") is None
+
+
+def run_env(method: str, system: str, seed: int, attempt: int) -> dict[str, str]:
+    # M4 asks for a unique run ID per experiment attempt; one episode per run.
+    env = dict(os.environ)
+    env["M4_RUN_ID"] = f"{method}-{system}-seed{seed}-attempt{attempt:02d}"
+    env["M4_EPISODE_ID"] = "0"
+    return env
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--methods", nargs="+", default=list(M3_METHODS))
@@ -90,9 +113,9 @@ def parse_args() -> argparse.Namespace:
         "--seeds", nargs="+", type=int, default=PROTOCOL["repeats"]["seeds"]
     )
     parser.add_argument(
-        "--with-baseline",
+        "--no-baseline",
         action="store_true",
-        help="also run m1_baseline for any system/seed without a completed run",
+        help="skip re-running m1_baseline under the current configuration",
     )
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
@@ -102,7 +125,9 @@ def main() -> None:
     args = parse_args()
     if Path.cwd().resolve() != MADE_DIR:
         raise SystemExit(f"Run from {MADE_DIR}")
-    methods = (["m1_baseline"] if args.with_baseline else []) + list(args.methods)
+    methods = ([] if args.no_baseline else [BASELINE]) + [
+        m for m in args.methods if m != BASELINE
+    ]
     todo = [
         (method, system, seed)
         for method in methods
@@ -119,6 +144,11 @@ def main() -> None:
     if todo and not has_api_key():
         raise SystemExit(
             f"Set {KEY_NAME} in {MADE_DIR / '.env'} (copy .env.example) first"
+        )
+    if todo and m4_missing():
+        raise SystemExit(
+            "m1_integrated.yaml uses M4's memory manager; install M4 first:\n"
+            f"  {M4_INSTALL}"
         )
 
     failures = []
@@ -146,6 +176,7 @@ def main() -> None:
                 "--attempt",
                 str(attempt),
             ],
+            env=run_env(method, system, seed, attempt),
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,

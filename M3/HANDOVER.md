@@ -4,57 +4,65 @@
 
 M3 delivers the research planner and the stuck-detection/re-planning policy.
 They plug into M1's existing `planner` and `self_correction_policy` slots.
-Like `M2/` and `M4/`, only `M3/` is published on `main`, and M1's files are
-unchanged. `M3/integration/` holds everything M3 adds to or changes in M1.
-`python M3/install.py --install` puts it into M1: the module is wired into
-`m1_integrated.yaml`, and `M1/run_experiment.py` gains the M3 protocol methods.
+`M3/integration/` holds everything M3 adds to or changes in M1. M1 integrated
+it on `main` on 20 Oct (`2fcc214`). `python M3/install.py` checks that M3 is
+still in place.
 
 ## Deliverables
 
 | Recipient | Deliverable | Due (Oct 2026) | Status |
 | --- | --- | --- | --- |
-| M1 | One-page design and slot interface (`DESIGN.md`) | 19–20 | Ready; needs M1 sign-off |
-| M1 | Code, Hydra configs, tests (`M3/integration/`, installed with `M3/install.py`) | 24 | On `main`; M1 decides when to install |
-| M6 | Method text (`report/M3_METHOD.md`) and draft slides (`report/M3_Method_Draft.pptx`) | 24 | Ready to send |
-| M2 | Ablation results (`results/*.csv`, `report/M3_RESULTS.md`) | 27 | Waiting on Materials Project runs |
-| M6 | Results text and final slides | 27 | Generated once runs finish; interpretation by hand |
+| M1 | One-page design and slot interface (`DESIGN.md`) | 19–20 | Signed off by M1 (20 Oct) |
+| M1 | Code, Hydra configs, tests (`M3/integration/`) | 24 | Integrated by M1 (20 Oct, `2fcc214`) |
+| M6 | Method text (`report/M3_METHOD.md`) and draft slides (`report/M3_Method_Draft.pptx`) | 24 | Received by M6 (20 Oct) |
+| M2, M6 | Ablation CSVs (`results/*.csv`) and results text (`report/M3_RESULTS.md`) | 27 | Requested by M6; runs scheduled 26–27 Oct |
+| M6 | Final slides | 27 | After the runs |
 
 ## Notes for teammates
 
 - **M1:**
-  - `install.py` replaces your four edited files only if they are unchanged
-    since `fcaaccc`. Otherwise it stops and names the file to merge by hand.
-  - The default planner is still `diversity`, so the 18 `m1_baseline` runs stay
-    valid.
-  - `run_experiment.py` adds `agent/planner=m3_research` to every plug-in
-    method, and adds the `m3_full`, `m3_planning_off` and
-    `m3_self_correction_off` methods.
-- **M4:** the M3 planner actually reads `context["m1_memory"]` in its review.
-  This is the planner consumption M4's notes list as pending. M4's memory
-  ablation becomes meaningful when run with the M3 planner. A test that uses
-  the real `M4MemoryManager` shows memory reaching the decision when on and
-  absent when off.
+  - Your integrated `m1_integrated.yaml` merges M4's memory manager and M5's
+    exploration policy with M3's lines. `install.py` now reports this as
+    `merged` (M3's edit kept) instead of a mismatch. This was a too-strict check
+    on M3's side, now fixed.
+  - The default planner is still `diversity`. `run_experiment.py` adds
+    `agent/planner=m3_research` to every plug-in method, plus the `m3_full`,
+    `m3_planning_off` and `m3_self_correction_off` methods.
+- **M6:**
+  - The M3 results compare `m3_full` with an `m1_baseline` re-run under the
+    current configuration, with M4 memory on in both. M1's 19 Oct baseline
+    predates M4 memory, so it is listed for context only and never paired.
+  - Per `PROTOCOL_ADOPTION.md` §5, these go in the "component vs M1
+    reference" table, not the frozen agent's ablation table.
+- **M4:** the M3 planner reads `context["m1_memory"]` in its review, which is
+  the planner consumption the memory ablation needs. Every M3 run sets its own
+  `M4_RUN_ID`, as `M4/integration/ADOPTION.md` requires.
 - **M5:** exploration runs after M3's self-correction and receives its revised
-  plan. No conflicts are expected; both are capped by M1.
-- **M2:** M2's `m2/tool-routing-evaluation` branch edits `m1_integrated.yaml`
-  in different lines from M3; the two test-merged cleanly.
+  plan. M3's ablation methods keep exploration off.
+- **M2:** M3's ablations keep tool routing off and use the default generator.
 
-## Validation done (19 Oct, Windows, CPU)
+## Validation
 
 All commands are run from `M1/MADE`; see `test_results.txt`.
 
-- M1 and M3 tests: 37 passed, 2 skipped. With M4 on the path, the M3 tests
-  pass 22/22.
-- M1 protocol tests (including the new M3 methods): 7 passed. M3 tool tests:
-  7 passed.
-- Ruff lint and format pass.
+**On 20 Oct, against `main` with M1's integration (`bc97609`):**
+
+- `install.py` reports seven files `ok` and `m1_integrated.yaml` as `merged`.
+- M1, M3, M4 and M5 tests (with M4 on the path): 54 passed.
+- M1 protocol tests: 7 passed.
+- M3 tool tests: 12 passed.
+- Ruff passes.
+- The demo runs.
+
+**On 19 Oct:**
+
 - Smoke episodes pass: M1's standard one, and an M3 run with planner plus
-  self-correction (see `evidence/synthetic-smoke/`).
-- The synthetic demo shows reviews and re-plans firing (see
-  `evidence/synthetic-demo/`).
+  self-correction (`evidence/synthetic-smoke/`).
+- The synthetic demo shows reviews and re-plans (`evidence/synthetic-demo/`).
 
 ## Not yet done
 
-- No official Materials Project / ORB runs of the `m3_*` methods. These need a
-  Materials Project API key in `M1/MADE/.env`; follow `EXPERIMENT_RUNBOOK.md`.
+- No official Materials Project / ORB runs yet: 72 runs (re-run baseline plus
+  three M3 methods). They need a Materials Project key in `M1/MADE/.env` and M4
+  installed; follow `EXPERIMENT_RUNBOOK.md`.
 - There is no performance claim until those runs exist.

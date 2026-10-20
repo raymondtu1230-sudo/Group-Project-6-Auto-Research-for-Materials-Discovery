@@ -40,10 +40,13 @@ uses a language model, so planning adds no API cost.
 
 ## Evaluation design
 
-M3 is measured against M1's reference agent (`m1_baseline`: diversity planner
-and bounded memory). The comparison uses the six protocol development systems,
-seeds 17, 29 and 43, a 20-query budget and the ORB v3 oracle. Three
-configurations isolate M3's parts:
+M3 is measured against M1's reference agent (`m1_baseline`: diversity planner,
+memory on, reflection off). The reference is re-run under the same integrated
+configuration as the M3 runs, including M4's memory manager. M1's earlier
+reference runs predate that memory configuration and are reported for context
+only. All runs use the six protocol development systems, seeds 17, 29 and 43,
+a 20-query budget and the ORB v3 oracle. Three configurations isolate M3's
+parts:
 
 - `m3_full`: planner and self-correction both on.
 - `m3_planning_off`: planning off.
@@ -52,4 +55,6 @@ configurations isolate M3's parts:
 The primary metric is the official mSUN count. AUDC, acceleration factor and
 enhancement factor are reported alongside it. Comparisons are paired by system
 and seed. Self-correction events are logged, so discoveries can be linked to
-the re-plans that preceded them. Results are in `M3_RESULTS.md`.
+the re-plans that preceded them. Following the team protocol, these results
+are a component-versus-reference comparison, kept separate from the frozen
+agent's component ablations. Results are in `M3_RESULTS.md`.
