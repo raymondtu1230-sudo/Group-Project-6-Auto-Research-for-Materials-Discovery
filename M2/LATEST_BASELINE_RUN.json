@@ -1,0 +1,10 @@
+{
+  "run_id": 39432570527,
+  "scientific_source": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "validated_runs": 36,
+  "missing_baseline_units": [],
+  "issues": [],
+  "baseline_sweep_complete": true,
+  "report": "M2/verification/direct-39432570527-1/final-report",
+  "scope": "dev baselines only; M1 reference and M6 check/hidden are separate"
+}
