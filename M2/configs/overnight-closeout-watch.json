@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-20T14:14:28.879115+00:00",
+  "automation_id": "6ad7774433e881919ce91698eb34b089",
+  "title": "M2 实验与阶段收尾",
+  "is_enabled_at_creation": true,
+  "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Singapore:20261020T231427\nRRULE:FREQ=HOURLY;COUNT=10\nEND:VEVENT",
+  "timezone": "Asia/Singapore",
+  "run_id": 39432570527,
+  "attempt": 3943257052701,
+  "units": [
+    {
+      "system": "Au-K-Tb",
+      "seed": 17
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 43
+    }
+  ],
+  "main_allowed_path_prefix": "M2/",
+  "check_mode": "Hourly bounded condition watch; immediate raw publication remains in GitHub workflow.",
+  "runbook": "M2/OVERNIGHT_FINAL_CLOSEOUT.md",
+  "stop_conditions": [
+    "Current-stage data, documentation and own draft deck closeout committed and read back",
+    "A documented external blocker remains after independent work is complete",
+    "Ten scheduled checks exhausted; never create replacement loops"
+  ],
+  "notify_on": "Substantive failure requiring attention or final closeout only",
+  "scientific_redispatch_authorized": false,
+  "final_result_not_yet_known": true
+}

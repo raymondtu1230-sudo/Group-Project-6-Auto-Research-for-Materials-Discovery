@@ -1,0 +1,79 @@
+{
+  "observed_at_utc": "2026-10-20T14:15:55.391091+00:00",
+  "base_main": "1443a597661a28c3407f34cf50f8164c5b99511b",
+  "science_source": "63077ea3ea612197a5ad0e71fbe015d80149ca37",
+  "purpose": "Bounded post-run audit and M2-only current-stage closeout; no new scientific workload.",
+  "files_read": [
+    {
+      "name": "Project6_Task_Split(2)(6).pdf",
+      "sha256": "9f8ec489a1dc295031968220940fc60726b3a19609e6f2b937f0b0c48aa9fe0f",
+      "bytes": 6753
+    },
+    {
+      "name": "Project6_Step_by_Step_Guide(6).pdf",
+      "sha256": "35216c8fcd7b85bd0f88368fffd1a423ad0e77590d109826f306b29f9d1641ad",
+      "bytes": 17595
+    },
+    {
+      "name": "08-PE6203-Group-Project-6-Auto-Research-for-Materials-Discovery.docx.pdf",
+      "sha256": "7693479c85a53b83b79d2328726021bdb3b8e2795cf05db39e3c7b3fc053ffd7",
+      "bytes": 140924
+    },
+    {
+      "name": "09-10-16-2026-Project-Presentations-and-Submission-Requirements.txt",
+      "sha256": "7c4ee825fef8a262106d0a45e17c9d5c5d97882e9a9132e694dffe2ae2386b99",
+      "bytes": 2129
+    },
+    {
+      "name": "截屏2026-10-19 下午1.30.22(8).png",
+      "sha256": "934619c67d2595451c605a44e054cf78f19e242870130be87ae069682b8c91f1",
+      "bytes": 644440
+    },
+    {
+      "name": "截屏2026-10-19 下午1.30.34(8).png",
+      "sha256": "78103ed2b982b695a652b68b056a8412441acd0abf2bea442eb74d55dbcd1595",
+      "bytes": 594067
+    },
+    {
+      "name": "截屏2026-10-19 下午1.30.42(8).png",
+      "sha256": "b9ae3d72eccf27d39ce8cecf33da7569f0cc190b59b8002ac70b10678b3ea138",
+      "bytes": 676021
+    },
+    {
+      "name": "截屏2026-10-19 下午1.30.48(7).png",
+      "sha256": "8845bb53d8dfe10f959185da83afea741305184064587c0aab4a42f7395a3662",
+      "bytes": 656564
+    }
+  ],
+  "screenshots": "All four original PNGs were successfully viewed; earlier attachment UI missing-path errors do not describe this execution.",
+  "requirements": {
+    "write_scope": "main/M2 only",
+    "handoff_code_to": "M1, by 24 Oct",
+    "handoff_method_and_own_slides_to": "M6, by 24 Oct",
+    "handoff_final_results_curves_cost_to": "M6, by 27 Oct",
+    "recipient_acceptance": "Not sent or confirmed; drafts only",
+    "future_dependencies": "M1 freeze/reference; M2 routing-off and member-results collection; M6 check/hidden and group report"
+  },
+  "helper_sha256": {
+    "M2/verify_stage_closeout.py": "f4ad2d89b20246c9a1a28316a2108d15ba946eae37ec425c2c938e1576c2a4b2",
+    "M2/tests/test_stage_closeout.py": "0dc7aac95df67e282e66a9871f7c1311b26bd5c432ca60d1db668f658020c919",
+    "M2/OVERNIGHT_FINAL_CLOSEOUT.md": "6ad823f252799875c26a3e93dc516e24e766dea1ce8e18be414952e82ee53c61"
+  },
+  "checks": [
+    {
+      "command": "python3 -m unittest M2.tests.test_stage_closeout -v",
+      "observed_result": "6 tests passed, no skips; synthetic report-shape tests, not materials experiments"
+    },
+    {
+      "command": "ruff check --config <existing fixed-source checkout>/M2/ruff.toml M2/verify_stage_closeout.py M2/tests/test_stage_closeout.py",
+      "observed_result": "All checks passed; initial default lookup lacked sparsely checked out M1/MADE/pyproject.toml; explicit existing official config resolved the tooling path, no scientific or M1 files edited"
+    },
+    {
+      "command": "python3 M2/verify_stage_closeout.py --report M2/verification/final-two-preparation-20261020/closeout-34 --output M2/verification/stage-closeout-20261020/preterminal-validation.json",
+      "observed_result": "Actual published 34-result report, original manifest and all cited ZIP SHA256/CRC pass; baseline_data_complete=false, terminal_audit=false"
+    }
+  ],
+  "cloud_checks": "Unchanged science/controller run39432570527 already passed its real API/model/environment admission. This new read-only audit helper was checked locally; it does not claim a new cloud science/integration CI.",
+  "current_deck": "Existing dated 19-result PPT is retained as historical. Final closeout must write a newly dated M2-only draft with actual final report, update notes/data/checksum, and visually verify it.",
+  "scope_protection": "No other members files, shared records, root workflows, branch merging or science redispatch."
+}

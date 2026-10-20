@@ -1,3 +1,5 @@
+> **2026-10-20 22:14 最新：用户已授权睡眠期间继续本次两项监控和阶段收尾。** 已启用有限次数的每小时复核；即时归档仍由GitHub工作流完成。所有收尾新增/修改严格限定main/M2，不改其他成员、共享记录或根目录工作流。见 [本次自动收尾要求](OVERNIGHT_FINAL_CLOSEOUT.md) 与 [两项启动记录](FINAL_TWO_RUN_STATUS.md)。当前已核验34/36；最终状态须等两项终止后按真实产物更新，不把定时任务启用算作科学完成。以下保留历史快照。
+
 > 2026-10-20 最新状态：已有 **34/36** 项基线，本轮官方离线重新评分34项，`issues=[]`。剩余Au-K-Tb/17、Co-Dy-W/43在原生恢复验证未通过后，按授权使用新attempt `3943257052701` 从头运行；两项均已通过本次真实API和模型检查，进入独立云端runner计算，尚未计为完成。总job 360分钟，按实际安装耗时动态预留5分30秒退出/保存窗口。见[最后两项启动及34项收尾记录](FINAL_TWO_RUN_STATUS.md)、[34项评分证据](verification/final-two-preparation-20261020/closeout-34/)和[本次云端运行](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/actions/runs/39432570527)。以下保留历史记录。
 
 > **2026-10-20 21:16 最新：dev基线完整覆盖34/36，Random18/18、Chemeleon16/18。** 本次固定源63077ea的17项中15项核验完成、2项timeout；全部已自动保存main/M2。独立重新取得36份归档，SHA256与CRC全部通过；34项均有完整B=20轨迹及连续查询曲线。见 [运行后保存核验](verification/postrun-20261020-2111/README.md)。Co-Dy-W/43保存1024候选及query=1检查点，尚未验证恢复；Au-K-Tb/17没有可恢复的生成检查点。未重跑成功项，未自动补跑两项。以下原记录按其历史版本保留，不代表当前计数。

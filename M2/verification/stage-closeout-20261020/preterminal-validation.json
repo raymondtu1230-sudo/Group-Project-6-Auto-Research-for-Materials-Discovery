@@ -1,0 +1,209 @@
+{
+  "verified_baseline_units": 34,
+  "expected_baseline_units": 36,
+  "by_method": {
+    "chemeleon_generative_baseline": 16,
+    "random_generator_baseline": 18
+  },
+  "missing_baseline_units": [
+    [
+      "chemeleon_generative_baseline",
+      "Au-K-Tb",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "Co-Dy-W",
+      43
+    ]
+  ],
+  "baseline_data_complete": false,
+  "observed_at_utc": "2026-10-20T14:11:41.003097+00:00",
+  "report": "M2/verification/final-two-preparation-20261020/closeout-34",
+  "report_sha256": {
+    "validation.json": "3c6049fc88d59f0c2be6aeba4e6c7133317c05585c42b8a4a9121447d801b9a4",
+    "per_run.csv": "bec70d0d6c9227b4af055a0e0788728d6a1d1ede390318e9f0142f76ddeec9d0",
+    "per_method_summary.csv": "64183d11402ada550b9f600ca36bcac6f784fa0087fb8ec94739774a30b2dbf6",
+    "per_system_summary.csv": "03cfe4407c786fef1dd11d07f16064124da0a16112b0d5ae1b2ea0f82c7b94b9",
+    "discovery_curves.svg": "abdb44df9f9532ff11327f9632c4feef4282cecfd570079766e0ecf2fc5c0237"
+  },
+  "original_19_manifest_sha256": "11c6e0dfd27c7c57d1b51d31cdd588be6475e0c804d4069e5e88d8522f4f2fee",
+  "archives": [
+    {
+      "path": "M2/verification/preserved-39293506143/12205518875-m2-missing-raw-Co-Mg-Na-43-39286848821.zip",
+      "sha256": "083f811035ec0b187c7f09350ef3a80cf3331cbadf830937342bbf8784528d19",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-17-39386589324-1/packaged/Co-Mg-Na-17-attempt-3938658932401.zip",
+      "sha256": "09e08bea5b9bac8ca3065847c2d22b3da993e4504c043b182d3599f4c782fb3d",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39306348134/12207981935-m2-missing-raw-Hf-Ni-Zr-29-39286848821.zip",
+      "sha256": "0ae5638fb2b65a193eda8050d2517e46e00332be0df78520bbcdb9d97d97f468",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39306348134/12207897397-m2-missing-raw-Mg-Sn-Sr-29-39286848821.zip",
+      "sha256": "179bbc857afc08dadb5f73cc31a6525ab288a9b4241a28bf7a6e5346476b268d",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/20261019-chemeleon-recovery/raw_artifact.zip",
+      "sha256": "17e1747473b60df105aca6de4f2f18449188122ac768e7747c1538b8cedb4c79",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Ga-Pt-Tm-17-39386589324-1/packaged/Ga-Pt-Tm-17-attempt-3938658932401.zip",
+      "sha256": "1efac9a6c73a124138775ed6198b2821521e776e53dc7b5cb327f0111623f95e",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39306348134/12206569802-m2-missing-raw-Ga-Pt-Tm-43-39286848821.zip",
+      "sha256": "2238873c20727c34c60fb8c61322f2696282e09b287f54620648524ff4bfdc25",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12204713320-m2-missing-raw-Au-K-Tb-29-39286848821.zip",
+      "sha256": "239417a8cba3f2fcd947632e8ec9c3383d36d463becb94723cf0c11052abd555",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Co-Dy-W-29-39386589324-1/packaged/Co-Dy-W-29-attempt-3938658932401.zip",
+      "sha256": "270e26a5024ab6d18866fdb2c7f8bbed73230052c011c6b00566224e0be27f31",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39306348134/12207600952-m2-missing-raw-Ga-Pt-Tm-29-39286848821.zip",
+      "sha256": "2d2a28dc9151d73e8ec7b92fa4d02ff0ce11d12de71fd204aeb617645f62f5a4",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205295837-m2-missing-raw-Au-K-Tb-43-39286848821.zip",
+      "sha256": "3287431bd96a5019ee1fda5c83cfa5395a4239f3dcd7fb36615c9322f594cdd1",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39387331614-1/m2-direct-Mg-Sn-Sr-29-39387331614-1/packaged/Mg-Sn-Sr-29-attempt-3938733161401.zip",
+      "sha256": "3816a99c7db763f4b9a4c2ed188ff701d6043580f62db38634b9c5c60d3e9f7f",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-43-39386589324-1/packaged/Co-Mg-Na-43-attempt-3938658932401.zip",
+      "sha256": "4d73f37498e6bcab864f0642fe21066ec02b5059c8f6addb4aeb1ec1019c9570",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39306348134/12210545012-m2-missing-raw-Mg-Sn-Sr-43-39286848821.zip",
+      "sha256": "4ec6bc831319b65b5b8ada52f4abac99060134ee99d408d334975713cd7e9ecc",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Au-K-Tb-43-39386589324-1/packaged/Au-K-Tb-43-attempt-3938658932401.zip",
+      "sha256": "5f3771ad4e7edb2ce5fb2ff337c942b86c0dedac4498d86d5dc2b58a9d2b98d7",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-17-39386589324-1/packaged/Hf-Ni-Zr-17-attempt-3938658932401.zip",
+      "sha256": "6100e404721fd9cb030fb041e103a202d76dde68613a7a2b292d278587ed6b22",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-29-39386589324-1/packaged/Co-Mg-Na-29-attempt-3938658932401.zip",
+      "sha256": "7af859c3593f28c1603f98899430d41a3bdaa97f0eb0f9cb1ed8fda103baf0eb",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205233016-m2-missing-raw-Co-Mg-Na-29-39286848821.zip",
+      "sha256": "81e3f883915f3969d34d6771af42ab650af4d5a1842ea7c1e7193cc61ed32aea",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-29-39386589324-1/packaged/Hf-Ni-Zr-29-attempt-3938658932401.zip",
+      "sha256": "83e19d8330efd12c1f56def02a6b957feb3f7f1c65a32b2222752285787d9a86",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Au-K-Tb-29-39386589324-1/packaged/Au-K-Tb-29-attempt-3938658932401.zip",
+      "sha256": "8d48efac89165f0793072af435ed19c421da1b996be1b19f346623b40e2830be",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205132959-m2-missing-raw-Co-Mg-Na-17-39286848821.zip",
+      "sha256": "9711aaf9f30d56aacf0d968f448bb7f63f68aa01754a347dc46381283eae3c2b",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/20261019-random-gate/raw_artifact.zip",
+      "sha256": "b40ddad769698035e9f65d98f1310f932c9881a825d3be308c8ccd2300b1cd7e",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12203084390-m2-missing-raw-Co-Dy-W-17-39286848821.zip",
+      "sha256": "bad74aa61ac1c4ae3711f6af05ee0101c219e153e5d6d71599845448720117e6",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39306348134/12207322282-m2-missing-raw-Ga-Pt-Tm-17-39286848821.zip",
+      "sha256": "bc6e303b8dfbd5fedb70f3046c6ee35f59f56d745a54ff50b2e105c6f6d313cb",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39306348134/12208125959-m2-missing-raw-Hf-Ni-Zr-17-39286848821.zip",
+      "sha256": "bdf172413da8042bb7e361f7cadecb232d28089d7a3b492a572bfba9a1470d4f",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205318451-m2-missing-raw-Co-Dy-W-43-39286848821.zip",
+      "sha256": "c5b93361adf59efcf339e3edc35b54de13e71b04f02e81de41ec337ab28e7c0f",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39306348134/12207109544-m2-missing-raw-Hf-Ni-Zr-43-39286848821.zip",
+      "sha256": "d9d448c17f267ec90b2c64218bd1666c4c91dedd218cec89a74c84c891a0c1b5",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Mg-Sn-Sr-43-39386589324-1/packaged/Mg-Sn-Sr-43-attempt-3938658932401.zip",
+      "sha256": "df12b21ee7c57f1ffd22dea17eadf5a9786ade200b0237620a77dbc7c550475a",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Co-Dy-W-17-39386589324-1/packaged/Co-Dy-W-17-attempt-3938658932401.zip",
+      "sha256": "e493fa7c62124dbb5d74e5ea3963b3f3fed364ac2aa45ff564a3f4222b1bc55e",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Ga-Pt-Tm-29-39386589324-1/packaged/Ga-Pt-Tm-29-attempt-3938658932401.zip",
+      "sha256": "efbc63fa814344f4a75c3358cfefee5d1b1f68980dd26d7bdee5f2c9236bf06d",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-43-39386589324-1/packaged/Hf-Ni-Zr-43-attempt-3938658932401.zip",
+      "sha256": "f658e5ee246c7a231357bb558a029646ce9e4e8ca33c78028d88f8b9eb29c1b2",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/direct-39387331614-1/m2-direct-Ga-Pt-Tm-43-39387331614-1/packaged/Ga-Pt-Tm-43-attempt-3938733161401.zip",
+      "sha256": "f81716c77fcd9e0563b5933bf9db2dc28ad89868e1355befd7f9d454746bc441",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205130735-m2-missing-raw-Au-K-Tb-17-39286848821.zip",
+      "sha256": "f9ca80dae172ffbc6e0c1b49d36a5b59db46bb70d2c11524b7d96fc1e248d7ff",
+      "crc": "passed"
+    },
+    {
+      "path": "M2/verification/preserved-39293506143/12205882338-m2-missing-raw-Co-Dy-W-29-39286848821.zip",
+      "sha256": "fd29c8a7db133fbfd5b6fc5e51f197b76ced48730ce6c1a63fd346e524acdad9",
+      "crc": "passed"
+    }
+  ],
+  "current_attempt": 3943257052701,
+  "current_terminal_receipts": {},
+  "terminal_audit": false,
+  "scope": "Dev baseline data only; document/deck closeout and handoff remain separate checks.",
+  "whole_M2_complete": false,
+  "cost_caveat": "Recorded model fees do not price hardware, electricity or all failed attempts."
+}

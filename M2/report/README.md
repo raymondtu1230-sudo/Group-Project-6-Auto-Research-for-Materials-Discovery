@@ -1,3 +1,7 @@
+> **2026-10-20 22:14 最新：用户已授权睡眠期间继续本次两项监控和阶段收尾。** 已启用有限次数的每小时复核；即时归档仍由GitHub工作流完成。所有收尾新增/修改严格限定main/M2，不改其他成员、共享记录或根目录工作流。见 [本次自动收尾要求](../OVERNIGHT_FINAL_CLOSEOUT.md) 与 [两项启动记录](../FINAL_TWO_RUN_STATUS.md)。当前已核验34/36；最终状态须等两项终止后按真实产物更新，不把定时任务启用算作科学完成。以下保留历史快照。
+
+> 现有19项PPT、讲稿和数据保留为历史快照；本次最终数字和自己的可编辑草稿将在两项结束后的阶段收尾中同步，不把旧PPT当作当前34项或36项展示。
+
 # M2 material for M6
 
 Current editable draft: **[M2_Method_and_Partial_Results_20261020.pptx](M2_Method_and_Partial_Results_20261020.pptx)**. Four slides cover the router, labelled example discovery curves, protocol and partial coverage/cost table. Native charts retain their original embedded workbooks. This is M2's contribution, not the final group deck.
