@@ -87,7 +87,10 @@ explain why and what you'd change.
 
 ## Pending / next
 
-- [ ] Align with M1 on B=20 (final vs TA) and `plan.constraints` semantics
+- [x] ~~Align with M1 on B=20 and `plan.constraints` semantics~~ — done 20 Oct:
+      B=20 is the team's protocol-v1 choice (consistent across methods);
+      constraints are ignored by the built-in generators, so composition
+      steering via `plan.compositions` is confirmed as the only effective lever.
 - [ ] First real-system run of the policy (target 21–23 Oct); watch for
       over-exploitation / wasteful-exploration candidates
 - [ ] Send M4 a decision_log sidecar for a format dry-run

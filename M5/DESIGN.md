@@ -72,22 +72,21 @@ This is exactly the data the two required failure trajectories need:
 `enable_exploration: false` → plan passes through untouched (already covered by
 M1's contract test). ON vs OFF at identical seeds/budgets is the ablation pair.
 
-## Open questions for M1 (20 Oct)
+## Open questions — all resolved (20 Oct, M1 answers)
 
-1. Protocol v1 fixes B=20 — is this final, or pending TA confirmation?
-2. May `plan.constraints` carry generator hints (e.g. preferred spacegroups), or
-   do the configured generators ignore it? (Affects how much the explore pool can
-   steer structure generation vs only composition choice.)
-
-## Resolved (20 Oct)
-
-3. ~~`m1_memory` contents under M4's memory_manager~~ — **Confirmed: M4's
-   records are served, and they include `e_above_hull`** (M4's
-   `OBSERVATION_FIELDS` exposes it). GP training inputs are complete under
-   `m1_full`. One caveat found while verifying: M4's manager bounds the window
-   to `limit` (default 8) records, so the policy now keeps its own cumulative
-   `_queried_history` so nothing re-enters the explore pool when records age
-   out of the window (commit `bc97609`).
+1. ~~B=20 final?~~ — **Resolved: B=20 is M1's protocol-v1 team choice**, not a
+   TA-mandated value. Applied consistently across methods; any future course
+   conflict becomes a versioned protocol amendment. The annealing denominator
+   is stable.
+2. ~~Does `plan.constraints` reach the generator?~~ — **Resolved: the Plan
+   (including constraints) is passed to `generator.generate(plan, context)`,
+   but the built-in Random and Chemeleon generators do not consume
+   `plan.constraints`.** Composition steering through `plan.compositions` is
+   the only effective lever — which is exactly what this policy uses.
+3. ~~`e_above_hull` availability under M4 memory~~ — **Resolved (confirmed by
+   M1)**: M4's adapter allowlists `e_above_hull`, the ConvexHull observation
+   includes it, and records are exposed via `context["m1_memory"]` to the next
+   policy decision. GP training inputs are complete under `m1_full`.
 
 ## Dependencies
 
