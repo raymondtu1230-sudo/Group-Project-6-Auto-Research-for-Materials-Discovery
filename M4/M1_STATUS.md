@@ -1,5 +1,9 @@
 # M4 integration validation record
 
+20 October update: M1 adopted M4 in `9acd3c9` and M3 in `2fcc214`. Joint synthetic checks and optional rejected/error capture are documented in [integration/EVENT_CAPTURE.md](integration/EVENT_CAPTURE.md). The default Planner remains diversity. Formal full/OFF experiments are pending.
+
+## Historical 19 October validation
+
 Updated 19 October 2026. The main-branch handoff adds only `M4/`; existing M1 files remain unchanged. The tests below used a temporary integration configuration, retained with its integration tests in `integration/` for later adoption.
 
 The integration review used team revision `ae10752`, which contains the previously missing M1/MADE implementation, configuration, and tests. PR #1 subsequently delivered the M4 folder to main.

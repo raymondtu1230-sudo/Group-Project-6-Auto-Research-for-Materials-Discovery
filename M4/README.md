@@ -1,8 +1,8 @@
 # PE6203 M4 Memory Module
 
-The main-branch handoff adds only `M4/`. M1 configuration and integration-test examples are retained in `integration/` for later adoption by M1/M3; M4 is not automatically enabled in the main-branch agent.
+M1 adopted the M4 memory configuration on 20 October 2026 (`9acd3c9`) and integrated M3 (`2fcc214`). The default planner remains diversity; select the M3 planner for memory-consumption checks. A new optional proposal-event capture subclass and joint boundary tests are documented in [integration/EVENT_CAPTURE.md](integration/EVENT_CAPTURE.md). That optional subclass is not enabled automatically.
 
-As of 19 October 2026, a temporary M1 integration passed interface tests and a synthetic smoke run. One real-material ORB workflow was also validated. The default Planner does not consume `m1_memory`, so a Memory performance ablation remains pending. See [M1_STATUS.md](M1_STATUS.md) and [REAL_TEST_STATUS.md](REAL_TEST_STATUS.md).
+The earlier real-material workflow remains validation evidence, not a Memory performance improvement. Formal ablation uses the frozen full agent on dev, changing only the Memory switch. See [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md).
 
 This standalone module implements the approved memory design without changing the MADE benchmark, oracle, or scoring logic. The core module and standalone tests require Python 3.10+ and no third-party packages, API keys, GPU, or network access. M1 integration uses the separate MADE dependency environment.
 
@@ -58,7 +58,7 @@ Start with a paired pilot to estimate cost before scaling. Use official mSUN/AUD
 - Verify retrieval is consumed in the actual decision input and omitted when OFF.
 - Confirm complete final-step evidence, idempotent resume, and episode isolation.
 - Compare real episode trajectories with exported logs.
-- The locked MADE environment and a real ORB workflow have been validated; Planner consumption and a causal Memory ablation remain pending.
+- The locked MADE environment and an earlier real ORB workflow have been validated. Joint synthetic tests now check M3 consumption; a causal Memory performance ablation remains pending.
 
 ## Delivery schedule for October 2026
 

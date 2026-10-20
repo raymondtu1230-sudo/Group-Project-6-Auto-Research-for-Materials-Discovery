@@ -1,0 +1,1116 @@
+{
+  "metrics": {
+    "episode_id": 0,
+    "final/queries_used": 2,
+    "final/num_observed_stable_formulas": 4,
+    "final/num_ground_truth_stable_formulas": 3,
+    "final/num_gt_formulas_missing_initial": 1,
+    "final/num_correct_stable_formulas": 1,
+    "final/recall_formula": 1.0,
+    "final/precision_formula": 0.5,
+    "final/num_newly_discovered_structures": 2,
+    "final/num_newly_discovered_stable": 2,
+    "final/discovery_efficiency": 1.0,
+    "final/stable_discovery_efficiency": 1.0,
+    "final/num_initial_structures": 2,
+    "final/num_ground_truth_stable_structures": 3,
+    "final/num_gt_structures_missing_initial": 1,
+    "final/num_correct_stable_structures": 0,
+    "final/recall_structure": 0.0,
+    "final/precision_structure": 0.0,
+    "final/reference_composition_precision": 0.5,
+    "final/reference_composition_recall": 1.0,
+    "final/reference_structure_precision": 0.0,
+    "final/reference_structure_recall": 0.0,
+    "final/validity_distance_valid_count": 2.0,
+    "final/validity_distance_valid_fraction": 1.0,
+    "final/validity_min_interatomic_distance_min": 2.789802252290974,
+    "final/validity_min_interatomic_distance_mean": 3.111118883636671,
+    "final/validity_min_interatomic_distance_std": 0.32131663134569743,
+    "final/validity_smact_valid_count": 2.0,
+    "final/validity_smact_valid_fraction": 1.0,
+    "final/validity_distance_and_smact_valid_count": 2.0,
+    "final/validity_distance_and_smact_valid_fraction": 1.0,
+    "final/diversity_all_composition_unique_composition_count": 2.0,
+    "final/diversity_all_composition_unique_composition_fraction": 1.0,
+    "final/diversity_all_composition_l1_distance_min": 0.3333333333333333,
+    "final/diversity_all_composition_l1_distance_mean": 0.3333333333333333,
+    "final/diversity_all_composition_l1_distance_max": 0.3333333333333333,
+    "final/diversity_all_composition_l1_distance_std": 0.0,
+    "final/diversity_all_composition_l2_distance_min": 0.23570226039551584,
+    "final/diversity_all_composition_l2_distance_mean": 0.23570226039551584,
+    "final/diversity_all_composition_l2_distance_max": 0.23570226039551584,
+    "final/diversity_all_composition_l2_distance_std": 0.0,
+    "final/diversity_all_structure_unique_structure_count": 2.0,
+    "final/diversity_all_structure_unique_structure_fraction": 1.0,
+    "final/diversity_all_structure_spacegroup_entropy": -0.0,
+    "final/diversity_all_structure_unique_spacegroups_count": 1.0,
+    "final/diversity_all_structure_unique_spacegroups_fraction": 0.5,
+    "final/diversity_all_structure_lattice_parameter_variance": 15.732990746653742,
+    "final/diversity_all_structure_amd_distance_min": 1.0409663428270903,
+    "final/diversity_all_structure_amd_distance_mean": 1.0409663428270903,
+    "final/diversity_all_structure_amd_distance_max": 1.0409663428270903,
+    "final/diversity_stable_composition_unique_composition_count": 2.0,
+    "final/diversity_stable_composition_unique_composition_fraction": 1.0,
+    "final/diversity_stable_composition_l1_distance_min": 0.3333333333333333,
+    "final/diversity_stable_composition_l1_distance_mean": 0.3333333333333333,
+    "final/diversity_stable_composition_l1_distance_max": 0.3333333333333333,
+    "final/diversity_stable_composition_l1_distance_std": 0.0,
+    "final/diversity_stable_composition_l2_distance_min": 0.23570226039551584,
+    "final/diversity_stable_composition_l2_distance_mean": 0.23570226039551584,
+    "final/diversity_stable_composition_l2_distance_max": 0.23570226039551584,
+    "final/diversity_stable_composition_l2_distance_std": 0.0,
+    "final/diversity_stable_structure_unique_structure_count": 2.0,
+    "final/diversity_stable_structure_unique_structure_fraction": 1.0,
+    "final/diversity_stable_structure_spacegroup_entropy": -0.0,
+    "final/diversity_stable_structure_unique_spacegroups_count": 1.0,
+    "final/diversity_stable_structure_unique_spacegroups_fraction": 0.5,
+    "final/diversity_stable_structure_lattice_parameter_variance": 15.732990746653742,
+    "final/diversity_stable_structure_amd_distance_min": 1.0409663428270903,
+    "final/diversity_stable_structure_amd_distance_mean": 1.0409663428270903,
+    "final/diversity_stable_structure_amd_distance_max": 1.0409663428270903,
+    "final/novelty_unique_structure_count": 2.0,
+    "final/novelty_unique_structure_fraction": 1.0,
+    "final/novelty_novel_structure_count": 2.0,
+    "final/novelty_novel_structure_fraction": 1.0,
+    "final/novelty_stable_count": 2.0,
+    "final/novelty_stable_unique_count": 2.0,
+    "final/novelty_stable_novel_count": 2.0,
+    "final/novelty_stable_unique_novel_count": 2.0,
+    "final/novelty_stable_fraction": 1.0,
+    "final/novelty_stable_unique_fraction": 1.0,
+    "final/novelty_stable_novel_fraction": 1.0,
+    "final/novelty_stable_unique_novel_fraction": 1.0,
+    "final/convex_hull_e_above_hull_min": 0.0,
+    "final/convex_hull_e_above_hull_mean": 0.0006370577599280959,
+    "final/convex_hull_e_above_hull_max": 0.0012741155198561919,
+    "final/convex_hull_e_above_hull_std": 0.0006370577599280959,
+    "final/convex_hull_energy_per_atom_min": -0.0016988206931415886,
+    "final/convex_hull_energy_per_atom_max": 0.0,
+    "final/convex_hull_energy_per_atom_mean": -0.0008494103465707943,
+    "final/convex_hull_energy_per_atom_std": 0.0008494103465707943,
+    "final/convex_hull_formation_energy_per_atom_min": -0.001698820693141586,
+    "final/convex_hull_formation_energy_per_atom_max": 2.6020852139652106e-18,
+    "final/convex_hull_formation_energy_per_atom_mean": -0.0008494103465707917,
+    "final/convex_hull_formation_energy_per_atom_std": 0.0008494103465707943,
+    "final/convex_hull_stable_fraction": 1.0,
+    "final/convex_hull_stable_count": 2.0,
+    "final/discovery_curve_area_under_discovery_curve": 2.0,
+    "final/discovery_curve_area_under_discovery_curve_normalized": 1.0,
+    "final/discovery_curve_enhancement_factor": 0.0,
+    "final/discovery_curve_acceleration_factor": 0.0
+  },
+  "trajectory": [
+    {
+      "proposal": {
+        "@module": "pymatgen.core.structure",
+        "@class": "Structure",
+        "charge": 0.0,
+        "lattice": {
+          "matrix": [
+            [
+              3.6598431536970017,
+              0.0,
+              -0.8002580167522748
+            ],
+            [
+              0.19224083883402854,
+              11.90719521990434,
+              4.558245419126073
+            ],
+            [
+              0.0,
+              0.0,
+              13.503798025539368
+            ]
+          ],
+          "pbc": [
+            true,
+            true,
+            true
+          ],
+          "a": 3.7463134950293604,
+          "b": 12.751308005299387,
+          "c": 13.503798025539368,
+          "alpha": 69.0549288166188,
+          "beta": 102.33411693551705,
+          "gamma": 93.5335121162805,
+          "volume": 588.4748153518304
+        },
+        "properties": {},
+        "sites": [
+          {
+            "species": [
+              {
+                "element": "Li",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.9551878622608687,
+              0.2100100094902223,
+              0.5399633506201237
+            ],
+            "properties": {},
+            "label": "Li",
+            "xyz": [
+              3.536210258577858,
+              2.50063018113404,
+              7.484436447418348
+            ]
+          },
+          {
+            "species": [
+              {
+                "element": "Li",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.8824561068087002,
+              0.6387731810597964,
+              0.3091995299583252
+            ],
+            "properties": {},
+            "label": "Li",
+            "xyz": [
+              3.352449233093548,
+              7.605996968118297,
+              6.380860354669675
+            ]
+          },
+          {
+            "species": [
+              {
+                "element": "O",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.08186385413474262,
+              0.939776047011715,
+              0.47409847110640535
+            ],
+            "properties": {},
+            "label": "O",
+            "xyz": [
+              0.4802722016839473,
+              11.190096854758488,
+              10.620347653779902
+            ]
+          },
+          {
+            "species": [
+              {
+                "element": "O",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.9963261827822232,
+              0.14160714062013535,
+              0.812204252248064
+            ],
+            "properties": {},
+            "label": "O",
+            "xyz": [
+              3.67362023440229,
+              1.6861438678963974,
+              10.816004262817692
+            ]
+          }
+        ]
+      },
+      "oracle_result": {
+        "energy": 0.0,
+        "energy_per_atom": 0.0,
+        "natoms": 4,
+        "formula": "Li2 O2"
+      },
+      "reduced_formula": "Li2 O2",
+      "formation_energy_per_atom": 2.6020852139652106e-18,
+      "energy_per_atom": 0.0,
+      "e_above_hull": 2.6020852139652106e-18,
+      "is_stable": true,
+      "is_newly_discovered": true,
+      "validity_distance_valid_count": 1.0,
+      "validity_distance_valid_fraction": 1.0,
+      "validity_min_interatomic_distance_min": 3.4324355149823687,
+      "validity_min_interatomic_distance_mean": 3.4324355149823687,
+      "validity_min_interatomic_distance_std": 0.0,
+      "validity_smact_valid_count": 1.0,
+      "validity_smact_valid_fraction": 1.0,
+      "validity_distance_and_smact_valid_count": 1.0,
+      "validity_distance_and_smact_valid_fraction": 1.0
+    },
+    {
+      "proposal": {
+        "@module": "pymatgen.core.structure",
+        "@class": "Structure",
+        "charge": 0.0,
+        "lattice": {
+          "matrix": [
+            [
+              11.379829850827056,
+              0.0,
+              5.773282329795647
+            ],
+            [
+              -5.057470121318918,
+              12.962458474573689,
+              1.8734593503895638
+            ],
+            [
+              0.0,
+              0.0,
+              3.2140117972596336
+            ]
+          ],
+          "pbc": [
+            true,
+            true,
+            true
+          ],
+          "a": 12.760537460989061,
+          "b": 14.039700269971682,
+          "c": 3.2140117972596336,
+          "alpha": 82.3315704934461,
+          "beta": 63.10013960162373,
+          "gamma": 105.12209001431783,
+          "volume": 474.1007182719535
+        },
+        "properties": {},
+        "sites": [
+          {
+            "species": [
+              {
+                "element": "Li",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.35464173592847326,
+              0.9595052188429044,
+              0.3748290134972099
+            ],
+            "properties": {},
+            "label": "Li",
+            "xyz": [
+              -0.8169063626795924,
+              12.437546555387888,
+              5.049745762767955
+            ]
+          },
+          {
+            "species": [
+              {
+                "element": "Li",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.7743749246385532,
+              0.8677886754681016,
+              0.23894656536794878
+            ],
+            "properties": {},
+            "label": "Li",
+            "xyz": [
+              4.423439585334917,
+              11.24867467046057,
+              6.864428957277742
+            ]
+          },
+          {
+            "species": [
+              {
+                "element": "O",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.5568166242081168,
+              0.9573921803278458,
+              0.5269177701873066
+            ],
+            "properties": {},
+            "label": "O",
+            "xyz": [
+              1.494496095207826,
+              12.410156381381265,
+              6.701814839269982
+            ]
+          }
+        ]
+      },
+      "oracle_result": {
+        "energy": -0.005096462079424766,
+        "energy_per_atom": -0.0016988206931415886,
+        "natoms": 3,
+        "formula": "Li2 O1"
+      },
+      "reduced_formula": "Li2 O1",
+      "formation_energy_per_atom": -0.001698820693141586,
+      "energy_per_atom": -0.0016988206931415886,
+      "e_above_hull": 0.0,
+      "is_stable": true,
+      "is_newly_discovered": true,
+      "validity_distance_valid_count": 1.0,
+      "validity_distance_valid_fraction": 1.0,
+      "validity_min_interatomic_distance_min": 2.789802252290974,
+      "validity_min_interatomic_distance_mean": 2.789802252290974,
+      "validity_min_interatomic_distance_std": 0.0,
+      "validity_smact_valid_count": 1.0,
+      "validity_smact_valid_fraction": 1.0,
+      "validity_distance_and_smact_valid_count": 1.0,
+      "validity_distance_and_smact_valid_fraction": 1.0
+    }
+  ],
+  "phase_diagram_gt": [
+    {
+      "@module": "pymatgen.analysis.phase_diagram",
+      "@class": "PDEntry",
+      "energy": 0.0,
+      "composition": {
+        "O": 1.0
+      },
+      "name": "O2",
+      "attribute": {
+        "structure": {
+          "@module": "pymatgen.core.structure",
+          "@class": "Structure",
+          "charge": 0.0,
+          "lattice": {
+            "matrix": [
+              [
+                3.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                3.0
+              ]
+            ],
+            "pbc": [
+              true,
+              true,
+              true
+            ],
+            "a": 3.0,
+            "b": 3.0,
+            "c": 3.0,
+            "alpha": 90.0,
+            "beta": 90.0,
+            "gamma": 90.0,
+            "volume": 27.0
+          },
+          "properties": {},
+          "sites": [
+            {
+              "species": [
+                {
+                  "element": "O",
+                  "occu": 1
+                }
+              ],
+              "abc": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "properties": {},
+              "label": "O",
+              "xyz": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@module": "pymatgen.analysis.phase_diagram",
+      "@class": "PDEntry",
+      "energy": 0.0,
+      "composition": {
+        "Li": 1.0
+      },
+      "name": "Li",
+      "attribute": {
+        "structure": {
+          "@module": "pymatgen.core.structure",
+          "@class": "Structure",
+          "charge": 0.0,
+          "lattice": {
+            "matrix": [
+              [
+                3.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                3.0
+              ]
+            ],
+            "pbc": [
+              true,
+              true,
+              true
+            ],
+            "a": 3.0,
+            "b": 3.0,
+            "c": 3.0,
+            "alpha": 90.0,
+            "beta": 90.0,
+            "gamma": 90.0,
+            "volume": 27.0
+          },
+          "properties": {},
+          "sites": [
+            {
+              "species": [
+                {
+                  "element": "Li",
+                  "occu": 1
+                }
+              ],
+              "abc": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "properties": {},
+              "label": "Li",
+              "xyz": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@module": "pymatgen.analysis.phase_diagram",
+      "@class": "PDEntry",
+      "energy": -1.0,
+      "composition": {
+        "Li": 1.0,
+        "O": 1.0
+      },
+      "name": "Li2O2",
+      "attribute": {
+        "structure": {
+          "@module": "pymatgen.core.structure",
+          "@class": "Structure",
+          "charge": 0.0,
+          "lattice": {
+            "matrix": [
+              [
+                3.2,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.2,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                3.2
+              ]
+            ],
+            "pbc": [
+              true,
+              true,
+              true
+            ],
+            "a": 3.2,
+            "b": 3.2,
+            "c": 3.2,
+            "alpha": 90.0,
+            "beta": 90.0,
+            "gamma": 90.0,
+            "volume": 32.76800000000001
+          },
+          "properties": {},
+          "sites": [
+            {
+              "species": [
+                {
+                  "element": "Li",
+                  "occu": 1
+                }
+              ],
+              "abc": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "properties": {},
+              "label": "Li",
+              "xyz": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "species": [
+                {
+                  "element": "O",
+                  "occu": 1
+                }
+              ],
+              "abc": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "properties": {},
+              "label": "O",
+              "xyz": [
+                1.6,
+                1.6,
+                1.6
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "final_env_state": {
+    "query_count": 2,
+    "elements": [
+      "Li",
+      "O"
+    ],
+    "phase_diagram_all_entries": [
+      {
+        "@module": "pymatgen.analysis.phase_diagram",
+        "@class": "PDEntry",
+        "energy": -2.6020852139652106e-18,
+        "composition": {
+          "O": 1.0
+        },
+        "name": "O2",
+        "attribute": {
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0.0,
+            "lattice": {
+              "matrix": [
+                [
+                  3.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  3.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  3.0
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 3.0,
+              "b": 3.0,
+              "c": 3.0,
+              "alpha": 90.0,
+              "beta": 90.0,
+              "gamma": 90.0,
+              "volume": 27.0
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "O",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "properties": {},
+                "label": "O",
+                "xyz": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@module": "pymatgen.analysis.phase_diagram",
+        "@class": "PDEntry",
+        "energy": -2.6020852139652106e-18,
+        "composition": {
+          "Li": 1.0
+        },
+        "name": "Li",
+        "attribute": {
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0.0,
+            "lattice": {
+              "matrix": [
+                [
+                  3.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  3.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  3.0
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 3.0,
+              "b": 3.0,
+              "c": 3.0,
+              "alpha": 90.0,
+              "beta": 90.0,
+              "gamma": 90.0,
+              "volume": 27.0
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "Li",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "properties": {},
+                "label": "Li",
+                "xyz": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@module": "pymatgen.analysis.phase_diagram",
+        "@class": "PDEntry",
+        "energy": -0.005096462079424766,
+        "composition": {
+          "Li": 2.0,
+          "O": 1.0
+        },
+        "name": "Li2O",
+        "attribute": {
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0.0,
+            "lattice": {
+              "matrix": [
+                [
+                  11.379829850827056,
+                  0.0,
+                  5.773282329795647
+                ],
+                [
+                  -5.057470121318918,
+                  12.962458474573689,
+                  1.8734593503895638
+                ],
+                [
+                  0.0,
+                  0.0,
+                  3.2140117972596336
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 12.760537460989061,
+              "b": 14.039700269971682,
+              "c": 3.2140117972596336,
+              "alpha": 82.3315704934461,
+              "beta": 63.10013960162373,
+              "gamma": 105.12209001431783,
+              "volume": 474.1007182719535
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "Li",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.35464173592847326,
+                  0.9595052188429044,
+                  0.3748290134972099
+                ],
+                "properties": {},
+                "label": "Li",
+                "xyz": [
+                  -0.8169063626795924,
+                  12.437546555387888,
+                  5.049745762767955
+                ]
+              },
+              {
+                "species": [
+                  {
+                    "element": "Li",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.7743749246385532,
+                  0.8677886754681016,
+                  0.23894656536794878
+                ],
+                "properties": {},
+                "label": "Li",
+                "xyz": [
+                  4.423439585334917,
+                  11.24867467046057,
+                  6.864428957277742
+                ]
+              },
+              {
+                "species": [
+                  {
+                    "element": "O",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.5568166242081168,
+                  0.9573921803278458,
+                  0.5269177701873066
+                ],
+                "properties": {},
+                "label": "O",
+                "xyz": [
+                  1.494496095207826,
+                  12.410156381381265,
+                  6.701814839269982
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@module": "pymatgen.analysis.phase_diagram",
+        "@class": "PDEntry",
+        "energy": 0.0,
+        "composition": {
+          "Li": 2.0,
+          "O": 2.0
+        },
+        "name": "Li2O2",
+        "attribute": {
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0.0,
+            "lattice": {
+              "matrix": [
+                [
+                  3.6598431536970017,
+                  0.0,
+                  -0.8002580167522748
+                ],
+                [
+                  0.19224083883402854,
+                  11.90719521990434,
+                  4.558245419126073
+                ],
+                [
+                  0.0,
+                  0.0,
+                  13.503798025539368
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 3.7463134950293604,
+              "b": 12.751308005299387,
+              "c": 13.503798025539368,
+              "alpha": 69.0549288166188,
+              "beta": 102.33411693551705,
+              "gamma": 93.5335121162805,
+              "volume": 588.4748153518304
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "Li",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.9551878622608687,
+                  0.2100100094902223,
+                  0.5399633506201237
+                ],
+                "properties": {},
+                "label": "Li",
+                "xyz": [
+                  3.536210258577858,
+                  2.50063018113404,
+                  7.484436447418348
+                ]
+              },
+              {
+                "species": [
+                  {
+                    "element": "Li",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.8824561068087002,
+                  0.6387731810597964,
+                  0.3091995299583252
+                ],
+                "properties": {},
+                "label": "Li",
+                "xyz": [
+                  3.352449233093548,
+                  7.605996968118297,
+                  6.380860354669675
+                ]
+              },
+              {
+                "species": [
+                  {
+                    "element": "O",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.08186385413474262,
+                  0.939776047011715,
+                  0.47409847110640535
+                ],
+                "properties": {},
+                "label": "O",
+                "xyz": [
+                  0.4802722016839473,
+                  11.190096854758488,
+                  10.620347653779902
+                ]
+              },
+              {
+                "species": [
+                  {
+                    "element": "O",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.9963261827822232,
+                  0.14160714062013535,
+                  0.812204252248064
+                ],
+                "properties": {},
+                "label": "O",
+                "xyz": [
+                  3.67362023440229,
+                  1.6861438678963974,
+                  10.816004262817692
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "last_observation": {
+      "proposal": {
+        "@module": "pymatgen.core.structure",
+        "@class": "Structure",
+        "charge": 0.0,
+        "lattice": {
+          "matrix": [
+            [
+              11.379829850827056,
+              0.0,
+              5.773282329795647
+            ],
+            [
+              -5.057470121318918,
+              12.962458474573689,
+              1.8734593503895638
+            ],
+            [
+              0.0,
+              0.0,
+              3.2140117972596336
+            ]
+          ],
+          "pbc": [
+            true,
+            true,
+            true
+          ],
+          "a": 12.760537460989061,
+          "b": 14.039700269971682,
+          "c": 3.2140117972596336,
+          "alpha": 82.3315704934461,
+          "beta": 63.10013960162373,
+          "gamma": 105.12209001431783,
+          "volume": 474.1007182719535
+        },
+        "properties": {},
+        "sites": [
+          {
+            "species": [
+              {
+                "element": "Li",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.35464173592847326,
+              0.9595052188429044,
+              0.3748290134972099
+            ],
+            "properties": {},
+            "label": "Li",
+            "xyz": [
+              -0.8169063626795924,
+              12.437546555387888,
+              5.049745762767955
+            ]
+          },
+          {
+            "species": [
+              {
+                "element": "Li",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.7743749246385532,
+              0.8677886754681016,
+              0.23894656536794878
+            ],
+            "properties": {},
+            "label": "Li",
+            "xyz": [
+              4.423439585334917,
+              11.24867467046057,
+              6.864428957277742
+            ]
+          },
+          {
+            "species": [
+              {
+                "element": "O",
+                "occu": 1
+              }
+            ],
+            "abc": [
+              0.5568166242081168,
+              0.9573921803278458,
+              0.5269177701873066
+            ],
+            "properties": {},
+            "label": "O",
+            "xyz": [
+              1.494496095207826,
+              12.410156381381265,
+              6.701814839269982
+            ]
+          }
+        ]
+      },
+      "oracle_result": {
+        "energy": -0.005096462079424766,
+        "energy_per_atom": -0.0016988206931415886,
+        "natoms": 3,
+        "formula": "Li2 O1"
+      },
+      "reduced_formula": "Li2 O1",
+      "formation_energy_per_atom": -0.001698820693141586,
+      "energy_per_atom": -0.0016988206931415886,
+      "e_above_hull": 0.0,
+      "is_stable": true,
+      "is_newly_discovered": true,
+      "validity_distance_valid_count": 1.0,
+      "validity_distance_valid_fraction": 1.0,
+      "validity_min_interatomic_distance_min": 2.789802252290974,
+      "validity_min_interatomic_distance_mean": 2.789802252290974,
+      "validity_min_interatomic_distance_std": 0.0,
+      "validity_smact_valid_count": 1.0,
+      "validity_smact_valid_fraction": 1.0,
+      "validity_distance_and_smact_valid_count": 1.0,
+      "validity_distance_and_smact_valid_fraction": 1.0
+    },
+    "stability_tolerance": 0.1
+  }
+}

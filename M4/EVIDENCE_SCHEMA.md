@@ -24,7 +24,7 @@ The generic core accepts additional JSON fields such as reason and decision_cont
 
 ## Capture boundaries
 
-The M1 update hook receives the last successful observation at the next proposal. It does not automatically capture generation/filter rejection or oracle exceptions. The core can store explicit rejected/error events, but framework event capture remains pending. Do not report these event types as automatically collected.
+The M1 update hook receives the last successful observation at the next proposal. It does not automatically capture generation/filter rejection or oracle exceptions. The core can store explicit rejected/error events, but the optional capture agent now records generator/filter events when explicitly adopted. It is not automatically active in main. See integration/EVENT_CAPTURE.md for fallback semantics and uncaptured errors.
 
 For final-step completeness and equal evidence availability under ON/OFF, use the official trajectory exporter for both groups. The online log is diagnostic. New decision-context records should include retrieved IDs and the actual supplied records once M3 consumes them. Policy rationale, exploration mode, budget context and candidate-tool provenance require M1/M5 cooperation.
 

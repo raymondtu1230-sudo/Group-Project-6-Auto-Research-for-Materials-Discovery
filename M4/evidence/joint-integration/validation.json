@@ -1,0 +1,50 @@
+{
+  "scope": "synthetic integration only; not material-discovery performance",
+  "source_main": "871fa8f",
+  "unit_tests_passed": 69,
+  "original_smoke": "passed after allowing local Chrome launch",
+  "synthetic_episode_exit_codes": {
+    "on": 0,
+    "off": 0
+  },
+  "decision_boundary_checks": {
+    "on": {
+      "memory_used": true,
+      "memory_ids": [
+        "evaluation:1"
+      ],
+      "decision_trace": {
+        "step": 0,
+        "subgoal": "Li-O",
+        "scores": {
+          "Fe-Li": 1.0,
+          "Fe-Li-O": 1.0,
+          "Fe-O": 1.0,
+          "Li-O": 1.5
+        },
+        "memory_used": true,
+        "memory_ids": [
+          "evaluation:1"
+        ]
+      },
+      "synthetic_queries_used": 2
+    },
+    "off": {
+      "memory_used": false,
+      "memory_ids": [],
+      "decision_trace": {
+        "step": 0,
+        "subgoal": "Fe-O",
+        "scores": {
+          "Fe-Li": 1.0,
+          "Fe-Li-O": 1.0,
+          "Fe-O": 1.0,
+          "Li-O": 1.0
+        },
+        "memory_used": false,
+        "memory_ids": []
+      },
+      "synthetic_queries_used": 2
+    }
+  }
+}

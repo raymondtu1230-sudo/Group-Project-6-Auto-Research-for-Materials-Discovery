@@ -2,9 +2,9 @@
 
 ## Current scope
 
-M4 provides independent evidence storage, deterministic bounded retrieval and an adapter to M1's four-method MemoryManager interface. The main-branch handoff keeps all M4 files under M4/ and leaves M1 unchanged. Deferred configuration and integration tests are in integration/.
+M4 provides independent evidence storage, deterministic bounded retrieval and an adapter to M1's four-method MemoryManager interface. M1 adopted the M4 configuration on 20 October (`9acd3c9`) and integrated M3 (`2fcc214`). M4-owned sources and optional capture instructions stay under M4/.
 
-The adapter returns recent observations with contrasting outcomes. The standalone core additionally supports composition-targeted retrieval, but the current M1 get_memory() contract has no target-composition argument. The report must distinguish these behaviors. Main does not automatically enable M4 and the default Planner does not consume m1_memory.
+The adapter returns recent observations with contrasting outcomes. The standalone core additionally supports composition-targeted retrieval, but the current M1 get_memory() contract has no target-composition argument. The report must distinguish these behaviors. Main now configures M4, but the default diversity Planner still does not consume m1_memory; select M3 for meaningful consumption checks.
 
 ## Validation completed
 
@@ -28,10 +28,12 @@ The adapter implements update_state(state), get_memory(), get_state() and load_s
 
 The standalone core supports explicit rejected/error events. Current framework hooks and the trajectory exporter capture completed evaluations only. Instability is an observed outcome, not a runtime error. Use EVIDENCE_SCHEMA.md as the field contract and M5_LOG_FORMAT.md for the remaining policy-context requirements.
 
-M5 format confirmation and M6 receipt remain pending. The report method and two-slide draft are in report/. There is no completed ablation, no improvement claim and no selection of final discovery cases yet.
+M5 confirmed schema v1 in M5/M4_LOG_CONFIRMATION.md. M6 receipt of M4 method materials remains to be confirmed. The report method and two-slide draft are in report/. There is no completed ablation, no improvement claim and no selection of final discovery cases yet.
 
 ## Work log
 
 17 October: inspected MADE and developed independent storage, bounded retrieval, ON/OFF behavior, checkpointing and mock tests.
 
 19 October: adapted to M1, validated temporary wiring, completed synthetic and real-material workflows, preserved official outputs and exported complete evidence. Delivered M4 to main, with M1 wiring deferred. Reviewed the brief and team requirements. Corrected the export schema, distinguished observed instability from uncaptured runtime failures, and prepared method text and draft slides. Effect evaluation awaits actual Planner consumption of memory.
+
+20 October: verified real M1/M3/M4 synthetic decision boundaries and added optional, checkpointable generator/filter audit capture. See integration/EVENT_CAPTURE.md and joint_test_results.txt. Main adoption of the optional capture target and the frozen full-agent ablation remain pending.

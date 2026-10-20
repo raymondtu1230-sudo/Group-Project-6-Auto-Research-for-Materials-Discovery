@@ -126,3 +126,13 @@ or full local debug logs without inspection.
 Target schedule remains code/method handoff by 24 October, team freeze on 25,
 reference by noon on 26, and accepted M4 results/cases plus final interpretation
 by 27, subject to team confirmation and measured compute availability.
+
+## 20 October integration update
+
+M1 has adopted M4 and M3. Joint synthetic tests exercise the real M3 decision
+trace with Memory ON/OFF. Select the M3 planner explicitly while the default
+remains diversity. M5 confirmed schema v1; the optional generator/filter event
+capture is described in integration/EVENT_CAPTURE.md and needs M1 adoption.
+Capture must be identical in both arms and remain outside decision inputs.
+M6 confirms ablations on dev only; check/hidden are restricted to the frozen
+full agent and baselines. Formal experiments still require the frozen reference.

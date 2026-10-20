@@ -1,7 +1,9 @@
 # M4 adoption and acceptance
 
-Status: preparation only. Main currently leaves `memory_manager: null`; the
-planner must consume memory before any Memory-effect experiment is accepted.
+Status: M1 adopted the memory configuration in `9acd3c9` and M3 in `2fcc214`.
+The steps below are reproducible adoption instructions, not a request to replace
+current configuration. Default diversity still ignores memory; use the M3 planner
+and verify consumption before any Memory-effect experiment is accepted.
 Keep current M2/M3/M5 settings when integrating. Do not replace the complete
 agent YAML with the older example in this directory.
 
