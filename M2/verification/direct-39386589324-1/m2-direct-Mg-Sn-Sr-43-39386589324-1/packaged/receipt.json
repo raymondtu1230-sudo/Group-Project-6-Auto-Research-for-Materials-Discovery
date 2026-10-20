@@ -1,0 +1,10 @@
+{
+  "status": "verified_completed",
+  "exit_code": 0,
+  "unit": "Mg-Sn-Sr-43",
+  "attempt": 3938658932401,
+  "archive": "Mg-Sn-Sr-43-attempt-3938658932401.zip",
+  "sha256": "df12b21ee7c57f1ffd22dea17eadf5a9786ade200b0237620a77dbc7c550475a",
+  "validation_error": null,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}

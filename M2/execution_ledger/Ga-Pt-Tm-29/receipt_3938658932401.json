@@ -1,0 +1,10 @@
+{
+  "status": "verified_completed",
+  "exit_code": 0,
+  "unit": "Ga-Pt-Tm-29",
+  "attempt": 3938658932401,
+  "archive": "M2/verification/direct-39386589324-1/m2-direct-Ga-Pt-Tm-29-39386589324-1/packaged/Ga-Pt-Tm-29-attempt-3938658932401.zip",
+  "sha256": "efbc63fa814344f4a75c3358cfefee5d1b1f68980dd26d7bdee5f2c9236bf06d",
+  "validation_error": null,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}

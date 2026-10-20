@@ -1,0 +1,10 @@
+{
+  "status": "verified_completed",
+  "exit_code": 0,
+  "unit": "Co-Dy-W-29",
+  "attempt": 3938658932401,
+  "archive": "Co-Dy-W-29-attempt-3938658932401.zip",
+  "sha256": "270e26a5024ab6d18866fdb2c7f8bbed73230052c011c6b00566224e0be27f31",
+  "validation_error": null,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}

@@ -1,0 +1,9 @@
+{
+  "job_limit_minutes": 360,
+  "compute_step_limit_minutes": 340,
+  "compute_seconds": 20218,
+  "setup_elapsed_seconds": 122,
+  "save_reserve_seconds": 1200,
+  "termination_reserve_seconds": 60,
+  "initial_pool_resume": false
+}

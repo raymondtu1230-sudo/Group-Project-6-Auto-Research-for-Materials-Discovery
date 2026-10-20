@@ -1,0 +1,10 @@
+{
+  "status": "verified_completed",
+  "exit_code": 0,
+  "unit": "Co-Mg-Na-29",
+  "attempt": 3938658932401,
+  "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-29-39386589324-1/packaged/Co-Mg-Na-29-attempt-3938658932401.zip",
+  "sha256": "7af859c3593f28c1603f98899430d41a3bdaa97f0eb0f9cb1ed8fda103baf0eb",
+  "validation_error": null,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}

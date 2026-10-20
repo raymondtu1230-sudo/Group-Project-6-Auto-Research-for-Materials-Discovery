@@ -1,0 +1,10 @@
+{
+  "status": "timeout",
+  "exit_code": 124,
+  "unit": "Co-Dy-W-43",
+  "attempt": 3938658932401,
+  "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Dy-W-43-39386589324-1/packaged/Co-Dy-W-43-attempt-3938658932401.zip",
+  "sha256": "5273f6d69e8ac45af53800a71eafcbf2ecaac8dd4fcb072bd46aa43126b4162c",
+  "validation_error": null,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}

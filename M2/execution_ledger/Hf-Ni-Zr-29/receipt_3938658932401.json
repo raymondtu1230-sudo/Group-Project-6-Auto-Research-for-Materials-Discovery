@@ -1,0 +1,10 @@
+{
+  "status": "verified_completed",
+  "exit_code": 0,
+  "unit": "Hf-Ni-Zr-29",
+  "attempt": 3938658932401,
+  "archive": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-29-39386589324-1/packaged/Hf-Ni-Zr-29-attempt-3938658932401.zip",
+  "sha256": "83e19d8330efd12c1f56def02a6b957feb3f7f1c65a32b2222752285787d9a86",
+  "validation_error": null,
+  "source_sha": "63077ea3ea612197a5ad0e71fbe015d80149ca37"
+}
