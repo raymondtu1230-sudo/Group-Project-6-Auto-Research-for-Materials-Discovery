@@ -37,8 +37,10 @@
   "manual_closeout_directory": "M2/verification/stage-closeout-39432570527/",
   "terminal_audit": "M2/verification/stage-closeout-39432570527/terminal-validation.json",
   "current_stage_complete": true,
-  "remaining_work": "Save and read back this M2-only closeout, then disable current watch.",
+  "remaining_work": "None for the independent dev baseline stage; M1 reference, routing-off and M6 check/hidden remain later work.",
   "is_enabled": false,
   "stop_reason": "Both scientific attempts terminal and successfully archived; final 36-unit stage materials completed.",
-  "final_scientific_units": 36
+  "final_scientific_units": 36,
+  "final_verified_main": "a89f8b73d532514852e721181ac0def24b8609e4",
+  "final_readback_audit": "M2/verification/stage-closeout-39432570527/readback-a89f8b7.json"
 }
