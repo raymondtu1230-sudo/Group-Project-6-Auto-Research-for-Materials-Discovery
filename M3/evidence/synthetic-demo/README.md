@@ -12,3 +12,8 @@ the planner's review scores and the three re-plan events. All three were trigger
 4-query window, before queries 8, 10 and 12 (`query` in the events is the
 number of queries already used). The trace shows the mechanism only, not discovery
 performance.
+
+The demo uses smaller settings than the real agent so the mechanism fits in 16
+queries: a 4-query stuck window (real: 6), a 2-query wait between re-plans
+(real: 3) and 3 queries per sub-goal batch (real: 4). That is why its re-plans
+are only 2 queries apart.

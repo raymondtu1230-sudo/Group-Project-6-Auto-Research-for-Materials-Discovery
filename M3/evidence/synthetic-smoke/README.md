@@ -17,3 +17,6 @@ smoke set and the oracle is MADE's analytic Lennard-Jones oracle.
   4-query batch, with memory records growing 0, 4, 8). No re-plan fired:
   almost every query on this tiny system found a new phase, so the search
   never stalled. `../synthetic-demo/` shows re-plans firing.
+- **Note:** this run used the code from before the progress-signal fix, which
+  counted every new structure as progress, stable or not. It still shows that
+  M3 loads and runs end to end; it says nothing about when re-plans fire.

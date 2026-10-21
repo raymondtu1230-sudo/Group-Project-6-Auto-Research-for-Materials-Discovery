@@ -1,6 +1,6 @@
 # M3 one-page design: planning and self-correction
 
-For M1 sign-off (19–20 Oct). The interface is M1's existing plug-in contract
+Agreed with M1. The interface is M1's existing plug-in contract
 (`M1/PLUGIN_INTERFACE.md`); nothing in MADE's runner, oracle, evaluator,
 environment or budget logic changes.
 
@@ -57,7 +57,7 @@ only the planner's own counts are used.
 - `self_correction_policy: m3_stuck_replan` is wired into `m1_integrated.yaml`
   and runs only when `enable_reflection=true`.
 
-## Evaluation (26–27 Oct)
+## Evaluation
 
 All runs use the dev systems × seeds 17/29/43, compared with M1's reference:
 

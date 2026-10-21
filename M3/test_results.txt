@@ -1,5 +1,5 @@
-# M3 test record, 2026-10-20T06:15Z, Windows 11, Python 3.12.14, run from M1/MADE
-# main at bc97609 (M1 integrated M3 in 2fcc214; M4 and M5 also integrated)
+# M3 test record: Windows 11, Python 3.12.15, run from M1/MADE
+# main at 24d29d8, after `python ../../M3/install.py --install` (progress-signal fix)
 
 $ uv run python ../../M3/install.py
 ok             M1/MADE/src/made/agents/m3_planning.py
@@ -7,26 +7,29 @@ ok             M1/MADE/configs/agent/planner/m3_research.yaml
 ok             M1/MADE/configs/agent/self_correction_policy/m3_stuck_replan.yaml
 ok             M1/MADE/tests/test_m3_planning.py
 merged         M1/MADE/configs/agent/m1_integrated.yaml
-ok             M1/run_experiment.py
-ok             M1/tests/test_protocol.py
-ok             M1/EXPERIMENT_PROTOCOL.md
+merged         M1/run_experiment.py
+merged         M1/tests/test_protocol.py
+merged         M1/EXPERIMENT_PROTOCOL.md
 M3 is installed in M1 ('merged' = M1's file with M3's edit kept)
 
 $ PYTHONPATH=../../M4/src uv run pytest -q tests/test_m1_integrated.py tests/test_m3_planning.py
-39 passed, 3 warnings in 45.80s
+41 passed, 3 warnings
 
 $ PYTHONPATH=../../M4/src uv run pytest -q tests/test_m1_integrated.py tests/test_m3_planning.py tests/test_m4_memory.py tests/test_m5_exploration.py
-54 passed, 3 warnings in 45.51s
+1 failed, 58 passed, 3 warnings
+# The failure is tests/test_m4_memory.py::test_config_constructs_real_agent:
+# M5's config now sets log_path: ${hydra:runtime.output_dir}/..., which only
+# resolves inside a Hydra run. Not caused by M3 (see HANDOVER.md).
 
-$ PYTHONPATH=.. uv run pytest -q ../tests
-7 passed in 0.44s
+$ PYTHONPATH=.. uv run pytest -q ../tests -o addopts=''
+8 passed
 
-$ uv run pytest -q ../../M3/tests
-12 passed in 0.27s
+$ uv run pytest -q ../../M3/tests -o addopts=''
+17 passed
 
-$ uv run ruff check ../../M3 && uv run ruff format --check ../../M3
+$ uv run ruff check src/made/agents/m3_planning.py tests/test_m3_planning.py ../../M3 && uv run ruff format --check ../../M3
 All checks passed!
 9 files already formatted
 
 $ uv run python ../../M3/run_ablations.py --dry-run
-0 of 72 runs already completed; 72 to run
+72 of 72 runs already completed; 0 to run

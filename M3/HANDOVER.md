@@ -1,114 +1,119 @@
 # M3 handover
 
-## Scope
+What M3 gives each teammate, and what each of them needs to know. For an
+overview of M3 itself, start with [README.md](README.md).
 
-M3 delivers the research planner and the stuck-detection/re-planning policy.
-They plug into M1's existing `planner` and `self_correction_policy` slots.
-`M3/integration/` holds everything M3 adds to or changes in M1. M1 integrated
-it on `main` on 20 Oct (`2fcc214`). `python M3/install.py` checks that M3 is
-still in place.
+## What M3 delivers
 
-## Deliverables
+M3 adds two components to M1's agent: a **planner** (where to spend the 20
+tries) and **self-correction** (notice a stuck search and change course). Both
+plug into slots M1's agent already had. All of M3's code is in
+`M3/integration/`, laid out where it goes in M1's folder;
+`python M3/install.py` checks it is in place.
 
-| Recipient | Deliverable | Due (Oct 2026) | Status |
-| --- | --- | --- | --- |
-| M1 | One-page design and slot interface (`DESIGN.md`) | 19–20 | Signed off by M1 (20 Oct) |
-| M1 | Code, Hydra configs, tests (`M3/integration/`) | 24 | Integrated by M1 (20 Oct, `2fcc214`) |
-| M6 | Method text (`report/M3_METHOD.md`) and draft slides (`report/M3_Method_Draft.pptx`) | 24 | Received by M6 (20 Oct) |
-| M2, M6 | Ablation CSVs (`results/*.csv`) and results text (`report/M3_RESULTS.md`) | 27 | Ready (72 runs, 21 Oct); to send |
-| M6 | Final slides | 27 | Slide 3 updated with results; to send |
+| To | What |
+| --- | --- |
+| M1 | One-page design ([DESIGN.md](DESIGN.md)); code, settings and tests (`integration/`, merged by M1 in `2fcc214`) |
+| M1 | The bug fix, installed with `python M3/install.py --install` |
+| M2 | Result tables (`results/*.csv`) and results text (`report/M3_RESULTS.md`) |
+| M6 | Method text (`report/M3_METHOD.md`), results text and slides (`report/`) |
 
-## Notes for teammates
+## Notes for each teammate
 
-- **M1:**
-  - Your integrated `m1_integrated.yaml` merges M4's memory manager and M5's
-    exploration policy with M3's lines. `install.py` now reports this as
-    `merged` (M3's edit kept) instead of a mismatch. This was a too-strict check
-    on M3's side, now fixed.
-  - The default planner is still `diversity`. `run_experiment.py` adds
-    `agent/planner=m3_research` to every plug-in method, plus the `m3_full`,
-    `m3_planning_off` and `m3_self_correction_off` methods.
-- **M6:**
-  - The M3 results compare `m3_full` with an `m1_baseline` re-run under the
-    current configuration, with M4 memory on in both. M1's 19 Oct baseline
-    predates M4 memory, so it is listed for context only and never paired.
-  - Per `PROTOCOL_ADOPTION.md` §5, these go in the "component vs M1
-    reference" table, not the frozen agent's ablation table. `M3_RESULTS.md`
-    titles its table that way.
-  - **Planner in the frozen agent (your question to M1):** on current `main`,
-    `run_experiment.py` already gives `m1_full` and every `*_off` ablation,
-    including `memory_off`, the M3 planner (`agent/planner=m3_research`). Only
-    `m1_baseline` keeps `diversity`. The memory ablation therefore runs with a
-    planner that reads `m1_memory`. M1 confirms this at the 25 Oct freeze.
-  - M3 runs only on dev systems. `run_ablations.py` refuses any other system,
-    and the `m3_*` methods are not part of the check/hidden allow-list.
-- **M4:** the M3 planner reads `context["m1_memory"]` in its review, which is
-  the planner consumption the memory ablation needs. M4 confirmed on 20 Oct
-  that M3's decision trace uses memory when it is on and has none when it is
-  off. Every M3 run sets its own `M4_RUN_ID`, as `M4/integration/ADOPTION.md`
-  requires. If M1 applies M4's capture overrides before the runs, they apply
-  equally to every M3 arm, because all arms run from the same revision.
-- **M5:** exploration runs after M3's self-correction and receives its revised
-  plan. M3's ablation methods keep exploration off.
-- **M2:** M3's ablations keep tool routing off and use the default generator.
+### M1 (integration)
 
-## Validation
+- **Install the bug fix in the final agent.** Your full agent (`m1_full`)
+  uses the M3 planner, so it needs the fix described below. Run
+  `python M3/install.py --install`. It updates only M3's own two files in your
+  folder (`m3_planning.py` and its test); your files are not touched.
+- `install.py` shows your agent config as `merged`: you added M4's and M5's
+  settings and kept M3's lines. That is expected.
+- The default planner is still your `diversity` planner, so `m1_baseline`
+  stays reproducible. `run_experiment.py` switches in the M3 planner for every
+  plug-in version and adds `m3_full`, `m3_planning_off` and
+  `m3_self_correction_off`.
 
-All commands are run from `M1/MADE`; see `test_results.txt`.
+### M2 (baselines and results table)
 
-**On 20 Oct, against `main` with M1's integration (`bc97609`):**
+- Files for you: `results/m3_ablation_runs.csv` (one row per run) and
+  `results/m3_ablation_summary.csv` (one row per version), plus
+  `report/M3_RESULTS.md`.
+- M3's runs keep tool routing off and use the default generator, so they do
+  not depend on your part.
 
-- `install.py` reports seven files `ok` and `m1_integrated.yaml` as `merged`.
-- M1, M3, M4 and M5 tests (with M4 on the path): 54 passed.
-- M1 protocol tests: 7 passed.
-- M3 tool tests: 12 passed.
-- Ruff passes.
-- The demo runs.
+### M4 (memory)
 
-**On 19 Oct:**
+- The planner reads your memory each time it compares areas. You confirmed
+  that M3's decision log shows memory in use when it is on, and none when it is
+  off.
+- Every M3 run sets its own `M4_RUN_ID`, as your adoption notes ask.
+- **Heads-up:** on `main` at `24d29d8`, your test
+  `tests/test_m4_memory.py::test_config_constructs_real_agent` fails. M5's
+  config change added `log_path: ${hydra:runtime.output_dir}/...`, which only
+  works inside a real Hydra run, not in a plain test. This is between M4 and
+  M5; M3 is not involved, and M3's runs used the earlier config.
 
-- Smoke episodes pass: M1's standard one, and an M3 run with planner plus
-  self-correction (`evidence/synthetic-smoke/`).
-- The synthetic demo shows reviews and re-plans (`evidence/synthetic-demo/`).
+### M5 (exploration)
 
-## Progress-signal fix (21 Oct)
+- Exploration runs after M3's self-correction and receives its plan. M3's
+  test runs keep exploration off.
+- **Failure example for you:** M3's hafnium–nickel–zirconium runs are a clear
+  case of over-exploitation. The planner stayed on the nickel–zirconium pair
+  for 12–16 of its 20 tries and found 6.0 materials per run, against 11.7 for
+  the reference. Logs: `evidence/20261021-dev-ablations/m3_trace_lines.tsv`.
+- See the M4 heads-up above about the new `log_path` setting.
 
-The first full sweep (72 runs on 20–21 Oct) showed that MADE sets
-`is_newly_discovered` on every query, stable or not (360 of 360 in `m3_full`,
-96 stable). M3 had read that flag alone as progress, so:
+### M6 (protocol, report, slides)
 
-- self-correction's no-progress trigger never fired (`m3_full` and
-  `m3_self_correction_off` were identical in all 18 pairs);
-- the planner's memory review counted every remembered query as a success.
+- M3 compares against `m1_baseline` re-run with the same setup as the M3
+  versions (M4 memory on in all of them). Per `PROTOCOL_ADOPTION.md` section 5,
+  this goes in the **"component vs M1 reference"** table, separate from the
+  frozen agent's ablation table. `M3_RESULTS.md` is titled that way.
+- **Planner in the frozen agent:** `m1_full` and every `*_off` version use the
+  M3 planner; only `m1_baseline` keeps `diversity`. So the memory test runs
+  with a planner that reads memory.
+- M3 ran on practice (dev) systems only. `run_ablations.py` refuses any other
+  system.
 
-Progress now means a newly discovered **stable** phase, and memory failures
-are unstable results (`M3/integration/.../m3_planning.py`). Tests use
-realistic MADE observations. The pre-fix results were superseded and removed;
-they remain in the git history (commit `e1a40d8`).
+## The bug and the fix
 
-**M1:** run `python M3/install.py --install` to update `m3_planning.py` and
-`tests/test_m3_planning.py` in M1, before the 25 Oct freeze, since `m1_full`
-uses this code. M1's own files are not touched.
+- **What happened:** in the first full set of runs, results with
+  self-correction on and off were identical in all 18 pairs.
+- **Why:** the simulator marks every new structure as "newly discovered",
+  even unstable ones (360 of 360 tries in `m3_full`; only 96 were stable).
+  M3 read that mark as progress, so it never thought it was stuck, and the
+  planner counted every remembered try as a success.
+- **Fix:** progress now means a new **stable** material, and memory failures
+  are unstable results. The tests now use realistic simulator outputs.
+- **Re-runs:** all 72 runs were redone with the fix. The summary script only
+  accepts M3 runs made with the current M3 code (it checks a fingerprint of the
+  file), so old runs cannot slip in. The old results remain in the git history
+  (commit `e1a40d8`).
 
-The summarizer only counts `m3_*` runs whose recorded `m3_planning.py` hash
-matches the current file, so older M3 runs are excluded automatically. The
-baseline reproduces M1's 19 Oct numbers exactly: the diversity planner ignores
-memory, so turning on M4 memory does not change it.
+## Results (fixed code)
 
-## Results (21 Oct, fixed code)
+All 72 runs ran on one PC (AMD Ryzen 7 9700X, CPU only) from the same code,
+following section 0 of [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md). All
+finished on the first attempt, and the reference matched M1's earlier recorded
+numbers exactly in all 18 pairs. Evidence:
+[evidence/20261021-dev-ablations/](evidence/20261021-dev-ablations/).
 
-All 72 runs were re-run on one machine (runbook section 0), the baseline
-included, so every arm shares hardware and code. All completed on the first
-attempt, and the re-run baseline again matches M1's 19 Oct values in all 18
-pairs. Evidence: `evidence/20261021-dev-ablations/`.
+| Comparison | Change in materials found per run | Better / same / worse (of 18) |
+| --- | --- | --- |
+| M3 vs reference | +1.50 (6.50 vs 5.00) | 9 / 3 / 6 |
+| Effect of planning | +1.39 | 12 / 1 / 5 |
+| Effect of self-correction | +0.67 | 7 / 10 / 1 |
 
-- `m3_full` vs `m1_baseline`: +1.50 mSUN per run (9 better / 3 same / 6
-  worse). M3 lifts the three systems where the reference finds little and
-  loses on the three where it does well. See `report/M3_RESULTS.md`, "Why".
-- Planning: +1.39 (12 / 1 / 5). Self-correction: +0.67 (7 / 10 / 1); it now
-  fires (16 no-progress re-plans in `m3_full`).
+M3 helps on hard systems and loses on easy ones; the explanation is in
+`report/M3_RESULTS.md`, section "Why".
 
-## Not yet done
+## Checks (`main` at `24d29d8`, run from `M1/MADE`)
 
-- Send `report/M3_RESULTS.md` and `results/*.csv` to M2, and
-  `report/M3_RESULTS.md` and the slides to M6, by 27 Oct.
+| Check | Result |
+| --- | --- |
+| `install.py` | M3 files `ok`, M1-owned files `merged` |
+| M1 + M3 tests (with M4 on the path) | 41 passed |
+| M1 protocol tests | 8 passed |
+| M3 tool tests | 17 passed |
+| Code style (ruff) | passes |
+| M1 + M3 + M4 + M5 tests together | 58 passed, 1 failed (the M4/M5 issue above, not M3) |

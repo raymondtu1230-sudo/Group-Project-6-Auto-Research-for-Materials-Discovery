@@ -1,8 +1,8 @@
-# M3 experiment runbook (26–27 Oct)
+# M3 experiment runbook
 
-Runs M3's two ablations against M1's reference on your own laptop.
+Runs M3's two ablations against M1's reference on your own computer.
 
-M1 integrated M3 on `main` on 20 Oct (`2fcc214`). M1 also made M4's memory
+M1 integrated M3 on `main` (`2fcc214`). M1 also made M4's memory
 manager the default memory in `m1_integrated.yaml` (`9acd3c9`). Every run with
 memory on, including `m1_baseline`, therefore needs the M4 package installed.
 
@@ -90,7 +90,7 @@ This runs:
 That is 72 one-episode runs, several hours on CPU (M1's baseline runs took
 140–300 s each).
 
-`m1_baseline` is re-run because M1's 18 recorded runs (19 Oct) were made
+`m1_baseline` is re-run because M1's 18 recorded runs were made
 before M4's memory became the default. Pairing M3 against them would mix M3's
 effect with the memory change. The recorded runs still appear in the summary
 as `m1_baseline_recorded`, for context only. `--no-baseline` skips the re-run.
@@ -98,7 +98,7 @@ as `m1_baseline_recorded`, for context only. `--no-baseline` skips the re-run.
 The script is safe to stop and restart. Completed runs are skipped. A failed
 run is retried under the next attempt number, and the failure stays on disk.
 
-## 4. Summarize and hand off
+## 4. Summarize and share
 
 ```bash
 uv run python ../../M3/summarize_ablations.py
@@ -112,7 +112,7 @@ This writes:
 
 Edit the "Why" section by hand.
 
-Send to M2 by 27 Oct: the two CSVs and `M3_RESULTS.md`. Send to M6 by 27 Oct:
+Share with M2: the two CSVs and `M3_RESULTS.md`. Share with M6:
 `M3_RESULTS.md` and the updated slides.
 
 Following M6's `PROTOCOL_ADOPTION.md`, label these results "component vs M1

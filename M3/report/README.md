@@ -1,14 +1,14 @@
-# M3 report materials (for M6)
+# M3 report materials
 
-| File | Due | Status |
+| File | What it is | For |
 | --- | --- | --- |
-| [M3_METHOD.md](M3_METHOD.md) | 24 Oct | Method text, ready |
-| `M3_Method_Draft.pptx` | 27 Oct | Three slides with speaker notes; slide 3 shows the 21 Oct results |
-| [M3_SPEAKER_NOTES.md](M3_SPEAKER_NOTES.md) | 27 Oct | Notes for the slides (about 2 minutes) |
-| [M3_RESULTS.md](M3_RESULTS.md) | 27 Oct | Results of all 72 runs (21 Oct) with the hand-written "Why" section |
+| [M3_METHOD.md](M3_METHOD.md) | Method text for the group report | M6 |
+| `M3_Method_Draft.pptx` | M3's three slides, with speaker notes | M6, presenter |
+| [M3_SPEAKER_NOTES.md](M3_SPEAKER_NOTES.md) | Script for the slides (about 2 minutes), plus likely Q&A | Presenter |
+| [M3_RESULTS.md](M3_RESULTS.md) | Results of all 72 runs, with the hand-written "Why" section | M2, M6 |
 
-For M2 and M6: `M3_RESULTS.md` and `../results/*.csv`. Evidence for the runs is
-in [`../evidence/20261021-dev-ablations/`](../evidence/20261021-dev-ablations/).
+M2 also uses the tables in `../results/*.csv`. Evidence for the runs is in
+[`../evidence/20261021-dev-ablations/`](../evidence/20261021-dev-ablations/).
 
 Re-running `summarize_ablations.py` regenerates `M3_RESULTS.md` and overwrites
 the "Why" section, so copy it back afterwards.
