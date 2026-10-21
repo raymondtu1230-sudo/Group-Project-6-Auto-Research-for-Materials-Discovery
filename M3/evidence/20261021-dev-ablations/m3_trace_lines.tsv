@@ -1,0 +1,305 @@
+method	system	seed	line
+m3_full	Au-K-Tb	seed_17	M3 review: step=0 subgoal=Au-Tb memory_records=0
+m3_full	Au-K-Tb	seed_17	M3 review: step=4 subgoal=Au-K memory_records=4
+m3_full	Au-K-Tb	seed_17	M3 review: step=8 subgoal=Au-K memory_records=6
+m3_full	Au-K-Tb	seed_17	M3 review: step=12 subgoal=Au-K memory_records=7
+m3_full	Au-K-Tb	seed_17	M3 review: step=16 subgoal=Au-K memory_records=6
+m3_full	Au-K-Tb	seed_29	M3 review: step=0 subgoal=Au-Tb memory_records=0
+m3_full	Au-K-Tb	seed_29	M3 review: step=4 subgoal=Au-Tb memory_records=4
+m3_full	Au-K-Tb	seed_29	M3 review: step=8 subgoal=Au-Tb memory_records=6
+m3_full	Au-K-Tb	seed_29	M3 review: step=12 subgoal=Au-Tb memory_records=6
+m3_full	Au-K-Tb	seed_29	M3 review: step=16 subgoal=Au-K memory_records=6
+m3_full	Au-K-Tb	seed_43	M3 review: step=0 subgoal=Au-Tb memory_records=0
+m3_full	Au-K-Tb	seed_43	M3 review: step=4 subgoal=Au-Tb memory_records=4
+m3_full	Au-K-Tb	seed_43	M3 review: step=8 subgoal=Au-K memory_records=6
+m3_full	Au-K-Tb	seed_43	M3 review: step=12 subgoal=Au-K memory_records=6
+m3_full	Au-K-Tb	seed_43	M3 review: step=16 subgoal=Au-K memory_records=7
+m3_full	Co-Dy-W	seed_17	M3 review: step=0 subgoal=Co-Dy memory_records=0
+m3_full	Co-Dy-W	seed_17	M3 review: step=4 subgoal=Co-Dy memory_records=4
+m3_full	Co-Dy-W	seed_17	M3 review: step=8 subgoal=Co-Dy memory_records=7
+m3_full	Co-Dy-W	seed_17	M3 review: step=12 subgoal=Co-Dy memory_records=6
+m3_full	Co-Dy-W	seed_17	M3 review: step=16 subgoal=Co-Dy memory_records=6
+m3_full	Co-Dy-W	seed_29	M3 review: step=0 subgoal=Co-Dy memory_records=0
+m3_full	Co-Dy-W	seed_29	M3 review: step=4 subgoal=Co-Dy memory_records=4
+m3_full	Co-Dy-W	seed_29	M3 review: step=8 subgoal=Co-Dy memory_records=6
+m3_full	Co-Dy-W	seed_29	M3 review: step=12 subgoal=Dy-W memory_records=6
+m3_full	Co-Dy-W	seed_29	M3 review: step=16 subgoal=Co-Dy-W memory_records=6
+m3_full	Co-Dy-W	seed_29	M3 re-plan: query=16 reason=no_progress level=1 before=['Dy1 Co7 W10'] after=['Co9 W9']
+m3_full	Co-Dy-W	seed_29	M3 re-plan: query=19 reason=no_progress level=2 before=['Dy10 Co4 W4'] after=['Dy1 Co19']
+m3_full	Co-Dy-W	seed_43	M3 review: step=0 subgoal=Co-Dy memory_records=0
+m3_full	Co-Dy-W	seed_43	M3 review: step=4 subgoal=Co-Dy memory_records=4
+m3_full	Co-Dy-W	seed_43	M3 review: step=8 subgoal=Co-Dy memory_records=6
+m3_full	Co-Dy-W	seed_43	M3 review: step=12 subgoal=Co-Dy-W memory_records=6
+m3_full	Co-Dy-W	seed_43	M3 review: step=16 subgoal=Dy-W memory_records=6
+m3_full	Co-Dy-W	seed_43	M3 re-plan: query=16 reason=no_progress level=1 before=['Dy4 W14'] after=['Dy1 W19']
+m3_full	Co-Dy-W	seed_43	M3 re-plan: query=19 reason=no_progress level=2 before=['Dy4 W3'] after=['Dy1 Co19']
+m3_full	Co-Mg-Na	seed_17	M3 review: step=0 subgoal=Co-Na memory_records=0
+m3_full	Co-Mg-Na	seed_17	M3 review: step=4 subgoal=Co-Mg-Na memory_records=4
+m3_full	Co-Mg-Na	seed_17	M3 re-plan: query=6 reason=no_progress level=1 before=['Na10 Mg9 Co1'] after=['Na7 Mg4']
+m3_full	Co-Mg-Na	seed_17	M3 review: step=8 subgoal=Co-Mg memory_records=6
+m3_full	Co-Mg-Na	seed_17	M3 review: step=12 subgoal=Co-Mg memory_records=6
+m3_full	Co-Mg-Na	seed_17	M3 re-plan: query=13 reason=no_progress level=1 before=['Mg5 Co7'] after=['Na19 Mg1']
+m3_full	Co-Mg-Na	seed_17	M3 review: step=16 subgoal=Mg-Na memory_records=6
+m3_full	Co-Mg-Na	seed_29	M3 review: step=0 subgoal=Co-Mg-Na memory_records=0
+m3_full	Co-Mg-Na	seed_29	M3 review: step=4 subgoal=Co-Na memory_records=4
+m3_full	Co-Mg-Na	seed_29	M3 re-plan: query=6 reason=no_progress level=1 before=['Na2 Co13'] after=['Mg19 Co1']
+m3_full	Co-Mg-Na	seed_29	M3 review: step=8 subgoal=Co-Mg memory_records=6
+m3_full	Co-Mg-Na	seed_29	M3 review: step=12 subgoal=Co-Mg memory_records=6
+m3_full	Co-Mg-Na	seed_29	M3 re-plan: query=13 reason=no_progress level=1 before=['Mg5 Co7'] after=['Na19 Mg1']
+m3_full	Co-Mg-Na	seed_29	M3 review: step=16 subgoal=Co-Mg memory_records=6
+m3_full	Co-Mg-Na	seed_43	M3 review: step=0 subgoal=Co-Na memory_records=0
+m3_full	Co-Mg-Na	seed_43	M3 review: step=4 subgoal=Co-Mg-Na memory_records=4
+m3_full	Co-Mg-Na	seed_43	M3 re-plan: query=6 reason=no_progress level=1 before=['Na10 Mg9 Co1'] after=['Na7 Mg4']
+m3_full	Co-Mg-Na	seed_43	M3 review: step=8 subgoal=Co-Mg memory_records=6
+m3_full	Co-Mg-Na	seed_43	M3 review: step=12 subgoal=Co-Mg memory_records=6
+m3_full	Co-Mg-Na	seed_43	M3 review: step=16 subgoal=Co-Mg memory_records=6
+m3_full	Ga-Pt-Tm	seed_17	M3 review: step=0 subgoal=Ga-Pt memory_records=0
+m3_full	Ga-Pt-Tm	seed_17	M3 review: step=4 subgoal=Ga-Pt memory_records=4
+m3_full	Ga-Pt-Tm	seed_17	M3 review: step=8 subgoal=Ga-Pt memory_records=6
+m3_full	Ga-Pt-Tm	seed_17	M3 review: step=12 subgoal=Ga-Pt memory_records=6
+m3_full	Ga-Pt-Tm	seed_17	M3 review: step=16 subgoal=Pt-Tm memory_records=6
+m3_full	Ga-Pt-Tm	seed_17	M3 re-plan: query=18 reason=no_progress level=1 before=['Tm1 Pt14'] after=['Tm3 Ga3']
+m3_full	Ga-Pt-Tm	seed_29	M3 review: step=0 subgoal=Ga-Pt memory_records=0
+m3_full	Ga-Pt-Tm	seed_29	M3 review: step=4 subgoal=Ga-Pt memory_records=4
+m3_full	Ga-Pt-Tm	seed_29	M3 review: step=8 subgoal=Ga-Pt memory_records=6
+m3_full	Ga-Pt-Tm	seed_29	M3 review: step=12 subgoal=Ga-Pt memory_records=6
+m3_full	Ga-Pt-Tm	seed_29	M3 review: step=16 subgoal=Ga-Pt memory_records=6
+m3_full	Ga-Pt-Tm	seed_43	M3 review: step=0 subgoal=Ga-Pt memory_records=0
+m3_full	Ga-Pt-Tm	seed_43	M3 review: step=4 subgoal=Ga-Pt memory_records=4
+m3_full	Ga-Pt-Tm	seed_43	M3 review: step=8 subgoal=Ga-Pt memory_records=6
+m3_full	Ga-Pt-Tm	seed_43	M3 review: step=12 subgoal=Pt-Tm memory_records=6
+m3_full	Ga-Pt-Tm	seed_43	M3 re-plan: query=14 reason=no_progress level=1 before=['Tm1 Pt14'] after=['Tm1 Ga1']
+m3_full	Ga-Pt-Tm	seed_43	M3 review: step=16 subgoal=Ga-Pt-Tm memory_records=6
+m3_full	Ga-Pt-Tm	seed_43	M3 re-plan: query=17 reason=no_progress level=2 before=['Tm5 Ga2 Pt2'] after=['Ga11 Pt8']
+m3_full	Hf-Ni-Zr	seed_17	M3 review: step=0 subgoal=Hf-Ni-Zr memory_records=0
+m3_full	Hf-Ni-Zr	seed_17	M3 review: step=4 subgoal=Hf-Ni-Zr memory_records=4
+m3_full	Hf-Ni-Zr	seed_17	M3 review: step=8 subgoal=Ni-Zr memory_records=6
+m3_full	Hf-Ni-Zr	seed_17	M3 re-plan: query=9 reason=no_progress level=1 before=['Zr10 Ni1'] after=['Hf1 Ni19']
+m3_full	Hf-Ni-Zr	seed_17	M3 review: step=12 subgoal=Ni-Zr memory_records=6
+m3_full	Hf-Ni-Zr	seed_17	M3 review: step=16 subgoal=Ni-Zr memory_records=6
+m3_full	Hf-Ni-Zr	seed_29	M3 review: step=0 subgoal=Hf-Ni-Zr memory_records=0
+m3_full	Hf-Ni-Zr	seed_29	M3 review: step=4 subgoal=Ni-Zr memory_records=4
+m3_full	Hf-Ni-Zr	seed_29	M3 review: step=8 subgoal=Ni-Zr memory_records=6
+m3_full	Hf-Ni-Zr	seed_29	M3 review: step=12 subgoal=Ni-Zr memory_records=6
+m3_full	Hf-Ni-Zr	seed_29	M3 review: step=16 subgoal=Ni-Zr memory_records=6
+m3_full	Hf-Ni-Zr	seed_43	M3 review: step=0 subgoal=Hf-Ni-Zr memory_records=0
+m3_full	Hf-Ni-Zr	seed_43	M3 review: step=4 subgoal=Ni-Zr memory_records=4
+m3_full	Hf-Ni-Zr	seed_43	M3 re-plan: query=6 reason=no_progress level=1 before=['Zr7 Ni5'] after=['Zr1 Ni19']
+m3_full	Hf-Ni-Zr	seed_43	M3 review: step=8 subgoal=Ni-Zr memory_records=6
+m3_full	Hf-Ni-Zr	seed_43	M3 review: step=12 subgoal=Ni-Zr memory_records=6
+m3_full	Hf-Ni-Zr	seed_43	M3 review: step=16 subgoal=Ni-Zr memory_records=6
+m3_full	Mg-Sn-Sr	seed_17	M3 review: step=0 subgoal=Sn-Sr memory_records=0
+m3_full	Mg-Sn-Sr	seed_17	M3 review: step=4 subgoal=Sn-Sr memory_records=4
+m3_full	Mg-Sn-Sr	seed_17	M3 review: step=8 subgoal=Sn-Sr memory_records=6
+m3_full	Mg-Sn-Sr	seed_17	M3 review: step=12 subgoal=Mg-Sn-Sr memory_records=6
+m3_full	Mg-Sn-Sr	seed_17	M3 re-plan: query=15 reason=no_progress level=1 before=['Sr8 Mg7 Sn3'] after=['Mg19 Sn1']
+m3_full	Mg-Sn-Sr	seed_17	M3 review: step=16 subgoal=Sn-Sr memory_records=6
+m3_full	Mg-Sn-Sr	seed_29	M3 review: step=0 subgoal=Sn-Sr memory_records=0
+m3_full	Mg-Sn-Sr	seed_29	M3 review: step=4 subgoal=Sn-Sr memory_records=4
+m3_full	Mg-Sn-Sr	seed_29	M3 review: step=8 subgoal=Mg-Sn-Sr memory_records=6
+m3_full	Mg-Sn-Sr	seed_29	M3 review: step=12 subgoal=Sn-Sr memory_records=6
+m3_full	Mg-Sn-Sr	seed_29	M3 review: step=16 subgoal=Mg-Sn-Sr memory_records=6
+m3_full	Mg-Sn-Sr	seed_43	M3 review: step=0 subgoal=Sn-Sr memory_records=0
+m3_full	Mg-Sn-Sr	seed_43	M3 review: step=4 subgoal=Sn-Sr memory_records=4
+m3_full	Mg-Sn-Sr	seed_43	M3 review: step=8 subgoal=Sn-Sr memory_records=6
+m3_full	Mg-Sn-Sr	seed_43	M3 review: step=12 subgoal=Sn-Sr memory_records=6
+m3_full	Mg-Sn-Sr	seed_43	M3 review: step=16 subgoal=Mg-Sn-Sr memory_records=6
+m3_full	Mg-Sn-Sr	seed_43	M3 re-plan: query=16 reason=no_progress level=1 before=['Sr2 Mg5 Sn2'] after=['Mg19 Sn1']
+m3_planning_off	Au-K-Tb	seed_17	M3 re-plan: query=2 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['Tb1 Au19']
+m3_planning_off	Au-K-Tb	seed_17	M3 re-plan: query=5 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K19 Tb1']
+m3_planning_off	Au-K-Tb	seed_17	M3 re-plan: query=8 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['Tb19 Au1']
+m3_planning_off	Au-K-Tb	seed_17	M3 re-plan: query=11 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Au19']
+m3_planning_off	Au-K-Tb	seed_17	M3 re-plan: query=14 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['K19 Au1']
+m3_planning_off	Au-K-Tb	seed_17	M3 re-plan: query=17 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Tb19']
+m3_planning_off	Au-K-Tb	seed_29	M3 re-plan: query=2 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['Tb1 Au19']
+m3_planning_off	Au-K-Tb	seed_29	M3 re-plan: query=5 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K19 Tb1']
+m3_planning_off	Au-K-Tb	seed_29	M3 re-plan: query=8 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['K1 Tb19']
+m3_planning_off	Au-K-Tb	seed_29	M3 re-plan: query=11 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Au19']
+m3_planning_off	Au-K-Tb	seed_29	M3 re-plan: query=14 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K19 Au1']
+m3_planning_off	Au-K-Tb	seed_29	M3 re-plan: query=17 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['Tb19 Au1']
+m3_planning_off	Au-K-Tb	seed_43	M3 re-plan: query=2 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Tb19']
+m3_planning_off	Au-K-Tb	seed_43	M3 re-plan: query=5 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['K1 Au19']
+m3_planning_off	Au-K-Tb	seed_43	M3 re-plan: query=8 reason=repetition level=3 before=['K1 Tb1 Au1'] after=['K19 Tb1']
+m3_planning_off	Au-K-Tb	seed_43	M3 re-plan: query=11 reason=repetition level=4 before=['K1 Tb1 Au1'] after=['Tb19 Au1']
+m3_planning_off	Au-K-Tb	seed_43	M3 re-plan: query=14 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['Tb1 Au19']
+m3_planning_off	Au-K-Tb	seed_43	M3 re-plan: query=17 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K19 Au1']
+m3_planning_off	Co-Dy-W	seed_17	M3 re-plan: query=2 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy19 W1']
+m3_planning_off	Co-Dy-W	seed_17	M3 re-plan: query=5 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Dy1 W19']
+m3_planning_off	Co-Dy-W	seed_17	M3 re-plan: query=8 reason=repetition level=3 before=['Dy1 Co1 W1'] after=['Co19 W1']
+m3_planning_off	Co-Dy-W	seed_17	M3 re-plan: query=11 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy19 Co1']
+m3_planning_off	Co-Dy-W	seed_17	M3 re-plan: query=14 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Co1 W19']
+m3_planning_off	Co-Dy-W	seed_17	M3 re-plan: query=17 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Dy1 Co19']
+m3_planning_off	Co-Dy-W	seed_29	M3 re-plan: query=2 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy1 Co19']
+m3_planning_off	Co-Dy-W	seed_29	M3 re-plan: query=5 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Dy19 Co1']
+m3_planning_off	Co-Dy-W	seed_29	M3 re-plan: query=8 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy1 W19']
+m3_planning_off	Co-Dy-W	seed_29	M3 re-plan: query=11 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Co19 W1']
+m3_planning_off	Co-Dy-W	seed_29	M3 re-plan: query=14 reason=repetition level=3 before=['Dy1 Co1 W1'] after=['Dy19 W1']
+m3_planning_off	Co-Dy-W	seed_29	M3 re-plan: query=17 reason=repetition level=4 before=['Dy1 Co1 W1'] after=['Co1 W19']
+m3_planning_off	Co-Dy-W	seed_43	M3 re-plan: query=2 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy19 W1']
+m3_planning_off	Co-Dy-W	seed_43	M3 re-plan: query=5 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Co1 W19']
+m3_planning_off	Co-Dy-W	seed_43	M3 re-plan: query=8 reason=repetition level=3 before=['Dy1 Co1 W1'] after=['Dy1 Co19']
+m3_planning_off	Co-Dy-W	seed_43	M3 re-plan: query=11 reason=repetition level=4 before=['Dy1 Co1 W1'] after=['Dy19 Co1']
+m3_planning_off	Co-Dy-W	seed_43	M3 re-plan: query=14 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy1 W19']
+m3_planning_off	Co-Dy-W	seed_43	M3 re-plan: query=17 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Co19 W1']
+m3_planning_off	Co-Mg-Na	seed_17	M3 re-plan: query=2 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na19 Mg1']
+m3_planning_off	Co-Mg-Na	seed_17	M3 re-plan: query=5 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na1 Mg19']
+m3_planning_off	Co-Mg-Na	seed_17	M3 re-plan: query=8 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na1 Co19']
+m3_planning_off	Co-Mg-Na	seed_17	M3 re-plan: query=11 reason=repetition level=2 before=['Na1 Mg1 Co1'] after=['Na19 Co1']
+m3_planning_off	Co-Mg-Na	seed_17	M3 re-plan: query=14 reason=repetition level=3 before=['Na1 Mg1 Co1'] after=['Mg19 Co1']
+m3_planning_off	Co-Mg-Na	seed_17	M3 re-plan: query=17 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Mg1 Co19']
+m3_planning_off	Co-Mg-Na	seed_29	M3 re-plan: query=2 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na1 Co19']
+m3_planning_off	Co-Mg-Na	seed_29	M3 re-plan: query=5 reason=repetition level=2 before=['Na1 Mg1 Co1'] after=['Na19 Co1']
+m3_planning_off	Co-Mg-Na	seed_29	M3 re-plan: query=8 reason=repetition level=3 before=['Na1 Mg1 Co1'] after=['Mg19 Co1']
+m3_planning_off	Co-Mg-Na	seed_29	M3 re-plan: query=11 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Mg1 Co19']
+m3_planning_off	Co-Mg-Na	seed_29	M3 re-plan: query=14 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na19 Mg1']
+m3_planning_off	Co-Mg-Na	seed_29	M3 re-plan: query=17 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na1 Mg19']
+m3_planning_off	Co-Mg-Na	seed_43	M3 re-plan: query=2 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na19 Mg1']
+m3_planning_off	Co-Mg-Na	seed_43	M3 re-plan: query=5 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na1 Mg19']
+m3_planning_off	Co-Mg-Na	seed_43	M3 re-plan: query=8 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na1 Co19']
+m3_planning_off	Co-Mg-Na	seed_43	M3 re-plan: query=11 reason=repetition level=2 before=['Na1 Mg1 Co1'] after=['Na19 Co1']
+m3_planning_off	Co-Mg-Na	seed_43	M3 re-plan: query=14 reason=repetition level=3 before=['Na1 Mg1 Co1'] after=['Mg19 Co1']
+m3_planning_off	Co-Mg-Na	seed_43	M3 re-plan: query=17 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Mg1 Co19']
+m3_planning_off	Ga-Pt-Tm	seed_17	M3 re-plan: query=2 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Pt1']
+m3_planning_off	Ga-Pt-Tm	seed_17	M3 re-plan: query=5 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Ga19 Pt1']
+m3_planning_off	Ga-Pt-Tm	seed_17	M3 re-plan: query=8 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Pt19']
+m3_planning_off	Ga-Pt-Tm	seed_17	M3 re-plan: query=11 reason=repetition level=2 before=['Tm1 Ga1 Pt1'] after=['Tm19 Ga1']
+m3_planning_off	Ga-Pt-Tm	seed_17	M3 re-plan: query=14 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Ga19']
+m3_planning_off	Ga-Pt-Tm	seed_17	M3 re-plan: query=17 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Ga1 Pt19']
+m3_planning_off	Ga-Pt-Tm	seed_29	M3 re-plan: query=2 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Ga19']
+m3_planning_off	Ga-Pt-Tm	seed_29	M3 re-plan: query=5 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Ga1']
+m3_planning_off	Ga-Pt-Tm	seed_29	M3 re-plan: query=8 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Pt19']
+m3_planning_off	Ga-Pt-Tm	seed_29	M3 re-plan: query=11 reason=repetition level=2 before=['Tm1 Ga1 Pt1'] after=['Ga19 Pt1']
+m3_planning_off	Ga-Pt-Tm	seed_29	M3 re-plan: query=14 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Pt1']
+m3_planning_off	Ga-Pt-Tm	seed_29	M3 re-plan: query=17 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Ga1 Pt19']
+m3_planning_off	Ga-Pt-Tm	seed_43	M3 re-plan: query=2 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Pt1']
+m3_planning_off	Ga-Pt-Tm	seed_43	M3 re-plan: query=5 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Ga1 Pt19']
+m3_planning_off	Ga-Pt-Tm	seed_43	M3 re-plan: query=8 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Ga19 Pt1']
+m3_planning_off	Ga-Pt-Tm	seed_43	M3 re-plan: query=11 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Ga1']
+m3_planning_off	Ga-Pt-Tm	seed_43	M3 re-plan: query=14 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Pt19']
+m3_planning_off	Ga-Pt-Tm	seed_43	M3 re-plan: query=17 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Ga19']
+m3_planning_off	Hf-Ni-Zr	seed_17	M3 re-plan: query=2 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr1 Ni19']
+m3_planning_off	Hf-Ni-Zr	seed_17	M3 re-plan: query=5 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Zr1']
+m3_planning_off	Hf-Ni-Zr	seed_17	M3 re-plan: query=8 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf1 Zr19']
+m3_planning_off	Hf-Ni-Zr	seed_17	M3 re-plan: query=11 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf1 Ni19']
+m3_planning_off	Hf-Ni-Zr	seed_17	M3 re-plan: query=14 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Ni1']
+m3_planning_off	Hf-Ni-Zr	seed_17	M3 re-plan: query=17 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr19 Ni1']
+m3_planning_off	Hf-Ni-Zr	seed_29	M3 re-plan: query=2 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr1 Ni19']
+m3_planning_off	Hf-Ni-Zr	seed_29	M3 re-plan: query=5 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Zr1']
+m3_planning_off	Hf-Ni-Zr	seed_29	M3 re-plan: query=8 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf1 Zr19']
+m3_planning_off	Hf-Ni-Zr	seed_29	M3 re-plan: query=11 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf1 Ni19']
+m3_planning_off	Hf-Ni-Zr	seed_29	M3 re-plan: query=14 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Ni1']
+m3_planning_off	Hf-Ni-Zr	seed_29	M3 re-plan: query=17 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr19 Ni1']
+m3_planning_off	Hf-Ni-Zr	seed_43	M3 re-plan: query=2 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf1 Zr19']
+m3_planning_off	Hf-Ni-Zr	seed_43	M3 re-plan: query=5 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf1 Ni19']
+m3_planning_off	Hf-Ni-Zr	seed_43	M3 re-plan: query=8 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Zr1']
+m3_planning_off	Hf-Ni-Zr	seed_43	M3 re-plan: query=11 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr19 Ni1']
+m3_planning_off	Hf-Ni-Zr	seed_43	M3 re-plan: query=14 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr1 Ni19']
+m3_planning_off	Hf-Ni-Zr	seed_43	M3 re-plan: query=17 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Ni1']
+m3_planning_off	Mg-Sn-Sr	seed_17	M3 re-plan: query=2 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Sn1']
+m3_planning_off	Mg-Sn-Sr	seed_17	M3 re-plan: query=5 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg19 Sn1']
+m3_planning_off	Mg-Sn-Sr	seed_17	M3 re-plan: query=8 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr1 Sn19']
+m3_planning_off	Mg-Sn-Sr	seed_17	M3 re-plan: query=11 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Mg1']
+m3_planning_off	Mg-Sn-Sr	seed_17	M3 re-plan: query=14 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr1 Mg19']
+m3_planning_off	Mg-Sn-Sr	seed_17	M3 re-plan: query=17 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg1 Sn19']
+m3_planning_off	Mg-Sn-Sr	seed_29	M3 re-plan: query=2 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr1 Mg19']
+m3_planning_off	Mg-Sn-Sr	seed_29	M3 re-plan: query=5 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Mg1']
+m3_planning_off	Mg-Sn-Sr	seed_29	M3 re-plan: query=8 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr1 Sn19']
+m3_planning_off	Mg-Sn-Sr	seed_29	M3 re-plan: query=11 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg19 Sn1']
+m3_planning_off	Mg-Sn-Sr	seed_29	M3 re-plan: query=14 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Sn1']
+m3_planning_off	Mg-Sn-Sr	seed_29	M3 re-plan: query=17 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg1 Sn19']
+m3_planning_off	Mg-Sn-Sr	seed_43	M3 re-plan: query=2 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Sn1']
+m3_planning_off	Mg-Sn-Sr	seed_43	M3 re-plan: query=5 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg1 Sn19']
+m3_planning_off	Mg-Sn-Sr	seed_43	M3 re-plan: query=8 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg19 Sn1']
+m3_planning_off	Mg-Sn-Sr	seed_43	M3 re-plan: query=11 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Mg1']
+m3_planning_off	Mg-Sn-Sr	seed_43	M3 re-plan: query=14 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr1 Sn19']
+m3_planning_off	Mg-Sn-Sr	seed_43	M3 re-plan: query=17 reason=repetition level=2 before=['Sr1 Mg1 Sn1'] after=['Sr1 Mg19']
+m3_self_correction_off	Au-K-Tb	seed_17	M3 review: step=0 subgoal=Au-Tb memory_records=0
+m3_self_correction_off	Au-K-Tb	seed_17	M3 review: step=4 subgoal=Au-K memory_records=4
+m3_self_correction_off	Au-K-Tb	seed_17	M3 review: step=8 subgoal=Au-K memory_records=6
+m3_self_correction_off	Au-K-Tb	seed_17	M3 review: step=12 subgoal=Au-K memory_records=6
+m3_self_correction_off	Au-K-Tb	seed_17	M3 review: step=16 subgoal=Au-K memory_records=6
+m3_self_correction_off	Au-K-Tb	seed_29	M3 review: step=0 subgoal=Au-Tb memory_records=0
+m3_self_correction_off	Au-K-Tb	seed_29	M3 review: step=4 subgoal=Au-Tb memory_records=4
+m3_self_correction_off	Au-K-Tb	seed_29	M3 review: step=8 subgoal=Au-Tb memory_records=6
+m3_self_correction_off	Au-K-Tb	seed_29	M3 review: step=12 subgoal=Au-Tb memory_records=6
+m3_self_correction_off	Au-K-Tb	seed_29	M3 review: step=16 subgoal=Au-K memory_records=6
+m3_self_correction_off	Au-K-Tb	seed_43	M3 review: step=0 subgoal=Au-Tb memory_records=0
+m3_self_correction_off	Au-K-Tb	seed_43	M3 review: step=4 subgoal=Au-Tb memory_records=4
+m3_self_correction_off	Au-K-Tb	seed_43	M3 review: step=8 subgoal=Au-K memory_records=6
+m3_self_correction_off	Au-K-Tb	seed_43	M3 review: step=12 subgoal=Au-K memory_records=6
+m3_self_correction_off	Au-K-Tb	seed_43	M3 review: step=16 subgoal=Au-K memory_records=6
+m3_self_correction_off	Co-Dy-W	seed_17	M3 review: step=0 subgoal=Co-Dy memory_records=0
+m3_self_correction_off	Co-Dy-W	seed_17	M3 review: step=4 subgoal=Co-Dy memory_records=4
+m3_self_correction_off	Co-Dy-W	seed_17	M3 review: step=8 subgoal=Co-Dy memory_records=6
+m3_self_correction_off	Co-Dy-W	seed_17	M3 review: step=12 subgoal=Co-Dy memory_records=6
+m3_self_correction_off	Co-Dy-W	seed_17	M3 review: step=16 subgoal=Co-Dy memory_records=6
+m3_self_correction_off	Co-Dy-W	seed_29	M3 review: step=0 subgoal=Co-Dy memory_records=0
+m3_self_correction_off	Co-Dy-W	seed_29	M3 review: step=4 subgoal=Co-Dy memory_records=4
+m3_self_correction_off	Co-Dy-W	seed_29	M3 review: step=8 subgoal=Co-Dy memory_records=6
+m3_self_correction_off	Co-Dy-W	seed_29	M3 review: step=12 subgoal=Dy-W memory_records=6
+m3_self_correction_off	Co-Dy-W	seed_29	M3 review: step=16 subgoal=Co-Dy-W memory_records=6
+m3_self_correction_off	Co-Dy-W	seed_43	M3 review: step=0 subgoal=Co-Dy memory_records=0
+m3_self_correction_off	Co-Dy-W	seed_43	M3 review: step=4 subgoal=Co-Dy memory_records=4
+m3_self_correction_off	Co-Dy-W	seed_43	M3 review: step=8 subgoal=Co-Dy memory_records=6
+m3_self_correction_off	Co-Dy-W	seed_43	M3 review: step=12 subgoal=Co-Dy-W memory_records=6
+m3_self_correction_off	Co-Dy-W	seed_43	M3 review: step=16 subgoal=Dy-W memory_records=6
+m3_self_correction_off	Co-Mg-Na	seed_17	M3 review: step=0 subgoal=Co-Na memory_records=0
+m3_self_correction_off	Co-Mg-Na	seed_17	M3 review: step=4 subgoal=Co-Mg-Na memory_records=4
+m3_self_correction_off	Co-Mg-Na	seed_17	M3 review: step=8 subgoal=Co-Mg memory_records=6
+m3_self_correction_off	Co-Mg-Na	seed_17	M3 review: step=12 subgoal=Co-Mg memory_records=6
+m3_self_correction_off	Co-Mg-Na	seed_17	M3 review: step=16 subgoal=Co-Mg memory_records=6
+m3_self_correction_off	Co-Mg-Na	seed_29	M3 review: step=0 subgoal=Co-Mg-Na memory_records=0
+m3_self_correction_off	Co-Mg-Na	seed_29	M3 review: step=4 subgoal=Co-Na memory_records=4
+m3_self_correction_off	Co-Mg-Na	seed_29	M3 review: step=8 subgoal=Co-Mg memory_records=6
+m3_self_correction_off	Co-Mg-Na	seed_29	M3 review: step=12 subgoal=Co-Mg memory_records=6
+m3_self_correction_off	Co-Mg-Na	seed_29	M3 review: step=16 subgoal=Co-Mg-Na memory_records=6
+m3_self_correction_off	Co-Mg-Na	seed_43	M3 review: step=0 subgoal=Co-Na memory_records=0
+m3_self_correction_off	Co-Mg-Na	seed_43	M3 review: step=4 subgoal=Co-Mg-Na memory_records=4
+m3_self_correction_off	Co-Mg-Na	seed_43	M3 review: step=8 subgoal=Co-Mg memory_records=6
+m3_self_correction_off	Co-Mg-Na	seed_43	M3 review: step=12 subgoal=Co-Mg memory_records=6
+m3_self_correction_off	Co-Mg-Na	seed_43	M3 review: step=16 subgoal=Co-Mg-Na memory_records=6
+m3_self_correction_off	Ga-Pt-Tm	seed_17	M3 review: step=0 subgoal=Ga-Pt memory_records=0
+m3_self_correction_off	Ga-Pt-Tm	seed_17	M3 review: step=4 subgoal=Ga-Pt memory_records=4
+m3_self_correction_off	Ga-Pt-Tm	seed_17	M3 review: step=8 subgoal=Ga-Pt memory_records=6
+m3_self_correction_off	Ga-Pt-Tm	seed_17	M3 review: step=12 subgoal=Ga-Pt memory_records=6
+m3_self_correction_off	Ga-Pt-Tm	seed_17	M3 review: step=16 subgoal=Pt-Tm memory_records=6
+m3_self_correction_off	Ga-Pt-Tm	seed_29	M3 review: step=0 subgoal=Ga-Pt memory_records=0
+m3_self_correction_off	Ga-Pt-Tm	seed_29	M3 review: step=4 subgoal=Ga-Pt memory_records=4
+m3_self_correction_off	Ga-Pt-Tm	seed_29	M3 review: step=8 subgoal=Ga-Pt memory_records=6
+m3_self_correction_off	Ga-Pt-Tm	seed_29	M3 review: step=12 subgoal=Ga-Pt memory_records=6
+m3_self_correction_off	Ga-Pt-Tm	seed_29	M3 review: step=16 subgoal=Ga-Pt memory_records=6
+m3_self_correction_off	Ga-Pt-Tm	seed_43	M3 review: step=0 subgoal=Ga-Pt memory_records=0
+m3_self_correction_off	Ga-Pt-Tm	seed_43	M3 review: step=4 subgoal=Ga-Pt memory_records=4
+m3_self_correction_off	Ga-Pt-Tm	seed_43	M3 review: step=8 subgoal=Ga-Pt memory_records=6
+m3_self_correction_off	Ga-Pt-Tm	seed_43	M3 review: step=12 subgoal=Pt-Tm memory_records=6
+m3_self_correction_off	Ga-Pt-Tm	seed_43	M3 review: step=16 subgoal=Ga-Pt-Tm memory_records=6
+m3_self_correction_off	Hf-Ni-Zr	seed_17	M3 review: step=0 subgoal=Hf-Ni-Zr memory_records=0
+m3_self_correction_off	Hf-Ni-Zr	seed_17	M3 review: step=4 subgoal=Hf-Ni-Zr memory_records=4
+m3_self_correction_off	Hf-Ni-Zr	seed_17	M3 review: step=8 subgoal=Ni-Zr memory_records=6
+m3_self_correction_off	Hf-Ni-Zr	seed_17	M3 review: step=12 subgoal=Ni-Zr memory_records=6
+m3_self_correction_off	Hf-Ni-Zr	seed_17	M3 review: step=16 subgoal=Ni-Zr memory_records=6
+m3_self_correction_off	Hf-Ni-Zr	seed_29	M3 review: step=0 subgoal=Hf-Ni-Zr memory_records=0
+m3_self_correction_off	Hf-Ni-Zr	seed_29	M3 review: step=4 subgoal=Ni-Zr memory_records=4
+m3_self_correction_off	Hf-Ni-Zr	seed_29	M3 review: step=8 subgoal=Ni-Zr memory_records=6
+m3_self_correction_off	Hf-Ni-Zr	seed_29	M3 review: step=12 subgoal=Ni-Zr memory_records=6
+m3_self_correction_off	Hf-Ni-Zr	seed_29	M3 review: step=16 subgoal=Ni-Zr memory_records=6
+m3_self_correction_off	Hf-Ni-Zr	seed_43	M3 review: step=0 subgoal=Hf-Ni-Zr memory_records=0
+m3_self_correction_off	Hf-Ni-Zr	seed_43	M3 review: step=4 subgoal=Ni-Zr memory_records=4
+m3_self_correction_off	Hf-Ni-Zr	seed_43	M3 review: step=8 subgoal=Ni-Zr memory_records=6
+m3_self_correction_off	Hf-Ni-Zr	seed_43	M3 review: step=12 subgoal=Ni-Zr memory_records=6
+m3_self_correction_off	Hf-Ni-Zr	seed_43	M3 review: step=16 subgoal=Ni-Zr memory_records=6
+m3_self_correction_off	Mg-Sn-Sr	seed_17	M3 review: step=0 subgoal=Sn-Sr memory_records=0
+m3_self_correction_off	Mg-Sn-Sr	seed_17	M3 review: step=4 subgoal=Sn-Sr memory_records=4
+m3_self_correction_off	Mg-Sn-Sr	seed_17	M3 review: step=8 subgoal=Sn-Sr memory_records=6
+m3_self_correction_off	Mg-Sn-Sr	seed_17	M3 review: step=12 subgoal=Mg-Sn-Sr memory_records=6
+m3_self_correction_off	Mg-Sn-Sr	seed_17	M3 review: step=16 subgoal=Sn-Sr memory_records=6
+m3_self_correction_off	Mg-Sn-Sr	seed_29	M3 review: step=0 subgoal=Sn-Sr memory_records=0
+m3_self_correction_off	Mg-Sn-Sr	seed_29	M3 review: step=4 subgoal=Sn-Sr memory_records=4
+m3_self_correction_off	Mg-Sn-Sr	seed_29	M3 review: step=8 subgoal=Mg-Sn-Sr memory_records=6
+m3_self_correction_off	Mg-Sn-Sr	seed_29	M3 review: step=12 subgoal=Sn-Sr memory_records=6
+m3_self_correction_off	Mg-Sn-Sr	seed_29	M3 review: step=16 subgoal=Mg-Sn-Sr memory_records=6
+m3_self_correction_off	Mg-Sn-Sr	seed_43	M3 review: step=0 subgoal=Sn-Sr memory_records=0
+m3_self_correction_off	Mg-Sn-Sr	seed_43	M3 review: step=4 subgoal=Sn-Sr memory_records=4
+m3_self_correction_off	Mg-Sn-Sr	seed_43	M3 review: step=8 subgoal=Sn-Sr memory_records=6
+m3_self_correction_off	Mg-Sn-Sr	seed_43	M3 review: step=12 subgoal=Sn-Sr memory_records=6
+m3_self_correction_off	Mg-Sn-Sr	seed_43	M3 review: step=16 subgoal=Mg-Sn-Sr memory_records=6

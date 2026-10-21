@@ -28,15 +28,19 @@ scripted demo on lithium-iron-oxygen, new phases appear only at queries 3 and
 Every re-plan is logged, so in the real runs we can trace which discoveries
 followed a re-plan.
 
-## Slide 3: Two ablations against M1's reference (~35 s)
+## Slide 3: M3 lifts weak systems, loses on strong ones (~40 s)
 
-We measure M3 against M1's reference agent. In its first runs on all six
-development systems and three seeds, it found 5 stable, unique, novel
-structures per run on average, with a wide spread. Since then the team added
-M4's memory, so I re-run the reference under the same setup as M3. M3 adds
-three configurations on exactly the same systems, seeds, budget and oracle:
-full M3, M3 with planning off, and M3 with self-correction off. Each is paired
-with the re-run reference by system and seed. The difference between full M3
-and each ablation isolates what planning and self-correction contribute. Those
-runs happen on the 26th and 27th. This slide will then show the paired differences
-and one or two traced re-plan cases. No result is claimed yet.
+All 72 runs finished. The re-run reference matches M1's recorded numbers
+exactly, so the comparison is clean. Full M3 finds 1.5 more stable, unique,
+novel structures per run than the reference, but the spread is larger than
+the mean, and the effect depends on the system. On the three systems where the
+reference finds almost nothing, M3 goes from about 1 to about 7. On the three
+where the reference already does well, M3 drops from about 9 to about 6. The
+reason is the planner: it commits to binary edges and gives the ternary
+interior at most two of its five batches. That pays off when the stable phases
+sit on an edge, like gold-terbium, and costs discoveries in
+hafnium-nickel-zirconium, where the interior is rich. Planning adds 1.4 over
+planning off. Self-correction adds 0.7: it re-planned 16 times, all for no
+progress, and the clearest case is cobalt-magnesium-sodium, where re-plans at
+queries 6 and 13 lift the three seeds from 3 structures in total to 13. Next step: keep a minimum
+share of queries for the ternary interior.

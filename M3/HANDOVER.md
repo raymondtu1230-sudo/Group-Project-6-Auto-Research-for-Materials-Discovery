@@ -15,8 +15,8 @@ still in place.
 | M1 | One-page design and slot interface (`DESIGN.md`) | 19–20 | Signed off by M1 (20 Oct) |
 | M1 | Code, Hydra configs, tests (`M3/integration/`) | 24 | Integrated by M1 (20 Oct, `2fcc214`) |
 | M6 | Method text (`report/M3_METHOD.md`) and draft slides (`report/M3_Method_Draft.pptx`) | 24 | Received by M6 (20 Oct) |
-| M2, M6 | Ablation CSVs (`results/*.csv`) and results text (`report/M3_RESULTS.md`) | 27 | Requested by M6; runs scheduled 26–27 Oct |
-| M6 | Final slides | 27 | After the runs |
+| M2, M6 | Ablation CSVs (`results/*.csv`) and results text (`report/M3_RESULTS.md`) | 27 | Ready (72 runs, 21 Oct); to send |
+| M6 | Final slides | 27 | Slide 3 updated with results; to send |
 
 ## Notes for teammates
 
@@ -96,7 +96,20 @@ matches the current file, so the 54 M3 runs are re-run with the fix. The 18
 reproduced M1's 19 Oct numbers exactly: the diversity planner ignores memory,
 so turning on M4 memory did not change it.
 
+## Results (21 Oct, fixed code)
+
+All 72 runs were re-run on one machine (runbook section 0), the baseline
+included, so every arm shares hardware and code. All completed on the first
+attempt, and the re-run baseline again matches M1's 19 Oct values in all 18
+pairs. Evidence: `evidence/20261021-dev-ablations/`.
+
+- `m3_full` vs `m1_baseline`: +1.50 mSUN per run (9 better / 3 same / 6
+  worse). M3 lifts the three systems where the reference finds little and
+  loses on the three where it does well. See `report/M3_RESULTS.md`, "Why".
+- Planning: +1.39 (12 / 1 / 5). Self-correction: +0.67 (7 / 10 / 1); it now
+  fires (16 no-progress re-plans in `m3_full`).
+
 ## Not yet done
 
-- Fixed M3 arms: 54 runs in progress; results, slide 3 and evidence follow.
-- There is no performance claim until those runs exist.
+- Send `report/M3_RESULTS.md` and `results/*.csv` to M2, and
+  `report/M3_RESULTS.md` and the slides to M6, by 27 Oct.
