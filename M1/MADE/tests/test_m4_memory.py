@@ -5,6 +5,7 @@ import json
 import pytest
 from hydra import compose, initialize_config_dir
 from hydra.utils import instantiate
+from m4_memory.capture import CapturedM1IntegratedAgent
 from m4_memory.m1_adapter import M4MemoryManager
 from test_m1_integrated import make_agent
 
@@ -62,7 +63,9 @@ def test_config_constructs_real_agent(tmp_path):
             overrides=["agent=m1_integrated", "experiment.seed=0"],
         )
         config.agent.memory_manager.log_path = str(tmp_path / "log.jsonl")
+        config.agent.capture_path = str(tmp_path / "capture.jsonl")
         agent = instantiate(config.agent)
+    assert isinstance(agent, CapturedM1IntegratedAgent)
     assert isinstance(agent.memory_manager, M4MemoryManager)
 
 

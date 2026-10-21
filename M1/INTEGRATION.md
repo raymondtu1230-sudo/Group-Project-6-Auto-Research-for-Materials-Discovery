@@ -7,7 +7,7 @@ All M1-created project files, configurations, logs, and run instructions live un
 
 ## Agent contract
 
-`made.agents.m1_integrated.M1IntegratedAgent` follows MADE's normal `Agent(state) -> (Composition, Structure)` contract and is loaded with `agent=m1_integrated`.
+`m4_memory.capture.CapturedM1IntegratedAgent`, an audited subclass of `made.agents.m1_integrated.M1IntegratedAgent`, follows MADE's normal `Agent(state) -> (Composition, Structure)` contract and is loaded with `agent=m1_integrated`.
 
 The Hydra switches are:
 
@@ -27,6 +27,8 @@ M4's optional `memory_manager` implements `update_state(state)`, `get_memory() -
 
 Turning off M4 memory disables only the M1/M4 memory enhancement. The agent still receives the current MADE state and last oracle feedback as required by the benchmark protocol.
 
+Proposal rejection/error capture remains enabled independently of `enable_memory` and writes `m4_proposal_events.jsonl` beside the run outputs. Keep the capture path and run/episode identity identical in the full and `memory_off` arms; capture evidence is checkpointed but never enters memory retrieval, planning, or rewards.
+
 ## Handover checklist
 
 - M2-M5 should deliver an importable component, its Hydra config/example, a short interface description, and a minimal test by 24 Oct.
@@ -41,5 +43,6 @@ Turning off M4 memory disables only the M1/M4 memory enhancement. The agent stil
 - M3 planner: implements MADE `Planner.propose(state, previous) -> Plan`, `update_state`, `get_state`, and `load_state`; check that a plan is returned when enabled and the fallback composition works when disabled.
 - M3 self-correction: implements `revise_plan(plan, context) -> Plan`; test enabled plan revision and disabled pass-through.
 - M4 memory: implements `update_state`, `get_memory -> list[dict]`, `get_state`, and `load_state`; test that only observed feedback is used and that disabled memory is not passed to the planner.
+- M4 capture: keep the wrapper and sidecar configuration identical in both memory arms; test rejected/error records, checkpoint restore, and isolation from memory/planning.
 - M5 exploration: implements `adjust_plan(plan, context) -> Plan`; test both enabled transformation and disabled pass-through, including the remaining-query context.
 - Every stateful plug-in should round-trip through checkpoint state. Plug-in tests should use fake MADE state and must not require an oracle/API key.

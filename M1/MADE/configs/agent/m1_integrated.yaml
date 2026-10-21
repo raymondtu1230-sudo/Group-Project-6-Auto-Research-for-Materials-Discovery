@@ -1,4 +1,8 @@
-_target_: made.agents.m1_integrated.M1IntegratedAgent
+_target_: m4_memory.capture.CapturedM1IntegratedAgent
+
+capture_path: ${hydra:runtime.output_dir}/m4_proposal_events.jsonl
+capture_run_id: ${oc.env:M4_RUN_ID,m4-local}
+capture_episode_id: ${oc.env:M4_EPISODE_ID,0}
 
 defaults:
   - planner: diversity

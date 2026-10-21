@@ -177,10 +177,9 @@ def test_hydra_profile_constructs_and_runs_real_components(tmp_path):
                 "experiment.seed=17",
                 "agent.planner.max_stoichiometry=4",
                 "agent.planner.num_candidates=2",
-                "agent._target_=m4_memory.capture.CapturedM1IntegratedAgent",
-                f"+agent.capture_path={tmp_path / 'audit.jsonl'}",
-                "+agent.capture_run_id=hydra-check",
-                "+agent.capture_episode_id=0",
+                f"agent.capture_path={tmp_path / 'audit.jsonl'}",
+                "agent.capture_run_id=hydra-check",
+                "agent.capture_episode_id=0",
             ],
         )
         config.agent.memory_manager.log_path = str(tmp_path / "memory.jsonl")

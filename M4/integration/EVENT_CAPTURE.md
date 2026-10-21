@@ -3,9 +3,10 @@
 ## Delivery status
 
 M1 integrated M4 on main (`9acd3c9`) and M3 (`2fcc214`). The ordinary memory
-manager captures evaluated feedback; the optional capture agent added here is
-not yet enabled in main. It is ready for M1 review and synthetic integration
-checks. M5 confirmed schema v1 in `M5/M4_LOG_CONFIRMATION.md`.
+manager captures evaluated feedback. On 21 October, M1 adopted the optional
+capture agent in the official `m1_integrated` profile, with the same capture
+configuration in both memory arms. M5 confirmed schema v1 in
+`M5/M4_LOG_CONFIRMATION.md`.
 
 ## Coverage and limits
 
@@ -34,13 +35,12 @@ Match the recorded public structure to the official query trajectory to assess
 actual evaluation. Do not classify ordinary instability as a runtime error.
 The wrapper records batch exclusion, not detailed internal filter reasons.
 
-## Optional adoption by M1
+## M1 adoption
 
-Install M4 as in `ADOPTION.md`. Merge the four fields in
-`m4_capture_overrides.yaml` into the chosen agent profile, preserving the current
-M3 planner, M5 policy, M2 router, generation/filter settings and all switches.
-This changes only the agent target to the audited subclass and adds capture
-configuration. It is not an automatic main-branch configuration change.
+M1 has merged the four fields in `m4_capture_overrides.yaml` into the official
+agent profile while preserving the current M3 planner, M5 policy, M2 router,
+generation/filter settings and all switches. Install M4 as in `ADOPTION.md`
+before running that profile.
 
 Use an independent sidecar per episode. Enable capture identically for full and
 memory_off, independent of `enable_memory`. The sidecar must never feed memory
@@ -84,4 +84,8 @@ batches and safe exception logging. They are not material-discovery results.
 
 ## Local verification outcome
 
-On 20 October: 69 combined tests passed; focused Ruff passed. The unchanged M1 smoke and two M3/M4/capture synthetic episodes (ON/OFF, two queries each) completed after allowing local Chrome for plot export. See M4/evidence/joint-integration/README.md. The optional capture configuration still needs M1 adoption; these are integration checks, not formal effect results.
+On 21 October, after M1 adoption, 69 combined tests passed and focused Ruff
+passed. The earlier unchanged M1 smoke and two M3/M4/capture synthetic episodes
+(ON/OFF, two queries each) also completed after allowing local Chrome for plot
+export. See M4/evidence/joint-integration/README.md. These are integration
+checks, not formal effect results.
