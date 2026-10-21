@@ -1,6 +1,6 @@
 # Requirements Checklist (course brief → owner → status → file)
 
-Owner: M6. Last updated: 2026-10-20 at team revision `5cd6842`.
+Owner: M6. Last updated: 2026-10-21 at team revision `3f09f39`.
 Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked.
 
 ## 4.1 Codebase
@@ -10,8 +10,8 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | C1 | Auto Research agent integrated with the official MADE interface, full closed-loop episodes | M1 | 🟡 `m1_baseline` runs end to end; `m1_full` waits for plug-in integration and the 25 Oct freeze | `M1/MADE/src/made/agents/`, `M1/INTEGRATION.md`, `M1/run_experiment.py` |
 | C2 | At least one research strategy of our own design | M2–M5 | 🟡 components delivered as separate folders, not yet wired into one frozen agent | `M2/integration/`, `M3/`, `M4/src/`, `M5/src/` |
 | C2a | Planning and decomposition | M3 | 🟡 code + tests on main; M1 still has to run `M3/install.py`; ablation runs (vs `m1_baseline`) due to M2 by 27 Oct | `M3/README.md`, `M3/HANDOVER.md` |
-| C2b | Memory and evidence management | M4 | 🟡 integrated in M1. `m1_full` and the `*_off` ablations use M3's planner, which reads `m1_memory` (confirmed by M1, M3, M4) | `M4/M1_STATUS.md`, `M4/VALIDATION.md` |
-| C2c | Exploration vs exploitation | M5 | 🟡 wired in `m1_integrated.yaml` (switch off by default, on for `m1_full`); decision-log JSONL sidecar on main, `log_path` not yet set in the config | `M5/README.md` |
+| C2b | Memory and evidence management | M4 | 🟡 integrated; M4 proposal-event capture wired in `m1_integrated.yaml`. One dev pilot pair (Mg-Sn-Sr/17, pre-fix M3 planner): ON 7 vs OFF 8 mSUN@20, no benefit shown; M3 then fixed `_review` to count only new stable phases (`e1a40d8`) | `M4/evidence/dev-pilot-20261021/` |
+| C2c | Exploration vs exploitation | M5 | 🟡 integrated; `alpha0: 0.8` and `m5_decisions.jsonl` sidecar wired in `m1_integrated.yaml`. α₀=0.8 chosen from one dev dry-run pair (Mg-Sn-Sr/17, AUDC 66.5 → 84.5); raw outputs of that dry run are not in the repo yet | `M5/report/M5_METHOD.md` |
 | C2d | Candidate proposal / tool routing | M2 | 🟡 code + tests; PR #2 unmerged | `M2/STATUS.md` |
 | C2e | Reflection and failure recovery | M3 | 🟡 as C2a | `M3/README.md` |
 | C3 | Random-generator baseline (official) | M2 | ✅ dev 18/18; check 12/12 (M6, 20 Oct): mSUN@20 5.58 ± 0.63 | `M2/verification/20261020-handoff-audit/`, `M6/results/20261020-check-random/` |
@@ -44,11 +44,11 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | R2 | Discovery curves | M2 | 🟡 plotting works (`evaluate.py`); partial curve only | `M2/verification/20261019-chemeleon-recovery/discovery_curves.png` |
 | R3 | Component ablation | M3, M4, M5, M2; M6 combines | ⬜ after freeze; dev only. M3's results compare with `m1_baseline`, so they go in a separate table, not Table 2 (`M6/PROTOCOL_ADOPTION.md` §5) | `M3/report/M3_RESULTS.md` |
 | R4 | Generalization: dev vs held-out | M6 | 🟡 Random dev vs check done (check easier by +1.53 mSUN, +38 %); Chemeleon and agent pending | `M6/generalization.py`, `M6/results/20261020-generalization-random/` |
-| R5 | Failure classification: over-exploitation, one trajectory | M5, M4, M6 | ⬜ logging exists (`decision_log`) | – |
-| R6 | Failure classification: wasteful exploration, one trajectory | M5, M4, M6 | ⬜ M4 capture of filter rejections, exceptions and empty batches is on main (not oracle errors); M1 must apply `m4_capture_overrides.yaml` and M5's `log_path` before the freeze | `M4/integration/EVENT_CAPTURE.md` |
+| R5 | Failure classification: over-exploitation, one trajectory | M5, M4, M6 | 🟡 logs wired for the frozen agent. Candidate: M4 pilot, memory ON stayed in the Sn–Sr binary (pre-fix planner; illustrative only) | `M4/evidence/dev-pilot-20261021/` |
+| R6 | Failure classification: wasteful exploration, one trajectory | M5, M4, M6 | 🟡 logs wired (M4 capture + M5 decision log). Candidate: M5 dry run α₀=0.5, steps 10–15 (6 diverse queries, 1 stable hit); needs its raw trajectory in the repo. Final examples come from frozen-agent runs | `M5/report/M5_METHOD.md` |
 | R7 | Discussion: which mechanisms helped, remaining bottlenecks | M6 | ⬜ | – |
 | R8 | Research cost: oracle calls, tokens/USD, wall time | M2, M6 | 🟡 recorded per run | `M1/cost_tracking.py` |
-| R9 | Method text from each member (due 24 Oct) | M1–M5 | 🟡 M3 ✅ received 20 Oct (`M3/report/M3_METHOD.md`, `M3_Method_Draft.pptx`); M2 and M4 drafts exist; M1 short draft; M5 design doc only | sent to M6 |
+| R9 | Method text from each member (due 24 Oct) | M1–M5 | 🟡 received: M2 ✅ (36/36 deck, 21 Oct), M3 ✅, M5 ✅ (`M5/report/M5_METHOD.md`, 21 Oct). Pending: M1 (short draft only), M4 (`M4/report/` draft exists, results pending) | sent to M6 |
 | R10 | Per-material table to M2 (27 Oct) | M6 | ⬜ | – |
 
 ## 4.3 Presentation

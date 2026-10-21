@@ -114,3 +114,27 @@ what is still open. Used for the individual report.
   Co-Dy-W/17 in dev, which gives EF = 0 under MADE's convention).
 - Raw runs preserved as `results/20261020-check-random/raw_artifact.zip` (checked: no
   API key inside).
+
+## 2026-10-21
+
+- Received M2's final handover: 36/36 dev baselines validated, slides
+  (`M2/report/M2_Method_and_Dev_Baselines_20261021_36of36.pptx`) and notes. Re-ran their
+  final report through `generalization.py`: same means (Random 4.06 ± 0.63, Chemeleon
+  6.94 ± 1.11 mSUN@20). Flagged that Chemeleon's EF vs Random (7.53 ± 9.48) is driven by
+  one zero-baseline pair (Co-Dy-W/17, EF capped at 100); without it, mean 2.09,
+  median 1.5 over 17 pairs.
+- Received M5's method text (`M5/report/M5_METHOD.md`). Notes for the report:
+  - α₀ = 0.8 was chosen from one dev dry-run pair (Mg-Sn-Sr/17, AUDC 66.5 → 84.5).
+    Tuning on dev is allowed; the report must say it rests on one unit, which is also
+    one of the 18 dev evaluation units.
+  - Limitation: with M3's one-composition-per-step plans, exploration gets at most one
+    slot per step.
+  - The method text still says "Defaults α₀ = 0.5" in the algorithm section; asked M5
+    to align it with 0.8.
+  - The dry-run raw outputs are not in the repo, so its numbers and the suggested
+    wasteful-exploration example (α₀ = 0.5, steps 10–15) can't be cited yet.
+- M4 ran one dev Memory ON/OFF pilot (Mg-Sn-Sr/17): ON 7 vs OFF 8 mSUN@20. Not the
+  final ablation; M3 has since fixed `_review` to count only new stable phases. The ON
+  run staying in the Sn–Sr binary is a possible over-exploitation illustration.
+- M1 has wired M4's proposal-event capture and M5's decision log into
+  `m1_integrated.yaml`, so the frozen agent will produce failure-analysis logs.
