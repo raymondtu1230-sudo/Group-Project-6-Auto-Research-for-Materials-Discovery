@@ -13,7 +13,9 @@ All state is JSON-serializable for checkpointing and for M4's evidence log.
 
 from __future__ import annotations
 
+import json
 import math
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -120,6 +122,7 @@ class UCBExplorationPolicy:
         length_scale: float = 0.35,
         noise: float = 1e-4,
         max_pool: int = 512,
+        log_path: str | None = None,
     ) -> None:
         if not 0.0 <= alpha0 <= 1.0:
             raise ValueError("alpha0 must be in [0, 1]")
@@ -133,7 +136,15 @@ class UCBExplorationPolicy:
         self.length_scale = float(length_scale)
         self.noise = float(noise)
         self.max_pool = int(max_pool)
+        # Optional per-episode JSONL sidecar (M4 requested). Each adjust_plan
+        # call appends one line; parent dirs are created lazily.
+        self.log_path = log_path
         self.decision_log: list[dict[str, Any]] = []
+        # Cumulative queried-formula set. ``m1_memory`` may be bounded (e.g.
+        # M4's manager serves at most `limit` recent records), so formulas that
+        # fall out of memory would otherwise be re-proposable. The policy
+        # accumulates every formula it ever observes across the episode.
+        self._queried_history: set[str] = set()
 
     # -- surrogate inputs -------------------------------------------------
 
@@ -185,6 +196,9 @@ class UCBExplorationPolicy:
         stats: dict[str, Any] = {}
         if n_explore > 0:
             xs, ys, queried = self._observations(context)
+            # Never re-propose a formula seen this episode, even if it fell out
+            # of the bounded m1_memory window.
+            queried = queried | self._queried_history
             pool = [
                 comp
                 for comp in _enumerate_stoichiometries(
@@ -219,37 +233,71 @@ class UCBExplorationPolicy:
                 }
 
         mode = "mixed" if picks and incoming else ("explore" if picks else "exploit")
-        self.decision_log.append(
-            {
-                "step": used,
-                "query_count": used,
-                "m1_queries_remaining": remaining,
-                "mode": mode,
-                "incoming_compositions": [c.reduced_formula for c in incoming],
-                "outgoing_compositions": [c.reduced_formula for c in incoming + picks],
-                "composition_source": ["planner"] * len(incoming)
-                + ["ucb_explore"] * len(picks),
-                "alpha_t": alpha_t,
-                "beta": beta_t,
-                "rationale": (
-                    f"alpha={alpha_t:.2f}, {len(picks)}/{len(incoming) + len(picks)}"
-                    " slots to unexplored stoichiometries"
-                    if picks
-                    else f"alpha={alpha_t:.2f}, pure exploitation of planner plan"
-                ),
-                **stats,
-            }
+        # Record this decision's outgoing formulas as attempted, so later
+        # steps never re-propose them even if memory forgets.
+        self._queried_history.update(
+            c.reduced_formula for c in incoming + picks
         )
+        record = {
+            "step": used,
+            "query_count": used,
+            "m1_queries_remaining": remaining,
+            "mode": mode,
+            "incoming_compositions": [c.reduced_formula for c in incoming],
+            "outgoing_compositions": [c.reduced_formula for c in incoming + picks],
+            "composition_source": ["planner"] * len(incoming)
+            + ["ucb_explore"] * len(picks),
+            "alpha_t": alpha_t,
+            "beta": beta_t,
+            "rationale": (
+                f"alpha={alpha_t:.2f}, {len(picks)}/{len(incoming) + len(picks)}"
+                " slots to unexplored stoichiometries"
+                if picks
+                else f"alpha={alpha_t:.2f}, pure exploitation of planner plan"
+            ),
+            **stats,
+        }
+        self.decision_log.append(record)
+        if self.log_path:
+            self._append_jsonl(record)
         return Plan(
             compositions=incoming + picks,
             num_candidates=int(plan.num_candidates),
             constraints=dict(plan.constraints),
         )
 
+    def _append_jsonl(self, record: dict[str, Any]) -> None:
+        """Append one decision record to the per-episode JSONL sidecar."""
+        path = Path(self.log_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+
     # -- checkpointing ------------------------------------------------------
 
     def get_state(self) -> dict[str, Any]:
-        return {"decision_log": list(self.decision_log)}
+        return {
+            "decision_log": list(self.decision_log),
+            "queried_formulas": sorted(self._queried_history),
+        }
 
     def load_state(self, state: dict[str, Any]) -> None:
         self.decision_log = list(state.get("decision_log", []))
+        self._queried_history = set(state.get("queried_formulas", []))
+        # Resume consistency: after a checkpoint restore, replayed steps must
+        # not duplicate sidecar lines. Truncate the JSONL to the restored
+        # decision count so the file and in-memory log stay in lockstep.
+        if self.log_path:
+            self._truncate_jsonl(len(self.decision_log))
+
+    def _truncate_jsonl(self, keep: int) -> None:
+        """Keep only the first `keep` lines of the sidecar (resume safety)."""
+        path = Path(self.log_path)
+        if not path.exists():
+            return
+        lines = path.read_text(encoding="utf-8").splitlines()
+        if len(lines) <= keep:
+            return
+        path.write_text(
+            "\n".join(lines[:keep]) + ("\n" if keep else ""), encoding="utf-8"
+        )
