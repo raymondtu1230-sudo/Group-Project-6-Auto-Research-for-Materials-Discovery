@@ -1,0 +1,14 @@
+{
+  "base_team_revision": "e1a40d8acec8b4d993a83a672f630daaf47ded1a",
+  "development_only": true,
+  "files_sha256": {
+    "M4/run_dev_pilot.py": "c8119890dd7f7be203bfe32ac266506148322e3d67eaed8c886b2ac6f759df30",
+    "M4/validate_dev_pilot.py": "fab0983e11ad03c1bebb96c5cd99920a7e5da09bdc1cc2d4c3667328dd1d4459",
+    "M4/src/m4_memory/__init__.py": "a38bb51007018174f2e25b7c8b6a27a07310b06687c215dac2a0aa5ad2d573d9",
+    "M4/src/m4_memory/capture.py": "27e1053520b0becbdc721c83954c02e514562c120ab097d0ef98c5a845eb9ddc",
+    "M4/src/m4_memory/evidence.py": "e953d2a71e9a0e536daea8888e0a6ad3dc90c11cb78102d82139beac4ad6df9c",
+    "M4/src/m4_memory/m1_adapter.py": "ced53f363b6640cc1856f38dc0ee54dc7994cee65c64b0dfe42bc88c417b9881",
+    "M4/src/m4_memory/memory.py": "eee8543734e19a756cc84f05341cd1102c5d42d87b04bfca0be6c46a6b8a1f82"
+  },
+  "raw_archive_sha256": "ef0a6b18b0a186b4af2ebf6d5583eff57939012d471474d9bbec575e153ce25c"
+}

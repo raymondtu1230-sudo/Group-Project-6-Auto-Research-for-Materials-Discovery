@@ -136,3 +136,7 @@ capture is described in integration/EVENT_CAPTURE.md and needs M1 adoption.
 Capture must be identical in both arms and remain outside decision inputs.
 M6 confirms ablations on dev only; check/hidden are restricted to the frozen
 full agent and baselines. Formal experiments still require the frozen reference.
+
+## 21 October development-pair outcome
+
+M1 adopted capture in `3f8d48f`. The explicit M3/M4 development pair completed and is documented in DEV_PILOT.md; it is not a frozen full-agent ablation. Current m1_full enables unconfigured tool routing, so do not run the final commands above until the full-agent readiness gate is met. Negative development results and raw outputs are retained under evidence/dev-pilot-20261021/.

@@ -1,0 +1,88 @@
+[
+  {
+    "step": 0,
+    "subgoal": "Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9991,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 1.0789
+    },
+    "memory_used": false,
+    "memory_ids": []
+  },
+  {
+    "step": 4,
+    "subgoal": "Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9991,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 1.3256
+    },
+    "memory_used": true,
+    "memory_ids": [
+      "evaluation:2",
+      "evaluation:1",
+      "evaluation:4",
+      "evaluation:3"
+    ]
+  },
+  {
+    "step": 8,
+    "subgoal": "Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9991,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 1.2912
+    },
+    "memory_used": true,
+    "memory_ids": [
+      "evaluation:6",
+      "evaluation:5",
+      "evaluation:4",
+      "evaluation:3",
+      "evaluation:2",
+      "evaluation:1"
+    ]
+  },
+  {
+    "step": 12,
+    "subgoal": "Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9991,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 1.1746
+    },
+    "memory_used": true,
+    "memory_ids": [
+      "evaluation:11",
+      "evaluation:10",
+      "evaluation:8",
+      "evaluation:7",
+      "evaluation:6",
+      "evaluation:5"
+    ]
+  },
+  {
+    "step": 16,
+    "subgoal": "Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9991,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 1.0907
+    },
+    "memory_used": true,
+    "memory_ids": [
+      "evaluation:15",
+      "evaluation:14",
+      "evaluation:12",
+      "evaluation:11",
+      "evaluation:10",
+      "evaluation:9"
+    ]
+  }
+]

@@ -37,3 +37,7 @@ M5 confirmed schema v1 in M5/M4_LOG_CONFIRMATION.md. M6 receipt of M4 method mat
 19 October: adapted to M1, validated temporary wiring, completed synthetic and real-material workflows, preserved official outputs and exported complete evidence. Delivered M4 to main, with M1 wiring deferred. Reviewed the brief and team requirements. Corrected the export schema, distinguished observed instability from uncaptured runtime failures, and prepared method text and draft slides. Effect evaluation awaits actual Planner consumption of memory.
 
 20 October: verified real M1/M3/M4 synthetic decision boundaries and added optional, checkpointable generator/filter audit capture. See integration/EVENT_CAPTURE.md and joint_test_results.txt. Main adoption of the optional capture target and the frozen full-agent ablation remain pending.
+
+## 21 October development pilot
+
+A real Mg-Sn-Sr/seed17 pair completed under the adopted M1/M3/M4 profile: ON mSUN@20=7, AUDC=68.5; OFF mSUN@20=8, AUDC=76.0. Both passed individual offline validation and paired configuration/reference checks. This is a development-only negative result, not the frozen full-agent ablation. See [DEV_PILOT.md](DEV_PILOT.md) and [evidence/dev-pilot-20261021/README.md](evidence/dev-pilot-20261021/README.md).

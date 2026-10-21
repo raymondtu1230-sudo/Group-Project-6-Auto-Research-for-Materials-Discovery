@@ -59,3 +59,7 @@ M4/ contains the module, documentation, tests, synthetic examples, and deferred 
 ## Schema update
 
 The adapter/exporter now share chemical-system, candidate-composition and observed-outcome fields. Export requires an explicit full chemical system. Existing run metrics and original trajectories remain unchanged. Updated evidence is regenerated from saved trajectories. This update does not enable M4 in M1 or capture runtime/rejection events automatically. See EVIDENCE_SCHEMA.md and VALIDATION.md.
+
+## 21 October development pilot
+
+A real Mg-Sn-Sr/seed17 pair completed under the adopted M1/M3/M4 profile: ON mSUN@20=7, AUDC=68.5; OFF mSUN@20=8, AUDC=76.0. Both passed individual offline validation and paired configuration/reference checks. This is a development-only negative result, not the frozen full-agent ablation. See [DEV_PILOT.md](DEV_PILOT.md) and [evidence/dev-pilot-20261021/README.md](evidence/dev-pilot-20261021/README.md).

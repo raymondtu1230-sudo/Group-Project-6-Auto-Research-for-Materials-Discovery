@@ -1,6 +1,6 @@
 # PE6203 M4 Memory Module
 
-M1 adopted the M4 memory configuration on 20 October 2026 (`9acd3c9`) and integrated M3 (`2fcc214`). The default planner remains diversity; select the M3 planner for memory-consumption checks. A new optional proposal-event capture subclass and joint boundary tests are documented in [integration/EVENT_CAPTURE.md](integration/EVENT_CAPTURE.md). That optional subclass is not enabled automatically.
+M1 adopted the M4 memory configuration on 20 October 2026 (`9acd3c9`) and integrated M3 (`2fcc214`). The default planner remains diversity; select the M3 planner for memory-consumption checks. A new optional proposal-event capture subclass and joint boundary tests are documented in [integration/EVENT_CAPTURE.md](integration/EVENT_CAPTURE.md). M1 adopted the capture subclass in `3f8d48f` on 21 October; it is now active in the official integrated profile, independently of Memory.
 
 The earlier real-material workflow remains validation evidence, not a Memory performance improvement. Formal ablation uses the frozen full agent on dev, changing only the Memory switch. See [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md).
 
@@ -71,3 +71,7 @@ See [EVIDENCE_SCHEMA.md](EVIDENCE_SCHEMA.md) for required fields and capture lim
 ## Integration and experiment preparation
 
 Use [integration/ADOPTION.md](integration/ADOPTION.md) for the exact M1/M3 adoption and acceptance steps. Use [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md) for the gated paired pilot, M2-compatible result capture, complete evidence export and reporting checklist. These instructions do not activate M4 or constitute completed experiments.
+
+## 21 October development pilot
+
+A real Mg-Sn-Sr/seed17 pair completed under the adopted M1/M3/M4 profile: ON mSUN@20=7, AUDC=68.5; OFF mSUN@20=8, AUDC=76.0. Both passed individual offline validation and paired configuration/reference checks. This is a development-only negative result, not the frozen full-agent ablation. See [DEV_PILOT.md](DEV_PILOT.md) and [evidence/dev-pilot-20261021/README.md](evidence/dev-pilot-20261021/README.md).

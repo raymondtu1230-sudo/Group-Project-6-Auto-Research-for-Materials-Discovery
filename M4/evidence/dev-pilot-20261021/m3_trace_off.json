@@ -1,0 +1,62 @@
+[
+  {
+    "step": 0,
+    "subgoal": "Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9991,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 1.0789
+    },
+    "memory_used": false,
+    "memory_ids": []
+  },
+  {
+    "step": 4,
+    "subgoal": "Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9991,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 1.0398
+    },
+    "memory_used": false,
+    "memory_ids": []
+  },
+  {
+    "step": 8,
+    "subgoal": "Mg-Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9991,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 0.9579
+    },
+    "memory_used": false,
+    "memory_ids": []
+  },
+  {
+    "step": 12,
+    "subgoal": "Mg-Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9974,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 0.9579
+    },
+    "memory_used": false,
+    "memory_ids": []
+  },
+  {
+    "step": 16,
+    "subgoal": "Sn-Sr",
+    "scores": {
+      "Mg-Sn": 0.5432,
+      "Mg-Sn-Sr": 0.9123,
+      "Mg-Sr": 0.5119,
+      "Sn-Sr": 0.9579
+    },
+    "memory_used": false,
+    "memory_ids": []
+  }
+]
