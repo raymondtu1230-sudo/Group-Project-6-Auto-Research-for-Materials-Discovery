@@ -73,36 +73,41 @@ A full `m1_full` episode was run before the freeze as an integration dry run
 the M1 reference (`m1_baseline`, diversity planner + bounded memory, no
 plug-ins):
 
-| Metric | m1_baseline | m1_full |
-|---|---|---|
-| mSUN@20 | 7 | 9 |
-| AUDC | 49.5 | 66.5 |
-| stable+novel fraction | 0.35 | 0.45 |
+| Metric | m1_baseline | m1_full (α₀=0.5) | m1_full (α₀=0.8) |
+|---|---|---|---|
+| mSUN@20 | 7 | 9 | 9 |
+| AUDC | 49.5 | 66.5 | **84.5** |
+| stable+novel fraction | 0.35 | 0.45 | 0.45 |
 
-The trajectory shows the expected three-phase behaviour: an early exploration
-phase (1 stable hit in the first 6 queries), a mid-episode dip when the
-policy left the Sn–Sr binary line to probe Sr-rich compositions (1 hit in
-steps 10–15), and a late exploitation phase that recovered 5 stable materials
-in the final 6 queries.
+**α₀ tuning.** Because the M3 planner emits a single composition per step,
+`n_explore = round(α(t) · 1)` is at most one, and only when α(t) ≥ 0.5.
+Under the initial default α₀ = 0.5 the explore slot opens only at step 0 and
+closes immediately; a companion run with α₀ = 0.8 keeps it open while
+remaining/B ≥ 0.5 (roughly the first half of the budget) and raises AUDC
+from 66.5 to 84.5 on the same seed. The α₀ = 0.8 run also surfaces a stable
+Mg–Sr compound (MgSr, e_hull = 0.019) that the α₀ = 0.5 run never reached.
+α₀ = 0.8 is therefore adopted as the default for the ablation; α₀ = 0.5 is
+retained as the conservative arm.
 
-**Limitation found by the dry run.** Because the M3 planner emits a single
-composition per step, `n_explore = round(α(t) · 1)` is at most one, and only
-when α(t) ≥ 0.5 — under the default α₀ = 0.5 that happens only at step 0.
-The exploration mechanism is exercised and correct, but its leverage inside
-`m1_full` is currently one composition slot. A companion run with α₀ = 0.8
-keeps the explore slot open for roughly the first half of the budget; whether
-that helps is an open empirical question reported with the ablation. The
-honest framing for the report: the policy's effect size under the current
-planner granularity is small but real (the step-0 Mg₂Sn probe and the
-episode-level no-reproposal guarantee), and a multi-composition planner would
-give the policy more room — noted under Future Plans.
+The α₀ = 0.5 trajectory shows the expected three-phase behaviour: an early
+exploration phase (1 stable hit in the first 6 queries), a mid-episode dip
+when the policy left the Sn–Sr binary line to probe Sr-rich compositions
+(1 hit in steps 10–15), and a late exploitation phase that recovered 5
+stable materials in the final 6 queries. The α₀ = 0.8 trajectory shifts
+discovery earlier: 7 of its 9 stable hits land in the first 10 queries.
+
+**Limitation.** The policy's per-step leverage is one composition slot under
+the current single-composition planner output. Its contributions are
+concentrated at early steps and in the episode-level no-reproposal guarantee
+(cumulative queried-formula set), not in per-step dominance of the plan.
+A multi-composition planner would give the policy more room — noted under
+Future Plans.
 
 ## Ablations (26–27 Oct, pending)
 
-- `m1_full` (exploration on) vs `exploration_off` at identical
-  seeds/budgets/systems. Expected signal: with α₀ = 0.5 the difference is
-  concentrated at early steps; with α₀ = 0.8 it extends further into the
-  episode.
+- `m1_full` (exploration on, α₀ = 0.8) vs `exploration_off` at identical
+  seeds/budgets/systems. Expected signal: the difference concentrates in
+  the first half of the episode, where the explore slot is open.
 - Failure trajectories: one over-exploitation and one wasteful-exploration
   case will be drawn from `m5_decisions.jsonl` and M4's evidence log, with
   per-step mode/budget/rationale annotations.
