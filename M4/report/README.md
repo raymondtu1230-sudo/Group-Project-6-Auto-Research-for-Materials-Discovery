@@ -1,5 +1,14 @@
-# Method handoff for M6
+# Draft handoff for M6
 
-M4_METHOD.md contains report-ready method text with the current implementation boundaries. M4_Method_Draft.pptx contains two editable English slides with speaker notes, intended for about 90 seconds in the group presentation. M4_SPEAKER_NOTES.md provides the spoken text separately.
+Updated 21 October 2026. These English materials are ready for report and slide assembly as a draft. They do not represent the final frozen-agent ablation.
 
-This is the method/validation draft for the 24 October handoff. It contains no fabricated ablation results. The final results section and slides must follow Planner consumption and the frozen ON/OFF experiment. M6 should adapt the design to the group template and record receipt separately.
+| File | Use |
+| --- | --- |
+| M4_METHOD.md | Report method, implementation boundaries and current dev evidence |
+| M4_Method_Draft.pptx | Two editable slides with embedded speaker notes |
+| M4_SPEAKER_NOTES.md | Spoken text and sources, approximately 90 seconds total |
+| M4_DEV_PILOT_RESULTS.md | Detailed negative development result and evidence locations |
+
+M1 has adopted M4 memory and capture, and M3 consumption has been verified. The Mg-Sn-Sr/seed17 development pair gave ON mSUN@20=7/AUDC=68.5 and OFF 8/76.0. Both arms used M3 planning/reflection, Random generation and capture, with exploration/routing OFF. All 20 observations per arm are preserved under ../evidence/dev-pilot-20261021/. A single pair does not establish an aggregate Memory effect.
+
+The capture scope covers generator/filter events, including the all-filtered fallback distinction. It does not cover oracle exceptions. The shown phase diagram comes from the ON development run. Final frozen-full-agent results, representative cases and conclusions will update this draft after the controlled experiments. M6 can adapt these two slides to the group template and confirm receipt separately.
