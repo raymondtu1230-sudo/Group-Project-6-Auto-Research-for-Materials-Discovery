@@ -71,9 +71,32 @@ All commands are run from `M1/MADE`; see `test_results.txt`.
   self-correction (`evidence/synthetic-smoke/`).
 - The synthetic demo shows reviews and re-plans (`evidence/synthetic-demo/`).
 
+## Progress-signal fix (21 Oct)
+
+The first full sweep (72 runs on 20–21 Oct) showed that MADE sets
+`is_newly_discovered` on every query, stable or not (360 of 360 in `m3_full`,
+96 stable). M3 had read that flag alone as progress, so:
+
+- self-correction's no-progress trigger never fired (`m3_full` and
+  `m3_self_correction_off` were identical in all 18 pairs);
+- the planner's memory review counted every remembered query as a success.
+
+Progress now means a newly discovered **stable** phase, and memory failures
+are unstable results (`M3/integration/.../m3_planning.py`). Tests use
+realistic MADE observations, and the pre-fix results are kept in
+`report/M3_RESULTS_PRE_FIX.md` and `results/pre_fix/`.
+
+**M1:** run `python M3/install.py --install` to update `m3_planning.py` and
+`tests/test_m3_planning.py` in M1, before the 25 Oct freeze, since `m1_full`
+uses this code. M1's own files are not touched.
+
+The summarizer only counts `m3_*` runs whose recorded `m3_planning.py` hash
+matches the current file, so the 54 M3 runs are re-run with the fix. The 18
+`m1_baseline` runs do not use M3 code and are reused. That baseline also
+reproduced M1's 19 Oct numbers exactly: the diversity planner ignores memory,
+so turning on M4 memory did not change it.
+
 ## Not yet done
 
-- No official Materials Project / ORB runs yet: 72 runs (re-run baseline plus
-  three M3 methods). They need a Materials Project key in `M1/MADE/.env` and M4
-  installed; follow `EXPERIMENT_RUNBOOK.md`.
+- Fixed M3 arms: 54 runs in progress; results, slide 3 and evidence follow.
 - There is no performance claim until those runs exist.

@@ -100,21 +100,27 @@ def test_planner_consumes_memory_in_review_and_skips_failed_formulas() -> None:
             "event_id": "evaluation:1",
             "reduced_formula": "Li2O",
             "is_newly_discovered": True,
+            "is_stable": True,
+            "e_above_hull": 0.0,
         },
         {
             "event_id": "evaluation:2",
             "reduced_formula": "Li2O",
             "is_newly_discovered": True,
+            "is_stable": True,
+            "e_above_hull": 0.0,
         },
         {
             "event_id": "evaluation:3",
             "reduced_formula": "LiO",
+            "is_newly_discovered": True,  # MADE sets this for every new structure
             "is_stable": False,
             "e_above_hull": 1.0,
         },
         {
             "event_id": "evaluation:4",
             "reduced_formula": "LiO",
+            "is_newly_discovered": True,  # MADE sets this for every new structure
             "is_stable": False,
             "e_above_hull": 1.0,
         },
@@ -134,6 +140,32 @@ def test_planner_consumes_memory_in_review_and_skips_failed_formulas() -> None:
     assert plan.compositions
     assert without_memory.decision_trace[-1]["memory_used"] is False
     assert without_memory.decision_trace[-1]["memory_ids"] == []
+
+
+def test_planner_review_ignores_new_but_unstable_memory() -> None:
+    # Many unstable "newly discovered" records must not make Fe-O look promising.
+    unstable = [
+        {
+            "event_id": f"evaluation:{i}",
+            "reduced_formula": formula,
+            "is_newly_discovered": True,
+            "is_stable": False,
+            "e_above_hull": 0.8,
+        }
+        for i, formula in enumerate(["FeO", "Fe2O3", "FeO2", "Fe3O4"], start=1)
+    ]
+    stable = {
+        "event_id": "evaluation:9",
+        "reduced_formula": "Li2O",
+        "is_newly_discovered": True,
+        "is_stable": True,
+        "e_above_hull": 0.0,
+    }
+    planner = make_planner()
+    planner.propose(state(0, m1_memory=[*unstable, stable]))
+    scores = planner.decision_trace[-1]["scores"]
+    assert scores["Li-O"] > scores["Fe-O"]
+    assert planner.current_subgoal != "Fe-O"
 
 
 def test_planner_falls_back_to_previous_observations() -> None:
@@ -220,7 +252,7 @@ def feed(
 
 def test_policy_passes_plan_through_while_progressing() -> None:
     policy = M3StuckReplanPolicy(window=3, cooldown=0, max_stoichiometry=4, seed=1)
-    query = feed(policy, ["Li2O", "FeO", "LiFeO2"], new=True)
+    query = feed(policy, ["Li2O", "FeO", "LiFeO2"], new=True, stable=True)
     plan = plan_of("Fe2O3")
     assert policy.revise_plan(plan, ctx(query)) is plan
     assert policy.events == []
@@ -242,6 +274,21 @@ def test_policy_replans_after_no_progress_window() -> None:
     assert policy.events[-1]["level"] == 1
 
 
+def test_policy_treats_new_but_unstable_queries_as_no_progress() -> None:
+    # Real MADE observations: every query is "newly discovered", most unstable.
+    policy = M3StuckReplanPolicy(
+        window=3, max_repeat=5, cooldown=0, max_stoichiometry=4, seed=1
+    )
+    query = feed(policy, ["Li2O", "FeO", "LiFeO2"], new=True, stable=False)
+    revised = policy.revise_plan(plan_of("Li3O"), ctx(query))
+    assert policy.events[-1]["reason"] == "no_progress"
+    assert revised.compositions
+
+    # A new *stable* phase is progress and resets the escalation level.
+    feed(policy, ["Fe2O3"], start=query + 1, new=True, stable=True)
+    assert policy.level == 0
+
+
 def test_policy_detects_repetition_and_escalates_then_resets() -> None:
     policy = M3StuckReplanPolicy(
         window=6, max_repeat=2, cooldown=0, max_stoichiometry=4, seed=1
@@ -256,7 +303,7 @@ def test_policy_detects_repetition_and_escalates_then_resets() -> None:
     assert policy.level == 2
     assert second.num_candidates == 4  # escalation widens the candidate pool
 
-    feed(policy, ["LiFeO2"], start=query + 1, new=True)
+    feed(policy, ["LiFeO2"], start=query + 1, new=True, stable=True)
     assert policy.level == 0
 
 

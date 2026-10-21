@@ -7,6 +7,7 @@ uv run pytest -q ../../M3/tests -o addopts=''
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -295,3 +296,30 @@ def test_runs_sharing_a_checkpoint_folder_or_resuming_are_invalid(
     log = run_ablations.console_log(c)
     log.write_text(log.read_text() + "Resuming episode 0 from checkpoint\n")
     assert summ.run_problem(c, tmp_path) == "resumed from a checkpoint"
+
+
+def test_m3_runs_on_older_m3_code_are_stale_but_baseline_is_kept(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    m1 = tmp_path / "M1"
+    module = m1 / summ.M3_CODE[0]
+    module.parent.mkdir(parents=True)
+    module.write_bytes(b"old M3 code\n")
+    old_hash = hashlib.sha256(module.read_bytes()).hexdigest()
+    monkeypatch.setattr(summ, "M1_DIR", m1)
+    results = tmp_path / "results"
+    runs = {}
+    for method in ("m1_baseline", "m3_full"):
+        runs[method] = make_run(results, method, "Mg-Sn-Sr", 17, 5)
+        meta = runs[method] / "run_metadata.json"
+        data = json.loads(meta.read_text())
+        # run_experiment.py records Windows paths with backslashes
+        data["m1_input_sha256"] = {summ.M3_CODE[0].replace("/", "\\"): old_hash}
+        meta.write_text(json.dumps(data))
+    assert summ.run_problem(runs["m3_full"], results) is None
+
+    module.write_bytes(b"fixed M3 code\n")  # M3 changes after the runs
+    assert "older version" in summ.run_problem(runs["m3_full"], results)
+    assert summ.run_problem(runs["m1_baseline"], results) is None
+    rows = summ.collect(results, tmp_path / "none.csv")
+    assert [r["method"] for r in rows] == ["m1_baseline"]

@@ -16,6 +16,7 @@ and ``M3/report/M3_RESULTS.md``. Uses only the Python standard library::
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import re
 import statistics
@@ -64,8 +65,45 @@ def checkpoint_name(attempt: Path) -> str | None:
     return match.group(1) if match else None
 
 
+# M3 code that m3_* runs depend on (paths relative to M1/, as run_experiment.py
+# records them in run_metadata.json). An m3_* run counts only if it ran this
+# exact code, so fixing M3 automatically marks older M3 runs for re-running.
+M3_CODE = (
+    "MADE/src/made/agents/m3_planning.py",
+    "MADE/configs/agent/planner/m3_research.yaml",
+    "MADE/configs/agent/self_correction_policy/m3_stuck_replan.yaml",
+)
+
+
+def stale_m3_code(attempt: Path, m1_dir: Path = M1_DIR) -> str | None:
+    """Name of an M3 file whose recorded hash differs from the current file."""
+    metadata = attempt / "run_metadata.json"
+    if not metadata.is_file():
+        return None
+    recorded = {
+        key.replace("\\", "/"): value
+        for key, value in json.loads(metadata.read_text())
+        .get("m1_input_sha256", {})
+        .items()
+    }
+    for relative in M3_CODE:
+        current = m1_dir / relative
+        if (
+            relative in recorded
+            and current.is_file()
+            and recorded[relative] != hashlib.sha256(current.read_bytes()).hexdigest()
+        ):
+            return relative
+    return None
+
+
 def run_problem(attempt: Path, results: Path) -> str | None:
     """Why a completed run cannot be used, or None if it is clean."""
+    method = attempt.relative_to(results).parts[0]
+    if method.startswith("m3_"):
+        stale = stale_m3_code(attempt, M1_DIR)
+        if stale:
+            return f"ran an older version of {stale}"
     log = console_log(attempt)
     if log.is_file() and RESUMED.search(log.read_text(errors="ignore")):
         return "resumed from a checkpoint"
@@ -292,18 +330,21 @@ def render_markdown(rows: list[dict[str, Any]], table: list[dict[str, Any]]) -> 
             f"{result['wins']} / {result['ties']} / {result['losses']} | "
             f"{_fmt(audc['mean_diff'] if audc else None)} |"
         )
-        direction = (
-            "more"
-            if result["mean_diff"] > 0
-            else "fewer"
-            if result["mean_diff"] < 0
-            else "the same number of"
-        )
+        if result["mean_diff"] == 0:
+            change = (
+                "the same number of stable-unique-novel structures per run as"
+                f" `{control}` on average"
+            )
+        else:
+            direction = "more" if result["mean_diff"] > 0 else "fewer"
+            change = (
+                f"{abs(result['mean_diff']):.2f} {direction} stable-unique-novel"
+                f" structures per run than `{control}` on average"
+            )
         sentences.append(
-            f"- {meaning.capitalize()}: `{treatment}` found {abs(result['mean_diff']):.2f}"
-            f" {direction} stable-unique-novel structures per run than `{control}`"
-            f" on average, better in {result['wins']} of {result['pairs']} paired runs"
-            f" and worse in {result['losses']}."
+            f"- {meaning[0].upper() + meaning[1:]}: `{treatment}` found {change},"
+            f" better in {result['wins']} of {result['pairs']} paired runs,"
+            f" the same in {result['ties']} and worse in {result['losses']}."
         )
     replans = [r for r in rows if r["method"] in ("m3_full", "m3_planning_off")]
     if replans:

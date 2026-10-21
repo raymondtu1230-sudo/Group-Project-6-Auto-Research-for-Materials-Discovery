@@ -11,10 +11,13 @@ Setup: protocol v1 development systems, ORB v3 oracle, budget 20 queries, seeds 
 | Method | Runs | mSUN@20 | mSUN fraction | AUDC | AF | EF | Re-plans / run |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `m1_baseline_recorded` | 18 | 5.00 ± 4.41 | 0.25 ± 0.22 | 39.39 ± 36.13 | n/a | n/a | n/a |
+| `m1_baseline` | 18 | 5.00 ± 4.41 | 0.25 ± 0.22 | 39.39 ± 36.13 | 0.00 ± 0.00 | 0.00 ± 0.00 | n/a |
 
 `m1_baseline_recorded` is M1's reference as recorded on 19 Oct (`M1/m1_baseline_dev_summary.csv`). It ran before M4's memory manager became the default memory in `m1_integrated.yaml`, so it is shown for context only and is not used in the paired comparisons below.
 
-## Paired comparisons (same system and seed)
+## Component vs M1 reference (paired by system and seed)
+
+Following M6's `PROTOCOL_ADOPTION.md` section 5, this table compares M3 configurations with `m1_baseline`. It is not the frozen agent's component ablation (`m1_full` with one switch off), which is reported separately.
 
 | Comparison | Measures | Pairs | Δ mSUN (mean ± std) | Better / same / worse | Δ AUDC |
 | --- | --- | --- | --- | --- | --- |
