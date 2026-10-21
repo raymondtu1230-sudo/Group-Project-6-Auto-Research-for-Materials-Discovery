@@ -2,10 +2,30 @@
 
 Runs M3's two ablations against M1's reference on your own laptop.
 
-M1 integrated M3 on `main` on 20 Oct (`2fcc214`), so nothing needs
-installing for M3 itself. M1 also made M4's memory manager the default memory
-in `m1_integrated.yaml` (`9acd3c9`). Every run with memory on, including
-`m1_baseline`, therefore needs the M4 package installed.
+M1 integrated M3 on `main` on 20 Oct (`2fcc214`). M1 also made M4's memory
+manager the default memory in `m1_integrated.yaml` (`9acd3c9`). Every run with
+memory on, including `m1_baseline`, therefore needs the M4 package installed.
+
+## 0. Fresh computer (fastest path)
+
+Run **all 72** runs on one machine (baseline included), so every arm uses the
+same hardware and code; no results need copying in. In PowerShell:
+
+```powershell
+irm https://astral.sh/uv/install.ps1 | iex      # uv (once); git must be installed
+git clone https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery.git
+cd Group-Project-6-Auto-Research-for-Materials-Discovery\M1\MADE
+uv sync --locked
+uv pip install --no-deps -e ..\..\M4
+uv run python ..\..\M3\install.py --install    # puts the fixed M3 module into M1 (local only)
+copy .env.example .env                           # then put your Materials Project key in .env
+uv run python ..\..\M3\run_ablations.py --dry-run --jobs 3   # should say 72 to run
+uv run python ..\..\M3\run_ablations.py --jobs 3
+```
+
+`--jobs`: use about one run per 4–5 CPU cores (e.g. 3 on 16 threads, 5 on 24).
+Keep the machine awake, plugged in and online. The first run also downloads the
+~100 MB ORB model. When it finishes: `uv run python ..\..\M3\summarize_ablations.py`.
 
 ## 1. One-time setup
 
