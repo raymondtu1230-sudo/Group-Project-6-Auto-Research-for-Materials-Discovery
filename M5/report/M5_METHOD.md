@@ -41,7 +41,7 @@ exploit problem over the composition simplex of the current chemical system.
    β(t) = β₀ · (queries_remaining / B)^γ
    ```
 
-   Defaults α₀ = 0.5, β₀ = 2.0, γ = 1.0. Early episodes buy information;
+   Defaults α₀ = 0.8, β₀ = 2.0, γ = 1.0. Early episodes buy information;
    late episodes exploit the best regions as the budget runs out.
 4. **Plan assembly.** `n_explore = round(α(t) · |plan.compositions|)` UCB picks
    are appended after the planner's compositions, which are kept unchanged
@@ -81,7 +81,7 @@ plug-ins):
 
 **α₀ tuning.** Because the M3 planner emits a single composition per step,
 `n_explore = round(α(t) · 1)` is at most one, and only when α(t) ≥ 0.5.
-Under the initial default α₀ = 0.5 the explore slot opens only at step 0 and
+Under the initial α₀ = 0.5 setting the explore slot opens only at step 0 and
 closes immediately; a companion run with α₀ = 0.8 keeps it open while
 remaining/B ≥ 0.5 (roughly the first half of the budget) and raises AUDC
 from 66.5 to 84.5 on the same seed. The α₀ = 0.8 run also surfaces a stable
