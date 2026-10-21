@@ -6,7 +6,6 @@
 | `M3_Method_Draft.pptx` | 27 Oct | Three slides with speaker notes; slide 3 shows the 21 Oct results |
 | [M3_SPEAKER_NOTES.md](M3_SPEAKER_NOTES.md) | 27 Oct | Notes for the slides (about 2 minutes) |
 | [M3_RESULTS.md](M3_RESULTS.md) | 27 Oct | Results of all 72 runs (21 Oct) with the hand-written "Why" section |
-| [M3_RESULTS_PRE_FIX.md](M3_RESULTS_PRE_FIX.md) | — | Earlier sweep, before the progress-signal fix; kept for the record |
 
 For M2 and M6: `M3_RESULTS.md` and `../results/*.csv`. Evidence for the runs is
 in [`../evidence/20261021-dev-ablations/`](../evidence/20261021-dev-ablations/).

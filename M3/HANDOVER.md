@@ -83,18 +83,17 @@ The first full sweep (72 runs on 20–21 Oct) showed that MADE sets
 
 Progress now means a newly discovered **stable** phase, and memory failures
 are unstable results (`M3/integration/.../m3_planning.py`). Tests use
-realistic MADE observations, and the pre-fix results are kept in
-`report/M3_RESULTS_PRE_FIX.md` and `results/pre_fix/`.
+realistic MADE observations. The pre-fix results were superseded and removed;
+they remain in the git history (commit `e1a40d8`).
 
 **M1:** run `python M3/install.py --install` to update `m3_planning.py` and
 `tests/test_m3_planning.py` in M1, before the 25 Oct freeze, since `m1_full`
 uses this code. M1's own files are not touched.
 
 The summarizer only counts `m3_*` runs whose recorded `m3_planning.py` hash
-matches the current file, so the 54 M3 runs are re-run with the fix. The 18
-`m1_baseline` runs do not use M3 code and are reused. That baseline also
-reproduced M1's 19 Oct numbers exactly: the diversity planner ignores memory,
-so turning on M4 memory did not change it.
+matches the current file, so older M3 runs are excluded automatically. The
+baseline reproduces M1's 19 Oct numbers exactly: the diversity planner ignores
+memory, so turning on M4 memory does not change it.
 
 ## Results (21 Oct, fixed code)
 

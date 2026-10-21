@@ -125,7 +125,7 @@ recent window.
 | Design (19–20 Oct) | Signed off by M1 |
 | Build and practice runs (21–23 Oct) | Done; tests, smoke episodes and demo pass |
 | Code to M1, method text and slides to M6 (24 Oct) | Integrated by M1; method text and slides received by M6 |
-| Two ablations (26–27 Oct) | Done 21 Oct: all 72 runs with the fixed code on one machine ([evidence](evidence/20261021-dev-ablations/)). The first sweep, which exposed the progress-signal bug, is kept as [report/M3_RESULTS_PRE_FIX.md](report/M3_RESULTS_PRE_FIX.md) |
+| Two ablations (26–27 Oct) | Done 21 Oct: all 72 runs with the fixed code on one machine ([evidence](evidence/20261021-dev-ablations/)). An earlier sweep exposed the progress-signal bug (see HANDOVER.md) and was superseded |
 | Results text and slides (27 Oct) | Done: [report/M3_RESULTS.md](report/M3_RESULTS.md), `results/*.csv`, slide 3 updated; to send to M2 and M6 |
 
 ## Checks
