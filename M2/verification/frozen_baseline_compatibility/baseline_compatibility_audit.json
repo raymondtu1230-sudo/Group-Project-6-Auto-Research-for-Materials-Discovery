@@ -1,0 +1,2776 @@
+{
+  "created_at_utc": "2026-10-25T14:32:44.183014+00:00",
+  "kind": "read_only_original_baseline_vs_frozen_reference_compatibility",
+  "frozen_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "manifest": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/runtime/frozen_reference/M2/configs/current_stage_verified_baselines.json",
+  "manifest_sha256": "cb2f824f3e7bef7aaa273f17e03a3492ea7c0220df662bbdf40021ea557048b0",
+  "canonicalization_source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/runtime/frozen_reference/M2/evaluate.py",
+  "canonicalization_source_file_sha256": "2eacad27246a8669657c6551807cbfeb1274cf94b691840f2f196d55e3e93a89",
+  "canonicalization": "exact M2/evaluate.py snapshot_hash: ignore only lattice-derived lengths/angles/volume and Cartesian xyz when original lattice matrix/fractional abc exist; no rounding of independent coordinates, energies or metadata",
+  "archive_count": 36,
+  "archive_hashes_matching": 36,
+  "baseline_units": 36,
+  "frozen_reference_units": 18,
+  "exact_protocol_matches": 36,
+  "canonical_snapshot_matches": 36,
+  "raw_snapshot_matches": 0,
+  "common_scientific_inputs_checked_per_baseline": [
+    "MADE/configs/oracle/orb.yaml",
+    "MADE/configs/environment/convex_hull.yaml",
+    "MADE/configs/dataset/phase_diagram.yaml",
+    "MADE/scripts/run_benchmark.py",
+    "MADE/src/made/envs/convex_hull.py",
+    "MADE/src/made/evaluation/metrics.py",
+    "MADE/src/made/data/chemical_system.py",
+    "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json"
+  ],
+  "preserved_reference_failed_or_unfinished_attempts": [
+    {
+      "source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_01/run_metadata.json",
+      "status": "failed",
+      "error": "ReadError: empty file"
+    },
+    {
+      "source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_29/attempt_01/run_metadata.json",
+      "status": null,
+      "error": null
+    }
+  ],
+  "can_reuse_old_36_baselines": true,
+  "aggregation_allowed": true,
+  "issues": [],
+  "archives": [
+    {
+      "archive": "M2/verification/direct-39432570527-1/m2-direct-Co-Dy-W-43-39432570527-1/packaged/Co-Dy-W-43-attempt-3943257052701.zip",
+      "expected_archive_sha256": "062baac56095deff9691d39c6f37e175d90e28abfd59df2fab6eb63fb22ee911",
+      "actual_archive_sha256": "062baac56095deff9691d39c6f37e175d90e28abfd59df2fab6eb63fb22ee911",
+      "archive_sha256_matches": true,
+      "bytes": 419208
+    },
+    {
+      "archive": "M2/verification/preserved-39293506143/12205518875-m2-missing-raw-Co-Mg-Na-43-39286848821.zip",
+      "expected_archive_sha256": "083f811035ec0b187c7f09350ef3a80cf3331cbadf830937342bbf8784528d19",
+      "actual_archive_sha256": "083f811035ec0b187c7f09350ef3a80cf3331cbadf830937342bbf8784528d19",
+      "archive_sha256_matches": true,
+      "bytes": 409967
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-17-39386589324-1/packaged/Co-Mg-Na-17-attempt-3938658932401.zip",
+      "expected_archive_sha256": "09e08bea5b9bac8ca3065847c2d22b3da993e4504c043b182d3599f4c782fb3d",
+      "actual_archive_sha256": "09e08bea5b9bac8ca3065847c2d22b3da993e4504c043b182d3599f4c782fb3d",
+      "archive_sha256_matches": true,
+      "bytes": 406755
+    },
+    {
+      "archive": "M2/verification/preserved-39306348134/12207981935-m2-missing-raw-Hf-Ni-Zr-29-39286848821.zip",
+      "expected_archive_sha256": "0ae5638fb2b65a193eda8050d2517e46e00332be0df78520bbcdb9d97d97f468",
+      "actual_archive_sha256": "0ae5638fb2b65a193eda8050d2517e46e00332be0df78520bbcdb9d97d97f468",
+      "archive_sha256_matches": true,
+      "bytes": 431285
+    },
+    {
+      "archive": "M2/verification/preserved-39306348134/12207897397-m2-missing-raw-Mg-Sn-Sr-29-39286848821.zip",
+      "expected_archive_sha256": "179bbc857afc08dadb5f73cc31a6525ab288a9b4241a28bf7a6e5346476b268d",
+      "actual_archive_sha256": "179bbc857afc08dadb5f73cc31a6525ab288a9b4241a28bf7a6e5346476b268d",
+      "archive_sha256_matches": true,
+      "bytes": 517096
+    },
+    {
+      "archive": "M2/verification/20261019-chemeleon-recovery/raw_artifact.zip",
+      "expected_archive_sha256": "17e1747473b60df105aca6de4f2f18449188122ac768e7747c1538b8cedb4c79",
+      "actual_archive_sha256": "17e1747473b60df105aca6de4f2f18449188122ac768e7747c1538b8cedb4c79",
+      "archive_sha256_matches": true,
+      "bytes": 506423
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Ga-Pt-Tm-17-39386589324-1/packaged/Ga-Pt-Tm-17-attempt-3938658932401.zip",
+      "expected_archive_sha256": "1efac9a6c73a124138775ed6198b2821521e776e53dc7b5cb327f0111623f95e",
+      "actual_archive_sha256": "1efac9a6c73a124138775ed6198b2821521e776e53dc7b5cb327f0111623f95e",
+      "archive_sha256_matches": true,
+      "bytes": 453156
+    },
+    {
+      "archive": "M2/verification/preserved-39306348134/12206569802-m2-missing-raw-Ga-Pt-Tm-43-39286848821.zip",
+      "expected_archive_sha256": "2238873c20727c34c60fb8c61322f2696282e09b287f54620648524ff4bfdc25",
+      "actual_archive_sha256": "2238873c20727c34c60fb8c61322f2696282e09b287f54620648524ff4bfdc25",
+      "archive_sha256_matches": true,
+      "bytes": 457414
+    },
+    {
+      "archive": "M2/verification/preserved-39293506143/12204713320-m2-missing-raw-Au-K-Tb-29-39286848821.zip",
+      "expected_archive_sha256": "239417a8cba3f2fcd947632e8ec9c3383d36d463becb94723cf0c11052abd555",
+      "actual_archive_sha256": "239417a8cba3f2fcd947632e8ec9c3383d36d463becb94723cf0c11052abd555",
+      "archive_sha256_matches": true,
+      "bytes": 429157
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Dy-W-29-39386589324-1/packaged/Co-Dy-W-29-attempt-3938658932401.zip",
+      "expected_archive_sha256": "270e26a5024ab6d18866fdb2c7f8bbed73230052c011c6b00566224e0be27f31",
+      "actual_archive_sha256": "270e26a5024ab6d18866fdb2c7f8bbed73230052c011c6b00566224e0be27f31",
+      "archive_sha256_matches": true,
+      "bytes": 411374
+    },
+    {
+      "archive": "M2/verification/preserved-39306348134/12207600952-m2-missing-raw-Ga-Pt-Tm-29-39286848821.zip",
+      "expected_archive_sha256": "2d2a28dc9151d73e8ec7b92fa4d02ff0ce11d12de71fd204aeb617645f62f5a4",
+      "actual_archive_sha256": "2d2a28dc9151d73e8ec7b92fa4d02ff0ce11d12de71fd204aeb617645f62f5a4",
+      "archive_sha256_matches": true,
+      "bytes": 460301
+    },
+    {
+      "archive": "M2/verification/preserved-39293506143/12205295837-m2-missing-raw-Au-K-Tb-43-39286848821.zip",
+      "expected_archive_sha256": "3287431bd96a5019ee1fda5c83cfa5395a4239f3dcd7fb36615c9322f594cdd1",
+      "actual_archive_sha256": "3287431bd96a5019ee1fda5c83cfa5395a4239f3dcd7fb36615c9322f594cdd1",
+      "archive_sha256_matches": true,
+      "bytes": 432253
+    },
+    {
+      "archive": "M2/verification/direct-39387331614-1/m2-direct-Mg-Sn-Sr-29-39387331614-1/packaged/Mg-Sn-Sr-29-attempt-3938733161401.zip",
+      "expected_archive_sha256": "3816a99c7db763f4b9a4c2ed188ff701d6043580f62db38634b9c5c60d3e9f7f",
+      "actual_archive_sha256": "3816a99c7db763f4b9a4c2ed188ff701d6043580f62db38634b9c5c60d3e9f7f",
+      "archive_sha256_matches": true,
+      "bytes": 518519
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-43-39386589324-1/packaged/Co-Mg-Na-43-attempt-3938658932401.zip",
+      "expected_archive_sha256": "4d73f37498e6bcab864f0642fe21066ec02b5059c8f6addb4aeb1ec1019c9570",
+      "actual_archive_sha256": "4d73f37498e6bcab864f0642fe21066ec02b5059c8f6addb4aeb1ec1019c9570",
+      "archive_sha256_matches": true,
+      "bytes": 404956
+    },
+    {
+      "archive": "M2/verification/preserved-39306348134/12210545012-m2-missing-raw-Mg-Sn-Sr-43-39286848821.zip",
+      "expected_archive_sha256": "4ec6bc831319b65b5b8ada52f4abac99060134ee99d408d334975713cd7e9ecc",
+      "actual_archive_sha256": "4ec6bc831319b65b5b8ada52f4abac99060134ee99d408d334975713cd7e9ecc",
+      "archive_sha256_matches": true,
+      "bytes": 513567
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Au-K-Tb-43-39386589324-1/packaged/Au-K-Tb-43-attempt-3938658932401.zip",
+      "expected_archive_sha256": "5f3771ad4e7edb2ce5fb2ff337c942b86c0dedac4498d86d5dc2b58a9d2b98d7",
+      "actual_archive_sha256": "5f3771ad4e7edb2ce5fb2ff337c942b86c0dedac4498d86d5dc2b58a9d2b98d7",
+      "archive_sha256_matches": true,
+      "bytes": 428174
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-17-39386589324-1/packaged/Hf-Ni-Zr-17-attempt-3938658932401.zip",
+      "expected_archive_sha256": "6100e404721fd9cb030fb041e103a202d76dde68613a7a2b292d278587ed6b22",
+      "actual_archive_sha256": "6100e404721fd9cb030fb041e103a202d76dde68613a7a2b292d278587ed6b22",
+      "archive_sha256_matches": true,
+      "bytes": 427861
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-29-39386589324-1/packaged/Co-Mg-Na-29-attempt-3938658932401.zip",
+      "expected_archive_sha256": "7af859c3593f28c1603f98899430d41a3bdaa97f0eb0f9cb1ed8fda103baf0eb",
+      "actual_archive_sha256": "7af859c3593f28c1603f98899430d41a3bdaa97f0eb0f9cb1ed8fda103baf0eb",
+      "archive_sha256_matches": true,
+      "bytes": 403270
+    },
+    {
+      "archive": "M2/verification/preserved-39293506143/12205233016-m2-missing-raw-Co-Mg-Na-29-39286848821.zip",
+      "expected_archive_sha256": "81e3f883915f3969d34d6771af42ab650af4d5a1842ea7c1e7193cc61ed32aea",
+      "actual_archive_sha256": "81e3f883915f3969d34d6771af42ab650af4d5a1842ea7c1e7193cc61ed32aea",
+      "archive_sha256_matches": true,
+      "bytes": 400105
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-29-39386589324-1/packaged/Hf-Ni-Zr-29-attempt-3938658932401.zip",
+      "expected_archive_sha256": "83e19d8330efd12c1f56def02a6b957feb3f7f1c65a32b2222752285787d9a86",
+      "actual_archive_sha256": "83e19d8330efd12c1f56def02a6b957feb3f7f1c65a32b2222752285787d9a86",
+      "archive_sha256_matches": true,
+      "bytes": 433969
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Au-K-Tb-29-39386589324-1/packaged/Au-K-Tb-29-attempt-3938658932401.zip",
+      "expected_archive_sha256": "8d48efac89165f0793072af435ed19c421da1b996be1b19f346623b40e2830be",
+      "actual_archive_sha256": "8d48efac89165f0793072af435ed19c421da1b996be1b19f346623b40e2830be",
+      "archive_sha256_matches": true,
+      "bytes": 431157
+    },
+    {
+      "archive": "M2/verification/preserved-39293506143/12205132959-m2-missing-raw-Co-Mg-Na-17-39286848821.zip",
+      "expected_archive_sha256": "9711aaf9f30d56aacf0d968f448bb7f63f68aa01754a347dc46381283eae3c2b",
+      "actual_archive_sha256": "9711aaf9f30d56aacf0d968f448bb7f63f68aa01754a347dc46381283eae3c2b",
+      "archive_sha256_matches": true,
+      "bytes": 400385
+    },
+    {
+      "archive": "M2/verification/20261019-random-gate/raw_artifact.zip",
+      "expected_archive_sha256": "b40ddad769698035e9f65d98f1310f932c9881a825d3be308c8ccd2300b1cd7e",
+      "actual_archive_sha256": "b40ddad769698035e9f65d98f1310f932c9881a825d3be308c8ccd2300b1cd7e",
+      "archive_sha256_matches": true,
+      "bytes": 511585
+    },
+    {
+      "archive": "M2/verification/preserved-39293506143/12203084390-m2-missing-raw-Co-Dy-W-17-39286848821.zip",
+      "expected_archive_sha256": "bad74aa61ac1c4ae3711f6af05ee0101c219e153e5d6d71599845448720117e6",
+      "actual_archive_sha256": "bad74aa61ac1c4ae3711f6af05ee0101c219e153e5d6d71599845448720117e6",
+      "archive_sha256_matches": true,
+      "bytes": 413764
+    },
+    {
+      "archive": "M2/verification/preserved-39306348134/12207322282-m2-missing-raw-Ga-Pt-Tm-17-39286848821.zip",
+      "expected_archive_sha256": "bc6e303b8dfbd5fedb70f3046c6ee35f59f56d745a54ff50b2e105c6f6d313cb",
+      "actual_archive_sha256": "bc6e303b8dfbd5fedb70f3046c6ee35f59f56d745a54ff50b2e105c6f6d313cb",
+      "archive_sha256_matches": true,
+      "bytes": 454483
+    },
+    {
+      "archive": "M2/verification/preserved-39306348134/12208125959-m2-missing-raw-Hf-Ni-Zr-17-39286848821.zip",
+      "expected_archive_sha256": "bdf172413da8042bb7e361f7cadecb232d28089d7a3b492a572bfba9a1470d4f",
+      "actual_archive_sha256": "bdf172413da8042bb7e361f7cadecb232d28089d7a3b492a572bfba9a1470d4f",
+      "archive_sha256_matches": true,
+      "bytes": 430983
+    },
+    {
+      "archive": "M2/verification/preserved-39293506143/12205318451-m2-missing-raw-Co-Dy-W-43-39286848821.zip",
+      "expected_archive_sha256": "c5b93361adf59efcf339e3edc35b54de13e71b04f02e81de41ec337ab28e7c0f",
+      "actual_archive_sha256": "c5b93361adf59efcf339e3edc35b54de13e71b04f02e81de41ec337ab28e7c0f",
+      "archive_sha256_matches": true,
+      "bytes": 416177
+    },
+    {
+      "archive": "M2/verification/preserved-39306348134/12207109544-m2-missing-raw-Hf-Ni-Zr-43-39286848821.zip",
+      "expected_archive_sha256": "d9d448c17f267ec90b2c64218bd1666c4c91dedd218cec89a74c84c891a0c1b5",
+      "actual_archive_sha256": "d9d448c17f267ec90b2c64218bd1666c4c91dedd218cec89a74c84c891a0c1b5",
+      "archive_sha256_matches": true,
+      "bytes": 429355
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Mg-Sn-Sr-43-39386589324-1/packaged/Mg-Sn-Sr-43-attempt-3938658932401.zip",
+      "expected_archive_sha256": "df12b21ee7c57f1ffd22dea17eadf5a9786ade200b0237620a77dbc7c550475a",
+      "actual_archive_sha256": "df12b21ee7c57f1ffd22dea17eadf5a9786ade200b0237620a77dbc7c550475a",
+      "archive_sha256_matches": true,
+      "bytes": 521319
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Dy-W-17-39386589324-1/packaged/Co-Dy-W-17-attempt-3938658932401.zip",
+      "expected_archive_sha256": "e493fa7c62124dbb5d74e5ea3963b3f3fed364ac2aa45ff564a3f4222b1bc55e",
+      "actual_archive_sha256": "e493fa7c62124dbb5d74e5ea3963b3f3fed364ac2aa45ff564a3f4222b1bc55e",
+      "archive_sha256_matches": true,
+      "bytes": 415828
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Ga-Pt-Tm-29-39386589324-1/packaged/Ga-Pt-Tm-29-attempt-3938658932401.zip",
+      "expected_archive_sha256": "efbc63fa814344f4a75c3358cfefee5d1b1f68980dd26d7bdee5f2c9236bf06d",
+      "actual_archive_sha256": "efbc63fa814344f4a75c3358cfefee5d1b1f68980dd26d7bdee5f2c9236bf06d",
+      "archive_sha256_matches": true,
+      "bytes": 458881
+    },
+    {
+      "archive": "M2/verification/direct-39432570527-1/m2-direct-Au-K-Tb-17-39432570527-1/packaged/Au-K-Tb-17-attempt-3943257052701.zip",
+      "expected_archive_sha256": "f622a61048e24f7b9369e2a1a27ea5e613b10270df1842d5507f4f6e5d8baad8",
+      "actual_archive_sha256": "f622a61048e24f7b9369e2a1a27ea5e613b10270df1842d5507f4f6e5d8baad8",
+      "archive_sha256_matches": true,
+      "bytes": 437834
+    },
+    {
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-43-39386589324-1/packaged/Hf-Ni-Zr-43-attempt-3938658932401.zip",
+      "expected_archive_sha256": "f658e5ee246c7a231357bb558a029646ce9e4e8ca33c78028d88f8b9eb29c1b2",
+      "actual_archive_sha256": "f658e5ee246c7a231357bb558a029646ce9e4e8ca33c78028d88f8b9eb29c1b2",
+      "archive_sha256_matches": true,
+      "bytes": 429000
+    },
+    {
+      "archive": "M2/verification/direct-39387331614-1/m2-direct-Ga-Pt-Tm-43-39387331614-1/packaged/Ga-Pt-Tm-43-attempt-3938733161401.zip",
+      "expected_archive_sha256": "f81716c77fcd9e0563b5933bf9db2dc28ad89868e1355befd7f9d454746bc441",
+      "actual_archive_sha256": "f81716c77fcd9e0563b5933bf9db2dc28ad89868e1355befd7f9d454746bc441",
+      "archive_sha256_matches": true,
+      "bytes": 452237
+    },
+    {
+      "archive": "M2/verification/preserved-39293506143/12205130735-m2-missing-raw-Au-K-Tb-17-39286848821.zip",
+      "expected_archive_sha256": "f9ca80dae172ffbc6e0c1b49d36a5b59db46bb70d2c11524b7d96fc1e248d7ff",
+      "actual_archive_sha256": "f9ca80dae172ffbc6e0c1b49d36a5b59db46bb70d2c11524b7d96fc1e248d7ff",
+      "archive_sha256_matches": true,
+      "bytes": 431894
+    },
+    {
+      "archive": "M2/verification/preserved-39293506143/12205882338-m2-missing-raw-Co-Dy-W-29-39286848821.zip",
+      "expected_archive_sha256": "fd29c8a7db133fbfd5b6fc5e51f197b76ced48730ce6c1a63fd346e524acdad9",
+      "actual_archive_sha256": "fd29c8a7db133fbfd5b6fc5e51f197b76ced48730ce6c1a63fd346e524acdad9",
+      "archive_sha256_matches": true,
+      "bytes": 412711
+    }
+  ],
+  "paired_unit_evidence": [
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "archive": "M2/verification/direct-39432570527-1/m2-direct-Co-Dy-W-43-39432570527-1/packaged/Co-Dy-W-43-attempt-3943257052701.zip",
+      "archive_sha256": "062baac56095deff9691d39c6f37e175d90e28abfd59df2fab6eb63fb22ee911",
+      "members_sha256": {
+        "run_metadata.json": "25162179d7796a48b147f8d09ac5362d25b35ca6fabfd6e0377be4d578afa6c0",
+        "trajectories/episode_000.json": "343b809eee0681de98443e7dbe8403811cf63022b8162e76003677b5253d517a",
+        "summary/summary.json": "96ba1773179547c8437f7f5a94313bb36972226877b8c8718d45926c0cb40244",
+        "m2_metrics_history.json": "ff90e835d9c842ad2a029088ca8e04f1a97a2659721c844508d79896e2eea602",
+        "resolved_config.yaml": "76d2b45da02c31ff4219d96b62d0688de11f755d265d4fcf8cade798574b3721"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 35.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Dy-W/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "12bce2587f93b938143b0cad6a608b34f0247b0daed6ff49be36d84cd72e4171",
+        "trajectories/episode_000.json": "2945beb66b23aabaf4e07f9a4ac5af631f8a793c4da56c0ecb64c75bbd21c182",
+        "summary/summary.json": "bf0ca6f53362c932c655fddbc27dfaeb71f11ffa0cae8478ee27527175be3191"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "archive": "M2/verification/preserved-39293506143/12205518875-m2-missing-raw-Co-Mg-Na-43-39286848821.zip",
+      "archive_sha256": "083f811035ec0b187c7f09350ef3a80cf3331cbadf830937342bbf8784528d19",
+      "members_sha256": {
+        "run_metadata.json": "e89a699db580f58b9e8f0fd3a4cc46b6257d66e3230676e555ce2f8be4cfc7d4",
+        "trajectories/episode_000.json": "7d5361e979824729a6016502af99854b818d2ce05a3bf9373655aaf621a59605",
+        "summary/summary.json": "5fc60d5f2dca63277c7880b56991912cef6fb0d4cf2fe93e5b35a4bcc68fefb6",
+        "m2_metrics_history.json": "35144a42baca8a8fa98a5c6e3e4a5f598c7d6c9ae68b70fef87f62b4a27497c1",
+        "resolved_config.yaml": "c49be05755ef3f00fa80cda94a096ae2b82ddb2afd779ef4702a224b6700ffa2"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 41.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "8e245858b204ab081570a531239c689930c5c19a775fb3eba2395dec7ed5a44e",
+        "trajectories/episode_000.json": "2d6e57b91eeddbc7a3e37b0c7202d7c2babd1ad4a841e1d2f7d88808ee6788b5",
+        "summary/summary.json": "7d06c405a00739e18ebae0dc340b6b2d4f9e268d9a6aabb00bcba0a718aa6f11"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-17-39386589324-1/packaged/Co-Mg-Na-17-attempt-3938658932401.zip",
+      "archive_sha256": "09e08bea5b9bac8ca3065847c2d22b3da993e4504c043b182d3599f4c782fb3d",
+      "members_sha256": {
+        "run_metadata.json": "2988ec790a8bdec17817db786dab9a2dd8de57d3c87df52e9cad52c5302644e6",
+        "trajectories/episode_000.json": "f61998eb94c7ddc4d410b177726bc41058bf1db10e5707110f0a465df5bbe60a",
+        "summary/summary.json": "0b2d89588383c52c9f1dcb421a641a5c96a652d6bcea3a5008265362855c3d55",
+        "m2_metrics_history.json": "e3636b71fe9af66b67a1e2aa2fcccd8678c3d589bbb5a43d0dae0478c018c5e0",
+        "resolved_config.yaml": "dd50488f2c7ae536c3f7a485629b9bcb71f1d627c7f63865b06712c69b114898"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 45.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "cd7a645bc2a4e05845b99852446142740440b33725dad2ee7692514f5bf4bb7d",
+        "trajectories/episode_000.json": "db98621cef8ceb6ff964282d199149a1aad82a95314dfc0944f85ace8aced596",
+        "summary/summary.json": "72385e13b232a67dec83b5152e16667ca5249c8ac0a4e0ef49b457860dcd3350"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "archive": "M2/verification/preserved-39306348134/12207981935-m2-missing-raw-Hf-Ni-Zr-29-39286848821.zip",
+      "archive_sha256": "0ae5638fb2b65a193eda8050d2517e46e00332be0df78520bbcdb9d97d97f468",
+      "members_sha256": {
+        "run_metadata.json": "8d41ea5bc17c9b0df6a28674acf58ca4fd3c80d072c33903e334363835eafa91",
+        "trajectories/episode_000.json": "243e00d562998bbe2453f8abeff5f1ec677b0ec8293d1a900e1ab41d19c0f825",
+        "summary/summary.json": "52d2200a7d9e2272e37034cba127a965a4544ad2498b50e5eedf9dc270f92bde",
+        "m2_metrics_history.json": "14fe23d99cd9952edd74248caf21b4a074ce79061b29b3a8bca335721612164a",
+        "resolved_config.yaml": "772362a0f8570df016f2db2d37e93c305f05f416619c14ea446a846ae00a3cbd"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 51.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "0cfc27fec6ee1ce1b9bc3b8b247e932b0e3108d5a8bf69148ba52d9431b04fb9",
+        "trajectories/episode_000.json": "7b82cb0ba3fdb339dfba10171cf0c6038d66d2c0c4eafe4835dbb736720b3275",
+        "summary/summary.json": "5fa1c5226da9b194d66b1bacc98235102e584c9e6fb6cb38e4977a1632b16e44"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "archive": "M2/verification/preserved-39306348134/12207897397-m2-missing-raw-Mg-Sn-Sr-29-39286848821.zip",
+      "archive_sha256": "179bbc857afc08dadb5f73cc31a6525ab288a9b4241a28bf7a6e5346476b268d",
+      "members_sha256": {
+        "run_metadata.json": "61dc3a77ef49ef6d35e48d95cad4e377538710dfdb53ceaed62b4adf5b2dd67d",
+        "trajectories/episode_000.json": "5e13c20d154b44fc9325e79a29cf51d52e3f8e29c0fbcfdbf1e60310083fdc5a",
+        "summary/summary.json": "3b8725acd2de929ec6bb1321567a6dfeeb4a375a26458ba759d8982cf0364c73",
+        "m2_metrics_history.json": "8ab16d534806aa022f11b4354a6286bf3f82539fb52ddd7eeb158674d3708ae8",
+        "resolved_config.yaml": "28b1cbb3e043e60e9de5c7e7c49b4360f3e8a10b03e3347cc788134e0f5d6587"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 88.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_29/attempt_02",
+      "reference_files_sha256": {
+        "run_metadata.json": "3598c00c8d27ff49c921c16dd0f17f4752dea73341c1f79cc3d20cd12b7ef5c6",
+        "trajectories/episode_000.json": "d3d7b34331c4b4afe282de957ca8cf5a3f00b3800786878fa32a8d758e838ac9",
+        "summary/summary.json": "869eb8e75d5f3f5bfe4a9c0fd92ad6ae7ae4442b85978a7b57c531817525a30b"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "archive": "M2/verification/20261019-chemeleon-recovery/raw_artifact.zip",
+      "archive_sha256": "17e1747473b60df105aca6de4f2f18449188122ac768e7747c1538b8cedb4c79",
+      "members_sha256": {
+        "run_metadata.json": "990026b735e39d3552415897132611d219b009bdd9dd9ea2ccb1c2570d4f3f2b",
+        "trajectories/episode_000.json": "6e4ef0e5b2296db99c017b83b337d33b12409a72cd3d4ff10b0df5a2734c3888",
+        "summary/summary.json": "7c9285cc3a509d02b7b748232177bb0857670930c792371a2ce183270e544568",
+        "m2_metrics_history.json": "9fd037782b27ebd9c684626e20bfbed61e63e8f603802f1379dfec93b38f4fb4",
+        "resolved_config.yaml": "99d290e6f7ac06e1d7cf43a1ac0b16d08806cb48cb93233276149f7864fef2be"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 161.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_02",
+      "reference_files_sha256": {
+        "run_metadata.json": "b43d2f7dd93f6f81ae15aed0ff6f94aaaba104bbaaa137e34cb0ac692f5d5ac3",
+        "trajectories/episode_000.json": "5210a765b3bbdd034fb548cd6546bee38df8263ab3b07d9a4c846e8602193ba5",
+        "summary/summary.json": "5e89d74c6ccd24fbfe27cae49d261ff2fc9278ca24ba1d5c75d976b71ec61fb9"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Ga-Pt-Tm-17-39386589324-1/packaged/Ga-Pt-Tm-17-attempt-3938658932401.zip",
+      "archive_sha256": "1efac9a6c73a124138775ed6198b2821521e776e53dc7b5cb327f0111623f95e",
+      "members_sha256": {
+        "run_metadata.json": "7996e17a160cf382e726e44230bfb7cbabf3bb43da28ea7d46bc730ea0ca75eb",
+        "trajectories/episode_000.json": "b2d4c10ae3dd59af327084e7e413f0d87cd7d6b9243e2e571fe6b40e990972e2",
+        "summary/summary.json": "85cee57a8298b1c368741f4b1c02e0c9bb4dfe29814f9876e16dffd93dd0fa0f",
+        "m2_metrics_history.json": "f2bb48f8661ec0b9442366c26271ed20c3d307c6903fe46b214d46dce31a32f3",
+        "resolved_config.yaml": "275face9e2da8ea9418a66245aff16640efb8a87384de2593fda9b4d7946b465"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 95.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "502e1af978bc16724aa0dad83fc33b15ec8f09e160e78bb1f481b08e9e618ebe",
+        "trajectories/episode_000.json": "fc557c6c281ab0ec5f211cee05ecb07365786246b7b90515a51a3bf1dbdd6044",
+        "summary/summary.json": "e291250ad18cd1e635fc827fdd328433f312ab431738067abeb317dda9a0a57c"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "archive": "M2/verification/preserved-39306348134/12206569802-m2-missing-raw-Ga-Pt-Tm-43-39286848821.zip",
+      "archive_sha256": "2238873c20727c34c60fb8c61322f2696282e09b287f54620648524ff4bfdc25",
+      "members_sha256": {
+        "run_metadata.json": "b84802248210d078e28f609934a6e3e79152c7424d7130827c5c81fd74cc6817",
+        "trajectories/episode_000.json": "338c41eccea34b625f5f6e70cd1992e889c05b19a6d7dededb5b4de90f8c2179",
+        "summary/summary.json": "c6ca160e618ae3e34b2897ff4640d6c2395c83ca337e21a64c1de681d8996bd2",
+        "m2_metrics_history.json": "8a6f167c74a71e61e7a324872a4b24537da079fd9ec5cbdea4878e52e99e5f6d",
+        "resolved_config.yaml": "50ba161fccd8db369a9b9523aa6fcba4b5657b4d220b2cee9d2a849f58c75675"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 31.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "388fb4e5e99c04c0798cdee3c4429d9f07e43ebae064f0a7e5a21c5dade8497c",
+        "trajectories/episode_000.json": "682a2ca8edf88383707300ec07bb757e5cde7e37c94772d013b1001fd4ad04de",
+        "summary/summary.json": "1fc021b9d489e39cd76d2fa868d1bd0faea46e2bdacbc34717c3ee4403d8d9f9"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "archive": "M2/verification/preserved-39293506143/12204713320-m2-missing-raw-Au-K-Tb-29-39286848821.zip",
+      "archive_sha256": "239417a8cba3f2fcd947632e8ec9c3383d36d463becb94723cf0c11052abd555",
+      "members_sha256": {
+        "run_metadata.json": "e5774ec3d11301cf467ea8bb3b82a09e591f0fcb3964c26d15b2c49b2adc0349",
+        "trajectories/episode_000.json": "976cf45f9592b8cbfe6509e27f312c51954b942fe2f81ad2a8ba4fe896fa7a47",
+        "summary/summary.json": "520605e8f88ddedb6262dd6b5bbeb9bdaeb66352cc7576d0b067453989a0762c",
+        "m2_metrics_history.json": "7a87dba4d939ee6049e6e98bf392b5db66be8343a0d7f92a6b6fec91a59fbe62",
+        "resolved_config.yaml": "ec0bb124a0ef023404dea653ec5639b3914b9cb6ce4e1c507df029e9af6ac23d"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 13.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Au-K-Tb/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "28ac1c44b2db00e52299a5eba605930890bf2701c2e5b45a65a08a23a6e83935",
+        "trajectories/episode_000.json": "7988149edfe73b49cf6d5e562efd5ea686a561852d3aafd68d2890bdd3987a7a",
+        "summary/summary.json": "4e6c91eefbab63b22151cd995c8ef757f3aae91a191ae2d5f3dd22594bfae297"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Dy-W-29-39386589324-1/packaged/Co-Dy-W-29-attempt-3938658932401.zip",
+      "archive_sha256": "270e26a5024ab6d18866fdb2c7f8bbed73230052c011c6b00566224e0be27f31",
+      "members_sha256": {
+        "run_metadata.json": "3284b97f2cd60670ac3442c159fda76059a7704830c491a95990bdec420d9bd6",
+        "trajectories/episode_000.json": "2a959b1c3b984aff6a4ec8ac07b1c857aebd951ca5867dde1902aa7745cc4f93",
+        "summary/summary.json": "b2794c8aab54ba9a3188ff68b3238066e001cf7e015cd2f1e5b3c4d1b32b2091",
+        "m2_metrics_history.json": "0e2f7dc88d06015d4502c7b1732e0a4da86e130b4ea5ac4ee8b4078da15b3a6e",
+        "resolved_config.yaml": "86a348816a1d2989439b9b4edd5f153c73347b4f6774fd534c0358db7c6d4f02"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 21.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Dy-W/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "493b65d48a3a4be98c349435e1a288ef249971919b79dd145e7c3b3ba07f3413",
+        "trajectories/episode_000.json": "f141aa0c158d9bf96bf93945cc3fdc23a539b6dc7467716f886df5bcf809c574",
+        "summary/summary.json": "2497f1b781e7d0c20e9f5bd9338cf434f1f7a1e0ed0be409e09365399a301d73"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "archive": "M2/verification/preserved-39306348134/12207600952-m2-missing-raw-Ga-Pt-Tm-29-39286848821.zip",
+      "archive_sha256": "2d2a28dc9151d73e8ec7b92fa4d02ff0ce11d12de71fd204aeb617645f62f5a4",
+      "members_sha256": {
+        "run_metadata.json": "b80e976f1afca1c66be690494d46037b2ed7b5b953bfa93f62aa2f2681d55723",
+        "trajectories/episode_000.json": "04477c65c0563be1a0f848911fa5864ff098ef04b7221d78cc7b96ab6c5f4bf0",
+        "summary/summary.json": "d880067e1a4cb701715fcf0975ec66c2303bb0d64fbe78eab9d58801a0453d56",
+        "m2_metrics_history.json": "308c8c3772b37382e0e81d161743e627a9141c8e486adebdfa6fd722d24956e1",
+        "resolved_config.yaml": "fb04d78692f81beb9b5ccf5a7a5c0402b01403c9a24bdc04e726c0f39d98b2f0"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 36.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "020a46064f721f1037930ea82c1f813349aae290af9e69c2c0ab862549ad7329",
+        "trajectories/episode_000.json": "02a0cb011f946353ea3d5e522aa3dfdc7fabb84b362119a802474648c4c25fc9",
+        "summary/summary.json": "07a75f76e6fb053a588a4b1b23efa20c84e57296df783fed9e8f9343304368a3"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "archive": "M2/verification/preserved-39293506143/12205295837-m2-missing-raw-Au-K-Tb-43-39286848821.zip",
+      "archive_sha256": "3287431bd96a5019ee1fda5c83cfa5395a4239f3dcd7fb36615c9322f594cdd1",
+      "members_sha256": {
+        "run_metadata.json": "ed217ac32a5de010a559abf774ff624ffa8b2a6475113fc306c802573c90f81c",
+        "trajectories/episode_000.json": "c7b6dc0be47718e0bbf3d3ca88e50c7acc7cc2b47f1d3fc28ec2dda36e020834",
+        "summary/summary.json": "0e7b139101792194e25625d9029ccf64b7faa3eac03f1f0c2b6773debd4ff83d",
+        "m2_metrics_history.json": "da6a2f6316ba8e4d17cfd9a05b275d4be14a95104bcc2c8b54c0231b6ec3720c",
+        "resolved_config.yaml": "3d45935bd388fb7d5c4b64c8f2e16253893aaf6d57da9d00e7c16ed7c297c326"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 21.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Au-K-Tb/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "267a48d356d26dbd6f25fa0103cd842497ece9ac26414f4903a0ad297233f585",
+        "trajectories/episode_000.json": "a0514036b5573f6fda3b514b92603bf0d9da7cfe7189216395b1e235072a9d67",
+        "summary/summary.json": "709942486a6240864cb11f44de73c0d11f05e6eeeaa2a0097c02bcd61570fa4d"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "archive": "M2/verification/direct-39387331614-1/m2-direct-Mg-Sn-Sr-29-39387331614-1/packaged/Mg-Sn-Sr-29-attempt-3938733161401.zip",
+      "archive_sha256": "3816a99c7db763f4b9a4c2ed188ff701d6043580f62db38634b9c5c60d3e9f7f",
+      "members_sha256": {
+        "run_metadata.json": "c720f8163c5af26f922e808589f536ab526e3499d41834cf8e536447b893ca3a",
+        "trajectories/episode_000.json": "6281851f66ef9db891bcbd5526376eb427f03fe823697cae1ef6754e0bdf4116",
+        "summary/summary.json": "6d9776e6761b24263fefa39e02b68392796767b33699ffc92696ec5f6133f37b",
+        "m2_metrics_history.json": "ad32867601bc7afee937b7ab74ca56b3d0fdceb851f9dca6d97fa28d3d5bb645",
+        "resolved_config.yaml": "d233051c3f7a8a06fcc8bce69eea78a46c024e15c1abc9939079ee478350f94f"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 131.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_29/attempt_02",
+      "reference_files_sha256": {
+        "run_metadata.json": "3598c00c8d27ff49c921c16dd0f17f4752dea73341c1f79cc3d20cd12b7ef5c6",
+        "trajectories/episode_000.json": "d3d7b34331c4b4afe282de957ca8cf5a3f00b3800786878fa32a8d758e838ac9",
+        "summary/summary.json": "869eb8e75d5f3f5bfe4a9c0fd92ad6ae7ae4442b85978a7b57c531817525a30b"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-43-39386589324-1/packaged/Co-Mg-Na-43-attempt-3938658932401.zip",
+      "archive_sha256": "4d73f37498e6bcab864f0642fe21066ec02b5059c8f6addb4aeb1ec1019c9570",
+      "members_sha256": {
+        "run_metadata.json": "e28a87f077c287cdc760de1cf14593e7e626e0a83cbd9a1cb69b665f9277f525",
+        "trajectories/episode_000.json": "232e3be5b2d3b7839c3ab68836d8c8c69b2af8fbc11474f8b28417f81cf26802",
+        "summary/summary.json": "e05bc3c0da74e5df56a368177df12f68c5b940ef80dd8e2a9becbcd0dc5ecbcc",
+        "m2_metrics_history.json": "268427eaf79b8c32c65dcc28c6c5a614646dcb3ad16d3afa27ae08f1fedc3ff2",
+        "resolved_config.yaml": "c2426db92763f054ab38724d2859e390a85818e4b8a5718a8a82934eca2f9853"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 20.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "8e245858b204ab081570a531239c689930c5c19a775fb3eba2395dec7ed5a44e",
+        "trajectories/episode_000.json": "2d6e57b91eeddbc7a3e37b0c7202d7c2babd1ad4a841e1d2f7d88808ee6788b5",
+        "summary/summary.json": "7d06c405a00739e18ebae0dc340b6b2d4f9e268d9a6aabb00bcba0a718aa6f11"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "archive": "M2/verification/preserved-39306348134/12210545012-m2-missing-raw-Mg-Sn-Sr-43-39286848821.zip",
+      "archive_sha256": "4ec6bc831319b65b5b8ada52f4abac99060134ee99d408d334975713cd7e9ecc",
+      "members_sha256": {
+        "run_metadata.json": "8d8cefad09da5218b499d60ceabbb9f8e4f1d94adb6c8eeddfb9b35b95095889",
+        "trajectories/episode_000.json": "aa14923d71f2bc0745b54e2127d5f11c56f6d5b9814b66498e0288f8a7175a97",
+        "summary/summary.json": "91aada8af4b21e124c24313cd701aa077b2b84966f16e5c5d108591bb79066ad",
+        "m2_metrics_history.json": "265942cf19549fec91105b0240fe154434b17d68b20e79155d382d382f151942",
+        "resolved_config.yaml": "8c40572389ceb25bbb46e0ddaa56ce452381390a2d6ae4f833be7bb3cbf2b59a"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 121.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "e101451c42455e7a44feae89970f6449a45e6c50eb827779a6b2843c4c55adc2",
+        "trajectories/episode_000.json": "8124914e17faeeee2c3c749076da41ed7b4c46229104f37f685d073209ee5873",
+        "summary/summary.json": "288a0bf1a2d3459e3fc4a62efe373598e849433200dff64619e9292b3eca8f24"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Au-K-Tb-43-39386589324-1/packaged/Au-K-Tb-43-attempt-3938658932401.zip",
+      "archive_sha256": "5f3771ad4e7edb2ce5fb2ff337c942b86c0dedac4498d86d5dc2b58a9d2b98d7",
+      "members_sha256": {
+        "run_metadata.json": "e8d164280f1dab7a1a8eb1d7a391f0e9d47a6165ae62e5fb04ca5178e900b114",
+        "trajectories/episode_000.json": "14df84bcb1a6b6c356d8978ba173624e348e17dd5d9a1aa86d535157de1f2eb1",
+        "summary/summary.json": "c68eac9e5fb68f88df221642d41a8eed651dc81635701afdd47e388d684812dd",
+        "m2_metrics_history.json": "01ce75915c1dbc7fd6159e0f969dc3b1d1523de9a1c34b467e867eddee3168a8",
+        "resolved_config.yaml": "9d5c435a06f46bd3ed77c43c7d79e0b1592546c9782c286ab96ac20b5d727ce5"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 47.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Au-K-Tb/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "267a48d356d26dbd6f25fa0103cd842497ece9ac26414f4903a0ad297233f585",
+        "trajectories/episode_000.json": "a0514036b5573f6fda3b514b92603bf0d9da7cfe7189216395b1e235072a9d67",
+        "summary/summary.json": "709942486a6240864cb11f44de73c0d11f05e6eeeaa2a0097c02bcd61570fa4d"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-17-39386589324-1/packaged/Hf-Ni-Zr-17-attempt-3938658932401.zip",
+      "archive_sha256": "6100e404721fd9cb030fb041e103a202d76dde68613a7a2b292d278587ed6b22",
+      "members_sha256": {
+        "run_metadata.json": "2aa744b4b467d42917bb20561004571d2ebf37055f2518501c4785f44fe48c66",
+        "trajectories/episode_000.json": "99b106ac8fad68876ec634a19a96a6e14e8806ee39c77579fa25f38e1acdd682",
+        "summary/summary.json": "7f8a2b31ec5cc183bfd16980fe5f07fa9e06243cf5dd6147295c03df236e7a42",
+        "m2_metrics_history.json": "3b9357b89dbbea4eb69d94624e3257bd32bd0dfe0c016909f00c48c6978baa54",
+        "resolved_config.yaml": "86daa585c65174274ab810e69c503bc09008b70bc68b9ef85dec8acb8984d9d4"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 60.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "afd77c0504cfde73240a07929fe4f8802267ec73159509ed6f06bc6b296d398e",
+        "trajectories/episode_000.json": "58bd57810c1b6be3c3327ea869a98d616f551c3c6c8c43c1d715746a8b15eb52",
+        "summary/summary.json": "2ccd98c8a9ce4c8dcccf8399c9c538853c95720db57f0ec7b83f4c0d01ab4319"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Mg-Na-29-39386589324-1/packaged/Co-Mg-Na-29-attempt-3938658932401.zip",
+      "archive_sha256": "7af859c3593f28c1603f98899430d41a3bdaa97f0eb0f9cb1ed8fda103baf0eb",
+      "members_sha256": {
+        "run_metadata.json": "1dc64a964bd61c827b80073092c5bf0c30d68ef02047f732fb35b33325570e60",
+        "trajectories/episode_000.json": "d08b4253008531c596df5566d90d0d0232f131a517a0be4c99e209d59b5f6591",
+        "summary/summary.json": "a86bebc3a8f256124923c6397b9d5a74de680b364b78db446d7ec8c12abd37a8",
+        "m2_metrics_history.json": "2de3331f6836fa856201ded6e13766d06c2434e6b2f2b93ac22e56dbdf90c741",
+        "resolved_config.yaml": "157ce6884153aee92f46ac0d993b57bc2e647f47f8ed61a5de15569762e36567"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 12.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "55e6af99e1e844e614c30be083b56dd06921da9edf1959e8e8360a1430d14f7f",
+        "trajectories/episode_000.json": "602b5f27e10cb449b1770ee06a9fc56d28fbd7d9cd22c04131df7365b8b4f8d9",
+        "summary/summary.json": "9afa73e281ee87ce6e14c59747115165f9d0c9b74ea1729e4f58407a2738ab50"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "archive": "M2/verification/preserved-39293506143/12205233016-m2-missing-raw-Co-Mg-Na-29-39286848821.zip",
+      "archive_sha256": "81e3f883915f3969d34d6771af42ab650af4d5a1842ea7c1e7193cc61ed32aea",
+      "members_sha256": {
+        "run_metadata.json": "4440b29fbe7e6c7856d6a9c294176c2c1c69326caa515ca79105e6cfc86b946d",
+        "trajectories/episode_000.json": "bccd272868c52eb0d0ad060fc4483d8cbc9b20e605f842920e47c577fd1386aa",
+        "summary/summary.json": "31296de14e580cf54c5fff5391a0ebea6a095556b02afadc909eca685d175f30",
+        "m2_metrics_history.json": "03ec14f1e149fe4163ba742fd4efa2561ebdd66a365b3b41d2b7f24c28917f89",
+        "resolved_config.yaml": "a0c9d912a7b1c114e7ae7899a185d0beec28a7c1a4137397ab20aad506f2eb95"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 18.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "55e6af99e1e844e614c30be083b56dd06921da9edf1959e8e8360a1430d14f7f",
+        "trajectories/episode_000.json": "602b5f27e10cb449b1770ee06a9fc56d28fbd7d9cd22c04131df7365b8b4f8d9",
+        "summary/summary.json": "9afa73e281ee87ce6e14c59747115165f9d0c9b74ea1729e4f58407a2738ab50"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-29-39386589324-1/packaged/Hf-Ni-Zr-29-attempt-3938658932401.zip",
+      "archive_sha256": "83e19d8330efd12c1f56def02a6b957feb3f7f1c65a32b2222752285787d9a86",
+      "members_sha256": {
+        "run_metadata.json": "51af429b1d0d128c8a6bb97155e9dd02a554a1848f01908e55bce15e65052f36",
+        "trajectories/episode_000.json": "48eeacafe450f9a61179a369b11ea78142fa56f11df1acb7de2a3e135179e46e",
+        "summary/summary.json": "c78398e72bcf68015e7b232d68cfaef2098a40a5e50c0d2be711984b7ffb44c3",
+        "m2_metrics_history.json": "4abb09dc9ec614e696e603968fadcf92fbbb7fe26f35b31abd6bd34676175450",
+        "resolved_config.yaml": "01637e2250d55adfc089b41585f1b398cde2e89c6d81d1f3f1e6d076c4a36432"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 124.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "0cfc27fec6ee1ce1b9bc3b8b247e932b0e3108d5a8bf69148ba52d9431b04fb9",
+        "trajectories/episode_000.json": "7b82cb0ba3fdb339dfba10171cf0c6038d66d2c0c4eafe4835dbb736720b3275",
+        "summary/summary.json": "5fa1c5226da9b194d66b1bacc98235102e584c9e6fb6cb38e4977a1632b16e44"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Au-K-Tb-29-39386589324-1/packaged/Au-K-Tb-29-attempt-3938658932401.zip",
+      "archive_sha256": "8d48efac89165f0793072af435ed19c421da1b996be1b19f346623b40e2830be",
+      "members_sha256": {
+        "run_metadata.json": "d8c90aea8941b2f9b1ef1342fdaef4241d9bd1ee8348efb6574b2be59f1ea162",
+        "trajectories/episode_000.json": "50ba30e9dad5dd414944df5cdbaa33802c06718840fb2f8652fb4d3d6779301b",
+        "summary/summary.json": "b849bb4cce1aa4217be972539103b8945ccbf2773dcef05190d52c5d8ee582f8",
+        "m2_metrics_history.json": "d42a9f502c11a863c67c429a10888a12c1001f5f20128aa17373d0724accf628",
+        "resolved_config.yaml": "9437e34db1f9a04cfede03c8f1ab519a6befeb383c99439570eb05d25b0bf8f6"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 62.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Au-K-Tb/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "28ac1c44b2db00e52299a5eba605930890bf2701c2e5b45a65a08a23a6e83935",
+        "trajectories/episode_000.json": "7988149edfe73b49cf6d5e562efd5ea686a561852d3aafd68d2890bdd3987a7a",
+        "summary/summary.json": "4e6c91eefbab63b22151cd995c8ef757f3aae91a191ae2d5f3dd22594bfae297"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "archive": "M2/verification/preserved-39293506143/12205132959-m2-missing-raw-Co-Mg-Na-17-39286848821.zip",
+      "archive_sha256": "9711aaf9f30d56aacf0d968f448bb7f63f68aa01754a347dc46381283eae3c2b",
+      "members_sha256": {
+        "run_metadata.json": "534ebd67d6aa5e55ae14f6f5c6c2fe402f4a0a9429cc601ee0dca25e1d085703",
+        "trajectories/episode_000.json": "87c23dc0c3dc27a504ae446bc455210c48e1321976d86a32e9f95cd4fd8f8e09",
+        "summary/summary.json": "919c3e60175ac0fad3f885e8a83cc84e089b0ea50e673c5fcb6a8bc172e4cd00",
+        "m2_metrics_history.json": "543dc76b0e5189acc25c03f4831770944b480b476c8c94fafefe00b9f6fefd68",
+        "resolved_config.yaml": "3d974cd8642c18dc65abd71f99745677cb03dc91b9da3316bf00eea3609a025a"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 44.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "cd7a645bc2a4e05845b99852446142740440b33725dad2ee7692514f5bf4bb7d",
+        "trajectories/episode_000.json": "db98621cef8ceb6ff964282d199149a1aad82a95314dfc0944f85ace8aced596",
+        "summary/summary.json": "72385e13b232a67dec83b5152e16667ca5249c8ac0a4e0ef49b457860dcd3350"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "archive": "M2/verification/20261019-random-gate/raw_artifact.zip",
+      "archive_sha256": "b40ddad769698035e9f65d98f1310f932c9881a825d3be308c8ccd2300b1cd7e",
+      "members_sha256": {
+        "run_metadata.json": "cb7ccff03b7b8b761a7533e54262ba4e1bd2e23d811110e91871220adbd81437",
+        "trajectories/episode_000.json": "7a7c2bd97eeedcb706f2d6ce819853f633b55289ac0dbcbb8308fbbefc63b6f1",
+        "summary/summary.json": "f2c176fe62c60c7d80f8ec4ea5b57c78b0bb1d59cc3a00b1813ed7f9902a251e",
+        "m2_metrics_history.json": "3c0403e7a1fdb971131b745e273dc65aaaedf072e0d9209994e1d64ab4d5e492",
+        "resolved_config.yaml": "8d30640e3f24e259cd134318fd67d69cb78996971da3c25f6ebee0d4d2d3254d"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 55.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_02",
+      "reference_files_sha256": {
+        "run_metadata.json": "b43d2f7dd93f6f81ae15aed0ff6f94aaaba104bbaaa137e34cb0ac692f5d5ac3",
+        "trajectories/episode_000.json": "5210a765b3bbdd034fb548cd6546bee38df8263ab3b07d9a4c846e8602193ba5",
+        "summary/summary.json": "5e89d74c6ccd24fbfe27cae49d261ff2fc9278ca24ba1d5c75d976b71ec61fb9"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "archive": "M2/verification/preserved-39293506143/12203084390-m2-missing-raw-Co-Dy-W-17-39286848821.zip",
+      "archive_sha256": "bad74aa61ac1c4ae3711f6af05ee0101c219e153e5d6d71599845448720117e6",
+      "members_sha256": {
+        "run_metadata.json": "603ad750cf39a22d0020591eb93cc3ba14c99116a3bfd8dd970365e3c36532df",
+        "trajectories/episode_000.json": "fa05a7e74f77cb64bbdfc95d9f5bef46126b8f326c5dc3a29934933d906d6f8e",
+        "summary/summary.json": "14fd40832ed0131e668878f9e787bfad3c52c1e3986a6c553567ecb7a4aacad3",
+        "m2_metrics_history.json": "b7169e0537eaea317a1300c6d4902939170b11cdeaf3cb32ee2193f5f5931632",
+        "resolved_config.yaml": "6b3427bbb9cfe760fd84b1c1c6e6bebd449444571278420d15833437a9384a39"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 0.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Dy-W/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "7022a7a5ad216f8351d829858a7d6fbf75d40d49318d0bd80f2acf37761cf5fd",
+        "trajectories/episode_000.json": "4c3e4fdd46d4d2908d52bf1b32a9bcb07e95785d5d039d6a27db7e7e82457cef",
+        "summary/summary.json": "9d0cfff1089298f5cad935504f4e8daeda089de339d6dac638b24111d2332bf4"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "archive": "M2/verification/preserved-39306348134/12207322282-m2-missing-raw-Ga-Pt-Tm-17-39286848821.zip",
+      "archive_sha256": "bc6e303b8dfbd5fedb70f3046c6ee35f59f56d745a54ff50b2e105c6f6d313cb",
+      "members_sha256": {
+        "run_metadata.json": "1655f67526abf5d5ada7049f6cbfa14766b5d15df18c10ef0388b25d30305f32",
+        "trajectories/episode_000.json": "f65885169c1e861f469ba1399e6a8c92588994376467ef7387aafd4499dc299c",
+        "summary/summary.json": "3706db75b6b09459fcf58c03b712a9075b4ba06b0534002aed31381f68142299",
+        "m2_metrics_history.json": "f345c76071e950cd31b6ca3fcd845e4db16de29a93b2a672d291f858321026a3",
+        "resolved_config.yaml": "5687e656f1c89e29129271d1805476ab05eea7b221f80f861052add31f9d420e"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 27.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "502e1af978bc16724aa0dad83fc33b15ec8f09e160e78bb1f481b08e9e618ebe",
+        "trajectories/episode_000.json": "fc557c6c281ab0ec5f211cee05ecb07365786246b7b90515a51a3bf1dbdd6044",
+        "summary/summary.json": "e291250ad18cd1e635fc827fdd328433f312ab431738067abeb317dda9a0a57c"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "archive": "M2/verification/preserved-39306348134/12208125959-m2-missing-raw-Hf-Ni-Zr-17-39286848821.zip",
+      "archive_sha256": "bdf172413da8042bb7e361f7cadecb232d28089d7a3b492a572bfba9a1470d4f",
+      "members_sha256": {
+        "run_metadata.json": "dab537bb9329c9772b442fe39dadac4ad3772ebf37bb3307e8a07c302e4e368f",
+        "trajectories/episode_000.json": "1b976ad4bc221e1710959493749ecb2e431a72de84d763ab1f4dcfbd50d79c91",
+        "summary/summary.json": "e3f210fe4eedb8e2979ae4ea5edf3cd8923b13d8855db285bc1085b376884bf8",
+        "m2_metrics_history.json": "e65824bcb653fd3e636c3cc9cce3dde74316861fb5734341b890cbfedf67bd6c",
+        "resolved_config.yaml": "4dada9ac407e3505f16bbe4c7bb5b5322f92c4c807e948e4627e18affdb89472"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 60.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "afd77c0504cfde73240a07929fe4f8802267ec73159509ed6f06bc6b296d398e",
+        "trajectories/episode_000.json": "58bd57810c1b6be3c3327ea869a98d616f551c3c6c8c43c1d715746a8b15eb52",
+        "summary/summary.json": "2ccd98c8a9ce4c8dcccf8399c9c538853c95720db57f0ec7b83f4c0d01ab4319"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "archive": "M2/verification/preserved-39293506143/12205318451-m2-missing-raw-Co-Dy-W-43-39286848821.zip",
+      "archive_sha256": "c5b93361adf59efcf339e3edc35b54de13e71b04f02e81de41ec337ab28e7c0f",
+      "members_sha256": {
+        "run_metadata.json": "f67945a83725eb03f5793f55ee5da373d1b0ef8981e12d3181ae663fc7b90015",
+        "trajectories/episode_000.json": "54226cc7434ea0c24325f989e97c029164111d8700323ce91619795d93479e28",
+        "summary/summary.json": "3cd332394bb6272f1c5568c0e6fdf50e4708e9c59caddc4347251b6140c74a19",
+        "m2_metrics_history.json": "7f59ae377c58924478502a26618c148e0c7d62c2088eb75133bb3019bcf0593f",
+        "resolved_config.yaml": "ecfdead5cf040e451da52c35c6bd361be66cdf02b56cc7d6ed519b4aa2501c99"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 13.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Dy-W/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "12bce2587f93b938143b0cad6a608b34f0247b0daed6ff49be36d84cd72e4171",
+        "trajectories/episode_000.json": "2945beb66b23aabaf4e07f9a4ac5af631f8a793c4da56c0ecb64c75bbd21c182",
+        "summary/summary.json": "bf0ca6f53362c932c655fddbc27dfaeb71f11ffa0cae8478ee27527175be3191"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "archive": "M2/verification/preserved-39306348134/12207109544-m2-missing-raw-Hf-Ni-Zr-43-39286848821.zip",
+      "archive_sha256": "d9d448c17f267ec90b2c64218bd1666c4c91dedd218cec89a74c84c891a0c1b5",
+      "members_sha256": {
+        "run_metadata.json": "9727ba527a945e1bd1b4ae65648613ae2bf0dc15b146c45c133294b94d812efc",
+        "trajectories/episode_000.json": "a3d7293feb44bd4d2bb224db917145aa69e88b53bcc4f44e2f1047ada05fb29f",
+        "summary/summary.json": "57d9f0f982ffb3708612fd27aa40ef6ce35ffcb0b3f640ed34a88b5cd6ebd1e7",
+        "m2_metrics_history.json": "4885278e5fa8ed4e6d2a283f92babd196a173082d920a57d73f90bc3c312e1c6",
+        "resolved_config.yaml": "b0e00c243e353dee56c4783e0ee72dbee524b22979e639d0f5cf78af287a810d"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 81.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "411f318818249ea684a6e955d828043caa8b8c6c5bc66679cd46fb096f1b7a8c",
+        "trajectories/episode_000.json": "5ad75df2dbfb90d1400adda18a3748360ddb95b333bead89c3e480128bf415bd",
+        "summary/summary.json": "c2dbe4e6e9ba8bce1c7e91a49fd3f8ae599dcc7b66037e325f425e89e0a5cdf5"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Mg-Sn-Sr-43-39386589324-1/packaged/Mg-Sn-Sr-43-attempt-3938658932401.zip",
+      "archive_sha256": "df12b21ee7c57f1ffd22dea17eadf5a9786ade200b0237620a77dbc7c550475a",
+      "members_sha256": {
+        "run_metadata.json": "b009724de1436cf2b53010eb51e85093c3025aa6ce348883ffd31ec8edcb88a2",
+        "trajectories/episode_000.json": "22714fee6aaea4a4a2f212029ff3ae802f90bdc5026b549e134d4d9528371ca5",
+        "summary/summary.json": "24f6d16f78545665b2f4e1f30643f93ce310948e656b46caeb3399a370a0cd57",
+        "m2_metrics_history.json": "00f48b892ede817c15069d9d58258258ad93897c7795d12ed1ec6ac405687257",
+        "resolved_config.yaml": "490a58ce46d1fb0f6a6ee5128df96a4bab1ea79c63977505250f6c634dd5e589"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 115.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "e101451c42455e7a44feae89970f6449a45e6c50eb827779a6b2843c4c55adc2",
+        "trajectories/episode_000.json": "8124914e17faeeee2c3c749076da41ed7b4c46229104f37f685d073209ee5873",
+        "summary/summary.json": "288a0bf1a2d3459e3fc4a62efe373598e849433200dff64619e9292b3eca8f24"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Co-Dy-W-17-39386589324-1/packaged/Co-Dy-W-17-attempt-3938658932401.zip",
+      "archive_sha256": "e493fa7c62124dbb5d74e5ea3963b3f3fed364ac2aa45ff564a3f4222b1bc55e",
+      "members_sha256": {
+        "run_metadata.json": "0499f119d354e90381ed73e6ad0fe0733e8a90191dea9b9a1977d894933e2e50",
+        "trajectories/episode_000.json": "70498c053974a6514c12484f14a67b0ba10c21d1097d52bd698885619d8f551b",
+        "summary/summary.json": "e74a252130950c3f460768f192100c9fcf388be599b5de1c90e2a43e53275c6c",
+        "m2_metrics_history.json": "876b31d4cb1124775ef1681596f5df26dae4b4758fa72589825d4b73c2552d91",
+        "resolved_config.yaml": "b452bfe297dd0e3deac681015e585fed3d70e8136a5b6a1aefad2e9c89f71dbe"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 19.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Dy-W/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "7022a7a5ad216f8351d829858a7d6fbf75d40d49318d0bd80f2acf37761cf5fd",
+        "trajectories/episode_000.json": "4c3e4fdd46d4d2908d52bf1b32a9bcb07e95785d5d039d6a27db7e7e82457cef",
+        "summary/summary.json": "9d0cfff1089298f5cad935504f4e8daeda089de339d6dac638b24111d2332bf4"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Ga-Pt-Tm-29-39386589324-1/packaged/Ga-Pt-Tm-29-attempt-3938658932401.zip",
+      "archive_sha256": "efbc63fa814344f4a75c3358cfefee5d1b1f68980dd26d7bdee5f2c9236bf06d",
+      "members_sha256": {
+        "run_metadata.json": "0156e36ea4b476ae3bd5405a9c6c4dc9c9f07de2dce0800af6472a3597ef981d",
+        "trajectories/episode_000.json": "751d08da7420b83aaff5d813eb87ef42d1dbc6da1099a4256dd4097bc6da3c25",
+        "summary/summary.json": "3f59a9a65adb2da1e07b620dd3f121327da93b1b48f4dd1005eeea6475b8574b",
+        "m2_metrics_history.json": "4ded58d21fd47790009a794f58a2a5728f4a6aede01ffd064dd1e8860fffbb01",
+        "resolved_config.yaml": "b9e58571d5502dd514aa3a236228307772f4f3026990e58e14f2a0a41b3a69ef"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 140.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "020a46064f721f1037930ea82c1f813349aae290af9e69c2c0ab862549ad7329",
+        "trajectories/episode_000.json": "02a0cb011f946353ea3d5e522aa3dfdc7fabb84b362119a802474648c4c25fc9",
+        "summary/summary.json": "07a75f76e6fb053a588a4b1b23efa20c84e57296df783fed9e8f9343304368a3"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "archive": "M2/verification/direct-39432570527-1/m2-direct-Au-K-Tb-17-39432570527-1/packaged/Au-K-Tb-17-attempt-3943257052701.zip",
+      "archive_sha256": "f622a61048e24f7b9369e2a1a27ea5e613b10270df1842d5507f4f6e5d8baad8",
+      "members_sha256": {
+        "run_metadata.json": "13f4d0f253ab54cf3f90f9d07155737db045d3e7d1154adcc36ab99cf0f51e48",
+        "trajectories/episode_000.json": "d117e0c0c6a8056552727263ab03e3aa901fc2eed5c4ea9842c3176399069905",
+        "summary/summary.json": "b1b9b425fd80e547b852fcfcdd4f08f15122dd06420aeacef04c638086445a3c",
+        "m2_metrics_history.json": "6b65c95222fdf3cbf993acdecaafca29866b26aa10172166d8a09b0d0a1fdf26",
+        "resolved_config.yaml": "0fe7cbacc0ab1e095659275f4f2a7b8f0309ed7044fb3c6461645460bb2b1dd1"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 33.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Au-K-Tb/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "223b28d9e5f282f3134ce55581a5bb6cc8bb358c2481d9b369dc3e9c5d9a9b9d",
+        "trajectories/episode_000.json": "0372b0b6c57aff2784273fc682f226bea6e3ba1534badc283e780bef6d4adc5f",
+        "summary/summary.json": "86df12deab5d5ed9f2f0c0c5e58d052ce313a980b28aad043373a9313c011a47"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "archive": "M2/verification/direct-39386589324-1/m2-direct-Hf-Ni-Zr-43-39386589324-1/packaged/Hf-Ni-Zr-43-attempt-3938658932401.zip",
+      "archive_sha256": "f658e5ee246c7a231357bb558a029646ce9e4e8ca33c78028d88f8b9eb29c1b2",
+      "members_sha256": {
+        "run_metadata.json": "d4e861a32dff9ba07b3cff3baa9b427ddb7212d3bc9751b519ad1ecc7d3a45ff",
+        "trajectories/episode_000.json": "b7566771b2e59c850960b7f53f4c18ba3966c1be4601e2910e4ca8f72bb6f4e8",
+        "summary/summary.json": "c1ea47f0836fee863e669b36303bb0fb9e5514ed31f568a21ccef7b947e82356",
+        "m2_metrics_history.json": "fb7ae3d63633ce4d413498def2dc9f9725f99f065dc2e7a4d28772405f6df2e7",
+        "resolved_config.yaml": "6a25ba5a3353f50a77c49ee0ff36858b18c1c58c404dde556b82c1797bd03eef"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 61.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "411f318818249ea684a6e955d828043caa8b8c6c5bc66679cd46fb096f1b7a8c",
+        "trajectories/episode_000.json": "5ad75df2dbfb90d1400adda18a3748360ddb95b333bead89c3e480128bf415bd",
+        "summary/summary.json": "c2dbe4e6e9ba8bce1c7e91a49fd3f8ae599dcc7b66037e325f425e89e0a5cdf5"
+      }
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "archive": "M2/verification/direct-39387331614-1/m2-direct-Ga-Pt-Tm-43-39387331614-1/packaged/Ga-Pt-Tm-43-attempt-3938733161401.zip",
+      "archive_sha256": "f81716c77fcd9e0563b5933bf9db2dc28ad89868e1355befd7f9d454746bc441",
+      "members_sha256": {
+        "run_metadata.json": "d9237ac08e43a0ed652830fbe6f2561a3467ec4dc62c1f81fb5414eec02fb96d",
+        "trajectories/episode_000.json": "a86e74be7e156663101f4b62ddf4d95d9b6058c2b2a552d708c6fc518e79f14f",
+        "summary/summary.json": "5cd807e16c4f21b2c95fc6109f50f70cc4151e8b861da07cf7711a6583f9cf7b",
+        "m2_metrics_history.json": "4b3b5225bc2274bf5ed259f856954cc44d36667aac4d25621a518d2e71128362",
+        "resolved_config.yaml": "07d37f7d740ede0e7bb29d149a7048f045689ca659a16f21ee4c8fe868ec9a3d"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 99.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "388fb4e5e99c04c0798cdee3c4429d9f07e43ebae064f0a7e5a21c5dade8497c",
+        "trajectories/episode_000.json": "682a2ca8edf88383707300ec07bb757e5cde7e37c94772d013b1001fd4ad04de",
+        "summary/summary.json": "1fc021b9d489e39cd76d2fa868d1bd0faea46e2bdacbc34717c3ee4403d8d9f9"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "archive": "M2/verification/preserved-39293506143/12205130735-m2-missing-raw-Au-K-Tb-17-39286848821.zip",
+      "archive_sha256": "f9ca80dae172ffbc6e0c1b49d36a5b59db46bb70d2c11524b7d96fc1e248d7ff",
+      "members_sha256": {
+        "run_metadata.json": "7b591bd8522583df73a0463805af3d2f5628405680ec133ca0fbb92f3d9c1563",
+        "trajectories/episode_000.json": "a6e6b5d34f612f8c3575ea9b5e399d78174be43c4fae65c1c6b9a2d5ea59f9da",
+        "summary/summary.json": "ed13b15b4c5494938631cbc92ef385c81f23b6f96ccd25a34ae697654791a3cc",
+        "m2_metrics_history.json": "e5dff10c01fd2cd1fab9782773e9c3b3f083d1b1a95a66baa21264d93a4e3bc0",
+        "resolved_config.yaml": "abb11529f3c5e8b6c57abb8022cdbe3d54e9bf700b3a49ace9e5db53585135e9"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 21.5,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Au-K-Tb/seed_17/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "223b28d9e5f282f3134ce55581a5bb6cc8bb358c2481d9b369dc3e9c5d9a9b9d",
+        "trajectories/episode_000.json": "0372b0b6c57aff2784273fc682f226bea6e3ba1534badc283e780bef6d4adc5f",
+        "summary/summary.json": "86df12deab5d5ed9f2f0c0c5e58d052ce313a980b28aad043373a9313c011a47"
+      }
+    },
+    {
+      "method": "random_generator_baseline",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "archive": "M2/verification/preserved-39293506143/12205882338-m2-missing-raw-Co-Dy-W-29-39286848821.zip",
+      "archive_sha256": "fd29c8a7db133fbfd5b6fc5e51f197b76ced48730ce6c1a63fd346e524acdad9",
+      "members_sha256": {
+        "run_metadata.json": "2ffc1d8521d42c59861fcbdba3cbfc606c1e693362f79e0d84bf63695fbed75c",
+        "trajectories/episode_000.json": "c0240a31dce71a1d719e20ee4eda0c436e11cd2b22529e5bbc3a9ae98e5df71d",
+        "summary/summary.json": "2187313addfae0a338a6d3b5251250b6f1870829a570a8c00404b6fe94619818",
+        "m2_metrics_history.json": "7052307f23e4f0cb863f31f46523bc489ddaccefb6ddf4f78b5c8e74394323c3",
+        "resolved_config.yaml": "bd5cc0e95b109d8de1857bfff05fc950e23d9c4ac79d700a7db585ca1c3e582c"
+      },
+      "protocol_exact_equal": true,
+      "canonical_snapshot_equal": true,
+      "raw_snapshot_equal": false,
+      "common_frozen_scientific_inputs": {
+        "MADE/configs/oracle/orb.yaml": {
+          "baseline": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "reference": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+          "matches": true
+        },
+        "MADE/configs/environment/convex_hull.yaml": {
+          "baseline": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "reference": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+          "matches": true
+        },
+        "MADE/configs/dataset/phase_diagram.yaml": {
+          "baseline": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "reference": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+          "matches": true
+        },
+        "MADE/scripts/run_benchmark.py": {
+          "baseline": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "reference": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+          "matches": true
+        },
+        "MADE/src/made/envs/convex_hull.py": {
+          "baseline": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "reference": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+          "matches": true
+        },
+        "MADE/src/made/evaluation/metrics.py": {
+          "baseline": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "reference": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+          "matches": true
+        },
+        "MADE/src/made/data/chemical_system.py": {
+          "baseline": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "reference": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+          "matches": true
+        },
+        "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": {
+          "baseline": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "reference": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb",
+          "matches": true
+        }
+      },
+      "complete_official_history": true,
+      "official_AUDC_recomputed": 5.0,
+      "reference_source": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Dy-W/seed_29/attempt_01",
+      "reference_files_sha256": {
+        "run_metadata.json": "493b65d48a3a4be98c349435e1a288ef249971919b79dd145e7c3b3ba07f3413",
+        "trajectories/episode_000.json": "f141aa0c158d9bf96bf93945cc3fdc23a539b6dc7467716f886df5bcf809c574",
+        "summary/summary.json": "2497f1b781e7d0c20e9f5bd9338cf434f1f7a1e0ed0be409e09365399a301d73"
+      }
+    }
+  ],
+  "per_method_metrics": [
+    {
+      "method": "random_generator_baseline",
+      "units": 18,
+      "oracle_queries": 360,
+      "mSUN_at_20_mean": 4.055555555555555,
+      "mSUN_at_20_seed_SD": 0.6309898162000303,
+      "AUDC_mean": 40.583333333333336,
+      "AUDC_seed_SD": 9.458608659722517,
+      "wall_time_seconds_total": 17268.422,
+      "wall_time_seconds_mean": 959.3567777777778,
+      "seed_17_mSUN": 3.3333333333333335,
+      "seed_29_mSUN": 4.5,
+      "seed_43_mSUN": 4.333333333333333,
+      "seed_17_AUDC": 34.833333333333336,
+      "seed_29_AUDC": 35.416666666666664,
+      "seed_43_AUDC": 51.5,
+      "SD_definition": "sample SD over three seed means, each mean across six development systems",
+      "metrics_source": "original official trajectory and summary; all baseline AUDCs independently checked against original complete history"
+    },
+    {
+      "method": "chemeleon_generative_baseline",
+      "units": 18,
+      "oracle_queries": 360,
+      "mSUN_at_20_mean": 6.944444444444445,
+      "mSUN_at_20_seed_SD": 1.1097213530798984,
+      "AUDC_mean": 71.30555555555556,
+      "AUDC_seed_SD": 9.503776052667659,
+      "wall_time_seconds_total": 253054.07,
+      "wall_time_seconds_mean": 14058.559444444445,
+      "seed_17_mSUN": 6.666666666666667,
+      "seed_29_mSUN": 8.166666666666666,
+      "seed_43_mSUN": 6.0,
+      "seed_17_AUDC": 69.0,
+      "seed_29_AUDC": 81.75,
+      "seed_43_AUDC": 63.166666666666664,
+      "SD_definition": "sample SD over three seed means, each mean across six development systems",
+      "metrics_source": "original official trajectory and summary; all baseline AUDCs independently checked against original complete history"
+    },
+    {
+      "method": "m1_full",
+      "units": 18,
+      "oracle_queries": 360,
+      "mSUN_at_20_mean": 10.0,
+      "mSUN_at_20_seed_SD": 0.8819171036881968,
+      "AUDC_mean": 88.11111111111111,
+      "AUDC_seed_SD": 9.453590342847018,
+      "wall_time_seconds_total": 5639.179,
+      "wall_time_seconds_mean": 313.2877222222222,
+      "seed_17_mSUN": 9.0,
+      "seed_29_mSUN": 10.333333333333334,
+      "seed_43_mSUN": 10.666666666666666,
+      "seed_17_AUDC": 77.33333333333333,
+      "seed_29_AUDC": 95.0,
+      "seed_43_AUDC": 92.0,
+      "SD_definition": "sample SD over three seed means, each mean across six development systems",
+      "metrics_source": "original official trajectory and summary; all baseline AUDCs independently checked against original complete history"
+    }
+  ],
+  "limitations": [
+    "This audit reuses only original real outputs, with no model, dataset, oracle or simulation calls.",
+    "Frozen M1 reference lacks original per-query metric history/checkpoints in GitHub; AF cannot be independently derived from its final metrics alone. Stored reference final AF/EF zeros are unpaired placeholders and are not used here.",
+    "Means and sample SD over seeds describe this six-system development set only; this does not establish hidden-system performance."
+  ],
+  "common_scientific_input_hash_comparisons": 288,
+  "all_common_scientific_input_hashes_match": true
+}

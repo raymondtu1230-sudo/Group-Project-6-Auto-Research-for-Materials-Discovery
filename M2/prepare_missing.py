@@ -164,4 +164,9 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    from offline_frozen import active, score
+
+    if active():
+        score()
+    else:
+        main()

@@ -1,0 +1,18 @@
+{
+  "freeze": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "tag": "m1-freeze-20261025",
+  "method": "tool_routing_off",
+  "science_run_ids": [
+    40201488392,
+    40202237876
+  ],
+  "controller_science_commits": [
+    "8363340dbdb63ec8f07a68995ea39be6ce9e54b5",
+    "41315778506f0147414acabee2c688f4572a6328"
+  ],
+  "completed_scientific_restarts": 0,
+  "known_issue": "Official runner removes successful checkpoints. Retain original collector failures; endpoint payloads are independently audited and curves separately reevaluated from original observations, without new oracle calls.",
+  "scope": "M2 only, dev only, CPU,B20,seeds17/29/43",
+  "resume": "M2/FROZEN_RESUME.md",
+  "status": "cloud_science_running_and_original_result_artifacts_being_saved"
+}

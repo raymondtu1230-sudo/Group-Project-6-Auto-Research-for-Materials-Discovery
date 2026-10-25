@@ -13,7 +13,9 @@ import hashlib
 import html
 import json
 import math
+import re
 import statistics
+import subprocess
 from pathlib import Path
 from typing import Any
 
@@ -26,6 +28,214 @@ MSUN = "novelty_stable_unique_novel_count"
 CURVE = "num_newly_discovered_stable"
 AUDC = "final/discovery_curve_area_under_discovery_curve"
 EXPECTED = {(system, seed) for system in SYSTEMS for seed in SEEDS}
+# The live artifact upload excludes hidden files. These raw Hydra originals are
+# useful audit attachments, but they are distinct from the required, visible
+# resolved_config.yaml. Their absence must remain explicit; their bytes must
+# never be reconstructed or a different existing-file hash accepted.
+RAW_HYDRA_TRANSPORT_OMISSIONS = {
+    ".hydra/config.yaml",
+    ".hydra/hydra.yaml",
+    ".hydra/overrides.yaml",
+}
+REQUIRED_VISIBLE_FILES = {
+    "run_metadata.json",
+    "resolved_config.yaml",
+    "trajectories/episode_000.json",
+    "summary/summary.json",
+    "m4_evidence.jsonl",
+    "m5_decisions.jsonl",
+    "m2_metrics_history.json",
+    "m2_process.log",
+    "m2_exit.json",
+    "m2_collection.json",
+}
+DELETED_HISTORY_AUDIT_ERRORS = {
+    "Original-evidence collection has missing files or errors",
+    "Official checkpoint history does not cover queries1..20",
+    "Original official checkpoints were not preserved",
+}
+
+
+def read_yaml(path: Path) -> Any:
+    try:
+        import yaml
+    except ImportError:
+        # macOS provides Psych with Ruby; safe_load permits no executable YAML
+        # objects. The captured output is parsed internally and never printed.
+        code = "print JSON.generate(YAML.safe_load(File.read(ARGV.fetch(0)), permitted_classes: [], permitted_symbols: [], aliases: false))"
+        return json.loads(
+            subprocess.check_output(
+                ["ruby", "-ryaml", "-rjson", "-e", code, str(path)], text=True
+            )
+        )
+    return yaml.safe_load(path.read_text())
+
+
+def endpoint_audit(
+    run: dict[str, Any],
+    original: dict[str, Any],
+    collection: dict[str, Any],
+    frozen_root: Path | None,
+) -> dict[str, Any]:
+    """A new independent endpoint audit; original failed audits stay untouched."""
+    if (
+        original.get("accepted") is not False
+        or set(original.get("errors", [])) != DELETED_HISTORY_AUDIT_ERRORS
+    ):
+        raise ValueError(
+            "Original validation failure is outside exact deleted-history whitelist"
+        )
+    if collection.get("errors") != [
+        "No matching original official checkpoint was available"
+    ]:
+        raise ValueError(
+            "Collection failure is not solely the deleted official checkpoint"
+        )
+    if (
+        collection.get("official_checkpoints") != []
+        or collection.get("resolved_config_saved") is not True
+        or collection.get("original_metadata_unchanged") is not True
+    ):
+        raise ValueError(
+            "Deleted-checkpoint fallback has incompatible collection evidence"
+        )
+    if frozen_root is None or not (frozen_root / "M1/run_experiment.py").is_file():
+        raise ValueError(
+            "Independent endpoint audit requires the actual frozen scientific source tree"
+        )
+    directory, metadata = run["directory"], run["metadata"]
+    config = read_yaml(directory / "resolved_config.yaml")
+    seed = metadata["seed"]
+    if (
+        config.get("experiment", {}).get("seed") != seed
+        or config.get("experiment", {}).get("num_episodes") != 1
+        or config.get("dataset", {}).get("elements") != metadata["system"]
+    ):
+        raise ValueError("Endpoint resolved seed/system/episode count mismatch")
+    if config.get("dataset", {}).get("thermo_types") != ["GGA_GGA+U"]:
+        raise ValueError("Endpoint dataset thermo types changed")
+    environment = config.get("environment", {})
+    expected_environment = {
+        "budget": 20,
+        "stability_tolerance": 0.1,
+        "max_stoichiometry": 20,
+        "filter_by_smact": True,
+        "include_near_stable_from_ground_truth": True,
+        "start_with_all_stable": True,
+        "compute_elemental_from_oracle": True,
+    }
+    if any(
+        environment.get(key) != value for key, value in expected_environment.items()
+    ):
+        raise ValueError("Endpoint environment scientific settings changed")
+    oracle = config.get("oracle", {})
+    if (
+        oracle.get("_target_") != "made.oracles.ORBOracle"
+        or oracle.get("model_name") != "orb-v3-conservative-inf-omat"
+        or oracle.get("device") != "cpu"
+        or oracle.get("relax") is not True
+        or oracle.get("relax_kwargs")
+        != {"optimizer": "fire", "fmax": 0.02, "steps": 500, "relax_unit_cell": True}
+    ):
+        raise ValueError("Endpoint CPU ORB/relaxation settings changed")
+    agent = config.get("agent", {})
+    for key in (
+        "enable_planning",
+        "enable_memory",
+        "enable_reflection",
+        "enable_exploration",
+        "enable_tool_routing",
+    ):
+        if agent.get(key) is not (key != "enable_tool_routing"):
+            raise ValueError(f"Endpoint component switch differs: {key}")
+    generator = agent.get("generator", {})
+    if (
+        generator.get("_target_")
+        != "made.agents.m2_tool_routing.CheckpointedRandomGenerator"
+        or generator.get("seed") != seed
+        or generator.get("lattice_length_range") != [3.0, 15.0]
+        or generator.get("lattice_angle_range") != [60.0, 120.0]
+    ):
+        raise ValueError("Endpoint frozen primary Random generator changed")
+    chemeleon = agent.get("generators", {}).get("chemeleon", {})
+    if any(
+        chemeleon.get(key) != value
+        for key, value in {
+            "_target_": "made.agents.m2_tool_routing.CheckpointedChemeleonGenerator",
+            "seed": seed,
+            "task": "csp",
+            "batch_size": 32,
+            "device": "cpu",
+            "output_dir": None,
+        }.items()
+    ):
+        raise ValueError("Endpoint frozen Chemeleon generator changed")
+    if (
+        agent.get("planner", {}).get("_target_")
+        != "made.agents.m3_planning.M3ResearchPlanner"
+        or agent.get("planner", {}).get("seed") != seed
+        or agent.get("scorer", {}).get("seed") != seed
+    ):
+        raise ValueError("Endpoint frozen planner/scorer seed changed")
+    log = (directory / "m2_process.log").read_text()
+    cleanup = re.findall(
+        r"Removed checkpoint file [^\r\n]+/checkpoint\.json after successful completion",
+        log,
+    )
+    if len(cleanup) != 1:
+        raise ValueError(
+            "Official successful-completion checkpoint cleanup event is missing or ambiguous"
+        )
+    if (
+        read_json(directory / "m2_exit.json").get("exit_code") != 0
+        or collection.get("exit_code") != 0
+    ):
+        raise ValueError("Endpoint original real process did not exit0")
+    if run["trajectory"].get("final_env_state", {}).get("query_count") != 20:
+        raise ValueError("Endpoint final environment state is not query20")
+    for filename, expected in (
+        ("m4_evidence.jsonl", list(range(1, 20))),
+        ("m5_decisions.jsonl", list(range(20))),
+    ):
+        records = [
+            json.loads(line)
+            for line in (directory / filename).read_text().splitlines()
+            if line.strip()
+        ]
+        json.dumps(records, allow_nan=False)
+        if [row.get("query_count") for row in records] != expected:
+            raise ValueError(
+                f"Endpoint component log incomplete or duplicated: {filename}"
+            )
+    hashes = metadata.get("m1_input_sha256", {})
+    if (
+        not hashes
+        or original.get("source_input_hashes_checked") != len(hashes)
+        or original.get("source_input_hash_mismatches") != []
+    ):
+        raise ValueError("Original source audit count/mismatch record invalid")
+    for relative, expected in hashes.items():
+        path = frozen_root / "M1" / relative
+        if not path.is_file() or sha256(path) != expected:
+            raise ValueError(
+                f"Independent frozen scientific source SHA256 mismatch: {relative}"
+            )
+    return {
+        "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+        "accepted_final_endpoints": True,
+        "original_m2_validation_accepted": False,
+        "original_m2_validation_errors": original["errors"],
+        "original_m2_validation_sha256": sha256(directory / "m2_validation.json"),
+        "original_collection_errors": collection["errors"],
+        "official_cleanup_log_event": cleanup[0],
+        "independently_checked_source_hashes": len(hashes),
+        "resolved_configuration_and_component_logs_verified": True,
+        "original_per_query_history_available": False,
+        "original_checkpoint_available": False,
+        "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+        "curve_or_AF_EF_accepted_by_this_audit": False,
+        "new_scientific_queries": 0,
+    }
 
 
 def read_json(path: Path) -> Any:
@@ -87,7 +297,7 @@ def label(path: Path, root: Path) -> str:
 
 
 def load_runs(
-    root: Path, method: str, own: bool
+    root: Path, method: str, own: bool, frozen_root: Path | None = None
 ) -> tuple[
     dict[tuple[str, int], dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]
 ]:
@@ -150,7 +360,14 @@ def load_runs(
             }
             if own:
                 validation = read_json(directory / "m2_validation.json")
-                if validation.get("accepted") is not True or validation.get("errors"):
+                endpoint_candidate = (
+                    validation.get("accepted") is False
+                    and set(validation.get("errors", []))
+                    == DELETED_HISTORY_AUDIT_ERRORS
+                )
+                if not endpoint_candidate and (
+                    validation.get("accepted") is not True or validation.get("errors")
+                ):
                     raise ValueError("Saved M2 audit did not accept this attempt")
                 if (
                     validation.get("actual_git_head") != COMMIT
@@ -169,9 +386,9 @@ def load_runs(
                         "Persisted trajectory reference differs from accepted audit"
                     )
                 collection = read_json(directory / "m2_collection.json")
-                if (
-                    collection.get("exit_code") != 0
-                    or collection.get("collection_complete") is not True
+                if collection.get("exit_code") != 0 or (
+                    collection.get("collection_complete") is not True
+                    and not endpoint_candidate
                 ):
                     raise ValueError("Process/collection did not finish successfully")
                 if collection.get("original_metadata_sha256") != sha256(path):
@@ -181,19 +398,53 @@ def load_runs(
                 )
                 if not manifest:
                     raise ValueError("Preserved-file integrity manifest is empty")
+                for relative in REQUIRED_VISIBLE_FILES:
+                    if relative not in manifest or not (directory / relative).is_file():
+                        raise ValueError(
+                            f"Required visible result file missing: {relative}"
+                        )
+                missing_originals = []
                 for relative, expected_sha in manifest.items():
                     file = directory / relative
-                    if not file.is_file() or sha256(file) != expected_sha:
+                    if not file.is_file():
+                        if relative in RAW_HYDRA_TRANSPORT_OMISSIONS:
+                            missing_originals.append(
+                                {
+                                    "path": relative,
+                                    "expected_sha256": expected_sha,
+                                    "classification": "missing_hidden_hydra_original_after_transport",
+                                    "original_reconstructed": False,
+                                }
+                            )
+                            continue
+                        raise ValueError(
+                            f"Preserved-file SHA256 check missing file: {relative}"
+                        )
+                    if sha256(file) != expected_sha:
                         raise ValueError(f"Preserved-file SHA256 mismatch: {relative}")
+                if not endpoint_candidate and not any(
+                    relative.startswith("official_checkpoints/")
+                    for relative in manifest
+                ):
+                    raise ValueError(
+                        "Preserved official checkpoint is missing from manifest"
+                    )
+                run["required_visible_payload_verified"] = True
+                run["raw_hydra_transport_omissions"] = missing_originals
                 capture = read_json(directory / "m2_metrics_history.json")
                 history = capture.get("metrics_history", [])
-                if capture.get("complete_curve") is not True or [
+                history_available = capture.get("complete_curve") is True and [
                     x.get("queries_used") for x in history
-                ] != list(range(1, 21)):
+                ] == list(range(1, 21))
+                if not history_available and not endpoint_candidate:
                     raise ValueError(
                         "Official saved history does not cover queries1..20"
                     )
-                for point in history:
+                if endpoint_candidate:
+                    run["endpoint_audit"] = endpoint_audit(
+                        run, validation, collection, frozen_root
+                    )
+                for point in history if history_available else []:
                     for field in (MSUN, CURVE):
                         if (
                             not finite(point.get(field))
@@ -202,16 +453,22 @@ def load_runs(
                             raise ValueError(
                                 f"Invalid official history metric: {field}"
                             )
-                if history[-1][MSUN] != run["mSUN_at_20"]:
+                if history_available and history[-1][MSUN] != run["mSUN_at_20"]:
                     raise ValueError("Saved official history/final mSUN mismatch")
                 recomputed_audc = validation.get("official_audc_recomputed")
-                if not finite(recomputed_audc) or not math.isclose(
-                    recomputed_audc, run["AUDC"], rel_tol=1e-9, abs_tol=1e-9
+                if history_available and (
+                    not finite(recomputed_audc)
+                    or not math.isclose(
+                        recomputed_audc, run["AUDC"], rel_tol=1e-9, abs_tol=1e-9
+                    )
                 ):
                     raise ValueError(
                         "Saved official AUDC recomputation/final metric mismatch"
                     )
-                run["history"] = history
+                if history_available:
+                    run["history"] = history
+                    run["history_source"] = "original_official_checkpoint_history"
+                run["original_full_audit_accepted"] = validation.get("accepted") is True
             if key in accepted:
                 raise ValueError(
                     "More than one accepted completed attempt for the same unit; deduplicate explicitly"
@@ -263,18 +520,136 @@ def costs(
     return rows
 
 
+def attach_reevaluated_curves(
+    runs: dict[tuple[str, int], dict[str, Any]], root: Path, frozen_root: Path | None
+) -> dict[str, Any]:
+    """Read separately labelled record-only analysis after its full proof gate."""
+    proof = read_json(root / "reevaluation_audit.json")
+    required = {
+        "accepted": True,
+        "baseline_units_validated": 36,
+        "original_baseline_prefixes_validated": 720,
+        "frozen_reference_units_validated": 18,
+        "routing_units_validated": 18,
+        "routing_complete": True,
+        "original_endpoint_units_validated": 72,
+        "all_original_mSUN_and_AUDC_endpoints_match": True,
+    }
+    if any(proof.get(key) != value for key, value in required.items()):
+        raise ValueError(
+            "Record-only curve analysis has not passed complete720-prefix/72-endpoint proof"
+        )
+    if frozen_root is None:
+        raise ValueError("Frozen source tree required to verify record-only analysis")
+    pending = []
+    for (system, seed), run in runs.items():
+        attempt = run["metadata"].get("attempt", 1)
+        path = (
+            root
+            / METHOD
+            / system
+            / f"seed_{seed}"
+            / f"attempt_{attempt:02d}"
+            / "reevaluated_curve.json"
+        )
+        curve = read_json(path)
+        trajectory_sha = sha256(run["directory"] / "trajectories/episode_000.json")
+        if (
+            curve.get("accepted") is not True
+            or curve.get("analysis_kind") != "offline_recorded_trajectory_re_evaluation"
+            or curve.get("historical_checkpoint_recovered") is not False
+        ):
+            raise ValueError(
+                f"Unaccepted or mislabelled record-only curve: {system}/{seed}"
+            )
+        if (
+            curve.get("original_trajectory_sha256") != trajectory_sha
+            or curve.get("input_sha256", {}).get("trajectories/episode_000.json")
+            != trajectory_sha
+            or curve.get("canonical_material_reference_sha256") != run["reference_hash"]
+        ):
+            raise ValueError(
+                f"Record-only curve input identity differs: {system}/{seed}"
+            )
+        matches = curve.get("original_endpoint_matches", {})
+        if len(matches) < 3 or any(value is not True for value in matches.values()):
+            raise ValueError(
+                f"Record-only endpoint comparison did not pass: {system}/{seed}"
+            )
+        source_hashes = curve.get("scientific_source_sha256", {})
+        if not source_hashes:
+            raise ValueError("Record-only scientific source identity missing")
+        for relative, expected in source_hashes.items():
+            source = frozen_root / relative
+            if not source.is_file() or sha256(source) != expected:
+                raise ValueError(
+                    f"Record-only scientific source SHA256 differs: {relative}"
+                )
+        history = curve.get("reevaluated_metrics_history", [])
+        if [point.get("queries_used") for point in history] != list(range(1, 21)):
+            raise ValueError(
+                f"Record-only history does not cover queries1..20: {system}/{seed}"
+            )
+        for point in history:
+            if any(
+                not finite(point.get(key))
+                or not 0 <= point[key] <= point["queries_used"]
+                for key in (MSUN, CURVE)
+            ):
+                raise ValueError(f"Invalid record-only history: {system}/{seed}")
+        if (
+            history[-1].get(MSUN) != run["mSUN_at_20"]
+            or history[-1].get(CURVE)
+            != run["trajectory"]["metrics"].get("final/" + CURVE)
+            or not math.isclose(
+                history[-1].get("discovery_curve_area_under_discovery_curve", -1),
+                run["AUDC"],
+                abs_tol=1e-9,
+                rel_tol=1e-9,
+            )
+        ):
+            raise ValueError(
+                f"Record-only history and original final metrics differ: {system}/{seed}"
+            )
+        pending.append((run, history, path))
+    for run, history, path in pending:
+        run["history"] = history
+        run["history_source"] = (
+            "separately_validated_offline_recorded_trajectory_re_evaluation_not_checkpoint_recovery"
+        )
+        run["curve_analysis_source"] = str(path)
+        run["curve_analysis_sha256"] = sha256(path)
+    return {
+        "accepted": True,
+        "global_proof_source": str(root / "reevaluation_audit.json"),
+        "global_proof_sha256": sha256(root / "reevaluation_audit.json"),
+        "own_histories_attached": len(runs),
+        "historical_checkpoint_recovered": False,
+        "kind": "offline_recorded_trajectory_re_evaluation",
+    }
+
+
 def curve_svg(runs: dict[tuple[str, int], dict[str, Any]], destination: Path) -> None:
     """Plot actual saved official M2 history; no missing M1 curve is invented."""
     width, height = 1220, 1920
+    curve_description = (
+        "Mean ± sample SD across three seeds; separately validated record-only re-evaluation, not checkpoint recovery."
+        if any("curve_analysis_source" in run for run in runs.values())
+        else "Mean ± sample SD across three seeds; points come from original preserved official query histories."
+    )
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '<rect width="100%" height="100%" fill="#ffffff"/>',
         "<style>text{font-family:Arial,sans-serif;fill:#17243b}.axis{stroke:#34425a;stroke-width:1}.grid{stroke:#e5eaf2;stroke-width:1}</style>",
         '<text x="65" y="38" font-size="24" font-weight="bold">M2 tool_routing_off: official development discovery curves</text>',
-        '<text x="65" y="64" font-size="14">Mean ± sample SD across the three seeds; each point comes from the saved official query history.</text>',
+        f'<text x="65" y="64" font-size="14">{html.escape(curve_description)}</text>',
     ]
     for row, system in enumerate(SYSTEMS):
-        group = [runs[(system, seed)] for seed in SEEDS if (system, seed) in runs]
+        group = [
+            runs[(system, seed)]
+            for seed in SEEDS
+            if (system, seed) in runs and "history" in runs[(system, seed)]
+        ]
         for column, metric in enumerate((MSUN, CURVE)):
             left, top, plot_w, plot_h = 75 + column * 600, 125 + row * 285, 490, 190
             title = "mSUN" if metric == MSUN else "Official AUDC-source count"
@@ -331,7 +706,7 @@ def curve_svg(runs: dict[tuple[str, int], dict[str, Any]], destination: Path) ->
             )
     parts.extend(
         [
-            '<text x="65" y="1870" font-size="14">M1 reference curves are omitted because the frozen reference lacks original per-query history attachments.</text>',
+            '<text x="65" y="1870" font-size="14">This figure plots M2 only. Missing original checkpoint histories have not been re-labelled as recovered originals.</text>',
             '<text x="65" y="1895" font-size="13">The zero-query discovery count is zero by protocol. Shading is clipped to the feasible count range [0,20].</text>',
             "</svg>",
         ]
@@ -339,16 +714,37 @@ def curve_svg(runs: dict[tuple[str, int], dict[str, Any]], destination: Path) ->
     destination.write_text("\n".join(parts))
 
 
-def report(results_root: Path, reference_root: Path, output: Path) -> dict[str, Any]:
+def report(
+    results_root: Path,
+    reference_root: Path,
+    output: Path,
+    frozen_root: Path | None = None,
+    curve_analysis_root: Path | None = None,
+) -> dict[str, Any]:
     if output.exists() and any(output.iterdir()):
         raise ValueError(
             "Report directory already contains files; choose a new directory"
         )
-    own, failed, issues = load_runs(results_root, METHOD, True)
+    if frozen_root is None and len(reference_root.parents) > 5:
+        candidate = reference_root.parents[5]
+        if (candidate / "M1/run_experiment.py").is_file():
+            frozen_root = candidate
+    own, failed, issues = load_runs(results_root, METHOD, True, frozen_root)
     reference, reference_failed, reference_issues = load_runs(
         reference_root, REFERENCE, False
     )
     issues.extend(reference_issues)
+    curve_audit: dict[str, Any] = {"accepted": False, "status": "not_supplied"}
+    if curve_analysis_root is not None:
+        try:
+            curve_audit = attach_reevaluated_curves(
+                own, curve_analysis_root, frozen_root
+            )
+        except Exception as error:
+            curve_audit = {
+                "accepted": False,
+                "error": f"{type(error).__name__}: {error}",
+            }
     paired = []
     missing_audit = []
     for key in sorted(EXPECTED & set(reference)):
@@ -425,6 +821,23 @@ def report(results_root: Path, reference_root: Path, output: Path) -> dict[str, 
                 "canonical_material_reference_sha256": run["reference_hash"],
                 "source": run["source"],
                 "m1_reference_source": baseline["source"] if baseline else None,
+                "endpoint_acceptance_scope": "new_endpoint_audit_original_failure_preserved"
+                if "endpoint_audit" in run
+                else "original_complete_run_audit",
+                "per_query_history_source": run.get(
+                    "history_source", "unavailable_after_official_checkpoint_cleanup"
+                ),
+                "curve_analysis_source": run.get("curve_analysis_source"),
+                "curve_analysis_sha256": run.get("curve_analysis_sha256"),
+                "required_visible_payload_verified": run.get(
+                    "required_visible_payload_verified", False
+                ),
+                "raw_hydra_originals_complete_after_transport": not run.get(
+                    "raw_hydra_transport_omissions"
+                ),
+                "raw_hydra_originals_missing_after_transport": len(
+                    run.get("raw_hydra_transport_omissions", [])
+                ),
             }
         )
     missing_own = sorted(EXPECTED - set(own))
@@ -436,6 +849,16 @@ def report(results_root: Path, reference_root: Path, output: Path) -> dict[str, 
         and len(paired) == 18
         and all(row["pair_status"].startswith("matched_") for row in paired)
     )
+    transport_omissions = [
+        {
+            "system": system,
+            "seed": seed,
+            "source": run["source"],
+            "missing_originals": run["raw_hydra_transport_omissions"],
+        }
+        for (system, seed), run in sorted(own.items())
+        if run.get("raw_hydra_transport_omissions")
+    ]
     audit = {
         "frozen_commit": COMMIT,
         "split": "dev",
@@ -449,6 +872,27 @@ def report(results_root: Path, reference_root: Path, output: Path) -> dict[str, 
         "own_failed_attempts_preserved": len(failed),
         "reference_failed_attempts_preserved": len(reference_failed),
         "complete_paired_final_metric_comparison": complete,
+        "endpoint_only_new_audit_accepted_units": sum(
+            "endpoint_audit" in run for run in own.values()
+        ),
+        "original_full_pretransport_audit_accepted_units": sum(
+            run.get("original_full_audit_accepted", False) for run in own.values()
+        ),
+        "own_per_query_histories_available": sum(
+            "history" in run for run in own.values()
+        ),
+        "record_only_curve_analysis": curve_audit,
+        "original_checkpoint_and_history_collection_complete": len(own) == 18
+        and all("endpoint_audit" not in run for run in own.values()),
+        "required_visible_m2_payload_verified_units": sum(
+            run.get("required_visible_payload_verified", False) for run in own.values()
+        ),
+        "m2_accepted_attempt_manifest_bytes_all_available_after_transport": not transport_omissions
+        and len(own) == 18
+        and not issues,
+        "m2_raw_hydra_transport_omissions": transport_omissions,
+        "m2_transport_omission_audit_scope": "Accepted completed attempts; failed attempts remain separately indexed without an all-bytes-preserved claim.",
+        "transport_omission_policy": "Only missing raw .hydra/config.yaml, .hydra/hydra.yaml and .hydra/overrides.yaml are separately recorded as absent originals. Every existing-file hash must match; every other missing manifest entry is fatal. No original is reconstructed.",
         "m1_missing_original_audit_attachments": missing_audit,
         "m1_missing_attachments_block_final_metric_pairing": False,
         "m1_full_curves_and_AF_EF": "not computed: original per-query history unavailable",
@@ -530,7 +974,25 @@ def report(results_root: Path, reference_root: Path, output: Path) -> dict[str, 
     (output / "failed_attempts.json").write_text(
         json.dumps(failed + reference_failed, indent=2, allow_nan=False) + "\n"
     )
-    curve_svg(own, output / "official_curves.svg")
+    (output / "independent_endpoint_audits.json").write_text(
+        json.dumps(
+            [
+                {
+                    "system": system,
+                    "seed": seed,
+                    "source": run["source"],
+                    "audit": run["endpoint_audit"],
+                }
+                for (system, seed), run in sorted(own.items())
+                if "endpoint_audit" in run
+            ],
+            indent=2,
+            allow_nan=False,
+        )
+        + "\n"
+    )
+    if any("history" in run for run in own.values()):
+        curve_svg(own, output / "official_curves.svg")
     rows = [
         "| Method | mSUN@20 mean ± seed SD | AUDC mean ± seed SD |",
         "| --- | --- | --- |",
@@ -547,8 +1009,8 @@ def report(results_root: Path, reference_root: Path, output: Path) -> dict[str, 
 Frozen source: `{COMMIT}` (`m1-freeze-20261025`). Accepted M2 units: {len(own)}/18.
 Complete paired final-metric comparison: {complete}.
 
-All reported discovery values come from actual preserved official trajectories,
-summaries and checkpoint metric histories. This reporter invokes no agent,
+Final discovery values come from actual original official trajectories and
+summaries. Curve sources are labelled separately below. This reporter invokes no agent,
 model, oracle, Materials Project request or simulated experiment.
 
 {chr(10).join(rows)}
@@ -560,9 +1022,49 @@ the routing-off condition and negative values favor full routing.
 
 `perunit.csv` contains the paired final scores and differences. `seed_aggregate.csv`
 and `method_summary.csv` expose the aggregation. `official_curves.svg` plots only
-M2's actual saved per-query histories; mSUN and the official AUDC-source count
-are distinct metrics. The SHA256 manifests and raw complete attempt directories
+M2's verified per-query histories, when available; mSUN and the official AUDC-source count
+are distinct metrics. The SHA256 manifests and preserved attempt directories
 remain the evidence source; report CSV files do not replace those directories.
+
+## Official checkpoint cleanup and independent endpoint audits
+
+{sum("endpoint_audit" in run for run in own.values())} units were accepted for
+final endpoint comparison by a NEW independent audit. Their original
+`m2_validation.json` remains false and unchanged: the unchanged official runner
+logged successful completion and removed its checkpoint before the post-exit
+collector ran. The new audit permits only that exact three-error failure,
+rechecks all frozen scientific source hashes, actual resolved settings,
+component logs, process exit and completed20-query trajectory/summary, and is
+saved in `independent_endpoint_audits.json`. It does not claim to recover an
+original checkpoint or history.
+
+Per-query histories available to this report: {sum("history" in run for run in own.values())}/18.
+Separate record-only curve analysis accepted: {curve_audit.get("accepted") is True}.
+When supplied, that analysis must first validate all720 original baseline
+prefixes and all72 final endpoints, then match each original trajectory hash,
+material reference and frozen evaluator source hash. Such curves are labelled
+offline re-evaluations of actual recorded structures/energies, never new oracle
+queries or recovered checkpoint files. Without original history or a passing
+separate proof, no curve is generated for that unit.
+
+## M2 transport audit
+
+{len(transport_omissions)} accepted M2 units have missing raw hidden Hydra attachments in
+the received artifact payload. Their exact missing paths and expected original
+SHA256 values are recorded in `validation.json`. This is consistent with the
+live artifact uploader's default exclusion of hidden files. The original raw
+`.hydra/config.yaml`, `.hydra/hydra.yaml` and `.hydra/overrides.yaml` files have
+not been reconstructed. The received archive is not claimed to preserve every
+original byte when those files are absent.
+
+The required visible payload is checked separately: original run metadata,
+full trajectory, official summaries, `resolved_config.yaml`, component logs,
+official checkpoint/history, process log and collection/exit records. Every
+available file must match its recorded SHA256, and a missing file outside those
+three named raw Hydra attachments remains a validation error. Scientific run
+acceptance was recorded on the execution runner before artifact transport;
+final-score pairing and required visible-payload integrity are distinguished
+from availability of these additional original audit attachments.
 
 ## M1 reference audit attachments
 
@@ -601,11 +1103,15 @@ def main() -> None:
     parser.add_argument("--results-root", type=Path, required=True)
     parser.add_argument("--reference-root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--frozen-root", type=Path)
+    parser.add_argument("--curve-analysis-root", type=Path)
     args = parser.parse_args()
     audit = report(
         args.results_root.resolve(),
         args.reference_root.resolve(),
         args.output.resolve(),
+        args.frozen_root.resolve() if args.frozen_root else None,
+        args.curve_analysis_root.resolve() if args.curve_analysis_root else None,
     )
     print(
         json.dumps(
@@ -620,6 +1126,13 @@ def main() -> None:
     if not audit["complete_paired_final_metric_comparison"]:
         raise SystemExit(
             "Incomplete or inconsistent result set; inspect validation.json"
+        )
+    if (
+        args.curve_analysis_root
+        and audit["record_only_curve_analysis"].get("accepted") is not True
+    ):
+        raise SystemExit(
+            "Supplied record-only curve analysis failed its proof gate; inspect validation.json"
         )
 
 
