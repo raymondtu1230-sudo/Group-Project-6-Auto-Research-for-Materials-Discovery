@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-25",
+  "main_before_document_closeout": "d8273483bdfc11e7d9a2b531bd5c360fef0b7813",
+  "original_group_task_split_blob": "100ca7f0bd1c1498a4116fbefdebca76cd480a60",
+  "common_message_and_M2_specific_scientific_instructions_satisfied": true,
+  "current_own_scientific_stage_closed": true,
+  "all_M2_project_responsibilities_complete": false,
+  "scope_audit": {
+    "freeze_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+    "audited_main": "d8273483bdfc11e7d9a2b531bd5c360fef0b7813",
+    "changed_blobs": 716,
+    "changes_outside_m2": [],
+    "tracked_source_inputs_unchanged": true
+  },
+  "ready": {
+    "random_dev": 18,
+    "chemeleon_dev": 18,
+    "tool_routing_off_dev": 18,
+    "M2_real_queries": 1080,
+    "full_M1_reference_paired": 18,
+    "official_scoring_curves_AF_EF_costs": true,
+    "methods_handoff_text": true,
+    "current_four_slide_English_source": true,
+    "current_English_speaking_script": true
+  },
+  "open": [
+    {
+      "task": "Receive and validate frozen planning_off/self_correction_off/memory_off/exploration_off result packages",
+      "owner": "Other members run;M2 receives and validates",
+      "due": "2026-10-27"
+    },
+    {
+      "task": "Combine all member results and complete check/hidden comparisons using M6 deliveries",
+      "status": "M6 Random check12already published;complete Full/Chemeleon/hidden comparison not received",
+      "due": "2026-10-27"
+    },
+    {
+      "task": "Refresh native PowerPoint final result slides and hand over to M6",
+      "status": "Newfour-slide content and script prepared;nativePPTX not refreshed or visually checked",
+      "due": "2026-10-27"
+    },
+    {
+      "task": "M6 receipt confirmation",
+      "status": "Material prepared/published;no message sent andno receipt claimed"
+    },
+    {
+      "task": "Review own section,group rehearsal,presentation andindividual report",
+      "status": "Future responsibilities peroriginaltaskplan"
+    }
+  ],
+  "audit_qualifications": [
+    "Required visible result payloads verified18/18",
+    "Original temporary run-state checkpoint/history files deleted byofficialrunner;these are nottheChemeleon modelweight files",
+    "54rawhiddenHydraoriginals missingaftertransport;resolvedconfigurations present",
+    "Record-only curves validated against720originalprefixesand72endpoints;originalauditfailures preserved"
+  ],
+  "do_not_rerun_completed_or_healthy_own_science": true
+}

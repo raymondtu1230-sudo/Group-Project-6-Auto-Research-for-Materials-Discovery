@@ -1,3 +1,50 @@
+# M2 methods and results for M6, 25 October 2026
+
+M2's development baselines and frozen tool-routing ablation are complete. The 36 original baseline results are reused after compatibility checks. All 18 routing-off episodes completed 20 queries. The frozen M1 Full reference comes from M1.
+
+## Method and controlled comparison
+
+The router chooses between checkpointed Random and Chemeleon generators from observed query feedback. It probes each tool, then uses a smoothed reward with an upper-confidence bonus. The last two queries use the reward without that bonus. The reward is a proxy for observed progress, separate from the official mSUN metric.
+
+The frozen tag is `m1-freeze-20261025`, commit `02e0026bf450f71f4f7862228d295f5b02b49e12`. The ablation changes only `enable_tool_routing=false`. Planning, memory, self-correction and exploration remain enabled. The primary generator remains checkpointed Random. The scientific entrypoint was the frozen `M1/run_experiment.py`, with six dev systems, seeds 17/29/43, CPU ORB v3 conservative, B=20 and one episode per system and seed. No ablation ran on check or hidden systems.
+
+## Development results
+
+| Method | Units | mSUN@20, mean ± seed SD | AUDC, mean ± seed SD |
+| --- | --- | --- | --- |
+| Random baseline | 18 | 4.0556 ± 0.6310 | 40.5833 ± 9.4586 |
+| Chemeleon baseline | 18 | 6.9444 ± 1.1097 | 71.3056 ± 9.5038 |
+| Frozen M1 Full | 18 | 10.0000 ± 0.8819 | 88.1111 ± 9.4536 |
+| Tool routing off | 18 | 7.7222 ± 1.1824 | 70.1389 ± 1.6080 |
+
+Each seed mean weights the six systems equally. We then report the mean and sample SD across the three seed means. The paired difference, routing off minus Full, is −2.2778 mSUN and −17.9722 AUDC. This supports a benefit from routing in this frozen development setting. It does not establish that routing improves every system or unseen materials.
+
+The final scores are the original official trajectory/summary values. The baseline compatibility audit checked all 36 original ZIP hashes, exact protocol equality, material-reference identity and 288 shared scientific-input hashes. No baseline was rerun.
+
+## Curves, AF/EF and evidence
+
+Current evidence: [verification/preserved-40204426478/report/](verification/preserved-40204426478/report/). The paired endpoint table is in [endpoint_comparison/perunit.csv](verification/preserved-40204426478/report/endpoint_comparison/perunit.csv), and seed aggregation is in [endpoint_comparison/method_summary.csv](verification/preserved-40204426478/report/endpoint_comparison/method_summary.csv).
+
+The official runner deletes successful checkpoints before the post-exit collector reads them. The original 18 collection/audit failures remain unchanged. A separate endpoint audit accepted the completed science from original metadata, resolved configurations, trajectories, summaries, source hashes, exits and component logs.
+
+The discovery curves are separate offline re-evaluations of the recorded structures and energies with frozen official metric functions. They passed all 720 original baseline prefix checks and all 72 original final mSUN/AUDC endpoint checks, with zero new proposals or model/oracle calls. See [recorded_curve_analysis/reevaluation_audit.json](verification/preserved-40204426478/report/recorded_curve_analysis/reevaluation_audit.json) and [paired_AF_EF.csv](verification/preserved-40204426478/report/recorded_curve_analysis/paired_AF_EF.csv). These are analysis outputs, not recovered historical checkpoints. AF/EF retain the official zero-baseline convention and EF cap; neither is a wall-time speedup.
+
+The visible required M2 payload is verified for 18 units. The uploader omitted three raw hidden `.hydra` files per unit. Those 54 original attachments remain missing and are listed in the audit. Several M1 reference configuration/log attachments are also absent. We have not reconstructed them or claimed complete byte-for-byte original archives.
+
+## Cost and handoff
+
+The cost tables retain the actual machine, platform, driver time, budgeted query count and recorded fees. Known model-inference fees are USD 0. Hardware, electricity and unpriced failed attempts are excluded, and unknown token usage stays unreported. M1's reference and the cloud runs used different machines, so their times do not establish a controlled speedup.
+
+Current [four-slide English source](report/M2_Frozen_Routing_Slide_Content_20261025.md) and [speaker notes](report/M2_SPEAKER_NOTES_20261025.md) are ready. The native PPTX remains pending; the 21 October baseline-only deck is historical. See [STAGE_ACCEPTANCE_20261025.md](STAGE_ACCEPTANCE_20261025.md).
+
+M2 still needs the other members' frozen ablations and M6's check/hidden evaluation outputs for the group scoreboard by 27 October. M2 validates and combines those results without changing or rerunning their experiments. The final tables, curves, costs, results text and slide contribution go to M6. No message was sent and no receipt or acceptance is claimed.
+
+---
+
+## Historical record: 21 October baseline handoff
+
+The text below is preserved from the earlier stage. Its pending items and counts do not describe the current result.
+
 > **2026-10-21终态：36/36项独立dev基线验收并完成本阶段收尾。** Random18/18、Chemeleon18/18，720次成功查询；两项最终attempt均exit_code=0，官方复评issues=[]，SHA256/CRC与终态receipt核验通过。最新入口：[CURRENT_STAGE_CLOSEOUT.md](CURRENT_STAGE_CLOSEOUT.md)。仅M2范围。M1 reference、routing-off和M6 check/hidden为后续。以下旧状态保留为历史快照。
 
 ## 历史记录（下文按原日期保留）

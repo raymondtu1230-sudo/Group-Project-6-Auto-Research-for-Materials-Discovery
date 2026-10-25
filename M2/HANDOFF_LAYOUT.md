@@ -1,3 +1,7 @@
+> **Current frozen-release warning, 25 October 2026:** M1 has already integrated M2 routing and frozen `m1-freeze-20261025` at `02e0026bf450f71f4f7862228d295f5b02b49e12`. Do not run the old installer or alter agent/configuration files on that release. M2's 18 routing-off episodes are complete. Use [STAGE_ACCEPTANCE_20261025.md](STAGE_ACCEPTANCE_20261025.md) and [METHODS_AND_M6_HANDOFF.md](METHODS_AND_M6_HANDOFF.md) for current results. The installation steps and shared-config failure notes below describe the earlier pre-freeze handoff; they are historical instructions, not a current freeze blocker.
+
+---
+
 # Independent M2 component handoff
 
 Canonical delivery is main/M2/. M1 owns installation into the shared framework. The following mapping is verified only in an isolated test checkout.

@@ -1,3 +1,23 @@
+> **2026-10-25 当前：M2 自己的 dev 基线与冻结版 routing-off 实验已收尾。** 36 项旧基线经完整兼容性检查后复用；18 项新消融均完成 20/20 查询。全组结果接收与汇总仍待 27 Oct，新的结果 PPTX 尚待完成检查。以下保留旧工作日志，历史快照不覆盖本条当前状态。
+
+## 25 October 2026: frozen routing ablation and evidence closeout
+
+- Used tag `m1-freeze-20261025`, commit `02e0026bf450f71f4f7862228d295f5b02b49e12`. Scientific source/config stayed frozen. Only `enable_tool_routing` was disabled. All 18 dev system/seed units completed one B20 CPU ORB episode. No check/hidden ablation was run.
+- Verified the actual Chemeleon weight archive SHA256 and CPU model loads in all 18 execution records. The archive hash is `ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e`.
+- Rechecked all 36 original baseline ZIP hashes and paired references/protocols, plus 288 shared scientific-input hashes. All passed, so no completed baseline was rerun.
+- Full averages mSUN 10.0000 / AUDC 88.1111; routing-off averages 7.7222 / 70.1389. These results support routing in this development configuration, not a universal or held-out claim.
+- The official runner deletes successful checkpoints before post-exit collection. All 18 original collection audits remain unsuccessful and unchanged. Independent endpoint checks accepted the actual 20-query trajectories, summaries, settings, source hashes, component logs and exits.
+- The artifact uploader excluded three hidden raw Hydra files per unit. All 54 missing attachments remain listed. They were not fabricated or replaced with reconstructed originals.
+- A separate offline analysis applied frozen official logic to original recorded structures/energies. It passed all 720 original baseline prefix checks and all 72 original final endpoints. This produced analysis curves and paired AF/EF with zero new model/oracle calls or proposals. These are not recovered historical checkpoints.
+- Preserved the first failed offline analysis run `40203822525`: report JSON serialization rejected a NumPy scalar. The fix changed only lossless JSON conversion; the successful retry reran analysis, not science. Earlier missing-history attempts and original failures remain evidence.
+- Updated M2 handoff/method/result text, a four-slide English content source and a matching speaking script. The native frozen-results PPTX remains pending refresh and visual QA. No group message was sent and no acceptance was claimed.
+
+What we learned: collect ephemeral checkpoints while the runner still owns them, preserve hidden attachments deliberately, and distinguish a completed scientific episode from a later collection failure. For the current outputs, original endpoint checks and separately validated record-only re-evaluation supply distinct evidence. Neither justifies inventing a missing original file.
+
+Remaining responsibility: collect M3/M4/M5 frozen ablations and M6 check/hidden outputs, validate and send the combined table/curves/costs to M6 by 27 Oct. Review own section on 28 Oct, rehearse on 29 Oct, and prepare the individual report due 3 Nov.
+
+---
+
 > **2026-10-21终态：36/36项独立dev基线验收并完成本阶段收尾。** Random18/18、Chemeleon18/18，720次成功查询；两项最终attempt均exit_code=0，官方复评issues=[]，SHA256/CRC与终态receipt核验通过。最新入口：[CURRENT_STAGE_CLOSEOUT.md](CURRENT_STAGE_CLOSEOUT.md)。仅M2范围。M1 reference、routing-off和M6 check/hidden为后续。以下旧状态保留为历史快照。
 
 ## 历史记录（下文按原日期保留）
@@ -284,4 +304,3 @@ All eleven accepted ZIPs are now pinned in `configs/verified_baselines.json`. Th
 The known-cost fields of the original records report zero model/API fees; compute, electricity and interruption costs have not all been priced, so do not interpret the metadata's cost_status=complete as a complete economic cost estimate. The current shared M1/M5 default failure and local smoke failures remain unresolved and explicitly logged. Latest-source cloud CI is still pending; historical passes are not used as its result. M1/M5 issue message is prepared, not sent through WeChat.
 
 Older snapshots below are superseded by this confirmed snapshot.
-

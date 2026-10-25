@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-25",
+  "freeze_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "M2_real_episodes": 54,
+  "M2_queries": 1080,
+  "own_dev_baselines": 36,
+  "own_routing_off": 18,
+  "M1_reference_episodes": 18,
+  "endpoint_comparison": [
+    {
+      "method": "tool_routing_off",
+      "complete_18_unit_sweep": "True",
+      "seed_n": "3",
+      "units_expected": "18",
+      "mSUN_at_20_mean": "7.722222222222222",
+      "mSUN_at_20_seed_sample_SD": "1.182433147432931",
+      "AUDC_mean": "70.13888888888889",
+      "AUDC_seed_sample_SD": "1.6079950709340392"
+    },
+    {
+      "method": "m1_full",
+      "complete_18_unit_sweep": "True",
+      "seed_n": "3",
+      "units_expected": "18",
+      "mSUN_at_20_mean": "10.0",
+      "mSUN_at_20_seed_sample_SD": "0.8819171036881968",
+      "AUDC_mean": "88.11111111111111",
+      "AUDC_seed_sample_SD": "9.453590342847018"
+    },
+    {
+      "method": "paired_delta_off_minus_full",
+      "complete_18_unit_sweep": "True",
+      "seed_n": "3",
+      "units_expected": "18",
+      "mSUN_at_20_mean": "-2.2777777777777777",
+      "mSUN_at_20_seed_sample_SD": "2.0570565090637354",
+      "AUDC_mean": "-17.97222222222222",
+      "AUDC_seed_sample_SD": "9.79098697404536"
+    }
+  ],
+  "baseline_compatibility_source": "verification/preserved-40204426478/report/baseline_compatibility/per_method_metrics.csv",
+  "new_real_weight_verifications": 18,
+  "baseline_prefix_checks": 720,
+  "endpoint_checks": 72,
+  "curve_provenance": "separately_labelled_offline_recorded_trajectory_re_evaluation",
+  "original_checkpoint_recovery": false,
+  "new_slide_source": "M2_Frozen_Routing_Slide_Content_20261025.md",
+  "new_speaker_notes": "M2_SPEAKER_NOTES_20261025.md",
+  "native_pptx_refreshed": false
+}

@@ -1,9 +1,24 @@
-# M2 material for M6
+# M2 material for M6, 25 October 2026
 
-Current editable contribution: [M2_Method_and_Dev_Baselines_20261021_36of36.pptx](M2_Method_and_Dev_Baselines_20261021_36of36.pptx), four slides. [Speaker notes](M2_SPEAKER_NOTES.md), [source data](current_results_data.json) and [checksum](current_slides_checksum.json) match the complete36/36 dev baseline snapshot. This is M2's contribution draft. M6 owns the final group deck.
+The current scientific contribution covers 36 original dev baselines and 18 frozen routing-off episodes, compared with M1's 18-unit Full reference. All four methods use the six dev systems and seeds 17/29/43, B=20 and one episode per system/seed.
 
-Random and Chemeleon each cover six systems and three seeds. Official method means are4.0556/6.9444 mSUN and40.5833/71.3056 AUDC. Three-seed sample SDs are0.6310/1.1097 and9.4586/9.5038. The two native charts retain the labelled Mg-Sn-Sr/17 example and its original embedded workbooks. Full-system curves and paired AF/EF use the [official final report](../verification/direct-39432570527-1/final-report/).
+| Method | Units | mSUN@20, mean ± seed SD | AUDC, mean ± seed SD |
+| --- | --- | --- | --- |
+| Random baseline | 18 | 4.0556 ± 0.6310 | 40.5833 ± 9.4586 |
+| Chemeleon baseline | 18 | 6.9444 ± 1.1097 | 71.3056 ± 9.5038 |
+| Frozen M1 Full | 18 | 10.0000 ± 0.8819 | 88.1111 ± 9.4536 |
+| Tool routing off | 18 | 7.7222 ± 1.1824 | 70.1389 ± 1.6080 |
 
-All36 units total720 queries. Mean driver times are15.9893/234.3093 minutes. Known recorded model feesUSD0 exclude hardware, electricity and unpriced failed attempts. AF/EF are discovery metrics, with the official zero-baseline convention. They do not measure wall-time acceleration. Routing benefit remains unmeasured.
+Means and sample SDs are across the three seed means, each weighting the six systems equally. Routing off minus Full is −2.2778 mSUN and −17.9722 AUDC. These are development-set results, with variation across systems and seeds.
 
-Previous published Draft and20261020 decks remain historical snapshots. The unposted35of36 draft remains in its original local worktree. Use the36of36 file above for current material. [Terminal evidence](../verification/stage-closeout-39432570527/terminal-validation.json), [stage record](../CURRENT_STAGE_CLOSEOUT.md) and [handoff](../handoffs/CURRENT_STAGE_HANDOFF.md) provide provenance. M1 reference, routing-off and M6 check/hidden remain separate later work.
+Current result sources are in [verification/preserved-40204426478/report](../verification/preserved-40204426478/report/). Use its `endpoint_comparison/` for original final metrics and costs, `baseline_compatibility/` for the old 36-unit reuse proof, and `recorded_curve_analysis/` for separately labelled offline curves and official paired AF/EF.
+
+The curve analysis uses actual recorded structures and energies. It passed 720 original baseline prefix checks and all 72 original endpoints, with no scientific rerun. The original unsuccessful post-exit checkpoint collection records remain unchanged. The 54 raw hidden `.hydra` attachments omitted by transport remain explicitly missing. Visible resolved configurations and component evidence are checked separately.
+
+Current [four-slide English source](M2_Frozen_Routing_Slide_Content_20261025.md) and [speaking text](M2_SPEAKER_NOTES_20261025.md) are ready. The native PPTX has not been refreshed or visually checked; this remains part of the 27 October handoff. The existing [21 October four-slide deck](M2_Method_and_Dev_Baselines_20261021_36of36.pptx) and [21 October notes](M2_SPEAKER_NOTES.md) are historical baseline-stage drafts.
+
+Known USD 0 model fees exclude hardware, electricity and unpriced failures. Keep machine labels and elapsed times. Different machines do not support a controlled speed comparison. AF/EF are official discovery metrics, with their original zero/cap rules.
+
+Machine-readable current data: [frozen_results_data_20261025.json](frozen_results_data_20261025.json).
+
+M6 owns the final group deck. M2 still collects the other members' final results for the 27 October group scoreboard. See [stage acceptance](../STAGE_ACCEPTANCE_20261025.md).
