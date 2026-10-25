@@ -82,5 +82,21 @@ Local evidence is preserved in the ignored result directories:
 - `M1/MADE/results/20261025-185305-orb-m1_integrated/`
 
 This is a freeze acceptance canary, not the final leaderboard estimate. The
-next step is the frozen 6-system x 3-seed development reference and paired
-one-switch ablations.
+frozen 6-system x 3-seed development reference was subsequently completed and
+is checked in under `M1/MADE/results/protocol_v1/m1_full/dev/`.
+
+## Frozen development reference
+
+The reference sweep completed on 2026-10-25 at 20:36:29 Asia/Singapore:
+
+- 18/18 valid units completed; 0 sweep failures
+- every valid unit used 20/20 queries
+- seed set: 17, 29, 43; six development systems
+- aggregate mSUN@20: 10.0000 (seed SD 0.8819)
+- aggregate AUDC: 88.1111 (seed SD 9.4536)
+
+The complete trajectories, metadata, summaries, plots, preserved failed
+attempts, and sweep logs are retained in the result directory. The sweep log
+ends with `completed=18 failed=0`. These artifacts are the frozen M1 handoff
+to M2 and the paired ablation owners; AF/EF are computed only after the
+corresponding baseline results are paired by M2.

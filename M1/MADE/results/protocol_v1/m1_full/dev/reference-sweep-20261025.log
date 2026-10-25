@@ -1,0 +1,5 @@
+SWEEP_START 2026-10-25T19:06:42+08:00 tag=m1-freeze-20261025 commit=27f403c2f554ed4b089915facef021f26fa9b269 units=18
+UNIT_SKIP 2026-10-25T19:06:42+08:00 system=Mg-Sn-Sr seed=17 path=results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_02
+UNIT_START 2026-10-25T19:06:42+08:00 system=Mg-Sn-Sr seed=29 attempt=1
+Running episodes:   0%|          | 0/1 [00:00<?, ?it/s]/Users/llh/CodexProjects/Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE/.venv/lib/python3.12/site-packages/modal/_functions.py:1826: UserWarning: The run_episode function is executing locally and will not have access to the mounted Volume or NetworkFileSystem data
+  warnings.warn(
