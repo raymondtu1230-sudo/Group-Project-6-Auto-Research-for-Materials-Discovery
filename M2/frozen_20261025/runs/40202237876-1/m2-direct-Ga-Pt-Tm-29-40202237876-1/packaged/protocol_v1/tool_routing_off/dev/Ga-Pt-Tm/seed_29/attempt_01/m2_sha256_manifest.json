@@ -1,0 +1,23 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    ".hydra/config.yaml": "525f6c5fa359f58585bbcc5dd01fd9765564210c9f2deaedf5efa02bc4005ac1",
+    ".hydra/hydra.yaml": "f4d1e7c389238dc122e6deaab9c0b53110982c13ef2f249bbd3ca56b8565414d",
+    ".hydra/overrides.yaml": "baf641e9c816fc74b63db95c7af91f1f4f648975b555865ef03c74fe484d202e",
+    "m2_collection.json": "d9ab37f76f679209f5afba8abf5a5b3133c794fe87aed65bf59ff040cc46ff17",
+    "m2_exit.json": "ed480c7042b1448d78d334a86686af3f240232d1c3e50e1db229f193cd17f668",
+    "m2_metrics_history.json": "8f34fea262d148b9680d0ad42318fdcb82a193f31c354fc2ae4624a0bb5459bb",
+    "m2_process.log": "ef0174908074c22fb4b933830a56cf8fe88a6204f3634c3f9b803dd4322ae1c9",
+    "m4_evidence.jsonl": "82309849abe03903935fcd46618bd970db91c76a33e826142934bb07d2075180",
+    "m5_decisions.jsonl": "2a46800edc3d80ef74134c2631e612f63b4d12d1574370be73477581b5827114",
+    "resolved_config.yaml": "fda7689180a9f051c818aa900756f483a894ee6c4205b4bf3a41e047bbb5f368",
+    "run_benchmark.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "run_metadata.json": "9eceeb7433647f8efd8ddb2df0cdc89139c0ffc51a97288018cd58520c896c47",
+    "summary/episodes.csv": "7f98e188f0d19dc6c83e412595dc630c2e6f260c7d3ff104fd1649f448d6bebf",
+    "summary/episodes.json": "0b55a0505fa65bc10999df535888f22349aac29dd25e53a794374ed593dd1fbf",
+    "summary/phase_diagram_gt.png": "315f059fd8f985225393850fe5e762a205269218b9026ca54d970536697ce815",
+    "summary/summary.json": "090aaa75416c9c87f612e976df921b4eda36e2a6c54df10b8d954cea0827ca9b",
+    "trajectories/episode_000.json": "7276bcab13d7d1a2c57a4511c99c42b553165be029fe9b0df001bbd1c45f0307",
+    "trajectories/phase_diagram_episode_000.png": "1ca13e44462ab826823fa78037d2e27f4b7fbd8e742a7ecad96cecf8e909ea9a"
+  }
+}

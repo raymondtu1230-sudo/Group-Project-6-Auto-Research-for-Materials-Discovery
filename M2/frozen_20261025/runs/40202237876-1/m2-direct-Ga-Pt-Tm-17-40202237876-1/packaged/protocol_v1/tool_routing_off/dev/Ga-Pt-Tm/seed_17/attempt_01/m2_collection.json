@@ -1,0 +1,22 @@
+{
+  "collection_version": "m2-frozen-v1",
+  "collected_at_utc": "2026-10-25T14:49:03.481965+00:00",
+  "experiment_entrypoint": "M1/run_experiment.py",
+  "exit_code": 0,
+  "attempt_path": "M1/MADE/results/protocol_v1/tool_routing_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+  "original_metadata_unchanged": true,
+  "errors": [
+    "No matching original official checkpoint was available"
+  ],
+  "original_metadata_sha256": "6b81a4e1a3794a2b76b3ff7fc4212711928c4ff059d4b6e8e7867d59d6f51262",
+  "original_process_log_sha256": "b05b9a6e87086a665f72e97c9b633bad1051f86bd65ed7affd1f9e81d30e684d",
+  "process_log_known_secret_redaction": false,
+  "original_hydra_runtime": "M1/MADE/results/20261025-142938-orb-m1_integrated",
+  "config_resolution_environment": {
+    "M4_RUN_ID": "tool_routing_off-Ga-Pt-Tm-17-attempt01-40202237876",
+    "M4_EPISODE_ID": "0"
+  },
+  "resolved_config_saved": true,
+  "official_checkpoints": [],
+  "collection_complete": false
+}

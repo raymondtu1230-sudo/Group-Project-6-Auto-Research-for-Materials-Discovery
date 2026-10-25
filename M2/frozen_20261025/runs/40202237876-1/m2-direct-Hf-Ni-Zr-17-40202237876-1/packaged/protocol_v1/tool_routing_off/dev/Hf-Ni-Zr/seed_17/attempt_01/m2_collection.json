@@ -1,0 +1,22 @@
+{
+  "collection_version": "m2-frozen-v1",
+  "collected_at_utc": "2026-10-25T14:42:38.425530+00:00",
+  "experiment_entrypoint": "M1/run_experiment.py",
+  "exit_code": 0,
+  "attempt_path": "M1/MADE/results/protocol_v1/tool_routing_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+  "original_metadata_unchanged": true,
+  "errors": [
+    "No matching original official checkpoint was available"
+  ],
+  "original_metadata_sha256": "fe63421eb4f867467576efceb54e2d0f86d78b58ac051de8915b8dd0d9833476",
+  "original_process_log_sha256": "cf67cd0912123f58dfce5845b0f200d4991fe889fe0c6ef663141f6af122b6f7",
+  "process_log_known_secret_redaction": false,
+  "original_hydra_runtime": "M1/MADE/results/20261025-142942-orb-m1_integrated",
+  "config_resolution_environment": {
+    "M4_RUN_ID": "tool_routing_off-Hf-Ni-Zr-17-attempt01-40202237876",
+    "M4_EPISODE_ID": "0"
+  },
+  "resolved_config_saved": true,
+  "official_checkpoints": [],
+  "collection_complete": false
+}

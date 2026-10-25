@@ -1,0 +1,9 @@
+UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Checkpoints already exist.
+/home/runner/work/_temp/m2-frozen-routing-science/M1/MADE/.venv/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py:73: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+UserWarning: Setting global torch default dtype to torch.float32.
+Downloading …rvative-inf-omat-20250404.ckpt ━━━━━━━━━━━ 100% 0:00:02 102.1/102.1
+                                                                     MB         
+No elemental reference energies provided, make sure to compute them using compute_elemental_energies_from_structures using the oracle
+{"actual_cpu_model_load": true, "sampling_calls": 0, "oracle_queries": 0, "module_paths": ["/home/runner/work/_temp/m2-frozen-routing-science/M1/MADE/src/made/__init__.py", "/home/runner/work/_temp/m2-frozen-routing-science/M1/MADE/src/made/agents/m1_integrated.py", "/home/runner/work/_temp/m2-frozen-routing-science/M1/MADE/src/made/agents/m2_tool_routing.py", "/home/runner/work/_temp/m2-frozen-routing-science/M4/src/m4_memory/capture.py"]}

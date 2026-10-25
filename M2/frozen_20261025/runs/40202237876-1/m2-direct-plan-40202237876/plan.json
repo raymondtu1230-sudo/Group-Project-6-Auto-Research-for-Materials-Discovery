@@ -1,0 +1,84 @@
+{
+  "method": "tool_routing_off",
+  "freeze_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "units": [
+    {
+      "system": "Au-K-Tb",
+      "seed": 29
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 43
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 17
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 29
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 43
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 17
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 29
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 43
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 17
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 29
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 43
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 17
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 29
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 43
+    }
+  ],
+  "count": 14,
+  "already_claimed_not_restarted": [
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 17
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 29
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 43
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 17
+    }
+  ],
+  "science_started": false,
+  "old_baselines_rerun": false,
+  "workflow_transport": "M2 missing-only Chemeleon direct full runs"
+}

@@ -1,0 +1,23 @@
+From https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery
+ * branch            main               -> FETCH_HEAD
+ * [new tag]         m1-freeze-20261025 -> m1-freeze-20261025
+ * [new branch]      main               -> origin/main
+Preparing worktree (detached HEAD 02e0026)
+HEAD is now at 02e0026 M1: publish frozen 18-run reference
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/runner/work/_temp/m2-frozen-routing-science/M1/MADE/.git/
+From https://github.com/diffractivelabs/MADE
+ * branch            bffda0c9a1fa1904b35c0ef67b455881c975df86 -> FETCH_HEAD
+Actual frozen Chemeleon + ORB CPU model loads passed
