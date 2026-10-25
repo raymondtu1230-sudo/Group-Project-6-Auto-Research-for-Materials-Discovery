@@ -211,6 +211,7 @@ results/
 
 # Local experiment outputs and checkpoints. These may contain private data,
 # large generated artifacts, or machine-specific state.
+ckpts/
 checkpoints/
 trajectories/
 artifacts/

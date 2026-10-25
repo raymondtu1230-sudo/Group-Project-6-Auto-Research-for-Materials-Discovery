@@ -30,3 +30,11 @@
 - 2026-10-19: Added `M1/PLUGIN_INTERFACE.md`, a detailed handoff specification covering lifecycle, context fields, exact M2-M5 signatures, Hydra fields, budget/privacy constraints, checkpointing, and independent switch tests. Existing M1 contract suite passed (`17 passed`) and Ruff passed.
 - 2026-10-19: Completed all 18 M1 baseline development units (6 systems x seeds 17/29/43), each with 20/20 queries and completed metadata. Results summarized in `M1/m1_baseline_dev_summary.csv`; canonical ground-truth snapshots agree within every system. Historical failed `Mg-Sn-Sr/17/attempt_01` remains preserved; successful result is `attempt_02`.
 - 2026-10-20: As M1 lead, set B=20 as the team-selected protocol-v1 query budget, applied uniformly across methods. This resolves the budget item in the earlier pending-confirmation note; it is not a TA-mandated value. Any conflicting course-published requirement will be handled through a versioned amendment.
+
+## 2026-10-25 - Final integration and freeze
+
+- Audited the final M2-M5 integration. The initial member consistency gate found that M1 still carried M3's pre-fix progress logic. Synchronized M3's final implementation and regression tests so only newly discovered stable phases count as progress.
+- Final gates passed: 89 M1 integration/protocol tests, 17 M3 tests, 15 M4 tests, 14 M5 tests, the M3 installer consistency check, and Ruff.
+- The first official `m1_full` canary attempt failed before query 1 because Figshare returned an empty Chemeleon checkpoint archive. Preserved the failed attempt, downloaded the same official asset through Figshare's alternate downloader, verified SHA-256 `ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e`, and excluded local weights from Git.
+- The second attempt completed one official Mg-Sn-Sr development episode with seed 17 and all five switches enabled. It used exactly 20/20 queries in 380.138 seconds; mSUN@20 was 12 and AUDC was 105.0. Every recorded source/config input hash matched the working tree. M5 wrote 20 decision records; M4 wrote 19 incremental memory records, while the official trajectory retained all 20 queries.
+- Froze the integrated release as annotated tag `m1-freeze-20261025`. The acceptance canary is not the final leaderboard estimate; the frozen 6-system x 3-seed reference remains next.

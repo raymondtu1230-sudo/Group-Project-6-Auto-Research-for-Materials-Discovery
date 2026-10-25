@@ -65,10 +65,16 @@ def _finite(value: Any) -> float | None:
 
 
 def _progress(record: dict[str, Any]) -> bool:
-    """A query counts as progress if it found a new (or, failing that, stable) phase."""
-    if "is_newly_discovered" in record:
-        return bool(record["is_newly_discovered"])
-    return bool(record.get("is_stable", False))
+    """A query counts as progress only if it found a new *stable* phase.
+
+    MADE sets ``is_newly_discovered`` for every structure not seen before,
+    stable or not (all 360 queries in the first M3 sweep), so on its own it
+    is not a discovery signal. Progress needs ``is_stable`` as well; a record
+    without ``is_newly_discovered`` counts if it is stable.
+    """
+    if not record.get("is_stable", False):
+        return False
+    return bool(record.get("is_newly_discovered", True))
 
 
 def _observation_formula(observation: dict[str, Any]) -> str | None:
@@ -248,7 +254,7 @@ class M3ResearchPlanner(GridSearchPlanner):
                 continue
             bucket = evidence.setdefault(key, {"new": 0.0, "near": 0.0})
             ehull = _finite(record.get("e_above_hull"))
-            if record.get("is_newly_discovered"):
+            if _progress(record):
                 bucket["new"] += 1
             elif ehull is not None and ehull <= self.near_hull_threshold:
                 bucket["near"] += 1
@@ -300,7 +306,7 @@ class M3ResearchPlanner(GridSearchPlanner):
     ) -> list[Composition]:
         failures: dict[str, int] = {}
         for record in memory:
-            if not _progress(record) and not record.get("is_stable"):
+            if not record.get("is_stable"):
                 key = _rkey(record.get("reduced_formula"))
                 failures[key] = failures.get(key, 0) + 1
         candidates = [
@@ -369,7 +375,7 @@ class M3StuckReplanPolicy:
     """Detect a stalled search and re-plan toward unvisited compositions.
 
     Stuck signals over the last ``window`` observed queries:
-    - ``no_progress``: no newly discovered (or stable) phase;
+    - ``no_progress``: no newly discovered stable phase;
     - ``repetition``: the plan targets a reduced formula already tried
       ``max_repeat`` times in the window.
     On a signal (outside the cooldown), the plan's compositions are replaced

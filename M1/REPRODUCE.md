@@ -41,7 +41,7 @@ Do not send the key in chat or commit it. Example:
 uv run python ../run_experiment.py --method random_generator_baseline --split dev --system Mg-Sn-Sr --seed 17
 ```
 
-Use `--method m1_full` for the frozen integrated agent and the corresponding `*_off` methods for ablations after their plug-ins are merged. The M1 full/ablation methods intentionally fail if a switch is on but its plug-in is absent. Outputs are grouped under `M1/MADE/results/protocol_v1/`. The current workspace has no `.env` or Materials Project key, so only synthetic smoke tests have run so far. If the course later publishes conflicting frozen values, follow those and make a versioned protocol amendment.
+Use `--method m1_full` for the integrated agent frozen as `m1-freeze-20261025` and the corresponding `*_off` methods for paired ablations. The M1 full/ablation methods intentionally fail if a switch is on but its plug-in is absent. Outputs are grouped under `M1/MADE/results/protocol_v1/`. One official-data, 20-query freeze canary completed on 25 October 2026; see `FREEZE_RECORD.md`. Keep the Materials Project key only in the ignored `.env`. If the course later publishes conflicting frozen values, make a versioned protocol amendment and a new tag.
 
 ## Per-run record
 
