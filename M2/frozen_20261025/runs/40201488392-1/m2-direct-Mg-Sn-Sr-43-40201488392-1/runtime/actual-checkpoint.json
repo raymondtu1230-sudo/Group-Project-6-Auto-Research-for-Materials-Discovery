@@ -1,0 +1,10 @@
+{
+  "method": "tool_routing_off",
+  "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+  "archive_bytes": 548874535,
+  "expected_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+  "matches": true,
+  "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+  "source": "official Figshare file 54966305",
+  "checked_at_utc": "2026-10-25T14:19:29.367804+00:00"
+}

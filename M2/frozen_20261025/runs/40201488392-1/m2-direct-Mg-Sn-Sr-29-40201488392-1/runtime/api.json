@@ -1,0 +1,10 @@
+{
+  "kind": "actual_authenticated_materials_project_request",
+  "status": "accepted",
+  "documents": 1,
+  "database_version": "2026.09.28",
+  "material_ids": [
+    "mp-1028280"
+  ],
+  "method": "tool_routing_off"
+}

@@ -1,0 +1,9 @@
+{
+  "source": "official_runner_checkpoint_metrics_history",
+  "source_checkpoint": null,
+  "source_checkpoint_sha256": null,
+  "final_row_from_official_trajectory": false,
+  "complete_curve": false,
+  "query_counts": [],
+  "metrics_history": []
+}

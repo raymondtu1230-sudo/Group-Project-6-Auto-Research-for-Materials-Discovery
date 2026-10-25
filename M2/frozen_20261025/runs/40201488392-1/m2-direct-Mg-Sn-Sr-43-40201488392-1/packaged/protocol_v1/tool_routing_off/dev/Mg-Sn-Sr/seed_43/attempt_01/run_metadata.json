@@ -1,0 +1,237 @@
+{
+  "protocol_version": "m1-v1",
+  "method": "tool_routing_off",
+  "split": "dev",
+  "system": [
+    "Mg",
+    "Sn",
+    "Sr"
+  ],
+  "seed": 43,
+  "attempt": 1,
+  "query_budget": 20,
+  "protocol_settings": {
+    "protocol_version": "m1-v1",
+    "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+    "runner": "scripts/run_benchmark.py",
+    "oracle": {
+      "name": "ORBOracle",
+      "model_name": "orb-v3-conservative-inf-omat",
+      "device": "cpu",
+      "relax": true,
+      "optimizer": "fire",
+      "fmax": 0.02,
+      "max_steps": 500,
+      "relax_unit_cell": true
+    },
+    "materials_project": {
+      "thermo_types": [
+        "GGA_GGA+U"
+      ]
+    },
+    "environment": {
+      "query_budget": 20,
+      "max_stoichiometry": 20,
+      "stability_tolerance_ev_per_atom": 0.1,
+      "filter_by_smact": true,
+      "include_near_stable_from_ground_truth": true
+    },
+    "systems": {
+      "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+      "dev_file": "M1/protocol/dev_systems.json",
+      "check_file": "M1/protocol/check_systems.json"
+    },
+    "repeats": {
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "episodes_per_process": 1
+    },
+    "methods": {
+      "runnable_m1_reference": "m1_baseline",
+      "required": [
+        "m1_full",
+        "random_generator_baseline",
+        "chemeleon_generative_baseline"
+      ],
+      "ablations": [
+        "planning_off",
+        "memory_off",
+        "self_correction_off",
+        "exploration_off",
+        "tool_routing_off"
+      ]
+    },
+    "metrics": {
+      "primary": "final/novelty_stable_unique_novel_count",
+      "secondary": [
+        "final/novelty_stable_unique_novel_fraction",
+        "final/discovery_curve_area_under_discovery_curve",
+        "final/discovery_curve_acceleration_factor",
+        "final/discovery_curve_enhancement_factor"
+      ]
+    },
+    "logging": {
+      "use_wandb": false,
+      "save_trajectory": true,
+      "save_resolved_config": true,
+      "preserve_failed_runs": true
+    }
+  },
+  "episodes": 1,
+  "command": [
+    "/home/runner/work/_temp/m2-frozen-routing-science/M1/MADE/scripts/run_benchmark.py",
+    "agent=m1_integrated",
+    "dataset.elements=[Mg,Sn,Sr]",
+    "dataset.thermo_types=[GGA_GGA+U]",
+    "oracle=orb",
+    "oracle.model_name=orb-v3-conservative-inf-omat",
+    "oracle.device=cpu",
+    "oracle.relax=true",
+    "oracle.relax_kwargs.optimizer=fire",
+    "oracle.relax_kwargs.fmax=0.02",
+    "oracle.relax_kwargs.steps=500",
+    "oracle.relax_kwargs.relax_unit_cell=true",
+    "environment.budget=20",
+    "environment.max_stoichiometry=20",
+    "environment.stability_tolerance=0.1",
+    "environment.filter_by_smact=true",
+    "environment.include_near_stable_from_ground_truth=true",
+    "experiment.num_episodes=1",
+    "experiment.seed=43",
+    "experiment.verbose=false",
+    "logger.use_wandb=false",
+    "experiment.output_dir=results/protocol_v1/tool_routing_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+    "agent.enable_planning=true",
+    "agent.enable_memory=true",
+    "agent.enable_reflection=true",
+    "agent.enable_exploration=true",
+    "agent.enable_tool_routing=false",
+    "agent/planner=m3_research",
+    "agent.generator.seed=${experiment.seed}",
+    "agent.planner.seed=${experiment.seed}",
+    "agent.scorer.seed=${experiment.seed}"
+  ],
+  "started_at_utc": "2026-10-25T14:20:03.125191+00:00",
+  "machine": "runnervmtai0g",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "python": "3.12.15",
+  "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+  "m1_input_sha256": {
+    "run_experiment.py": "a884b264158da67a0e37a851da25c757e4ac0e5b9752c1540a58c20cfc0e7edf",
+    "EXPERIMENT_PROTOCOL.md": "cf4e62c8cb854cda17b02a33e58f635e9ff16512fc86058895638dafa9a0617e",
+    "protocol/protocol_v1.yaml": "e9305aefd75fc32612729b7cfd760817234ad006bae99594271badbd69ca7cef",
+    "MADE/src/made/agents/__init__.py": "1c421fb4cc60a28570d3a7be66d1c5fe01f3a69166456bd38be091208c5e1723",
+    "MADE/src/made/agents/base.py": "fbbfc4d4a010ee228dd37fd9f6b50324a5758349645d6a257cea49b9bc3522b8",
+    "MADE/src/made/agents/filters/__init__.py": "cfdba5fbb968765272c9a1aedc2bddca47af1e6b29d73121e60853dc72196c8e",
+    "MADE/src/made/agents/filters/chain.py": "d8d5da8f5e68bf07259615cdd5433222b54fb21c883f5fd27529d4744be4528d",
+    "MADE/src/made/agents/filters/min_distance.py": "22f16e41b8925f1ccf9dc7450e5063530fd88cc74a6f195943db4098980f6614",
+    "MADE/src/made/agents/filters/noop.py": "11447b0a33e140c84599c7399a70fa4a68262c86faa1ef45f6dcef52a8556d66",
+    "MADE/src/made/agents/filters/smact.py": "9135e8f2fb7248f8761bf418ac34ff8e3299c9ce73a79a9ab242bd8725e3b3e5",
+    "MADE/src/made/agents/filters/uniqueness.py": "934c24c244007f3802425d35e22b0fca60fd4ce4d6b0efd268ca5121123bc960",
+    "MADE/src/made/agents/generators/__init__.py": "cff6bd098fb9e2bc95a5424a9d11a4c81d7b70d4ad378cf42d022259a5da60ed",
+    "MADE/src/made/agents/generators/cached.py": "303bf462968423d7ccdcf853f42cee2705163d20a825f593042fc7f58d168258",
+    "MADE/src/made/agents/generators/chemeleon.py": "2ea0833cc97f6bf6cb1856e2d8f039e29079a10d8b08ab85f9623cf71d040112",
+    "MADE/src/made/agents/generators/random.py": "e9d94a7fa8c2c4d03a15710972012ad4074734f9ead6e160d0ef66fba65059a0",
+    "MADE/src/made/agents/llm_react_orchestrator.py": "cc0c1e7e8f29bfce1375ff0401411b0a5811550ef6d6519f4c036f6621d21652",
+    "MADE/src/made/agents/m1_integrated.py": "a4528b90af04e09d6fb3878284d0ff6f211a6d433424d47d8d149bbe35877b60",
+    "MADE/src/made/agents/m2_tool_routing.py": "03fab495c4f271dc330a1680dd1f527a21dd40dbfc9f1d7bffca23a031566899",
+    "MADE/src/made/agents/m3_planning.py": "37d707ba71c629cb50ff8971c97bc2c747c128073949e71c9c2ca319c2f63617",
+    "MADE/src/made/agents/m5_exploration.py": "3929eb27edb37a796757b0b79be093d2da7b034a671e5267e7674f549b3d6b27",
+    "MADE/src/made/agents/planners/__init__.py": "8a79968da93b56c6841b7bfb113a5e112d9ffbdbc95fbdca55c55d0f73311664",
+    "MADE/src/made/agents/planners/grid_search.py": "8fd36d37bf81f0505b2e0c061ed3f035ae18e9ebda42d08e57299547b607e7ef",
+    "MADE/src/made/agents/planners/llm.py": "a11590c3b439f66b0e1d5565f5189790fbbd664efe89a1896bdb8a981c9d08b9",
+    "MADE/src/made/agents/scorers/__init__.py": "bba7aa79c09e0f0fd0af1a5670bf64f15424c9cdface78a31ce59216cebd2de5",
+    "MADE/src/made/agents/scorers/chain.py": "e01554f68af19f90fcc235d2771a9439b932aa1a1932020dc5925d8b9d3cf0be",
+    "MADE/src/made/agents/scorers/diversity.py": "637f1078108f10b59953f98d700272ded4853e3f99174012e6153864b10169a7",
+    "MADE/src/made/agents/scorers/llm.py": "cab9ee7ee3e7c252fbd039dbe0c69044c0b3239238f9fa60edbebb03784a7881",
+    "MADE/src/made/agents/scorers/oracle.py": "a0ff23d216f64ef0189b2b1c81b62b8e37d63d86dc2854e1944410a7661b5aca",
+    "MADE/src/made/agents/scorers/random.py": "6af5fd3115c224487425e885f42a20b15db8172a88544ce620fbaa963f5aad83",
+    "MADE/src/made/agents/workflow.py": "e4a8a794af479d1a3b62aff924a8f8794b04cf852195e0f6d2b3730defdaff8d",
+    "MADE/configs/agent/chemeleon_diversity_planner_comp.yaml": "9d277622ea23f7578763e1556c5cd10d74c161017ace9862af1c89a116d739d7",
+    "MADE/configs/agent/chemeleon_generative_baseline.yaml": "3cc3a463b16902d61c7e6006db06d260e1d1696a820dd3a2b3f3c27abb1e86cb",
+    "MADE/configs/agent/chemeleon_llm_planner.yaml": "0bea2952c5bba913d4ef694b198d4c46c71eeceb28b4754a89a24758a177ff79",
+    "MADE/configs/agent/chemeleon_mlip_ranking_chain_filter.yaml": "cd02439a0362980c56e53fa78f444e4d7cd3a0ca72ad973d406903475074c14e",
+    "MADE/configs/agent/filter/chain.yaml": "7eb1124e4929b831a568d74437c8d73e069356e43d21ab7cb565ae8a638d8ad6",
+    "MADE/configs/agent/filter/min_distance.yaml": "b74d0d92d9ac5013559d376f42ace7a6605edcca2ea7c2cafba67a2fe3140775",
+    "MADE/configs/agent/filter/noop.yaml": "22209d48bc9681da83f9acb459f08c2b6f31249edccd7db21488b0a939ef9522",
+    "MADE/configs/agent/filter/smact.yaml": "d2b368bd3793146f51e36abf220d159aeb635143c874e254cc1762cacb7b1b95",
+    "MADE/configs/agent/filter/uniqueness.yaml": "e7677b079b0b2bd1d217bedeefd60cbe675553de9ea96847b160c43f08c425b0",
+    "MADE/configs/agent/generator/cached.yaml": "932721ea48127986b4afba25ee046b30c013c405af135faaef16856e8d7bae24",
+    "MADE/configs/agent/generator/chemeleon.yaml": "faa02d531c773df3c82c962567eeecfb86fb9a0e1e1de06d227f261b4942bd97",
+    "MADE/configs/agent/generator/random.yaml": "af3acd19bcd3c8e9ef50e346eef9a0f4f58fb308b94bd0c5803fe42cd0682a84",
+    "MADE/configs/agent/llm_react_orchestrator.yaml": "8e5b64ae3637632ef99709b34814ca8eb2c1017b9f2af7bb4707beacabb73246",
+    "MADE/configs/agent/m1_integrated.yaml": "c51c6167c9d03a9e056531b877879cbd3f0dcf17945fe9e7ce3a6457247daa44",
+    "MADE/configs/agent/m2_routing.yaml": "43e1dea65aee3a71c17b5d3f51ec9769b5e9bebb4c4deffea5db96af7e905c61",
+    "MADE/configs/agent/m5_exploration_block.yaml": "574c26bb111a7c58a228f9ed4f7cac41d7bfebdc5a23687029f49a9bb5d2e2e8",
+    "MADE/configs/agent/planner/diversity.yaml": "416340de779d82538654b46d73dd9a34f94731fa63703b36598df9812e91b078",
+    "MADE/configs/agent/planner/grid_search.yaml": "0b9f8630784b379c8f4e1cc584cca5781b6e80846024cab15b02abcce0252d28",
+    "MADE/configs/agent/planner/iterative.yaml": "96339a431fda367bc1045b37fde68d2b9ea1aaee0acd637ad6ce2b1724292ff4",
+    "MADE/configs/agent/planner/llm.yaml": "9b3feb8064becd387f205ac6a39295b11f2c4d22176195bea9b2a36cbb00ff35",
+    "MADE/configs/agent/planner/m3_research.yaml": "1545641518ae8650001372b5ad50a2119033aa37c94cf37b02ed4eb6b2cd460d",
+    "MADE/configs/agent/planner/random.yaml": "021e9a0743bf22817ed75381fec7454d04ab6044ab23b851a32e49023ed41faf",
+    "MADE/configs/agent/planner/ucb.yaml": "4b0c55a2685669592a6267187ddbb962c128a24c622f03e33f1f2c5c305e940c",
+    "MADE/configs/agent/random_generator_baseline.yaml": "56b672473481451e1d693038f5270cd95fa6b59f1ba15b93e0336ef21c609dcf",
+    "MADE/configs/agent/random_generator_diversity_planner_comp.yaml": "89ff63fc005990d665a8ce470ca518b2baca259d6157df89c1c265b219f6286c",
+    "MADE/configs/agent/random_generator_llm_planner.yaml": "80dd6f7db189762ab7e56d1ae61fbfb3b1310374ddfd6c7057877a36430e1e18",
+    "MADE/configs/agent/scorer/chain.yaml": "aaa14c024f4ab74b893915656ae45124267063bccaf7c9ba0c01142706417b4a",
+    "MADE/configs/agent/scorer/diversity.yaml": "de1a619181bcc40f1d7a4aecdc8f7aefc352d8779f1ef3319f4a52747539c1bf",
+    "MADE/configs/agent/scorer/llm.yaml": "f615d27a8a989e875a99915d981becd3d23468cb59633c2528c63af400fb5857",
+    "MADE/configs/agent/scorer/oracle.yaml": "a89a049f54195f8b9ca6ae78170b02f141c91f5f8aac3ae4a64909ddac593d33",
+    "MADE/configs/agent/scorer/random.yaml": "a2dffacc02330bf7874205e075486a504e085a8c48afaae62aea08115e3f62f7",
+    "MADE/configs/agent/self_correction_policy/m3_stuck_replan.yaml": "82f04ef726d68eb2df2a6858b30daa0ee0c22818c5756bce096109eb6b895e7e",
+    "MADE/configs/config.yaml": "848971162c61b403abebc89d764e522b449e3f91e9c1e773881f1007b69c8ec4",
+    "MADE/configs/dataset/phase_diagram.yaml": "11aee8cbccfa91508bf1f60f944ddb1cd464f0b0b956aff7c876c6863ec20ee9",
+    "MADE/configs/environment/convex_hull.yaml": "fc454efadede135101b491906e505a240d32923619bd1e3fe68d5ab95c3c3eec",
+    "MADE/configs/logger/wandb.yaml": "3bf5163730f6816f6ec956f3f94de9c336cabb226ea61d212df20ac707948c90",
+    "MADE/configs/oracle/analytic.yaml": "d82876b4f2076e18daf6de6971cd1657c80b30565fef58dafc2c5983065d45e4",
+    "MADE/configs/oracle/mace.yaml": "5183b9214392d73b4b64c895832a0258fb128a3be17ed20f1d37afc3fcbab51f",
+    "MADE/configs/oracle/orb.yaml": "469a2d5225791356f9392b440479b5140e39bc37b0db9390aca5c5d859b2b9fd",
+    "MADE/scripts/run_benchmark.py": "50ad8495f57b60b3f74c4b8d6b18703ac86d303c99932fd410ce31f6a4e2d410",
+    "MADE/src/made/envs/convex_hull.py": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+    "MADE/src/made/evaluation/metrics.py": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+    "MADE/src/made/data/chemical_system.py": "10f613f228e5729013a7d6cd2be0d76feb1911ccb35c24e4a20de115f8cfb4ab",
+    "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json": "c97a6f89b3039b0047801916e7d7cf1398577aa039d9d599a10bdfbcb3cc6fcb"
+  },
+  "dependency_versions": {
+    "torch": "2.9.1",
+    "numpy": "2.3.5",
+    "pymatgen": "2025.10.7",
+    "hydra-core": "1.3.2",
+    "orb-models": "0.5.5"
+  },
+  "status": "completed",
+  "wall_time_seconds": 1457.859,
+  "cost": {
+    "accounting_version": "m1-cost-v1",
+    "method": "tool_routing_off",
+    "status": "completed",
+    "oracle": {
+      "name": "ORB",
+      "queries": 20,
+      "query_budget": 20,
+      "cost_usd": 0.0,
+      "cost_status": "zero_priced_model_inference"
+    },
+    "materials_project": {
+      "logical_dataset_requests": 1,
+      "cost_usd": 0.0,
+      "cost_status": "public_api_no_unit_price_recorded"
+    },
+    "llm": {
+      "provider": null,
+      "model": null,
+      "calls": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "cost_status": "not_reported"
+    },
+    "total_known_cost_usd": 0.0,
+    "total_cost_status": "partial",
+    "wall_time_seconds": 1457.859
+  }
+}

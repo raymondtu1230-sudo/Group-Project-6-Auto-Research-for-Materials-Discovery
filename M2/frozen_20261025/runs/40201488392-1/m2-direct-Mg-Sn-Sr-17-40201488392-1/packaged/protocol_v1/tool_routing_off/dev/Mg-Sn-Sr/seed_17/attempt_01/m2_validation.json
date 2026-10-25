@@ -1,0 +1,28 @@
+{
+  "validation_version": "m2-frozen-v1",
+  "accepted": false,
+  "errors": [
+    "Original-evidence collection has missing files or errors",
+    "Official checkpoint history does not cover queries1..20",
+    "Original official checkpoints were not preserved"
+  ],
+  "method": "tool_routing_off",
+  "system": [
+    "Mg",
+    "Sn",
+    "Sr"
+  ],
+  "seed": 17,
+  "attempt": 1,
+  "m5_decisions.jsonl_records": 20,
+  "m4_evidence.jsonl_records": 19,
+  "source_input_hashes_checked": 74,
+  "source_input_hash_mismatches": [],
+  "actual_git_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "actual_tag_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "tracked_worktree_clean": true,
+  "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+  "mSUN_at_20": 6.0,
+  "AUDC": 48.0,
+  "wall_time_seconds": 1094.443
+}
