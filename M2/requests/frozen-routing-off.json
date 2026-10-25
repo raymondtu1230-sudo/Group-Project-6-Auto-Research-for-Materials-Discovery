@@ -1,0 +1,15 @@
+{
+  "method": "tool_routing_off",
+  "split": "dev",
+  "freeze_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "freeze_tag": "m1-freeze-20261025",
+  "checkpoint_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+  "systems": ["Mg-Sn-Sr", "Au-K-Tb", "Co-Mg-Na", "Hf-Ni-Zr", "Co-Dy-W", "Ga-Pt-Tm"],
+  "seeds": [17, 29, 43],
+  "query_budget": 20,
+  "cpu_only": true,
+  "episodes_per_unit": 1,
+  "max_scientific_attempts": 2,
+  "scope": "Only M2 real dev routing-off; no baseline reruns or check/hidden",
+  "publication_namespace": "M2/frozen_20261025"
+}
