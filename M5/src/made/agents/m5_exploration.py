@@ -117,7 +117,7 @@ class UCBExplorationPolicy:
         alpha0: float = 0.5,
         gamma: float = 1.0,
         beta0: float = 2.0,
-        seed: int = 0,
+        seed: int | None = 0,
         max_stoichiometry: int = 8,
         length_scale: float = 0.35,
         noise: float = 1e-4,
@@ -131,7 +131,8 @@ class UCBExplorationPolicy:
         self.alpha0 = float(alpha0)
         self.gamma = float(gamma)
         self.beta0 = float(beta0)
-        self.seed = int(seed)
+        # Hydra's default experiment seed is None outside protocol runs.
+        self.seed = int(0 if seed is None else seed)
         self.max_stoichiometry = int(max_stoichiometry)
         self.length_scale = float(length_scale)
         self.noise = float(noise)

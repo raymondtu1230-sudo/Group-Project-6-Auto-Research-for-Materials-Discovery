@@ -231,6 +231,10 @@ def test_determinism_same_seed_same_inputs() -> None:
     ]
 
 
+def test_none_seed_uses_deterministic_default() -> None:
+    assert UCBExplorationPolicy(seed=None).seed == 0
+
+
 def test_checkpoint_roundtrip_preserves_decision_log() -> None:
     policy = UCBExplorationPolicy(seed=43)
     agent, _ = make_agent(

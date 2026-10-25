@@ -52,11 +52,12 @@ tool_router:
 
 generators:
   chemeleon:
-    _target_: made.agents.generators.chemeleon.ChemeleonGenerator
+    _target_: made.agents.m2_tool_routing.CheckpointedChemeleonGenerator
     seed: ${experiment.seed}
     task: csp
     batch_size: 32
-    device: cpu
+    device: ${oc.select:oracle.device,cpu}
+    output_dir: null
 
 planner:
   seed: ${experiment.seed}
@@ -70,6 +71,7 @@ planner:
     mask_same_reduced_formula: true
 
 generator:
+  _target_: made.agents.m2_tool_routing.CheckpointedRandomGenerator
   seed: ${experiment.seed}
 
 scorer:

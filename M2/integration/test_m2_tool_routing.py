@@ -210,7 +210,9 @@ def test_hydra_instantiates_m2_with_only_its_switch_changed(
         assert on.agent[field] == off.agent[field]
     agent = instantiate(on.agent)
     assert isinstance(agent.tool_router, OutcomeAwareToolRouter)
-    assert isinstance(agent.generators["chemeleon"], CheckpointedChemeleonGenerator)
+    assert isinstance(
+        agent.generators["chemeleon"].delegate, CheckpointedChemeleonGenerator
+    )
 
 
 def test_default_unseeded_configuration_still_initializes_with_routing_off(
