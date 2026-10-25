@@ -1,12 +1,10 @@
 {
-  "kind": "final_existing_results_preservation_no_science",
-  "run_ids": [
-    39286848821,
-    39286986254,
-    39297647516
+  "task": "preserve_frozen_routing_real_outputs",
+  "source_run_ids": [
+    40201488392,
+    40202237876
   ],
-  "scientific_experiments_to_start": 0,
-  "previous_capture": 39297647452,
-  "reason": "All 17 missing Random jobs have completed; reuse prior ZIP bytes, capture final unit and all exact-recovery failure evidence, then offline audit. No scientific rerun.",
-  "requested_at": "2026-10-20T02:54:00+08:00"
+  "scientific_freeze": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "new_scientific_queries": 0,
+  "request_id": "20261025-frozen-routing-18-preserve-and-recorded-reevaluation"
 }
