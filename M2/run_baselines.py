@@ -327,7 +327,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    from frozen_routing import active, main as frozen_main
+    from frozen_routing import active
+    from frozen_routing import main as frozen_main
 
     if active():
         frozen_main("compute")

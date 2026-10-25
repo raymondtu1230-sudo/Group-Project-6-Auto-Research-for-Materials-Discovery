@@ -14,21 +14,28 @@ import json
 import math
 import os
 import subprocess
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
-
 
 FROZEN_COMMIT = "02e0026bf450f71f4f7862228d295f5b02b49e12"
 FROZEN_TAG = "m1-freeze-20261025"
 METHOD = "tool_routing_off"
 MODEL = "orb-v3-conservative-inf-omat"
 SWITCHES = (
-    "enable_planning", "enable_memory", "enable_reflection",
-    "enable_exploration", "enable_tool_routing",
+    "enable_planning",
+    "enable_memory",
+    "enable_reflection",
+    "enable_exploration",
+    "enable_tool_routing",
 )
 SYSTEMS = {
-    "Mg-Sn-Sr", "Au-K-Tb", "Co-Mg-Na", "Hf-Ni-Zr", "Co-Dy-W", "Ga-Pt-Tm",
+    "Mg-Sn-Sr",
+    "Au-K-Tb",
+    "Co-Mg-Na",
+    "Hf-Ni-Zr",
+    "Co-Dy-W",
+    "Ga-Pt-Tm",
 }
 MSUN = "novelty_stable_unique_novel_count"
 CURVE = "num_newly_discovered_stable"
@@ -130,7 +137,9 @@ def collect(
     made = frozen_repo / "M1/MADE"
     expected_root = (made / "results/protocol_v1" / METHOD / "dev").resolve()
     if not attempt.is_relative_to(expected_root):
-        raise ValueError("Collector is restricted to frozen tool_routing_off/dev attempts")
+        raise ValueError(
+            "Collector is restricted to frozen tool_routing_off/dev attempts"
+        )
     attempt.mkdir(parents=True, exist_ok=True)
     previous = attempt / "m2_collection.json"
     if previous.is_file():
@@ -138,7 +147,7 @@ def collect(
     errors: list[str] = []
     report: dict[str, Any] = {
         "collection_version": "m2-frozen-v1",
-        "collected_at_utc": datetime.now(timezone.utc).isoformat(),
+        "collected_at_utc": datetime.now(UTC).isoformat(),
         "experiment_entrypoint": "M1/run_experiment.py",
         "exit_code": exit_code,
         "attempt_path": str(attempt.relative_to(frozen_repo)),
@@ -176,7 +185,9 @@ def collect(
         except (OSError, ValueError, TypeError, AttributeError):
             continue
     if len(runtimes) != 1:
-        errors.append(f"Expected one matching original Hydra runtime; found {len(runtimes)}")
+        errors.append(
+            f"Expected one matching original Hydra runtime; found {len(runtimes)}"
+        )
     else:
         runtime = runtimes[0]
         report["original_hydra_runtime"] = str(runtime.relative_to(frozen_repo))
@@ -192,13 +203,16 @@ def collect(
                     errors.append(str(error))
         try:
             _resolve_config(
-                attempt / ".hydra/config.yaml", attempt / ".hydra/hydra.yaml",
+                attempt / ".hydra/config.yaml",
+                attempt / ".hydra/hydra.yaml",
                 attempt / "resolved_config.yaml",
             )
             report["resolved_config_saved"] = True
         except Exception as error:
             report["resolved_config_saved"] = False
-            errors.append(f"Actual saved configuration resolution failed: {type(error).__name__}: {error}")
+            errors.append(
+                f"Actual saved configuration resolution failed: {type(error).__name__}: {error}"
+            )
 
     best: list[dict[str, Any]] = []
     best_source: Path | None = None
@@ -206,17 +220,22 @@ def collect(
     for path in sorted((made / "checkpoints").rglob("checkpoint.json")):
         try:
             payload = _read(path)
-            configured = payload.get("config", {}).get("experiment", {}).get("output_dir")
+            configured = (
+                payload.get("config", {}).get("experiment", {}).get("output_dir")
+            )
             if _run_path(made, configured) != attempt:
                 continue
             relative = path.relative_to(made / "checkpoints")
             _copy(path, attempt / "official_checkpoints" / relative)
             history = payload.get("metrics_history", [])
-            checkpoint_records.append({
-                "source": str(path.relative_to(frozen_repo)),
-                "sha256": _sha(path), "metrics_history_rows": len(history),
-                "query_count": payload.get("query_count"),
-            })
+            checkpoint_records.append(
+                {
+                    "source": str(path.relative_to(frozen_repo)),
+                    "sha256": _sha(path),
+                    "metrics_history_rows": len(history),
+                    "query_count": payload.get("query_count"),
+                }
+            )
             if isinstance(history, list) and len(history) > len(best):
                 best, best_source = copy.deepcopy(history), path
         except (OSError, ValueError, TypeError, AttributeError) as error:
@@ -240,17 +259,25 @@ def collect(
         if exit_code == 0:
             errors.append(f"Official final metrics could not be read: {error}")
     counts = [row.get("queries_used") for row in best]
-    _save(attempt / "m2_metrics_history.json", {
-        "source": "official_runner_checkpoint_metrics_history",
-        "source_checkpoint": str(best_source.relative_to(frozen_repo)) if best_source else None,
-        "source_checkpoint_sha256": _sha(best_source) if best_source else None,
-        "final_row_from_official_trajectory": final_added,
-        "complete_curve": counts == list(range(1, 21)),
-        "query_counts": counts, "metrics_history": best,
-    })
+    _save(
+        attempt / "m2_metrics_history.json",
+        {
+            "source": "official_runner_checkpoint_metrics_history",
+            "source_checkpoint": str(best_source.relative_to(frozen_repo))
+            if best_source
+            else None,
+            "source_checkpoint_sha256": _sha(best_source) if best_source else None,
+            "final_row_from_official_trajectory": final_added,
+            "complete_curve": counts == list(range(1, 21)),
+            "query_counts": counts,
+            "metrics_history": best,
+        },
+    )
     if not checkpoint_records:
         errors.append("No matching original official checkpoint was available")
-    if metadata_path.is_file() and _sha(metadata_path) != report.get("original_metadata_sha256"):
+    if metadata_path.is_file() and _sha(metadata_path) != report.get(
+        "original_metadata_sha256"
+    ):
         errors.append("Original metadata changed during collection")
         report["original_metadata_unchanged"] = False
     report["collection_complete"] = not errors
@@ -285,7 +312,9 @@ def _reference_hash(entries: list[dict[str, Any]]) -> str:
         for site in structure.get("sites", []):
             if "matrix" in lattice and "abc" in site:
                 site.pop("xyz", None)
-    values = sorted(json.dumps(x, sort_keys=True, separators=(",", ":")) for x in canonical)
+    values = sorted(
+        json.dumps(x, sort_keys=True, separators=(",", ":")) for x in canonical
+    )
     return hashlib.sha256("\n".join(values).encode()).hexdigest()
 
 
@@ -295,7 +324,11 @@ def validate(frozen_repo: Path, attempt_dir: Path) -> dict[str, Any]:
 
     repo, attempt = Path(frozen_repo).resolve(), Path(attempt_dir).resolve()
     errors: list[str] = []
-    report: dict[str, Any] = {"validation_version": "m2-frozen-v1", "accepted": False, "errors": errors}
+    report: dict[str, Any] = {
+        "validation_version": "m2-frozen-v1",
+        "accepted": False,
+        "errors": errors,
+    }
 
     def require(condition: bool, message: str) -> None:
         if not condition:
@@ -308,66 +341,178 @@ def validate(frozen_repo: Path, attempt_dir: Path) -> dict[str, Any]:
         summary = _read(attempt / "summary/summary.json")
         capture = _read(attempt / "m2_metrics_history.json")
         collection = _read(attempt / "m2_collection.json")
-        report.update({"method": metadata.get("method"), "system": metadata.get("system"),
-                       "seed": metadata.get("seed"), "attempt": metadata.get("attempt")})
+        report.update(
+            {
+                "method": metadata.get("method"),
+                "system": metadata.get("system"),
+                "seed": metadata.get("seed"),
+                "attempt": metadata.get("attempt"),
+            }
+        )
         require(metadata.get("method") == METHOD, "Unexpected experiment method")
         require(metadata.get("split") == "dev", "Ablation must run only on dev")
-        require("-".join(metadata.get("system", [])) in SYSTEMS, "System is not one of the six frozen dev systems")
+        require(
+            "-".join(metadata.get("system", [])) in SYSTEMS,
+            "System is not one of the six frozen dev systems",
+        )
         require(metadata.get("seed") in (17, 29, 43), "Seed is outside frozen seed set")
-        require(metadata.get("status") == "completed", "Driver did not mark the real run completed")
-        require(collection.get("exit_code") == 0, "Real experiment process exited unsuccessfully")
-        require(collection.get("collection_complete") is True, "Original-evidence collection has missing files or errors")
-        require(metadata.get("query_budget") == 20 and metadata.get("episodes") == 1, "Metadata B/episode count differs from frozen protocol")
+        require(
+            metadata.get("status") == "completed",
+            "Driver did not mark the real run completed",
+        )
+        require(
+            collection.get("exit_code") == 0,
+            "Real experiment process exited unsuccessfully",
+        )
+        require(
+            collection.get("collection_complete") is True,
+            "Original-evidence collection has missing files or errors",
+        )
+        require(
+            metadata.get("query_budget") == 20 and metadata.get("episodes") == 1,
+            "Metadata B/episode count differs from frozen protocol",
+        )
         protocol = yaml.safe_load((repo / "M1/protocol/protocol_v1.yaml").read_text())
-        require(metadata.get("protocol_settings") == protocol, "Recorded protocol differs from the frozen protocol")
-        require(config.get("experiment", {}).get("seed") == metadata.get("seed"), "Resolved seed differs from metadata")
-        require(config.get("experiment", {}).get("num_episodes") == 1, "Resolved configuration does not use one episode")
-        require(config.get("dataset", {}).get("elements") == metadata.get("system"), "Resolved chemical system differs from metadata")
-        require(config.get("environment", {}).get("budget") == 20, "Resolved budget is not20")
+        require(
+            metadata.get("protocol_settings") == protocol,
+            "Recorded protocol differs from the frozen protocol",
+        )
+        require(
+            config.get("experiment", {}).get("seed") == metadata.get("seed"),
+            "Resolved seed differs from metadata",
+        )
+        require(
+            config.get("experiment", {}).get("num_episodes") == 1,
+            "Resolved configuration does not use one episode",
+        )
+        require(
+            config.get("dataset", {}).get("elements") == metadata.get("system"),
+            "Resolved chemical system differs from metadata",
+        )
+        require(
+            config.get("environment", {}).get("budget") == 20,
+            "Resolved budget is not20",
+        )
         oracle = config.get("oracle", {})
-        require(oracle.get("_target_") == "made.oracles.ORBOracle" and oracle.get("model_name") == MODEL and oracle.get("device") == "cpu", "Resolved oracle/model/device differ from CPU ORB v3 conservative")
-        require(oracle.get("relax") is True and oracle.get("relax_kwargs") == {"optimizer": "fire", "fmax": 0.02, "steps": 500, "relax_unit_cell": True}, "ORB relaxation settings changed")
+        require(
+            oracle.get("_target_") == "made.oracles.ORBOracle"
+            and oracle.get("model_name") == MODEL
+            and oracle.get("device") == "cpu",
+            "Resolved oracle/model/device differ from CPU ORB v3 conservative",
+        )
+        require(
+            oracle.get("relax") is True
+            and oracle.get("relax_kwargs")
+            == {
+                "optimizer": "fire",
+                "fmax": 0.02,
+                "steps": 500,
+                "relax_unit_cell": True,
+            },
+            "ORB relaxation settings changed",
+        )
         agent = config.get("agent", {})
         for key in SWITCHES:
-            require(agent.get(key) is (key != "enable_tool_routing"), f"Incorrect component switch: {key}")
-        require(agent.get("planner", {}).get("_target_") == "made.agents.m3_planning.M3ResearchPlanner", "Frozen M3 planner is not active")
-        require(agent.get("generator", {}).get("_target_") == "made.agents.m2_tool_routing.CheckpointedRandomGenerator", "Frozen primary generator changed")
-        require(summary.get("episodes") == 1, "Official summary does not contain one episode")
+            require(
+                agent.get(key) is (key != "enable_tool_routing"),
+                f"Incorrect component switch: {key}",
+            )
+        require(
+            agent.get("planner", {}).get("_target_")
+            == "made.agents.m3_planning.M3ResearchPlanner",
+            "Frozen M3 planner is not active",
+        )
+        require(
+            agent.get("generator", {}).get("_target_")
+            == "made.agents.m2_tool_routing.CheckpointedRandomGenerator",
+            "Frozen primary generator changed",
+        )
+        require(
+            summary.get("episodes") == 1,
+            "Official summary does not contain one episode",
+        )
         metrics = trajectory.get("metrics", {})
-        require(len(trajectory.get("trajectory", [])) == 20 and metrics.get("final/queries_used") == 20, "Full trajectory/query count is not20")
-        require(trajectory.get("final_env_state", {}).get("query_count") == 20, "Final environment query count is not20")
+        require(
+            len(trajectory.get("trajectory", [])) == 20
+            and metrics.get("final/queries_used") == 20,
+            "Full trajectory/query count is not20",
+        )
+        require(
+            trajectory.get("final_env_state", {}).get("query_count") == 20,
+            "Final environment query count is not20",
+        )
         history = capture.get("metrics_history", [])
-        require(capture.get("complete_curve") is True and [x.get("queries_used") for x in history] == list(range(1, 21)), "Official checkpoint history does not cover queries1..20")
+        require(
+            capture.get("complete_curve") is True
+            and [x.get("queries_used") for x in history] == list(range(1, 21)),
+            "Official checkpoint history does not cover queries1..20",
+        )
         for point in history:
             for key in (MSUN, CURVE):
                 value = point.get(key)
-                require(isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value) and 0 <= value <= point.get("queries_used", -1), f"Invalid official history value: {key}")
+                require(
+                    isinstance(value, (int, float))
+                    and not isinstance(value, bool)
+                    and math.isfinite(value)
+                    and 0 <= value <= point.get("queries_used", -1),
+                    f"Invalid official history value: {key}",
+                )
         if history:
-            require(history[-1].get(MSUN) == metrics.get("final/" + MSUN), "Final mSUN differs from official history")
-            require(history[-1].get(CURVE) == metrics.get("final/" + CURVE), "Final AUDC-source count differs from official history")
+            require(
+                history[-1].get(MSUN) == metrics.get("final/" + MSUN),
+                "Final mSUN differs from official history",
+            )
+            require(
+                history[-1].get(CURVE) == metrics.get("final/" + CURVE),
+                "Final AUDC-source count differs from official history",
+            )
             source = repo / "M1/MADE/src/made/evaluation/metrics.py"
-            spec = importlib.util.spec_from_file_location("m2_audit_frozen_metrics", source)
+            spec = importlib.util.spec_from_file_location(
+                "m2_audit_frozen_metrics", source
+            )
             if spec is None or spec.loader is None:
                 raise ImportError("Cannot load frozen official metrics module")
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)
-            calculated = module.DiscoveryCurveMetrics.area_under_discovery_curve(history, metric_key=CURVE)
+            calculated = module.DiscoveryCurveMetrics.area_under_discovery_curve(
+                history, metric_key=CURVE
+            )
             reported = metrics.get("final/discovery_curve_area_under_discovery_curve")
-            require(isinstance(reported, (int, float)) and math.isclose(reported, calculated, rel_tol=1e-9, abs_tol=1e-9), "Recorded AUDC disagrees with frozen official calculation")
+            require(
+                isinstance(reported, (int, float))
+                and math.isclose(reported, calculated, rel_tol=1e-9, abs_tol=1e-9),
+                "Recorded AUDC disagrees with frozen official calculation",
+            )
             report["official_audc_recomputed"] = calculated
-        for key in ("final/" + MSUN, "final/discovery_curve_area_under_discovery_curve"):
-            require(summary.get("summary", {}).get(key, {}).get("mean") == metrics.get(key), f"Official summary/trajectory disagree: {key}")
+        for key in (
+            "final/" + MSUN,
+            "final/discovery_curve_area_under_discovery_curve",
+        ):
+            require(
+                summary.get("summary", {}).get(key, {}).get("mean") == metrics.get(key),
+                f"Official summary/trajectory disagree: {key}",
+            )
         for filename, expected, query_key, query_range in (
             ("m5_decisions.jsonl", 20, "query_count", list(range(20))),
             ("m4_evidence.jsonl", 19, "query_count", list(range(1, 20))),
         ):
             rows = _valid_jsonl(attempt / filename)
             report[filename + "_records"] = len(rows)
-            require(len(rows) == expected and [row.get(query_key) for row in rows] == query_range, f"Component evidence incomplete or duplicated: {filename}")
-        frozen_meta = _read(repo / "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_02/run_metadata.json")
+            require(
+                len(rows) == expected
+                and [row.get(query_key) for row in rows] == query_range,
+                f"Component evidence incomplete or duplicated: {filename}",
+            )
+        frozen_meta = _read(
+            repo
+            / "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_02/run_metadata.json"
+        )
         expected_hashes = frozen_meta.get("m1_input_sha256", {})
         hashes = metadata.get("m1_input_sha256", {})
-        require(bool(expected_hashes) and hashes == expected_hashes, "Run source-input hashes differ from frozen reference metadata")
+        require(
+            bool(expected_hashes) and hashes == expected_hashes,
+            "Run source-input hashes differ from frozen reference metadata",
+        )
         mismatches = []
         for path, expected in hashes.items():
             candidate = repo / "M1" / path
@@ -375,21 +520,53 @@ def validate(frozen_repo: Path, attempt_dir: Path) -> dict[str, Any]:
                 mismatches.append(path)
         report["source_input_hashes_checked"] = len(hashes)
         report["source_input_hash_mismatches"] = mismatches
-        require(not mismatches, "Actual frozen scientific source files fail input-hash audit")
-        head = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
-        tag = subprocess.check_output(["git", "-C", str(repo), "rev-parse", FROZEN_TAG + "^{commit}"], text=True).strip()
-        dirty = subprocess.check_output(["git", "-C", str(repo), "status", "--porcelain", "--untracked-files=no"], text=True)
-        report.update({"actual_git_head": head, "actual_tag_commit": tag, "tracked_worktree_clean": not dirty})
-        require(head == FROZEN_COMMIT and tag == FROZEN_COMMIT and not dirty, "Frozen revision/tag or clean tracked worktree check failed")
-        require(_sha(attempt / "run_metadata.json") == collection.get("original_metadata_sha256"), "Original driver metadata bytes changed after collection")
-        require(bool(collection.get("official_checkpoints")), "Original official checkpoints were not preserved")
+        require(
+            not mismatches,
+            "Actual frozen scientific source files fail input-hash audit",
+        )
+        head = subprocess.check_output(
+            ["git", "-C", str(repo), "rev-parse", "HEAD"], text=True
+        ).strip()
+        tag = subprocess.check_output(
+            ["git", "-C", str(repo), "rev-parse", FROZEN_TAG + "^{commit}"], text=True
+        ).strip()
+        dirty = subprocess.check_output(
+            ["git", "-C", str(repo), "status", "--porcelain", "--untracked-files=no"],
+            text=True,
+        )
+        report.update(
+            {
+                "actual_git_head": head,
+                "actual_tag_commit": tag,
+                "tracked_worktree_clean": not dirty,
+            }
+        )
+        require(
+            head == FROZEN_COMMIT and tag == FROZEN_COMMIT and not dirty,
+            "Frozen revision/tag or clean tracked worktree check failed",
+        )
+        require(
+            _sha(attempt / "run_metadata.json")
+            == collection.get("original_metadata_sha256"),
+            "Original driver metadata bytes changed after collection",
+        )
+        require(
+            bool(collection.get("official_checkpoints")),
+            "Original official checkpoints were not preserved",
+        )
         manifest = _read(attempt / MANIFEST).get("files", {})
         for path, expected in manifest.items():
             candidate = attempt / path
-            require(candidate.is_file() and _sha(candidate) == expected, f"Preserved evidence SHA256 mismatch: {path}")
+            require(
+                candidate.is_file() and _sha(candidate) == expected,
+                f"Preserved evidence SHA256 mismatch: {path}",
+            )
         require(bool(manifest), "No file integrity manifest")
         reference = trajectory.get("phase_diagram_gt")
-        require(isinstance(reference, list) and bool(reference), "Actual materials reference snapshot is missing")
+        require(
+            isinstance(reference, list) and bool(reference),
+            "Actual materials reference snapshot is missing",
+        )
         if isinstance(reference, list) and reference:
             report["canonical_material_reference_sha256"] = _reference_hash(reference)
         report["mSUN_at_20"] = metrics.get("final/" + MSUN)
