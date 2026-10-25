@@ -1,3 +1,5 @@
+> **2026-10-25：M2冻结版工具路由消融18/18真实dev实验完成，360次新查询。** 原36项基线复用；18项实际权重/CPU加载、18项完整所需结果终点验收、720原查询点与72终点离线核对通过。最终入口：[FROZEN_ROUTING_CLOSEOUT_20261025.md](FROZEN_ROUTING_CLOSEOUT_20261025.md)。原checkpoint删除与隐藏Hydra原件缺失如实保留在审计；曲线为真实记录离线重评。其他成员消融与M6held-out/全组总表仍单独推进。下面历史状态保留。
+
 > **2026-10-21终态：36/36项独立dev基线验收并完成本阶段收尾。** Random18/18、Chemeleon18/18，720次成功查询；两项最终attempt均exit_code=0，官方复评issues=[]，SHA256/CRC与终态receipt核验通过。最新入口：[CURRENT_STAGE_CLOSEOUT.md](CURRENT_STAGE_CLOSEOUT.md)。仅M2范围。M1 reference、routing-off和M6 check/hidden为后续。以下旧状态保留为历史快照。
 
 ## 历史记录（下文按原日期保留）

@@ -1,16 +1,23 @@
 {
   "method": "tool_routing_off",
+  "status": "M2_OWN_FROZEN_ABLATION_AND_EVALUATION_COMPLETE",
   "freeze_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
-  "science_run_ids": [
+  "scientific_units": 18,
+  "new_queries": 360,
+  "verified_actual_weight_units": 18,
+  "independent_endpoint_audits": 18,
+  "old_baselines_reused": 36,
+  "original_baseline_prefix_checks": 720,
+  "original_endpoint_checks": 72,
+  "scientific_run_ids": [
     40201488392,
     40202237876
   ],
-  "offline_run_id": 40203822525,
-  "uploaded_real_unit_packages": 17,
-  "expected_units": 18,
-  "last_observed_active_unit": "Ga-Pt-Tm seed17",
-  "new_science_reruns_for_collection_issue": 0,
-  "source_code_commit": "01875305e8044acb7bf98583978d777e996239a3",
-  "status": "original science continues independently of chat; exact ZIP preservation and zero-query recorded-data analysis active",
-  "resume_rule": "Inspect original runs/artifacts/claims before any dispatch. Do not restart completed or healthy active units."
+  "verified_offline_run_id": 40204426478,
+  "offline_new_oracle_calls": 0,
+  "offline_new_model_calls": 0,
+  "whole_team_complete": false,
+  "remaining": "Collect other owners' ablations andM6held-out outputs for full-team comparison.",
+  "closeout": "M2/FROZEN_ROUTING_CLOSEOUT_20261025.md",
+  "no_scientific_rerun_for_collection_issue": true
 }
