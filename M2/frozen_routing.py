@@ -207,20 +207,31 @@ def plan(args: argparse.Namespace) -> None:
     expected = [
         {"system": system, "seed": seed} for system in SYSTEMS for seed in SEEDS
     ]
-    assert request["units"] == expected and request["max_parallel"] <= 4
+    assert request["units"] == expected and 1 <= request["max_parallel"] <= 18
+    skipped = []
+    if request.get("only_unclaimed"):
+        claims = args.published / NAMESPACE / "claims"
+        skipped = [
+            unit
+            for unit in expected
+            if (claims / f"{unit['system']}-{unit['seed']}.json").is_file()
+        ]
+    admitted = [unit for unit in expected if unit not in skipped]
+    assert admitted, "All frozen units are already claimed; do not duplicate them"
     args.output.mkdir(parents=True, exist_ok=True)
     record = {
         "method": METHOD,
         "freeze_commit": FREEZE,
-        "units": expected,
-        "count": 18,
+        "units": admitted,
+        "count": len(admitted),
+        "already_claimed_not_restarted": skipped,
         "science_started": False,
         "old_baselines_rerun": False,
         "workflow_transport": WORKFLOW,
     }
     dump(args.output / "plan.json", record)
     with open(os.environ["GITHUB_OUTPUT"], "a") as stream:
-        print("matrix=" + json.dumps({"include": expected}), file=stream)
+        print("matrix=" + json.dumps({"include": admitted}), file=stream)
         print("parallel=" + str(request["max_parallel"]), file=stream)
         print("retry_of={}", file=stream)
     print(json.dumps(record), flush=True)

@@ -37,6 +37,14 @@ The unchanged transport has360min job /340min compute-step limits; the controlle
 keeps an explicit330second exit/save reserve and honors the lower effective limit.
 These are runtime bounds, not changes to B, seeds, model or generator parameters.
 
+User requested full parallelism after first four started. A supplemental request
+admits only units with no existing namespaced claim and sets max_parallel18.
+The original four remain running. Account-level available concurrency determines
+actual start times; no other running work is cancelled. The immutable first
+workflow may later reach an already-claimed unit: its claim guard must reject
+that duplicate before model setup/science. Such a transport rejection is not a
+second scientific attempt and is not counted as an experimental failure.
+
 M1 reference final metrics are available; its missing original Hydra/history/log
 attachments are recorded separately and never invented. They do not block M2's
 18 runs. Final-score pairing and baseline compatibility are audited afterward.
