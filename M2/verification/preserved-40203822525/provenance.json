@@ -1,0 +1,152 @@
+{
+  "kind": "exact_real_routing_artifact_preservation",
+  "new_scientific_units": 0,
+  "new_oracle_queries": 0,
+  "artifacts": [
+    {
+      "workflow_run_id": 40201488392,
+      "artifact_id": 12603240118,
+      "artifact_name": "m2-direct-Mg-Sn-Sr-17-40201488392-1",
+      "archive": "12603240118-m2-direct-Mg-Sn-Sr-17-40201488392-1.zip",
+      "sha256": "800829a4ef6f0a5de467f91fa9e222c6deb7f2e7e8f4fc978dacfe6c6838e391",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40201488392,
+      "artifact_id": 12603235691,
+      "artifact_name": "m2-direct-Mg-Sn-Sr-29-40201488392-1",
+      "archive": "12603235691-m2-direct-Mg-Sn-Sr-29-40201488392-1.zip",
+      "sha256": "962baa9aeb39e9167ef1cc3b9eb2260a7c32e742f409112cb474cfef96a24f16",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40201488392,
+      "artifact_id": 12602866476,
+      "artifact_name": "m2-direct-Mg-Sn-Sr-43-40201488392-1",
+      "archive": "12602866476-m2-direct-Mg-Sn-Sr-43-40201488392-1.zip",
+      "sha256": "e3e27f0f9b085cd23953a894e9f2bcaf8461ab6ad7adabf94817943937a6f826",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40201488392,
+      "artifact_id": 12602591067,
+      "artifact_name": "m2-direct-Au-K-Tb-17-40201488392-1",
+      "archive": "12602591067-m2-direct-Au-K-Tb-17-40201488392-1.zip",
+      "sha256": "6d626eb2bdec0b6b5a543ac4abdb9a50ddfab057e1a08c4fb7b4375120f0dae3",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12603170728,
+      "artifact_name": "m2-direct-Co-Mg-Na-17-40202237876-1",
+      "archive": "12603170728-m2-direct-Co-Mg-Na-17-40202237876-1.zip",
+      "sha256": "75517d8a6e05a2c52ffa468af8f31094552d21da6fb43330356130308bb41434",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12603150437,
+      "artifact_name": "m2-direct-Au-K-Tb-29-40202237876-1",
+      "archive": "12603150437-m2-direct-Au-K-Tb-29-40202237876-1.zip",
+      "sha256": "2dd1f1cea49cd0844a81833b756e91b55dd75b2fc0be8c16fb6ac5244bf60a02",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602955989,
+      "artifact_name": "m2-direct-Co-Dy-W-17-40202237876-1",
+      "archive": "12602955989-m2-direct-Co-Dy-W-17-40202237876-1.zip",
+      "sha256": "c9e9ce2766ef508f51cf5e432de2c8b45bb4e26294ad9e2c036f482d7a3faa3b",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602877232,
+      "artifact_name": "m2-direct-Co-Mg-Na-43-40202237876-1",
+      "archive": "12602877232-m2-direct-Co-Mg-Na-43-40202237876-1.zip",
+      "sha256": "1077bd8a93a44f6ffe45329e428ee899f10cc72e30c2439f61b24f2af3c8e3e4",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602757833,
+      "artifact_name": "m2-direct-Hf-Ni-Zr-17-40202237876-1",
+      "archive": "12602757833-m2-direct-Hf-Ni-Zr-17-40202237876-1.zip",
+      "sha256": "3bcab35f0818f1c56b9b6572824127684d6d6e57df895efe669916aa04aabb15",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602672686,
+      "artifact_name": "m2-direct-Co-Mg-Na-29-40202237876-1",
+      "archive": "12602672686-m2-direct-Co-Mg-Na-29-40202237876-1.zip",
+      "sha256": "016db2f651f2a82f246dcb26c2612363c1b286238d9ebefe7d2a42a1db3e6a7c",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602663098,
+      "artifact_name": "m2-direct-Au-K-Tb-43-40202237876-1",
+      "archive": "12602663098-m2-direct-Au-K-Tb-43-40202237876-1.zip",
+      "sha256": "4e3ca94c9b3c36af2be314423278c8e77bd4db159b979aade75f21a74e35ad56",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602553136,
+      "artifact_name": "m2-direct-Co-Dy-W-29-40202237876-1",
+      "archive": "12602553136-m2-direct-Co-Dy-W-29-40202237876-1.zip",
+      "sha256": "070c0a79ae640dcf04b61e5c1da5b4c62e66c50d876aa96f51b5cc1c1c25cc5b",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602498647,
+      "artifact_name": "m2-direct-Hf-Ni-Zr-29-40202237876-1",
+      "archive": "12602498647-m2-direct-Hf-Ni-Zr-29-40202237876-1.zip",
+      "sha256": "31e4df5afefb9b51d65d4eb1c2017351331812c5d06fc8c73d581ccd6b5e302e",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602469351,
+      "artifact_name": "m2-direct-Hf-Ni-Zr-43-40202237876-1",
+      "archive": "12602469351-m2-direct-Hf-Ni-Zr-43-40202237876-1.zip",
+      "sha256": "3521d23267fe51ee85c27100ff9496177b8147afa245dba47de66462f2adcccf",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602453919,
+      "artifact_name": "m2-direct-Co-Dy-W-43-40202237876-1",
+      "archive": "12602453919-m2-direct-Co-Dy-W-43-40202237876-1.zip",
+      "sha256": "6adef8c56c1e0551084a31f0da85f307cf712acf0f078d440aed2e3343fc6211",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602244006,
+      "artifact_name": "m2-direct-Ga-Pt-Tm-43-40202237876-1",
+      "archive": "12602244006-m2-direct-Ga-Pt-Tm-43-40202237876-1.zip",
+      "sha256": "a72fe46440daa550ced37df3068e190d2facfbf86e66504dfe480de936dffe52",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12602204480,
+      "artifact_name": "m2-direct-Ga-Pt-Tm-29-40202237876-1",
+      "archive": "12602204480-m2-direct-Ga-Pt-Tm-29-40202237876-1.zip",
+      "sha256": "d84c316b4f0dd6ff0dd5a468ac5e1922b2d5e8ad0674d50d18fcb37de998e968",
+      "crc_passed": true
+    },
+    {
+      "workflow_run_id": 40202237876,
+      "artifact_id": 12603275639,
+      "artifact_name": "m2-direct-Ga-Pt-Tm-17-40202237876-1",
+      "archive": "12603275639-m2-direct-Ga-Pt-Tm-17-40202237876-1.zip",
+      "sha256": "ba2a5afbde79377cf1697a0f4cd130ac43ad093986da8dda93f6e460e7172e0f",
+      "crc_passed": true
+    }
+  ],
+  "capture_complete": true
+}

@@ -1,0 +1,168 @@
+{
+  "passed": true,
+  "verified_runtime_units": 18,
+  "records": [
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602204480"
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602244006"
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602453919"
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602469351"
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602498647"
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602553136"
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602591067"
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602663098"
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602672686"
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602757833"
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602866476"
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602877232"
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12602955989"
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12603150437"
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12603170728"
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12603235691"
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12603240118"
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "archive_sha256": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+      "extracted_csp_sha256": "602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0",
+      "actual_cpu_model_load": true,
+      "actual_frozen_source": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "source_artifact": "12603275639"
+    }
+  ]
+}
