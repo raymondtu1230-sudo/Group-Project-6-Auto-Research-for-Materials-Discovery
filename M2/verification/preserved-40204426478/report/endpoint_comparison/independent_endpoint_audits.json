@@ -1,0 +1,488 @@
+[
+  {
+    "system": "Au-K-Tb",
+    "seed": 17,
+    "source": "12602591067/packaged/protocol_v1/tool_routing_off/dev/Au-K-Tb/seed_17/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "d3997e78270a6ae0a3a153d85c88d46527f18898095cc5aeeb7b3c3826f9627c",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142015/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Au-K-Tb",
+    "seed": 29,
+    "source": "12603150437/packaged/protocol_v1/tool_routing_off/dev/Au-K-Tb/seed_29/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "3388bd66d5afec98a6be87ea90d7fd1654d7d9899794c00964bc41e853a49700",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142925/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Au-K-Tb",
+    "seed": 43,
+    "source": "12602663098/packaged/protocol_v1/tool_routing_off/dev/Au-K-Tb/seed_43/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "96d3a6a1fa0fc2d88c5c260e2c1e42a79b047d815367aaec2071a8b35eb51a2d",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142941/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Co-Dy-W",
+    "seed": 17,
+    "source": "12602955989/packaged/protocol_v1/tool_routing_off/dev/Co-Dy-W/seed_17/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "2fbebcbc7eea2570f0eb2d1a0556acd5d206652520f4b73901d50e651fa16dc6",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142933/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Co-Dy-W",
+    "seed": 29,
+    "source": "12602553136/packaged/protocol_v1/tool_routing_off/dev/Co-Dy-W/seed_29/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "3e2b5f3cd4a9211ea4bfca879b6b0a89720fc16300671df7b2ea7055d1f3648c",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142925/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Co-Dy-W",
+    "seed": 43,
+    "source": "12602453919/packaged/protocol_v1/tool_routing_off/dev/Co-Dy-W/seed_43/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "8a5e7e9d77e8869f065d2eb11bac9bd101a134f94b889f1dfd27e30cd9222e15",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142933/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Co-Mg-Na",
+    "seed": 17,
+    "source": "12603170728/packaged/protocol_v1/tool_routing_off/dev/Co-Mg-Na/seed_17/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "66203f3f1806574491ee02b9219056b0ad0108e5a47d15c740409b037fca2073",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_143000/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Co-Mg-Na",
+    "seed": 29,
+    "source": "12602672686/packaged/protocol_v1/tool_routing_off/dev/Co-Mg-Na/seed_29/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "408129b2761bcb972f19687581eee97cbeacb77743406a2ac69fd34cd20338a1",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142942/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Co-Mg-Na",
+    "seed": 43,
+    "source": "12602877232/packaged/protocol_v1/tool_routing_off/dev/Co-Mg-Na/seed_43/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "0a96a130a1713e399f01d34cd4c2724470d933402ad9a4b1ffed90e5a1261dec",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142950/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Ga-Pt-Tm",
+    "seed": 17,
+    "source": "12603275639/packaged/protocol_v1/tool_routing_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "274f408016e2649090d03491e2c7e6d609bceab9e738848b55cde411ec2ba2f5",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142938/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Ga-Pt-Tm",
+    "seed": 29,
+    "source": "12602204480/packaged/protocol_v1/tool_routing_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "e97a0b74c681dca6973c3bc79c71b3e6bc68108d792ee3f1ac641cdbc7f9f497",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142937/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Ga-Pt-Tm",
+    "seed": 43,
+    "source": "12602244006/packaged/protocol_v1/tool_routing_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "1ddfa08711c429542487ffa0d2925b6d5ac135df783dcf7ad8d652f9e0b5e446",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142940/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Hf-Ni-Zr",
+    "seed": 17,
+    "source": "12602757833/packaged/protocol_v1/tool_routing_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "c68cbcb48c81b466bf82316722e7f6d44ae05b114080355234149f72b93c3bd2",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142943/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Hf-Ni-Zr",
+    "seed": 29,
+    "source": "12602498647/packaged/protocol_v1/tool_routing_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "fef9cbe28149b84016ca69b58ce70e0502ea025f92b65c1e49a1d067483fc7d1",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142948/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Hf-Ni-Zr",
+    "seed": 43,
+    "source": "12602469351/packaged/protocol_v1/tool_routing_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "adfc4c152493f7d23c6ec50e1d358478eff11294df5b47c40e1df18fa950734a",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142937/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Mg-Sn-Sr",
+    "seed": 17,
+    "source": "12603240118/packaged/protocol_v1/tool_routing_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "5c4cc7add133209409eb1f039bf7b5acc67c65944377989e4ad2272e048375d7",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142011/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Mg-Sn-Sr",
+    "seed": 29,
+    "source": "12603235691/packaged/protocol_v1/tool_routing_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "ad0f64d9fbda631b77ee3f9d7bfb27d796965865edd12a3ec0940b971cce41b6",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142001/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  },
+  {
+    "system": "Mg-Sn-Sr",
+    "seed": 43,
+    "source": "12602866476/packaged/protocol_v1/tool_routing_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+    "audit": {
+      "audit_type": "independent_final_endpoint_audit_after_official_checkpoint_cleanup",
+      "accepted_final_endpoints": true,
+      "original_m2_validation_accepted": false,
+      "original_m2_validation_errors": [
+        "Original-evidence collection has missing files or errors",
+        "Official checkpoint history does not cover queries1..20",
+        "Original official checkpoints were not preserved"
+      ],
+      "original_m2_validation_sha256": "2612cbd678778eafe0962641c61ed647f326a7e9819944392435587eb688a27b",
+      "original_collection_errors": [
+        "No matching original official checkpoint was available"
+      ],
+      "official_cleanup_log_event": "Removed checkpoint file checkpoints/20261025_142005/episode_000/checkpoint.json after successful completion",
+      "independently_checked_source_hashes": 74,
+      "resolved_configuration_and_component_logs_verified": true,
+      "original_per_query_history_available": false,
+      "original_checkpoint_available": false,
+      "missing_history_reason": "The unchanged official runner deletes its checkpoint after successful completion; post-exit collection found none.",
+      "curve_or_AF_EF_accepted_by_this_audit": false,
+      "new_scientific_queries": 0
+    }
+  }
+]

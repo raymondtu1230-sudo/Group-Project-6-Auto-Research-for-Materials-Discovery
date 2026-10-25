@@ -1,0 +1,10 @@
+method,seed,systems_available,systems_expected,complete_seed,mSUN_at_20_mean,AUDC_mean
+tool_routing_off,17,6,6,True,9.0,70.66666666666667
+tool_routing_off,29,6,6,True,7.5,71.41666666666667
+tool_routing_off,43,6,6,True,6.666666666666667,68.33333333333333
+m1_full,17,6,6,True,9.0,77.33333333333333
+m1_full,29,6,6,True,10.333333333333334,95.0
+m1_full,43,6,6,True,10.666666666666666,92.0
+paired_delta_off_minus_full,17,6,6,True,0.0,-6.666666666666667
+paired_delta_off_minus_full,29,6,6,True,-2.8333333333333335,-23.583333333333332
+paired_delta_off_minus_full,43,6,6,True,-4.0,-23.666666666666668

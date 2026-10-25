@@ -1,0 +1,35 @@
+{
+  "kind": "offline_recorded_trajectory_re_evaluation_audit",
+  "frozen_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "historical_checkpoint_recovered": false,
+  "new_scientific_episodes": 0,
+  "oracle_calls": 0,
+  "model_calls": 0,
+  "baseline_units_validated": 36,
+  "original_baseline_prefixes_validated": 720,
+  "frozen_reference_units_validated": 18,
+  "routing_units_validated": 18,
+  "routing_complete": true,
+  "original_endpoint_units_validated": 72,
+  "all_original_mSUN_and_AUDC_endpoints_match": true,
+  "paired_AF_EF_rows": 90,
+  "paired_AF_EF_metric_key": "num_newly_discovered_stable",
+  "paired_AF_EF_official_functions": [
+    "DiscoveryCurveMetrics.acceleration_factor",
+    "DiscoveryCurveMetrics.enhancement_factor"
+  ],
+  "baseline_manifest_sha256": "cb2f824f3e7bef7aaa273f17e03a3492ea7c0220df662bbdf40021ea557048b0",
+  "analysis_script_sha256": "41a1ccbea9ef75a03bbcccfdc862ea818eaaa82993e8372451d9a7b99fa6db72",
+  "scientific_source_sha256": {
+    "M1/MADE/src/made/envs/convex_hull.py": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+    "M1/MADE/src/made/evaluation/metrics.py": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+    "M1/MADE/src/made/utils/convex_hull_utils.py": "8be1cfdd1529566f121acbbc75bfbb97b6fa325566e67c01331404723b221739"
+  },
+  "wall_time_seconds": 98.189,
+  "completed_at_utc": "2026-10-25T14:57:34.080640+00:00",
+  "accepted": true,
+  "limitations": [
+    "Re-evaluated curves are analysis outputs from original recorded structures and energies, not recovered historical checkpoints.",
+    "Originalmetadata, trajectories, summaries and failed attempts were read only and remain unchanged."
+  ]
+}

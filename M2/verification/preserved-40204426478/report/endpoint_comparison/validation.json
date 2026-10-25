@@ -1,0 +1,705 @@
+{
+  "frozen_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "split": "dev",
+  "method": "tool_routing_off",
+  "expected_unique_units": 18,
+  "accepted_unique_units": 18,
+  "reference_unique_units": 18,
+  "missing_own_units": [],
+  "missing_reference_units": [],
+  "issues": [],
+  "own_failed_attempts_preserved": 0,
+  "reference_failed_attempts_preserved": 2,
+  "complete_paired_final_metric_comparison": true,
+  "endpoint_only_new_audit_accepted_units": 18,
+  "original_full_pretransport_audit_accepted_units": 0,
+  "own_per_query_histories_available": 18,
+  "record_only_curve_analysis": {
+    "accepted": true,
+    "global_proof_source": "/home/runner/work/Group-Project-6-Auto-Research-for-Materials-Discovery/Group-Project-6-Auto-Research-for-Materials-Discovery/M2/results/preserved/report/recorded_curve_analysis/reevaluation_audit.json",
+    "global_proof_sha256": "4f145fb669a7639fe34279d0704484134a42ae9c69d5e84833b13a3a621159c7",
+    "own_histories_attached": 18,
+    "historical_checkpoint_recovered": false,
+    "kind": "offline_recorded_trajectory_re_evaluation"
+  },
+  "original_checkpoint_and_history_collection_complete": false,
+  "required_visible_m2_payload_verified_units": 18,
+  "m2_accepted_attempt_manifest_bytes_all_available_after_transport": false,
+  "m2_raw_hydra_transport_omissions": [
+    {
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "source": "12602591067/packaged/protocol_v1/tool_routing_off/dev/Au-K-Tb/seed_17/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "e9abd659ca8e3e6fd27f833ea5e3af3b39416a095a594776a1141adc322d4bd4",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "f9d7466e95d6c5d670edc06c8988c6c60b2364c1f1d6603ab00b54a0899cc721",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "36a60da972490f06ea814e40a1be34f28903f5432b84b92dd3efc73b9e5548eb",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "source": "12603150437/packaged/protocol_v1/tool_routing_off/dev/Au-K-Tb/seed_29/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "5ccaaa29383624dac0b56a7230963f0ec27ff8b737b8aab3bf76841ed433161a",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "978fb720feae218774ecb4e9f8b074a54990bb1d9dc4b712008447fa3c077181",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "188b7821db7d692825f10ac01257b4979c14e62fdc4dfe931042fe0563d00639",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "source": "12602663098/packaged/protocol_v1/tool_routing_off/dev/Au-K-Tb/seed_43/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "16860497fd434d961e8b8cd3f6d54e31e6b12181382a56e49df26ee9f1fd1f96",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "741ca87e4cff88f50047ac19a7359a705536fac27accab7133c9f445d1cfe8ef",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "fe4e2bc3249d05ec60a147a6938c977c8edda7028a1453ba73fbb8ea11fb9323",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "source": "12602955989/packaged/protocol_v1/tool_routing_off/dev/Co-Dy-W/seed_17/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "5fe03021f3799c623b84fc62c609d7fd198b40f8f658a6304fb080a4dde536ed",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "cab402031bfd8236972ef0cb2c7fb8182796d977a601ec7845fb2a67d6220501",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "48acd1986d3e68da0516e85a8899805415f5e559641f5947873fd92e273e2bd8",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "source": "12602553136/packaged/protocol_v1/tool_routing_off/dev/Co-Dy-W/seed_29/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "db7fbd256ed2b83ba905f2169e2ea9512801de53c19b960bead2ab8a712cd030",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "66bed633327960a5c3a665a9076eb3c397364b9d8717c62aa972d6ee137e825f",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "1bba2ba6f5957d1438a2a8f8bdf8d622af36d3e5e4f6320ab0d0dc0e5591896a",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "source": "12602453919/packaged/protocol_v1/tool_routing_off/dev/Co-Dy-W/seed_43/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "20ab76a31504692cacde9577585a541de5f6ceeee8b38d6fd510847b7276f27b",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "43c5f1331f4325db1a56307b373c9e74916856b107a0fd25aeba281fba4806d0",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "533192f882e16b93c2c0fc6cffab6d517cbb3ffca3101b542d1e2ba33d6a8e89",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "source": "12603170728/packaged/protocol_v1/tool_routing_off/dev/Co-Mg-Na/seed_17/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "23a99f6ff69fa351d7757a6f8207dc019215987fdf48431222a7b4988978c7ad",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "b77baeb51d08cd31e36f954298f1a2f6faae91b014bad5b65be2f0bb93a03577",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "fb9443a71c9bd3654c276cb7bfb03287e885b363ba1d66d0a8dfc4e9c641ed58",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "source": "12602672686/packaged/protocol_v1/tool_routing_off/dev/Co-Mg-Na/seed_29/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "f49d0a73970503b1f819565cf7ac47775443dc8527fab6786d2a04df32ecb804",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "dadcc7855085498aacf2505fc72a22adc5a0190f589ca6637e19b9c00d7c5633",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "ae3bb6a5c7802a3f2ce0f95b669ac3d95e3341cfad4f2f26ab8976146f3eafcf",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "source": "12602877232/packaged/protocol_v1/tool_routing_off/dev/Co-Mg-Na/seed_43/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "7d2b9d3f1d080f219ba4cb4a93676d860375a5b8fb13534e52e2de1d98aba1bf",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "f710aa587a1cfc1e7c59f8f1977d67bc90a4559a0d830b98f52b0bdb5afa5f90",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "8d227805503d23b696081e8e6c856949986dac7fe1501c61ac865ddfbfe41d0d",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "source": "12603275639/packaged/protocol_v1/tool_routing_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "bba29e71f907ee6efea31df4bc6400012663f65455b68bf8bc998e08110e0a9a",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "745fbfd6989af41730754e871e22068e61c429fc9be50fd8975d8124fff92885",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "702c9c8a0f1035a6d678d0211938109f2c70b0c955ea5a3636d8b44a721e3f82",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "source": "12602204480/packaged/protocol_v1/tool_routing_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "525f6c5fa359f58585bbcc5dd01fd9765564210c9f2deaedf5efa02bc4005ac1",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "f4d1e7c389238dc122e6deaab9c0b53110982c13ef2f249bbd3ca56b8565414d",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "baf641e9c816fc74b63db95c7af91f1f4f648975b555865ef03c74fe484d202e",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "source": "12602244006/packaged/protocol_v1/tool_routing_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "0e5e94ac33de80bf0eaf766074ece3b5e9f6d3c662a47ba6b7453c8c0ea6c06f",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "3fb97d5018eab18e606f756774e855a2ef398c69a15c39589f77bb843726caee",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "63ca4df1a5f4aa8735cc37671f600d78a029e3fd7a63b4a687075dbb1f94d90b",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "source": "12602757833/packaged/protocol_v1/tool_routing_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "5ede2c314c35b5b84e2a9c9b000ab8a587b1f65b2af650d3bf5d2e50d8bb524e",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "23bf3d5857e3d188e6026ff46e67a42750d08b1c92114f8b5921633ffe068d26",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "d507f583523f92a760fa5080e392520df79c6a6ad1baafdf9eec86760eb853d0",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "source": "12602498647/packaged/protocol_v1/tool_routing_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "d2d7f63a5b50b51f3e5f043d5212c80b14511b2b98942e74fbb256767829705f",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "454d0053d3be161ce24e6f82d56dbbd62a18914e7ce035d3655ce534bb86d480",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "520b628656e23fd4b55ca2f92b0a02cd5514889ad4a40cb0fc917df93ac8c8f7",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "source": "12602469351/packaged/protocol_v1/tool_routing_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "34bb26665cd69f1e27013b8594268a59817a9838df2ba18ba231527369ed9dd2",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "a7ad7bb02714615883a26897bfac9380809f24fa101b40221017712daad0a378",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "8213e394056bfd1b75e63a4c9592fa79cb2f25a5bb00d210d899113777cbd838",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "source": "12603240118/packaged/protocol_v1/tool_routing_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "596a6b094a40dc01ebbaf5d797cda335dcc0dc4c5cf6eca7353be99a6f19927b",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "a3dcabfd3dc6136b5d8d3bf800e5262dbdc5fd2f54be9d3ed2d4d73db9deb5e6",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "14cbd370fa1b4c39e6b28e00a9b1e1de1d66f3c0156ea7c3ec12350bc2409f9d",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "source": "12603235691/packaged/protocol_v1/tool_routing_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "00f0f15e998d894709fdf6edd3cda709b96143d63d8ff7a1b6839461702e0b98",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "d4f3a3915ba140c0bf2da333cce5993d59df77a2b918865271f5b92df66735d7",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "0fa2ddb5d71ecc1397f6da3f52501f210a0046dc1d65a616b389fe1dce81a8d1",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "source": "12602866476/packaged/protocol_v1/tool_routing_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "missing_originals": [
+        {
+          "path": ".hydra/config.yaml",
+          "expected_sha256": "f0f8f8abbe2ee67bec91e29cd272ba7222930558b01d16a707e2456a69e0dbd3",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/hydra.yaml",
+          "expected_sha256": "1dc0ad1dc0cca6a018df5caf7e3adfc0a172f1bd3532313cfba352ef745d6da6",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        },
+        {
+          "path": ".hydra/overrides.yaml",
+          "expected_sha256": "957f5a6b42b2b57d204ddd301726a1378362b943227df43ef660ef79ac271033",
+          "classification": "missing_hidden_hydra_original_after_transport",
+          "original_reconstructed": false
+        }
+      ]
+    }
+  ],
+  "m2_transport_omission_audit_scope": "Accepted completed attempts; failed attempts remain separately indexed without an all-bytes-preserved claim.",
+  "transport_omission_policy": "Only missing raw .hydra/config.yaml, .hydra/hydra.yaml and .hydra/overrides.yaml are separately recorded as absent originals. Every existing-file hash must match; every other missing manifest entry is fatal. No original is reconstructed.",
+  "m1_missing_original_audit_attachments": [
+    {
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "source": "Au-K-Tb/seed_17/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "source": "Au-K-Tb/seed_29/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "source": "Au-K-Tb/seed_43/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "source": "Co-Dy-W/seed_17/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "source": "Co-Dy-W/seed_29/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "source": "Co-Dy-W/seed_43/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "source": "Co-Mg-Na/seed_17/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "source": "Co-Mg-Na/seed_29/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "source": "Co-Mg-Na/seed_43/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "source": "Ga-Pt-Tm/seed_17/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "source": "Ga-Pt-Tm/seed_29/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "source": "Ga-Pt-Tm/seed_43/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "source": "Hf-Ni-Zr/seed_17/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "source": "Hf-Ni-Zr/seed_29/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "source": "Hf-Ni-Zr/seed_43/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "source": "Mg-Sn-Sr/seed_17/attempt_02",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "source": "Mg-Sn-Sr/seed_29/attempt_02",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "source": "Mg-Sn-Sr/seed_43/attempt_01",
+      "missing": [
+        "resolved_config.yaml",
+        ".hydra/config.yaml",
+        "m2_metrics_history.json",
+        "m4_evidence.jsonl",
+        "m5_decisions.jsonl"
+      ]
+    }
+  ],
+  "m1_missing_attachments_block_final_metric_pairing": false,
+  "m1_full_curves_and_AF_EF": "not computed: original per-query history unavailable",
+  "independent_baseline_comparisons": "not computed: baseline raw runs not supplied to this reporter",
+  "aggregation": "six equally weighted systems within each seed; mean and sample SD across the three seed means",
+  "cost_scope": "Recorded known fees only; hardware, electricity and all unpriced failed attempts remain excluded."
+}

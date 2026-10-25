@@ -1,0 +1,23 @@
+{
+  "freeze_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "new_scientific_queries": 0,
+  "new_agent_proposals": 0,
+  "new_model_inference": 0,
+  "request": {
+    "task": "preserve_and_reevaluate_real_frozen_routing_outputs",
+    "freeze_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+    "source_run_ids": [
+      40201488392,
+      40202237876
+    ],
+    "new_scientific_queries": 0,
+    "new_agent_proposals": 0,
+    "wait_for_artifacts_seconds": 720,
+    "original_metadata_read_only": true,
+    "require_original_baseline_prefix_checks": 720,
+    "require_endpoint_checks": 72,
+    "reason": "Official runner removes successful checkpoints; curves are separately labelled evaluations of the original recorded structures and energies. Never fabricate historical checkpoint bytes or rerun completed science."
+  },
+  "controller_commit": "74fc5973996092be08aa65ef7824d38501f1ba0d",
+  "analysis": "Official metric functions applied to original recorded structures and energies; no historical checkpoint is invented"
+}

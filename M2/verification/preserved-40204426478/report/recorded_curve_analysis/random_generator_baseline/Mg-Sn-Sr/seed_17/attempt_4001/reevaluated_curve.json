@@ -1,0 +1,448 @@
+{
+  "analysis_kind": "offline_recorded_trajectory_re_evaluation",
+  "historical_checkpoint_recovered": false,
+  "model_calls": 0,
+  "oracle_calls": 0,
+  "new_agent_proposals": 0,
+  "new_scientific_episode": false,
+  "method": "random_generator_baseline",
+  "system": "Mg-Sn-Sr",
+  "seed": 17,
+  "attempt": 4001,
+  "source": "/home/runner/work/_temp/m2-recorded-evaluation-frozen/M2/verification/20261019-random-gate/raw_artifact.zip::results/protocol_v1/random_generator_baseline/dev/Mg-Sn-Sr/seed_17/attempt_4001/",
+  "input_sha256": {
+    "run_metadata.json": "cb7ccff03b7b8b761a7533e54262ba4e1bd2e23d811110e91871220adbd81437",
+    "trajectories/episode_000.json": "7a7c2bd97eeedcb706f2d6ce819853f633b55289ac0dbcbb8308fbbefc63b6f1",
+    "summary/summary.json": "f2c176fe62c60c7d80f8ec4ea5b57c78b0bb1d59cc3a00b1813ed7f9902a251e",
+    "m2_metrics_history.json": "3c0403e7a1fdb971131b745e273dc65aaaedf072e0d9209994e1d64ab4d5e492"
+  },
+  "archive_sha256": "b40ddad769698035e9f65d98f1310f932c9881a825d3be308c8ccd2300b1cd7e",
+  "original_trajectory_sha256": "7a7c2bd97eeedcb706f2d6ce819853f633b55289ac0dbcbb8308fbbefc63b6f1",
+  "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+  "analysis_script_sha256": "41a1ccbea9ef75a03bbcccfdc862ea818eaaa82993e8372451d9a7b99fa6db72",
+  "scientific_source_sha256": {
+    "M1/MADE/src/made/envs/convex_hull.py": "4986122ca898aedd739f8b0ca1883f6f60fa3f91368ad7536cc681351d4cf646",
+    "M1/MADE/src/made/evaluation/metrics.py": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+    "M1/MADE/src/made/utils/convex_hull_utils.py": "8be1cfdd1529566f121acbbc75bfbb97b6fa325566e67c01331404723b221739"
+  },
+  "executed_official_analysis_methods": [
+    "structure_result_to_entry",
+    "ConvexHullEnvironment._safe_e_above_hull",
+    "ConvexHullEnvironment._check_structural_novelty",
+    "NoveltyMetrics.calculate",
+    "DiscoveryCurveMetrics.area_under_discovery_curve"
+  ],
+  "scientific_interaction_methods_not_invoked": [
+    "ConvexHullEnvironment.__init__",
+    "ConvexHullEnvironment.reset",
+    "ConvexHullEnvironment.step",
+    "Oracle.evaluate",
+    "Agent.__call__"
+  ],
+  "initial_entry_recovery": {
+    "original_final_entry_count": 132,
+    "subtracted_recorded_proposals": 20,
+    "removed_original_final_entry_indices": [
+      61,
+      69,
+      85,
+      90,
+      91,
+      92,
+      95,
+      108,
+      109,
+      115,
+      116,
+      117,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131
+    ],
+    "recovered_initial_entries": 112,
+    "recovered_initial_structures": 112,
+    "original_initial_structures": 112,
+    "exact_final_multiset_restored": true,
+    "initial_entries_sha256": "4b5e67a94f10b449e9924401636191f03b178019ac831fb56b7a5ed13cfdb2d4",
+    "final_entries_sha256": "f0d391dc7d2a38a8c0498336dd54de2d005e1094fb1493b3b607b4bb8e5d6a2a",
+    "identity_rule": "Exact independent structure/energy data; no rounding, energy prediction, relaxed structure matching or new data retrieval"
+  },
+  "original_observations_checked": [
+    {
+      "query": 1,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 2,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 3,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 4,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 5,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 6,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 7,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 8,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 9,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 10,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 11,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 12,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 13,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 14,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 15,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 16,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 17,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 18,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 19,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    },
+    {
+      "query": 20,
+      "original_stability_matches": true,
+      "original_novelty_matches": true,
+      "original_hull_distance_matches": true
+    }
+  ],
+  "original_saved_history_prefix_checks": [
+    {
+      "query": 1,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 2,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 3,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 4,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 5,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 6,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 7,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 8,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 9,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 10,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 11,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 12,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 13,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 14,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 15,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 16,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 17,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 18,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 19,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    },
+    {
+      "query": 20,
+      "num_newly_discovered_stable": true,
+      "novelty_stable_unique_novel_count": true
+    }
+  ],
+  "original_saved_history_prefix_count": 20,
+  "original_endpoint_matches": {
+    "novelty_stable_unique_novel_count": true,
+    "num_newly_discovered_stable": true,
+    "discovery_curve_area_under_discovery_curve": true
+  },
+  "reevaluated_metrics_history": [
+    {
+      "queries_used": 1,
+      "num_newly_discovered_structures": 1,
+      "num_newly_discovered_stable": 0,
+      "novelty_stable_unique_novel_count": 0.0,
+      "discovery_curve_area_under_discovery_curve": 0.0
+    },
+    {
+      "queries_used": 2,
+      "num_newly_discovered_structures": 2,
+      "num_newly_discovered_stable": 1,
+      "novelty_stable_unique_novel_count": 1.0,
+      "discovery_curve_area_under_discovery_curve": 0.5
+    },
+    {
+      "queries_used": 3,
+      "num_newly_discovered_structures": 3,
+      "num_newly_discovered_stable": 1,
+      "novelty_stable_unique_novel_count": 1.0,
+      "discovery_curve_area_under_discovery_curve": 1.5
+    },
+    {
+      "queries_used": 4,
+      "num_newly_discovered_structures": 4,
+      "num_newly_discovered_stable": 1,
+      "novelty_stable_unique_novel_count": 1.0,
+      "discovery_curve_area_under_discovery_curve": 2.5
+    },
+    {
+      "queries_used": 5,
+      "num_newly_discovered_structures": 5,
+      "num_newly_discovered_stable": 1,
+      "novelty_stable_unique_novel_count": 1.0,
+      "discovery_curve_area_under_discovery_curve": 3.5
+    },
+    {
+      "queries_used": 6,
+      "num_newly_discovered_structures": 6,
+      "num_newly_discovered_stable": 1,
+      "novelty_stable_unique_novel_count": 1.0,
+      "discovery_curve_area_under_discovery_curve": 4.5
+    },
+    {
+      "queries_used": 7,
+      "num_newly_discovered_structures": 7,
+      "num_newly_discovered_stable": 1,
+      "novelty_stable_unique_novel_count": 1.0,
+      "discovery_curve_area_under_discovery_curve": 5.5
+    },
+    {
+      "queries_used": 8,
+      "num_newly_discovered_structures": 8,
+      "num_newly_discovered_stable": 1,
+      "novelty_stable_unique_novel_count": 1.0,
+      "discovery_curve_area_under_discovery_curve": 6.5
+    },
+    {
+      "queries_used": 9,
+      "num_newly_discovered_structures": 9,
+      "num_newly_discovered_stable": 1,
+      "novelty_stable_unique_novel_count": 1.0,
+      "discovery_curve_area_under_discovery_curve": 7.5
+    },
+    {
+      "queries_used": 10,
+      "num_newly_discovered_structures": 10,
+      "num_newly_discovered_stable": 1,
+      "novelty_stable_unique_novel_count": 1.0,
+      "discovery_curve_area_under_discovery_curve": 8.5
+    },
+    {
+      "queries_used": 11,
+      "num_newly_discovered_structures": 11,
+      "num_newly_discovered_stable": 2,
+      "novelty_stable_unique_novel_count": 2.0,
+      "discovery_curve_area_under_discovery_curve": 10.0
+    },
+    {
+      "queries_used": 12,
+      "num_newly_discovered_structures": 12,
+      "num_newly_discovered_stable": 3,
+      "novelty_stable_unique_novel_count": 3.0,
+      "discovery_curve_area_under_discovery_curve": 12.5
+    },
+    {
+      "queries_used": 13,
+      "num_newly_discovered_structures": 13,
+      "num_newly_discovered_stable": 4,
+      "novelty_stable_unique_novel_count": 4.0,
+      "discovery_curve_area_under_discovery_curve": 16.0
+    },
+    {
+      "queries_used": 14,
+      "num_newly_discovered_structures": 14,
+      "num_newly_discovered_stable": 5,
+      "novelty_stable_unique_novel_count": 5.0,
+      "discovery_curve_area_under_discovery_curve": 20.5
+    },
+    {
+      "queries_used": 15,
+      "num_newly_discovered_structures": 15,
+      "num_newly_discovered_stable": 5,
+      "novelty_stable_unique_novel_count": 5.0,
+      "discovery_curve_area_under_discovery_curve": 25.5
+    },
+    {
+      "queries_used": 16,
+      "num_newly_discovered_structures": 16,
+      "num_newly_discovered_stable": 5,
+      "novelty_stable_unique_novel_count": 5.0,
+      "discovery_curve_area_under_discovery_curve": 30.5
+    },
+    {
+      "queries_used": 17,
+      "num_newly_discovered_structures": 17,
+      "num_newly_discovered_stable": 6,
+      "novelty_stable_unique_novel_count": 6.0,
+      "discovery_curve_area_under_discovery_curve": 36.0
+    },
+    {
+      "queries_used": 18,
+      "num_newly_discovered_structures": 18,
+      "num_newly_discovered_stable": 6,
+      "novelty_stable_unique_novel_count": 6.0,
+      "discovery_curve_area_under_discovery_curve": 42.0
+    },
+    {
+      "queries_used": 19,
+      "num_newly_discovered_structures": 19,
+      "num_newly_discovered_stable": 7,
+      "novelty_stable_unique_novel_count": 7.0,
+      "discovery_curve_area_under_discovery_curve": 48.5
+    },
+    {
+      "queries_used": 20,
+      "num_newly_discovered_structures": 20,
+      "num_newly_discovered_stable": 7,
+      "novelty_stable_unique_novel_count": 7.0,
+      "discovery_curve_area_under_discovery_curve": 55.5
+    }
+  ],
+  "accepted": true
+}
