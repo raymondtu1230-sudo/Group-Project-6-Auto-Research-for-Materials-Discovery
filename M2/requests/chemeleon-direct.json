@@ -2,8 +2,8 @@
   "mode": "formal_direct",
   "task": "tool_routing_off",
   "freeze_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
-  "source_sha": "8363340dbdb63ec8f07a68995ea39be6ce9e54b5",
-  "max_parallel": 4,
+  "source_sha": "41315778506f0147414acabee2c688f4572a6328",
+  "max_parallel": 18,
   "units": [
     {
       "system": "Mg-Sn-Sr",
@@ -79,11 +79,12 @@
     }
   ],
   "retry_of": {},
-  "request_id": "20261025-frozen-routing-off-real-18",
+  "request_id": "20261025-frozen-routing-off-supplemental-full-parallel-no-restart",
   "acknowledgement": "ONLY_FROZEN_TOOL_ROUTING_OFF_DEV_B20_REAL_CPU",
   "scientific_attempts": [
     1,
     2
   ],
-  "keep_failed_attempts": true
+  "keep_failed_attempts": true,
+  "only_unclaimed": true
 }
