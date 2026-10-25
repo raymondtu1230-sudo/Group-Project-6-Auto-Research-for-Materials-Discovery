@@ -42,8 +42,32 @@ def sha_file(path: Path) -> str:
     return h.hexdigest()
 
 
+def json_native(value: Any) -> Any:
+    """Convert NumPy containers/scalars without changing recorded values.
+
+    Unsupported objects and non-finite numbers remain errors. In particular,
+    this does not round numbers, stringify them, drop fields or replace NaNs.
+    """
+    if value is None or isinstance(value, (str, bool, int, float)):
+        return value
+    if isinstance(value, dict):
+        return {json_native(key): json_native(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [json_native(item) for item in value]
+    import numpy as np
+
+    if isinstance(value, np.ndarray):
+        return json_native(value.tolist())
+    if isinstance(value, np.generic):
+        native = value.item()
+        if isinstance(native, np.generic):
+            raise TypeError(f"NumPy scalar has no lossless native JSON scalar: {type(value).__name__}")
+        return json_native(native)
+    raise TypeError(f"Unsupported analysis JSON value: {type(value).__name__}")
+
+
 def save(path: Path, value: Any) -> None:
-    data = (json.dumps(value, indent=2, allow_nan=False) + "\n").encode()
+    data = (json.dumps(json_native(value), indent=2, allow_nan=False) + "\n").encode()
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
         if path.read_bytes() != data:
