@@ -1,3 +1,11 @@
+# Closed after the M5 evidence supplement
+
+27 October 2026: M5 supplied the actual configuration and component evidence in b36e2a5. All18 now pass the required core checks in the [162-record development closeout](../20261027_dev_closeout/README.md). The former missing-package request below is historical and closed. Auxiliary normalization and retained configuration interpolations are disclosed in the current report; no new scientific rerun is requested.
+
+---
+
+## Previous intake record
+
 # M5 follow-up needed to close formal acceptance
 
 The 18 real `exploration_off` attempts are recorded completed and their official endpoints, protocols, material reference snapshots and source fingerprints check out. M2 has finished the offline analysis possible with the received files. The remaining blocker is the original evidence package, not a request to rerun the 18 successful scientific episodes.

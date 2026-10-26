@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-27",
+  "editable_slide_content_pages": 4,
+  "speaker_words": 213,
+  "estimated_seconds_at130wpm": 98.3076923076923,
+  "native_PPTX_exported": false,
+  "reason": "Local required @oai/artifact-tool module unavailable; no replacement presentation library installed.",
+  "existing21OctoberPPTX": "historical_baseline_stage",
+  "current_files": [
+    "M2_FOUR_SLIDE_CONTENT.md",
+    "M2_SPEAKER_NOTES.md",
+    "REHEARSAL_QA.md"
+  ],
+  "M6_final_deck_assembly_pending": true
+}

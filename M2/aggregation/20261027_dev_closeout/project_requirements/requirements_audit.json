@@ -1,0 +1,38 @@
+{
+  "snapshot_commit": "b36e2a50d9d3e31fc941d827addab94db2c5d3cc",
+  "source_sha256": {
+    "docs/Project6_Task_Split.pdf": "9f8ec489a1dc295031968220940fc60726b3a19609e6f2b937f0b0c48aa9fe0f",
+    "docs/Project6_Step_by_Step_Guide.pdf": "35216c8fcd7b85bd0f88368fffd1a423ad0e77590d109826f306b29f9d1641ad",
+    "docs/PE6203 Group Project 6 - Auto Research for Materials Discovery.pdf": "2f6a5f11dce7cc2389dfc826ec8d783a7606a769465495d1cc9de5ee782bb1cd",
+    "M6/REQUIREMENTS_CHECKLIST.md": "25ea4b0671eafbd8018fbed8d06d582ec1388d046dde7fc936099445fb695a27",
+    "M6/results/20261020-check-random/validation.json": "c3f23f0d4e91d9d6eb67aaf9e4f8ca41e574b9caa3d07a27644f3216590b0bda",
+    "M2/README.md": "fac0465d009485b1e15493c0413a7552b542b9aa6ed41236ed29a2004b1cd564",
+    "M2/STATUS.md": "360941a07ca5aa87e5c3bd6721a58e8e36d179335160d5ba90d4d11fddb76bfe"
+  },
+  "M2_team_target": "2026-10-27 end of day to M6",
+  "teacher_presentation_minutes": 10,
+  "teacher_QA_minutes": 5,
+  "teacher_brief_contains_Oct30_deadline": false,
+  "team_guide_Oct30_requires_TA_confirmation": true,
+  "M2_rehearsal_under_minutes": 2,
+  "individual_report_team_guide": {
+    "maximum_pages": 3,
+    "due": "2026-11-03 end of day",
+    "recipient": "YAOLONG001@e.ntu.edu.sg",
+    "sections": [
+      "Contributions",
+      "Lessons Learned",
+      "Future Plans"
+    ]
+  },
+  "M6_random_check_accepted": 12,
+  "M6_Full_check_missing": 12,
+  "M6_Chemeleon_check_missing": 12,
+  "M6_hidden_package_present": false,
+  "stale_M2_live_entry_points": [
+    "M2/README.md",
+    "M2/STATUS.md"
+  ],
+  "new_scientific_runs": 0,
+  "messages_sent": 0
+}

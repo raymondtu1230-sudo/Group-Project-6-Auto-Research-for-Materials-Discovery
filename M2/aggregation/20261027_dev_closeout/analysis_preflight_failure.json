@@ -1,0 +1,10 @@
+{
+  "kind": "analysis_preflight_manifest_line_endings",
+  "scientific_run_failure": false,
+  "actual_failure": "exact file-size and SHA assertion before evaluator CLI",
+  "finding": "126 manifest members use published LF while recorded Windows manifest expects CRLF; all match exact recorded SHA and size after deterministic line-ending restoration; 18 empty logs byte-exact",
+  "source_files_modified": 0,
+  "failed_analysis_output_preserved": "preflight_attempt_01",
+  "new_scientific_runs": 0,
+  "new_oracle_queries": 0
+}

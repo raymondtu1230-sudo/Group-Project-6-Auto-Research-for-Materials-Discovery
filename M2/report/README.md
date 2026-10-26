@@ -1,9 +1,7 @@
-# Current M2 material — conditional M5 intake
+# M2 report material for M6 — 27 October 2026
 
-26 October 2026. See the [M5 intake and corrected shared comparison](../aggregation/20261026_m5_intake/README.md), [M6 handoff](../aggregation/20261026_m5_intake/M6_HANDOFF.md), and [M5 evidence follow-up](../aggregation/20261026_m5_intake/M5_FOLLOWUP.md).
+Use the [development closeout](../aggregation/20261027_dev_closeout/README.md) and [M6 handoff](../aggregation/20261027_dev_closeout/M6_HANDOFF.md). The unchanged evaluator accepts 162 core dev records across nine methods with no issues. The former M5 package blocker is closed, with auxiliary-field and configuration provenance retained.
 
-The [accepted 144-run report](../aggregation/20261026_m3_complete/README.md) remains unchanged, including the complete M3 component study. M5 adds 18 endpoint-verified exploration OFF records whose actual resolved configurations and component evidence are missing. The new 162-row table has explicit acceptance labels: canonical M5 acceptance is 0/18, pending those files.
+Ready material: [results prose](../aggregation/20261027_dev_closeout/report/RESULTS_SECTION.md), [four-slide content](../aggregation/20261027_dev_closeout/report/M2_FOUR_SLIDE_CONTENT.md), [213-word speaker text](../aggregation/20261027_dev_closeout/report/M2_SPEAKER_NOTES.md), [Q&A](../aggregation/20261027_dev_closeout/report/REHEARSAL_QA.md), [cost analysis](../aggregation/20261027_dev_closeout/report/COST_ANALYSIS.md), [tables](../aggregation/20261027_dev_closeout/results/per_method_summary.csv) and [curves](../aggregation/20261027_dev_closeout/results/discovery_curves_by_study.svg).
 
-Correct frozen Full 10.0000/88.1111 versus OFF 9.6667/88.2222 gives ON minus OFF +0.3333 mSUN/−0.1111 AUDC. Corrected case descriptions use original trajectories and the existing Full decision sidecar. Curves, provisional AF/EF and machine-labelled costs are ready for draft assembly with the package-pending qualification.
-
-No new native PPTX export or external message is claimed. M6 owns final assembly. Existing routing slides, notes, dated decks and prior reports remain available.
+The current slide contribution is editable source text, tables and chart data for final assembly. No new native PPTX was exported. Old 21 October PPTX files are historical baseline-stage drafts. Earlier reports remain preserved. M6 owns the final group report/deck and remaining check/hidden work.

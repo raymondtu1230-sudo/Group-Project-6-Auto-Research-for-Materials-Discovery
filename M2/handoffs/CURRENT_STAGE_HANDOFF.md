@@ -1,11 +1,9 @@
-# M2 当前交接入口 — M5 端点已核对，原始包待补
+# M2 当前交接 — dev包全部完成核心验收
 
-2026-10-26。[本轮 M5 接收与更正](../aggregation/20261026_m5_intake/README.md)、[M6 使用说明](../aggregation/20261026_m5_intake/M6_HANDOFF.md)、[M5 补件清单](../aggregation/20261026_m5_intake/M5_FOLLOWUP.md)。
+27 October 2026。[正式开发集收尾](../aggregation/20261027_dev_closeout/README.md)、[M6交接](../aggregation/20261027_dev_closeout/M6_HANDOFF.md)、[后续分工](../aggregation/20261027_dev_closeout/NEXT_STEPS.md)。
 
-此前144项正式验收结果保持不变（M2基线与路由、M3完整54项组件研究、M4memory_off、Full参考）。新增18项exploration_off均记录完成，真实终点与来源核验通过，但原版M2评估器因缺实际resolved_config.yaml而拒收18/18；Hydra配置和组件证据也未随包提交。162行对比表明确区分144项accepted和18项package pending，不声称162项均已通过。
+M5补交证据已验收，原缺包待办关闭。当前162项核心评估通过，包含324个双基线配对、54个Full配对和36个M3配对。M5原历史305处辅助归一化值在M2分析副本按官方公式更正，保留提交版本；mSUN/rawAUDC未变化。M5配置仍保留普通/运行时插值，不冒称完整解析导出。
 
-正确冻结Full为10.0000mSUN/88.1111AUDC，OFF为9.6667/88.2222，ON−OFF为+.3333/−.1111。已更新临时配对、重建曲线、成本和两案例更正。ON决策日志实际已存在，无需手工推断模式或重跑来补这项日志。
+M6可取：结果文字、最终dev表、曲线、成本，以及四页可编辑内容、213词讲稿（估算98秒）和Q&A。没有生成新版原生PPTX，也没有代发消息。当前按分工的dev包全部收齐，不需要额外Full规划/自纠错才能关闭此阶段；那些实验由M1/M6决定是否追加。
 
-当前M2能做的离线接收/分析已完成；M5正式验收等待其从已有运行输出补真实配置和组件文件，不生成假配置/日志。M6剩余check/hidden和报告/原生PPT组装仍待完成；额外Fullplanning/self-correction由M1/M6决定，非M3欠交。
-
-所有修改仅M2，旧入口已备份，原始数据和前版144项报告保留；未代发消息、未启动新实验或模型/oracle调用。
+M6其余check/hidden、全组报告/PPT、排练和提交仍是后续。只修改M2，当前入口和历史待补清单原件均已备份。

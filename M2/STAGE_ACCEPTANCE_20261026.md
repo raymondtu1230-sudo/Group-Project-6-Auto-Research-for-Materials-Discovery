@@ -1,3 +1,9 @@
+# Superseded stage record
+
+The current [27 October acceptance](STAGE_ACCEPTANCE_20261027.md) closes M5's missing-package condition. The older26 October text below describes its original intake, not the current state.
+
+---
+
 # M2 阶段状态 — M5 当前材料核对完成，正式包待补
 
 2026-10-26。本轮接收分析已完成，M5原始包完整性尚未验收通过。

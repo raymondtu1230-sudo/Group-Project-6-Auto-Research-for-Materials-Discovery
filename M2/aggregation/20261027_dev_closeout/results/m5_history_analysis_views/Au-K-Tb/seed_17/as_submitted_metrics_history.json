@@ -1,0 +1,169 @@
+{
+ "source": "reconstructed_from_frozen_official_trajectory",
+ "provenance_note": "The exploration_off launcher did not retain per-query metrics history. This curve is reconstructed losslessly from the per-query is_stable and is_newly_discovered observations in the attempt's official trajectory and verified against its final mSUN and AUDC.",
+ "complete_curve": true,
+ "query_counts": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20
+ ],
+ "metrics_history": [
+  {
+   "queries_used": 1,
+   "num_newly_discovered_stable": 0,
+   "novelty_stable_unique_novel_count": 0,
+   "discovery_curve_area_under_discovery_curve": 0.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.0
+  },
+  {
+   "queries_used": 2,
+   "num_newly_discovered_stable": 0,
+   "novelty_stable_unique_novel_count": 0,
+   "discovery_curve_area_under_discovery_curve": 0.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.0
+  },
+  {
+   "queries_used": 3,
+   "num_newly_discovered_stable": 1,
+   "novelty_stable_unique_novel_count": 1,
+   "discovery_curve_area_under_discovery_curve": 0.5,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.025
+  },
+  {
+   "queries_used": 4,
+   "num_newly_discovered_stable": 1,
+   "novelty_stable_unique_novel_count": 1,
+   "discovery_curve_area_under_discovery_curve": 1.5,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.075
+  },
+  {
+   "queries_used": 5,
+   "num_newly_discovered_stable": 1,
+   "novelty_stable_unique_novel_count": 1,
+   "discovery_curve_area_under_discovery_curve": 2.5,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.125
+  },
+  {
+   "queries_used": 6,
+   "num_newly_discovered_stable": 2,
+   "novelty_stable_unique_novel_count": 2,
+   "discovery_curve_area_under_discovery_curve": 4.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.1
+  },
+  {
+   "queries_used": 7,
+   "num_newly_discovered_stable": 2,
+   "novelty_stable_unique_novel_count": 2,
+   "discovery_curve_area_under_discovery_curve": 6.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.15
+  },
+  {
+   "queries_used": 8,
+   "num_newly_discovered_stable": 3,
+   "novelty_stable_unique_novel_count": 3,
+   "discovery_curve_area_under_discovery_curve": 8.5,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.14166666666666666
+  },
+  {
+   "queries_used": 9,
+   "num_newly_discovered_stable": 4,
+   "novelty_stable_unique_novel_count": 4,
+   "discovery_curve_area_under_discovery_curve": 12.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.15
+  },
+  {
+   "queries_used": 10,
+   "num_newly_discovered_stable": 4,
+   "novelty_stable_unique_novel_count": 4,
+   "discovery_curve_area_under_discovery_curve": 16.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.2
+  },
+  {
+   "queries_used": 11,
+   "num_newly_discovered_stable": 4,
+   "novelty_stable_unique_novel_count": 4,
+   "discovery_curve_area_under_discovery_curve": 20.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.25
+  },
+  {
+   "queries_used": 12,
+   "num_newly_discovered_stable": 4,
+   "novelty_stable_unique_novel_count": 4,
+   "discovery_curve_area_under_discovery_curve": 24.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.3
+  },
+  {
+   "queries_used": 13,
+   "num_newly_discovered_stable": 5,
+   "novelty_stable_unique_novel_count": 5,
+   "discovery_curve_area_under_discovery_curve": 28.5,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.285
+  },
+  {
+   "queries_used": 14,
+   "num_newly_discovered_stable": 6,
+   "novelty_stable_unique_novel_count": 6,
+   "discovery_curve_area_under_discovery_curve": 34.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.2833333333333333
+  },
+  {
+   "queries_used": 15,
+   "num_newly_discovered_stable": 7,
+   "novelty_stable_unique_novel_count": 7,
+   "discovery_curve_area_under_discovery_curve": 40.5,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.2892857142857143
+  },
+  {
+   "queries_used": 16,
+   "num_newly_discovered_stable": 8,
+   "novelty_stable_unique_novel_count": 8,
+   "discovery_curve_area_under_discovery_curve": 48.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.3
+  },
+  {
+   "queries_used": 17,
+   "num_newly_discovered_stable": 8,
+   "novelty_stable_unique_novel_count": 8,
+   "discovery_curve_area_under_discovery_curve": 56.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.35
+  },
+  {
+   "queries_used": 18,
+   "num_newly_discovered_stable": 9,
+   "novelty_stable_unique_novel_count": 9,
+   "discovery_curve_area_under_discovery_curve": 64.5,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.35833333333333334
+  },
+  {
+   "queries_used": 19,
+   "num_newly_discovered_stable": 10,
+   "novelty_stable_unique_novel_count": 10,
+   "discovery_curve_area_under_discovery_curve": 74.0,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.37
+  },
+  {
+   "queries_used": 20,
+   "num_newly_discovered_stable": 11,
+   "novelty_stable_unique_novel_count": 11,
+   "discovery_curve_area_under_discovery_curve": 84.5,
+   "discovery_curve_area_under_discovery_curve_normalized": 0.3840909090909091
+  }
+ ]
+}

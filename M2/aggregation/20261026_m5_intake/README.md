@@ -1,3 +1,11 @@
+# Closed after the M5 evidence supplement
+
+27 October 2026: M5 supplied the actual configuration and component evidence in b36e2a5. All18 now pass the required core checks in the [162-record development closeout](../20261027_dev_closeout/README.md). The former missing-package request below is historical and closed. Auxiliary normalization and retained configuration interpolations are disclosed in the current report; no new scientific rerun is requested.
+
+---
+
+## Previous intake record
+
 # M5 exploration intake — endpoints checked, original package pending
 
 26 October 2026. Data snapshot: `a27634d9edbf231d0c034273fa9f977f9d5e799e`.

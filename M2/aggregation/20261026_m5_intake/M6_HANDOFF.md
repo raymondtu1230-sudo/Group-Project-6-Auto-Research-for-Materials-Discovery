@@ -1,3 +1,11 @@
+# Closed after the M5 evidence supplement
+
+27 October 2026: M5 supplied the actual configuration and component evidence in b36e2a5. All18 now pass the required core checks in the [162-record development closeout](../20261027_dev_closeout/README.md). The former missing-package request below is historical and closed. Auxiliary normalization and retained configuration interpolations are disclosed in the current report; no new scientific rerun is requested.
+
+---
+
+## Previous intake record
+
 # M6: corrected exploration comparison and acceptance status
 
 Use this supplement with the [accepted 144-run report](../20261026_m3_complete/README.md). M3's assigned component study remains complete. M5's new 18 endpoints are checked, but their original configuration/evidence package is pending; mark that qualification in any draft table or figure. Do not state that all 162 directories pass the M2 evaluator.

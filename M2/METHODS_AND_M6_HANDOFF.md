@@ -1,3 +1,11 @@
+# Current development closeout — 27 October 2026
+
+Use the [complete162-record report](aggregation/20261027_dev_closeout/README.md) and [M6 handoff](aggregation/20261027_dev_closeout/M6_HANDOFF.md). All assigned dev packages are received and pass required core validation. M5 auxiliary normalized values are corrected only in labelled analysis views; actual composed configurations and raw originals remain preserved. Tables, curves, costs, result prose, four-slide content and213-word script are ready. No new native PPTX export, message or course submission is claimed. Held-out/final group work remains.
+
+---
+
+## Earlier stage record, preserved
+
 # Current update — M5 conditional intake, 26 October 2026
 
 Use the [M5 intake](aggregation/20261026_m5_intake/README.md) and [corrected M6 handoff](aggregation/20261026_m5_intake/M6_HANDOFF.md). Existing144 accepted records remain; the18 newly received M5 endpoints are verified but lack actual resolved configs/component evidence and do not yet pass the canonical evaluator. Full−OFF is+.3333mSUN/−.1111AUDC. The received-data analysis is finished; M5 must recover its original package before formal closeout. Historical record below remains preserved.

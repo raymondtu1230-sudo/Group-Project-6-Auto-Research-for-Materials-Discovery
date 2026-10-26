@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-27",
+  "timezone": "Asia/Singapore",
+  "source_snapshot_commit": "b36e2a50d9d3e31fc941d827addab94db2c5d3cc",
+  "source_snapshot_archive_sha256": "9e12129a7cb8a1338c953042acf1d0f084598fdcd965e5edf6a41583f9bff40e",
+  "M5_supplement_commit": "b36e2a50d9d3e31fc941d827addab94db2c5d3cc",
+  "M5_actual_recorded_execution_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+  "previous_pending_release": "M2/aggregation/20261026_m5_intake",
+  "previous_pending_core_package_condition_closed": true,
+  "required_core_records_accepted": 162,
+  "original_M5_auxiliary_history_preserved": true,
+  "auxiliary_normalized_AUDC_corrected_in_analysis_views": 305,
+  "original_configuration_label": "actual_saved_composed_config_with_retained_interpolations",
+  "optional_additional_Full_planning_self_correction": "M1_M6_scope_decision_not_declared_dev_delivery_debt",
+  "heldout_and_final_group_assembly_complete": false,
+  "all_original_scientific_source_and_attempt_files_unchanged": true,
+  "all_project_writes_under": "M2/",
+  "other_member_files_modified": 0,
+  "new_scientific_runs": 0,
+  "new_model_or_oracle_calls": 0,
+  "messages_sent": 0,
+  "submissions_sent": 0
+}

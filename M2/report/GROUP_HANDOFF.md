@@ -1,7 +1,9 @@
-# Shared group results — M5 evidence pending
+# M2 development handoff ready for M6
 
-The current [M5 intake](../aggregation/20261026_m5_intake/README.md) and [corrected M6 notes](../aggregation/20261026_m5_intake/M6_HANDOFF.md) supplement the accepted 144-run report. M5's 18 real endpoints are checked; original configs and component evidence must be recovered for formal acceptance. Do not report 162 canonical passes.
+27 October 2026. The current [handoff](../aggregation/20261027_dev_closeout/M6_HANDOFF.md) and [development report](../aggregation/20261027_dev_closeout/README.md) contain 162 accepted core records, 324 baseline comparisons, 54 Full ablation pairs and 36 M3 component pairs. All declared dev packages are received and evaluated.
 
-Use the correct Full reference and case descriptions rather than copying the stale M5 report headline or assigning inferred explore labels to planner steps. The [follow-up checklist](../aggregation/20261026_m5_intake/M5_FOLLOWUP.md) is ready for the user to forward. No scientific rerun is requested for this packaging follow-up.
+M5's evidence supplement closes the earlier missing-package condition. Its 305 auxiliary normalized-AUDC differences are corrected only in separate M2 analysis histories, with original versions preserved. Saved configurations retain interpolations and their scope is explicit. Current case evidence records eight mixed and twelve exploit decisions in Full Ga–Pt–Tm seed17.
 
-M3's assigned 54-run component package remains complete. Additional Full planning/self-correction is an M1/M6 scope decision. M6's remaining check/hidden evaluation and final report/native PPT are separate pending tasks. M2 updates and previous-file backups are retained; other members' files and original attempts remain unchanged.
+Results prose, tables, curves, machine-labelled costs, four-slide content, speaker notes and Q&A are ready. A new native PPTX has not been exported. M6's remaining held-out work and final report/deck assembly still follow. Additional Full planning/self-correction is an optional M1/M6 decision, not outstanding M3 delivery debt.
+
+Only M2 files changed. Prior reports, failed attempts and live-entry backups remain. No external message or submission was sent.
