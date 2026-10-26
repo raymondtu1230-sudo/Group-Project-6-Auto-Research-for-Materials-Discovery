@@ -95,3 +95,38 @@ explain why and what you'd change.
       over-exploitation / wasteful-exploration candidates
 - [ ] Send M4 a decision_log sidecar for a format dry-run
 - [ ] Run the exploration ablation (26–27 Oct) on own laptop
+
+## 2026-10-26
+
+**Ablation run (exploration_off)**
+- Ran the full exploration_off sweep: 18 episodes (6 dev systems × seeds
+  17/29/43), frozen protocol v1, via M3's resume-friendly `run_ablations.py`
+  at `--jobs 4` (32-thread laptop). All completed clean; results committed to
+  `M1/MADE/results/protocol_v1/exploration_off/`.
+- Paired against M1's frozen `m1_full` (same systems/seeds). Result: overall
+  wash (+0.2 mSUN, −1.2 AUDC) but variance drops 4.8→2.7. Exploration rescues
+  hard systems (Co-Mg-Na +5.7, Hf-Ni-Zr +2.7) and costs easy ones
+  (Ga-Pt-Tm −5.3). Analysis in `M5/report/M5_RESULTS.md`.
+- Two failure trajectories chosen: over-exploitation = OFF Mg-Sn-Sr seed 29
+  (14 consecutive Sn-Sr binaries, ternary region only reached at queries 16+
+  where it immediately yields 2 stable); wasteful exploration = ON Ga-Pt-Tm
+  seed 17 (ternary Ga-Pt-Tm probes all unstable while the Ga-Tm binary was
+  rich).
+
+**Lessons (raw notes)**
+- An ablation can be a wash overall yet still worth writing up: the mechanism
+  (risk reduction on hard systems vs budget cost on easy ones) is the result.
+- Parallel runs on a laptop with ORB-on-CPU means per-episode wall time grows
+  ~3-4×; total throughput is flat. 4 jobs saturated 32 threads.
+- M1's frozen reference runs lack the `m5_decisions.jsonl` sidecar — likely
+  the install.py re-run I flagged on 21 Oct was not done on their side. Flagged
+  to M2/M6 in M5_RESULTS.md with a manual-annotation fallback.
+
+## Pending / next
+
+- [x] Run exploration_off ablation (26 Oct) — DONE
+- [x] Pick 2 failure trajectories — DONE (see M5_RESULTS.md)
+- [ ] Send results + failure section to M2/M6 (commit `d6d4e88` is the
+      handover; message drafts ready)
+- [ ] Finish M5 slides; review own report section (28–29 Oct)
+- [ ] Individual report (3 Nov)
