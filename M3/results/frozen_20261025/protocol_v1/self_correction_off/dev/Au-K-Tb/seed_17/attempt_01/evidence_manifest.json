@@ -1,0 +1,42 @@
+{
+  "source_directory": "results/20261026-230447-orb-m1_integrated",
+  "target_attempt": "results/protocol_v1/self_correction_off/dev/Au-K-Tb/seed_17/attempt_01",
+  "files": {
+    "hydra/config.yaml": {
+      "bytes": 3971,
+      "sha256": "eb471689524302a9735d736ebd50b9b0a4a449b3e6f216ec5a7b844bba5f39d7"
+    },
+    "hydra/hydra.yaml": {
+      "bytes": 6069,
+      "sha256": "50a62b0ace06d28993e4293dfd33721439ca85581d2784998bf3c360d6932110"
+    },
+    "hydra/overrides.yaml": {
+      "bytes": 1049,
+      "sha256": "82c38e3a939c46dcd46d95b980a6bebec711d2c259cdfa342c0c8c4e3f29a76e"
+    },
+    "m2_metrics_history.json": {
+      "bytes": 5928,
+      "sha256": "d645b95ab7386574ac22e2dd0b33a25954b4d1257fbfddc4b4aed5136f7aa2c4"
+    },
+    "m4_evidence.jsonl": {
+      "bytes": 11226,
+      "sha256": "c53ecc2df279ea644b55019a831507fa8202686dd6e15a8df7dac2e519791c0c"
+    },
+    "m5_decisions.jsonl": {
+      "bytes": 6475,
+      "sha256": "2320a17898ba5296ab7156e4c6d6547923c0e126e44116fb85c82883c62e0c23"
+    },
+    "resolved_config.yaml": {
+      "bytes": 3988,
+      "sha256": "973957f0ce681101271b616d9d0e592f91f564216b925cb2fb1b53d74d6dba64"
+    },
+    "run_benchmark.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run_console.log": {
+      "bytes": 355896,
+      "sha256": "cdde8045f44c748574715bcb9818d0a075ef28a65ad8ff4854e9bc98561fd09a"
+    }
+  }
+}

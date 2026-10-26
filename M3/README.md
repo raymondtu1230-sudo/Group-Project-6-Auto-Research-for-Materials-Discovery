@@ -5,8 +5,9 @@ agent spends its limited tries**, and it notices **when the search is stuck**
 and changes course. This page explains what M3 does, how it fits into the
 whole project, what it found, who receives what, and where every file is.
 
-- **Status:** built, merged into the agent by M1, all 72 test runs done,
-  results ready for M2 and M6.
+- **Status:** built, merged into the agent by M1; M3's assigned full-agent
+  ablations and the component study are done on M1's frozen agent (90 runs),
+  validated by M2's evaluator.
 - **Short on time?** Read [In one minute](#in-one-minute) and
   [Results](#results).
 
@@ -29,10 +30,11 @@ improved.
 2. **Self-correction:** spots a stalled search (no new stable material for a
    while, or about to repeat itself) and changes course.
 
-**The result.** With both on, the agent found **6.5** new stable materials per
-run against **5.0** for M1's reference agent (+1.5). The gain is uneven: M3
-helps a lot on hard systems (about 1 → 7) and loses on easy ones (about 9 → 6),
-because the planner rarely tries all three elements together. Details in
+**The result.** Inside M1's full frozen agent, switching planning off halves
+what the agent finds (**10.0 → 5.3** new stable materials per run, lower in 15
+of 18 paired runs); switching self-correction off makes no measurable
+difference (10.0 → 9.5). In the earlier component study, without M5 and M2,
+M3's planning helped hard systems and hurt easy ones. Details in
 [Results](#results).
 
 ---
@@ -130,6 +132,12 @@ It waits 3 tries between changes, and any new find resets it.
 
 ## Results
 
+Two studies: the component study below (M3's parts with exploration and
+routing off), and M3's assigned [full-agent ablations](#full-agent-ablations-m3s-assigned-ablations)
+against M1's frozen agent.
+
+### Component study
+
 All 72 runs: 4 versions × 6 practice ("dev") systems × 3 repeats (seeds 17,
 29, 43), 20 tries each, on one PC (AMD Ryzen 7 9700X, CPU only), all versions
 with the same code, simulator and memory. All 72 finished on the first
@@ -170,10 +178,33 @@ Compared run by run (same system and seed):
 
 Full tables and the reasoning: [report/M3_RESULTS.md](report/M3_RESULTS.md).
 
-**On M1's frozen agent.** M3's component study (`m3_full`, `m3_planning_off`,
+**On M1's frozen agent.** This component study (`m3_full`, `m3_planning_off`,
 `m3_self_correction_off`, 54 runs) was re-run on the frozen tag
-`m1-freeze-20261025` and reproduces the numbers above exactly, run by run. The
-complete result folders are in
+`m1-freeze-20261025` and reproduces the numbers above exactly, run by run.
+
+### Full-agent ablations (M3's assigned ablations)
+
+The project's task split gives M3 "two ablations: planning off;
+self-correction off" against M1's reference, which is the frozen `m1_full`
+(all five parts on). Each ablation switches off exactly one M3 part and leaves
+memory, exploration and tool routing on. 36 runs, same systems, seeds, budget
+and evaluator as M1's 18 reference runs:
+
+| Version | Found per run (mSUN@20) | AUDC | `m1_full` better / same / worse | Sign test |
+| --- | --- | --- | --- | --- |
+| `m1_full` (M1's reference) | 10.00 | 88.1 | – | – |
+| `planning_off` | 5.28 | 51.5 | 15 / 2 / 1 | p = 0.001 |
+| `self_correction_off` | 9.50 | 79.6 | 8 / 2 / 8 | p = 1.0 |
+
+- **Planning is the larger effect.** Without it the full agent finds about half
+  as many materials, and it is lower on all six systems. The weakness seen in
+  the component study (losing on hafnium–nickel–zirconium) does not appear
+  here: 9.3 with planning against 6.7 without.
+- **Self-correction shows no measurable effect** inside the full agent. Its one
+  consistent difference is cobalt–magnesium–sodium (9.0 with it, 5.7
+  without), the same system where it helped in the component study.
+
+All 90 frozen-agent result folders are in
 [results/frozen_20261025/](results/frozen_20261025/).
 
 ### The bug found along the way
@@ -194,7 +225,7 @@ remain in the git history (commit `e1a40d8`).
 | M1 | Design ([DESIGN.md](DESIGN.md)); code, settings and tests (`integration/`, merged by M1) |
 | M1 | The bug fix: run `python M3/install.py --install` so M1's final agent uses it |
 | M2 | Result tables (`results/*.csv`) and results text (`report/M3_RESULTS.md`) |
-| M1, M2, M6 | Complete result folders of the 54 frozen-agent runs: `m3_full` and the two ablations (`results/frozen_20261025/`) |
+| M1, M2, M6 | Complete result folders of all 90 frozen-agent runs: the assigned full-agent ablations (`planning_off`, `self_correction_off`) and the component study (`results/frozen_20261025/`) |
 | M6 | Method text, results text and slides (`report/`) |
 
 Notes for each teammate are in [HANDOVER.md](HANDOVER.md).
@@ -246,7 +277,7 @@ M3's code lives here, laid out exactly where it goes in M1's folder.
 | --- | --- | --- |
 | [results/m3_ablation_runs.csv](results/m3_ablation_runs.csv) | One row per run (72) | M2 |
 | [results/m3_ablation_summary.csv](results/m3_ablation_summary.csv) | One row per version | M2 |
-| [results/frozen_20261025/](results/frozen_20261025/) | Complete result folders of the 54 frozen-agent runs (`m3_full` and the two ablations) | M1, M2, M6 |
+| [results/frozen_20261025/](results/frozen_20261025/) | Complete result folders of all 90 frozen-agent runs (full-agent ablations and component study) | M1, M2, M6 |
 | [report/M3_RESULTS.md](report/M3_RESULTS.md) | Results tables and explanation | M2, M6 |
 | [report/M3_METHOD.md](report/M3_METHOD.md) | Method text for the group report | M6 |
 | `report/M3_Method_Draft.pptx` | M3's three slides with speaker notes | M6 |

@@ -1,0 +1,3631 @@
+
+Running episodes:   0%|          | 0/1 [00:00<?, ?it/s]C:\Users\User\PE6203\Group-Project-6-Auto-Research-for-Materials-Discovery\M1\MADE\.venv\Lib\site-packages\modal\_functions.py:1826: UserWarning: The run_episode function is executing locally and will not have access to the mounted Volume or NetworkFileSystem data
+  warnings.warn(
+UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+
+
+Retrieving ThermoDoc documents:   0%|          | 0/43 [00:00<?, ?it/s][A
+Retrieving ThermoDoc documents: 100%|██████████| 43/43 [00:00<?, ?it/s]
+[2026-10-26 23:02:54] [INFO] [made.data.chemical_system] Loaded 43 entries with structures from Materials Project
+UserWarning: Setting global torch default dtype to torch.float32.
+[2026-10-26 23:02:55] [INFO] [cached_path] cache of https://orbitalmaterials-public-models.s3.us-west-1.amazonaws.com/forcefields/orb-v3/orb-v3-conservative-inf-omat-20250404.ckpt is up-to-date
+[2026-10-26 23:02:55] [INFO] [made.oracles.ase_potential] Loading elemental reference energies from ./data/2023-02-07-mp-elemental-reference-entries.json
+[2026-10-26 23:02:55] [INFO] [made.envs.convex_hull] Filtered ground truth PD from 43 to 39 entries (SMACT-valid, num_atoms<=20)
+[2026-10-26 23:02:55] [INFO] [made.envs.convex_hull] Computing elemental energies using oracle from dataset structures...
+      Step     Time          Energy          fmax
+FIRE:    0 23:02:55       -3.211088        0.214519
+FIRE:    1 23:02:55       -3.212172        0.123676
+FIRE:    2 23:02:55       -3.212674        0.025668
+FIRE:    3 23:02:55       -3.212679        0.022839
+FIRE:    4 23:02:55       -3.212686        0.017437
+[2026-10-26 23:02:55] [INFO] [made.oracles.ase_potential] Computed elemental energy for Au: -3.212686 eV/atom
+      Step     Time          Energy          fmax
+FIRE:    0 23:02:56      -13.668716        0.030653
+FIRE:    1 23:02:56      -13.668742        0.028966
+FIRE:    2 23:02:56      -13.668782        0.025730
+FIRE:    3 23:02:56      -13.668847        0.021080
+FIRE:    4 23:02:56      -13.668880        0.015659
+[2026-10-26 23:02:56] [INFO] [made.oracles.ase_potential] Computed elemental energy for Tb: -4.556293 eV/atom
+      Step     Time          Energy          fmax
+FIRE:    0 23:02:56      -20.894707        0.007556
+[2026-10-26 23:02:56] [INFO] [made.oracles.ase_potential] Computed elemental energy for K: -1.044735 eV/atom
+[2026-10-26 23:02:56] [INFO] [made.envs.convex_hull] Computed elemental energies: {'Au': -3.2126855850219727, 'Tb': -4.55629316965739, 'K': -1.0447353363037108}
+[2026-10-26 23:02:56] [INFO] [made.envs.convex_hull] Re-evaluating 28 filtered (near-)stable entries with oracle...
+      Step     Time          Energy          fmax
+FIRE:    0 23:02:56       -9.508121        0.080013
+FIRE:    1 23:02:56       -9.508297        0.066499
+FIRE:    2 23:02:56       -9.508533        0.041625
+FIRE:    3 23:02:56       -9.508677        0.009456
+      Step     Time          Energy          fmax
+FIRE:    0 23:02:56      -19.163223        0.072436
+FIRE:    1 23:02:56      -19.163319        0.067332
+FIRE:    2 23:02:56      -19.163486        0.057551
+FIRE:    3 23:02:56      -19.163671        0.043991
+FIRE:    4 23:02:56      -19.163820        0.027963
+FIRE:    5 23:02:56      -19.163895        0.030305
+FIRE:    6 23:02:56      -19.163925        0.035657
+FIRE:    7 23:02:57      -19.163921        0.035155
+FIRE:    8 23:02:57      -19.163929        0.034266
+FIRE:    9 23:02:57      -19.163952        0.032989
+FIRE:   10 23:02:57      -19.163958        0.031229
+FIRE:   11 23:02:57      -19.163980        0.029178
+FIRE:   12 23:02:57      -19.163998        0.026801
+FIRE:   13 23:02:57      -19.164011        0.024155
+FIRE:   14 23:02:57      -19.164040        0.021092
+FIRE:   15 23:02:57      -19.164053        0.017516
+      Step     Time          Energy          fmax
+FIRE:    0 23:02:57      -13.599013        0.165663
+FIRE:    1 23:02:57      -13.599476        0.148792
+FIRE:    2 23:02:57      -13.600200        0.116728
+FIRE:    3 23:02:57      -13.600871        0.072756
+FIRE:    4 23:02:57      -13.601209        0.021718
+FIRE:    5 23:02:57      -13.601132        0.046431
+FIRE:    6 23:02:57      -13.601145        0.045216
+FIRE:    7 23:02:57      -13.601169        0.042826
+FIRE:    8 23:02:58      -13.601200        0.039326
+FIRE:    9 23:02:58      -13.601237        0.034823
+FIRE:   10 23:02:58      -13.601274        0.029455
+FIRE:   11 23:02:58      -13.601309        0.023380
+FIRE:   12 23:02:58      -13.601336        0.016789
+      Step     Time          Energy          fmax
+FIRE:    0 23:02:58      -34.226154        0.137664
+FIRE:    1 23:02:58      -34.226997        0.132667
+FIRE:    2 23:02:58      -34.228607        0.122782
+FIRE:    3 23:02:58      -34.230721        0.108412
+FIRE:    4 23:02:58      -34.233093        0.090729
+FIRE:    5 23:02:58      -34.235367        0.072497
+FIRE:    6 23:02:58      -34.237331        0.052311
+FIRE:    7 23:02:58      -34.238785        0.063563
+FIRE:    8 23:02:59      -34.239784        0.080212
+FIRE:    9 23:02:59      -34.240280        0.091827
+FIRE:   10 23:02:59      -34.240562        0.095261
+FIRE:   11 23:02:59      -34.240620        0.093968
+FIRE:   12 23:02:59      -34.240753        0.091456
+FIRE:   13 23:02:59      -34.240952        0.087790
+FIRE:   14 23:02:59      -34.241165        0.082980
+FIRE:   15 23:02:59      -34.241421        0.077205
+FIRE:   16 23:02:59      -34.241684        0.070563
+FIRE:   17 23:03:00      -34.241951        0.063245
+FIRE:   18 23:03:00      -34.242191        0.054518
+FIRE:   19 23:03:00      -34.242424        0.044518
+FIRE:   20 23:03:00      -34.242615        0.033522
+FIRE:   21 23:03:00      -34.242760        0.023985
+FIRE:   22 23:03:00      -34.242870        0.029319
+FIRE:   23 23:03:00      -34.242970        0.032276
+FIRE:   24 23:03:00      -34.243107        0.032440
+FIRE:   25 23:03:00      -34.243313        0.029107
+FIRE:   26 23:03:01      -34.243561        0.021982
+FIRE:   27 23:03:01      -34.243771        0.013236
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:01      -57.070812        0.097636
+FIRE:    1 23:03:01      -57.071457        0.094727
+FIRE:    2 23:03:01      -57.072636        0.089003
+FIRE:    3 23:03:01      -57.074219        0.080610
+FIRE:    4 23:03:01      -57.076012        0.070666
+FIRE:    5 23:03:01      -57.077816        0.059252
+FIRE:    6 23:03:01      -57.079445        0.046867
+FIRE:    7 23:03:02      -57.080723        0.034283
+FIRE:    8 23:03:02      -57.081688        0.028373
+FIRE:    9 23:03:02      -57.082180        0.025928
+FIRE:   10 23:03:02      -57.082184        0.034866
+FIRE:   11 23:03:02      -57.082214        0.034429
+FIRE:   12 23:03:02      -57.082275        0.033544
+FIRE:   13 23:03:02      -57.082352        0.032239
+FIRE:   14 23:03:02      -57.082451        0.030521
+FIRE:   15 23:03:02      -57.082554        0.028405
+FIRE:   16 23:03:03      -57.082680        0.025954
+FIRE:   17 23:03:03      -57.082794        0.023177
+FIRE:   18 23:03:03      -57.082920        0.019784
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:03      -33.725346        0.190417
+FIRE:    1 23:03:03      -33.726425        0.188112
+FIRE:    2 23:03:03      -33.728401        0.183457
+FIRE:    3 23:03:03      -33.730972        0.176338
+FIRE:    4 23:03:03      -33.733879        0.166764
+FIRE:    5 23:03:03      -33.736965        0.154900
+FIRE:    6 23:03:04      -33.740250        0.141163
+FIRE:    7 23:03:04      -33.743824        0.126101
+FIRE:    8 23:03:04      -33.748070        0.108409
+FIRE:    9 23:03:04      -33.752766        0.108179
+FIRE:   10 23:03:04      -33.757355        0.113161
+FIRE:   11 23:03:04      -33.761486        0.117265
+FIRE:   12 23:03:04      -33.765503        0.120464
+FIRE:   13 23:03:04      -33.769337        0.120687
+FIRE:   14 23:03:05      -33.772354        0.112114
+FIRE:   15 23:03:05      -33.775425        0.090150
+FIRE:   16 23:03:05      -33.778095        0.054592
+FIRE:   17 23:03:05      -33.779488        0.042448
+FIRE:   18 23:03:05      -33.778721        0.035232
+FIRE:   19 23:03:05      -33.778881        0.032879
+FIRE:   20 23:03:05      -33.779068        0.033277
+FIRE:   21 23:03:05      -33.779160        0.033403
+FIRE:   22 23:03:06      -33.779243        0.032902
+FIRE:   23 23:03:06      -33.779423        0.031672
+FIRE:   24 23:03:06      -33.779671        0.029771
+FIRE:   25 23:03:06      -33.779869        0.027359
+FIRE:   26 23:03:06      -33.780003        0.024539
+FIRE:   27 23:03:06      -33.780190        0.021791
+FIRE:   28 23:03:06      -33.780437        0.019181
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:06      -18.497587        0.303969
+FIRE:    1 23:03:06      -18.498600        0.291642
+FIRE:    2 23:03:06      -18.500446        0.267470
+FIRE:    3 23:03:07      -18.502777        0.232441
+FIRE:    4 23:03:07      -18.505184        0.188083
+FIRE:    5 23:03:07      -18.507259        0.136646
+FIRE:    6 23:03:07      -18.508713        0.081486
+FIRE:    7 23:03:07      -18.509493        0.075035
+FIRE:    8 23:03:07      -18.509846        0.095592
+FIRE:    9 23:03:07      -18.510120        0.106474
+FIRE:   10 23:03:07      -18.510742        0.104365
+FIRE:   11 23:03:07      -18.511923        0.086885
+FIRE:   12 23:03:07      -18.513378        0.061549
+FIRE:   13 23:03:07      -18.514233        0.017524
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:07      -13.530587        0.236388
+FIRE:    1 23:03:07      -13.531369        0.227554
+FIRE:    2 23:03:07      -13.533539        0.213004
+FIRE:    3 23:03:08      -13.534027        0.195075
+FIRE:    4 23:03:08      -13.535588        0.171801
+FIRE:    5 23:03:08      -13.537429        0.138636
+FIRE:    6 23:03:08      -13.539967        0.101460
+FIRE:    7 23:03:08      -13.540222        0.064389
+FIRE:    8 23:03:08      -13.541050        0.057504
+FIRE:    9 23:03:08      -13.541597        0.056663
+FIRE:   10 23:03:08      -13.542429        0.067762
+FIRE:   11 23:03:08      -13.542464        0.066362
+FIRE:   12 23:03:08      -13.542530        0.063593
+FIRE:   13 23:03:08      -13.541641        0.057904
+FIRE:   14 23:03:08      -13.541739        0.052664
+FIRE:   15 23:03:08      -13.542883        0.048101
+FIRE:   16 23:03:08      -13.542991        0.040979
+FIRE:   17 23:03:08      -13.541851        0.029191
+FIRE:   18 23:03:08      -13.541925        0.020058
+FIRE:   19 23:03:09      -13.543207        0.015497
+[2026-10-26 23:03:09] [INFO] [made.envs.convex_hull] Created 28 oracle-evaluated entries
+[2026-10-26 23:03:09] [INFO] [made.envs.convex_hull] Starting PD with 28 oracle-evaluated (near-)stable entries (epsilon=0.1)
+[2026-10-26 23:03:09] [INFO] [__main__] Starting new episode 0
+[2026-10-26 23:03:09] [INFO] [made.agents.planners.grid_search] Enumerated 1710 SMACT-valid compositions from 1710 total compositions
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition Au1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition Au2 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition Au1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition Tb1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition Tb6 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition Tb2 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition Tb3 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K2 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K8 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K8 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K3 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K2 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K2 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K1 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K20 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K2 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K8 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K4 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [WARNING] [made.agents.planners.grid_search] Composition K8 not found in composition stats, skipping (probably over the max stoichiometry or elemental: 20)
+[2026-10-26 23:03:09] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:03:09] [INFO] [made.agents.base] Scorer.select(): Selected candidate 1/1 (composition: K1 Tb4 Au2, score: 0.530587, score range: [0.294665, 0.530587], mean: 0.412626)
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:09       -9.752605       11.770400
+FIRE:    1 23:03:09      -11.482330        4.103709
+FIRE:    2 23:03:09      -11.991175        1.006040
+FIRE:    3 23:03:09      -11.991184        1.251653
+FIRE:    4 23:03:09      -12.009813        1.240970
+FIRE:    5 23:03:09      -12.046843        1.215632
+FIRE:    6 23:03:09      -12.101528        1.170986
+FIRE:    7 23:03:09      -12.172915        1.110069
+FIRE:    8 23:03:09      -12.259583        1.098070
+FIRE:    9 23:03:09      -12.359938        1.096339
+FIRE:   10 23:03:09      -12.471516        1.092974
+FIRE:   11 23:03:09      -12.605083        1.087390
+FIRE:   12 23:03:09      -12.762239        1.079388
+FIRE:   13 23:03:10      -12.945322        1.160046
+FIRE:   14 23:03:10      -13.160507        1.320788
+FIRE:   15 23:03:10      -13.421137        1.428203
+FIRE:   16 23:03:10      -13.737303        1.279675
+FIRE:   17 23:03:10      -14.083256        0.886392
+FIRE:   18 23:03:10      -14.370262        1.046965
+FIRE:   19 23:03:10      -14.599239        1.710485
+FIRE:   20 23:03:10      -14.871155        1.978884
+FIRE:   21 23:03:10      -15.231915        1.589982
+FIRE:   22 23:03:10      -15.588964        1.093059
+FIRE:   23 23:03:10      -15.868336        1.068167
+FIRE:   24 23:03:10      -16.096462        1.436746
+FIRE:   25 23:03:10      -16.326609        1.476371
+FIRE:   26 23:03:10      -16.527067        1.204665
+FIRE:   27 23:03:10      -16.648794        1.038352
+FIRE:   28 23:03:10      -16.730314        1.269088
+FIRE:   29 23:03:10      -16.864635        1.300330
+FIRE:   30 23:03:10      -17.038239        1.149083
+FIRE:   31 23:03:10      -17.161020        1.010474
+FIRE:   32 23:03:10      -17.225189        1.022535
+FIRE:   33 23:03:10      -17.365002        0.754738
+FIRE:   34 23:03:10      -17.488518        0.412674
+FIRE:   35 23:03:10      -17.530676        0.443175
+FIRE:   36 23:03:10      -17.540157        0.433478
+FIRE:   37 23:03:10      -17.557468        0.416111
+FIRE:   38 23:03:11      -17.579668        0.395477
+FIRE:   39 23:03:11      -17.603497        0.378344
+FIRE:   40 23:03:11      -17.626583        0.371811
+FIRE:   41 23:03:11      -17.648827        0.378015
+FIRE:   42 23:03:11      -17.672853        0.390598
+FIRE:   43 23:03:11      -17.705750        0.399524
+FIRE:   44 23:03:11      -17.752369        0.393048
+FIRE:   45 23:03:11      -17.813669        0.376260
+FIRE:   46 23:03:11      -17.884706        0.347652
+FIRE:   47 23:03:11      -17.958269        0.289111
+FIRE:   48 23:03:11      -18.028605        0.285895
+FIRE:   49 23:03:11      -18.086760        0.286208
+FIRE:   50 23:03:11      -18.122721        0.368287
+FIRE:   51 23:03:11      -18.159718        0.537338
+FIRE:   52 23:03:11      -18.254715        0.566543
+FIRE:   53 23:03:11      -18.403101        0.483992
+FIRE:   54 23:03:11      -18.564613        0.493705
+FIRE:   55 23:03:11      -18.716713        0.521601
+FIRE:   56 23:03:11      -18.855753        0.483995
+FIRE:   57 23:03:11      -18.985384        0.377173
+FIRE:   58 23:03:11      -19.108099        0.390619
+FIRE:   59 23:03:11      -19.222624        0.420612
+FIRE:   60 23:03:12      -19.326830        0.441641
+FIRE:   61 23:03:12      -19.437475        0.459689
+FIRE:   62 23:03:12      -19.567339        0.473262
+FIRE:   63 23:03:12      -19.709841        0.461651
+FIRE:   64 23:03:12      -19.848148        0.425693
+FIRE:   65 23:03:12      -19.968426        0.393128
+FIRE:   66 23:03:12      -20.073536        0.364497
+FIRE:   67 23:03:12      -20.152969        0.323479
+FIRE:   68 23:03:12      -20.192202        0.466574
+FIRE:   69 23:03:12      -20.217571        0.682854
+FIRE:   70 23:03:12      -20.282181        0.669591
+FIRE:   71 23:03:12      -20.390059        0.541692
+FIRE:   72 23:03:12      -20.514009        0.610695
+FIRE:   73 23:03:12      -20.651157        0.644073
+FIRE:   74 23:03:12      -20.801857        0.707845
+FIRE:   75 23:03:12      -20.964775        0.737694
+FIRE:   76 23:03:12      -21.144440        0.758695
+FIRE:   77 23:03:12      -21.346128        0.783428
+FIRE:   78 23:03:12      -21.567001        0.815439
+FIRE:   79 23:03:13      -21.801388        0.854498
+FIRE:   80 23:03:13      -22.044245        0.884937
+FIRE:   81 23:03:13      -22.289608        0.874375
+FIRE:   82 23:03:13      -22.522501        0.805359
+FIRE:   83 23:03:13      -22.726095        0.670773
+FIRE:   84 23:03:13      -22.886662        0.544396
+FIRE:   85 23:03:13      -22.996325        0.746133
+FIRE:   86 23:03:13      -23.071741        0.936907
+FIRE:   87 23:03:13      -23.126366        0.921847
+FIRE:   88 23:03:13      -23.150738        0.682708
+FIRE:   89 23:03:13      -23.293077        0.364029
+FIRE:   90 23:03:13      -23.332514        0.439376
+FIRE:   91 23:03:13      -23.366568        0.296677
+FIRE:   92 23:03:13      -23.404676        0.219686
+FIRE:   93 23:03:13      -23.430342        0.329326
+FIRE:   94 23:03:13      -23.469740        0.306866
+FIRE:   95 23:03:13      -23.538965        0.285199
+FIRE:   96 23:03:13      -23.625444        0.355563
+FIRE:   97 23:03:13      -23.726694        0.408398
+FIRE:   98 23:03:13      -23.842550        0.401817
+FIRE:   99 23:03:14      -23.969524        0.374172
+FIRE:  100 23:03:14      -24.103327        0.356081
+FIRE:  101 23:03:14      -24.239920        0.365875
+FIRE:  102 23:03:14      -24.375586        0.395723
+FIRE:  103 23:03:14      -24.508902        0.414418
+FIRE:  104 23:03:14      -24.642153        0.434239
+FIRE:  105 23:03:14      -24.775343        0.409600
+FIRE:  106 23:03:14      -24.903202        0.369309
+FIRE:  107 23:03:14      -25.023132        0.318508
+FIRE:  108 23:03:14      -25.133730        0.281789
+FIRE:  109 23:03:14      -25.235123        0.259854
+FIRE:  110 23:03:14      -25.322973        0.240393
+FIRE:  111 23:03:14      -25.391132        0.197108
+FIRE:  112 23:03:14      -25.434372        0.178306
+FIRE:  113 23:03:14      -25.450512        0.237269
+FIRE:  114 23:03:14      -25.476879        0.172863
+FIRE:  115 23:03:15      -25.500753        0.098518
+FIRE:  116 23:03:15      -25.511189        0.079994
+FIRE:  117 23:03:15      -25.513395        0.071052
+FIRE:  118 23:03:15      -25.516926        0.068159
+FIRE:  119 23:03:15      -25.520681        0.067359
+FIRE:  120 23:03:15      -25.523941        0.066529
+FIRE:  121 23:03:15      -25.526617        0.064851
+FIRE:  122 23:03:15      -25.528982        0.061934
+FIRE:  123 23:03:15      -25.531569        0.057623
+FIRE:  124 23:03:15      -25.535105        0.050911
+FIRE:  125 23:03:15      -25.539265        0.042046
+FIRE:  126 23:03:15      -25.543053        0.033520
+FIRE:  127 23:03:15      -25.545929        0.034458
+FIRE:  128 23:03:15      -25.547857        0.033600
+FIRE:  129 23:03:15      -25.549093        0.038266
+FIRE:  130 23:03:15      -25.549288        0.034931
+FIRE:  131 23:03:16      -25.549646        0.029292
+FIRE:  132 23:03:16      -25.550077        0.022772
+FIRE:  133 23:03:16      -25.550520        0.019175
+[2026-10-26 23:03:16] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=1)
+Checkpoints already exist.
+C:\Users\User\PE6203\Group-Project-6-Auto-Research-for-Materials-Discovery\M1\MADE\.venv\Lib\site-packages\lightning_fabric\utilities\cloud_io.py:73: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+[2026-10-26 23:03:17] [INFO] [made.agents.generators.chemeleon] Loaded Chemeleon model from ckpts/chemeleon_csp_alex_mp_20_v0.0.2.ckpt
+[2026-10-26 23:03:17] [INFO] [made.agents.generators.chemeleon] Running Chemeleon CSP with formulas: ['Au1 K1 Tb1', 'Au1 K7'], 1 samples per formula
+Generating 1 samples for each formula: ['Au1 K1 Tb1', 'Au1 K7']
+Generating batch #1 with 32 samples.
+
+
+Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+
+Sampling:   2%|▏         | 5/256 [00:00<00:05, 45.63it/s]
+
+Sampling:   4%|▍         | 10/256 [00:00<00:05, 45.94it/s]
+
+Sampling:   6%|▌         | 15/256 [00:00<00:05, 45.48it/s]
+
+Sampling:   8%|▊         | 20/256 [00:00<00:05, 45.42it/s]
+
+Sampling:  10%|▉         | 25/256 [00:00<00:05, 45.88it/s]
+
+Sampling:  12%|█▏        | 30/256 [00:00<00:04, 45.72it/s]
+
+Sampling:  14%|█▎        | 35/256 [00:00<00:04, 46.31it/s]
+
+Sampling:  16%|█▌        | 40/256 [00:00<00:04, 45.92it/s]
+
+Sampling:  18%|█▊        | 45/256 [00:00<00:04, 45.54it/s]
+
+Sampling:  20%|█▉        | 50/256 [00:01<00:04, 46.18it/s]
+
+Sampling:  21%|██▏       | 55/256 [00:01<00:04, 47.18it/s]
+
+Sampling:  24%|██▍       | 61/256 [00:01<00:04, 48.73it/s]
+
+Sampling:  26%|██▌       | 66/256 [00:01<00:03, 48.77it/s]
+
+Sampling:  28%|██▊       | 72/256 [00:01<00:03, 49.42it/s]
+
+Sampling:  30%|███       | 78/256 [00:01<00:03, 50.28it/s]
+
+Sampling:  33%|███▎      | 84/256 [00:01<00:03, 50.32it/s]
+
+Sampling:  35%|███▌      | 90/256 [00:01<00:03, 49.94it/s]
+
+Sampling:  38%|███▊      | 96/256 [00:01<00:03, 50.28it/s]
+
+Sampling:  40%|███▉      | 102/256 [00:02<00:03, 48.93it/s]
+
+Sampling:  42%|████▏     | 107/256 [00:02<00:03, 48.42it/s]
+
+Sampling:  44%|████▍     | 112/256 [00:02<00:03, 47.14it/s]
+
+Sampling:  46%|████▌     | 117/256 [00:02<00:03, 46.01it/s]
+
+Sampling:  48%|████▊     | 122/256 [00:02<00:02, 45.61it/s]
+
+Sampling:  50%|████▉     | 127/256 [00:02<00:02, 43.89it/s]
+
+Sampling:  52%|█████▏    | 132/256 [00:02<00:02, 44.80it/s]
+
+Sampling:  54%|█████▎    | 137/256 [00:02<00:02, 45.35it/s]
+
+Sampling:  55%|█████▌    | 142/256 [00:03<00:02, 44.89it/s]
+
+Sampling:  57%|█████▋    | 147/256 [00:03<00:02, 45.49it/s]
+
+Sampling:  59%|█████▉    | 152/256 [00:03<00:02, 45.37it/s]
+
+Sampling:  61%|██████▏   | 157/256 [00:03<00:02, 45.60it/s]
+
+Sampling:  63%|██████▎   | 162/256 [00:03<00:02, 44.67it/s]
+
+Sampling:  65%|██████▌   | 167/256 [00:03<00:02, 43.56it/s]
+
+Sampling:  67%|██████▋   | 172/256 [00:03<00:01, 43.31it/s]
+
+Sampling:  69%|██████▉   | 177/256 [00:03<00:01, 43.45it/s]
+
+Sampling:  71%|███████   | 182/256 [00:03<00:01, 42.25it/s]
+
+Sampling:  73%|███████▎  | 187/256 [00:04<00:01, 43.27it/s]
+
+Sampling:  75%|███████▌  | 192/256 [00:04<00:01, 44.87it/s]
+
+Sampling:  77%|███████▋  | 197/256 [00:04<00:01, 46.24it/s]
+
+Sampling:  79%|███████▉  | 203/256 [00:04<00:01, 47.64it/s]
+
+Sampling:  82%|████████▏ | 209/256 [00:04<00:00, 48.59it/s]
+
+Sampling:  84%|████████▎ | 214/256 [00:04<00:00, 48.80it/s]
+
+Sampling:  86%|████████▌ | 220/256 [00:04<00:00, 49.12it/s]
+
+Sampling:  88%|████████▊ | 225/256 [00:04<00:00, 49.32it/s]
+
+Sampling:  90%|█████████ | 231/256 [00:04<00:00, 49.43it/s]
+
+Sampling:  92%|█████████▏| 236/256 [00:05<00:00, 48.93it/s]
+
+Sampling:  94%|█████████▍| 241/256 [00:05<00:00, 48.28it/s]
+
+Sampling:  96%|█████████▌| 246/256 [00:05<00:00, 47.62it/s]
+
+Sampling:  98%|█████████▊| 251/256 [00:05<00:00, 47.07it/s]
+
+Sampling: 100%|██████████| 256/256 [00:05<00:00, 46.96it/s]
+Sampling: 100%|██████████| 256/256 [00:05<00:00, 46.74it/s]
+[2026-10-26 23:03:23] [INFO] [made.agents.generators.chemeleon] Loaded 2 structures from C:\Users\User\AppData\Local\Temp\chemeleon_samples_53272o0c
+[2026-10-26 23:03:23] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:03:23] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/1 (composition: K1 Tb1 Au1, score: 0.191521, score range: [0.067900, 0.191521], mean: 0.129711)
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:23       -9.635367        0.456440
+FIRE:    1 23:03:23       -9.640102        0.424226
+FIRE:    2 23:03:23       -9.647780        0.363659
+FIRE:    3 23:03:23       -9.655672        0.281885
+FIRE:    4 23:03:23       -9.661464        0.189351
+FIRE:    5 23:03:23       -9.664513        0.171050
+FIRE:    6 23:03:23       -9.666164        0.206615
+FIRE:    7 23:03:23       -9.668309        0.238154
+FIRE:    8 23:03:23       -9.672462        0.233899
+FIRE:    9 23:03:23       -9.678637        0.188639
+FIRE:   10 23:03:23       -9.684708        0.104195
+FIRE:   11 23:03:24       -9.687259        0.137154
+FIRE:   12 23:03:24       -9.687427        0.134313
+FIRE:   13 23:03:24       -9.687736        0.128777
+FIRE:   14 23:03:24       -9.688152        0.120870
+FIRE:   15 23:03:24       -9.688629        0.111050
+FIRE:   16 23:03:24       -9.689126        0.099908
+FIRE:   17 23:03:24       -9.689610        0.088134
+FIRE:   18 23:03:24       -9.690069        0.076471
+FIRE:   19 23:03:24       -9.690567        0.064444
+FIRE:   20 23:03:24       -9.691114        0.052675
+FIRE:   21 23:03:24       -9.691721        0.047719
+FIRE:   22 23:03:24       -9.692369        0.036238
+FIRE:   23 23:03:24       -9.692972        0.034561
+FIRE:   24 23:03:24       -9.693425        0.035070
+FIRE:   25 23:03:24       -9.693719        0.042455
+FIRE:   26 23:03:24       -9.693927        0.035427
+FIRE:   27 23:03:24       -9.693998        0.023332
+FIRE:   28 23:03:24       -9.694008        0.022984
+FIRE:   29 23:03:24       -9.694027        0.022281
+FIRE:   30 23:03:24       -9.694051        0.021227
+FIRE:   31 23:03:24       -9.694080        0.019814
+[2026-10-26 23:03:25] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=2)
+[2026-10-26 23:03:26] [INFO] [made.agents.generators.chemeleon] Running Chemeleon CSP with formulas: ['Au1 K1 Tb1', 'K7 Tb1'], 1 samples per formula
+Generating 1 samples for each formula: ['Au1 K1 Tb1', 'K7 Tb1']
+Generating batch #1 with 32 samples.
+
+
+Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+
+Sampling:   2%|▏         | 5/256 [00:00<00:05, 45.86it/s]
+
+Sampling:   4%|▍         | 10/256 [00:00<00:05, 46.16it/s]
+
+Sampling:   6%|▌         | 15/256 [00:00<00:05, 45.94it/s]
+
+Sampling:   8%|▊         | 20/256 [00:00<00:05, 46.07it/s]
+
+Sampling:  10%|▉         | 25/256 [00:00<00:04, 46.39it/s]
+
+Sampling:  12%|█▏        | 30/256 [00:00<00:04, 45.97it/s]
+
+Sampling:  14%|█▎        | 35/256 [00:00<00:04, 46.09it/s]
+
+Sampling:  16%|█▌        | 40/256 [00:00<00:04, 46.37it/s]
+
+Sampling:  18%|█▊        | 45/256 [00:00<00:04, 45.46it/s]
+
+Sampling:  20%|█▉        | 50/256 [00:01<00:04, 45.78it/s]
+
+Sampling:  21%|██▏       | 55/256 [00:01<00:04, 46.38it/s]
+
+Sampling:  23%|██▎       | 60/256 [00:01<00:04, 46.43it/s]
+
+Sampling:  25%|██▌       | 65/256 [00:01<00:04, 45.29it/s]
+
+Sampling:  27%|██▋       | 70/256 [00:01<00:04, 44.66it/s]
+
+Sampling:  29%|██▉       | 75/256 [00:01<00:04, 44.01it/s]
+
+Sampling:  31%|███▏      | 80/256 [00:01<00:03, 44.37it/s]
+
+Sampling:  33%|███▎      | 85/256 [00:01<00:03, 44.75it/s]
+
+Sampling:  35%|███▌      | 90/256 [00:01<00:03, 45.07it/s]
+
+Sampling:  37%|███▋      | 95/256 [00:02<00:03, 46.00it/s]
+
+Sampling:  39%|███▉      | 101/256 [00:02<00:03, 47.43it/s]
+
+Sampling:  41%|████▏     | 106/256 [00:02<00:03, 48.10it/s]
+
+Sampling:  44%|████▍     | 112/256 [00:02<00:02, 48.84it/s]
+
+Sampling:  46%|████▌     | 117/256 [00:02<00:02, 49.14it/s]
+
+Sampling:  48%|████▊     | 123/256 [00:02<00:02, 49.63it/s]
+
+Sampling:  50%|█████     | 128/256 [00:02<00:02, 48.62it/s]
+
+Sampling:  52%|█████▏    | 133/256 [00:02<00:02, 47.93it/s]
+
+Sampling:  54%|█████▍    | 138/256 [00:02<00:02, 47.98it/s]
+
+Sampling:  56%|█████▌    | 143/256 [00:03<00:02, 47.64it/s]
+
+Sampling:  58%|█████▊    | 148/256 [00:03<00:02, 47.43it/s]
+
+Sampling:  60%|█████▉    | 153/256 [00:03<00:02, 47.36it/s]
+
+Sampling:  62%|██████▏   | 158/256 [00:03<00:02, 46.84it/s]
+
+Sampling:  64%|██████▎   | 163/256 [00:03<00:02, 46.50it/s]
+
+Sampling:  66%|██████▌   | 168/256 [00:03<00:01, 46.32it/s]
+
+Sampling:  68%|██████▊   | 173/256 [00:03<00:01, 45.80it/s]
+
+Sampling:  70%|██████▉   | 178/256 [00:03<00:01, 45.63it/s]
+
+Sampling:  71%|███████▏  | 183/256 [00:03<00:01, 45.88it/s]
+
+Sampling:  73%|███████▎  | 188/256 [00:04<00:01, 45.96it/s]
+
+Sampling:  75%|███████▌  | 193/256 [00:04<00:01, 46.11it/s]
+
+Sampling:  77%|███████▋  | 198/256 [00:04<00:01, 45.97it/s]
+
+Sampling:  79%|███████▉  | 203/256 [00:04<00:01, 45.93it/s]
+
+Sampling:  81%|████████▏ | 208/256 [00:04<00:01, 45.38it/s]
+
+Sampling:  83%|████████▎ | 213/256 [00:04<00:00, 45.66it/s]
+
+Sampling:  85%|████████▌ | 218/256 [00:04<00:00, 45.92it/s]
+
+Sampling:  87%|████████▋ | 223/256 [00:04<00:00, 46.43it/s]
+
+Sampling:  89%|████████▉ | 228/256 [00:04<00:00, 45.83it/s]
+
+Sampling:  91%|█████████ | 233/256 [00:05<00:00, 46.06it/s]
+
+Sampling:  93%|█████████▎| 239/256 [00:05<00:00, 47.61it/s]
+
+Sampling:  95%|█████████▌| 244/256 [00:05<00:00, 47.97it/s]
+
+Sampling:  98%|█████████▊| 250/256 [00:05<00:00, 48.96it/s]
+
+Sampling: 100%|██████████| 256/256 [00:05<00:00, 49.37it/s]
+Sampling: 100%|██████████| 256/256 [00:05<00:00, 46.71it/s]
+[2026-10-26 23:03:31] [INFO] [made.agents.generators.chemeleon] Loaded 2 structures from C:\Users\User\AppData\Local\Temp\chemeleon_samples_e10touov
+[2026-10-26 23:03:31] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:03:31] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/1 (composition: K1 Tb1 Au1, score: 0.786985, score range: [0.656334, 0.786985], mean: 0.721659)
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:31       -9.689375        0.125905
+FIRE:    1 23:03:31       -9.689653        0.118387
+FIRE:    2 23:03:31       -9.690144        0.104132
+FIRE:    3 23:03:31       -9.690721        0.084686
+FIRE:    4 23:03:31       -9.691283        0.062355
+FIRE:    5 23:03:31       -9.691779        0.057742
+FIRE:    6 23:03:31       -9.692238        0.064711
+FIRE:    7 23:03:31       -9.692703        0.064518
+FIRE:    8 23:03:31       -9.693256        0.055648
+FIRE:    9 23:03:31       -9.693852        0.037244
+FIRE:   10 23:03:31       -9.694343        0.027932
+FIRE:   11 23:03:32       -9.694573        0.037075
+FIRE:   12 23:03:32       -9.694629        0.039493
+FIRE:   13 23:03:32       -9.694654        0.037877
+FIRE:   14 23:03:32       -9.694702        0.034764
+FIRE:   15 23:03:32       -9.694762        0.030382
+FIRE:   16 23:03:32       -9.694818        0.025065
+FIRE:   17 23:03:32       -9.694862        0.019284
+[2026-10-26 23:03:32] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=3)
+[2026-10-26 23:03:32] [INFO] [made.agents.m3_planning] M3 re-plan: query=3 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K19 Au1']
+[2026-10-26 23:03:32] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:03:32] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/1 (composition: K19 Au1, score: 0.637521, score range: [0.575603, 0.637521], mean: 0.606562)
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:32      134.023361       93.449533
+FIRE:    1 23:03:32       95.363312       98.182203
+FIRE:    2 23:03:32       65.930557       61.692770
+FIRE:    3 23:03:33       48.580750       28.456549
+FIRE:    4 23:03:33       38.236298       15.653357
+FIRE:    5 23:03:33       31.147324       13.838148
+FIRE:    6 23:03:33       25.842239       11.696513
+FIRE:    7 23:03:33       21.619904        9.471828
+FIRE:    8 23:03:33       18.125046        7.307298
+FIRE:    9 23:03:33       15.169189        5.900773
+FIRE:   10 23:03:34       12.634331        4.975988
+FIRE:   11 23:03:34       10.441269        4.069207
+FIRE:   12 23:03:34        8.524857        3.416594
+FIRE:   13 23:03:34        6.833450        3.143525
+FIRE:   14 23:03:34        5.323685        2.889968
+FIRE:   15 23:03:34        3.961258        2.648821
+FIRE:   16 23:03:34        2.717514        2.417904
+FIRE:   17 23:03:34        1.570724        2.259264
+FIRE:   18 23:03:35        0.501968        2.187733
+FIRE:   19 23:03:35       -0.505554        2.134636
+FIRE:   20 23:03:35       -1.463753        2.110041
+FIRE:   21 23:03:35       -2.381256        2.082091
+FIRE:   22 23:03:35       -3.264404        2.048938
+FIRE:   23 23:03:35       -4.119904        2.015388
+FIRE:   24 23:03:35       -4.950157        1.980119
+FIRE:   25 23:03:35       -5.758972        1.941657
+FIRE:   26 23:03:35       -6.548996        1.904001
+FIRE:   27 23:03:36       -7.321396        1.863758
+FIRE:   28 23:03:36       -8.074928        1.818688
+FIRE:   29 23:03:36       -8.808716        1.771909
+FIRE:   30 23:03:36       -9.522224        1.724082
+FIRE:   31 23:03:36      -10.215668        1.678317
+FIRE:   32 23:03:36      -10.889160        1.633229
+FIRE:   33 23:03:36      -11.541451        1.587112
+FIRE:   34 23:03:36      -12.172134        1.541251
+FIRE:   35 23:03:37      -12.780586        1.494873
+FIRE:   36 23:03:37      -13.366852        1.449256
+FIRE:   37 23:03:37      -13.930939        1.405344
+FIRE:   38 23:03:37      -14.473778        1.360878
+FIRE:   39 23:03:37      -14.995346        1.313878
+FIRE:   40 23:03:37      -15.495735        1.265852
+FIRE:   41 23:03:37      -15.975090        1.215804
+FIRE:   42 23:03:37      -16.433464        1.164040
+FIRE:   43 23:03:37      -16.870956        1.110895
+FIRE:   44 23:03:37      -17.287369        1.056798
+FIRE:   45 23:03:38      -17.683037        1.002155
+FIRE:   46 23:03:38      -18.057022        0.948051
+FIRE:   47 23:03:38      -18.408592        0.910546
+FIRE:   48 23:03:38      -18.737076        0.876757
+FIRE:   49 23:03:38      -19.042381        0.843865
+FIRE:   50 23:03:38      -19.325836        0.811472
+FIRE:   51 23:03:38      -19.590050        0.781228
+FIRE:   52 23:03:38      -19.838455        0.749533
+FIRE:   53 23:03:38      -20.073914        0.717179
+FIRE:   54 23:03:38      -20.298676        0.684262
+FIRE:   55 23:03:39      -20.514481        0.651342
+FIRE:   56 23:03:39      -20.722069        0.616102
+FIRE:   57 23:03:39      -20.919647        0.579433
+FIRE:   58 23:03:39      -21.105591        0.542217
+FIRE:   59 23:03:39      -21.279984        0.509531
+FIRE:   60 23:03:39      -21.441895        0.473349
+FIRE:   61 23:03:39      -21.589676        0.436070
+FIRE:   62 23:03:39      -21.723152        0.402273
+FIRE:   63 23:03:39      -21.844620        0.366825
+FIRE:   64 23:03:39      -21.956482        0.341259
+FIRE:   65 23:03:40      -22.061264        0.316220
+FIRE:   66 23:03:40      -22.158005        0.289569
+FIRE:   67 23:03:40      -22.246407        0.262710
+FIRE:   68 23:03:40      -22.328194        0.239883
+FIRE:   69 23:03:40      -22.402603        0.214826
+FIRE:   70 23:03:40      -22.467827        0.185895
+FIRE:   71 23:03:40      -22.525513        0.183133
+FIRE:   72 23:03:40      -22.576492        0.182408
+FIRE:   73 23:03:40      -22.620598        0.179374
+FIRE:   74 23:03:40      -22.657150        0.172632
+FIRE:   75 23:03:40      -22.686737        0.161191
+FIRE:   76 23:03:40      -22.711975        0.155953
+FIRE:   77 23:03:41      -22.731499        0.161381
+FIRE:   78 23:03:41      -22.743767        0.166197
+FIRE:   79 23:03:41      -22.748695        0.170375
+FIRE:   80 23:03:41      -22.792671        0.140956
+FIRE:   81 23:03:41      -22.858818        0.136804
+FIRE:   82 23:03:41      -22.908066        0.125179
+FIRE:   83 23:03:41      -22.946106        0.114858
+FIRE:   84 23:03:41      -22.975433        0.102947
+FIRE:   85 23:03:41      -22.998581        0.089835
+FIRE:   86 23:03:41      -23.019119        0.075822
+FIRE:   87 23:03:41      -23.039581        0.064734
+FIRE:   88 23:03:41      -23.059464        0.068271
+FIRE:   89 23:03:41      -23.077927        0.057009
+FIRE:   90 23:03:42      -23.092583        0.069362
+FIRE:   91 23:03:42      -23.107391        0.061606
+FIRE:   92 23:03:42      -23.121773        0.065853
+FIRE:   93 23:03:42      -23.138557        0.080159
+FIRE:   94 23:03:42      -23.156563        0.088198
+FIRE:   95 23:03:42      -23.180176        0.087566
+FIRE:   96 23:03:42      -23.208870        0.078853
+FIRE:   97 23:03:42      -23.239182        0.070157
+FIRE:   98 23:03:42      -23.268723        0.087840
+FIRE:   99 23:03:42      -23.295563        0.088584
+FIRE:  100 23:03:42      -23.318993        0.076981
+FIRE:  101 23:03:43      -23.341354        0.080740
+FIRE:  102 23:03:43      -23.363480        0.081066
+FIRE:  103 23:03:43      -23.384041        0.074438
+FIRE:  104 23:03:43      -23.405785        0.078382
+FIRE:  105 23:03:43      -23.428619        0.070552
+FIRE:  106 23:03:43      -23.451286        0.063408
+FIRE:  107 23:03:43      -23.470627        0.058207
+FIRE:  108 23:03:43      -23.486763        0.065393
+FIRE:  109 23:03:43      -23.500374        0.070742
+FIRE:  110 23:03:43      -23.510986        0.074992
+FIRE:  111 23:03:43      -23.519379        0.089249
+FIRE:  112 23:03:43      -23.525627        0.060947
+FIRE:  113 23:03:43      -23.530708        0.066910
+FIRE:  114 23:03:44      -23.535362        0.067134
+FIRE:  115 23:03:44      -23.540733        0.075694
+FIRE:  116 23:03:44      -23.549095        0.072830
+FIRE:  117 23:03:44      -23.562149        0.070915
+FIRE:  118 23:03:44      -23.576370        0.060317
+FIRE:  119 23:03:44      -23.588577        0.045737
+FIRE:  120 23:03:44      -23.597054        0.039037
+FIRE:  121 23:03:44      -23.602425        0.045044
+FIRE:  122 23:03:44      -23.604172        0.046705
+FIRE:  123 23:03:44      -23.607430        0.035885
+FIRE:  124 23:03:44      -23.611526        0.025914
+FIRE:  125 23:03:44      -23.614510        0.023900
+FIRE:  126 23:03:45      -23.616623        0.029325
+FIRE:  127 23:03:45      -23.618622        0.028962
+FIRE:  128 23:03:45      -23.620155        0.021861
+FIRE:  129 23:03:45      -23.620857        0.022760
+FIRE:  130 23:03:45      -23.621071        0.021099
+FIRE:  131 23:03:45      -23.621422        0.017950
+[2026-10-26 23:03:45] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=4)
+[2026-10-26 23:03:45] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:03:45] [INFO] [made.agents.base] Scorer.select(): Selected candidate 1/1 (composition: K1 Au7, score: 0.357814, score range: [0.039063, 0.357814], mean: 0.198438)
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:45      142.560364      146.920668
+FIRE:    1 23:03:45       92.104164       87.003923
+FIRE:    2 23:03:45       57.379219       62.864844
+FIRE:    3 23:03:45       32.358658       48.264163
+FIRE:    4 23:03:45       15.567738       31.489223
+FIRE:    5 23:03:46        4.991287       22.334928
+FIRE:    6 23:03:46       -1.793194       16.841023
+FIRE:    7 23:03:46       -6.366516       16.598080
+FIRE:    8 23:03:46       -9.496853       14.388149
+FIRE:    9 23:03:46      -11.563110       10.858395
+FIRE:   10 23:03:46      -12.760998        8.956408
+FIRE:   11 23:03:46      -13.405052       10.462875
+FIRE:   12 23:03:46      -13.909443       10.587886
+FIRE:   13 23:03:46      -14.544907        9.312045
+FIRE:   14 23:03:46      -15.302763        7.295591
+FIRE:   15 23:03:46      -16.025551        5.204164
+FIRE:   16 23:03:46      -16.576527        3.350005
+FIRE:   17 23:03:46      -16.911764        1.924246
+FIRE:   18 23:03:46      -17.064003        1.673899
+FIRE:   19 23:03:46      -17.100763        1.801184
+FIRE:   20 23:03:46      -17.355433        1.698006
+FIRE:   21 23:03:46      -17.765476        1.787362
+FIRE:   22 23:03:47      -18.207958        1.778607
+FIRE:   23 23:03:47      -18.589725        1.670345
+FIRE:   24 23:03:47      -18.944115        1.502476
+FIRE:   25 23:03:47      -19.280947        1.309406
+FIRE:   26 23:03:47      -19.620672        1.476570
+FIRE:   27 23:03:47      -19.970549        1.290969
+FIRE:   28 23:03:47      -20.314966        1.167933
+FIRE:   29 23:03:47      -20.633184        0.901520
+FIRE:   30 23:03:47      -20.882742        0.637596
+FIRE:   31 23:03:47      -20.985689        0.974338
+FIRE:   32 23:03:47      -21.024412        0.687937
+FIRE:   33 23:03:47      -21.075859        0.442423
+FIRE:   34 23:03:47      -21.121948        0.459025
+FIRE:   35 23:03:48      -21.168800        0.546033
+FIRE:   36 23:03:48      -21.229906        0.548556
+FIRE:   37 23:03:48      -21.308434        0.549810
+FIRE:   38 23:03:48      -21.398943        0.580473
+FIRE:   39 23:03:48      -21.507254        0.600668
+FIRE:   40 23:03:48      -21.635452        0.568703
+FIRE:   41 23:03:48      -21.776873        0.477539
+FIRE:   42 23:03:48      -21.885023        0.545757
+FIRE:   43 23:03:48      -21.945221        0.662128
+FIRE:   44 23:03:48      -21.977606        0.643170
+FIRE:   45 23:03:48      -21.995970        0.570488
+FIRE:   46 23:03:49      -22.024687        0.444887
+FIRE:   47 23:03:49      -22.052832        0.296730
+FIRE:   48 23:03:49      -22.072470        0.163731
+FIRE:   49 23:03:49      -22.081779        0.215445
+FIRE:   50 23:03:49      -22.084152        0.277246
+FIRE:   51 23:03:49      -22.084774        0.273193
+FIRE:   52 23:03:49      -22.085964        0.265204
+FIRE:   53 23:03:49      -22.087639        0.253609
+FIRE:   54 23:03:49      -22.089657        0.238745
+FIRE:   55 23:03:49      -22.091915        0.221050
+FIRE:   56 23:03:49      -22.094261        0.201262
+FIRE:   57 23:03:50      -22.096584        0.180125
+FIRE:   58 23:03:50      -22.099039        0.156435
+FIRE:   59 23:03:50      -22.101553        0.131562
+FIRE:   60 23:03:50      -22.104103        0.108400
+FIRE:   61 23:03:50      -22.106743        0.124313
+FIRE:   62 23:03:50      -22.109638        0.147328
+FIRE:   63 23:03:50      -22.113026        0.166561
+FIRE:   64 23:03:50      -22.117199        0.176227
+FIRE:   65 23:03:50      -22.122498        0.171861
+FIRE:   66 23:03:50      -22.129238        0.151740
+FIRE:   67 23:03:50      -22.137554        0.119756
+FIRE:   68 23:03:51      -22.147594        0.111932
+FIRE:   69 23:03:51      -22.160231        0.148237
+FIRE:   70 23:03:51      -22.177422        0.153826
+FIRE:   71 23:03:51      -22.200949        0.120331
+FIRE:   72 23:03:51      -22.231440        0.137706
+FIRE:   73 23:03:51      -22.270063        0.135291
+FIRE:   74 23:03:51      -22.311569        0.105861
+FIRE:   75 23:03:51      -22.333567        0.201808
+FIRE:   76 23:03:51      -22.336843        0.170656
+FIRE:   77 23:03:51      -22.342197        0.121462
+FIRE:   78 23:03:51      -22.348177        0.123503
+FIRE:   79 23:03:52      -22.354137        0.126096
+FIRE:   80 23:03:52      -22.360453        0.128776
+FIRE:   81 23:03:52      -22.367846        0.130882
+FIRE:   82 23:03:52      -22.376678        0.131328
+FIRE:   83 23:03:52      -22.387995        0.127336
+FIRE:   84 23:03:52      -22.401791        0.115045
+FIRE:   85 23:03:52      -22.417734        0.089129
+FIRE:   86 23:03:52      -22.434156        0.100279
+FIRE:   87 23:03:52      -22.448076        0.110273
+FIRE:   88 23:03:52      -22.460680        0.155380
+FIRE:   89 23:03:52      -22.480780        0.165854
+FIRE:   90 23:03:53      -22.512051        0.138880
+FIRE:   91 23:03:53      -22.546988        0.244387
+FIRE:   92 23:03:53      -22.579052        0.155823
+FIRE:   93 23:03:53      -22.591579        0.120027
+FIRE:   94 23:03:53      -22.594345        0.106948
+FIRE:   95 23:03:53      -22.598576        0.085177
+FIRE:   96 23:03:53      -22.602646        0.060659
+FIRE:   97 23:03:53      -22.605635        0.043592
+FIRE:   98 23:03:53      -22.607506        0.048101
+FIRE:   99 23:03:53      -22.608578        0.044217
+FIRE:  100 23:03:54      -22.609310        0.050805
+FIRE:  101 23:03:54      -22.610321        0.063445
+FIRE:  102 23:03:54      -22.612175        0.061170
+FIRE:  103 23:03:54      -22.615063        0.046808
+FIRE:  104 23:03:54      -22.618027        0.036900
+FIRE:  105 23:03:54      -22.619431        0.043958
+FIRE:  106 23:03:54      -22.619658        0.042153
+FIRE:  107 23:03:54      -22.620049        0.039661
+FIRE:  108 23:03:54      -22.620510        0.038043
+FIRE:  109 23:03:54      -22.620975        0.038138
+FIRE:  110 23:03:55      -22.621439        0.039036
+FIRE:  111 23:03:55      -22.621918        0.038929
+FIRE:  112 23:03:55      -22.622429        0.036703
+FIRE:  113 23:03:55      -22.623037        0.031926
+FIRE:  114 23:03:55      -22.623745        0.025912
+FIRE:  115 23:03:55      -22.624546        0.021337
+FIRE:  116 23:03:55      -22.625412        0.018469
+[2026-10-26 23:03:55] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=5)
+[2026-10-26 23:03:55] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:03:55] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/1 (composition: K1 Tb1 Au1, score: 0.945683, score range: [0.060045, 0.945683], mean: 0.502864)
+      Step     Time          Energy          fmax
+FIRE:    0 23:03:55       -4.648474        1.089336
+FIRE:    1 23:03:55       -4.694260        1.126116
+FIRE:    2 23:03:55       -4.783776        1.194177
+FIRE:    3 23:03:55       -4.914502        1.284039
+FIRE:    4 23:03:55       -5.085402        1.382796
+FIRE:    5 23:03:55       -5.297293        1.472641
+FIRE:    6 23:03:55       -5.550153        1.541012
+FIRE:    7 23:03:55       -5.837434        1.548259
+FIRE:    8 23:03:55       -6.141413        1.208158
+FIRE:    9 23:03:55       -6.307562        0.849800
+FIRE:   10 23:03:56       -6.224948        2.447077
+FIRE:   11 23:03:56       -6.286354        2.198352
+FIRE:   12 23:03:56       -6.384884        1.783812
+FIRE:   13 23:03:56       -6.489173        1.320373
+FIRE:   14 23:03:56       -6.578600        0.904357
+FIRE:   15 23:03:56       -6.649586        0.895299
+FIRE:   16 23:03:56       -6.710788        1.097801
+FIRE:   17 23:03:56       -6.774736        1.238553
+FIRE:   18 23:03:56       -6.858562        1.305078
+FIRE:   19 23:03:56       -6.969661        1.299984
+FIRE:   20 23:03:56       -7.110611        1.174819
+FIRE:   21 23:03:56       -7.271838        0.906762
+FIRE:   22 23:03:56       -7.437877        1.033476
+FIRE:   23 23:03:56       -7.615014        1.512877
+FIRE:   24 23:03:56       -7.874269        1.763776
+FIRE:   25 23:03:56       -8.216881        1.529379
+FIRE:   26 23:03:56       -8.553638        1.144363
+FIRE:   27 23:03:56       -8.830725        0.822515
+FIRE:   28 23:03:56       -9.037659        0.583487
+FIRE:   29 23:03:56       -9.144607        0.586944
+FIRE:   30 23:03:56       -9.127087        1.084002
+FIRE:   31 23:03:56       -9.169222        0.949731
+FIRE:   32 23:03:56       -9.232325        0.737439
+FIRE:   33 23:03:57       -9.292282        0.521327
+FIRE:   34 23:03:57       -9.337722        0.359250
+FIRE:   35 23:03:57       -9.371381        0.333091
+FIRE:   36 23:03:57       -9.400407        0.351200
+FIRE:   37 23:03:57       -9.428865        0.346724
+FIRE:   38 23:03:57       -9.460066        0.372605
+FIRE:   39 23:03:57       -9.491436        0.390320
+FIRE:   40 23:03:57       -9.519602        0.395755
+FIRE:   41 23:03:57       -9.544234        0.383809
+FIRE:   42 23:03:57       -9.561042        0.348663
+FIRE:   43 23:03:57       -9.564688        0.334326
+FIRE:   44 23:03:57       -9.571200        0.307396
+FIRE:   45 23:03:57       -9.579262        0.270914
+FIRE:   46 23:03:57       -9.587436        0.228542
+FIRE:   47 23:03:57       -9.594524        0.183939
+FIRE:   48 23:03:57       -9.599837        0.140440
+FIRE:   49 23:03:57       -9.603302        0.101156
+FIRE:   50 23:03:57       -9.605458        0.103751
+FIRE:   51 23:03:57       -9.606464        0.107584
+FIRE:   52 23:03:57       -9.606596        0.105505
+FIRE:   53 23:03:58       -9.606811        0.101788
+FIRE:   54 23:03:58       -9.607123        0.096141
+FIRE:   55 23:03:58       -9.607509        0.088947
+FIRE:   56 23:03:58       -9.607944        0.080299
+FIRE:   57 23:03:58       -9.608381        0.070706
+FIRE:   58 23:03:58       -9.608818        0.060395
+FIRE:   59 23:03:58       -9.609265        0.048829
+FIRE:   60 23:03:58       -9.609696        0.046259
+FIRE:   61 23:03:58       -9.610102        0.043891
+FIRE:   62 23:03:58       -9.610471        0.044863
+FIRE:   63 23:03:58       -9.610831        0.053897
+FIRE:   64 23:03:58       -9.611232        0.057790
+FIRE:   65 23:03:58       -9.611745        0.054910
+FIRE:   66 23:03:58       -9.612382        0.045255
+FIRE:   67 23:03:58       -9.613084        0.037855
+FIRE:   68 23:03:58       -9.613788        0.036420
+FIRE:   69 23:03:58       -9.614449        0.039195
+FIRE:   70 23:03:58       -9.615131        0.042894
+FIRE:   71 23:03:58       -9.615868        0.033077
+FIRE:   72 23:03:58       -9.616508        0.026783
+FIRE:   73 23:03:58       -9.617000        0.038944
+FIRE:   74 23:03:58       -9.617639        0.034814
+FIRE:   75 23:03:59       -9.618362        0.024736
+FIRE:   76 23:03:59       -9.618749        0.039000
+FIRE:   77 23:03:59       -9.619215        0.028398
+FIRE:   78 23:03:59       -9.619421        0.029035
+FIRE:   79 23:03:59       -9.619471        0.021836
+FIRE:   80 23:03:59       -9.619529        0.010957
+[2026-10-26 23:03:59] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=6)
+[2026-10-26 23:03:59] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Tb19']
+[2026-10-26 23:03:59] [INFO] [made.agents.generators.chemeleon] Running Chemeleon CSP with formulas: ['K1 Tb19', 'K5 Tb3'], 1 samples per formula
+Generating 1 samples for each formula: ['K1 Tb19', 'K5 Tb3']
+Generating batch #1 with 32 samples.
+
+
+Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+
+Sampling:   1%|          | 2/256 [00:00<00:17, 14.54it/s]
+
+Sampling:   2%|▏         | 4/256 [00:00<00:17, 14.33it/s]
+
+Sampling:   2%|▏         | 6/256 [00:00<00:17, 14.54it/s]
+
+Sampling:   3%|▎         | 8/256 [00:00<00:17, 14.42it/s]
+
+Sampling:   4%|▍         | 10/256 [00:00<00:17, 14.41it/s]
+
+Sampling:   5%|▍         | 12/256 [00:00<00:16, 14.46it/s]
+
+Sampling:   5%|▌         | 14/256 [00:00<00:16, 14.41it/s]
+
+Sampling:   6%|▋         | 16/256 [00:01<00:16, 14.39it/s]
+
+Sampling:   7%|▋         | 18/256 [00:01<00:16, 14.29it/s]
+
+Sampling:   8%|▊         | 20/256 [00:01<00:16, 14.30it/s]
+
+Sampling:   9%|▊         | 22/256 [00:01<00:16, 14.31it/s]
+
+Sampling:   9%|▉         | 24/256 [00:01<00:16, 14.38it/s]
+
+Sampling:  10%|█         | 26/256 [00:01<00:15, 14.42it/s]
+
+Sampling:  11%|█         | 28/256 [00:01<00:15, 14.54it/s]
+
+Sampling:  12%|█▏        | 30/256 [00:02<00:15, 14.67it/s]
+
+Sampling:  12%|█▎        | 32/256 [00:02<00:15, 14.67it/s]
+
+Sampling:  13%|█▎        | 34/256 [00:02<00:14, 14.82it/s]
+
+Sampling:  14%|█▍        | 36/256 [00:02<00:14, 14.73it/s]
+
+Sampling:  15%|█▍        | 38/256 [00:02<00:15, 14.46it/s]
+
+Sampling:  16%|█▌        | 40/256 [00:02<00:15, 14.38it/s]
+
+Sampling:  16%|█▋        | 42/256 [00:02<00:15, 14.22it/s]
+
+Sampling:  17%|█▋        | 44/256 [00:03<00:15, 14.10it/s]
+
+Sampling:  18%|█▊        | 46/256 [00:03<00:14, 14.07it/s]
+
+Sampling:  19%|█▉        | 48/256 [00:03<00:14, 14.14it/s]
+
+Sampling:  20%|█▉        | 50/256 [00:03<00:14, 14.26it/s]
+
+Sampling:  20%|██        | 52/256 [00:03<00:14, 14.17it/s]
+
+Sampling:  21%|██        | 54/256 [00:03<00:14, 14.36it/s]
+
+Sampling:  22%|██▏       | 56/256 [00:03<00:13, 14.30it/s]
+
+Sampling:  23%|██▎       | 58/256 [00:04<00:13, 14.32it/s]
+
+Sampling:  23%|██▎       | 60/256 [00:04<00:13, 14.36it/s]
+
+Sampling:  24%|██▍       | 62/256 [00:04<00:13, 14.28it/s]
+
+Sampling:  25%|██▌       | 64/256 [00:04<00:13, 14.27it/s]
+
+Sampling:  26%|██▌       | 66/256 [00:04<00:13, 14.30it/s]
+
+Sampling:  27%|██▋       | 68/256 [00:04<00:13, 14.42it/s]
+
+Sampling:  27%|██▋       | 70/256 [00:04<00:12, 14.53it/s]
+
+Sampling:  28%|██▊       | 72/256 [00:05<00:12, 14.56it/s]
+
+Sampling:  29%|██▉       | 74/256 [00:05<00:12, 14.72it/s]
+
+Sampling:  30%|██▉       | 76/256 [00:05<00:12, 14.68it/s]
+
+Sampling:  30%|███       | 78/256 [00:05<00:12, 14.60it/s]
+
+Sampling:  31%|███▏      | 80/256 [00:05<00:12, 14.44it/s]
+
+Sampling:  32%|███▏      | 82/256 [00:05<00:12, 14.44it/s]
+
+Sampling:  33%|███▎      | 84/256 [00:05<00:11, 14.50it/s]
+
+Sampling:  34%|███▎      | 86/256 [00:05<00:11, 14.30it/s]
+
+Sampling:  34%|███▍      | 88/256 [00:06<00:11, 14.43it/s]
+
+Sampling:  35%|███▌      | 90/256 [00:06<00:11, 14.37it/s]
+
+Sampling:  36%|███▌      | 92/256 [00:06<00:11, 14.52it/s]
+
+Sampling:  37%|███▋      | 94/256 [00:06<00:11, 14.48it/s]
+
+Sampling:  38%|███▊      | 96/256 [00:06<00:10, 14.63it/s]
+
+Sampling:  38%|███▊      | 98/256 [00:06<00:10, 14.54it/s]
+
+Sampling:  39%|███▉      | 100/256 [00:06<00:10, 14.46it/s]
+
+Sampling:  40%|███▉      | 102/256 [00:07<00:10, 14.50it/s]
+
+Sampling:  41%|████      | 104/256 [00:07<00:10, 14.45it/s]
+
+Sampling:  41%|████▏     | 106/256 [00:07<00:10, 14.46it/s]
+
+Sampling:  42%|████▏     | 108/256 [00:07<00:10, 14.55it/s]
+
+Sampling:  43%|████▎     | 110/256 [00:07<00:09, 14.73it/s]
+
+Sampling:  44%|████▍     | 112/256 [00:07<00:09, 14.71it/s]
+
+Sampling:  45%|████▍     | 114/256 [00:07<00:09, 14.61it/s]
+
+Sampling:  45%|████▌     | 116/256 [00:08<00:09, 14.56it/s]
+
+Sampling:  46%|████▌     | 118/256 [00:08<00:09, 14.46it/s]
+
+Sampling:  47%|████▋     | 120/256 [00:08<00:09, 14.56it/s]
+
+Sampling:  48%|████▊     | 122/256 [00:08<00:09, 14.56it/s]
+
+Sampling:  48%|████▊     | 124/256 [00:08<00:09, 14.34it/s]
+
+Sampling:  49%|████▉     | 126/256 [00:08<00:09, 14.36it/s]
+
+Sampling:  50%|█████     | 128/256 [00:08<00:08, 14.34it/s]
+
+Sampling:  51%|█████     | 130/256 [00:09<00:08, 14.37it/s]
+
+Sampling:  52%|█████▏    | 132/256 [00:09<00:08, 14.50it/s]
+
+Sampling:  52%|█████▏    | 134/256 [00:09<00:08, 14.50it/s]
+
+Sampling:  53%|█████▎    | 136/256 [00:09<00:08, 14.45it/s]
+
+Sampling:  54%|█████▍    | 138/256 [00:09<00:08, 14.43it/s]
+
+Sampling:  55%|█████▍    | 140/256 [00:09<00:08, 14.31it/s]
+
+Sampling:  55%|█████▌    | 142/256 [00:09<00:08, 14.22it/s]
+
+Sampling:  56%|█████▋    | 144/256 [00:09<00:07, 14.39it/s]
+
+Sampling:  57%|█████▋    | 146/256 [00:10<00:07, 14.40it/s]
+
+Sampling:  58%|█████▊    | 148/256 [00:10<00:07, 14.51it/s]
+
+Sampling:  59%|█████▊    | 150/256 [00:10<00:07, 14.43it/s]
+
+Sampling:  59%|█████▉    | 152/256 [00:10<00:07, 14.53it/s]
+
+Sampling:  60%|██████    | 154/256 [00:10<00:07, 14.49it/s]
+
+Sampling:  61%|██████    | 156/256 [00:10<00:06, 14.49it/s]
+
+Sampling:  62%|██████▏   | 158/256 [00:10<00:06, 14.56it/s]
+
+Sampling:  62%|██████▎   | 160/256 [00:11<00:06, 14.82it/s]
+
+Sampling:  63%|██████▎   | 162/256 [00:11<00:06, 14.79it/s]
+
+Sampling:  64%|██████▍   | 164/256 [00:11<00:06, 14.49it/s]
+
+Sampling:  65%|██████▍   | 166/256 [00:11<00:06, 14.31it/s]
+
+Sampling:  66%|██████▌   | 168/256 [00:11<00:06, 14.17it/s]
+
+Sampling:  66%|██████▋   | 170/256 [00:11<00:05, 14.42it/s]
+
+Sampling:  67%|██████▋   | 172/256 [00:11<00:05, 14.73it/s]
+
+Sampling:  68%|██████▊   | 174/256 [00:12<00:05, 15.20it/s]
+
+Sampling:  69%|██████▉   | 176/256 [00:12<00:05, 15.47it/s]
+
+Sampling:  70%|██████▉   | 178/256 [00:12<00:04, 15.80it/s]
+
+Sampling:  70%|███████   | 180/256 [00:12<00:04, 15.86it/s]
+
+Sampling:  71%|███████   | 182/256 [00:12<00:04, 15.33it/s]
+
+Sampling:  72%|███████▏  | 184/256 [00:12<00:04, 15.03it/s]
+
+Sampling:  73%|███████▎  | 186/256 [00:12<00:04, 14.96it/s]
+
+Sampling:  73%|███████▎  | 188/256 [00:12<00:04, 14.79it/s]
+
+Sampling:  74%|███████▍  | 190/256 [00:13<00:04, 14.74it/s]
+
+Sampling:  75%|███████▌  | 192/256 [00:13<00:04, 14.61it/s]
+
+Sampling:  76%|███████▌  | 194/256 [00:13<00:04, 14.37it/s]
+
+Sampling:  77%|███████▋  | 196/256 [00:13<00:04, 14.22it/s]
+
+Sampling:  77%|███████▋  | 198/256 [00:13<00:04, 14.40it/s]
+
+Sampling:  78%|███████▊  | 200/256 [00:13<00:03, 14.44it/s]
+
+Sampling:  79%|███████▉  | 202/256 [00:13<00:03, 14.45it/s]
+
+Sampling:  80%|███████▉  | 204/256 [00:14<00:03, 14.67it/s]
+
+Sampling:  80%|████████  | 206/256 [00:14<00:03, 14.68it/s]
+
+Sampling:  81%|████████▏ | 208/256 [00:14<00:03, 14.68it/s]
+
+Sampling:  82%|████████▏ | 210/256 [00:14<00:03, 14.65it/s]
+
+Sampling:  83%|████████▎ | 212/256 [00:14<00:03, 14.61it/s]
+
+Sampling:  84%|████████▎ | 214/256 [00:14<00:02, 14.55it/s]
+
+Sampling:  84%|████████▍ | 216/256 [00:14<00:02, 14.65it/s]
+
+Sampling:  85%|████████▌ | 218/256 [00:15<00:02, 14.55it/s]
+
+Sampling:  86%|████████▌ | 220/256 [00:15<00:02, 14.53it/s]
+
+Sampling:  87%|████████▋ | 222/256 [00:15<00:02, 14.44it/s]
+
+Sampling:  88%|████████▊ | 224/256 [00:15<00:02, 14.49it/s]
+
+Sampling:  88%|████████▊ | 226/256 [00:15<00:02, 14.63it/s]
+
+Sampling:  89%|████████▉ | 228/256 [00:15<00:01, 14.59it/s]
+
+Sampling:  90%|████████▉ | 230/256 [00:15<00:01, 14.70it/s]
+
+Sampling:  91%|█████████ | 232/256 [00:15<00:01, 14.55it/s]
+
+Sampling:  91%|█████████▏| 234/256 [00:16<00:01, 14.51it/s]
+
+Sampling:  92%|█████████▏| 236/256 [00:16<00:01, 14.37it/s]
+
+Sampling:  93%|█████████▎| 238/256 [00:16<00:01, 14.39it/s]
+
+Sampling:  94%|█████████▍| 240/256 [00:16<00:01, 14.57it/s]
+
+Sampling:  95%|█████████▍| 242/256 [00:16<00:00, 14.63it/s]
+
+Sampling:  95%|█████████▌| 244/256 [00:16<00:00, 14.58it/s]
+
+Sampling:  96%|█████████▌| 246/256 [00:16<00:00, 14.60it/s]
+
+Sampling:  97%|█████████▋| 248/256 [00:17<00:00, 14.65it/s]
+
+Sampling:  98%|█████████▊| 250/256 [00:17<00:00, 14.58it/s]
+
+Sampling:  98%|█████████▊| 252/256 [00:17<00:00, 14.71it/s]
+
+Sampling:  99%|█████████▉| 254/256 [00:17<00:00, 14.60it/s]
+
+Sampling: 100%|██████████| 256/256 [00:17<00:00, 14.57it/s]
+Sampling: 100%|██████████| 256/256 [00:17<00:00, 14.53it/s]
+[2026-10-26 23:04:17] [INFO] [made.agents.generators.chemeleon] Loaded 2 structures from C:\Users\User\AppData\Local\Temp\chemeleon_samples_2rrerq__
+[2026-10-26 23:04:17] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:04:17] [INFO] [made.agents.base] Scorer.select(): Selected candidate 1/1 (composition: K5 Tb3, score: 0.877291, score range: [0.864042, 0.877291], mean: 0.870666)
+      Step     Time          Energy          fmax
+FIRE:    0 23:04:17      -17.489414        0.204150
+FIRE:    1 23:04:17      -17.490992        0.201480
+FIRE:    2 23:04:17      -17.493942        0.196121
+FIRE:    3 23:04:17      -17.498058        0.188252
+FIRE:    4 23:04:17      -17.502953        0.177949
+FIRE:    5 23:04:17      -17.508280        0.165418
+FIRE:    6 23:04:17      -17.513725        0.150924
+FIRE:    7 23:04:17      -17.519035        0.134803
+FIRE:    8 23:04:17      -17.524529        0.115596
+FIRE:    9 23:04:17      -17.529993        0.093611
+FIRE:   10 23:04:17      -17.535069        0.077318
+FIRE:   11 23:04:17      -17.539246        0.057320
+FIRE:   12 23:04:18      -17.541920        0.076198
+FIRE:   13 23:04:18      -17.543020        0.089478
+FIRE:   14 23:04:18      -17.543127        0.088962
+FIRE:   15 23:04:18      -17.543356        0.087915
+FIRE:   16 23:04:18      -17.543709        0.086348
+FIRE:   17 23:04:18      -17.544098        0.084323
+FIRE:   18 23:04:18      -17.544590        0.081806
+FIRE:   19 23:04:18      -17.545120        0.078862
+FIRE:   20 23:04:18      -17.545677        0.075521
+FIRE:   21 23:04:18      -17.546331        0.071407
+FIRE:   22 23:04:18      -17.547085        0.066434
+FIRE:   23 23:04:18      -17.547916        0.060558
+FIRE:   24 23:04:18      -17.548840        0.053772
+FIRE:   25 23:04:18      -17.549767        0.046217
+FIRE:   26 23:04:18      -17.550747        0.038050
+FIRE:   27 23:04:18      -17.551655        0.029745
+FIRE:   28 23:04:19      -17.552465        0.026571
+FIRE:   29 23:04:19      -17.553333        0.024838
+FIRE:   30 23:04:19      -17.554195        0.023906
+FIRE:   31 23:04:19      -17.555050        0.024446
+FIRE:   32 23:04:19      -17.555883        0.021009
+FIRE:   33 23:04:19      -17.556475        0.014219
+[2026-10-26 23:04:19] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=7)
+[2026-10-26 23:04:19] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:04:19] [INFO] [made.agents.base] Scorer.select(): Selected candidate 1/1 (composition: K5 Au3, score: 0.652419, score range: [0.051194, 0.652419], mean: 0.351806)
+      Step     Time          Energy          fmax
+FIRE:    0 23:04:19        9.211613       24.106849
+FIRE:    1 23:04:19        3.380188       11.382320
+FIRE:    2 23:04:19       -0.008858       10.222379
+FIRE:    3 23:04:19       -2.334721        7.896969
+FIRE:    4 23:04:19       -4.100685        5.842816
+FIRE:    5 23:04:19       -5.523083        4.384163
+FIRE:    6 23:04:19       -6.707638        3.342969
+FIRE:    7 23:04:19       -7.705963        2.582760
+FIRE:    8 23:04:19       -8.555145        2.363829
+FIRE:    9 23:04:20       -9.279232        2.155626
+FIRE:   10 23:04:20       -9.895950        1.938446
+FIRE:   11 23:04:20      -10.427105        1.704249
+FIRE:   12 23:04:20      -10.889618        1.492475
+FIRE:   13 23:04:20      -11.298813        1.301909
+FIRE:   14 23:04:20      -11.662220        1.250030
+FIRE:   15 23:04:20      -11.980362        1.066508
+FIRE:   16 23:04:20      -12.245087        1.069517
+FIRE:   17 23:04:20      -12.461887        1.304674
+FIRE:   18 23:04:20      -12.649475        1.404951
+FIRE:   19 23:04:20      -12.824718        1.381371
+FIRE:   20 23:04:20      -12.991722        1.178788
+FIRE:   21 23:04:20      -13.143635        0.895814
+FIRE:   22 23:04:20      -13.281002        0.698291
+FIRE:   23 23:04:20      -13.418911        0.797163
+FIRE:   24 23:04:20      -13.566998        0.788666
+FIRE:   25 23:04:20      -13.726540        0.701647
+FIRE:   26 23:04:20      -13.891182        0.598864
+FIRE:   27 23:04:20      -14.050072        0.472088
+FIRE:   28 23:04:21      -14.193211        0.392603
+FIRE:   29 23:04:21      -14.321842        0.373000
+FIRE:   30 23:04:21      -14.434055        0.320136
+FIRE:   31 23:04:21      -14.520172        0.268666
+FIRE:   32 23:04:21      -14.571548        0.273548
+FIRE:   33 23:04:21      -14.578194        0.283285
+FIRE:   34 23:04:21      -14.640560        0.253055
+FIRE:   35 23:04:21      -14.701580        0.194364
+FIRE:   36 23:04:21      -14.744339        0.195462
+FIRE:   37 23:04:21      -14.776794        0.190522
+FIRE:   38 23:04:21      -14.816082        0.190550
+FIRE:   39 23:04:21      -14.854187        0.156176
+FIRE:   40 23:04:21      -14.886490        0.109778
+FIRE:   41 23:04:21      -14.916702        0.130529
+FIRE:   42 23:04:21      -14.949135        0.151322
+FIRE:   43 23:04:21      -14.982735        0.128537
+FIRE:   44 23:04:21      -15.011372        0.098553
+FIRE:   45 23:04:21      -15.033012        0.086914
+FIRE:   46 23:04:21      -15.049500        0.084155
+FIRE:   47 23:04:21      -15.062992        0.115878
+FIRE:   48 23:04:22      -15.081787        0.114675
+FIRE:   49 23:04:22      -15.112423        0.182175
+FIRE:   50 23:04:22      -15.157692        0.225993
+FIRE:   51 23:04:22      -15.215565        0.175211
+FIRE:   52 23:04:22      -15.273552        0.186171
+FIRE:   53 23:04:22      -15.322044        0.176130
+FIRE:   54 23:04:22      -15.354111        0.160520
+FIRE:   55 23:04:22      -15.371872        0.222605
+FIRE:   56 23:04:22      -15.378246        0.330412
+FIRE:   57 23:04:22      -15.400921        0.190569
+FIRE:   58 23:04:22      -15.406471        0.127904
+FIRE:   59 23:04:22      -15.412170        0.079165
+FIRE:   60 23:04:22      -15.415562        0.122875
+FIRE:   61 23:04:22      -15.419815        0.118354
+FIRE:   62 23:04:22      -15.425762        0.082093
+FIRE:   63 23:04:22      -15.430069        0.048908
+FIRE:   64 23:04:22      -15.431747        0.088663
+FIRE:   65 23:04:22      -15.434246        0.105456
+FIRE:   66 23:04:22      -15.438660        0.066279
+FIRE:   67 23:04:22      -15.442581        0.072846
+FIRE:   68 23:04:23      -15.448784        0.078006
+FIRE:   69 23:04:23      -15.457661        0.066240
+FIRE:   70 23:04:23      -15.467014        0.093527
+FIRE:   71 23:04:23      -15.479469        0.058242
+FIRE:   72 23:04:23      -15.494061        0.084437
+FIRE:   73 23:04:23      -15.511642        0.070718
+FIRE:   74 23:04:23      -15.532501        0.081580
+FIRE:   75 23:04:23      -15.557289        0.115691
+FIRE:   76 23:04:23      -15.587692        0.130196
+FIRE:   77 23:04:23      -15.622707        0.161933
+FIRE:   78 23:04:23      -15.666767        0.210487
+FIRE:   79 23:04:23      -15.721767        0.253704
+FIRE:   80 23:04:23      -15.785175        0.266545
+FIRE:   81 23:04:23      -15.847736        0.244184
+FIRE:   82 23:04:23      -15.899837        0.171168
+FIRE:   83 23:04:23      -15.928349        0.123104
+FIRE:   84 23:04:23      -15.922768        0.294743
+FIRE:   85 23:04:23      -15.945869        0.119980
+FIRE:   86 23:04:23      -15.949787        0.166297
+FIRE:   87 23:04:24      -15.952606        0.127874
+FIRE:   88 23:04:24      -15.955605        0.064432
+FIRE:   89 23:04:24      -15.956543        0.070943
+FIRE:   90 23:04:24      -15.956715        0.065455
+FIRE:   91 23:04:24      -15.957027        0.054975
+FIRE:   92 23:04:24      -15.957413        0.040500
+FIRE:   93 23:04:24      -15.957806        0.030430
+FIRE:   94 23:04:24      -15.958160        0.030161
+FIRE:   95 23:04:24      -15.958469        0.033389
+FIRE:   96 23:04:24      -15.958775        0.036716
+FIRE:   97 23:04:24      -15.959160        0.038074
+FIRE:   98 23:04:24      -15.959652        0.035738
+FIRE:   99 23:04:24      -15.960270        0.028785
+FIRE:  100 23:04:24      -15.960926        0.020534
+FIRE:  101 23:04:24      -15.961544        0.023206
+FIRE:  102 23:04:24      -15.962143        0.031131
+FIRE:  103 23:04:24      -15.962791        0.026599
+FIRE:  104 23:04:24      -15.963413        0.012548
+[2026-10-26 23:04:24] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=8)
+[2026-10-26 23:04:24] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:04:24] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K1 Tb1 Au1, score: 0.551751, score range: [0.551751, 0.551751], mean: 0.551751)
+      Step     Time          Energy          fmax
+FIRE:    0 23:04:25       -2.753187       10.686132
+FIRE:    1 23:04:25       -4.540165        6.066931
+FIRE:    2 23:04:25       -5.811859        3.841073
+FIRE:    3 23:04:25       -6.659241        2.832718
+FIRE:    4 23:04:25       -7.271245        1.981731
+FIRE:    5 23:04:25       -7.691115        1.184829
+FIRE:    6 23:04:25       -7.923467        1.392098
+FIRE:    7 23:04:25       -8.017231        2.771966
+FIRE:    8 23:04:25       -8.063540        2.533785
+FIRE:    9 23:04:25       -8.142174        2.129859
+FIRE:   10 23:04:25       -8.233489        1.673482
+FIRE:   11 23:04:25       -8.322196        1.279144
+FIRE:   12 23:04:25       -8.402288        1.136782
+FIRE:   13 23:04:25       -8.475884        1.176116
+FIRE:   14 23:04:25       -8.548804        1.214310
+FIRE:   15 23:04:25       -8.635345        1.226868
+FIRE:   16 23:04:25       -8.740335        1.185430
+FIRE:   17 23:04:25       -8.863202        1.091806
+FIRE:   18 23:04:25       -8.990579        0.888715
+FIRE:   19 23:04:25       -9.082708        0.521408
+FIRE:   20 23:04:25       -9.077214        0.627051
+FIRE:   21 23:04:25       -9.079893        0.609096
+FIRE:   22 23:04:25       -9.084991        0.574167
+FIRE:   23 23:04:26       -9.092039        0.524211
+FIRE:   24 23:04:26       -9.100419        0.476731
+FIRE:   25 23:04:26       -9.109466        0.426281
+FIRE:   26 23:04:26       -9.118578        0.374084
+FIRE:   27 23:04:26       -9.127304        0.326543
+FIRE:   28 23:04:26       -9.136164        0.291479
+FIRE:   29 23:04:26       -9.144869        0.310805
+FIRE:   30 23:04:26       -9.153373        0.352210
+FIRE:   31 23:04:26       -9.162066        0.383455
+FIRE:   32 23:04:26       -9.171778        0.398362
+FIRE:   33 23:04:26       -9.183433        0.393348
+FIRE:   34 23:04:26       -9.197796        0.367574
+FIRE:   35 23:04:26       -9.215433        0.323592
+FIRE:   36 23:04:26       -9.236778        0.335710
+FIRE:   37 23:04:26       -9.261772        0.329274
+FIRE:   38 23:04:26       -9.288760        0.271800
+FIRE:   39 23:04:26       -9.313689        0.178753
+FIRE:   40 23:04:26       -9.330438        0.155086
+FIRE:   41 23:04:26       -9.334296        0.184291
+FIRE:   42 23:04:26       -9.334890        0.176030
+FIRE:   43 23:04:26       -9.335992        0.159749
+FIRE:   44 23:04:27       -9.337398        0.135979
+FIRE:   45 23:04:27       -9.338858        0.105729
+FIRE:   46 23:04:27       -9.340151        0.078417
+FIRE:   47 23:04:27       -9.341103        0.084723
+FIRE:   48 23:04:27       -9.341699        0.092630
+FIRE:   49 23:04:27       -9.342121        0.098856
+FIRE:   50 23:04:27       -9.342624        0.099483
+FIRE:   51 23:04:27       -9.343461        0.092089
+FIRE:   52 23:04:27       -9.344746        0.078423
+FIRE:   53 23:04:27       -9.346248        0.061607
+FIRE:   54 23:04:27       -9.347494        0.051623
+FIRE:   55 23:04:27       -9.348229        0.062724
+FIRE:   56 23:04:27       -9.348782        0.074510
+FIRE:   57 23:04:27       -9.349525        0.066404
+FIRE:   58 23:04:27       -9.350178        0.055255
+FIRE:   59 23:04:27       -9.350360        0.063345
+FIRE:   60 23:04:27       -9.350510        0.057680
+FIRE:   61 23:04:27       -9.350755        0.048096
+FIRE:   62 23:04:27       -9.351019        0.038727
+FIRE:   63 23:04:27       -9.351242        0.035756
+FIRE:   64 23:04:27       -9.351419        0.040114
+FIRE:   65 23:04:28       -9.351608        0.045133
+FIRE:   66 23:04:28       -9.351853        0.045962
+FIRE:   67 23:04:28       -9.352203        0.040590
+FIRE:   68 23:04:28       -9.352638        0.029784
+FIRE:   69 23:04:28       -9.353095        0.028583
+FIRE:   70 23:04:28       -9.353582        0.032034
+FIRE:   71 23:04:28       -9.354236        0.032694
+FIRE:   72 23:04:28       -9.355163        0.031579
+FIRE:   73 23:04:28       -9.356330        0.038379
+FIRE:   74 23:04:28       -9.357936        0.046327
+FIRE:   75 23:04:28       -9.360486        0.046621
+FIRE:   76 23:04:28       -9.364554        0.065591
+FIRE:   77 23:04:28       -9.372062        0.089448
+FIRE:   78 23:04:28       -9.387757        0.130035
+FIRE:   79 23:04:28       -9.424762        0.199527
+FIRE:   80 23:04:28       -9.505151        0.259361
+FIRE:   81 23:04:28       -9.596946        0.271789
+FIRE:   82 23:04:28       -9.668752        0.150430
+FIRE:   83 23:04:28       -9.663983        0.340683
+FIRE:   84 23:04:28       -9.682351        0.151975
+FIRE:   85 23:04:28       -9.687613        0.142138
+FIRE:   86 23:04:28       -9.689220        0.111289
+FIRE:   87 23:04:29       -9.691076        0.064396
+FIRE:   88 23:04:29       -9.691683        0.045895
+FIRE:   89 23:04:29       -9.691729        0.044491
+FIRE:   90 23:04:29       -9.691808        0.042611
+FIRE:   91 23:04:29       -9.691916        0.040202
+FIRE:   92 23:04:29       -9.692046        0.037701
+FIRE:   93 23:04:29       -9.692186        0.035556
+FIRE:   94 23:04:29       -9.692329        0.034036
+FIRE:   95 23:04:29       -9.692476        0.033065
+FIRE:   96 23:04:29       -9.692646        0.032155
+FIRE:   97 23:04:29       -9.692850        0.030650
+FIRE:   98 23:04:29       -9.693089        0.029140
+FIRE:   99 23:04:29       -9.693367        0.026917
+FIRE:  100 23:04:29       -9.693658        0.024420
+FIRE:  101 23:04:29       -9.693938        0.022260
+FIRE:  102 23:04:29       -9.694192        0.019885
+[2026-10-26 23:04:29] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=9)
+[2026-10-26 23:04:30] [INFO] [made.agents.m3_planning] M3 re-plan: query=9 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Tb19']
+[2026-10-26 23:04:30] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:04:30] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K1 Tb19, score: 0.597513, score range: [0.597513, 0.597513], mean: 0.597513)
+      Step     Time          Energy          fmax
+FIRE:    0 23:04:30      540.858215       81.997138
+FIRE:    1 23:04:30      493.455933      193.848334
+FIRE:    2 23:04:30      427.582092      172.504141
+FIRE:    3 23:04:30      325.049957      696.212496
+FIRE:    4 23:04:30      204.972137      197.929826
+FIRE:    5 23:04:31      132.224518      171.898866
+FIRE:    6 23:04:31       79.040215      120.610614
+FIRE:    7 23:04:31       46.953377       89.704754
+FIRE:    8 23:04:31       25.741768       62.235424
+FIRE:    9 23:04:31       11.091911       40.961577
+FIRE:   10 23:04:31        0.821167       26.038515
+FIRE:   11 23:04:32       -6.138039       20.557136
+FIRE:   12 23:04:32      -10.520363       18.837271
+FIRE:   13 23:04:32      -13.226280       26.782757
+FIRE:   14 23:04:32      -15.348732       34.088376
+FIRE:   15 23:04:32      -18.061234       36.980979
+FIRE:   16 23:04:32      -22.008705       33.845370
+FIRE:   17 23:04:32      -26.858284       26.469366
+FIRE:   18 23:04:33      -31.812126       18.488316
+FIRE:   19 23:04:33      -36.319443       12.003187
+FIRE:   20 23:04:33      -40.181080       10.788328
+FIRE:   21 23:04:33      -43.525681        9.021690
+FIRE:   22 23:04:33      -46.506180        7.926736
+FIRE:   23 23:04:33      -49.203209        6.688868
+FIRE:   24 23:04:34      -51.650230        5.353321
+FIRE:   25 23:04:34      -53.874611        4.973921
+FIRE:   26 23:04:34      -55.910488        4.548122
+FIRE:   27 23:04:34      -57.793030        4.068644
+FIRE:   28 23:04:34      -59.547340        3.564963
+FIRE:   29 23:04:34      -61.186737        3.179415
+FIRE:   30 23:04:34      -62.714333        3.197021
+FIRE:   31 23:04:34      -64.125854        3.125035
+FIRE:   32 23:04:35      -65.415619        2.975418
+FIRE:   33 23:04:35      -66.583557        2.766492
+FIRE:   34 23:04:35      -67.633499        2.518778
+FIRE:   35 23:04:35      -68.573654        2.247924
+FIRE:   36 23:04:35      -69.416611        2.162591
+FIRE:   37 23:04:35      -70.176033        2.103061
+FIRE:   38 23:04:36      -70.869514        2.018378
+FIRE:   39 23:04:36      -71.513268        1.920687
+FIRE:   40 23:04:36      -72.120506        1.850554
+FIRE:   41 23:04:36      -72.701126        1.817754
+FIRE:   42 23:04:36      -73.260193        1.771429
+FIRE:   43 23:04:36      -73.797112        1.697990
+FIRE:   44 23:04:36      -74.304550        1.589736
+FIRE:   45 23:04:36      -74.773796        1.465731
+FIRE:   46 23:04:36      -75.193916        1.275885
+FIRE:   47 23:04:37      -75.556389        1.161885
+FIRE:   48 23:04:37      -75.855850        1.163207
+FIRE:   49 23:04:37      -76.092712        1.131659
+FIRE:   50 23:04:37      -76.270920        1.074776
+FIRE:   51 23:04:37      -76.400047        1.030502
+FIRE:   52 23:04:37      -76.492668        1.070611
+FIRE:   53 23:04:37      -76.561890        1.221996
+FIRE:   54 23:04:37      -76.621193        1.377505
+FIRE:   55 23:04:37      -76.681702        1.476120
+FIRE:   56 23:04:37      -76.756241        1.511980
+FIRE:   57 23:04:38      -76.846916        1.519202
+FIRE:   58 23:04:38      -76.952492        1.488921
+FIRE:   59 23:04:38      -77.073601        1.420989
+FIRE:   60 23:04:38      -77.206375        1.333064
+FIRE:   61 23:04:38      -77.344444        1.234417
+FIRE:   62 23:04:38      -77.488419        1.166487
+FIRE:   63 23:04:38      -77.629456        1.083105
+FIRE:   64 23:04:38      -77.762131        1.108862
+FIRE:   65 23:04:38      -77.876747        1.139428
+FIRE:   66 23:04:38      -77.962387        1.163610
+FIRE:   67 23:04:39      -78.011932        1.217442
+FIRE:   68 23:04:39      -78.598969        0.918330
+FIRE:   69 23:04:39      -79.039780        0.759034
+FIRE:   70 23:04:39      -79.389084        0.617791
+FIRE:   71 23:04:39      -79.687553        0.595200
+FIRE:   72 23:04:39      -79.956757        0.555632
+FIRE:   73 23:04:39      -80.202736        0.523993
+FIRE:   74 23:04:39      -80.424385        0.481718
+FIRE:   75 23:04:39      -80.622269        0.439456
+FIRE:   76 23:04:39      -80.805145        0.456724
+FIRE:   77 23:04:39      -80.983734        0.458928
+FIRE:   78 23:04:40      -81.161880        0.400100
+FIRE:   79 23:04:40      -81.337769        0.395669
+FIRE:   80 23:04:40      -81.502106        0.386944
+FIRE:   81 23:04:40      -81.649414        0.394565
+FIRE:   82 23:04:40      -81.783607        0.431150
+FIRE:   83 23:04:40      -81.911369        0.460389
+FIRE:   84 23:04:40      -82.036514        0.464562
+FIRE:   85 23:04:40      -82.158463        0.450684
+FIRE:   86 23:04:40      -82.271378        0.427521
+FIRE:   87 23:04:41      -82.369781        0.400199
+FIRE:   88 23:04:41      -82.455147        0.372700
+FIRE:   89 23:04:41      -82.536842        0.356157
+FIRE:   90 23:04:41      -82.621841        0.340808
+FIRE:   91 23:04:41      -82.711182        0.353772
+FIRE:   92 23:04:41      -82.802963        0.423274
+FIRE:   93 23:04:41      -82.889938        0.460820
+FIRE:   94 23:04:41      -82.969025        0.467332
+FIRE:   95 23:04:41      -83.039108        0.449778
+FIRE:   96 23:04:42      -83.104080        0.416124
+FIRE:   97 23:04:42      -83.170357        0.488231
+FIRE:   98 23:04:42      -83.240059        0.485212
+FIRE:   99 23:04:42      -83.306549        0.416576
+FIRE:  100 23:04:42      -83.363335        0.325477
+FIRE:  101 23:04:42      -83.409378        0.354979
+FIRE:  102 23:04:42      -83.448524        0.389482
+FIRE:  103 23:04:42      -83.492538        0.401672
+FIRE:  104 23:04:42      -83.520393        0.408814
+FIRE:  105 23:04:42      -83.534348        0.377619
+FIRE:  106 23:04:43      -83.644981        0.221232
+FIRE:  107 23:04:43      -83.734047        0.236138
+FIRE:  108 23:04:43      -83.865097        0.262924
+FIRE:  109 23:04:43      -83.984955        0.289610
+FIRE:  110 23:04:43      -84.104126        0.278697
+FIRE:  111 23:04:43      -84.221382        0.246682
+FIRE:  112 23:04:43      -84.340057        0.211634
+FIRE:  113 23:04:43      -84.467209        0.223848
+FIRE:  114 23:04:43      -84.606750        0.235381
+FIRE:  115 23:04:44      -84.756287        0.246640
+FIRE:  116 23:04:44      -84.907639        0.239990
+FIRE:  117 23:04:44      -85.052551        0.264196
+FIRE:  118 23:04:44      -85.181282        0.212577
+FIRE:  119 23:04:44      -85.287895        0.170489
+FIRE:  120 23:04:44      -85.363777        0.168743
+FIRE:  121 23:04:44      -85.430611        0.154016
+FIRE:  122 23:04:44      -85.481194        0.130159
+FIRE:  123 23:04:44      -85.489578        0.186901
+FIRE:  124 23:04:44      -85.515236        0.105276
+FIRE:  125 23:04:44      -85.530998        0.123684
+FIRE:  126 23:04:45      -85.533920        0.115205
+FIRE:  127 23:04:45      -85.539490        0.083503
+FIRE:  128 23:04:45      -85.551407        0.078061
+FIRE:  129 23:04:45      -85.555511        0.074416
+FIRE:  130 23:04:45      -85.569229        0.064682
+FIRE:  131 23:04:45      -85.571960        0.059773
+FIRE:  132 23:04:45      -85.573868        0.056302
+FIRE:  133 23:04:45      -85.575851        0.072339
+FIRE:  134 23:04:45      -85.579872        0.060685
+FIRE:  135 23:04:45      -85.584801        0.036059
+FIRE:  136 23:04:45      -85.577927        0.051904
+FIRE:  137 23:04:46      -85.580803        0.044767
+FIRE:  138 23:04:46      -85.581528        0.056852
+FIRE:  139 23:04:46      -85.582237        0.044718
+FIRE:  140 23:04:46      -85.583176        0.025479
+FIRE:  141 23:04:46      -85.583832        0.022268
+FIRE:  142 23:04:46      -85.584122        0.026496
+FIRE:  143 23:04:46      -85.584312        0.030909
+FIRE:  144 23:04:46      -85.584457        0.026420
+FIRE:  145 23:04:46      -85.584488        0.025099
+FIRE:  146 23:04:46      -85.584549        0.022570
+FIRE:  147 23:04:46      -85.584625        0.019060
+[2026-10-26 23:04:47] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=10)
+[2026-10-26 23:04:47] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:04:47] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K1 Tb1 Au1, score: 0.483529, score range: [0.483529, 0.483529], mean: 0.483529)
+      Step     Time          Energy          fmax
+FIRE:    0 23:04:47       -4.952628        0.915336
+FIRE:    1 23:04:47       -4.978950        0.894164
+FIRE:    2 23:04:47       -5.030505        0.856171
+FIRE:    3 23:04:47       -5.105171        0.829366
+FIRE:    4 23:04:47       -5.199978        0.785786
+FIRE:    5 23:04:47       -5.311062        0.809934
+FIRE:    6 23:04:47       -5.433439        0.848756
+FIRE:    7 23:04:47       -5.560899        0.885157
+FIRE:    8 23:04:47       -5.700013        0.933372
+FIRE:    9 23:04:47       -5.846872        1.020972
+FIRE:   10 23:04:47       -6.015706        1.143395
+FIRE:   11 23:04:47       -6.239708        1.338082
+FIRE:   12 23:04:47       -6.537167        1.430434
+FIRE:   13 23:04:47       -6.900687        1.490869
+FIRE:   14 23:04:47       -7.302130        1.496701
+FIRE:   15 23:04:47       -7.702434        1.425739
+FIRE:   16 23:04:47       -8.070939        1.254498
+FIRE:   17 23:04:47       -8.370108        1.354896
+FIRE:   18 23:04:47       -8.573881        1.439958
+FIRE:   19 23:04:47       -8.710529        1.487918
+FIRE:   20 23:04:47       -8.881804        1.339247
+FIRE:   21 23:04:47       -9.110056        0.991617
+FIRE:   22 23:04:47       -9.297146        0.438619
+FIRE:   23 23:04:47       -9.352563        0.432804
+FIRE:   24 23:04:47       -9.373355        0.300445
+FIRE:   25 23:04:47       -9.393162        0.213439
+FIRE:   26 23:04:48       -9.401514        0.310364
+FIRE:   27 23:04:48       -9.404418        0.284467
+FIRE:   28 23:04:48       -9.409215        0.237431
+FIRE:   29 23:04:48       -9.414467        0.178435
+FIRE:   30 23:04:48       -9.419267        0.163603
+FIRE:   31 23:04:48       -9.423594        0.173274
+FIRE:   32 23:04:48       -9.428109        0.183745
+FIRE:   33 23:04:48       -9.433499        0.189071
+FIRE:   34 23:04:48       -9.440814        0.184750
+FIRE:   35 23:04:48       -9.450169        0.169032
+FIRE:   36 23:04:48       -9.461143        0.143680
+FIRE:   37 23:04:48       -9.473276        0.137229
+FIRE:   38 23:04:48       -9.486786        0.128367
+FIRE:   39 23:04:48       -9.502611        0.141179
+FIRE:   40 23:04:48       -9.519791        0.114719
+FIRE:   41 23:04:48       -9.530215        0.103898
+FIRE:   42 23:04:48       -9.527856        0.157461
+FIRE:   43 23:04:48       -9.529306        0.149236
+FIRE:   44 23:04:48       -9.531751        0.133694
+FIRE:   45 23:04:48       -9.534492        0.112571
+FIRE:   46 23:04:48       -9.536987        0.088149
+FIRE:   47 23:04:48       -9.539085        0.070756
+FIRE:   48 23:04:48       -9.540854        0.090088
+FIRE:   49 23:04:48       -9.542378        0.092590
+FIRE:   50 23:04:48       -9.543842        0.075155
+FIRE:   51 23:04:49       -9.545185        0.062767
+FIRE:   52 23:04:49       -9.546448        0.076940
+FIRE:   53 23:04:49       -9.548095        0.077037
+FIRE:   54 23:04:49       -9.550788        0.070932
+FIRE:   55 23:04:49       -9.554214        0.071839
+FIRE:   56 23:04:49       -9.557580        0.067273
+FIRE:   57 23:04:49       -9.561381        0.058280
+FIRE:   58 23:04:49       -9.565574        0.055459
+FIRE:   59 23:04:49       -9.569810        0.067667
+FIRE:   60 23:04:49       -9.574677        0.053330
+FIRE:   61 23:04:49       -9.578677        0.059523
+FIRE:   62 23:04:49       -9.582909        0.065507
+FIRE:   63 23:04:49       -9.586728        0.149086
+FIRE:   64 23:04:49       -9.582009        0.455641
+FIRE:   65 23:04:49       -9.596141        0.088381
+FIRE:   66 23:04:49       -9.596564        0.071098
+FIRE:   67 23:04:49       -9.597178        0.056827
+FIRE:   68 23:04:49       -9.597778        0.053927
+FIRE:   69 23:04:49       -9.598398        0.069511
+FIRE:   70 23:04:49       -9.599215        0.071222
+FIRE:   71 23:04:49       -9.600227        0.055074
+FIRE:   72 23:04:49       -9.601247        0.041708
+FIRE:   73 23:04:49       -9.602270        0.045581
+FIRE:   74 23:04:49       -9.603451        0.054767
+FIRE:   75 23:04:49       -9.604936        0.038169
+FIRE:   76 23:04:49       -9.606449        0.039294
+FIRE:   77 23:04:50       -9.607984        0.043819
+FIRE:   78 23:04:50       -9.609546        0.032923
+FIRE:   79 23:04:50       -9.610728        0.043251
+FIRE:   80 23:04:50       -9.611745        0.031088
+FIRE:   81 23:04:50       -9.612546        0.030691
+FIRE:   82 23:04:50       -9.613211        0.044329
+FIRE:   83 23:04:50       -9.613993        0.042439
+FIRE:   84 23:04:50       -9.615107        0.036330
+FIRE:   85 23:04:50       -9.616748        0.037983
+FIRE:   86 23:04:50       -9.618351        0.062687
+FIRE:   87 23:04:50       -9.616111        0.224240
+FIRE:   88 23:04:50       -9.619387        0.055769
+FIRE:   89 23:04:50       -9.619506        0.040256
+FIRE:   90 23:04:50       -9.619626        0.016677
+[2026-10-26 23:04:50] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=11)
+[2026-10-26 23:04:50] [INFO] [made.agents.generators.chemeleon] Running Chemeleon CSP with formulas: ['Au1 K1 Tb1'], 1 samples per formula
+Generating 1 samples for each formula: ['Au1 K1 Tb1']
+Generating batch #1 with 32 samples.
+
+
+Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+
+Sampling:   5%|▍         | 12/256 [00:00<00:02, 115.55it/s]
+
+Sampling:   9%|▉         | 24/256 [00:00<00:01, 117.93it/s]
+
+Sampling:  15%|█▍        | 38/256 [00:00<00:01, 124.60it/s]
+
+Sampling:  20%|██        | 52/256 [00:00<00:01, 129.34it/s]
+
+Sampling:  26%|██▌       | 67/256 [00:00<00:01, 132.14it/s]
+
+Sampling:  32%|███▏      | 81/256 [00:00<00:01, 123.17it/s]
+
+Sampling:  37%|███▋      | 94/256 [00:00<00:01, 124.00it/s]
+
+Sampling:  42%|████▏     | 107/256 [00:00<00:01, 121.79it/s]
+
+Sampling:  47%|████▋     | 120/256 [00:00<00:01, 119.25it/s]
+
+Sampling:  52%|█████▏    | 132/256 [00:01<00:01, 118.25it/s]
+
+Sampling:  56%|█████▋    | 144/256 [00:01<00:00, 117.90it/s]
+
+Sampling:  61%|██████▏   | 157/256 [00:01<00:00, 119.23it/s]
+
+Sampling:  66%|██████▋   | 170/256 [00:01<00:00, 119.28it/s]
+
+Sampling:  71%|███████▏  | 183/256 [00:01<00:00, 121.10it/s]
+
+Sampling:  77%|███████▋  | 196/256 [00:01<00:00, 121.08it/s]
+
+Sampling:  82%|████████▏ | 210/256 [00:01<00:00, 125.40it/s]
+
+Sampling:  88%|████████▊ | 224/256 [00:01<00:00, 126.21it/s]
+
+Sampling:  93%|█████████▎| 237/256 [00:01<00:00, 125.56it/s]
+
+Sampling:  98%|█████████▊| 250/256 [00:02<00:00, 125.94it/s]
+Sampling: 100%|██████████| 256/256 [00:02<00:00, 123.30it/s]
+[2026-10-26 23:04:52] [INFO] [made.agents.generators.chemeleon] Loaded 1 structures from C:\Users\User\AppData\Local\Temp\chemeleon_samples_lv79oogq
+[2026-10-26 23:04:52] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:04:52] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K1 Tb1 Au1, score: 0.282988, score range: [0.282988, 0.282988], mean: 0.282988)
+      Step     Time          Energy          fmax
+FIRE:    0 23:04:52       -9.687104        0.163795
+FIRE:    1 23:04:52       -9.687666        0.152050
+FIRE:    2 23:04:52       -9.688609        0.129890
+FIRE:    3 23:04:52       -9.689635        0.099901
+FIRE:    4 23:04:52       -9.690492        0.065900
+FIRE:    5 23:04:52       -9.691084        0.072953
+FIRE:    6 23:04:52       -9.691511        0.085154
+FIRE:    7 23:04:53       -9.691959        0.086519
+FIRE:    8 23:04:53       -9.692600        0.075564
+FIRE:    9 23:04:53       -9.693405        0.051285
+FIRE:   10 23:04:53       -9.694114        0.029183
+FIRE:   11 23:04:53       -9.694392        0.039018
+FIRE:   12 23:04:53       -9.694413        0.038008
+FIRE:   13 23:04:53       -9.694454        0.036048
+FIRE:   14 23:04:53       -9.694509        0.033267
+FIRE:   15 23:04:53       -9.694565        0.029841
+FIRE:   16 23:04:53       -9.694622        0.026013
+FIRE:   17 23:04:53       -9.694666        0.022080
+FIRE:   18 23:04:53       -9.694709        0.018517
+[2026-10-26 23:04:53] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=12)
+[2026-10-26 23:04:53] [INFO] [made.agents.m3_planning] M3 re-plan: query=12 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['K1 Au19']
+[2026-10-26 23:04:53] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:04:53] [INFO] [made.agents.base] Scorer.select(): Selected candidate 1/1 (composition: K1 Au19, score: 0.561509, score range: [0.297726, 0.561509], mean: 0.429617)
+      Step     Time          Energy          fmax
+FIRE:    0 23:04:53      447.053223      180.330864
+FIRE:    1 23:04:53      360.261841      417.471966
+FIRE:    2 23:04:54      274.893494      182.495046
+FIRE:    3 23:04:54      222.004578      109.822936
+FIRE:    4 23:04:54      182.582306      126.678899
+FIRE:    5 23:04:54      137.988312      209.430037
+FIRE:    6 23:04:54       94.420769      143.001704
+FIRE:    7 23:04:54       59.972221      115.128835
+FIRE:    8 23:04:54       32.508583       86.995805
+FIRE:    9 23:04:54       10.314323       68.258789
+FIRE:   10 23:04:54       -6.635323       45.732962
+FIRE:   11 23:04:55      -18.194305       25.824532
+FIRE:   12 23:04:55      -25.840233       15.332856
+FIRE:   13 23:04:55      -30.883286       13.362803
+FIRE:   14 23:04:55      -34.212547       10.893762
+FIRE:   15 23:04:55      -36.553692        8.233290
+FIRE:   16 23:04:55      -38.319771        7.072034
+FIRE:   17 23:04:55      -39.749886        7.255912
+FIRE:   18 23:04:55      -40.998863        7.693150
+FIRE:   19 23:04:55      -42.142921        7.391124
+FIRE:   20 23:04:56      -43.170609        6.265360
+FIRE:   21 23:04:56      -44.016624        4.601495
+FIRE:   22 23:04:56      -44.634354        2.872962
+FIRE:   23 23:04:56      -45.048424        3.120521
+FIRE:   24 23:04:56      -45.333954        3.049544
+FIRE:   25 23:04:56      -45.552334        2.588207
+FIRE:   26 23:04:56      -45.724606        2.232380
+FIRE:   27 23:04:56      -45.852310        2.036529
+FIRE:   28 23:04:57      -45.935883        2.034008
+FIRE:   29 23:04:57      -45.979439        1.871661
+FIRE:   30 23:04:57      -46.732819        1.387941
+FIRE:   31 23:04:57      -47.344349        1.335804
+FIRE:   32 23:04:57      -47.917297        1.209592
+FIRE:   33 23:04:57      -48.438103        1.107808
+FIRE:   34 23:04:57      -48.888363        1.034389
+FIRE:   35 23:04:57      -49.279087        0.959031
+FIRE:   36 23:04:57      -49.640282        0.930590
+FIRE:   37 23:04:58      -49.988266        0.852162
+FIRE:   38 23:04:58      -50.287430        0.745684
+FIRE:   39 23:04:58      -50.483532        0.894882
+FIRE:   40 23:04:58      -50.604683        1.298129
+FIRE:   41 23:04:58      -50.726513        0.962809
+FIRE:   42 23:04:58      -50.846165        1.228322
+FIRE:   43 23:04:58      -50.997612        1.171825
+FIRE:   44 23:04:58      -51.239601        0.935956
+FIRE:   45 23:04:59      -51.502777        0.677141
+FIRE:   46 23:04:59      -51.735363        0.620179
+FIRE:   47 23:04:59      -51.953842        0.656316
+FIRE:   48 23:04:59      -52.181511        0.676835
+FIRE:   49 23:04:59      -52.423496        0.635754
+FIRE:   50 23:04:59      -52.675098        0.564294
+FIRE:   51 23:04:59      -52.927631        0.568508
+FIRE:   52 23:04:59      -53.167137        0.565716
+FIRE:   53 23:05:00      -53.372368        0.601520
+FIRE:   54 23:05:00      -53.527245        0.922189
+FIRE:   55 23:05:00      -53.659081        1.454829
+FIRE:   56 23:05:00      -53.830395        1.566080
+FIRE:   57 23:05:00      -54.050030        1.181440
+FIRE:   58 23:05:00      -54.250744        0.596297
+FIRE:   59 23:05:00      -54.376011        0.643992
+FIRE:   60 23:05:01      -54.438576        1.144350
+FIRE:   61 23:05:01      -54.515118        1.358483
+FIRE:   62 23:05:01      -54.646362        1.168464
+FIRE:   63 23:05:01      -54.808273        1.225493
+FIRE:   64 23:05:01      -54.994835        1.199798
+FIRE:   65 23:05:01      -55.186897        0.756495
+FIRE:   66 23:05:01      -55.338879        0.763688
+FIRE:   67 23:05:01      -55.433479        0.822542
+FIRE:   68 23:05:02      -55.493797        1.402851
+FIRE:   69 23:05:02      -55.551876        1.451884
+FIRE:   70 23:05:02      -55.583168        0.882575
+FIRE:   71 23:05:02      -55.796257        0.666988
+FIRE:   72 23:05:02      -55.885780        0.357745
+FIRE:   73 23:05:02      -55.933052        0.314693
+FIRE:   74 23:05:02      -55.988159        0.306499
+FIRE:   75 23:05:03      -56.054420        0.344377
+FIRE:   76 23:05:03      -56.157845        0.359581
+FIRE:   77 23:05:03      -56.307835        0.389952
+FIRE:   78 23:05:03      -56.460117        0.445141
+FIRE:   79 23:05:03      -56.622749        0.385853
+FIRE:   80 23:05:03      -56.786175        0.359917
+FIRE:   81 23:05:03      -56.924812        0.333381
+FIRE:   82 23:05:04      -57.023224        0.451966
+FIRE:   83 23:05:04      -57.092022        0.630581
+FIRE:   84 23:05:04      -57.150616        0.479862
+FIRE:   85 23:05:04      -57.213917        0.482538
+FIRE:   86 23:05:04      -57.276711        0.508955
+FIRE:   87 23:05:04      -57.365669        0.541021
+FIRE:   88 23:05:04      -57.493477        0.359173
+FIRE:   89 23:05:05      -57.610058        0.366946
+FIRE:   90 23:05:05      -57.710777        0.271795
+FIRE:   91 23:05:05      -57.793037        0.269459
+FIRE:   92 23:05:05      -57.860596        0.317192
+FIRE:   93 23:05:05      -57.927773        0.459783
+FIRE:   94 23:05:05      -58.001045        0.418496
+FIRE:   95 23:05:05      -58.073082        0.348247
+FIRE:   96 23:05:06      -58.148861        0.392431
+FIRE:   97 23:05:06      -58.229744        0.373621
+FIRE:   98 23:05:06      -58.305260        0.277601
+FIRE:   99 23:05:06      -58.377243        0.312846
+FIRE:  100 23:05:06      -58.450909        0.282265
+FIRE:  101 23:05:06      -58.519585        0.326466
+FIRE:  102 23:05:06      -58.584351        0.351029
+FIRE:  103 23:05:07      -58.646881        0.338552
+FIRE:  104 23:05:07      -58.709450        0.337449
+FIRE:  105 23:05:07      -58.769482        0.319450
+FIRE:  106 23:05:07      -58.823017        0.296261
+FIRE:  107 23:05:07      -58.882698        0.358530
+FIRE:  108 23:05:07      -58.954849        0.333472
+FIRE:  109 23:05:08      -59.030228        0.241905
+FIRE:  110 23:05:08      -59.098232        0.221995
+FIRE:  111 23:05:08      -59.150726        0.239766
+FIRE:  112 23:05:08      -59.187984        0.267484
+FIRE:  113 23:05:08      -59.215839        0.312458
+FIRE:  114 23:05:08      -59.238480        0.345608
+FIRE:  115 23:05:09      -59.262218        0.302542
+FIRE:  116 23:05:09      -59.297386        0.240207
+FIRE:  117 23:05:09      -59.342590        0.245706
+FIRE:  118 23:05:09      -59.384624        0.194629
+FIRE:  119 23:05:09      -59.412460        0.283461
+FIRE:  120 23:05:09      -59.428024        0.323770
+FIRE:  121 23:05:10      -59.486473        0.305176
+FIRE:  122 23:05:10      -59.516403        0.135793
+FIRE:  123 23:05:10      -59.525509        0.250277
+FIRE:  124 23:05:10      -59.531582        0.196777
+FIRE:  125 23:05:10      -59.540203        0.127110
+FIRE:  126 23:05:10      -59.547478        0.125841
+FIRE:  127 23:05:11      -59.552937        0.144256
+FIRE:  128 23:05:11      -59.559460        0.181568
+FIRE:  129 23:05:11      -59.569386        0.167026
+FIRE:  130 23:05:11      -59.581974        0.121289
+FIRE:  131 23:05:11      -59.595863        0.122246
+FIRE:  132 23:05:12      -59.608910        0.122724
+FIRE:  133 23:05:12      -59.622910        0.121857
+FIRE:  134 23:05:12      -59.639797        0.118443
+FIRE:  135 23:05:12      -59.656208        0.109371
+FIRE:  136 23:05:12      -59.669434        0.094184
+FIRE:  137 23:05:12      -59.681900        0.087405
+FIRE:  138 23:05:13      -59.691456        0.082009
+FIRE:  139 23:05:13      -59.698456        0.103577
+FIRE:  140 23:05:13      -59.706467        0.082850
+FIRE:  141 23:05:13      -59.715370        0.118416
+FIRE:  142 23:05:13      -59.726696        0.163074
+FIRE:  143 23:05:14      -59.748161        0.133868
+FIRE:  144 23:05:14      -59.781555        0.177683
+FIRE:  145 23:05:14      -59.829002        0.208755
+FIRE:  146 23:05:14      -59.888634        0.204593
+FIRE:  147 23:05:15      -59.957291        0.192802
+FIRE:  148 23:05:15      -60.035843        0.207686
+FIRE:  149 23:05:15      -60.122353        0.225135
+FIRE:  150 23:05:15      -60.213108        0.211462
+FIRE:  151 23:05:15      -60.300739        0.174061
+FIRE:  152 23:05:16      -60.369549        0.168578
+FIRE:  153 23:05:16      -60.419163        0.277909
+FIRE:  154 23:05:16      -60.463837        0.283400
+FIRE:  155 23:05:16      -60.509087        0.308806
+FIRE:  156 23:05:16      -60.558628        0.198085
+FIRE:  157 23:05:17      -60.604813        0.260108
+FIRE:  158 23:05:17      -60.658936        0.265497
+FIRE:  159 23:05:17      -60.717247        0.240774
+FIRE:  160 23:05:17      -60.775993        0.204676
+FIRE:  161 23:05:17      -60.830627        0.216578
+FIRE:  162 23:05:18      -60.884167        0.200562
+FIRE:  163 23:05:18      -60.938080        0.227785
+FIRE:  164 23:05:18      -60.990101        0.247403
+FIRE:  165 23:05:18      -61.038151        0.164677
+FIRE:  166 23:05:18      -61.077003        0.138514
+FIRE:  167 23:05:19      -61.108704        0.157098
+FIRE:  168 23:05:19      -61.134274        0.167200
+FIRE:  169 23:05:19      -61.160339        0.193164
+FIRE:  170 23:05:19      -61.189041        0.202685
+FIRE:  171 23:05:20      -61.222824        0.167276
+FIRE:  172 23:05:20      -61.256527        0.154598
+FIRE:  173 23:05:20      -61.286472        0.190319
+FIRE:  174 23:05:20      -61.315815        0.181122
+FIRE:  175 23:05:20      -61.346474        0.191521
+FIRE:  176 23:05:21      -61.379032        0.166015
+FIRE:  177 23:05:21      -61.412304        0.174000
+FIRE:  178 23:05:21      -61.449200        0.188502
+FIRE:  179 23:05:21      -61.487114        0.168842
+FIRE:  180 23:05:21      -61.520603        0.129477
+FIRE:  181 23:05:22      -61.545952        0.140645
+FIRE:  182 23:05:22      -61.569141        0.148867
+FIRE:  183 23:05:22      -61.599739        0.176131
+FIRE:  184 23:05:22      -61.642971        0.170584
+FIRE:  185 23:05:22      -61.692738        0.141595
+FIRE:  186 23:05:23      -61.741844        0.138249
+FIRE:  187 23:05:23      -61.787174        0.167534
+FIRE:  188 23:05:23      -61.826172        0.166473
+FIRE:  189 23:05:23      -61.854122        0.117947
+FIRE:  190 23:05:24      -61.864807        0.210046
+FIRE:  191 23:05:24      -61.893364        0.235542
+FIRE:  192 23:05:24      -61.859798        1.033712
+FIRE:  193 23:05:24      -61.908207        0.438620
+FIRE:  194 23:05:24      -61.913757        0.287122
+FIRE:  195 23:05:25      -61.918694        0.079658
+FIRE:  196 23:05:25      -61.919044        0.206032
+FIRE:  197 23:05:25      -61.919498        0.188062
+FIRE:  198 23:05:25      -61.920284        0.153825
+FIRE:  199 23:05:25      -61.921223        0.106908
+FIRE:  200 23:05:26      -61.922131        0.078650
+FIRE:  201 23:05:26      -61.922859        0.078494
+FIRE:  202 23:05:26      -61.923454        0.078263
+FIRE:  203 23:05:26      -61.924023        0.101017
+FIRE:  204 23:05:26      -61.924801        0.119590
+FIRE:  205 23:05:27      -61.925934        0.115051
+FIRE:  206 23:05:27      -61.927429        0.083688
+FIRE:  207 23:05:27      -61.929092        0.075766
+FIRE:  208 23:05:27      -61.930664        0.074797
+FIRE:  209 23:05:27      -61.932285        0.091571
+FIRE:  210 23:05:28      -61.934433        0.089533
+FIRE:  211 23:05:28      -61.937180        0.070897
+FIRE:  212 23:05:28      -61.940025        0.069263
+FIRE:  213 23:05:28      -61.943325        0.073477
+FIRE:  214 23:05:28      -61.947521        0.065242
+FIRE:  215 23:05:29      -61.951752        0.081415
+FIRE:  216 23:05:29      -61.956730        0.059793
+FIRE:  217 23:05:29      -61.961689        0.083904
+FIRE:  218 23:05:29      -61.967533        0.052191
+FIRE:  219 23:05:29      -61.973255        0.084083
+FIRE:  220 23:05:30      -61.979313        0.121380
+FIRE:  221 23:05:30      -61.985950        0.107999
+FIRE:  222 23:05:30      -61.992809        0.152725
+FIRE:  223 23:05:30      -61.997684        0.324852
+FIRE:  224 23:05:31      -62.003155        0.053733
+FIRE:  225 23:05:31      -62.000576        0.287039
+FIRE:  226 23:05:31      -62.002377        0.218398
+FIRE:  227 23:05:31      -62.004425        0.103699
+FIRE:  228 23:05:31      -62.005127        0.072722
+FIRE:  229 23:05:32      -62.005165        0.070552
+FIRE:  230 23:05:32      -62.005253        0.066560
+FIRE:  231 23:05:32      -62.005379        0.061459
+FIRE:  232 23:05:32      -62.005527        0.056365
+FIRE:  233 23:05:32      -62.005711        0.052532
+FIRE:  234 23:05:33      -62.005901        0.050953
+FIRE:  235 23:05:33      -62.006126        0.051632
+FIRE:  236 23:05:33      -62.006386        0.053777
+FIRE:  237 23:05:33      -62.006729        0.055942
+FIRE:  238 23:05:33      -62.007160        0.056462
+FIRE:  239 23:05:34      -62.007710        0.054520
+FIRE:  240 23:05:34      -62.008392        0.051254
+FIRE:  241 23:05:34      -62.009216        0.050223
+FIRE:  242 23:05:34      -62.010216        0.051789
+FIRE:  243 23:05:34      -62.011452        0.053177
+FIRE:  244 23:05:35      -62.012978        0.052029
+FIRE:  245 23:05:35      -62.014862        0.053092
+FIRE:  246 23:05:35      -62.017155        0.054431
+FIRE:  247 23:05:35      -62.020023        0.055884
+FIRE:  248 23:05:35      -62.023571        0.057543
+FIRE:  249 23:05:36      -62.027981        0.059585
+FIRE:  250 23:05:36      -62.033470        0.061852
+FIRE:  251 23:05:36      -62.040184        0.063755
+FIRE:  252 23:05:36      -62.048164        0.064601
+FIRE:  253 23:05:36      -62.056885        0.063220
+FIRE:  254 23:05:37      -62.064705        0.058312
+FIRE:  255 23:05:37      -62.068893        0.069150
+FIRE:  256 23:05:37      -62.069111        0.115690
+FIRE:  257 23:05:37      -62.070236        0.105075
+FIRE:  258 23:05:37      -62.071739        0.085983
+FIRE:  259 23:05:38      -62.073448        0.063834
+FIRE:  260 23:05:38      -62.075035        0.038202
+FIRE:  261 23:05:38      -62.075981        0.044082
+FIRE:  262 23:05:38      -62.076675        0.030117
+FIRE:  263 23:05:38      -62.077068        0.039845
+FIRE:  264 23:05:39      -62.077454        0.045773
+FIRE:  265 23:05:39      -62.077896        0.047068
+FIRE:  266 23:05:39      -62.078388        0.043347
+FIRE:  267 23:05:39      -62.078785        0.051206
+FIRE:  268 23:05:40      -62.078896        0.036992
+FIRE:  269 23:05:40      -62.079025        0.027404
+FIRE:  270 23:05:40      -62.079124        0.037211
+FIRE:  271 23:05:40      -62.079266        0.039866
+FIRE:  272 23:05:40      -62.079483        0.027893
+FIRE:  273 23:05:41      -62.079674        0.019174
+[2026-10-26 23:05:41] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=13)
+[2026-10-26 23:05:41] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:05:41] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K1 Tb1 Au1, score: 0.396047, score range: [0.396047, 0.396047], mean: 0.396047)
+      Step     Time          Energy          fmax
+FIRE:    0 23:05:41       -3.891287        3.180897
+FIRE:    1 23:05:41       -4.138049        2.777876
+FIRE:    2 23:05:41       -4.528630        2.183260
+FIRE:    3 23:05:41       -4.941389        1.509323
+FIRE:    4 23:05:41       -5.262929        1.199869
+FIRE:    5 23:05:41       -5.431907        0.925978
+FIRE:    6 23:05:41       -5.499847        0.926390
+FIRE:    7 23:05:41       -5.532682        0.738488
+FIRE:    8 23:05:41       -5.550445        0.575096
+FIRE:    9 23:05:41       -5.553469        0.568808
+FIRE:   10 23:05:41       -5.559360        0.556404
+FIRE:   11 23:05:41       -5.567811        0.538213
+FIRE:   12 23:05:41       -5.578391        0.514700
+FIRE:   13 23:05:41       -5.590611        0.486436
+FIRE:   14 23:05:41       -5.603939        0.454072
+FIRE:   15 23:05:42       -5.617870        0.418296
+FIRE:   16 23:05:42       -5.633426        0.377707
+FIRE:   17 23:05:42       -5.650206        0.341846
+FIRE:   18 23:05:42       -5.667583        0.296870
+FIRE:   19 23:05:42       -5.684650        0.238624
+FIRE:   20 23:05:42       -5.700242        0.168626
+FIRE:   21 23:05:42       -5.713194        0.174350
+FIRE:   22 23:05:42       -5.723222        0.182840
+FIRE:   23 23:05:42       -5.731487        0.182732
+FIRE:   24 23:05:42       -5.740137        0.195143
+FIRE:   25 23:05:42       -5.751317        0.240511
+FIRE:   26 23:05:42       -5.767149        0.270971
+FIRE:   27 23:05:42       -5.790914        0.262163
+FIRE:   28 23:05:42       -5.826253        0.232593
+FIRE:   29 23:05:42       -5.876652        0.267682
+FIRE:   30 23:05:42       -5.943361        0.264669
+FIRE:   31 23:05:42       -6.015968        0.235039
+FIRE:   32 23:05:42       -6.067600        0.239176
+FIRE:   33 23:05:42       -6.089434        0.246968
+FIRE:   34 23:05:42       -6.093499        0.235447
+FIRE:   35 23:05:42       -6.100682        0.214009
+FIRE:   36 23:05:42       -6.109665        0.185597
+FIRE:   37 23:05:42       -6.119240        0.154390
+FIRE:   38 23:05:42       -6.128386        0.126302
+FIRE:   39 23:05:43       -6.136579        0.129442
+FIRE:   40 23:05:43       -6.144268        0.159777
+FIRE:   41 23:05:43       -6.153208        0.184355
+FIRE:   42 23:05:43       -6.165030        0.218681
+FIRE:   43 23:05:43       -6.186163        0.390423
+FIRE:   44 23:05:43       -6.228455        0.478703
+FIRE:   45 23:05:43       -6.307148        0.593230
+FIRE:   46 23:05:43       -6.437741        0.641531
+FIRE:   47 23:05:43       -6.583085        0.717512
+FIRE:   48 23:05:43       -6.744040        0.768253
+FIRE:   49 23:05:43       -6.930496        0.920748
+FIRE:   50 23:05:43       -7.150311        1.015721
+FIRE:   51 23:05:43       -7.383882        0.951040
+FIRE:   52 23:05:43       -7.576591        0.583577
+FIRE:   53 23:05:43       -7.649512        0.331566
+FIRE:   54 23:05:43       -7.659993        0.127588
+FIRE:   55 23:05:43       -7.661798        0.240339
+FIRE:   56 23:05:43       -7.664327        0.193404
+FIRE:   57 23:05:43       -7.667537        0.110189
+FIRE:   58 23:05:43       -7.669177        0.102569
+FIRE:   59 23:05:43       -7.669405        0.184435
+FIRE:   60 23:05:43       -7.669703        0.175226
+FIRE:   61 23:05:43       -7.670250        0.157551
+FIRE:   62 23:05:43       -7.670936        0.132856
+FIRE:   63 23:05:44       -7.671643        0.103189
+FIRE:   64 23:05:44       -7.672281        0.092481
+FIRE:   65 23:05:44       -7.672827        0.090687
+FIRE:   66 23:05:44       -7.673285        0.088799
+FIRE:   67 23:05:44       -7.673809        0.093529
+FIRE:   68 23:05:44       -7.674499        0.104518
+FIRE:   69 23:05:44       -7.675479        0.104196
+FIRE:   70 23:05:44       -7.676756        0.090742
+FIRE:   71 23:05:44       -7.678231        0.077696
+FIRE:   72 23:05:44       -7.679707        0.075130
+FIRE:   73 23:05:44       -7.681173        0.072263
+FIRE:   74 23:05:44       -7.682889        0.075679
+FIRE:   75 23:05:44       -7.685058        0.065160
+FIRE:   76 23:05:44       -7.687267        0.062240
+FIRE:   77 23:05:44       -7.689668        0.081885
+FIRE:   78 23:05:44       -7.693027        0.078695
+FIRE:   79 23:05:44       -7.697695        0.078741
+FIRE:   80 23:05:44       -7.703321        0.093021
+FIRE:   81 23:05:44       -7.711766        0.116431
+FIRE:   82 23:05:44       -7.726054        0.191104
+FIRE:   83 23:05:44       -7.753456        0.188799
+FIRE:   84 23:05:45       -7.800187        0.213687
+FIRE:   85 23:05:45       -7.849784        0.134593
+FIRE:   86 23:05:45       -7.877771        0.119543
+FIRE:   87 23:05:45       -7.883714        0.207773
+FIRE:   88 23:05:45       -7.889352        0.166206
+FIRE:   89 23:05:45       -7.897796        0.139099
+FIRE:   90 23:05:45       -7.905972        0.135179
+FIRE:   91 23:05:45       -7.912406        0.112359
+FIRE:   92 23:05:45       -7.918518        0.125545
+FIRE:   93 23:05:45       -7.925894        0.153541
+FIRE:   94 23:05:45       -7.936640        0.171654
+FIRE:   95 23:05:45       -7.955485        0.163833
+FIRE:   96 23:05:45       -7.983795        0.156613
+FIRE:   97 23:05:45       -8.021275        0.189333
+FIRE:   98 23:05:45       -8.067081        0.293962
+FIRE:   99 23:05:45       -8.122156        0.366966
+FIRE:  100 23:05:45       -8.186772        0.362083
+FIRE:  101 23:05:45       -8.243865        0.226922
+FIRE:  102 23:05:45       -8.282057        0.228633
+FIRE:  103 23:05:46       -8.324395        0.314227
+FIRE:  104 23:05:46       -8.398456        0.362759
+FIRE:  105 23:05:46       -8.488744        0.363924
+FIRE:  106 23:05:46       -8.577065        0.329563
+FIRE:  107 23:05:46       -8.658328        0.268722
+FIRE:  108 23:05:46       -8.729243        0.222117
+FIRE:  109 23:05:46       -8.785961        0.205422
+FIRE:  110 23:05:46       -8.830528        0.226109
+FIRE:  111 23:05:46       -8.871452        0.259152
+FIRE:  112 23:05:46       -8.924628        0.304578
+FIRE:  113 23:05:46       -9.005422        0.363594
+FIRE:  114 23:05:46       -9.115661        0.414261
+FIRE:  115 23:05:46       -9.243960        0.445572
+FIRE:  116 23:05:46       -9.371205        0.425491
+FIRE:  117 23:05:46       -9.472684        0.328811
+FIRE:  118 23:05:46       -9.529205        0.365750
+FIRE:  119 23:05:46       -9.545109        0.509919
+FIRE:  120 23:05:46       -9.595121        0.252968
+FIRE:  121 23:05:46       -9.604700        0.164236
+FIRE:  122 23:05:47       -9.612365        0.194744
+FIRE:  123 23:05:47       -9.620225        0.218139
+FIRE:  124 23:05:47       -9.628712        0.191997
+FIRE:  125 23:05:47       -9.638393        0.200825
+FIRE:  126 23:05:47       -9.651018        0.115903
+FIRE:  127 23:05:47       -9.659042        0.163044
+FIRE:  128 23:05:47       -9.665730        0.189396
+FIRE:  129 23:05:47       -9.674797        0.096673
+FIRE:  130 23:05:47       -9.680886        0.101077
+FIRE:  131 23:05:47       -9.679583        0.145727
+FIRE:  132 23:05:47       -9.681418        0.098754
+FIRE:  133 23:05:47       -9.683056        0.066001
+FIRE:  134 23:05:47       -9.683396        0.072636
+FIRE:  135 23:05:47       -9.683547        0.067051
+FIRE:  136 23:05:47       -9.683806        0.057207
+FIRE:  137 23:05:47       -9.684096        0.046395
+FIRE:  138 23:05:47       -9.684347        0.041881
+FIRE:  139 23:05:47       -9.684534        0.044247
+FIRE:  140 23:05:47       -9.684690        0.051967
+FIRE:  141 23:05:48       -9.684880        0.057138
+FIRE:  142 23:05:48       -9.685191        0.056611
+FIRE:  143 23:05:48       -9.685638        0.049177
+FIRE:  144 23:05:48       -9.686172        0.038670
+FIRE:  145 23:05:48       -9.686700        0.038038
+FIRE:  146 23:05:48       -9.687226        0.044200
+FIRE:  147 23:05:48       -9.687901        0.042977
+FIRE:  148 23:05:48       -9.688748        0.034172
+FIRE:  149 23:05:48       -9.689563        0.031803
+FIRE:  150 23:05:48       -9.690382        0.035505
+FIRE:  151 23:05:48       -9.691327        0.026371
+FIRE:  152 23:05:48       -9.692054        0.030020
+FIRE:  153 23:05:48       -9.692794        0.017827
+[2026-10-26 23:05:48] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=14)
+[2026-10-26 23:05:48] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:05:48] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K1 Tb1 Au1, score: 0.788701, score range: [0.788701, 0.788701], mean: 0.788701)
+      Step     Time          Energy          fmax
+FIRE:    0 23:05:48       -5.620422        4.107699
+FIRE:    1 23:05:48       -5.989719        3.441013
+FIRE:    2 23:05:48       -6.458910        2.486082
+FIRE:    3 23:05:48       -6.846716        1.588134
+FIRE:    4 23:05:49       -7.136614        1.572195
+FIRE:    5 23:05:49       -7.358423        1.387897
+FIRE:    6 23:05:49       -7.514689        0.974092
+FIRE:    7 23:05:49       -7.602169        0.820305
+FIRE:    8 23:05:49       -7.637399        0.720198
+FIRE:    9 23:05:49       -7.642896        0.692372
+FIRE:   10 23:05:49       -7.653509        0.684090
+FIRE:   11 23:05:49       -7.668416        0.685802
+FIRE:   12 23:05:49       -7.686908        0.706272
+FIRE:   13 23:05:49       -7.708283        0.727902
+FIRE:   14 23:05:49       -7.732074        0.747034
+FIRE:   15 23:05:49       -7.758012        0.758097
+FIRE:   16 23:05:49       -7.789357        0.763244
+FIRE:   17 23:05:49       -7.827486        0.756497
+FIRE:   18 23:05:49       -7.873744        0.729669
+FIRE:   19 23:05:49       -7.929475        0.696054
+FIRE:   20 23:05:49       -7.997508        0.669728
+FIRE:   21 23:05:49       -8.081514        0.661779
+FIRE:   22 23:05:49       -8.187121        0.698559
+FIRE:   23 23:05:49       -8.319993        0.726231
+FIRE:   24 23:05:49       -8.482814        0.790555
+FIRE:   25 23:05:49       -8.675272        0.721617
+FIRE:   26 23:05:49       -8.843653        0.593591
+FIRE:   27 23:05:50       -8.938225        0.480641
+FIRE:   28 23:05:50       -8.908700        1.020758
+FIRE:   29 23:05:50       -8.928477        0.933221
+FIRE:   30 23:05:50       -8.961286        0.776988
+FIRE:   31 23:05:50       -8.997309        0.580811
+FIRE:   32 23:05:50       -9.028134        0.373708
+FIRE:   33 23:05:50       -9.049749        0.277512
+FIRE:   34 23:05:50       -9.062930        0.310503
+FIRE:   35 23:05:50       -9.071677        0.358925
+FIRE:   36 23:05:50       -9.081727        0.393313
+FIRE:   37 23:05:50       -9.097949        0.440981
+FIRE:   38 23:05:50       -9.123965        0.452709
+FIRE:   39 23:05:50       -9.161450        0.394203
+FIRE:   40 23:05:50       -9.207946        0.340080
+FIRE:   41 23:05:50       -9.258538        0.402700
+FIRE:   42 23:05:50       -9.317569        0.424475
+FIRE:   43 23:05:50       -9.384953        0.462833
+FIRE:   44 23:05:50       -9.358963        0.603171
+FIRE:   45 23:05:50       -9.372659        0.540270
+FIRE:   46 23:05:51       -9.393774        0.430967
+FIRE:   47 23:05:51       -9.413466        0.280720
+FIRE:   48 23:05:51       -9.424018        0.115477
+FIRE:   49 23:05:51       -9.424578        0.186739
+FIRE:   50 23:05:51       -9.424829        0.184315
+FIRE:   51 23:05:51       -9.425307        0.179612
+FIRE:   52 23:05:51       -9.425996        0.172236
+FIRE:   53 23:05:51       -9.426827        0.162854
+FIRE:   54 23:05:51       -9.427752        0.151189
+FIRE:   55 23:05:51       -9.428735        0.137487
+FIRE:   56 23:05:51       -9.429706        0.122584
+FIRE:   57 23:05:51       -9.430714        0.105801
+FIRE:   58 23:05:51       -9.431741        0.092844
+FIRE:   59 23:05:51       -9.432778        0.103867
+FIRE:   60 23:05:51       -9.433923        0.116592
+FIRE:   61 23:05:51       -9.435342        0.127968
+FIRE:   62 23:05:51       -9.437284        0.134383
+FIRE:   63 23:05:51       -9.439931        0.134133
+FIRE:   64 23:05:52       -9.443319        0.124808
+FIRE:   65 23:05:52       -9.447293        0.108368
+FIRE:   66 23:05:52       -9.451850        0.106133
+FIRE:   67 23:05:52       -9.457314        0.121825
+FIRE:   68 23:05:52       -9.464068        0.115632
+FIRE:   69 23:05:52       -9.471926        0.083096
+FIRE:   70 23:05:52       -9.480294        0.102631
+FIRE:   71 23:05:52       -9.490341        0.115581
+FIRE:   72 23:05:52       -9.504667        0.106465
+FIRE:   73 23:05:52       -9.525643        0.129535
+FIRE:   74 23:05:52       -9.552334        0.127343
+FIRE:   75 23:05:52       -9.576035        0.133301
+FIRE:   76 23:05:52       -9.581094        0.172795
+FIRE:   77 23:05:52       -9.583670        0.163075
+FIRE:   78 23:05:52       -9.588181        0.145570
+FIRE:   79 23:05:52       -9.593735        0.123420
+FIRE:   80 23:05:52       -9.599748        0.105916
+FIRE:   81 23:05:52       -9.605865        0.097953
+FIRE:   82 23:05:52       -9.611725        0.077663
+FIRE:   83 23:05:52       -9.616953        0.079851
+FIRE:   84 23:05:53       -9.621748        0.074423
+FIRE:   85 23:05:53       -9.625428        0.068752
+FIRE:   86 23:05:53       -9.627271        0.068298
+FIRE:   87 23:05:53       -9.627186        0.049180
+FIRE:   88 23:05:53       -9.627349        0.047428
+FIRE:   89 23:05:53       -9.627652        0.044052
+FIRE:   90 23:05:53       -9.628045        0.039400
+FIRE:   91 23:05:53       -9.628476        0.033978
+FIRE:   92 23:05:53       -9.628883        0.028587
+FIRE:   93 23:05:53       -9.629228        0.024239
+FIRE:   94 23:05:53       -9.629492        0.021691
+FIRE:   95 23:05:53       -9.629697        0.020572
+FIRE:   96 23:05:53       -9.629837        0.019882
+[2026-10-26 23:05:53] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=15)
+[2026-10-26 23:05:54] [INFO] [made.agents.m3_planning] M3 re-plan: query=15 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K19 Tb1']
+[2026-10-26 23:05:54] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:05:54] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K19 Tb1, score: 0.418484, score range: [0.418484, 0.418484], mean: 0.418484)
+      Step     Time          Energy          fmax
+FIRE:    0 23:05:54      392.077362      255.315028
+FIRE:    1 23:05:54      310.328156      235.804587
+FIRE:    2 23:05:54      180.976562      487.756762
+FIRE:    3 23:05:54      112.731194      102.632442
+FIRE:    4 23:05:54       73.924629      106.011213
+FIRE:    5 23:05:54       44.752571       61.270307
+FIRE:    6 23:05:54       28.966499       25.845752
+FIRE:    7 23:05:54       20.486610       15.255698
+FIRE:    8 23:05:55       15.092415       11.672999
+FIRE:    9 23:05:55       11.398743        8.732465
+FIRE:   10 23:05:55        8.733894        7.459931
+FIRE:   11 23:05:55        6.720375        6.261899
+FIRE:   12 23:05:55        5.124809        5.129188
+FIRE:   13 23:05:55        3.787384        4.097992
+FIRE:   14 23:05:55        2.604271        3.973173
+FIRE:   15 23:05:55        1.516998        3.847633
+FIRE:   16 23:05:55        0.494148        3.546117
+FIRE:   17 23:05:56       -0.474327        3.153143
+FIRE:   18 23:05:56       -1.387291        2.774678
+FIRE:   19 23:05:56       -2.247780        2.500211
+FIRE:   20 23:05:56       -3.062805        2.349117
+FIRE:   21 23:05:56       -3.839645        2.277733
+FIRE:   22 23:05:56       -4.588432        2.224903
+FIRE:   23 23:05:56       -5.320801        2.151530
+FIRE:   24 23:05:56       -6.040871        2.027683
+FIRE:   25 23:05:56       -6.753471        1.898737
+FIRE:   26 23:05:57       -7.457314        1.814024
+FIRE:   27 23:05:57       -8.145958        1.669522
+FIRE:   28 23:05:57       -8.815819        1.536275
+FIRE:   29 23:05:57       -9.468987        1.461889
+FIRE:   30 23:05:57      -10.101906        1.395332
+FIRE:   31 23:05:57      -10.717468        1.331505
+FIRE:   32 23:05:57      -11.317123        1.273814
+FIRE:   33 23:05:57      -11.901360        1.254473
+FIRE:   34 23:05:57      -12.469551        1.225523
+FIRE:   35 23:05:58      -13.019188        1.162686
+FIRE:   36 23:05:58      -13.547432        1.088778
+FIRE:   37 23:05:58      -14.055618        1.006625
+FIRE:   38 23:05:58      -14.539925        0.952753
+FIRE:   39 23:05:58      -14.996948        0.904033
+FIRE:   40 23:05:58      -15.427551        0.855164
+FIRE:   41 23:05:58      -15.831024        0.806709
+FIRE:   42 23:05:58      -16.207756        0.761076
+FIRE:   43 23:05:58      -16.559303        0.720545
+FIRE:   44 23:05:58      -16.889320        0.699232
+FIRE:   45 23:05:58      -17.199669        0.676159
+FIRE:   46 23:05:59      -17.491714        0.643271
+FIRE:   47 23:05:59      -17.767860        0.592293
+FIRE:   48 23:05:59      -18.029282        0.535171
+FIRE:   49 23:05:59      -18.278564        0.505973
+FIRE:   50 23:05:59      -18.516106        0.526220
+FIRE:   51 23:05:59      -18.741310        0.530538
+FIRE:   52 23:05:59      -18.953964        0.525182
+FIRE:   53 23:05:59      -19.153656        0.507935
+FIRE:   54 23:05:59      -19.338737        0.472049
+FIRE:   55 23:05:59      -19.509697        0.423180
+FIRE:   56 23:05:59      -19.665375        0.365106
+FIRE:   57 23:06:00      -19.804451        0.318589
+FIRE:   58 23:06:00      -19.927055        0.300639
+FIRE:   59 23:06:00      -20.034538        0.273028
+FIRE:   60 23:06:00      -20.125000        0.259335
+FIRE:   61 23:06:00      -20.198364        0.222987
+FIRE:   62 23:06:00      -20.257187        0.207085
+FIRE:   63 23:06:00      -20.303268        0.208366
+FIRE:   64 23:06:00      -20.337433        0.238659
+FIRE:   65 23:06:00      -20.364662        0.285327
+FIRE:   66 23:06:00      -20.387840        0.292603
+FIRE:   67 23:06:00      -20.407440        0.304183
+FIRE:   68 23:06:01      -20.423813        0.312527
+FIRE:   69 23:06:01      -20.437996        0.309414
+FIRE:   70 23:06:01      -20.448265        0.295446
+FIRE:   71 23:06:01      -20.453873        0.285406
+FIRE:   72 23:06:01      -20.589302        0.179353
+FIRE:   73 23:06:01      -20.676414        0.149235
+FIRE:   74 23:06:01      -20.727921        0.100520
+FIRE:   75 23:06:01      -20.756180        0.118822
+FIRE:   76 23:06:01      -20.773071        0.112461
+FIRE:   77 23:06:01      -20.787193        0.101332
+FIRE:   78 23:06:01      -20.804329        0.091587
+FIRE:   79 23:06:01      -20.822906        0.107627
+FIRE:   80 23:06:02      -20.845596        0.106325
+FIRE:   81 23:06:02      -20.874245        0.093644
+FIRE:   82 23:06:02      -20.901566        0.086394
+FIRE:   83 23:06:02      -20.927162        0.080959
+FIRE:   84 23:06:02      -20.950233        0.075384
+FIRE:   85 23:06:02      -20.973488        0.088444
+FIRE:   86 23:06:02      -20.998161        0.083002
+FIRE:   87 23:06:02      -21.024483        0.070217
+FIRE:   88 23:06:02      -21.049156        0.059321
+FIRE:   89 23:06:02      -21.069069        0.055915
+FIRE:   90 23:06:02      -21.084961        0.050205
+FIRE:   91 23:06:02      -21.096657        0.047544
+FIRE:   92 23:06:03      -21.109909        0.061978
+FIRE:   93 23:06:03      -21.129723        0.127910
+FIRE:   94 23:06:03      -21.151939        0.090288
+FIRE:   95 23:06:03      -21.169724        0.071324
+FIRE:   96 23:06:03      -21.188438        0.104626
+FIRE:   97 23:06:03      -21.206413        0.081454
+FIRE:   98 23:06:03      -21.224113        0.092847
+FIRE:   99 23:06:03      -21.243614        0.089184
+FIRE:  100 23:06:03      -21.261772        0.074432
+FIRE:  101 23:06:03      -21.278793        0.084149
+FIRE:  102 23:06:03      -21.298897        0.076831
+FIRE:  103 23:06:04      -21.317513        0.076742
+FIRE:  104 23:06:04      -21.336327        0.102358
+FIRE:  105 23:06:04      -21.353462        0.086168
+FIRE:  106 23:06:04      -21.368439        0.082492
+FIRE:  107 23:06:04      -21.385902        0.092513
+FIRE:  108 23:06:04      -21.405235        0.063341
+FIRE:  109 23:06:04      -21.423553        0.081117
+FIRE:  110 23:06:04      -21.444817        0.091245
+FIRE:  111 23:06:04      -21.464645        0.068794
+FIRE:  112 23:06:04      -21.481209        0.074994
+FIRE:  113 23:06:04      -21.493027        0.078180
+FIRE:  114 23:06:05      -21.500046        0.070220
+FIRE:  115 23:06:05      -21.503532        0.076602
+FIRE:  116 23:06:05      -21.512405        0.063186
+FIRE:  117 23:06:05      -21.525368        0.066927
+FIRE:  118 23:06:05      -21.537224        0.046157
+FIRE:  119 23:06:05      -21.546440        0.040705
+FIRE:  120 23:06:05      -21.555489        0.053955
+FIRE:  121 23:06:05      -21.564255        0.052314
+FIRE:  122 23:06:05      -21.572342        0.051337
+FIRE:  123 23:06:05      -21.580605        0.042329
+FIRE:  124 23:06:05      -21.587555        0.041560
+FIRE:  125 23:06:06      -21.591576        0.030501
+FIRE:  126 23:06:06      -21.592209        0.027886
+FIRE:  127 23:06:06      -21.593323        0.024317
+FIRE:  128 23:06:06      -21.594681        0.022094
+FIRE:  129 23:06:06      -21.596138        0.023705
+FIRE:  130 23:06:06      -21.597702        0.029604
+FIRE:  131 23:06:06      -21.599609        0.037291
+FIRE:  132 23:06:06      -21.601891        0.037437
+FIRE:  133 23:06:06      -21.604523        0.032947
+FIRE:  134 23:06:06      -21.607430        0.030308
+FIRE:  135 23:06:06      -21.610603        0.025464
+FIRE:  136 23:06:07      -21.613731        0.022924
+FIRE:  137 23:06:07      -21.616478        0.020625
+FIRE:  138 23:06:07      -21.618660        0.021158
+FIRE:  139 23:06:07      -21.622078        0.054198
+FIRE:  140 23:06:07      -21.627296        0.026080
+FIRE:  141 23:06:07      -21.630630        0.036844
+FIRE:  142 23:06:07      -21.631500        0.031683
+FIRE:  143 23:06:07      -21.632828        0.027577
+FIRE:  144 23:06:07      -21.634209        0.026135
+FIRE:  145 23:06:07      -21.635437        0.022215
+FIRE:  146 23:06:07      -21.636566        0.017564
+[2026-10-26 23:06:08] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=16)
+[2026-10-26 23:06:08] [INFO] [made.agents.generators.chemeleon] Running Chemeleon CSP with formulas: ['Au1 K1 Tb1'], 1 samples per formula
+Generating 1 samples for each formula: ['Au1 K1 Tb1']
+Generating batch #1 with 32 samples.
+
+
+Sampling:   0%|          | 0/256 [00:00<?, ?it/s]
+
+Sampling:   4%|▎         | 9/256 [00:00<00:02, 88.02it/s]
+
+Sampling:   7%|▋         | 18/256 [00:00<00:02, 86.95it/s]
+
+Sampling:  11%|█         | 27/256 [00:00<00:02, 87.92it/s]
+
+Sampling:  14%|█▍        | 36/256 [00:00<00:02, 87.70it/s]
+
+Sampling:  18%|█▊        | 45/256 [00:00<00:02, 83.92it/s]
+
+Sampling:  21%|██        | 54/256 [00:00<00:02, 84.38it/s]
+
+Sampling:  25%|██▍       | 63/256 [00:00<00:02, 84.02it/s]
+
+Sampling:  28%|██▊       | 72/256 [00:00<00:02, 83.67it/s]
+
+Sampling:  32%|███▏      | 81/256 [00:00<00:02, 78.99it/s]
+
+Sampling:  35%|███▌      | 90/256 [00:01<00:02, 80.84it/s]
+
+Sampling:  39%|███▊      | 99/256 [00:01<00:01, 80.12it/s]
+
+Sampling:  42%|████▏     | 108/256 [00:01<00:01, 81.20it/s]
+
+Sampling:  46%|████▌     | 117/256 [00:01<00:01, 82.27it/s]
+
+Sampling:  49%|████▉     | 126/256 [00:01<00:01, 83.61it/s]
+
+Sampling:  53%|█████▎    | 135/256 [00:01<00:01, 81.47it/s]
+
+Sampling:  56%|█████▋    | 144/256 [00:01<00:01, 82.89it/s]
+
+Sampling:  60%|█████▉    | 153/256 [00:01<00:01, 83.17it/s]
+
+Sampling:  63%|██████▎   | 162/256 [00:01<00:01, 84.65it/s]
+
+Sampling:  67%|██████▋   | 172/256 [00:02<00:00, 86.56it/s]
+
+Sampling:  71%|███████   | 182/256 [00:02<00:00, 88.74it/s]
+
+Sampling:  75%|███████▍  | 191/256 [00:02<00:00, 85.51it/s]
+
+Sampling:  79%|███████▊  | 201/256 [00:02<00:00, 88.38it/s]
+
+Sampling:  82%|████████▏ | 211/256 [00:02<00:00, 89.02it/s]
+
+Sampling:  86%|████████▋ | 221/256 [00:02<00:00, 90.04it/s]
+
+Sampling:  90%|█████████ | 231/256 [00:02<00:00, 90.05it/s]
+
+Sampling:  94%|█████████▍| 241/256 [00:02<00:00, 92.82it/s]
+
+Sampling:  98%|█████████▊| 251/256 [00:02<00:00, 90.99it/s]
+Sampling: 100%|██████████| 256/256 [00:02<00:00, 85.81it/s]
+[2026-10-26 23:06:11] [INFO] [made.agents.generators.chemeleon] Loaded 1 structures from C:\Users\User\AppData\Local\Temp\chemeleon_samples_bjmhwt15
+[2026-10-26 23:06:11] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:06:11] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K1 Tb1 Au1, score: 0.143904, score range: [0.143904, 0.143904], mean: 0.143904)
+      Step     Time          Energy          fmax
+FIRE:    0 23:06:11       -9.660438        0.327843
+FIRE:    1 23:06:11       -9.662726        0.304910
+FIRE:    2 23:06:11       -9.666502        0.261836
+FIRE:    3 23:06:11       -9.670546        0.203920
+FIRE:    4 23:06:11       -9.673803        0.154703
+FIRE:    5 23:06:11       -9.675957        0.144459
+FIRE:    6 23:06:11       -9.677524        0.140797
+FIRE:    7 23:06:11       -9.679296        0.161362
+FIRE:    8 23:06:11       -9.681990        0.157232
+FIRE:    9 23:06:11       -9.685514        0.124704
+FIRE:   10 23:06:11       -9.688761        0.072869
+FIRE:   11 23:06:11       -9.690232        0.108002
+FIRE:   12 23:06:11       -9.690413        0.129528
+FIRE:   13 23:06:11       -9.690705        0.124188
+FIRE:   14 23:06:11       -9.691217        0.113934
+FIRE:   15 23:06:11       -9.691819        0.099600
+FIRE:   16 23:06:11       -9.692373        0.082407
+FIRE:   17 23:06:11       -9.692777        0.064011
+FIRE:   18 23:06:12       -9.692997        0.046784
+FIRE:   19 23:06:12       -9.693100        0.048754
+FIRE:   20 23:06:12       -9.693188        0.056101
+FIRE:   21 23:06:12       -9.693353        0.055454
+FIRE:   22 23:06:12       -9.693610        0.047936
+FIRE:   23 23:06:12       -9.693869        0.030107
+FIRE:   24 23:06:12       -9.693936        0.027385
+FIRE:   25 23:06:12       -9.693943        0.027122
+FIRE:   26 23:06:12       -9.693954        0.026599
+FIRE:   27 23:06:12       -9.693970        0.025818
+FIRE:   28 23:06:12       -9.693991        0.024782
+FIRE:   29 23:06:12       -9.694014        0.023492
+FIRE:   30 23:06:12       -9.694042        0.021960
+FIRE:   31 23:06:12       -9.694070        0.020187
+FIRE:   32 23:06:12       -9.694094        0.017963
+[2026-10-26 23:06:12] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=17)
+[2026-10-26 23:06:12] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:06:12] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K1 Tb1 Au1, score: 0.150907, score range: [0.150907, 0.150907], mean: 0.150907)
+      Step     Time          Energy          fmax
+FIRE:    0 23:06:12       -4.272775        1.984484
+FIRE:    1 23:06:13       -4.398906        1.883077
+FIRE:    2 23:06:13       -4.622403        1.693727
+FIRE:    3 23:06:13       -4.897239        1.440508
+FIRE:    4 23:06:13       -5.176004        1.180081
+FIRE:    5 23:06:13       -5.431732        0.990072
+FIRE:    6 23:06:13       -5.662517        0.914503
+FIRE:    7 23:06:13       -5.882847        0.922259
+FIRE:    8 23:06:13       -6.134445        0.972798
+FIRE:    9 23:06:13       -6.413166        1.053077
+FIRE:   10 23:06:13       -6.737744        1.196897
+FIRE:   11 23:06:13       -7.108694        1.333754
+FIRE:   12 23:06:13       -7.507969        1.374974
+FIRE:   13 23:06:13       -7.892874        1.276299
+FIRE:   14 23:06:13       -8.218897        1.131255
+FIRE:   15 23:06:13       -8.445584        0.839459
+FIRE:   16 23:06:13       -8.564116        1.080071
+FIRE:   17 23:06:13       -8.644589        1.522953
+FIRE:   18 23:06:13       -8.773786        1.665709
+FIRE:   19 23:06:13       -8.956030        1.423227
+FIRE:   20 23:06:13       -9.106457        0.953997
+FIRE:   21 23:06:13       -9.183936        0.592906
+FIRE:   22 23:06:13       -9.197850        0.718859
+FIRE:   23 23:06:14       -9.245414        0.643651
+FIRE:   24 23:06:14       -9.320480        0.507234
+FIRE:   25 23:06:14       -9.393416        0.327168
+FIRE:   26 23:06:14       -9.436421        0.278098
+FIRE:   27 23:06:14       -9.450505        0.306306
+FIRE:   28 23:06:14       -9.452742        0.294033
+FIRE:   29 23:06:14       -9.456857        0.270321
+FIRE:   30 23:06:14       -9.462241        0.237559
+FIRE:   31 23:06:14       -9.468266        0.200605
+FIRE:   32 23:06:14       -9.474439        0.180257
+FIRE:   33 23:06:14       -9.480573        0.199352
+FIRE:   34 23:06:14       -9.486686        0.207569
+FIRE:   35 23:06:14       -9.493638        0.201829
+FIRE:   36 23:06:14       -9.501652        0.181772
+FIRE:   37 23:06:14       -9.510783        0.166518
+FIRE:   38 23:06:14       -9.520835        0.147038
+FIRE:   39 23:06:14       -9.531270        0.138568
+FIRE:   40 23:06:14       -9.542036        0.141105
+FIRE:   41 23:06:15       -9.553542        0.124167
+FIRE:   42 23:06:15       -9.564537        0.104922
+FIRE:   43 23:06:15       -9.572894        0.148074
+FIRE:   44 23:06:15       -9.577742        0.191465
+FIRE:   45 23:06:15       -9.578868        0.177965
+FIRE:   46 23:06:15       -9.580877        0.152965
+FIRE:   47 23:06:15       -9.583423        0.120538
+FIRE:   48 23:06:15       -9.586236        0.100807
+FIRE:   49 23:06:15       -9.589252        0.111343
+FIRE:   50 23:06:15       -9.592560        0.115171
+FIRE:   51 23:06:15       -9.596209        0.110137
+FIRE:   52 23:06:15       -9.600533        0.095057
+FIRE:   53 23:06:15       -9.605331        0.075537
+FIRE:   54 23:06:15       -9.610543        0.108192
+FIRE:   55 23:06:15       -9.616126        0.118171
+FIRE:   56 23:06:15       -9.621391        0.090577
+FIRE:   57 23:06:15       -9.625108        0.092958
+FIRE:   58 23:06:15       -9.626987        0.101272
+FIRE:   59 23:06:15       -9.627258        0.095079
+FIRE:   60 23:06:16       -9.627737        0.083395
+FIRE:   61 23:06:16       -9.628331        0.067703
+FIRE:   62 23:06:16       -9.628928        0.050004
+FIRE:   63 23:06:16       -9.629455        0.032833
+FIRE:   64 23:06:16       -9.629862        0.022783
+FIRE:   65 23:06:16       -9.630141        0.023582
+FIRE:   66 23:06:16       -9.630303        0.024554
+FIRE:   67 23:06:16       -9.630373        0.026854
+FIRE:   68 23:06:16       -9.630385        0.026229
+FIRE:   69 23:06:16       -9.630401        0.024942
+FIRE:   70 23:06:16       -9.630433        0.023106
+FIRE:   71 23:06:16       -9.630472        0.020770
+FIRE:   72 23:06:16       -9.630509        0.018016
+[2026-10-26 23:06:16] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=18)
+[2026-10-26 23:06:17] [INFO] [made.agents.m3_planning] M3 re-plan: query=18 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['Tb19 Au1']
+[2026-10-26 23:06:17] [INFO] [made.agents.base] Scorer.select(): Evaluating 2 candidates for selection
+[2026-10-26 23:06:17] [INFO] [made.agents.base] Scorer.select(): Selected candidate 1/1 (composition: Tb19 Au1, score: 0.718037, score range: [0.055241, 0.718037], mean: 0.386639)
+      Step     Time          Energy          fmax
+FIRE:    0 23:06:17     1133.232910     6679.645753
+FIRE:    1 23:06:17      715.549683      137.087175
+FIRE:    2 23:06:18      703.023438       10.376888
+FIRE:    3 23:06:18      701.371460        8.305382
+FIRE:    4 23:06:18      696.929077       22.516220
+FIRE:    5 23:06:19      692.571655       37.674994
+FIRE:    6 23:06:19      688.805908       48.277180
+FIRE:    7 23:06:19      683.147095       64.139840
+FIRE:    8 23:06:19      673.155029       89.915366
+FIRE:    9 23:06:20      651.316406      161.449637
+FIRE:   10 23:06:20      614.295898      177.925957
+FIRE:   11 23:06:20      564.843384      278.153075
+FIRE:   12 23:06:21      497.315887      229.098225
+FIRE:   13 23:06:21      431.837006      165.499496
+FIRE:   14 23:06:21      376.329071      145.141924
+FIRE:   15 23:06:22      330.354950      144.704437
+FIRE:   16 23:06:22      287.851288      133.725563
+FIRE:   17 23:06:22      246.790741      116.015966
+FIRE:   18 23:06:23      207.994781       89.475512
+FIRE:   19 23:06:23      174.098297       69.435265
+FIRE:   20 23:06:23      145.944809       59.152203
+FIRE:   21 23:06:24      122.582520       47.791551
+FIRE:   22 23:06:24      103.336884       39.016364
+FIRE:   23 23:06:24       87.494873       35.545535
+FIRE:   24 23:06:25       74.187302       30.631700
+FIRE:   25 23:06:25       62.770721       28.196135
+FIRE:   26 23:06:25       52.757858       26.957076
+FIRE:   27 23:06:25       43.808304       24.575490
+FIRE:   28 23:06:26       35.778870       20.328321
+FIRE:   29 23:06:26       28.607544       18.633242
+FIRE:   30 23:06:26       22.098480       17.437709
+FIRE:   31 23:06:27       15.955475       16.732790
+FIRE:   32 23:06:27        9.989021       17.402764
+FIRE:   33 23:06:27        4.196762       16.406035
+FIRE:   34 23:06:28       -1.287628       14.010339
+FIRE:   35 23:06:28       -6.318230       12.874655
+FIRE:   36 23:06:28      -10.837051       12.145014
+FIRE:   37 23:06:28      -14.893753       12.531176
+FIRE:   38 23:06:29      -18.593056       12.681903
+FIRE:   39 23:06:29      -22.035439       11.693331
+FIRE:   40 23:06:29      -25.288544        9.870555
+FIRE:   41 23:06:29      -28.389664        9.395443
+FIRE:   42 23:06:30      -31.356659        8.970857
+FIRE:   43 23:06:30      -34.197403        8.563493
+FIRE:   44 23:06:30      -36.916595        8.167527
+FIRE:   45 23:06:30      -39.522774        7.780258
+FIRE:   46 23:06:31      -42.031647        7.401123
+FIRE:   47 23:06:31      -44.464401        7.031779
+FIRE:   48 23:06:31      -46.839546        6.675650
+FIRE:   49 23:06:31      -49.164932        6.335949
+FIRE:   50 23:06:31      -51.435688        6.014246
+FIRE:   51 23:06:32      -53.638145        5.710175
+FIRE:   52 23:06:32      -55.754974        5.421184
+FIRE:   53 23:06:32      -57.770462        5.145349
+FIRE:   54 23:06:32      -59.673763        4.882470
+FIRE:   55 23:06:32      -61.460388        4.633320
+FIRE:   56 23:06:33      -63.131874        4.398768
+FIRE:   57 23:06:33      -64.694061        4.180073
+FIRE:   58 23:06:33      -66.155457        3.977336
+FIRE:   59 23:06:33      -67.526489        3.790784
+FIRE:   60 23:06:33      -68.819199        3.618007
+FIRE:   61 23:06:34      -70.046555        3.456613
+FIRE:   62 23:06:34      -71.221344        3.303423
+FIRE:   63 23:06:34      -72.354012        3.156069
+FIRE:   64 23:06:34      -73.450836        3.074870
+FIRE:   65 23:06:34      -74.512314        2.939174
+FIRE:   66 23:06:34      -75.534393        2.734643
+FIRE:   67 23:06:35      -76.510010        2.602048
+FIRE:   68 23:06:35      -77.431564        2.474395
+FIRE:   69 23:06:35      -78.293884        2.352897
+FIRE:   70 23:06:35      -79.094398        2.233992
+FIRE:   71 23:06:35      -79.833397        2.116855
+FIRE:   72 23:06:35      -80.514046        1.999636
+FIRE:   73 23:06:36      -81.140656        1.880755
+FIRE:   74 23:06:36      -81.716408        1.760883
+FIRE:   75 23:06:36      -82.242889        1.636000
+FIRE:   76 23:06:36      -82.719421        1.507979
+FIRE:   77 23:06:36      -83.144844        1.376117
+FIRE:   78 23:06:36      -83.518166        1.243948
+FIRE:   79 23:06:37      -83.841682        1.113601
+FIRE:   80 23:06:37      -84.119965        1.011355
+FIRE:   81 23:06:37      -84.357864        1.100511
+FIRE:   82 23:06:37      -84.562897        1.224897
+FIRE:   83 23:06:37      -84.741226        1.313375
+FIRE:   84 23:06:37      -84.897415        1.352321
+FIRE:   85 23:06:37      -85.032715        1.334944
+FIRE:   86 23:06:38      -85.147179        1.257889
+FIRE:   87 23:06:38      -85.237495        1.131879
+FIRE:   88 23:06:38      -85.301048        0.975657
+FIRE:   89 23:06:38      -85.336441        0.823626
+FIRE:   90 23:06:38      -85.341049        0.818846
+FIRE:   91 23:06:38      -85.701172        0.654137
+FIRE:   92 23:06:38      -85.934830        0.625805
+FIRE:   93 23:06:39      -86.144455        0.603615
+FIRE:   94 23:06:39      -86.338257        0.567464
+FIRE:   95 23:06:39      -86.515663        0.530898
+FIRE:   96 23:06:39      -86.690018        0.492982
+FIRE:   97 23:06:39      -86.854706        0.455234
+FIRE:   98 23:06:39      -86.994171        0.417926
+FIRE:   99 23:06:39      -87.114807        0.384912
+FIRE:  100 23:06:40      -87.238708        0.360246
+FIRE:  101 23:06:40      -87.381798        0.398156
+FIRE:  102 23:06:40      -87.544884        0.440261
+FIRE:  103 23:06:40      -87.720871        0.468816
+FIRE:  104 23:06:40      -87.907738        0.463700
+FIRE:  105 23:06:40      -88.101265        0.402661
+FIRE:  106 23:06:40      -88.288567        0.392299
+FIRE:  107 23:06:40      -88.459480        0.395253
+FIRE:  108 23:06:41      -88.601906        0.393687
+FIRE:  109 23:06:41      -88.711655        0.351861
+FIRE:  110 23:06:41      -88.795532        0.476623
+FIRE:  111 23:06:41      -88.868317        0.508697
+FIRE:  112 23:06:41      -88.940018        0.492286
+FIRE:  113 23:06:41      -89.015083        0.519876
+FIRE:  114 23:06:41      -89.097641        0.575662
+FIRE:  115 23:06:42      -89.180565        0.571265
+FIRE:  116 23:06:42      -89.245514        0.398344
+FIRE:  117 23:06:42      -89.272987        0.423659
+FIRE:  118 23:06:42      -89.335388        0.434410
+FIRE:  119 23:06:42      -89.371613        0.122328
+FIRE:  120 23:06:42      -89.368843        0.354937
+FIRE:  121 23:06:42      -89.378433        0.263884
+FIRE:  122 23:06:43      -89.389336        0.119383
+FIRE:  123 23:06:43      -89.393761        0.117521
+FIRE:  124 23:06:43      -89.394211        0.116546
+FIRE:  125 23:06:43      -89.395042        0.114730
+FIRE:  126 23:06:43      -89.396248        0.112302
+FIRE:  127 23:06:43      -89.397591        0.109591
+FIRE:  128 23:06:43      -89.399109        0.106928
+FIRE:  129 23:06:43      -89.400772        0.104666
+FIRE:  130 23:06:44      -89.402557        0.103001
+FIRE:  131 23:06:44      -89.404793        0.101908
+FIRE:  132 23:06:44      -89.407608        0.101739
+FIRE:  133 23:06:44      -89.411186        0.102832
+FIRE:  134 23:06:44      -89.415604        0.105751
+FIRE:  135 23:06:44      -89.420883        0.111074
+FIRE:  136 23:06:44      -89.427078        0.118799
+FIRE:  137 23:06:45      -89.434708        0.127604
+FIRE:  138 23:06:45      -89.444336        0.135402
+FIRE:  139 23:06:45      -89.456436        0.141497
+FIRE:  140 23:06:45      -89.471977        0.148297
+FIRE:  141 23:06:45      -89.492729        0.158435
+FIRE:  142 23:06:45      -89.519989        0.165861
+FIRE:  143 23:06:45      -89.552238        0.142124
+FIRE:  144 23:06:45      -89.582306        0.111328
+FIRE:  145 23:06:46      -89.602264        0.130286
+FIRE:  146 23:06:46      -89.612045        0.151502
+FIRE:  147 23:06:46      -89.614685        0.134780
+FIRE:  148 23:06:46      -89.619263        0.110306
+FIRE:  149 23:06:46      -89.624817        0.096417
+FIRE:  150 23:06:46      -89.630394        0.088239
+FIRE:  151 23:06:46      -89.635391        0.086780
+FIRE:  152 23:06:46      -89.639580        0.085153
+FIRE:  153 23:06:47      -89.643097        0.082937
+FIRE:  154 23:06:47      -89.646591        0.079373
+FIRE:  155 23:06:47      -89.650276        0.074358
+FIRE:  156 23:06:47      -89.654503        0.068467
+FIRE:  157 23:06:47      -89.659355        0.061899
+FIRE:  158 23:06:47      -89.664536        0.054589
+FIRE:  159 23:06:47      -89.669250        0.051686
+FIRE:  160 23:06:48      -89.673065        0.046602
+FIRE:  161 23:06:48      -89.675980        0.040679
+FIRE:  162 23:06:48      -89.677711        0.046117
+FIRE:  163 23:06:48      -89.678162        0.042547
+FIRE:  164 23:06:48      -89.678764        0.036011
+FIRE:  165 23:06:48      -89.679443        0.033761
+FIRE:  166 23:06:48      -89.680099        0.021990
+FIRE:  167 23:06:49      -89.680618        0.019783
+[2026-10-26 23:06:49] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=19)
+[2026-10-26 23:06:49] [INFO] [made.agents.base] Scorer.select(): Evaluating 1 candidates for selection
+[2026-10-26 23:06:49] [INFO] [made.agents.base] Scorer.select(): Selected candidate 0/0 (composition: K1 Tb1 Au1, score: 0.292317, score range: [0.292317, 0.292317], mean: 0.292317)
+      Step     Time          Energy          fmax
+FIRE:    0 23:06:49       -3.515104        0.709845
+FIRE:    1 23:06:49       -3.530052        0.722703
+FIRE:    2 23:06:49       -3.561356        0.746922
+FIRE:    3 23:06:49       -3.611757        0.780066
+FIRE:    4 23:06:49       -3.685258        0.820371
+FIRE:    5 23:06:49       -3.787384        0.868420
+FIRE:    6 23:06:49       -3.925807        0.924557
+FIRE:    7 23:06:49       -4.110228        0.981554
+FIRE:    8 23:06:49       -4.385708        1.093460
+FIRE:    9 23:06:49       -4.777745        1.172148
+FIRE:   10 23:06:49       -5.173658        0.883070
+FIRE:   11 23:06:49       -5.392651        0.296516
+FIRE:   12 23:06:49       -5.224236        1.595978
+FIRE:   13 23:06:49       -5.268645        1.357404
+FIRE:   14 23:06:49       -5.332443        0.970376
+FIRE:   15 23:06:49       -5.385693        0.551627
+FIRE:   16 23:06:49       -5.411330        0.196929
+FIRE:   17 23:06:49       -5.408970        0.208946
+FIRE:   18 23:06:49       -5.409235        0.206300
+FIRE:   19 23:06:49       -5.409742        0.202829
+FIRE:   20 23:06:49       -5.410480        0.197681
+FIRE:   21 23:06:49       -5.411413        0.190941
+FIRE:   22 23:06:50       -5.412498        0.182713
+FIRE:   23 23:06:50       -5.413681        0.173169
+FIRE:   24 23:06:50       -5.414925        0.162494
+FIRE:   25 23:06:50       -5.416311        0.149710
+FIRE:   26 23:06:50       -5.417793        0.134891
+FIRE:   27 23:06:50       -5.419327        0.118559
+FIRE:   28 23:06:50       -5.420869        0.124408
+FIRE:   29 23:06:50       -5.422485        0.148952
+FIRE:   30 23:06:50       -5.424365        0.174128
+FIRE:   31 23:06:50       -5.426871        0.193294
+FIRE:   32 23:06:50       -5.430445        0.200416
+FIRE:   33 23:06:50       -5.435476        0.191083
+FIRE:   34 23:06:50       -5.442175        0.164604
+FIRE:   35 23:06:50       -5.450556        0.174837
+FIRE:   36 23:06:50       -5.460969        0.216151
+FIRE:   37 23:06:50       -5.474667        0.248194
+FIRE:   38 23:06:50       -5.493532        0.254874
+FIRE:   39 23:06:50       -5.517731        0.213325
+FIRE:   40 23:06:50       -5.542005        0.117656
+FIRE:   41 23:06:50       -5.556889        0.115983
+FIRE:   42 23:06:50       -5.557491        0.144335
+FIRE:   43 23:06:50       -5.558169        0.138300
+FIRE:   44 23:06:50       -5.559469        0.127523
+FIRE:   45 23:06:50       -5.561288        0.131100
+FIRE:   46 23:06:50       -5.563519        0.137001
+FIRE:   47 23:06:50       -5.566100        0.146100
+FIRE:   48 23:06:50       -5.569053        0.159257
+FIRE:   49 23:06:50       -5.572548        0.177200
+FIRE:   50 23:06:51       -5.577438        0.202969
+FIRE:   51 23:06:51       -5.584848        0.238159
+FIRE:   52 23:06:51       -5.596790        0.283115
+FIRE:   53 23:06:51       -5.616619        0.336717
+FIRE:   54 23:06:51       -5.650014        0.420578
+FIRE:   55 23:06:51       -5.714982        0.591672
+FIRE:   56 23:06:51       -5.837291        0.750915
+FIRE:   57 23:06:51       -6.052140        1.041920
+FIRE:   58 23:06:51       -6.298110        1.022094
+FIRE:   59 23:06:51       -6.548424        1.040598
+FIRE:   60 23:06:51       -6.796604        0.998391
+FIRE:   61 23:06:51       -6.987785        0.571591
+FIRE:   62 23:06:51       -7.035364        0.812909
+FIRE:   63 23:06:51       -7.086199        0.546453
+FIRE:   64 23:06:51       -7.128804        0.461731
+FIRE:   65 23:06:51       -7.142788        0.693156
+FIRE:   66 23:06:51       -7.148582        0.657525
+FIRE:   67 23:06:51       -7.158574        0.586556
+FIRE:   68 23:06:51       -7.170038        0.481133
+FIRE:   69 23:06:51       -7.180107        0.347507
+FIRE:   70 23:06:51       -7.187368        0.241149
+FIRE:   71 23:06:51       -7.193051        0.328467
+FIRE:   72 23:06:51       -7.199808        0.365534
+FIRE:   73 23:06:51       -7.210301        0.338911
+FIRE:   74 23:06:51       -7.223808        0.240358
+FIRE:   75 23:06:51       -7.235810        0.131332
+FIRE:   76 23:06:51       -7.242670        0.217576
+FIRE:   77 23:06:52       -7.248584        0.237549
+FIRE:   78 23:06:52       -7.258403        0.199269
+FIRE:   79 23:06:52       -7.267788        0.161137
+FIRE:   80 23:06:52       -7.275235        0.258695
+FIRE:   81 23:06:52       -7.297488        0.270553
+FIRE:   82 23:06:52       -7.346272        0.534787
+FIRE:   83 23:06:52       -7.442847        0.751139
+FIRE:   84 23:06:52       -7.600764        0.811326
+FIRE:   85 23:06:52       -7.790768        0.931811
+FIRE:   86 23:06:52       -8.007397        0.749817
+FIRE:   87 23:06:52       -8.233296        0.859910
+FIRE:   88 23:06:52       -8.456240        0.691267
+FIRE:   89 23:06:52       -8.604286        0.360325
+FIRE:   90 23:06:52       -8.630675        0.642274
+FIRE:   91 23:06:52       -8.701637        0.386193
+FIRE:   92 23:06:52       -8.767040        0.570480
+FIRE:   93 23:06:52       -8.835595        0.766848
+FIRE:   94 23:06:52       -8.958940        0.627439
+FIRE:   95 23:06:52       -9.086025        0.353379
+FIRE:   96 23:06:52       -9.149055        0.229980
+FIRE:   97 23:06:52       -9.121738        0.600609
+FIRE:   98 23:06:52       -9.132404        0.503408
+FIRE:   99 23:06:52       -9.147195        0.329847
+FIRE:  100 23:06:52       -9.157796        0.121987
+FIRE:  101 23:06:52       -9.160317        0.145399
+FIRE:  102 23:06:53       -9.160604        0.140315
+FIRE:  103 23:06:53       -9.161126        0.130472
+FIRE:  104 23:06:53       -9.161839        0.116127
+FIRE:  105 23:06:53       -9.162648        0.101397
+FIRE:  106 23:06:53       -9.163489        0.088078
+FIRE:  107 23:06:53       -9.164268        0.073364
+FIRE:  108 23:06:53       -9.164911        0.058127
+FIRE:  109 23:06:53       -9.165472        0.053452
+FIRE:  110 23:06:53       -9.165911        0.073607
+FIRE:  111 23:06:53       -9.166265        0.086553
+FIRE:  112 23:06:53       -9.166605        0.088578
+FIRE:  113 23:06:53       -9.166986        0.077005
+FIRE:  114 23:06:53       -9.167357        0.051014
+FIRE:  115 23:06:53       -9.167516        0.029125
+FIRE:  116 23:06:53       -9.167531        0.028852
+FIRE:  117 23:06:53       -9.167548        0.028315
+FIRE:  118 23:06:53       -9.167578        0.027531
+FIRE:  119 23:06:53       -9.167612        0.026529
+FIRE:  120 23:06:53       -9.167655        0.025342
+FIRE:  121 23:06:53       -9.167697        0.024014
+FIRE:  122 23:06:53       -9.167749        0.022595
+FIRE:  123 23:06:53       -9.167809        0.020991
+FIRE:  124 23:06:54       -9.167874        0.019264
+[2026-10-26 23:06:54] [INFO] [__main__] Saved checkpoint to checkpoints\20261026_230231\episode_000\checkpoint.json (query_count=20)
+[2026-10-26 23:06:54] [INFO] [__main__] Final metrics: {
+  "episode_id": 0,
+  "final/queries_used": 20,
+  "final/num_observed_stable_formulas": 13,
+  "final/num_ground_truth_stable_formulas": 10,
+  "final/num_gt_formulas_missing_initial": 0,
+  "final/num_correct_stable_formulas": 0,
+  "final/recall_formula": 0.0,
+  "final/precision_formula": 0.0,
+  "final/num_newly_discovered_structures": 17,
+  "final/num_newly_discovered_stable": 3,
+  "final/discovery_efficiency": 0.85,
+  "final/stable_discovery_efficiency": 0.15,
+  "final/num_initial_structures": 28,
+  "final/num_ground_truth_stable_structures": 28,
+  "final/num_gt_structures_missing_initial": 0,
+  "final/num_correct_stable_structures": 0,
+  "final/recall_structure": 0.0,
+  "final/precision_structure": 0.0,
+  "final/reference_composition_precision": 0.0,
+  "final/reference_composition_recall": 0.0,
+  "final/reference_structure_precision": 0.0,
+  "final/reference_structure_recall": 0.0,
+  "final/validity_distance_valid_count": 19.0,
+  "final/validity_distance_valid_fraction": 0.95,
+  "final/validity_min_interatomic_distance_min": 0.21910403943142182,
+  "final/validity_min_interatomic_distance_mean": 2.206296013352892,
+  "final/validity_min_interatomic_distance_std": 1.0737486635010418,
+  "final/validity_smact_valid_count": 20.0,
+  "final/validity_smact_valid_fraction": 1.0,
+  "final/validity_distance_and_smact_valid_count": 19.0,
+  "final/validity_distance_and_smact_valid_fraction": 0.95,
+  "final/diversity_all_composition_unique_composition_count": 10.0,
+  "final/diversity_all_composition_unique_composition_fraction": 0.5,
+  "final/diversity_all_composition_l1_distance_min": 0.0,
+  "final/diversity_all_composition_l1_distance_mean": 0.7742731829573936,
+  "final/diversity_all_composition_l1_distance_max": 1.9,
+  "final/diversity_all_composition_l1_distance_std": 0.6048340738700287,
+  "final/diversity_all_composition_l2_distance_min": 0.0,
+  "final/diversity_all_composition_l2_distance_mean": 0.4948879295602092,
+  "final/diversity_all_composition_l2_distance_max": 1.3435028842544403,
+  "final/diversity_all_composition_l2_distance_std": 0.3904263588525852,
+  "final/diversity_all_structure_unique_structure_count": 17.0,
+  "final/diversity_all_structure_unique_structure_fraction": 0.85,
+  "final/diversity_all_structure_spacegroup_entropy": 0.5181862130502128,
+  "final/diversity_all_structure_unique_spacegroups_count": 3.0,
+  "final/diversity_all_structure_unique_spacegroups_fraction": 0.15,
+  "final/diversity_all_structure_lattice_parameter_variance": 15.990032327181119,
+  "final/diversity_all_structure_amd_distance_min": 0.02706175684906853,
+  "final/diversity_all_structure_amd_distance_mean": 3.312900530845528,
+  "final/diversity_all_structure_amd_distance_max": 12.100960911266704,
+  "final/diversity_stable_composition_unique_composition_count": 3.0,
+  "final/diversity_stable_composition_unique_composition_fraction": 1.0,
+  "final/diversity_stable_composition_l1_distance_min": 0.6499999999999999,
+  "final/diversity_stable_composition_l1_distance_mean": 1.2,
+  "final/diversity_stable_composition_l1_distance_max": 1.7999999999999998,
+  "final/diversity_stable_composition_l1_distance_std": 0.47081489639418445,
+  "final/diversity_stable_composition_l2_distance_min": 0.4596194077712559,
+  "final/diversity_stable_composition_l2_distance_mean": 0.848528137423857,
+  "final/diversity_stable_composition_l2_distance_max": 1.2727922061357855,
+  "final/diversity_stable_composition_l2_distance_std": 0.33291640592396965,
+  "final/diversity_stable_structure_unique_structure_count": 3.0,
+  "final/diversity_stable_structure_unique_structure_fraction": 1.0,
+  "final/diversity_stable_structure_spacegroup_entropy": -0.0,
+  "final/diversity_stable_structure_unique_spacegroups_count": 1.0,
+  "final/diversity_stable_structure_unique_spacegroups_fraction": 0.3333333333333333,
+  "final/diversity_stable_structure_lattice_parameter_variance": 9.240086898327391,
+  "final/diversity_stable_structure_amd_distance_min": 0.34701483799635735,
+  "final/diversity_stable_structure_amd_distance_mean": 1.9194912241937443,
+  "final/diversity_stable_structure_amd_distance_max": 2.715340830770568,
+  "final/novelty_unique_structure_count": 17.0,
+  "final/novelty_unique_structure_fraction": 0.85,
+  "final/novelty_novel_structure_count": 20.0,
+  "final/novelty_novel_structure_fraction": 1.0,
+  "final/novelty_stable_count": 3.0,
+  "final/novelty_stable_unique_count": 3.0,
+  "final/novelty_stable_novel_count": 3.0,
+  "final/novelty_stable_unique_novel_count": 3.0,
+  "final/novelty_stable_fraction": 0.15,
+  "final/novelty_stable_unique_fraction": 0.15,
+  "final/novelty_stable_novel_fraction": 0.15,
+  "final/novelty_stable_unique_novel_fraction": 0.15,
+  "final/convex_hull_e_above_hull_min": 0.0023230870564776573,
+  "final/convex_hull_e_above_hull_mean": 0.26123691723460246,
+  "final/convex_hull_e_above_hull_max": 0.5765250614711213,
+  "final/convex_hull_e_above_hull_std": 0.140439671329374,
+  "final/convex_hull_energy_per_atom_min": -4.484030914306641,
+  "final/convex_hull_energy_per_atom_max": -1.0818283081054687,
+  "final/convex_hull_energy_per_atom_mean": -3.003787544681913,
+  "final/convex_hull_energy_per_atom_std": 0.8199116601909494,
+  "final/convex_hull_formation_energy_per_atom_min": -0.29371609157986117,
+  "final/convex_hull_formation_energy_per_atom_max": 0.16701018810272217,
+  "final/convex_hull_formation_energy_per_atom_mean": -0.12897524161944315,
+  "final/convex_hull_formation_energy_per_atom_std": 0.1704248200491841,
+  "final/convex_hull_stable_fraction": 0.15,
+  "final/convex_hull_stable_count": 3.0,
+  "final/discovery_curve_area_under_discovery_curve": 36.5,
+  "final/discovery_curve_area_under_discovery_curve_normalized": 0.1825,
+  "final/discovery_curve_enhancement_factor": 0.0,
+  "final/discovery_curve_acceleration_factor": 0.0
+}
+[2026-10-26 23:06:54] [INFO] [__main__] Removed checkpoint file checkpoints\20261026_230231\episode_000\checkpoint.json after successful completion
+[2026-10-26 23:06:54] [INFO] [choreographer.browsers.chromium] Chromium init'ed with kwargs {}
+[2026-10-26 23:06:54] [INFO] [choreographer.browsers.chromium] Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+[2026-10-26 23:06:54] [INFO] [choreographer.utils._tmpfile] Temp directory created: C:\Users\User\AppData\Local\Temp\tmpa71b8yp7.
+[2026-10-26 23:06:54] [INFO] [choreographer.browser_async] Opening browser.
+[2026-10-26 23:06:54] [INFO] [choreographer.utils._tmpfile] Temp directory created: C:\Users\User\AppData\Local\Temp\tmplbnkb8mc.
+[2026-10-26 23:06:54] [INFO] [choreographer.browsers.chromium] Temporary directory at: C:\Users\User\AppData\Local\Temp\tmplbnkb8mc
+[2026-10-26 23:06:54] [INFO] [kaleido.kaleido] Conforming 1 to file:///C:/Users/User/AppData/Local/Temp/tmpa71b8yp7/index.html
+[2026-10-26 23:06:54] [INFO] [kaleido.kaleido] Waiting on all navigates
+[2026-10-26 23:06:55] [INFO] [kaleido.kaleido] All navigates done, putting them all in queue.
+[2026-10-26 23:06:55] [INFO] [kaleido.kaleido] Getting tab from queue (has 1)
+[2026-10-26 23:06:55] [INFO] [kaleido.kaleido] Got DEC9
+[2026-10-26 23:06:55] [INFO] [kaleido._kaleido_tab] Processing fig.png
+[2026-10-26 23:06:55] [INFO] [kaleido._kaleido_tab] Sending big command for fig.png.
+[2026-10-26 23:06:55] [INFO] [kaleido._kaleido_tab] Sent big command for fig.png.
+[2026-10-26 23:06:55] [INFO] [kaleido.kaleido] Reloading tab DEC9 before return.
+[2026-10-26 23:06:55] [INFO] [kaleido.kaleido] Putting tab DEC9 back (queue size: 0).
+[2026-10-26 23:06:55] [INFO] [kaleido.kaleido] Waiting for all cleanups to finish.
+[2026-10-26 23:06:55] [INFO] [kaleido.kaleido] Exiting Kaleido
+[2026-10-26 23:06:55] [INFO] [choreographer.browser_async] Closing browser.
+[2026-10-26 23:06:55] [INFO] [choreographer.browser_async] Closing browser.
+[2026-10-26 23:06:55] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-26 23:06:55] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-26 23:06:55] [INFO] [kaleido.kaleido] Cancelling tasks.
+[2026-10-26 23:06:55] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+[2026-10-26 23:06:56] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-26 23:06:56] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-26 23:06:56] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-26 23:06:56] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-26 23:06:56] [INFO] [kaleido.kaleido] Cancelling tasks.
+[2026-10-26 23:06:56] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+
+Running episodes: 100%|██████████| 1/1 [04:24<00:00, 264.47s/it]
+Running episodes: 100%|██████████| 1/1 [04:24<00:00, 264.47s/it]
+[2026-10-26 23:06:56] [INFO] [choreographer.browsers.chromium] Chromium init'ed with kwargs {}
+[2026-10-26 23:06:56] [INFO] [choreographer.browsers.chromium] Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+[2026-10-26 23:06:56] [INFO] [choreographer.utils._tmpfile] Temp directory created: C:\Users\User\AppData\Local\Temp\tmpfco7_1_p.
+[2026-10-26 23:06:56] [INFO] [choreographer.browser_async] Opening browser.
+[2026-10-26 23:06:56] [INFO] [choreographer.utils._tmpfile] Temp directory created: C:\Users\User\AppData\Local\Temp\tmpzqq4z83z.
+[2026-10-26 23:06:56] [INFO] [choreographer.browsers.chromium] Temporary directory at: C:\Users\User\AppData\Local\Temp\tmpzqq4z83z
+[2026-10-26 23:06:56] [INFO] [kaleido.kaleido] Conforming 1 to file:///C:/Users/User/AppData/Local/Temp/tmpfco7_1_p/index.html
+[2026-10-26 23:06:56] [INFO] [kaleido.kaleido] Waiting on all navigates
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] All navigates done, putting them all in queue.
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Getting tab from queue (has 1)
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Got 4A6A
+[2026-10-26 23:06:57] [INFO] [kaleido._kaleido_tab] Processing fig.png
+[2026-10-26 23:06:57] [INFO] [kaleido._kaleido_tab] Sending big command for fig.png.
+[2026-10-26 23:06:57] [INFO] [kaleido._kaleido_tab] Sent big command for fig.png.
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Reloading tab 4A6A before return.
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Putting tab 4A6A back (queue size: 0).
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Waiting for all cleanups to finish.
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Exiting Kaleido
+[2026-10-26 23:06:57] [INFO] [choreographer.browser_async] Closing browser.
+[2026-10-26 23:06:57] [INFO] [choreographer.browser_async] Closing browser.
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Cancelling tasks.
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Cancelling tasks.
+[2026-10-26 23:06:57] [INFO] [kaleido.kaleido] Exiting Kaleido/Choreo
+[2026-10-26 23:06:57] [INFO] [__main__] Summary results: {
+  "final/convex_hull_e_above_hull_max": {
+    "mean": 0.5765250614711213,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_e_above_hull_mean": {
+    "mean": 0.26123691723460246,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_e_above_hull_min": {
+    "mean": 0.0023230870564776573,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_e_above_hull_std": {
+    "mean": 0.140439671329374,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_energy_per_atom_max": {
+    "mean": -1.0818283081054687,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_energy_per_atom_mean": {
+    "mean": -3.003787544681913,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_energy_per_atom_min": {
+    "mean": -4.484030914306641,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_energy_per_atom_std": {
+    "mean": 0.8199116601909494,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_formation_energy_per_atom_max": {
+    "mean": 0.16701018810272217,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_formation_energy_per_atom_mean": {
+    "mean": -0.12897524161944315,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_formation_energy_per_atom_min": {
+    "mean": -0.29371609157986117,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_formation_energy_per_atom_std": {
+    "mean": 0.1704248200491841,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_stable_count": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/convex_hull_stable_fraction": {
+    "mean": 0.15,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_curve_acceleration_factor": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_curve_area_under_discovery_curve": {
+    "mean": 36.5,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_curve_area_under_discovery_curve_normalized": {
+    "mean": 0.1825,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_curve_enhancement_factor": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/discovery_efficiency": {
+    "mean": 0.85,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l1_distance_max": {
+    "mean": 1.9,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l1_distance_mean": {
+    "mean": 0.7742731829573936,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l1_distance_min": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l1_distance_std": {
+    "mean": 0.6048340738700287,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l2_distance_max": {
+    "mean": 1.3435028842544403,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l2_distance_mean": {
+    "mean": 0.4948879295602092,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l2_distance_min": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_l2_distance_std": {
+    "mean": 0.3904263588525852,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_unique_composition_count": {
+    "mean": 10.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_composition_unique_composition_fraction": {
+    "mean": 0.5,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_amd_distance_max": {
+    "mean": 12.100960911266704,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_amd_distance_mean": {
+    "mean": 3.312900530845528,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_amd_distance_min": {
+    "mean": 0.02706175684906853,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_lattice_parameter_variance": {
+    "mean": 15.990032327181119,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_spacegroup_entropy": {
+    "mean": 0.5181862130502128,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_unique_spacegroups_count": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_unique_spacegroups_fraction": {
+    "mean": 0.15,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_unique_structure_count": {
+    "mean": 17.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_all_structure_unique_structure_fraction": {
+    "mean": 0.85,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l1_distance_max": {
+    "mean": 1.7999999999999998,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l1_distance_mean": {
+    "mean": 1.2,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l1_distance_min": {
+    "mean": 0.6499999999999999,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l1_distance_std": {
+    "mean": 0.47081489639418445,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l2_distance_max": {
+    "mean": 1.2727922061357855,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l2_distance_mean": {
+    "mean": 0.848528137423857,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l2_distance_min": {
+    "mean": 0.4596194077712559,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_l2_distance_std": {
+    "mean": 0.33291640592396965,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_unique_composition_count": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_composition_unique_composition_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_amd_distance_max": {
+    "mean": 2.715340830770568,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_amd_distance_mean": {
+    "mean": 1.9194912241937443,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_amd_distance_min": {
+    "mean": 0.34701483799635735,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_lattice_parameter_variance": {
+    "mean": 9.240086898327391,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_spacegroup_entropy": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_unique_spacegroups_count": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_unique_spacegroups_fraction": {
+    "mean": 0.3333333333333333,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_unique_structure_count": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/diversity_stable_structure_unique_structure_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_novel_structure_count": {
+    "mean": 20.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_novel_structure_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_count": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_fraction": {
+    "mean": 0.15,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_novel_count": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_novel_fraction": {
+    "mean": 0.15,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_unique_count": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_unique_fraction": {
+    "mean": 0.15,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_unique_novel_count": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_stable_unique_novel_fraction": {
+    "mean": 0.15,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_unique_structure_count": {
+    "mean": 17.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/novelty_unique_structure_fraction": {
+    "mean": 0.85,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_correct_stable_formulas": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_correct_stable_structures": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_ground_truth_stable_formulas": {
+    "mean": 10.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_ground_truth_stable_structures": {
+    "mean": 28.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_gt_formulas_missing_initial": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_gt_structures_missing_initial": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_initial_structures": {
+    "mean": 28.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_newly_discovered_stable": {
+    "mean": 3.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_newly_discovered_structures": {
+    "mean": 17.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/num_observed_stable_formulas": {
+    "mean": 13.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/precision_formula": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/precision_structure": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/queries_used": {
+    "mean": 20.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/recall_formula": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/recall_structure": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/reference_composition_precision": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/reference_composition_recall": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/reference_structure_precision": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/reference_structure_recall": {
+    "mean": 0.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/stable_discovery_efficiency": {
+    "mean": 0.15,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_distance_and_smact_valid_count": {
+    "mean": 19.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_distance_and_smact_valid_fraction": {
+    "mean": 0.95,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_distance_valid_count": {
+    "mean": 19.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_distance_valid_fraction": {
+    "mean": 0.95,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_min_interatomic_distance_mean": {
+    "mean": 2.206296013352892,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_min_interatomic_distance_min": {
+    "mean": 0.21910403943142182,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_min_interatomic_distance_std": {
+    "mean": 1.0737486635010418,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_smact_valid_count": {
+    "mean": 20.0,
+    "std": 0.0,
+    "sem": 0.0
+  },
+  "final/validity_smact_valid_fraction": {
+    "mean": 1.0,
+    "std": 0.0,
+    "sem": 0.0
+  }
+}
+[2026-10-26 23:06:57] [INFO] [__main__] Saved results to results/protocol_v1/planning_off/dev/Au-K-Tb/seed_17/attempt_01 (episodes.json, episodes.csv, summary.json, trajectories/*.json)
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] TemporaryDirectory.cleanup() worked.
+[2026-10-26 23:06:57] [INFO] [choreographer.utils._tmpfile] shutil.rmtree worked.

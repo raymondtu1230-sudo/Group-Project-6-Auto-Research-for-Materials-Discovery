@@ -16,7 +16,7 @@ plug into slots M1's agent already had. All of M3's code is in
 | M1 | One-page design ([DESIGN.md](DESIGN.md)); code, settings and tests (`integration/`, merged by M1 in `2fcc214`) |
 | M1 | The bug fix, installed with `python M3/install.py --install` |
 | M2 | Result tables (`results/*.csv`) and results text (`report/M3_RESULTS.md`) |
-| M1, M2, M6 | The 54 frozen-agent runs (`m3_full` and the two assigned ablations), as complete result folders (`results/frozen_20261025/`) |
+| M1, M2, M6 | All 90 frozen-agent runs as complete result folders (`results/frozen_20261025/`): the assigned full-agent ablations `planning_off` and `self_correction_off` (vs `m1_full`), and the component study `m3_full`, `m3_planning_off`, `m3_self_correction_off` |
 | M6 | Method text (`report/M3_METHOD.md`), results text and slides (`report/`) |
 
 ## Notes for each teammate
@@ -39,16 +39,21 @@ plug into slots M1's agent already had. All of M3's code is in
 - Files for you: `results/m3_ablation_runs.csv` (one row per run) and
   `results/m3_ablation_summary.csv` (one row per version), plus
   `report/M3_RESULTS.md`.
-- M3's runs keep tool routing off and use the default generator, so they do
-  not depend on your part.
-- **Frozen-agent runs:** `results/frozen_20261025/protocol_v1/` holds the 54
-  `m3_full`, `m3_planning_off` and `m3_self_correction_off` runs in M1's
-  reference layout (resolved config, M4 log, run logs,
-  `m2_metrics_history.json`, SHA-256 manifest). `M2/evaluate.py` validates all
-  54 with no issues. Pair the ablations with `m3_full`, not `m1_full`:
-  exploration and routing are off in all M3 methods.
-- **Full-agent `planning_off` / `self_correction_off`:** not part of M3's
-  assignment (which covers the `m3_*` methods); M1/M6 to decide who runs them.
+- **M3's assigned ablations:** `results/frozen_20261025/protocol_v1/planning_off`
+  and `.../self_correction_off`, 18 runs each, are `m1_full` with only that
+  part off (memory, exploration and routing on, same Chemeleon archive). Pair
+  them with M1's `m1_full` reference: planning_off 5.28 vs 10.00 mSUN@20
+  (15 / 2 / 1, sign p = 0.001); self_correction_off 9.50 vs 10.00 (8 / 2 / 8,
+  p = 1.0).
+- **Component study:** the same folder holds `m3_full`, `m3_planning_off` and
+  `m3_self_correction_off` (exploration and routing off). Pair those with
+  `m3_full`, not `m1_full`.
+- All 90 runs are in M1's reference layout (resolved config, M4 and M5 logs,
+  run logs, `m2_metrics_history.json`, SHA-256 manifest), and `M2/evaluate.py`
+  validates all 90 with no issues.
+- The component-study tables in `results/*.csv` come from development runs
+  with tool routing off and the default generator, so they do not depend on
+  your part.
 
 ### M4 (memory)
 
@@ -74,10 +79,13 @@ plug into slots M1's agent already had. All of M3's code is in
 
 ### M6 (protocol, report, slides)
 
-- M3 compares against `m1_baseline` re-run with the same setup as the M3
-  versions (M4 memory on in all of them). Per `PROTOCOL_ADOPTION.md` section 5,
-  this goes in the **"component vs M1 reference"** table, separate from the
-  frozen agent's ablation table. `M3_RESULTS.md` is titled that way.
+- **Frozen agent's ablation table:** M3's assigned `planning_off` and
+  `self_correction_off` (vs `m1_full`) belong here. Planning: 10.00 → 5.28
+  mSUN@20, lower in 15 of 18 pairs (p = 0.001). Self-correction: 10.00 → 9.50,
+  no measurable effect (8 / 2 / 8).
+- **Component study:** the `m3_*` methods compare against `m3_full` (and the
+  development study against `m1_baseline`). Per `PROTOCOL_ADOPTION.md`
+  section 5, these go in the separate **"component vs M1 reference"** table.
 - **Planner in the frozen agent:** `m1_full` and every `*_off` version use the
   M3 planner; only `m1_baseline` keeps `diversity`. So the memory test runs
   with a planner that reads memory.
@@ -115,6 +123,17 @@ numbers exactly in all 18 pairs. Evidence:
 
 M3 helps on hard systems and loses on easy ones; the explanation is in
 `report/M3_RESULTS.md`, section "Why".
+
+## Results on the frozen agent
+
+| Method (18 runs each) | mSUN@20 | Compared with | Better / same / worse |
+| --- | --- | --- | --- |
+| `planning_off` | 5.28 | `m1_full` 10.00 | `m1_full` better in 15 / 2 / 1 (p = 0.001) |
+| `self_correction_off` | 9.50 | `m1_full` 10.00 | 8 / 2 / 8 (p = 1.0) |
+| `m3_planning_off` | 5.11 | `m3_full` 6.50 | identical to the development runs |
+| `m3_self_correction_off` | 5.83 | `m3_full` 6.50 | identical to the development runs |
+
+Details and folder layout: [results/frozen_20261025/README.md](results/frozen_20261025/README.md).
 
 ## Checks (`main` at `24d29d8`, run from `M1/MADE`)
 

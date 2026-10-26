@@ -1,0 +1,174 @@
+﻿0 of 1 runs already completed; 1 to run
+jobs=1 threads_per_run=default
+[1/1] start planning_off Mg-Sn-Sr seed 17 attempt 1
+    planning_off Mg-Sn-Sr 17: 026-10-26 22:42:48] [INFO] [made.agents.m3_planning] M3 re-plan: query=3 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Mg1']
+    planning_off Mg-Sn-Sr 17: 026-10-26 22:43:07] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr5 Mg10']
+    planning_off Mg-Sn-Sr 17: 026-10-26 22:43:21] [INFO] [made.agents.m3_planning] M3 re-plan: query=9 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg19 Sn1']
+    planning_off Mg-Sn-Sr 17: 26-10-26 22:43:34] [INFO] [made.agents.m3_planning] M3 re-plan: query=12 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg1 Sn19']
+    planning_off Mg-Sn-Sr 17: 26-10-26 22:43:52] [INFO] [made.agents.m3_planning] M3 re-plan: query=15 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Sn1']
+    planning_off Mg-Sn-Sr 17: 26-10-26 22:44:04] [INFO] [made.agents.m3_planning] M3 re-plan: query=18 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr1 Mg19']
+[1/1] ok: planning_off Mg-Sn-Sr seed 17 in 259s
+All runs completed. Next: uv run python ../../M3/summarize_ablations.py
+1 of 36 runs already completed; 35 to run
+jobs=3 threads_per_run=5
+[1/35] start self_correction_off Mg-Sn-Sr seed 17 attempt 1
+[2/35] start planning_off Mg-Sn-Sr seed 29 attempt 1
+[3/35] start self_correction_off Mg-Sn-Sr seed 29 attempt 1
+    planning_off Mg-Sn-Sr 29: 2026-10-26 22:48:34] [INFO] [made.agents.m3_planning] M3 re-plan: query=5 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr4 Sn7']
+    planning_off Mg-Sn-Sr 29: 026-10-26 22:48:50] [INFO] [made.agents.m3_planning] M3 re-plan: query=8 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg19 Sn1']
+    planning_off Mg-Sn-Sr 29: 26-10-26 22:49:21] [INFO] [made.agents.m3_planning] M3 re-plan: query=11 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Mg1']
+    planning_off Mg-Sn-Sr 29: 26-10-26 22:49:51] [INFO] [made.agents.m3_planning] M3 re-plan: query=14 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg1 Sn19']
+    planning_off Mg-Sn-Sr 29: 26-10-26 22:50:28] [INFO] [made.agents.m3_planning] M3 re-plan: query=17 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr1 Mg19']
+[2/35] ok: planning_off Mg-Sn-Sr seed 29 in 353s
+[4/35] start planning_off Mg-Sn-Sr seed 43 attempt 1
+    planning_off Mg-Sn-Sr 43: 026-10-26 22:56:32] [INFO] [made.agents.m3_planning] M3 re-plan: query=7 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr1 Mg19']
+    planning_off Mg-Sn-Sr 43: 26-10-26 22:57:05] [INFO] [made.agents.m3_planning] M3 re-plan: query=10 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Sn1']
+    planning_off Mg-Sn-Sr 43: 26-10-26 22:57:33] [INFO] [made.agents.m3_planning] M3 re-plan: query=13 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg1 Sn19']
+    planning_off Mg-Sn-Sr 43: 26-10-26 22:58:05] [INFO] [made.agents.m3_planning] M3 re-plan: query=16 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Mg19 Sn1']
+    planning_off Mg-Sn-Sr 43: 26-10-26 22:58:37] [INFO] [made.agents.m3_planning] M3 re-plan: query=19 reason=repetition level=1 before=['Sr1 Mg1 Sn1'] after=['Sr19 Mg1']
+[4/35] ok: planning_off Mg-Sn-Sr seed 43 in 465s
+[5/35] start self_correction_off Mg-Sn-Sr seed 43 attempt 1
+[1/35] ok: self_correction_off Mg-Sn-Sr seed 17 in 1052s
+[6/35] start planning_off Au-K-Tb seed 17 attempt 1
+    planning_off Au-K-Tb 17: [2026-10-26 23:03:32] [INFO] [made.agents.m3_planning] M3 re-plan: query=3 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K19 Au1']
+    planning_off Au-K-Tb 17: [2026-10-26 23:03:59] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Tb19']
+    planning_off Au-K-Tb 17: [2026-10-26 23:04:30] [INFO] [made.agents.m3_planning] M3 re-plan: query=9 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Tb19']
+[3/35] ok: self_correction_off Mg-Sn-Sr seed 29 in 1128s
+[7/35] start self_correction_off Au-K-Tb seed 17 attempt 1
+    planning_off Au-K-Tb 17: 2026-10-26 23:04:53] [INFO] [made.agents.m3_planning] M3 re-plan: query=12 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['K1 Au19']
+    planning_off Au-K-Tb 17: 2026-10-26 23:05:54] [INFO] [made.agents.m3_planning] M3 re-plan: query=15 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K19 Tb1']
+    planning_off Au-K-Tb 17: 026-10-26 23:06:17] [INFO] [made.agents.m3_planning] M3 re-plan: query=18 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['Tb19 Au1']
+[6/35] ok: planning_off Au-K-Tb seed 17 in 277s
+[8/35] start planning_off Au-K-Tb seed 29 attempt 1
+    planning_off Au-K-Tb 29: [2026-10-26 23:08:14] [INFO] [made.agents.m3_planning] M3 re-plan: query=5 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Tb19']
+    planning_off Au-K-Tb 29: [2026-10-26 23:08:46] [INFO] [made.agents.m3_planning] M3 re-plan: query=8 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['Tb4 Au7']
+    planning_off Au-K-Tb 29: 2026-10-26 23:09:13] [INFO] [made.agents.m3_planning] M3 re-plan: query=11 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['K19 Tb1']
+    planning_off Au-K-Tb 29: 026-10-26 23:09:54] [INFO] [made.agents.m3_planning] M3 re-plan: query=14 reason=repetition level=3 before=['K1 Tb1 Au1'] after=['Tb19 Au1']
+    planning_off Au-K-Tb 29: 2026-10-26 23:10:39] [INFO] [made.agents.m3_planning] M3 re-plan: query=17 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Au19']
+[8/35] ok: planning_off Au-K-Tb seed 29 in 305s
+[9/35] start self_correction_off Au-K-Tb seed 29 attempt 1
+[5/35] ok: self_correction_off Mg-Sn-Sr seed 43 in 790s
+[10/35] start planning_off Au-K-Tb seed 43 attempt 1
+    planning_off Au-K-Tb 43: [2026-10-26 23:14:22] [INFO] [made.agents.m3_planning] M3 re-plan: query=7 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Tb19']
+    planning_off Au-K-Tb 43: 026-10-26 23:14:55] [INFO] [made.agents.m3_planning] M3 re-plan: query=10 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['Tb1 Au19']
+    planning_off Au-K-Tb 43: 2026-10-26 23:15:46] [INFO] [made.agents.m3_planning] M3 re-plan: query=13 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K19 Tb1']
+    planning_off Au-K-Tb 43: 026-10-26 23:16:14] [INFO] [made.agents.m3_planning] M3 re-plan: query=16 reason=repetition level=2 before=['K1 Tb1 Au1'] after=['Tb19 Au1']
+    planning_off Au-K-Tb 43: 2026-10-26 23:17:01] [INFO] [made.agents.m3_planning] M3 re-plan: query=19 reason=repetition level=1 before=['K1 Tb1 Au1'] after=['K1 Au19']
+[7/35] ok: self_correction_off Au-K-Tb seed 17 in 780s
+[11/35] start self_correction_off Au-K-Tb seed 43 attempt 1
+[10/35] ok: planning_off Au-K-Tb seed 43 in 306s
+[12/35] start planning_off Co-Mg-Na seed 17 attempt 1
+    planning_off Co-Mg-Na 17: 026-10-26 23:19:23] [INFO] [made.agents.m3_planning] M3 re-plan: query=3 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na19 Co1']
+    planning_off Co-Mg-Na 17: 2026-10-26 23:20:12] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=repetition level=2 before=['Na1 Mg1 Co1'] after=['Na3 Mg6']
+    planning_off Co-Mg-Na 17: 026-10-26 23:20:38] [INFO] [made.agents.m3_planning] M3 re-plan: query=9 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Mg12 Co6']
+    planning_off Co-Mg-Na 17: 26-10-26 23:21:22] [INFO] [made.agents.m3_planning] M3 re-plan: query=12 reason=repetition level=2 before=['Na1 Mg1 Co1'] after=['Mg1 Co19']
+    planning_off Co-Mg-Na 17: 26-10-26 23:22:25] [INFO] [made.agents.m3_planning] M3 re-plan: query=15 reason=repetition level=3 before=['Na1 Mg1 Co1'] after=['Na19 Mg1']
+    planning_off Co-Mg-Na 17: 26-10-26 23:22:47] [INFO] [made.agents.m3_planning] M3 re-plan: query=18 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na1 Mg19']
+[12/35] ok: planning_off Co-Mg-Na seed 17 in 315s
+[13/35] start self_correction_off Co-Mg-Na seed 17 attempt 1
+[9/35] ok: self_correction_off Au-K-Tb seed 29 in 835s
+[14/35] start planning_off Co-Mg-Na seed 29 attempt 1
+    planning_off Co-Mg-Na 29: 2026-10-26 23:27:28] [INFO] [made.agents.m3_planning] M3 re-plan: query=5 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na7 Co4']
+    planning_off Co-Mg-Na 29: 2026-10-26 23:27:53] [INFO] [made.agents.m3_planning] M3 re-plan: query=8 reason=repetition level=2 before=['Na1 Mg1 Co1'] after=['Mg6 Co3']
+    planning_off Co-Mg-Na 29: 26-10-26 23:28:14] [INFO] [made.agents.m3_planning] M3 re-plan: query=11 reason=repetition level=3 before=['Na1 Mg1 Co1'] after=['Na1 Co19']
+    planning_off Co-Mg-Na 29: 26-10-26 23:29:30] [INFO] [made.agents.m3_planning] M3 re-plan: query=14 reason=repetition level=4 before=['Na1 Mg1 Co1'] after=['Na19 Co1']
+    planning_off Co-Mg-Na 29: 26-10-26 23:30:43] [INFO] [made.agents.m3_planning] M3 re-plan: query=17 reason=repetition level=5 before=['Na1 Mg1 Co1'] after=['Mg19 Co1']
+[14/35] ok: planning_off Co-Mg-Na seed 29 in 336s
+[15/35] start self_correction_off Co-Mg-Na seed 29 attempt 1
+[11/35] ok: self_correction_off Au-K-Tb seed 43 in 944s
+[16/35] start planning_off Co-Mg-Na seed 43 attempt 1
+[13/35] ok: self_correction_off Co-Mg-Na seed 17 in 660s
+[17/35] start self_correction_off Co-Mg-Na seed 43 attempt 1
+    planning_off Co-Mg-Na 43: 026-10-26 23:35:08] [INFO] [made.agents.m3_planning] M3 re-plan: query=7 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Mg19 Co1']
+    planning_off Co-Mg-Na 43: 26-10-26 23:35:46] [INFO] [made.agents.m3_planning] M3 re-plan: query=10 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na19 Co1']
+    planning_off Co-Mg-Na 43: 26-10-26 23:36:13] [INFO] [made.agents.m3_planning] M3 re-plan: query=13 reason=repetition level=2 before=['Na1 Mg1 Co1'] after=['Mg1 Co19']
+    planning_off Co-Mg-Na 43: 26-10-26 23:37:06] [INFO] [made.agents.m3_planning] M3 re-plan: query=16 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na1 Mg19']
+    planning_off Co-Mg-Na 43: 26-10-26 23:37:42] [INFO] [made.agents.m3_planning] M3 re-plan: query=19 reason=repetition level=1 before=['Na1 Mg1 Co1'] after=['Na19 Mg1']
+[16/35] ok: planning_off Co-Mg-Na seed 43 in 284s
+[18/35] start planning_off Hf-Ni-Zr seed 17 attempt 1
+    planning_off Hf-Ni-Zr 17: 026-10-26 23:39:49] [INFO] [made.agents.m3_planning] M3 re-plan: query=3 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Ni1']
+    planning_off Hf-Ni-Zr 17: 026-10-26 23:40:28] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=repetition level=2 before=['Hf1 Zr1 Ni1'] after=['Zr1 Ni19']
+    planning_off Hf-Ni-Zr 17: 026-10-26 23:41:00] [INFO] [made.agents.m3_planning] M3 re-plan: query=9 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf1 Zr19']
+    planning_off Hf-Ni-Zr 17: 26-10-26 23:41:40] [INFO] [made.agents.m3_planning] M3 re-plan: query=12 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr1 Ni19']
+    planning_off Hf-Ni-Zr 17: 26-10-26 23:43:30] [INFO] [made.agents.m3_planning] M3 re-plan: query=15 reason=repetition level=2 before=['Hf1 Zr1 Ni1'] after=['Hf19 Zr1']
+    planning_off Hf-Ni-Zr 17: 26-10-26 23:44:27] [INFO] [made.agents.m3_planning] M3 re-plan: query=18 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr19 Ni1']
+[18/35] ok: planning_off Hf-Ni-Zr seed 17 in 436s
+[19/35] start self_correction_off Hf-Ni-Zr seed 17 attempt 1
+[15/35] ok: self_correction_off Co-Mg-Na seed 29 in 948s
+[20/35] start planning_off Hf-Ni-Zr seed 29 attempt 1
+[17/35] ok: self_correction_off Co-Mg-Na seed 43 in 807s
+[21/35] start self_correction_off Hf-Ni-Zr seed 29 attempt 1
+    planning_off Hf-Ni-Zr 29: 026-10-26 23:49:12] [INFO] [made.agents.m3_planning] M3 re-plan: query=5 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr19 Ni1']
+    planning_off Hf-Ni-Zr 29: 2026-10-26 23:49:42] [INFO] [made.agents.m3_planning] M3 re-plan: query=8 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr4 Ni7']
+    planning_off Hf-Ni-Zr 29: 26-10-26 23:50:07] [INFO] [made.agents.m3_planning] M3 re-plan: query=11 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Ni1']
+    planning_off Hf-Ni-Zr 29: 26-10-26 23:50:51] [INFO] [made.agents.m3_planning] M3 re-plan: query=14 reason=repetition level=2 before=['Hf1 Zr1 Ni1'] after=['Zr19 Ni1']
+    planning_off Hf-Ni-Zr 29: 26-10-26 23:51:41] [INFO] [made.agents.m3_planning] M3 re-plan: query=17 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf1 Ni19']
+[20/35] ok: planning_off Hf-Ni-Zr seed 29 in 322s
+[22/35] start planning_off Hf-Ni-Zr seed 43 attempt 1
+    planning_off Hf-Ni-Zr 43: 026-10-26 23:55:21] [INFO] [made.agents.m3_planning] M3 re-plan: query=7 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr19 Ni1']
+    planning_off Hf-Ni-Zr 43: 26-10-26 23:56:00] [INFO] [made.agents.m3_planning] M3 re-plan: query=10 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Zr1']
+    planning_off Hf-Ni-Zr 43: 26-10-26 23:56:38] [INFO] [made.agents.m3_planning] M3 re-plan: query=13 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Zr1 Ni19']
+    planning_off Hf-Ni-Zr 43: 26-10-26 23:57:36] [INFO] [made.agents.m3_planning] M3 re-plan: query=16 reason=repetition level=2 before=['Hf1 Zr1 Ni1'] after=['Hf1 Zr19']
+    planning_off Hf-Ni-Zr 43: 26-10-26 23:58:33] [INFO] [made.agents.m3_planning] M3 re-plan: query=19 reason=repetition level=1 before=['Hf1 Zr1 Ni1'] after=['Hf19 Ni1']
+[22/35] ok: planning_off Hf-Ni-Zr seed 43 in 383s
+[23/35] start self_correction_off Hf-Ni-Zr seed 43 attempt 1
+[19/35] ok: self_correction_off Hf-Ni-Zr seed 17 in 893s
+[24/35] start planning_off Co-Dy-W seed 17 attempt 1
+    planning_off Co-Dy-W 17: 2026-10-27 00:01:30] [INFO] [made.agents.m3_planning] M3 re-plan: query=3 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy19 Co1']
+    planning_off Co-Dy-W 17: [2026-10-27 00:02:10] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Co1 W19']
+[21/35] ok: self_correction_off Hf-Ni-Zr seed 29 in 895s
+[25/35] start self_correction_off Co-Dy-W seed 17 attempt 1
+    planning_off Co-Dy-W 17: 2026-10-27 00:03:11] [INFO] [made.agents.m3_planning] M3 re-plan: query=9 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy1 Co19']
+    planning_off Co-Dy-W 17: 2026-10-27 00:03:47] [INFO] [made.agents.m3_planning] M3 re-plan: query=12 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy19 W1']
+    planning_off Co-Dy-W 17: 2026-10-27 00:04:25] [INFO] [made.agents.m3_planning] M3 re-plan: query=15 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Dy1 W19']
+    planning_off Co-Dy-W 17: 2026-10-27 00:05:10] [INFO] [made.agents.m3_planning] M3 re-plan: query=18 reason=repetition level=3 before=['Dy1 Co1 W1'] after=['Co19 W1']
+[24/35] ok: planning_off Co-Dy-W seed 17 in 346s
+[26/35] start planning_off Co-Dy-W seed 29 attempt 1
+    planning_off Co-Dy-W 29: [2026-10-27 00:07:34] [INFO] [made.agents.m3_planning] M3 re-plan: query=5 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy4 W7']
+    planning_off Co-Dy-W 29: [2026-10-27 00:08:04] [INFO] [made.agents.m3_planning] M3 re-plan: query=8 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Co19 W1']
+    planning_off Co-Dy-W 29: 2026-10-27 00:09:21] [INFO] [made.agents.m3_planning] M3 re-plan: query=11 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Co1 W19']
+    planning_off Co-Dy-W 29: 026-10-27 00:10:13] [INFO] [made.agents.m3_planning] M3 re-plan: query=14 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy19 Co1']
+[23/35] ok: self_correction_off Hf-Ni-Zr seed 43 in 676s
+[27/35] start self_correction_off Co-Dy-W seed 29 attempt 1
+    planning_off Co-Dy-W 29: 026-10-27 00:10:47] [INFO] [made.agents.m3_planning] M3 re-plan: query=17 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy1 Co19']
+[26/35] ok: planning_off Co-Dy-W seed 29 in 350s
+[28/35] start planning_off Co-Dy-W seed 43 attempt 1
+    planning_off Co-Dy-W 43: 2026-10-27 00:13:34] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=no_progress level=1 before=['Dy1 Co1 W1'] after=['Dy2 Co5']
+    planning_off Co-Dy-W 43: [2026-10-27 00:13:55] [INFO] [made.agents.m3_planning] M3 re-plan: query=9 reason=repetition level=2 before=['Dy1 Co1 W1'] after=['Dy19 W1']
+    planning_off Co-Dy-W 43: 2026-10-27 00:14:28] [INFO] [made.agents.m3_planning] M3 re-plan: query=12 reason=repetition level=3 before=['Dy1 Co1 W1'] after=['Dy1 W19']
+[25/35] ok: self_correction_off Co-Dy-W seed 17 in 733s
+[29/35] start self_correction_off Co-Dy-W seed 43 attempt 1
+    planning_off Co-Dy-W 43: 026-10-27 00:15:11] [INFO] [made.agents.m3_planning] M3 re-plan: query=15 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy1 Co19']
+    planning_off Co-Dy-W 43: 026-10-27 00:15:42] [INFO] [made.agents.m3_planning] M3 re-plan: query=18 reason=repetition level=1 before=['Dy1 Co1 W1'] after=['Dy19 Co1']
+[28/35] ok: planning_off Co-Dy-W seed 43 in 264s
+[30/35] start planning_off Ga-Pt-Tm seed 17 attempt 1
+    planning_off Ga-Pt-Tm 17: 026-10-27 00:18:12] [INFO] [made.agents.m3_planning] M3 re-plan: query=3 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Ga1']
+    planning_off Ga-Pt-Tm 17: 2026-10-27 00:18:51] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=repetition level=2 before=['Tm1 Ga1 Pt1'] after=['Tm2 Ga4']
+    planning_off Ga-Pt-Tm 17: 026-10-27 00:19:08] [INFO] [made.agents.m3_planning] M3 re-plan: query=9 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Ga19 Pt1']
+    planning_off Ga-Pt-Tm 17: 26-10-27 00:19:44] [INFO] [made.agents.m3_planning] M3 re-plan: query=12 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Pt1']
+    planning_off Ga-Pt-Tm 17: 26-10-27 00:20:31] [INFO] [made.agents.m3_planning] M3 re-plan: query=15 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Pt19']
+    planning_off Ga-Pt-Tm 17: 26-10-27 00:21:19] [INFO] [made.agents.m3_planning] M3 re-plan: query=18 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Ga19']
+[30/35] ok: planning_off Ga-Pt-Tm seed 17 in 347s
+[31/35] start self_correction_off Ga-Pt-Tm seed 17 attempt 1
+[27/35] ok: self_correction_off Co-Dy-W seed 29 in 959s
+[32/35] start planning_off Ga-Pt-Tm seed 29 attempt 1
+[29/35] ok: self_correction_off Co-Dy-W seed 43 in 695s
+[33/35] start self_correction_off Ga-Pt-Tm seed 29 attempt 1
+    planning_off Ga-Pt-Tm 29: 2026-10-27 00:28:27] [INFO] [made.agents.m3_planning] M3 re-plan: query=5 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm4 Pt7']
+    planning_off Ga-Pt-Tm 29: 026-10-27 00:28:51] [INFO] [made.agents.m3_planning] M3 re-plan: query=8 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Ga19 Pt1']
+    planning_off Ga-Pt-Tm 29: 26-10-27 00:29:44] [INFO] [made.agents.m3_planning] M3 re-plan: query=11 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Pt19']
+    planning_off Ga-Pt-Tm 29: 26-10-27 00:31:20] [INFO] [made.agents.m3_planning] M3 re-plan: query=14 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Ga1']
+    planning_off Ga-Pt-Tm 29: 26-10-27 00:31:53] [INFO] [made.agents.m3_planning] M3 re-plan: query=17 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Ga19']
+[32/35] ok: planning_off Ga-Pt-Tm seed 29 in 382s
+[34/35] start planning_off Ga-Pt-Tm seed 43 attempt 1
+    planning_off Ga-Pt-Tm 43: 026-10-27 00:35:14] [INFO] [made.agents.m3_planning] M3 re-plan: query=7 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm1 Ga19']
+    planning_off Ga-Pt-Tm 43: 26-10-27 00:36:00] [INFO] [made.agents.m3_planning] M3 re-plan: query=10 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Pt1']
+    planning_off Ga-Pt-Tm 43: 26-10-27 00:36:52] [INFO] [made.agents.m3_planning] M3 re-plan: query=13 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Ga1 Pt19']
+    planning_off Ga-Pt-Tm 43: 26-10-27 00:38:07] [INFO] [made.agents.m3_planning] M3 re-plan: query=16 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Ga19 Pt1']
+    planning_off Ga-Pt-Tm 43: 26-10-27 00:39:08] [INFO] [made.agents.m3_planning] M3 re-plan: query=19 reason=repetition level=1 before=['Tm1 Ga1 Pt1'] after=['Tm19 Ga1']
+[34/35] ok: planning_off Ga-Pt-Tm seed 43 in 414s
+[35/35] start self_correction_off Ga-Pt-Tm seed 43 attempt 1
+[31/35] ok: self_correction_off Ga-Pt-Tm seed 17 in 1091s
+[33/35] ok: self_correction_off Ga-Pt-Tm seed 29 in 1057s
+[35/35] ok: self_correction_off Ga-Pt-Tm seed 43 in 741s
+All runs completed. Next: uv run python ../../M3/summarize_ablations.py
