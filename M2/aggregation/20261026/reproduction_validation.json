@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "published_repository_ZIP_only_reproduction": true,
+  "final_output": "results_final",
+  "independent_numerical_outputs_identical_across_three_actual_executions": {
+    "per_method_summary.csv": true,
+    "per_system_summary.csv": true,
+    "paired_full_system_ablations.csv": true,
+    "aggregate_discovery_curve_data.csv": true,
+    "m3_historical_comparator_unvalidated.json": true
+  },
+  "script_sha256": "35ac9733a286d6d07e3d0cebf1eb172c67c3170735ce83348f8d052808dd2e26",
+  "source_hash_matches_recorded_final_provenance": true,
+  "output_manifest_entries_verified": 18,
+  "actual_M2_evaluator_validated_runs": 126,
+  "actual_M2_evaluator_issues": [],
+  "static_ruff_check": "All checks passed",
+  "new_scientific_runs": 0,
+  "new_oracle_queries": 0,
+  "published_canonical_output": "results",
+  "actual_execution_output_name": "results_final",
+  "preservation_note": "Original results_final was renamed to canonical results for publication; earlier computations remain preserved under M2 staging."
+}

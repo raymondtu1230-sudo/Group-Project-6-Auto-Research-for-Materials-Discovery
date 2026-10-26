@@ -1,0 +1,2430 @@
+{
+  "snapshot_commit": "95f9c8e38923ac494b1117a9b212702afdc5980f",
+  "M3_handoff_commit": "5d2efeadc19e1a6747aa4c0b6f473e8ed64c09fb",
+  "actual_complete_runs": 36,
+  "methods": {
+    "m3_planning_off": 18,
+    "m3_self_correction_off": 18
+  },
+  "completed_queries": 720,
+  "all_actual_run_protocol_and_snapshot_checks_pass": true,
+  "configuration_scientifically_valid_as": "M3 component-only ablations with M2 routing and M5 exploration disabled",
+  "valid_one_switch_comparator": "m3_full: planning=true,memory=true,reflection=true,exploration=false,tool_routing=false",
+  "invalid_comparator_for_isolated_component_effect": "m1_full: all five switches=true; each uploaded off arm changes three switches relative to it",
+  "counts_toward_assigned_frozen_full_single_switch_ablations": false,
+  "missing_assigned_frozen_full_methods": {
+    "planning_off": 18,
+    "self_correction_off": 18
+  },
+  "renaming_results_is_valid_remedy": false,
+  "m3_full_available_raw_metadata_inventory": [
+    {
+      "source": "M3/evidence/20261021-dev-ablations/traced-case-Co-Mg-Na-seed17/m3_full",
+      "started_at_utc": "2026-10-21T07:33:47.353173+00:00",
+      "repository_revision": "81b0e36ca41957058cc21bc0637f7e24521cc136",
+      "full_trajectory_present": false,
+      "summary_at_root_present": true,
+      "summary_in_standard_layout_present": false
+    }
+  ],
+  "m3_full_18_values_available_from_CSV": true,
+  "m3_full_18_complete_raw_runs_available": false,
+  "same_values_as_historical_csv_count": 36,
+  "source_fingerprint_files_per_run": 74,
+  "source_fingerprint_explanation": "All36 share74 exact fingerprint values. All74 map to frozen source bytes under LF-to-CRLF checkout conversion, with zero unexplained differences. Do not treat Windows line endings as scientific source edits.",
+  "histories_original_checkpoint_records": false,
+  "history_provenance": "All36 are explicitly reconstructed from at-query stable/novel flags and checked against final scores. M2 evaluator arithmetic success is not proof of original saved prefix history.",
+  "resolved_memory_provenance_mismatch_units": 36,
+  "memory_provenance_note": "Published resolved configs use m4-local, while all actual M4 evidence files record the unique per-method/system/seed attempt run ID. This is a packaging/resolution-context discrepancy, not evidence that memories were shared.",
+  "paired_AF_EF_in_M3_summary_valid": false,
+  "paired_AF_EF_note": "Stored zero AF/EF values are unpaired official default outputs. They are not paired baseline comparisons or zero-baseline conventions.",
+  "aggregation_note": "M3 summary std is across18 heterogeneous system-seed runs; M2 stage tables should consistently use sample SD across3 seed means, each equally averaging6 systems.",
+  "issues": [],
+  "aggregates": [
+    {
+      "method": "m3_full",
+      "units": 18,
+      "evidence_scope": "historical CSV only; not complete18 raw input folders",
+      "mSUN_mean": 6.5,
+      "mSUN_seed_sample_SD": 1.3017082793177757,
+      "AUDC_mean": 62.75,
+      "AUDC_seed_sample_SD": 9.028888820521239,
+      "seed_means": [
+        {
+          "seed": 17,
+          "mSUN_at_20": 8.0,
+          "AUDC": 73.16666666666667
+        },
+        {
+          "seed": 29,
+          "mSUN_at_20": 5.833333333333333,
+          "AUDC": 57.916666666666664
+        },
+        {
+          "seed": 43,
+          "mSUN_at_20": 5.666666666666667,
+          "AUDC": 57.166666666666664
+        }
+      ]
+    },
+    {
+      "method": "m3_planning_off",
+      "units": 18,
+      "evidence_scope": "36-unit frozen-source handoff; component-only profile",
+      "mSUN_mean": 5.111111111111111,
+      "mSUN_seed_sample_SD": 0.3469443332443556,
+      "AUDC_mean": 49.22222222222222,
+      "AUDC_seed_sample_SD": 4.514123925504793,
+      "seed_means": [
+        {
+          "seed": 17,
+          "mSUN_at_20": 5.0,
+          "AUDC": 47.0
+        },
+        {
+          "seed": 29,
+          "mSUN_at_20": 4.833333333333333,
+          "AUDC": 46.25
+        },
+        {
+          "seed": 43,
+          "mSUN_at_20": 5.5,
+          "AUDC": 54.416666666666664
+        }
+      ]
+    },
+    {
+      "method": "m3_self_correction_off",
+      "units": 18,
+      "evidence_scope": "36-unit frozen-source handoff; component-only profile",
+      "mSUN_mean": 5.833333333333333,
+      "mSUN_seed_sample_SD": 0.8819171036881965,
+      "AUDC_mean": 58.30555555555556,
+      "AUDC_seed_sample_SD": 7.782339931846642,
+      "seed_means": [
+        {
+          "seed": 17,
+          "mSUN_at_20": 6.833333333333333,
+          "AUDC": 67.25
+        },
+        {
+          "seed": 29,
+          "mSUN_at_20": 5.5,
+          "AUDC": 54.583333333333336
+        },
+        {
+          "seed": 43,
+          "mSUN_at_20": 5.166666666666667,
+          "AUDC": 53.083333333333336
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "method": "m3_planning_off",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:32:54.085402+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 3.0,
+      "AUDC": 34.5,
+      "wall_time_seconds": 265.891,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Au-K-Tb-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Au-K-Tb/seed_17/attempt_01",
+      "run_metadata_sha256": "5719dd6949a2b9a4b749a1c379c961d82d625cad74386c693cb646eb31c30dec",
+      "trajectory_sha256": "6eb7cba87c2e80ead33f1a585821b302151f66575f0e2c444e1070ac03ad15d7",
+      "resolved_config_sha256": "fc44cccffdddd5c095bfd140e563c306812dab130f4d502e98896b24e18a4e71",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:37:27.176434+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 5.0,
+      "AUDC": 45.5,
+      "wall_time_seconds": 257.0,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Au-K-Tb-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Au-K-Tb/seed_29/attempt_01",
+      "run_metadata_sha256": "e8739b84210a6d3ac9c15931dce040574a4d0bb5306c7e1be152bdc202cd3c96",
+      "trajectory_sha256": "a774fa8653521618a5494f79bc53aee7ecada2d0dee803ce7ce647301d0016fe",
+      "resolved_config_sha256": "9dd68bdb86193b1469738b164ed573838903cad4bec49646127507a08826cbe4",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:41:51.322472+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 2.0,
+      "AUDC": 14.0,
+      "wall_time_seconds": 582.64,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Au-K-Tb-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Au-K-Tb/seed_43/attempt_01",
+      "run_metadata_sha256": "2891ef19dd0f507284dd854f232129829e3d5c28bf9b848f15c3a545af6d37be",
+      "trajectory_sha256": "445e0d22002e066f8720fb8022fc2bec62b4f4b4fa7ce0352812d2835c207f29",
+      "resolved_config_sha256": "52e7b6189072ccdcb05d34c61447cc51e8710ba953192e6eb33c3ad4306e203e",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:22:35.197413+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 2.0,
+      "AUDC": 20.0,
+      "wall_time_seconds": 372.516,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Co-Dy-W-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Dy-W/seed_17/attempt_01",
+      "run_metadata_sha256": "78d5d751f54a96e2c7720144db39db80c3a35686a03f8bb63a86da667608ce0a",
+      "trajectory_sha256": "50ad6ca5b981c7d102ca130aef40f7aa62e567bc3a259495901c1b2a5cb5533e",
+      "resolved_config_sha256": "caa5f4ed3e431126c7480b22868b9679f1bc9aada65f4fd3f162075dc0ab17d1",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:28:54.641969+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 1.0,
+      "AUDC": 14.5,
+      "wall_time_seconds": 617.141,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Co-Dy-W-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Dy-W/seed_29/attempt_01",
+      "run_metadata_sha256": "db953a26326b934af25a8b9960eb8e5c3c7436fb35d29e6252e6f7349c21ea61",
+      "trajectory_sha256": "b6b3e4f35ff4e6d9fd4d92082c09a496bb37374bdbedbb48d92266559df6181d",
+      "resolved_config_sha256": "434e29f4b79fc76038e1ed92a3267b9f7ad26dfaa22ed3e1c01d103cc0347498",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:33:41.483683+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 2.0,
+      "AUDC": 11.0,
+      "wall_time_seconds": 522.422,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Co-Dy-W-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Dy-W/seed_43/attempt_01",
+      "run_metadata_sha256": "1764f7aace3851b569e7117461ddd999767b6e8f91e7470202928bd61cc38396",
+      "trajectory_sha256": "d253f06d4944af328502fc02ddceecb2d0452a8618aaa8437f68fe7fd3b37348",
+      "resolved_config_sha256": "1198242b93bc9518449763225a9d271363d647fd19928504dd7ea7e5ef110e7e",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:48:37.969067+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 3.0,
+      "AUDC": 37.5,
+      "wall_time_seconds": 358.266,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Co-Mg-Na-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Mg-Na/seed_17/attempt_01",
+      "run_metadata_sha256": "11d584464c6ec8e4fd05462c22cb5b2cc77c71e76b248139f97894740786b87e",
+      "trajectory_sha256": "bf7d8162b44d08624fa00bc9bd5e4e44c180cd921513de1cdd287ad88f52675d",
+      "resolved_config_sha256": "f5fd841c9956a70467d659ba165e85158330d95c6d1ccee168f1f3997df0f8b9",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:54:41.194640+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 4.0,
+      "AUDC": 28.0,
+      "wall_time_seconds": 354.672,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Co-Mg-Na-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Mg-Na/seed_29/attempt_01",
+      "run_metadata_sha256": "ea6fbc50c1b303f19a95441505c74003fd7bc1a3c68d9d51315c1beaf75e657c",
+      "trajectory_sha256": "bbd663afb0c6493af78844201e61ed24e4f4799a2ae5815558d82c7e33d6e5a8",
+      "resolved_config_sha256": "02fde8042ad12d432308a6a5c5f08ca747dc0d2f2f16d5a8a8e12c2505032cf9",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:00:01.442158+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 4.0,
+      "AUDC": 40.0,
+      "wall_time_seconds": 329.937,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Co-Mg-Na-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Mg-Na/seed_43/attempt_01",
+      "run_metadata_sha256": "fc632c9e52c971743bc0878c00383898df11ef6ba82bcbe2a4563395b8c545b9",
+      "trajectory_sha256": "0cb856810fbeb9392f83d85ad43da93595abfc04f92aff10e92bcbb04a1ea567",
+      "resolved_config_sha256": "92615d6b33127517cb9815cb38fc90ac4bd55aae2d2f790917a3dea7a717bbe6",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:42:29.765268+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 5.0,
+      "AUDC": 47.5,
+      "wall_time_seconds": 364.859,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Ga-Pt-Tm-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "run_metadata_sha256": "5629759ae3dba41617773b804b9a40aa7600a97ad749eff92a20d906856d20ca",
+      "trajectory_sha256": "ace375f9c6b6ad3ee9a1327e44a1b39625cbb358d66ec7d07ab0c149cd81e63c",
+      "resolved_config_sha256": "87a82a4d41c3748d13422cfc5b1fd844dee325cf2d23a24f9c21b69751db1a4f",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:48:40.079878+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 6.0,
+      "AUDC": 57.0,
+      "wall_time_seconds": 424.047,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Ga-Pt-Tm-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "run_metadata_sha256": "8fe91adae491f1d07f22093e1f1eb965ef387a7d050d00d8a6bafe4d3a66fd88",
+      "trajectory_sha256": "c796eaa223c801b2bf9504ef54c83cef2e5edcb3db1bca0a7dc245b5e655d663",
+      "resolved_config_sha256": "c2516a7723527b31287e45a524f4a7f74e30a3db7a8bfeb130b5f454bfa22687",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:55:51.153000+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 11.0,
+      "AUDC": 110.5,
+      "wall_time_seconds": 455.922,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Ga-Pt-Tm-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "run_metadata_sha256": "ea74a1f9f437eb67aeef52fcc98e7eea45d66559a176f35eb42507fbb5f68d0f",
+      "trajectory_sha256": "3d9dc40608628ea958ec23b40d0c6bd25e6a658aa70d768f83a450919ca9e673",
+      "resolved_config_sha256": "6ec2da1967dc0554434df38a64cf30af0cd3729049fe834d4b184eef0ac76dca",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:05:38.294602+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 11.0,
+      "AUDC": 82.5,
+      "wall_time_seconds": 367.89,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Hf-Ni-Zr-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "run_metadata_sha256": "8ed750008a56d088d0fba6308e362355f3177fa8cd1a6b36e5762a762bdecb92",
+      "trajectory_sha256": "968dc4d8163a3eaef7cfd9cc8b41699fbc293e309037aaf7861fe9b42d033df3",
+      "resolved_config_sha256": "445dac95a615ba9ea16d073b6ffd0a903f9e1169b1bbf67f8021ff08491f3721",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:11:46.378126+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 8.0,
+      "AUDC": 75.0,
+      "wall_time_seconds": 475.766,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Hf-Ni-Zr-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "run_metadata_sha256": "b0dbf962552552fd2f11ba6e136b140ec22ae7919135dfc37a644a91d862144e",
+      "trajectory_sha256": "8ebff1d0bf6b305be17d1f538474ff60bad31d760b9017ed5a135d1ee4cf28a6",
+      "resolved_config_sha256": "9e22866a7b5a1ebb8bf133f8dca6371c450f14b6c5b788ca68359eb20006c63d",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:16:24.796302+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 9.0,
+      "AUDC": 96.5,
+      "wall_time_seconds": 363.515,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Hf-Ni-Zr-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "run_metadata_sha256": "cb22dee2f6459015fc541aff09f8c6f83e68c802dcfee04e9bda871049cbca1b",
+      "trajectory_sha256": "5b16b2d8dc02dde18596cd01f9fa8cd1ac34e66409b2385c87bd890a9c41890d",
+      "resolved_config_sha256": "d1faddeaeff7ab437d89af743083822524655352ebfe24a96ed4b53bd908e4c0",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:11:37.542125+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 6.0,
+      "AUDC": 60.0,
+      "wall_time_seconds": 364.766,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Mg-Sn-Sr-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+      "run_metadata_sha256": "d1e154405255eac18e84d4d1c26981765ffe1f02b9b7d7b07351f03bf140b0d2",
+      "trajectory_sha256": "0e748af17072236dae47296f8b3727807716a078683c7023ddcf84fc94ffda1f",
+      "resolved_config_sha256": "8e208de08c49c24ceebe66e0ce6b22d6d451d63d82261eb3b0abf326532b8ba8",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:12:38.824049+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 5.0,
+      "AUDC": 57.5,
+      "wall_time_seconds": 633.109,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Mg-Sn-Sr-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+      "run_metadata_sha256": "aa45e22de715e0a40e39fc4ea3c8d59c9fc963754d4c9474e9d6432645533a9c",
+      "trajectory_sha256": "f2d2eba8d6028d7dde260eac6d8b7b57f2616a885940c950e002520191976cbb",
+      "resolved_config_sha256": "5c1f4bcdc8bd1ba7df71143b8d56fe6ce986ff2a359c18e4f244ce057b7a7cbf",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057"
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:22:31.814550+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": false,
+        "enable_memory": true,
+        "enable_reflection": true,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 5.0,
+      "AUDC": 54.5,
+      "wall_time_seconds": 649.141,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_planning_off-Mg-Sn-Sr-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "run_metadata_sha256": "5c14fb20284e211c188ced6853fb26803925a89d9fc82c5cb100681b19355f95",
+      "trajectory_sha256": "a5dbb60ab5291d9aa7e942ea29fd4596919dd03c2532d95410ac37201150a942",
+      "resolved_config_sha256": "63fb3f66ca2972f111aae6314466f773a2c02afb0d84581a483d5b95866a1855",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:33:27.795730+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 11.0,
+      "AUDC": 99.5,
+      "wall_time_seconds": 702.391,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Au-K-Tb-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Au-K-Tb/seed_17/attempt_01",
+      "run_metadata_sha256": "919ba0f38e3f66f64bfb1fc189a0bf4c28f322094fd223f23adb627a9da8678e",
+      "trajectory_sha256": "015bae186707f232023ca71a301feeb95d43fd7f4be7ff8e26c6c82397c676d0",
+      "resolved_config_sha256": "14a2a1a4a3ebef5cadd5a670b802b7727266bef84aff8548adaf2f60876a39c4",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:39:50.059227+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 8.0,
+      "AUDC": 75.0,
+      "wall_time_seconds": 520.766,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Au-K-Tb-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Au-K-Tb/seed_29/attempt_01",
+      "run_metadata_sha256": "32a998a67e8431c09d7a86dd0aec1a9c23fc834efed4bb46650191cc0289e4e2",
+      "trajectory_sha256": "a4c15cd718bb62af4d997dac2a01303df367d14f04381414255d93a47066d3de",
+      "resolved_config_sha256": "a7922bd10aa3c67e65944cba54258b348a95a25ff1812376ce09283ec6598411",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:45:17.290620+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 11.0,
+      "AUDC": 93.5,
+      "wall_time_seconds": 558.375,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Au-K-Tb-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Au-K-Tb/seed_43/attempt_01",
+      "run_metadata_sha256": "f533aafad74264abe2c1facc353718b19bd39581695a5bd815718443b676a2cf",
+      "trajectory_sha256": "da5c002a2a18d757e8315e6dc41714e5b385f8a4290b0806406799e2545ef129",
+      "resolved_config_sha256": "93397a05717c2d560b7fd37dd4755bd3808ce4650db56938ad4916b25549d519",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:23:57.608637+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 9.0,
+      "AUDC": 103.5,
+      "wall_time_seconds": 576.922,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Co-Dy-W-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Dy-W/seed_17/attempt_01",
+      "run_metadata_sha256": "58549ca86c37d49c8dbaea2acc173ea8123b7ea1cc09856197f5bba623e26728",
+      "trajectory_sha256": "25a0b50349df32690382885e585e1362018c0462d072cb5f01641f04cad877b8",
+      "resolved_config_sha256": "00b1a65407be2d8bbfc5bddae00b32cac007db1e480cf8695b69ae5140120980",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:31:00.304780+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 4.0,
+      "AUDC": 59.0,
+      "wall_time_seconds": 686.735,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Co-Dy-W-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Dy-W/seed_29/attempt_01",
+      "run_metadata_sha256": "a92dfb57547977a2c4a9065f2017b961e1a253117804f568334403a5416428cf",
+      "trajectory_sha256": "b10930c953b6129084fc9e86255c4062b4d1f7c06d01284489f01427517cced0",
+      "resolved_config_sha256": "4139a976337ac1dd83e225c67aa189792e3e4b0edc5d9fb2a0666461ff683377",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:39:18.616853+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 4.0,
+      "AUDC": 60.0,
+      "wall_time_seconds": 556.344,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Co-Dy-W-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Dy-W/seed_43/attempt_01",
+      "run_metadata_sha256": "c6661c38c0be74e5fb2dcc6589f715c62f008f08895beae6a6aa8400c4f56ef5",
+      "trajectory_sha256": "cd439e6aab4c8cd18cc9d72521924d962ba76f64144876646b2e62a9aa081c2f",
+      "resolved_config_sha256": "91e3532c74626161aa2d708480b27139324d0fa7f1adca7064eca649b20debe4",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:51:41.086675+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 3.0,
+      "AUDC": 13.5,
+      "wall_time_seconds": 493.484,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Co-Mg-Na-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Mg-Na/seed_17/attempt_01",
+      "run_metadata_sha256": "10d91afab3b1e619610e6e433ddff16f244b2a1688e51e127973e32e58d83032",
+      "trajectory_sha256": "69de839a8a72df32129535119d5d332f9eb78bd4aa0aefc2de3b5f40537b5c38",
+      "resolved_config_sha256": "8b9662c102af0e6a7a7dd5679f5ca548cc99947517bec44c48a81666259dfde0",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:55:12.214378+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 0.0,
+      "AUDC": 0.0,
+      "wall_time_seconds": 666.218,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Co-Mg-Na-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Mg-Na/seed_29/attempt_01",
+      "run_metadata_sha256": "b4a4b060c6cda2691fd28c3414a8372c6de9aa4973314f5a8a39bdcfe862de91",
+      "trajectory_sha256": "eb7ea158195289296306599ab6c0a020b0e6c3398548bbd83141fe22ba7b0884",
+      "resolved_config_sha256": "1573cfe956669eb2fea981ee79b65bda4877c0ed995bdbac6182859e6265a97c",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:00:42.635880+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 0.0,
+      "AUDC": 0.0,
+      "wall_time_seconds": 657.375,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Co-Mg-Na-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Mg-Na/seed_43/attempt_01",
+      "run_metadata_sha256": "fd5ead5cd0ee330f18c4f2c553d13ed1dafd54b24b6e3f98fe406447ea85b2d0",
+      "trajectory_sha256": "e19c047b81630932565fca871de9f7e2766ac054000856574848b773131db927",
+      "resolved_config_sha256": "b8b38258d48a73846d2c46efa5fea824b24379479b87e4261e48677e6b2c3730",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:43:00.607027+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 5.0,
+      "AUDC": 64.5,
+      "wall_time_seconds": 858.516,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Ga-Pt-Tm-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "run_metadata_sha256": "31af0065442922ca9b608d5dc449d342e9514b1bf8e7bab82ef810561b2c6184",
+      "trajectory_sha256": "4ae30ae8bd35bdaac9961aa9b0410dadbb77210dcbdb17d8998d57280ca6ddfa",
+      "resolved_config_sha256": "21d5b906a0d5c28168629167fd476aae16225539e89f5074fc0687ea3ccbc7c9",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:49:11.337796+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 9.0,
+      "AUDC": 101.5,
+      "wall_time_seconds": 843.203,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Ga-Pt-Tm-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "run_metadata_sha256": "ec5b460dbdbc5903fabc7c95659a1d64e837e7beed5b784f3fb74900df2a7cae",
+      "trajectory_sha256": "80c980dc8da973555ab381befba3550be9f024ab751d0df844b5dd55e1395820",
+      "resolved_config_sha256": "1a12038b93065f11bcfe91a0a4dbe6fd864a0e2e4c0b706525757cb0d66e51bd",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:57:26.098415+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 5.0,
+      "AUDC": 57.5,
+      "wall_time_seconds": 589.828,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Ga-Pt-Tm-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "run_metadata_sha256": "62dcb85bacf69a4ae91b30d80541306610217c139370a0df8e880213266be0f5",
+      "trajectory_sha256": "4dc102eb2cd6287d72bba6bee99300b110d08828b080eeaa83a4f4c4c5a7ed99",
+      "resolved_config_sha256": "3a54b1d7e2be7773e15c28d479fd2a81ce25555b3c224c01b33503563320b2ac",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:06:25.340345+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 7.0,
+      "AUDC": 58.5,
+      "wall_time_seconds": 592.343,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Hf-Ni-Zr-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "run_metadata_sha256": "6dcf007d258b6a8f7d0b42faa3f8d3ee8ddca06223968f1f9c582bcad8d8fbab",
+      "trajectory_sha256": "cee783d368eb9683c92f5202b64ed4057cbce13754e5c5d18da6cdf06d3cb211",
+      "resolved_config_sha256": "c619d63bb17a9a576284cbc6ba64ed32212869fe98b146c795301615add99c1b",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:12:16.836647+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 5.0,
+      "AUDC": 37.5,
+      "wall_time_seconds": 693.906,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Hf-Ni-Zr-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "run_metadata_sha256": "d822880ffd9415db3121f2bc26394db39f50dc0fcf88022d7bfa552ded3a56bd",
+      "trajectory_sha256": "8f7d92128c3ad5337215e041479d45864c0838db2dcccb1b1375d5dff8213ebf",
+      "resolved_config_sha256": "26e2d9bacc11a6b6143dcd3f26431dca910363d8486df24921b8d27bbea37e4a",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T15:19:49.113997+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 5.0,
+      "AUDC": 36.5,
+      "wall_time_seconds": 664.281,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Hf-Ni-Zr-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "run_metadata_sha256": "e197fcfcda76d716e70b90616c20a56abe4efae5694dd2fedf5d52ab55298efe",
+      "trajectory_sha256": "35684120460a66b3d86c85e11b07f3a0c7b04baec09f31efc4784be9dbb06373",
+      "resolved_config_sha256": "5d9a9d0c96b1bc75e05a9687be3195a50287b1ac5ae88a47836073f05345d641",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:12:07.461697+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 6.0,
+      "AUDC": 64.0,
+      "wall_time_seconds": 616.922,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Mg-Sn-Sr-seed17-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+      "run_metadata_sha256": "a27b8cda15110c01100f68982fdb66b708f0ad5207c05c89bf6143c61563052e",
+      "trajectory_sha256": "64920dc7997802cb5c5f9558007b97687623bcc7ebb517beacb2c346706fdc7c",
+      "resolved_config_sha256": "5718d913057e00e21a0315c8ced1304bc4c0c3886e4a1ef59da6471236959eba",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:18:03.560475+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 7.0,
+      "AUDC": 54.5,
+      "wall_time_seconds": 882.422,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Mg-Sn-Sr-seed29-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+      "run_metadata_sha256": "3ce49a94f1365ddfb77b6f8a82a24f0aa89cdb2d6b687dcb1914f0bd2a380b77",
+      "trajectory_sha256": "3b2852e97d7a7e26ff4e75be6ac5cb79514fa5b539dd789b7e35e555cfcde28d",
+      "resolved_config_sha256": "1fc3cbea152f414f938a49594596276fe26653709947335aa427ea9e876102ee",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057"
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "attempt": 1,
+      "started_at_utc": "2026-10-25T14:23:18.855662+00:00",
+      "recorded_repository_head": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+      "flags": {
+        "enable_planning": true,
+        "enable_memory": true,
+        "enable_reflection": false,
+        "enable_exploration": false,
+        "enable_tool_routing": false
+      },
+      "mSUN_at_20": 6.0,
+      "AUDC": 71.0,
+      "wall_time_seconds": 984.219,
+      "dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "matched_reference_dependency_versions": {
+        "torch": "2.9.1",
+        "numpy": "2.3.5",
+        "pymatgen": "2025.10.7",
+        "hydra-core": "1.3.2",
+        "orb-models": "0.5.5"
+      },
+      "fingerprint_files": 74,
+      "source_raw_LF_matches": 0,
+      "source_CRLF_matches": 74,
+      "unexplained_source_differences": [],
+      "recorded_history_origin": "reconstructed_from_frozen_official_trajectory",
+      "resolved_memory_run_id": [
+        "m4-local"
+      ],
+      "actual_memory_run_ids": [
+        "m3_self_correction_off-Mg-Sn-Sr-seed43-attempt01"
+      ],
+      "resolved_memory_id_matches_actual": false,
+      "checks": {
+        "completed": true,
+        "queries20": true,
+        "one_episode": true,
+        "exact_protocol_matches_frozen_full": true,
+        "canonical_material_reference_matches_frozen_full": true,
+        "recorded_source_fingerprint_matches_frozen_LF_or_CRLF": true,
+        "actual_flags_match_m3_component_profile": true,
+        "summary_mSUN_matches_trajectory": true,
+        "summary_AUDC_matches_trajectory": true,
+        "reconstructed_history_has20queries": true,
+        "reconstructed_AUDC_arithmetic_matches_original": true,
+        "reconstructed_final_mSUN_matches_original": true,
+        "new_values_match_prefreeze_CSV": true
+      },
+      "source": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "run_metadata_sha256": "84518e886ae59d55ace646930b29c9139ddf38dfc2028b3e2094ce05bdfca42e",
+      "trajectory_sha256": "ac36227b16f5f1f1d0ade457d16ccfdf498327ad61c734093a14a746e8caf559",
+      "resolved_config_sha256": "cde822f3da0aa151616dabaa2bb677c808bddc7c6ab162c1953283d42f7f587d",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057"
+    }
+  ],
+  "scope": "Read-only audit; no model/oracle/agent call, scientific rerun, remote mutation or edits to another member."
+}

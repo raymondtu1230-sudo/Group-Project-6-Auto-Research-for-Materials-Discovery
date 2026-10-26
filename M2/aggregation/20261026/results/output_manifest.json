@@ -1,0 +1,74 @@
+{
+  "aggregate_discovery_curve_data.csv": {
+    "bytes": 8356,
+    "sha256": "4921b2a5eaeac9a3532d3d1cb3d888692ec84d4b7c1c5aa5c686cce5fafe1e9e"
+  },
+  "aggregation_validation.json": {
+    "bytes": 1108,
+    "sha256": "0fcc1013d12a942a002939cf450012602a6a4d702b71e3076dee640c4eb6a696"
+  },
+  "discovery_curves_by_study.png": {
+    "bytes": 219245,
+    "sha256": "dec0063bee2d8e4c1bcd6956e1bc46f3e4c8b1a13a0d7e0d8f0455309fc800c2"
+  },
+  "discovery_curves_by_study.svg": {
+    "bytes": 91770,
+    "sha256": "be43618254383fb90837be1a14816046459f07f59969a8c66640b63b8525d056"
+  },
+  "evaluation_provenance.json": {
+    "bytes": 878,
+    "sha256": "5ad208badaf7c28a5a73d5e9e9842aac551e8f8bc2f018dd2598b53ec3d4a98a"
+  },
+  "input_receipts.json": {
+    "bytes": 159130,
+    "sha256": "49ad62bc45ab63329049e62ad6b475604d2c5466ee444680479c40366c7e1e00"
+  },
+  "m2_evaluator/discovery_curves.png": {
+    "bytes": 1094457,
+    "sha256": "5788bd6296435a80d141be22c548e23ab48d300ee3b411eb3038d82bf1a2e1e7"
+  },
+  "m2_evaluator/discovery_curves.svg": {
+    "bytes": 581867,
+    "sha256": "2b829299a4e0ab677d0ebb7b8da96cbcdfbbdd137ec1acc48914e249ffc420c4"
+  },
+  "m2_evaluator/per_method_summary.csv": {
+    "bytes": 3150,
+    "sha256": "220bed6b645e63f92f79b63e1bebcf358795d5066d9947be959d6f836a178da2"
+  },
+  "m2_evaluator/per_run.csv": {
+    "bytes": 49142,
+    "sha256": "646c198e01be6e17971a8daf506df50f4aecbd89580a438b335dea3b9615249f"
+  },
+  "m2_evaluator/per_system_summary.csv": {
+    "bytes": 12290,
+    "sha256": "1d44df5cc93e15af71ba691dce5acd4d211305ca95e7f83e38063849d60a02dd"
+  },
+  "m2_evaluator/validation.json": {
+    "bytes": 188,
+    "sha256": "cd4e618da1e5146d9e95e10ced2d65ebf40df665196004933b0a68a72fe7d626"
+  },
+  "m3_historical_comparator_unvalidated.json": {
+    "bytes": 239,
+    "sha256": "24ee8ce6bd83e9cc516904e287e8cbc827c32565e0e1135090a602c6cc086d7c"
+  },
+  "paired_full_system_ablations.csv": {
+    "bytes": 2446,
+    "sha256": "10134bd2923ae925b26104eda6be9b1a49867cca27615eff6ca125028261b68e"
+  },
+  "per_method_summary.csv": {
+    "bytes": 3550,
+    "sha256": "c6658332c470deb53fb7f72fe87367c19e88d36970e6a9617aa7da7e4a102312"
+  },
+  "per_run_costs.csv": {
+    "bytes": 34686,
+    "sha256": "971bb149d75d15844d2fb3d0e7c13cbd6520eba992281558108151216f40ace5"
+  },
+  "per_run_with_baseline_comparisons.csv": {
+    "bytes": 85299,
+    "sha256": "e2c75c1254f9de6d8a374d6c6e0715e1e2ae49bd206968d69d8d9610a07769ae"
+  },
+  "per_system_summary.csv": {
+    "bytes": 12290,
+    "sha256": "1d44df5cc93e15af71ba691dce5acd4d211305ca95e7f83e38063849d60a02dd"
+  }
+}

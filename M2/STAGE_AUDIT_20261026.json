@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-26",
+  "scientific_self_stage_complete": true,
+  "received_peer_aggregation_complete": true,
+  "all_M2_role_tasks_complete": false,
+  "all_group_ablations_complete": false,
+  "accepted_runs": 126,
+  "methods": {
+    "chemeleon_generative_baseline": 18,
+    "m1_full": 18,
+    "m3_planning_off": 18,
+    "m3_self_correction_off": 18,
+    "memory_off": 18,
+    "random_generator_baseline": 18,
+    "tool_routing_off": 18
+  },
+  "unique_system_seed_units_per_method": 18,
+  "protocol_and_material_reference_comparison": "passed",
+  "m2_evaluator_issues": [],
+  "baseline_paired_comparisons": 252,
+  "all_new_peer_runs_accepted": true,
+  "full_system_ablations_available": [
+    "memory_off",
+    "tool_routing_off"
+  ],
+  "full_system_ablations_not_supplied": [
+    "planning_off",
+    "self_correction_off",
+    "exploration_off"
+  ],
+  "m3_component_off_runs_validated": 36,
+  "m3_full_raw_comparator_independently_validated": false,
+  "m3_component_causal_deltas_status": "historical_reported_only_pending_raw_m3_full_package",
+  "new_scientific_runs": 0,
+  "new_oracle_queries": 0,
+  "original_files_modified": 0,
+  "derived_view_histories": 18,
+  "m1_reconstructed_curves_crosschecked_against_prior_structure_energy_reevaluation": 18,
+  "actual_M4_standalone_tests_passed": 15,
+  "M4_reported_combined_tests_passed": 72,
+  "independent_combined_suite_status": "collection_blocked_missing_hydra_pymatgen",
+  "new_PPTX_exported": false,
+  "other_member_files_modified": 0,
+  "all_project_changes_under": "M2/",
+  "messages_sent": 0
+}

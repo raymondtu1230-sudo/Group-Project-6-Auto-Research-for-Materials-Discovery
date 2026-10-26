@@ -1,0 +1,23 @@
+{
+  "actual_command": [
+    "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_aggregation_20261026/venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-o",
+    "addopts=",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_aggregation_20261026/m4_audit/pytest_tmp",
+    "M1/MADE/tests/test_m1_integrated.py",
+    "M1/MADE/tests/test_m3_planning.py",
+    "M1/MADE/tests/test_m4_memory.py",
+    "M4/tests",
+    "M4/integration/test_joint_capture.py",
+    "M4/integration/test_dev_pilot.py"
+  ],
+  "cwd": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_aggregation_20261026/snapshot",
+  "returncode": 2,
+  "note": "Original test selection; pytest cache disabled, bytecode disabled and temporary/cache paths isolated under M2/m4_audit. No scientific run or dependency installation."
+}

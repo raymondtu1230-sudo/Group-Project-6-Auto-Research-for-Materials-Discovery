@@ -1,3 +1,11 @@
+# Update — 26 October 2026
+
+The current shared scoreboard, peer validation, baseline AF/EF, curves, costs and M6 assembly text are in [M2/aggregation/20261026](aggregation/20261026/README.md). It includes 126 validated real dev episodes. M3 component profiles are kept separate from Full single-switch ablations, and the missing raw m3_full comparator and remaining group inputs are explicit. This completes aggregation of the currently received results; the entire group handoff remains open. No new native PPTX is claimed by this update.
+
+---
+
+## Previous stage record, preserved
+
 # M2 methods and results for M6, 25 October 2026
 
 M2's development baselines and frozen tool-routing ablation are complete. The 36 original baseline results are reused after compatibility checks. All 18 routing-off episodes completed 20 queries. The frozen M1 Full reference comes from M1.

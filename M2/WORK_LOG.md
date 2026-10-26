@@ -304,3 +304,13 @@ All eleven accepted ZIPs are now pinned in `configs/verified_baselines.json`. Th
 The known-cost fields of the original records report zero model/API fees; compute, electricity and interruption costs have not all been priced, so do not interpret the metadata's cost_status=complete as a complete economic cost estimate. The current shared M1/M5 default failure and local smoke failures remain unresolved and explicitly logged. Latest-source cloud CI is still pending; historical passes are not used as its result. M1/M5 issue message is prepared, not sent through WeChat.
 
 Older snapshots below are superseded by this confirmed snapshot.
+
+
+## 26 October 2026 — peer handoff intake and shared aggregation
+
+- Built: independently inspected M4's18 memory_off and M3's36 component-study OFF folders at main95f9c8e; executed the unchanged M2 evaluator on126 real dev runs, issues=[]; added252 paired Random/Chemeleon AF/EF comparisons, correct seed-first tables, separate-study curves, costs, source hashes and M6 assembly text.
+- Preserved: all original peer results and previous M2 failures remain unchanged. Eighteen derivative routing history views explicitly retain the original incomplete history. Original entry-point versions are backed up under M2/aggregation/20261026/backups/. No project file outside M2 changed; no scientific rerun or message was sent.
+- Checked: M4 raw archive CRC/checksums,18 one-switch configurations,74 source hashes each and paired curves; M3 all36 protocols/material snapshots and74 Windows-line-ending-aware input fingerprints. All18 new M1 reconstructed histories agree with the previous official structure-and-energy reevaluation.
+- Tests: actual M4 standalone suite15/15 passed. The72-test joint selection stopped at collection due to absent Hydra/pymatgen; M4's72-pass statement is attributed, not independently certified. Offline parsing/collection failures during adapter development are retained under M2 staging and did not launch or overwrite science.
+- Learned: evaluator core-completion flags cover Full and two baselines, not every group ablation. M3's current profiles also disable exploration/routing, so their causal comparator is m3_full. The historical18-row comparator CSV lacks complete raw folders; paired component gains stay provisional. Official EF default cap is100, notwithstanding older prose saying10.
+- Next: request complete m3_full originals and clarify whether M1/M3 will supply formal Full planning_off/self_correction_off; collect M5 exploration_off and M6 remaining check/hidden material; update final group report/deck after receipt.

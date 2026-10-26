@@ -1,0 +1,9 @@
+{
+  "method": "m3_full",
+  "status": "historical_reported_CSV_only_raw_18_run_package_missing",
+  "runs_reported": 18,
+  "mSUN_at_B_mean": 6.5,
+  "mSUN_at_B_std": 1.3017082793177757,
+  "AUDC_mean": 62.75,
+  "AUDC_std": 9.028888820521239
+}

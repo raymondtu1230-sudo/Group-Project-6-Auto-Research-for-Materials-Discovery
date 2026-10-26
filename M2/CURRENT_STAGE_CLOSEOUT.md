@@ -1,3 +1,11 @@
+# Update — 26 October 2026
+
+The current shared scoreboard, peer validation, baseline AF/EF, curves, costs and M6 assembly text are in [M2/aggregation/20261026](aggregation/20261026/README.md). It includes 126 validated real dev episodes. M3 component profiles are kept separate from Full single-switch ablations, and the missing raw m3_full comparator and remaining group inputs are explicit. This completes aggregation of the currently received results; the entire group handoff remains open. No new native PPTX is claimed by this update.
+
+---
+
+## Previous stage record, preserved
+
 # M2 独立dev基线阶段已收尾：36/36
 
 2026-10-21，Asia/Singapore。本轮实际核对起于03:22；终态审计03:23通过。Random18/18、Chemeleon18/18，六个dev体系、seed17/29/43、每项B=20且20次查询，共720次成功查询。官方离线复评issues=[]，无基线缺口。当前阶段完成；整个M2和课程项目仍有后续工作。

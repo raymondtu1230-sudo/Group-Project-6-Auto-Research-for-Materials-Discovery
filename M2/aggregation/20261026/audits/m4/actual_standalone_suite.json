@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_aggregation_20261026/venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-o",
+    "addopts=",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_aggregation_20261026/m4_audit/pytest_standalone_tmp",
+    "M4/tests"
+  ],
+  "returncode": 0,
+  "scope": "M4 standalone component tests only; not the claimed72 combined tests."
+}

@@ -1,0 +1,59 @@
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_m1_integrated.py _________________
+ImportError while importing test module '/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_aggregation_20261026/snapshot/M1/MADE/tests/test_m1_integrated.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+M1/MADE/tests/test_m1_integrated.py:5: in <module>
+    from pymatgen.core.composition import Composition
+E   ModuleNotFoundError: No module named 'pymatgen'
+__________________ ERROR collecting tests/test_m3_planning.py __________________
+ImportError while importing test module '/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_aggregation_20261026/snapshot/M1/MADE/tests/test_m3_planning.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+M1/MADE/tests/test_m3_planning.py:10: in <module>
+    from hydra import compose, initialize_config_dir
+E   ModuleNotFoundError: No module named 'hydra'
+___________________ ERROR collecting tests/test_m4_memory.py ___________________
+ImportError while importing test module '/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_aggregation_20261026/snapshot/M1/MADE/tests/test_m4_memory.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+M1/MADE/tests/test_m4_memory.py:6: in <module>
+    from hydra import compose, initialize_config_dir
+E   ModuleNotFoundError: No module named 'hydra'
+________________________ ERROR collecting test session _________________________
+ImportError while importing test module '/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_aggregation_20261026/snapshot/M4/integration/test_joint_capture.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+M4/integration/test_joint_capture.py:6: in <module>
+    from m4_memory.capture import CapturedM1IntegratedAgent
+M4/src/m4_memory/capture.py:6: in <module>
+    from made.agents.m1_integrated import M1IntegratedAgent
+M1/MADE/src/made/__init__.py:1: in <module>
+    from . import agents, data, envs, evaluation, oracles
+M1/MADE/src/made/agents/__init__.py:1: in <module>
+    from . import filters, generators, planners, scorers
+M1/MADE/src/made/agents/filters/__init__.py:1: in <module>
+    from .chain import FilterChain
+M1/MADE/src/made/agents/filters/chain.py:3: in <module>
+    from pymatgen.core.structure import Structure
+E   ModuleNotFoundError: No module named 'pymatgen'
+=========================== short test summary info ============================
+ERROR M1/MADE/tests/test_m1_integrated.py
+ERROR M1/MADE/tests/test_m3_planning.py
+ERROR M1/MADE/tests/test_m4_memory.py
+ERROR M1/MADE
+!!!!!!!!!!!!!!!!!!! Interrupted: 4 errors during collection !!!!!!!!!!!!!!!!!!!!
+4 errors in 0.13s

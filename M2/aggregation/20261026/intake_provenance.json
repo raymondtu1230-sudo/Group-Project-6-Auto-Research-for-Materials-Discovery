@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-26",
+  "timezone": "Asia/Singapore",
+  "snapshot_commit": "95f9c8e38923ac494b1117a9b212702afdc5980f",
+  "m3_handoff_commit": "5d2efeadc19e1a6747aa4c0b6f473e8ed64c09fb",
+  "m4_handoff_commit": "9a75966b0c6e3d3fe0da41197f8e013170096110",
+  "original_frozen_execution_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "current_tag_target": {
+    "sha": "53c1515da90ec5bdfda26a60710e67e91d7d164f",
+    "type": "tag",
+    "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/git/tags/53c1515da90ec5bdfda26a60710e67e91d7d164f"
+  },
+  "all_analysis_writes_under": "M2/",
+  "other_member_files_edited": false,
+  "new_scientific_runs": 0,
+  "new_model_calls": 0,
+  "new_oracle_calls": 0,
+  "user_message_sent": false,
+  "current_tag_annotated_object": {
+    "node_id": "TA_kwDOVNNBTdoAKDUzYzE1MTVkYTkwZWM1YmRmZGEyNmE2MDcxMGU2N2U5MWQ3ZDE2NGY",
+    "sha": "53c1515da90ec5bdfda26a60710e67e91d7d164f",
+    "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/git/tags/53c1515da90ec5bdfda26a60710e67e91d7d164f",
+    "tagger": {
+      "name": "LinghaoLiOfficial",
+      "email": "linghao.li.2002@gmail.com",
+      "date": "2026-10-26T03:36:56Z"
+    },
+    "object": {
+      "sha": "ae7fe81991c56dd2d77685220b74ddbef11039c7",
+      "type": "commit",
+      "url": "https://api.github.com/repos/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/git/commits/ae7fe81991c56dd2d77685220b74ddbef11039c7"
+    },
+    "tag": "m1-freeze-20261025",
+    "message": "M1 frozen integrated agent with complete 18-run reference evidence\n",
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "publication_parent_checked": "6eb386b248f4b81e54885af716d7330f3db26efd",
+  "concurrent_updates_reviewed": {
+    "scope": "M4 documentation, archive paths, deck and speaker notes only; no newly supplied ablation methods or changed raw scientific result data",
+    "head": "6eb386b248f4b81e54885af716d7330f3db26efd",
+    "message": "M4: clarify final evidence exports and dated test counts"
+  }
+}
