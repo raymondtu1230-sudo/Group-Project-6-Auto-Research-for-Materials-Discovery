@@ -10,4 +10,4 @@ Updated 26 October 2026. Use these materials for final group assembly:
 | M4_SPEAKER_NOTES.md | Spoken script and Q&A limitations |
 | ../evidence/frozen-memory-ablation-20261026/analysis/ | Curves, 3 traced cases, cost table and supplementary AF/EF |
 
-M4_Method_Draft.pptx and M4_DEV_PILOT_RESULTS.md retain the earlier single-pair development result. Use the frozen result for the final component-ablation table. Recipient acknowledgement, shared baseline AF/EF, final group report and held-out comparisons remain group assembly tasks. A public upload does not establish personal receipt.
+The earlier single-pair development slides and report are preserved in [archive/](archive/). Use the frozen result for the final component-ablation table. Recipient acknowledgement, shared baseline AF/EF, final group report and held-out comparisons remain group assembly tasks. A public upload does not establish personal receipt.

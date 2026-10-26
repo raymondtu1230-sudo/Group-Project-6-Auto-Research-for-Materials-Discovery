@@ -1,5 +1,7 @@
 # Real-material development Memory pair, 21 October 2026
 
+Historical development record. The final frozen-agent results are in [the current report](../M4_FROZEN_MEMORY_RESULTS.md).
+
 ## Controlled development scope
 
 Team source `e1a40d8`; Mg-Sn-Sr, seed 17, B=20, protocol-v1 CPU ORB and official
@@ -63,13 +65,13 @@ validation. It must never be loaded into retrieval or an agent's decision input.
 Public audit source locations are expressed relative to the team repository;
 underlying raw results and scientific metrics are unchanged.
 
-See `../DEV_PILOT.md` for the driver and validation commands. Attempts are
+See `../../DEV_PILOT.md` for the driver and validation commands. Attempts are
 preserved; new runs require new attempt numbers. The saved ON Hydra configuration
 was resolved with its actual child run identity after correcting parent export
 context; only logging provenance was affected. The driver includes this correction
 for subsequent runs. M1, official runner, oracle and protocol files are unchanged.
 
-Raw evidence and the referenced files are under `../evidence/dev-pilot-20261021/`.
+Raw evidence and the referenced files are under `../../evidence/dev-pilot-20261021/`.
 
 ## Scoring detail for M3 review
 
