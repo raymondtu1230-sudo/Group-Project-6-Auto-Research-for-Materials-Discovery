@@ -21,8 +21,12 @@
     "editable_chart_slide": 2,
     "editable_table_slide": 2,
     "visual_review": "Both final slides reviewed",
-    "sha256": "57af1172fa2071e91d243fa98c977236425713d46b05e183728d789dad17b80b",
+    "sha256": "f385b31c9872cd11a5d10176553cf36b12d61793791f86f6e66400a993da0914",
     "revision": "Polished wording, 18-pair/36-episode label, simplified numeric x-axis; original20 points and table values retained.",
-    "presenter": "Zhang Yiming"
+    "presenter": "Zhang Yiming",
+    "presenter_in_embedded_notes": [
+      1,
+      2
+    ]
   }
 }
