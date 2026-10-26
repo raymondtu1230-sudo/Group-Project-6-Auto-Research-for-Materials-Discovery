@@ -1,0 +1,22 @@
+{
+  "summary.json": {
+    "bytes": 1824,
+    "sha256": "8906424f84e0073a11424f29a43f2602d03422f47017d80472fb9f2bc76b73d4"
+  },
+  "reference_patch_validation.json": {
+    "bytes": 3689,
+    "sha256": "86fa70eb2763c53622f8991dc7afb5e45161b761d9816d31016b8cf8ac1b369d"
+  },
+  "README.md": {
+    "bytes": 3403,
+    "sha256": "e0679e26d922e143178048c14f6f2eacd1eb9616361544d43d420bca08e4f671"
+  },
+  "paired_results.csv": {
+    "bytes": 3667,
+    "sha256": "1288d00ae5b4b3dbea0b7db9e28411e9d05cda327dd16a1966a7faa0a39e5a41"
+  },
+  "memory_off_raw_results.zip": {
+    "bytes": 5103853,
+    "sha256": "2bf7d980571157c54d90a22b82157bf405034b6f6d110ddb0c45be9e554e392b"
+  }
+}

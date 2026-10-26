@@ -1,3 +1,9 @@
+# M4 report handoff
+
+Updated 26 October 2026. Final frozen-agent dev ablation results are in [M4_FROZEN_MEMORY_RESULTS.md](M4_FROZEN_MEMORY_RESULTS.md), with raw results and validation in [the evidence folder](../evidence/frozen-memory-ablation-20261026/). Use these results for the frozen component-ablation table.
+
+The presentation deck below remains the earlier development-pilot draft; its single-pair numbers must not be labelled as the final ablation.
+
 # Draft handoff for M6
 
 Updated 21 October 2026. These English materials are ready for report and slide assembly as a draft. They do not represent the final frozen-agent ablation.

@@ -1,0 +1,73 @@
+{
+  "frozen_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "units": 18,
+  "aggregation": "equal-weight system mean within seed; mean and sample SD over three seeds",
+  "reference_artifacts_pending": [],
+  "metrics": {
+    "mSUN": {
+      "on": {
+        "mean": 10.0,
+        "seed_sd": 0.8819171036881968,
+        "seed_means": [
+          9.0,
+          10.333333333333334,
+          10.666666666666666
+        ]
+      },
+      "off": {
+        "mean": 9.11111111111111,
+        "seed_sd": 1.347150628109127,
+        "seed_means": [
+          7.666666666666667,
+          9.333333333333334,
+          10.333333333333334
+        ]
+      },
+      "on_minus_off": {
+        "mean": 0.8888888888888884,
+        "seed_sd": 0.509175077217316
+      },
+      "pair_counts": {
+        "on_better": 8,
+        "equal": 3,
+        "on_worse": 7
+      }
+    },
+    "AUDC": {
+      "on": {
+        "mean": 88.11111111111111,
+        "seed_sd": 9.453590342847018,
+        "seed_means": [
+          77.33333333333333,
+          95.0,
+          92.0
+        ]
+      },
+      "off": {
+        "mean": 86.94444444444444,
+        "seed_sd": 9.025170563690406,
+        "seed_means": [
+          78.83333333333333,
+          85.33333333333333,
+          96.66666666666667
+        ]
+      },
+      "on_minus_off": {
+        "mean": 1.1666666666666667,
+        "seed_sd": 7.529571332051016
+      },
+      "pair_counts": {
+        "on_better": 9,
+        "equal": 0,
+        "on_worse": 9
+      }
+    }
+  },
+  "reference_evidence_commit": "ae7fe81991c56dd2d77685220b74ddbef11039c7",
+  "validation": {
+    "pairs": 18,
+    "runs_accepted": 36,
+    "reference_manifests_verified": true
+  },
+  "reference_history_provenance": "Reconstructed by M1 from frozen complete trajectories, explicitly labelled; not original checkpoint histories."
+}
