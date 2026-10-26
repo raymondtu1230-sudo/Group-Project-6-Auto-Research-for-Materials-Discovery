@@ -1,0 +1,55 @@
+﻿0 of 18 runs already completed; 18 to run
+jobs=3 threads_per_run=5
+[1/18] start m3_full Mg-Sn-Sr seed 17 attempt 1
+[2/18] start m3_full Mg-Sn-Sr seed 29 attempt 1
+[3/18] start m3_full Mg-Sn-Sr seed 43 attempt 1
+    m3_full Mg-Sn-Sr 17: 6-10-26 13:19:19] [INFO] [made.agents.m3_planning] M3 re-plan: query=15 reason=no_progress level=1 before=['Sr8 Mg7 Sn3'] after=['Mg19 Sn1']
+[1/18] ok: m3_full Mg-Sn-Sr seed 17 in 604s
+[4/18] start m3_full Au-K-Tb seed 17 attempt 1
+[2/18] ok: m3_full Mg-Sn-Sr seed 29 in 748s
+[5/18] start m3_full Au-K-Tb seed 29 attempt 1
+    m3_full Mg-Sn-Sr 43: 6-10-26 13:26:32] [INFO] [made.agents.m3_planning] M3 re-plan: query=16 reason=no_progress level=1 before=['Sr2 Mg5 Sn2'] after=['Mg19 Sn1']
+[3/18] ok: m3_full Mg-Sn-Sr seed 43 in 901s
+[6/18] start m3_full Au-K-Tb seed 43 attempt 1
+[5/18] ok: m3_full Au-K-Tb seed 29 in 518s
+[7/18] start m3_full Co-Mg-Na seed 17 attempt 1
+[4/18] ok: m3_full Au-K-Tb seed 17 in 697s
+[8/18] start m3_full Co-Mg-Na seed 29 attempt 1
+    m3_full Co-Mg-Na 17: 26-10-26 13:35:32] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=no_progress level=1 before=['Na10 Mg9 Co1'] after=['Na7 Mg4']
+[6/18] ok: m3_full Au-K-Tb seed 43 in 543s
+[9/18] start m3_full Co-Mg-Na seed 43 attempt 1
+    m3_full Co-Mg-Na 17: [2026-10-26 13:37:40] [INFO] [made.agents.m3_planning] M3 re-plan: query=13 reason=no_progress level=1 before=['Mg5 Co7'] after=['Na19 Mg1']
+    m3_full Co-Mg-Na 29: [2026-10-26 13:38:04] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=no_progress level=1 before=['Na2 Co13'] after=['Mg19 Co1']
+[7/18] ok: m3_full Co-Mg-Na seed 17 in 444s
+[10/18] start m3_full Hf-Ni-Zr seed 17 attempt 1
+    m3_full Co-Mg-Na 43: 26-10-26 13:40:37] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=no_progress level=1 before=['Na10 Mg9 Co1'] after=['Na7 Mg4']
+    m3_full Co-Mg-Na 29: [2026-10-26 13:40:51] [INFO] [made.agents.m3_planning] M3 re-plan: query=13 reason=no_progress level=1 before=['Mg5 Co7'] after=['Na19 Mg1']
+[8/18] ok: m3_full Co-Mg-Na seed 29 in 616s
+[11/18] start m3_full Hf-Ni-Zr seed 29 attempt 1
+    m3_full Hf-Ni-Zr 17: [2026-10-26 13:46:00] [INFO] [made.agents.m3_planning] M3 re-plan: query=9 reason=no_progress level=1 before=['Zr10 Ni1'] after=['Hf1 Ni19']
+[9/18] ok: m3_full Co-Mg-Na seed 43 in 635s
+[12/18] start m3_full Hf-Ni-Zr seed 43 attempt 1
+    m3_full Hf-Ni-Zr 43: [2026-10-26 13:50:53] [INFO] [made.agents.m3_planning] M3 re-plan: query=6 reason=no_progress level=1 before=['Zr7 Ni5'] after=['Zr1 Ni19']
+[10/18] ok: m3_full Hf-Ni-Zr seed 17 in 739s
+[13/18] start m3_full Co-Dy-W seed 17 attempt 1
+[11/18] ok: m3_full Hf-Ni-Zr seed 29 in 714s
+[14/18] start m3_full Co-Dy-W seed 29 attempt 1
+[12/18] ok: m3_full Hf-Ni-Zr seed 43 in 799s
+[15/18] start m3_full Co-Dy-W seed 43 attempt 1
+    m3_full Co-Dy-W 29: 026-10-26 14:02:38] [INFO] [made.agents.m3_planning] M3 re-plan: query=16 reason=no_progress level=1 before=['Dy1 Co7 W10'] after=['Co9 W9']
+[13/18] ok: m3_full Co-Dy-W seed 17 in 594s
+[16/18] start m3_full Ga-Pt-Tm seed 17 attempt 1
+    m3_full Co-Dy-W 29: 6-10-26 14:07:27] [INFO] [made.agents.m3_planning] M3 re-plan: query=19 reason=no_progress level=2 before=['Dy10 Co4 W4'] after=['Dy1 Co19']
+    m3_full Co-Dy-W 43: [2026-10-26 14:08:21] [INFO] [made.agents.m3_planning] M3 re-plan: query=16 reason=no_progress level=1 before=['Dy4 W14'] after=['Dy1 W19']
+[14/18] ok: m3_full Co-Dy-W seed 29 in 760s
+[17/18] start m3_full Ga-Pt-Tm seed 29 attempt 1
+    m3_full Co-Dy-W 43: [2026-10-26 14:09:38] [INFO] [made.agents.m3_planning] M3 re-plan: query=19 reason=no_progress level=2 before=['Dy4 W3'] after=['Dy1 Co19']
+[15/18] ok: m3_full Co-Dy-W seed 43 in 638s
+[18/18] start m3_full Ga-Pt-Tm seed 43 attempt 1
+    m3_full Ga-Pt-Tm 17: [2026-10-26 14:16:59] [INFO] [made.agents.m3_planning] M3 re-plan: query=18 reason=no_progress level=1 before=['Tm1 Pt14'] after=['Tm3 Ga3']
+[16/18] ok: m3_full Ga-Pt-Tm seed 17 in 929s
+    m3_full Ga-Pt-Tm 43: [2026-10-26 14:20:57] [INFO] [made.agents.m3_planning] M3 re-plan: query=14 reason=no_progress level=1 before=['Tm1 Pt14'] after=['Tm1 Ga1']
+[17/18] ok: m3_full Ga-Pt-Tm seed 29 in 815s
+    m3_full Ga-Pt-Tm 43: 6-10-26 14:22:12] [INFO] [made.agents.m3_planning] M3 re-plan: query=17 reason=no_progress level=2 before=['Tm5 Ga2 Pt2'] after=['Ga11 Pt8']
+[18/18] ok: m3_full Ga-Pt-Tm seed 43 in 735s
+All runs completed. Next: uv run python ../../M3/summarize_ablations.py

@@ -1,0 +1,140 @@
+agent:
+  planner:
+    _target_: made.agents.m3_planning.M3ResearchPlanner
+    max_stoichiometry: 20
+    num_compositions: 1
+    num_candidates: 8
+    seed: ${experiment.seed}
+    selection_strategy: diversity
+    batch_size: 4
+    coverage_weight: 0.5
+    near_hull_threshold: 0.1
+    max_attempts_per_composition: 2
+    memory_failure_limit: 2
+    max_trace: 20
+    selection_strategy_kwargs:
+      distance_metric: euclidean
+      unattempted_weight: 5.0
+      attempt_weight_factor: 0.7
+      failure_weight_factor: 0.3
+      mask_same_reduced_formula: true
+  generator:
+    _target_: made.agents.m2_tool_routing.CheckpointedRandomGenerator
+    lattice_length_range:
+    - 3.0
+    - 15.0
+    lattice_angle_range:
+    - 60.0
+    - 120.0
+    seed: ${experiment.seed}
+  filter:
+    _target_: made.agents.filters.SMACTValidityFilter
+  scorer:
+    _target_: made.agents.scorers.RandomSelector
+    seed: ${experiment.seed}
+  self_correction_policy:
+    _target_: made.agents.m3_planning.M3StuckReplanPolicy
+    window: 6
+    max_repeat: 2
+    cooldown: 3
+    max_stoichiometry: ${agent.planner.max_stoichiometry}
+    max_candidates: 32
+    seed: ${experiment.seed}
+    max_history: 64
+    max_events: 50
+  _target_: m4_memory.capture.CapturedM1IntegratedAgent
+  capture_path: ${hydra:runtime.output_dir}/m4_proposal_events.jsonl
+  capture_run_id: ${oc.env:M4_RUN_ID,m4-local}
+  capture_episode_id: ${oc.env:M4_EPISODE_ID,0}
+  enable_planning: true
+  enable_memory: true
+  enable_reflection: true
+  enable_exploration: false
+  enable_tool_routing: false
+  query_budget: ${environment.budget}
+  memory_size: 20
+  memory_manager:
+    _target_: m4_memory.m1_adapter.M4MemoryManager
+    log_path: ${hydra:runtime.output_dir}/m4_evidence.jsonl
+    run_id: ${oc.env:M4_RUN_ID,m4-local}
+    episode_id: ${oc.env:M4_EPISODE_ID,0}
+    limit: 8
+    max_chars: 4000
+  exploration_policy:
+    _target_: made.agents.m5_exploration.UCBExplorationPolicy
+    seed: ${experiment.seed}
+    alpha0: 0.8
+    gamma: 1.0
+    beta0: 2.0
+    max_stoichiometry: 8
+    length_scale: 0.35
+    noise: 0.0001
+    max_pool: 512
+    log_path: ${hydra:runtime.output_dir}/m5_decisions.jsonl
+  tool_router:
+    _target_: made.agents.m2_tool_routing.OutcomeAwareToolRouter
+    seed: ${experiment.seed}
+    generator_names:
+    - default
+    - chemeleon
+    exploration_weight: 0.5
+    stable_reward: 0.25
+    late_budget_threshold: 2
+  generators:
+    chemeleon:
+      _target_: made.agents.m2_tool_routing.CheckpointedChemeleonGenerator
+      seed: ${experiment.seed}
+      task: csp
+      batch_size: 32
+      device: ${oc.select:oracle.device,cpu}
+      output_dir: null
+dataset:
+  _target_: made.data.PhaseDiagramDataset
+  elements:
+  - Au
+  - K
+  - Tb
+  thermo_types:
+  - GGA_GGA+U
+environment:
+  _target_: made.envs.ConvexHullEnvironment
+  budget: 20
+  start_with_all_stable: true
+  compute_elemental_from_oracle: true
+  stability_tolerance: 0.1
+  include_near_stable_from_ground_truth: true
+  filter_by_smact: true
+  max_stoichiometry: 20
+  structure_matcher_ltol: 0.2
+  structure_matcher_stol: 0.3
+  structure_matcher_angle_tol: 5
+  structure_matcher_primitive_cell: true
+logger:
+  use_wandb: false
+  wandb_project: made-benchmark
+  wandb_entity: your-wandb-username
+  wandb_run_name: null
+  wandb_tags:
+  - benchmark
+oracle:
+  _target_: made.oracles.ORBOracle
+  model_name: orb-v3-conservative-inf-omat
+  device: cpu
+  element_reference_energies_path: ./data/2023-02-07-mp-elemental-reference-entries.json
+  relax: true
+  relax_kwargs:
+    optimizer: fire
+    fmax: 0.02
+    steps: 500
+    relax_unit_cell: true
+  num_workers: 1
+experiment:
+  output_dir: results/protocol_v1/m3_full/dev/Au-K-Tb/seed_17/attempt_01
+  num_episodes: 1
+  seed: 17
+  infra: local
+  verbose: false
+  logging_level: INFO
+  systems: []
+  systems_file: null
+  max_systems: 5
