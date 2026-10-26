@@ -14,11 +14,11 @@ M4 uses public observations and makes no oracle calls. It preserves the official
 
 Filter exclusion does not establish that a structure was never evaluated: M1 falls back to the unfiltered candidates when a filter returns none. Audit records label that fallback and retain public structure identity for offline matching. An unstable evaluated structure is a scientific outcome, not automatically a runtime failure or evidence of a physical mechanism. The audit sidecar stays outside retrieval, policy rewards and decision inputs.
 
-Both ON and OFF conditions export all evaluated observations from the official trajectory, including the final query. M1 updates online memory before the next proposal, so the online log may omit the final evaluation. M3 decision traces establish actual memory consumption. M5 has confirmed the evidence schema and supplies a separate decision-log interface for exploration context. The frozen agent includes the adopted M5 module and decision sidecar. The earlier development pair below did not enable exploration or use an M5 sidecar.
+The official ON and OFF trajectories retain all queried observations, including the final query. The OFF package additionally includes a complete public-observation JSONL export. M1 updates online memory before the next proposal, so an online log may omit the final evaluation. Synthetic tests and the historical pilot review traces demonstrate the memory-consumption boundary; exact ON review-memory IDs were not retained in the formal reference. M5 has confirmed the evidence schema and supplies a separate decision-log interface for exploration context. The frozen agent includes the adopted M5 module and decision sidecar. The earlier development pair below did not enable exploration or use an M5 sidecar.
 
 ## Development validation
 
-The joint M1/M3/M4 suite passed 69 tests. A separate treatment-isolation test passed. The unchanged synthetic smoke and paired synthetic episodes also completed. These checks establish interface behavior, switch handling and evidence capture.
+On 21 October, the historical joint suite passed 69 tests and a separate treatment-isolation test passed. The unchanged synthetic smoke and paired synthetic episodes also completed. The final 26 October relevant regression suite passed all 72 tests; see ../VALIDATION.md for its command and scope. These checks establish interface behavior, switch handling and evidence capture.
 
 A real-material development pair used Mg-Sn-Sr, seed 17, B=20 and protocol-v1 CPU ORB. Both arms used M3 planning/reflection, Random generation and M4 capture, with composition exploration and tool routing OFF. Only the Memory switch and output identities differed. The base team revision was e1a40d8. Both runs passed M2's individual offline validation, with complete official metric histories and matching material-reference snapshots.
 
@@ -42,7 +42,8 @@ The development pair remains historical. The completed final frozen-agent compar
 ## Sources for assembly
 
 - M4/EVIDENCE_SCHEMA.md and M4/src/m4_memory/: implementation and capture contract.
-- M4/evidence/dev-pilot-20261021/: paired audit, raw outputs, configurations and M3 traces.
+- M4/evidence/dev-pilot-20261021/: historical paired audit, raw outputs, configurations and M3 traces.
+- M4/evidence/frozen-memory-ablation-20261026/: authoritative formal paired results, raw OFF outputs, curves, cases, costs and provenance.
 - M1/PLUGIN_INTERFACE.md and M1/protocol/protocol_v1.yaml: integration and experiment contract.
 - M6/PROTOCOL_ADOPTION.md: dev/check/hidden roles and frozen-agent comparison.
 
