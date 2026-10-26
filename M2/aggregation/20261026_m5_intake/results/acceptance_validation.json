@@ -1,0 +1,17 @@
+{
+  "canonical_accepted_runs": 144,
+  "new_m5_strict_accepted_runs": 0,
+  "new_m5_strict_rejections": 18,
+  "new_m5_endpoint_only_verified_runs": 18,
+  "new_m5_derived_curve_points": 360,
+  "new_m5_provisional_baseline_comparisons": 36,
+  "new_m5_provisional_full_comparisons": 18,
+  "total_rows_with_acceptance_labels": 162,
+  "all_162_canonical_accepted": false,
+  "all_group_packages_complete": false,
+  "pending_item": "M5_original_resolved_configuration_and_complete_evidence_package",
+  "actual_resolved_configurations_fabricated": 0,
+  "original_files_modified": 0,
+  "new_scientific_runs": 0,
+  "new_oracle_queries": 0
+}

@@ -1,0 +1,9 @@
+{
+  "source_report": "M2/aggregation/20261026_m3_complete/results",
+  "source_manifest_sha256": "a453d2365e19e0e15c558fd8dfb30937acc7ed28c3abc65872c4ac34aa700abf",
+  "source_manifest_entries_verified": 21,
+  "canonical_accepted_runs": 144,
+  "source_validation_sha256": "e2932b3982b32b712a6a11fc22698402251872ab0bd335f9695a181fe4946dd4",
+  "recomputed_old_scientific_runs": 0,
+  "old_report_modified": false
+}

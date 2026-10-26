@@ -1,0 +1,4246 @@
+{
+  "snapshot_commit": "a27634d9edbf231d0c034273fa9f977f9d5e799e",
+  "raw_endpoint_audit_accepted": true,
+  "M5_report_requires_corrections": true,
+  "successful_actual_run_count": 36,
+  "new_exploration_off_units": 18,
+  "official_AUDC_endpoint_recomputations": 36,
+  "actual_observation_prefixes_reconstructed": 720,
+  "successful_frozen_Full_comparator_policy": "Exactly one completedB20 episode for each expecteddevsystem/seed. Mg-Sn-Sr17/29 useattempt02, other16useattempt01. Failed/incomplete originalattempts preserved and excluded.",
+  "new_scientific_runs": 0,
+  "agent_calls": 0,
+  "oracle_calls": 0,
+  "provenance_limitation": "This audit validates saved actual stability/new-discovery observations and official area arithmetic/endpoints. It does not recalculate hull energies, structure matching or novelty from physics, and does not claim recovered original histories.",
+  "source_provenance": {
+    "official_metric_module_sha256": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+    "official_metric_class_AST_sha256": "33b54edd959fc7415d30314cdbadb9a01e710d3deee026835320622578d2a6ff",
+    "M1_packaging_module_sha256": "dc92e726f7d9e83e756e861b92960436464ca9e567e41372a39c486e2d9447e2",
+    "M1_trajectory_curve_function_AST_sha256": "7914873de6671f742cc5edf6c8ec8017e9fd41be0f1d56ff199af09b58678737",
+    "M2_evaluator_sha256": "2eacad27246a8669657c6551807cbfeb1274cf94b691840f2f196d55e3e93a89",
+    "canonical_reference_hash_function_AST_sha256": "a7854373b14e9d1662d30cf9e4f9bb9f317826ef184a9a1863323adc7dea07ad",
+    "numpy_version": "2.3.5",
+    "execution": "Unchanged official class/helper/function AST, real NumPy; no formula edits or dependency mocks."
+  },
+  "errors": [],
+  "ignored_preserved_attempts": [
+    {
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_01",
+      "method": "m1_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "status": "failed",
+      "completed_queries": null,
+      "run_metadata_sha256": "8f81f3a65a33c93a3b99973c65108146c01cbbaa9dead09cd662cd59bbd4cc51",
+      "reason": "Original failed/incomplete attempt preserved and excluded from successful frozen comparator."
+    },
+    {
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_29/attempt_01",
+      "method": "m1_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "status": null,
+      "completed_queries": null,
+      "run_metadata_sha256": "9d6d613fc48e0a8e9d7c15fc13034c08ea135e432abe2733f163b22d77075283",
+      "reason": "Original failed/incomplete attempt preserved and excluded from successful frozen comparator."
+    }
+  ],
+  "audited_M5_report_sha256": "03d754bcfdc7c05d6cde2caa6e92de5a96e56485eebb732487ce128ad26e3c60",
+  "audit_script_sha256": "73d793e643cc59a22c446991e308e658b0e1b79d08d976bfecddf8afa7c9fb8d",
+  "per_run": [
+    {
+      "method": "m1_full",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Au-K-Tb/seed_17/attempt_01",
+      "mSUN": 10.0,
+      "AUDC": 72.0,
+      "recomputed_recorded_stable_new_endpoint": 10,
+      "official_recomputed_AUDC": 72.0,
+      "trajectory_sha256": "0372b0b6c57aff2784273fc682f226bea6e3ba1534badc283e780bef6d4adc5f",
+      "run_metadata_sha256": "223b28d9e5f282f3134ce55581a5bb6cc8bb358c2481d9b369dc3e9c5d9a9b9d",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Au-K-Tb/seed_29/attempt_01",
+      "mSUN": 14.0,
+      "AUDC": 129.0,
+      "recomputed_recorded_stable_new_endpoint": 14,
+      "official_recomputed_AUDC": 129.0,
+      "trajectory_sha256": "7988149edfe73b49cf6d5e562efd5ea686a561852d3aafd68d2890bdd3987a7a",
+      "run_metadata_sha256": "28ac1c44b2db00e52299a5eba605930890bf2701c2e5b45a65a08a23a6e83935",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Au-K-Tb/seed_43/attempt_01",
+      "mSUN": 15.0,
+      "AUDC": 118.5,
+      "recomputed_recorded_stable_new_endpoint": 15,
+      "official_recomputed_AUDC": 118.5,
+      "trajectory_sha256": "a0514036b5573f6fda3b514b92603bf0d9da7cfe7189216395b1e235072a9d67",
+      "run_metadata_sha256": "267a48d356d26dbd6f25fa0103cd842497ece9ac26414f4903a0ad297233f585",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Dy-W/seed_17/attempt_01",
+      "mSUN": 6.0,
+      "AUDC": 48.0,
+      "recomputed_recorded_stable_new_endpoint": 6,
+      "official_recomputed_AUDC": 48.0,
+      "trajectory_sha256": "4c3e4fdd46d4d2908d52bf1b32a9bcb07e95785d5d039d6a27db7e7e82457cef",
+      "run_metadata_sha256": "7022a7a5ad216f8351d829858a7d6fbf75d40d49318d0bd80f2acf37761cf5fd",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Dy-W/seed_29/attempt_01",
+      "mSUN": 8.0,
+      "AUDC": 66.0,
+      "recomputed_recorded_stable_new_endpoint": 8,
+      "official_recomputed_AUDC": 66.0,
+      "trajectory_sha256": "f141aa0c158d9bf96bf93945cc3fdc23a539b6dc7467716f886df5bcf809c574",
+      "run_metadata_sha256": "493b65d48a3a4be98c349435e1a288ef249971919b79dd145e7c3b3ba07f3413",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Dy-W/seed_43/attempt_01",
+      "mSUN": 8.0,
+      "AUDC": 59.0,
+      "recomputed_recorded_stable_new_endpoint": 8,
+      "official_recomputed_AUDC": 59.0,
+      "trajectory_sha256": "2945beb66b23aabaf4e07f9a4ac5af631f8a793c4da56c0ecb64c75bbd21c182",
+      "run_metadata_sha256": "12bce2587f93b938143b0cad6a608b34f0247b0daed6ff49be36d84cd72e4171",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_17/attempt_01",
+      "mSUN": 4.0,
+      "AUDC": 18.0,
+      "recomputed_recorded_stable_new_endpoint": 4,
+      "official_recomputed_AUDC": 18.0,
+      "trajectory_sha256": "db98621cef8ceb6ff964282d199149a1aad82a95314dfc0944f85ace8aced596",
+      "run_metadata_sha256": "cd7a645bc2a4e05845b99852446142740440b33725dad2ee7692514f5bf4bb7d",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_29/attempt_01",
+      "mSUN": 12.0,
+      "AUDC": 104.0,
+      "recomputed_recorded_stable_new_endpoint": 12,
+      "official_recomputed_AUDC": 104.0,
+      "trajectory_sha256": "602b5f27e10cb449b1770ee06a9fc56d28fbd7d9cd22c04131df7365b8b4f8d9",
+      "run_metadata_sha256": "55e6af99e1e844e614c30be083b56dd06921da9edf1959e8e8360a1430d14f7f",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_43/attempt_01",
+      "mSUN": 11.0,
+      "AUDC": 82.5,
+      "recomputed_recorded_stable_new_endpoint": 11,
+      "official_recomputed_AUDC": 82.5,
+      "trajectory_sha256": "2d6e57b91eeddbc7a3e37b0c7202d7c2babd1ad4a841e1d2f7d88808ee6788b5",
+      "run_metadata_sha256": "8e245858b204ab081570a531239c689930c5c19a775fb3eba2395dec7ed5a44e",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "mSUN": 10.0,
+      "AUDC": 93.0,
+      "recomputed_recorded_stable_new_endpoint": 10,
+      "official_recomputed_AUDC": 93.0,
+      "trajectory_sha256": "fc557c6c281ab0ec5f211cee05ecb07365786246b7b90515a51a3bf1dbdd6044",
+      "run_metadata_sha256": "502e1af978bc16724aa0dad83fc33b15ec8f09e160e78bb1f481b08e9e618ebe",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "mSUN": 12.0,
+      "AUDC": 114.0,
+      "recomputed_recorded_stable_new_endpoint": 12,
+      "official_recomputed_AUDC": 114.0,
+      "trajectory_sha256": "02a0cb011f946353ea3d5e522aa3dfdc7fabb84b362119a802474648c4c25fc9",
+      "run_metadata_sha256": "020a46064f721f1037930ea82c1f813349aae290af9e69c2c0ab862549ad7329",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "mSUN": 9.0,
+      "AUDC": 98.5,
+      "recomputed_recorded_stable_new_endpoint": 9,
+      "official_recomputed_AUDC": 98.5,
+      "trajectory_sha256": "682a2ca8edf88383707300ec07bb757e5cde7e37c94772d013b1001fd4ad04de",
+      "run_metadata_sha256": "388fb4e5e99c04c0798cdee3c4429d9f07e43ebae064f0a7e5a21c5dade8497c",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "mSUN": 12.0,
+      "AUDC": 128.0,
+      "recomputed_recorded_stable_new_endpoint": 12,
+      "official_recomputed_AUDC": 128.0,
+      "trajectory_sha256": "58bd57810c1b6be3c3327ea869a98d616f551c3c6c8c43c1d715746a8b15eb52",
+      "run_metadata_sha256": "afd77c0504cfde73240a07929fe4f8802267ec73159509ed6f06bc6b296d398e",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "mSUN": 7.0,
+      "AUDC": 58.5,
+      "recomputed_recorded_stable_new_endpoint": 7,
+      "official_recomputed_AUDC": 58.5,
+      "trajectory_sha256": "7b82cb0ba3fdb339dfba10171cf0c6038d66d2c0c4eafe4835dbb736720b3275",
+      "run_metadata_sha256": "0cfc27fec6ee1ce1b9bc3b8b247e932b0e3108d5a8bf69148ba52d9431b04fb9",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "mSUN": 9.0,
+      "AUDC": 88.5,
+      "recomputed_recorded_stable_new_endpoint": 9,
+      "official_recomputed_AUDC": 88.5,
+      "trajectory_sha256": "5ad75df2dbfb90d1400adda18a3748360ddb95b333bead89c3e480128bf415bd",
+      "run_metadata_sha256": "411f318818249ea684a6e955d828043caa8b8c6c5bc66679cd46fb096f1b7a8c",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "attempt": 2,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_02",
+      "mSUN": 12.0,
+      "AUDC": 105.0,
+      "recomputed_recorded_stable_new_endpoint": 12,
+      "official_recomputed_AUDC": 105.0,
+      "trajectory_sha256": "5210a765b3bbdd034fb548cd6546bee38df8263ab3b07d9a4c846e8602193ba5",
+      "run_metadata_sha256": "b43d2f7dd93f6f81ae15aed0ff6f94aaaba104bbaaa137e34cb0ac692f5d5ac3",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "attempt": 2,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_29/attempt_02",
+      "mSUN": 9.0,
+      "AUDC": 98.5,
+      "recomputed_recorded_stable_new_endpoint": 9,
+      "official_recomputed_AUDC": 98.5,
+      "trajectory_sha256": "d3d7b34331c4b4afe282de957ca8cf5a3f00b3800786878fa32a8d758e838ac9",
+      "run_metadata_sha256": "3598c00c8d27ff49c921c16dd0f17f4752dea73341c1f79cc3d20cd12b7ef5c6",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "m1_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "mSUN": 12.0,
+      "AUDC": 105.0,
+      "recomputed_recorded_stable_new_endpoint": 12,
+      "official_recomputed_AUDC": 105.0,
+      "trajectory_sha256": "8124914e17faeeee2c3c749076da41ed7b4c46229104f37f685d073209ee5873",
+      "run_metadata_sha256": "e101451c42455e7a44feae89970f6449a45e6c50eb827779a6b2843c4c55adc2",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "recorded_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+      "machine": "LiLinghaodeMacBook-Air.local",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": true,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_17/attempt_01",
+      "mSUN": 11.0,
+      "AUDC": 84.5,
+      "recomputed_recorded_stable_new_endpoint": 11,
+      "official_recomputed_AUDC": 84.5,
+      "trajectory_sha256": "b082b138554fe238b4078f2f929a1a093925a72bcadf3fc5b9c5d0c9d9bdc0fc",
+      "run_metadata_sha256": "b5ccf20a4e0368fa14ccc7ac2d1469ca1d02c8b9bcc2199ddd9246e0cf445b03",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_29/attempt_01",
+      "mSUN": 15.0,
+      "AUDC": 129.5,
+      "recomputed_recorded_stable_new_endpoint": 15,
+      "official_recomputed_AUDC": 129.5,
+      "trajectory_sha256": "c8525ce7d26b6dfd409c71256f733e900b80f82713eea5da6bc5966868db057d",
+      "run_metadata_sha256": "457bf9b1ab2c8006adb249dd92cdfb7874ca24d442abb64e91bde3e902eec7e0",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_43/attempt_01",
+      "mSUN": 10.0,
+      "AUDC": 82.0,
+      "recomputed_recorded_stable_new_endpoint": 10,
+      "official_recomputed_AUDC": 82.0,
+      "trajectory_sha256": "54c20f31374c6d855287ee88fe3808c7e73bb9a18fbd7f59e93180a4dfe21176",
+      "run_metadata_sha256": "d626f0c7e743f005fe9bf01a6494467e27cf9f9f7751a369ec0fb3391adca13a",
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_17/attempt_01",
+      "mSUN": 12.0,
+      "AUDC": 124.0,
+      "recomputed_recorded_stable_new_endpoint": 12,
+      "official_recomputed_AUDC": 124.0,
+      "trajectory_sha256": "bf7f79ed06f8934edcf8d7cf4acfde041fe5c884a7776a01197dba8559f2a7f9",
+      "run_metadata_sha256": "ff6ebc9a1dce2d6dd4a43c66de341f8362a4a4ca6bfc52332fb9acc72190e348",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_29/attempt_01",
+      "mSUN": 11.0,
+      "AUDC": 96.5,
+      "recomputed_recorded_stable_new_endpoint": 11,
+      "official_recomputed_AUDC": 96.5,
+      "trajectory_sha256": "d404568c7216187e07c6be14721601a68b6a6c9760f9e80e7b23673620f5032f",
+      "run_metadata_sha256": "8bfb92e13f8505989cad4b7ce414ff6481913b6c06db2bcb6a654ea17da20399",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_43/attempt_01",
+      "mSUN": 2.0,
+      "AUDC": 32.0,
+      "recomputed_recorded_stable_new_endpoint": 2,
+      "official_recomputed_AUDC": 32.0,
+      "trajectory_sha256": "a955409978189b8d3a1252c6d67219e2582c56765d9ee63bfd00eec2b261e579",
+      "run_metadata_sha256": "8578d43f92780ef8282095f0d22205337b77584ca1eeb142325f75d4d1b65de3",
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_17/attempt_01",
+      "mSUN": 2.0,
+      "AUDC": 7.0,
+      "recomputed_recorded_stable_new_endpoint": 2,
+      "official_recomputed_AUDC": 7.0,
+      "trajectory_sha256": "23d525fc42e99d7610af62c53ea089b31b2f20b0783b7a371935d86bb98055c0",
+      "run_metadata_sha256": "3dcf65daa475df9468b446ef0522de6035ef87624ca1d2f68910e1d55a62f073",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_29/attempt_01",
+      "mSUN": 5.0,
+      "AUDC": 30.5,
+      "recomputed_recorded_stable_new_endpoint": 5,
+      "official_recomputed_AUDC": 30.5,
+      "trajectory_sha256": "40bf93e8d7dfb12db5672fe5aa7d4d26a8cbb013f6ad2f223171ebe6002227fa",
+      "run_metadata_sha256": "064f674a029f596347b0e9bb27539f64a07fb5c72d379f6ca4b06bfbb312f071",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_43/attempt_01",
+      "mSUN": 3.0,
+      "AUDC": 13.5,
+      "recomputed_recorded_stable_new_endpoint": 3,
+      "official_recomputed_AUDC": 13.5,
+      "trajectory_sha256": "325c36a20a6d17aaf66c849dce6b771694d09f9cd8b82ab2c046c8e15c003dfa",
+      "run_metadata_sha256": "ee5c1b707225eae00a140c411ff6b4267a309dfc8c47e9ed1fd0d4ce655b52df",
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "mSUN": 16.0,
+      "AUDC": 168.0,
+      "recomputed_recorded_stable_new_endpoint": 16,
+      "official_recomputed_AUDC": 168.0,
+      "trajectory_sha256": "161def0558359fee02534bcfa4b1fa6cb7138d403ef362931afcf2dd1d0106bd",
+      "run_metadata_sha256": "3031110134629812bc9759ba0d5bb35d5e980699dcad55a22902b53f5df53538",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "mSUN": 18.0,
+      "AUDC": 164.0,
+      "recomputed_recorded_stable_new_endpoint": 18,
+      "official_recomputed_AUDC": 164.0,
+      "trajectory_sha256": "1ad9d5fe1f16e1cf32a7d058fb6e964b3ab3c25c8cfbffe98fd824764bdfcff5",
+      "run_metadata_sha256": "1f9bde71901e2e7dbfa87314b368927cfcfb4a9a02e5044dfc1ced039e77c2df",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "mSUN": 13.0,
+      "AUDC": 126.5,
+      "recomputed_recorded_stable_new_endpoint": 13,
+      "official_recomputed_AUDC": 126.5,
+      "trajectory_sha256": "79337d9f2b7766f1c2971736a84000212995892a8b2b2717043860d1c93b7d4e",
+      "run_metadata_sha256": "0c441a2d51892f5d3db41d93ba801ad32b957a1f159939b047863889e550a570",
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "mSUN": 6.0,
+      "AUDC": 59.0,
+      "recomputed_recorded_stable_new_endpoint": 6,
+      "official_recomputed_AUDC": 59.0,
+      "trajectory_sha256": "2b1bb39b629ae5618400ea29f4f141e76c16c973b5fe1ffa8fe2d2675f3736f1",
+      "run_metadata_sha256": "8dc8f3efba60f169c41213b10fa8ad9bec7ca40801d4e991c9db9113e57dc570",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "mSUN": 5.0,
+      "AUDC": 44.5,
+      "recomputed_recorded_stable_new_endpoint": 5,
+      "official_recomputed_AUDC": 44.5,
+      "trajectory_sha256": "9d366b4a0c75afaf2cb6df95a2a2dbc0c62bf917e5b25494f9fbe8a1b9a2e07a",
+      "run_metadata_sha256": "0492c348feb07ab5bc7eb96ca1d7194af88bc75419212c03ff5b777ea1f814ef",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "mSUN": 9.0,
+      "AUDC": 67.5,
+      "recomputed_recorded_stable_new_endpoint": 9,
+      "official_recomputed_AUDC": 67.5,
+      "trajectory_sha256": "f8b75ad54ee3fa9248c584d1470808ae0b6eea70560d0b85e4a192cda27de33f",
+      "run_metadata_sha256": "bc3d57e3676260de4d4b5f7dec0e38c70b0fdf5d67570ee61e1e1eb07fcc1bde",
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+      "mSUN": 15.0,
+      "AUDC": 145.5,
+      "recomputed_recorded_stable_new_endpoint": 15,
+      "official_recomputed_AUDC": 145.5,
+      "trajectory_sha256": "e5192a75608ed7fa00e600aa39ff0a0a04b3d64cd8358f7e7199a01c3aefea8d",
+      "run_metadata_sha256": "5e3a1387836901535fce6522d69058ac6a24c00325e6821958020f2a31e04c97",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+      "mSUN": 8.0,
+      "AUDC": 82.0,
+      "recomputed_recorded_stable_new_endpoint": 8,
+      "official_recomputed_AUDC": 82.0,
+      "trajectory_sha256": "a060c35f63036bbb93a6f6e9b7767b8c413b13394123c7e300d50f881a72bfc4",
+      "run_metadata_sha256": "0df7116842fccbdfec45f9267d9dff198fc4b2492fc8f538395991e1a5dc1f6c",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    },
+    {
+      "method": "exploration_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "attempt": 1,
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "mSUN": 13.0,
+      "AUDC": 131.5,
+      "recomputed_recorded_stable_new_endpoint": 13,
+      "official_recomputed_AUDC": 131.5,
+      "trajectory_sha256": "bea12b16b2953aa8571b87f675d76cda73d0abcf932d30c9b8ed2546ffaa06fc",
+      "run_metadata_sha256": "065edcf5c55ae58d743e0960d5b0131ef7201f4dd0eb90b9f09a57b0eab54408",
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "recorded_upstream_commit": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+      "machine": "Wander-Lust",
+      "protocol_settings": {
+        "protocol_version": "m1-v1",
+        "made_upstream_commit": "bffda0c9a1fa1904b35c0ef67b455881c975df86",
+        "runner": "scripts/run_benchmark.py",
+        "oracle": {
+          "name": "ORBOracle",
+          "model_name": "orb-v3-conservative-inf-omat",
+          "device": "cpu",
+          "relax": true,
+          "optimizer": "fire",
+          "fmax": 0.02,
+          "max_steps": 500,
+          "relax_unit_cell": true
+        },
+        "materials_project": {
+          "thermo_types": [
+            "GGA_GGA+U"
+          ]
+        },
+        "environment": {
+          "query_budget": 20,
+          "max_stoichiometry": 20,
+          "stability_tolerance_ev_per_atom": 0.1,
+          "filter_by_smact": true,
+          "include_near_stable_from_ground_truth": true
+        },
+        "systems": {
+          "source": "MADE/data/systems_10_mp_20/systems_ternary_n10_maxatoms20_intermetallic_smact.json",
+          "dev_file": "M1/protocol/dev_systems.json",
+          "check_file": "M1/protocol/check_systems.json"
+        },
+        "repeats": {
+          "seeds": [
+            17,
+            29,
+            43
+          ],
+          "episodes_per_process": 1
+        },
+        "methods": {
+          "runnable_m1_reference": "m1_baseline",
+          "required": [
+            "m1_full",
+            "random_generator_baseline",
+            "chemeleon_generative_baseline"
+          ],
+          "ablations": [
+            "planning_off",
+            "memory_off",
+            "self_correction_off",
+            "exploration_off",
+            "tool_routing_off"
+          ]
+        },
+        "metrics": {
+          "primary": "final/novelty_stable_unique_novel_count",
+          "secondary": [
+            "final/novelty_stable_unique_novel_fraction",
+            "final/discovery_curve_area_under_discovery_curve",
+            "final/discovery_curve_acceleration_factor",
+            "final/discovery_curve_enhancement_factor"
+          ]
+        },
+        "logging": {
+          "use_wandb": false,
+          "save_trajectory": true,
+          "save_resolved_config": true,
+          "preserve_failed_runs": true
+        }
+      },
+      "checks": {
+        "recorded_stable_new_observation_count_matches_final_mSUN": true,
+        "official_AUDC_from_recorded_observation_curve_matches_final_AUDC": true,
+        "query_counts_1_to_20": true,
+        "metadata_budget_episode_split": true,
+        "summary_matches_novelty_stable_unique_novel_count": true,
+        "summary_matches_discovery_curve_area_under_discovery_curve": true,
+        "summary_matches_queries_used": true,
+        "recorded_command_switches_correct": true
+      },
+      "accepted": true,
+      "original_history_present": false,
+      "history_audit_kind": "Read-only reconstruction from actual saved is_stable/is_newly_discovered observations; not recovered original checkpoint and not an independent hull/novelty reevaluation."
+    }
+  ],
+  "method_summaries": [
+    {
+      "method": "m1_full",
+      "runs": 18,
+      "primary_statistic": "Six equally weighted systems mean within seed, then mean and sample SD across 3 seeds.",
+      "supplement_statistic": "Pooled 18-episode population SD describes system/seed dispersion, not the primary seed-level uncertainty.",
+      "mSUN": {
+        "primary": {
+          "n": 3,
+          "mean": 10.0,
+          "sample_SD": 0.8819171036881968,
+          "population_SD": 0.7200822998230955,
+          "seed_means": [
+            {
+              "seed": 17,
+              "six_system_mean": 9.0
+            },
+            {
+              "seed": 29,
+              "six_system_mean": 10.333333333333334
+            },
+            {
+              "seed": 43,
+              "six_system_mean": 10.666666666666666
+            }
+          ]
+        },
+        "pooled_episode_supplement": {
+          "n": 18,
+          "mean": 10.0,
+          "sample_SD": 2.807552838536876,
+          "population_SD": 2.7284509239574835
+        }
+      },
+      "AUDC": {
+        "primary": {
+          "n": 3,
+          "mean": 88.11111111111111,
+          "sample_SD": 9.453590342847018,
+          "population_SD": 7.71882419242596,
+          "seed_means": [
+            {
+              "seed": 17,
+              "six_system_mean": 77.33333333333333
+            },
+            {
+              "seed": 29,
+              "six_system_mean": 95.0
+            },
+            {
+              "seed": 43,
+              "six_system_mean": 92.0
+            }
+          ]
+        },
+        "pooled_episode_supplement": {
+          "n": 18,
+          "mean": 88.11111111111111,
+          "sample_SD": 29.653169434587255,
+          "population_SD": 28.81770075046255
+        }
+      }
+    },
+    {
+      "method": "exploration_off",
+      "runs": 18,
+      "primary_statistic": "Six equally weighted systems mean within seed, then mean and sample SD across 3 seeds.",
+      "supplement_statistic": "Pooled 18-episode population SD describes system/seed dispersion, not the primary seed-level uncertainty.",
+      "mSUN": {
+        "primary": {
+          "n": 3,
+          "mean": 9.666666666666668,
+          "sample_SD": 1.1547005383792515,
+          "population_SD": 0.9428090415820634,
+          "seed_means": [
+            {
+              "seed": 17,
+              "six_system_mean": 10.333333333333334
+            },
+            {
+              "seed": 29,
+              "six_system_mean": 10.333333333333334
+            },
+            {
+              "seed": 43,
+              "six_system_mean": 8.333333333333334
+            }
+          ]
+        },
+        "pooled_episode_supplement": {
+          "n": 18,
+          "mean": 9.666666666666666,
+          "sample_SD": 4.970501217477084,
+          "population_SD": 4.83045891539648
+        }
+      },
+      "AUDC": {
+        "primary": {
+          "n": 3,
+          "mean": 88.22222222222223,
+          "sample_SD": 11.535372331000627,
+          "population_SD": 9.418592067990305,
+          "seed_means": [
+            {
+              "seed": 17,
+              "six_system_mean": 98.0
+            },
+            {
+              "seed": 29,
+              "six_system_mean": 91.16666666666667
+            },
+            {
+              "seed": 43,
+              "six_system_mean": 75.5
+            }
+          ]
+        },
+        "pooled_episode_supplement": {
+          "n": 18,
+          "mean": 88.22222222222223,
+          "sample_SD": 50.72278239208464,
+          "population_SD": 49.293684016825296
+        }
+      }
+    }
+  ],
+  "per_system_statistics": [
+    {
+      "system": "Mg-Sn-Sr",
+      "mSUN": {
+        "ON": {
+          "n": 3,
+          "mean": 11.0,
+          "sample_SD": 1.7320508075688772,
+          "population_SD": 1.4142135623730951
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 12.0,
+          "sample_SD": 3.605551275463989,
+          "population_SD": 2.943920288775949
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": -1.0,
+          "sample_SD": 2.0,
+          "population_SD": 1.632993161855452
+        }
+      },
+      "AUDC": {
+        "ON": {
+          "n": 3,
+          "mean": 102.83333333333333,
+          "sample_SD": 3.7527767497325675,
+          "population_SD": 3.064129385141706
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 119.66666666666667,
+          "sample_SD": 33.36290355070034,
+          "population_SD": 27.24069667896832
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": -16.833333333333332,
+          "sample_SD": 29.70409623828561,
+          "population_SD": 24.25329301810833
+        }
+      }
+    },
+    {
+      "system": "Au-K-Tb",
+      "mSUN": {
+        "ON": {
+          "n": 3,
+          "mean": 13.0,
+          "sample_SD": 2.6457513110645907,
+          "population_SD": 2.160246899469287
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 12.0,
+          "sample_SD": 2.6457513110645907,
+          "population_SD": 2.160246899469287
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": 1.0,
+          "sample_SD": 3.4641016151377544,
+          "population_SD": 2.8284271247461903
+        }
+      },
+      "AUDC": {
+        "ON": {
+          "n": 3,
+          "mean": 106.5,
+          "sample_SD": 30.335622624235025,
+          "population_SD": 24.76893215300167
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 98.66666666666667,
+          "sample_SD": 26.731691553909066,
+          "population_SD": 21.826334756181325
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": 7.833333333333333,
+          "sample_SD": 25.540817005987364,
+          "population_SD": 20.8539897594894
+        }
+      }
+    },
+    {
+      "system": "Co-Mg-Na",
+      "mSUN": {
+        "ON": {
+          "n": 3,
+          "mean": 9.0,
+          "sample_SD": 4.358898943540674,
+          "population_SD": 3.559026084010437
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 3.3333333333333335,
+          "sample_SD": 1.5275252316519468,
+          "population_SD": 1.247219128924647
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": 5.666666666666667,
+          "sample_SD": 3.2145502536643185,
+          "population_SD": 2.6246692913372702
+        }
+      },
+      "AUDC": {
+        "ON": {
+          "n": 3,
+          "mean": 68.16666666666667,
+          "sample_SD": 44.75581898852185,
+          "population_SD": 36.54297318074829
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 17.0,
+          "sample_SD": 12.134661099511597,
+          "population_SD": 9.9079092984679
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": 51.166666666666664,
+          "sample_SD": 34.858045460601105,
+          "population_SD": 28.461474936404045
+        }
+      }
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "mSUN": {
+        "ON": {
+          "n": 3,
+          "mean": 9.333333333333334,
+          "sample_SD": 2.516611478423583,
+          "population_SD": 2.0548046676563256
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 6.666666666666667,
+          "sample_SD": 2.0816659994661326,
+          "population_SD": 1.699673171197595
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": 2.6666666666666665,
+          "sample_SD": 3.0550504633038935,
+          "population_SD": 2.494438257849294
+        }
+      },
+      "AUDC": {
+        "ON": {
+          "n": 3,
+          "mean": 91.66666666666667,
+          "sample_SD": 34.858045460601105,
+          "population_SD": 28.461474936404045
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 57.0,
+          "sample_SD": 11.629703349613008,
+          "population_SD": 9.495613022162743
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": 34.666666666666664,
+          "sample_SD": 29.93882651897588,
+          "population_SD": 24.44494948973214
+        }
+      }
+    },
+    {
+      "system": "Co-Dy-W",
+      "mSUN": {
+        "ON": {
+          "n": 3,
+          "mean": 7.333333333333333,
+          "sample_SD": 1.1547005383792515,
+          "population_SD": 0.9428090415820634
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 8.333333333333334,
+          "sample_SD": 5.507570547286102,
+          "population_SD": 4.4969125210773475
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": -1.0,
+          "sample_SD": 6.244997998398398,
+          "population_SD": 5.0990195135927845
+        }
+      },
+      "AUDC": {
+        "ON": {
+          "n": 3,
+          "mean": 57.666666666666664,
+          "sample_SD": 9.073771725877465,
+          "population_SD": 7.408703590297623
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 84.16666666666667,
+          "sample_SD": 47.22375814495637,
+          "population_SD": 38.55803706391473
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": -26.5,
+          "sample_SD": 51.61637337124723,
+          "population_SD": 42.14459237751229
+        }
+      }
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "mSUN": {
+        "ON": {
+          "n": 3,
+          "mean": 10.333333333333334,
+          "sample_SD": 1.5275252316519468,
+          "population_SD": 1.247219128924647
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 15.666666666666666,
+          "sample_SD": 2.516611478423583,
+          "population_SD": 2.0548046676563256
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": -5.333333333333333,
+          "sample_SD": 1.1547005383792515,
+          "population_SD": 0.9428090415820634
+        }
+      },
+      "AUDC": {
+        "ON": {
+          "n": 3,
+          "mean": 101.83333333333333,
+          "sample_SD": 10.88959748261309,
+          "population_SD": 8.89131911223276
+        },
+        "OFF": {
+          "n": 3,
+          "mean": 152.83333333333334,
+          "sample_SD": 22.892866428940987,
+          "population_SD": 18.69194716686544
+        },
+        "paired_ON_minus_OFF": {
+          "n": 3,
+          "mean": -51.0,
+          "sample_SD": 23.515952032609693,
+          "population_SD": 19.200694431886223
+        }
+      }
+    }
+  ],
+  "paired_effects": [
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "ON_attempt": 2,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": -3.0,
+      "delta_AUDC_ON_minus_OFF": -40.5
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "ON_attempt": 2,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": 1.0,
+      "delta_AUDC_ON_minus_OFF": 16.5
+    },
+    {
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": -1.0,
+      "delta_AUDC_ON_minus_OFF": -26.5
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": -1.0,
+      "delta_AUDC_ON_minus_OFF": -12.5
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": -1.0,
+      "delta_AUDC_ON_minus_OFF": -0.5
+    },
+    {
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": 5.0,
+      "delta_AUDC_ON_minus_OFF": 36.5
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": 2.0,
+      "delta_AUDC_ON_minus_OFF": 11.0
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": 7.0,
+      "delta_AUDC_ON_minus_OFF": 73.5
+    },
+    {
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": 8.0,
+      "delta_AUDC_ON_minus_OFF": 69.0
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": 6.0,
+      "delta_AUDC_ON_minus_OFF": 69.0
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": 2.0,
+      "delta_AUDC_ON_minus_OFF": 14.0
+    },
+    {
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": 0.0,
+      "delta_AUDC_ON_minus_OFF": 21.0
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": -6.0,
+      "delta_AUDC_ON_minus_OFF": -76.0
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": -3.0,
+      "delta_AUDC_ON_minus_OFF": -30.5
+    },
+    {
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": 6.0,
+      "delta_AUDC_ON_minus_OFF": 27.0
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": -6.0,
+      "delta_AUDC_ON_minus_OFF": -75.0
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": -6.0,
+      "delta_AUDC_ON_minus_OFF": -50.0
+    },
+    {
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "ON_attempt": 1,
+      "OFF_attempt": 1,
+      "canonical_reference_and_protocol_match": true,
+      "delta_mSUN_ON_minus_OFF": -4.0,
+      "delta_AUDC_ON_minus_OFF": -28.0
+    }
+  ],
+  "effect_summary": {
+    "mSUN": {
+      "ON_minus_OFF_primary_seed_aggregate": {
+        "n": 3,
+        "mean": 0.3333333333333334,
+        "sample_SD": 1.855921454276674,
+        "population_SD": 1.5153535218873173
+      },
+      "seed_order": [
+        17,
+        29,
+        43
+      ],
+      "seed_mean_deltas": [
+        -1.3333333333333333,
+        0.0,
+        2.3333333333333335
+      ],
+      "paired_episode_ON_wins": 8,
+      "paired_episode_ties": 1,
+      "paired_episode_ON_losses": 9
+    },
+    "AUDC": {
+      "ON_minus_OFF_primary_seed_aggregate": {
+        "n": 3,
+        "mean": -0.11111111111111145,
+        "sample_SD": 18.894688652085783,
+        "population_SD": 15.427448682121947
+      },
+      "seed_order": [
+        17,
+        29,
+        43
+      ],
+      "seed_mean_deltas": [
+        -20.666666666666668,
+        3.8333333333333335,
+        16.5
+      ],
+      "paired_episode_ON_wins": 9,
+      "paired_episode_ties": 0,
+      "paired_episode_ON_losses": 9
+    }
+  },
+  "report_findings": [
+    {
+      "severity": "report_correction",
+      "item": "Mg-Sn-Sr Full comparator",
+      "reported": "ON mSUN10.0; AUDC96.0",
+      "actual": "Successful frozen attempts 02/02/01 for seeds17/29/43 give mSUN12/9/12 and AUDC105/98.5/105: mean11.0 and102.83333333333333. The two unsuccessful attempt01 directories remain preserved."
+    },
+    {
+      "severity": "report_correction",
+      "item": "Overall mean and effect",
+      "reported": "ON9.8 versusOFF9.7; delta+0.2; AUDCON87.0 versusOFF88.2; delta-1.2",
+      "actual": "ON10.0 versusOFF9.666666666666666; delta+0.3333333333333333. AUDCON88.11111111111111 versusOFF88.22222222222223; delta-0.1111111111111111."
+    },
+    {
+      "severity": "statistic_label",
+      "item": "Overall std4.8 to2.7",
+      "actual": "Correct rounded pooled18-episode population SDs ofmSUN, but not primary equal-system seed-first sample SD. Descriptive cross-system dispersion only; no statistically established stabilisation or causal rescue claim."
+    },
+    {
+      "severity": "report_correction",
+      "item": "Full pooled AUDC population SD",
+      "reported": 28.5,
+      "actual": 28.81770075046255,
+      "rounded_to_one_decimal": 28.8
+    },
+    {
+      "severity": "report_correction",
+      "item": "Same machine family",
+      "reported": "Same machine family",
+      "actual": "The frozen Full metadata records a macOS arm MacBook; exploration_off records Windows AMD64/AuthenticAMD. Budgets and oracle execution device match; machine family does not. Do not infer runtime speedup from this comparison."
+    },
+    {
+      "severity": "interpretation_limit",
+      "item": "Mechanism claims",
+      "actual": "Per-system direction is observed. UCB causality, easy/hard system labels, opportunity cost, mode collapse and future gains are interpretations requiring actual decision evidence and cannot be established from endpoints alone."
+    }
+  ]
+}

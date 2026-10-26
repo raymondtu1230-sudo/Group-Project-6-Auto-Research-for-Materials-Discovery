@@ -324,3 +324,13 @@ Older snapshots below are superseded by this confirmed snapshot.
 - Corrected scope: latest M3/user clarification confirms extra Full-agent planning_off/self_correction_off are not M3 assignment debt. The previous M2 attribution is withdrawn. M3 assigned54-run handoff is complete; M1/M6 decide any extra Full-agent work.
 - Preserved: no original metadata/history/scientific source changed; newfull keepsae7fe819 andOFFkeeps02e0026. Prior126-run release remains; outdated human-facing statements have a prominent superseding correction and byte-exact backup. No new experiment/model/oracle call or external message. All edits underM2.
 - Next: M5 exploration package, M6 remaining check/hidden and final report/deck assembly; resolve extra Full-agent scope withM1/M6 if desired.
+
+
+## 26 October 2026 — M5 conditional intake and corrected results
+
+- Built: retained accepted144 report read-only; ran unchangedM2 evaluator on18 newM5 raw attempts, all rejected at missingactualresolved_config. Separately verified18 real endpoints/material references/protocols/source fingerprints, produced explicitly pending9-method/162-row tables,18Full pairs,36 provisionalbaselineAF/EF,360 labelledtrajectory-derived points, costs, and correctedM6/case notes.
+- Corrected: exact18 successfulFull reference is10.0mSUN/88.1111AUDC, OFF9.6667/88.2222; delta+.3333/−.1111. M5MgFull row11.0/102.8333 replaces10/96. PooledpopulationmSUNSD4.8→2.7 retained separately fromseed-levelsampleSD.
+- Cases: OFFMg29first16queries binary/6stable; FullGa17hasone mixed/UCBternary, notsixexploreternaries. ActualFullm5_decisions sidecars exist. SameGa17OFF/ON16/10, notsystemmeans15.7/10.3. No manualmode invention orunobservedcounterfactualclaim.
+- Verification:18x74 frozeninput hashes matchwithnewline handling;108 scientificfiles equivalent. Correctzero-originAUDC126.5 forGa43 confirmed; a preliminaryindependentnaive126.0 calculation omitted(0,0), was corrected beforepublication. No original endpoint was changed. OriginalM5helper rectangle/stepSUM is notused forsharedAUDC.
+- Limits: noactualresolvedconfigs/Hydrafiles/retainedhistories/componentlogs innewattempts. Runtimeplatform/dependencyversions differfromFull andremainrecorded; nohardwarecausalclaim. Originalsourceaedf8ca preserved, notrelabeledfreeze02. No actualconfiguration orlog fabricated; no newscientific/model/oraclecall.
+- Next: usercanforwardM5_FOLLOWUP.md to recoverexistingoriginalfiles, thena newstrictintake; M6remainingcheck/hidden andfinalassembly; extraFullplanning/selfcorrectionM1/M6scope. All project changes are under M2; no peer file was edited, and previous live entry points are backed up.

@@ -1,0 +1,20 @@
+{
+  "method": "exploration_off",
+  "comparator": "m1_full",
+  "acceptance_class": "endpoint_verified_resolved_configuration_and_package_pending",
+  "matched_endpoint_pairs": 18,
+  "delta_mSUN_full_minus_off_mean": 0.3333333333333334,
+  "delta_mSUN_full_minus_off_std": 1.855921454276674,
+  "delta_AUDC_full_minus_off_mean": -0.11111111111111145,
+  "delta_AUDC_full_minus_off_std": 18.894688652085783,
+  "AF_off_vs_full_mean": 0.7297964753589109,
+  "AF_off_vs_full_std": 0.23296476992716084,
+  "EF_off_vs_full_mean": 0.9796356421356421,
+  "EF_off_vs_full_std": 0.18650654453588442,
+  "full_mSUN_better_pairs": 8,
+  "full_mSUN_equal_pairs": 1,
+  "full_mSUN_worse_pairs": 9,
+  "full_AUDC_better_pairs": 9,
+  "full_AUDC_equal_pairs": 0,
+  "full_AUDC_worse_pairs": 9
+}

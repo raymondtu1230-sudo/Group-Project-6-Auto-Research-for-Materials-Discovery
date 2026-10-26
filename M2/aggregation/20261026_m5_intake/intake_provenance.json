@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-26",
+  "source_snapshot_commit": "a27634d9edbf231d0c034273fa9f977f9d5e799e",
+  "snapshot_archive_sha256": "0674c5434a410d56ee6104251019bf21ba76b5059803878f5bd2a8529e0e47ad",
+  "M5_actual_recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+  "M5_recorded_command_switches": {
+    "planning": true,
+    "memory": true,
+    "reflection": true,
+    "exploration": false,
+    "tool_routing": true
+  },
+  "M5_actual_resolved_configs_available": false,
+  "prior_accepted144_release": "M2/aggregation/20261026_m3_complete",
+  "canonical144_unchanged": true,
+  "M5_endpoint_only_verified": 18,
+  "M5_canonical_accepted": 0,
+  "all_original_data_read_only": true,
+  "all_new_project_writes_under": "M2/",
+  "new_scientific_runs": 0,
+  "new_oracle_calls": 0,
+  "messages_sent": 0
+}

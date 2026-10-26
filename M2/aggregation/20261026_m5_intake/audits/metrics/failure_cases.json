@@ -1,0 +1,1836 @@
+{
+  "audit_kind": "independent_read_only_recorded_failure_case_audit",
+  "snapshot_commit": "a27634d9edbf231d0c034273fa9f977f9d5e799e",
+  "oracle_calls": 0,
+  "source_report": {
+    "path": "M5/report/M5_RESULTS.md",
+    "sha256": "03d754bcfdc7c05d6cde2caa6e92de5a96e56485eebb732487ce128ad26e3c60"
+  },
+  "cases": {
+    "off_MgSnSr29": {
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_29/attempt_01/trajectories/episode_000.json",
+      "sha256": "a060c35f63036bbb93a6f6e9b7767b8c413b13394123c7e300d50f881a72bfc4",
+      "mSUN": 8.0,
+      "num_newly_discovered_stable": 8,
+      "AUDC": 82.0,
+      "trajectory_length": 20,
+      "final_unique_structure_count": 20.0,
+      "all_rows_newly_discovered": true,
+      "unique_exact_serialized_proposals": 20,
+      "rows": [
+        {
+          "query_index_zero_based": 0,
+          "query_number_one_based": 1,
+          "reduced_formula": "Sn1 Sr5",
+          "proposal_site_species_counts": {
+            "Sn": 1,
+            "Sr": 5
+          },
+          "proposal_nsites": 6,
+          "proposal_sha256": "494ee97dca3f2ffdb518ea167f05c6527924322d0065c407ab911c88c4ad5d5c",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.3844978014628091,
+          "formation_energy_per_atom": 0.07186354531182193,
+          "energy_per_atom": -1.9268007278442383
+        },
+        {
+          "query_index_zero_based": 1,
+          "query_number_one_based": 2,
+          "reduced_formula": "Sn9 Sr1",
+          "proposal_site_species_counts": {
+            "Sr": 1.0,
+            "Sn": 9.0
+          },
+          "proposal_nsites": 10,
+          "proposal_sha256": "4f3af80107cd1b973bda3a855e3df165bf5a7049fc3813d959bd29b1cff26605",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.08245191574096733,
+          "formation_energy_per_atom": -0.08753722508748396,
+          "energy_per_atom": -3.680777359008789
+        },
+        {
+          "query_index_zero_based": 2,
+          "query_number_one_based": 3,
+          "reduced_formula": "Sn1 Sr3",
+          "proposal_site_species_counts": {
+            "Sr": 3.0,
+            "Sn": 1.0
+          },
+          "proposal_nsites": 4,
+          "proposal_sha256": "31db8c1a0db262349c8a1fb701459f16ccd49d8e2a3fe4f917f2e5d7127cc836",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.13034383455912257,
+          "formation_energy_per_atom": -0.3386075496673584,
+          "energy_per_atom": -2.5184736251831055
+        },
+        {
+          "query_index_zero_based": 3,
+          "query_number_one_based": 4,
+          "reduced_formula": "Sn1 Sr11",
+          "proposal_site_species_counts": {
+            "Sr": 11.0,
+            "Sn": 1.0
+          },
+          "proposal_nsites": 12,
+          "proposal_sha256": "309c6f57403bdbb83928d6d682ea9109e33595a9a8a66ded5b9458a64173fc03",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.0713764031728108,
+          "formation_energy_per_atom": -0.08494072490268263,
+          "energy_per_atom": -1.902403195699056
+        },
+        {
+          "query_index_zero_based": 4,
+          "query_number_one_based": 5,
+          "reduced_formula": "Sn9 Sr7",
+          "proposal_site_species_counts": {
+            "Sr": 7.0,
+            "Sn": 9.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "ef92d866dd1878d83c840679e02fabf8655d3eb5ea3cd8f1ece449ba6ff7043a",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.10136079788208008,
+          "formation_energy_per_atom": -0.5318863590558367,
+          "energy_per_atom": -3.39125919342041
+        },
+        {
+          "query_index_zero_based": 5,
+          "query_number_one_based": 6,
+          "reduced_formula": "Sn7 Sr9",
+          "proposal_site_species_counts": {
+            "Sn": 7,
+            "Sr": 9
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "0b594dafa5f48f21f03e5cf56587cf31d9208db3c21afbf0f83708a919cecd08",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 38.107035875320435,
+          "formation_energy_per_atom": 37.435478150844574,
+          "energy_per_atom": 34.84790802001953
+        },
+        {
+          "query_index_zero_based": 6,
+          "query_number_one_based": 7,
+          "reduced_formula": "Sn11 Sr5",
+          "proposal_site_species_counts": {
+            "Sr": 5.0,
+            "Sn": 11.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "5829c88ac996a550a255d5617ea30ad420e6a4355dce82ec6a9a5bb7de81552f",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.05154883861541748,
+          "formation_energy_per_atom": -0.4455706874529519,
+          "energy_per_atom": -3.5767462253570557
+        },
+        {
+          "query_index_zero_based": 7,
+          "query_number_one_based": 8,
+          "reduced_formula": "Sn17 Sr3",
+          "proposal_site_species_counts": {
+            "Sr": 3.0,
+            "Sn": 17.0
+          },
+          "proposal_nsites": 20,
+          "proposal_sha256": "0756b112c45299eaa0c50cf1f2fce24cffdf9052084846c4a87da6b1310e052f",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.04987568855285662,
+          "formation_energy_per_atom": -0.20510802268981934,
+          "energy_per_atom": -3.6896270751953124
+        },
+        {
+          "query_index_zero_based": 8,
+          "query_number_one_based": 9,
+          "reduced_formula": "Sn19 Sr1",
+          "proposal_site_species_counts": {
+            "Sr": 1.0,
+            "Sn": 19.0
+          },
+          "proposal_nsites": 20,
+          "proposal_sha256": "026641464c12a1f503c128acacb35a9f53e23dd53f756ac0610173e189277c5c",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.03690695762634233,
+          "formation_energy_per_atom": -0.04808761278788225,
+          "energy_per_atom": -3.750048828125
+        },
+        {
+          "query_index_zero_based": 9,
+          "query_number_one_based": 10,
+          "reduced_formula": "Sn1 Sr7",
+          "proposal_site_species_counts": {
+            "Sr": 14.0,
+            "Sn": 2.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "3c17f7e72ba1a8648d4179c1524a97b9ed81420a319233f2ba4d99a3f61646de",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.10133389631907175,
+          "formation_energy_per_atom": -0.13314179579416896,
+          "energy_per_atom": -2.0412051677703857
+        },
+        {
+          "query_index_zero_based": 10,
+          "query_number_one_based": 11,
+          "reduced_formula": "Sn4 Sr15",
+          "proposal_site_species_counts": {
+            "Sr": 15.0,
+            "Sn": 4.0
+          },
+          "proposal_nsites": 19,
+          "proposal_sha256": "dfe81a6f055fb99f03bb3ef8a3a264b45af7b14de81657eed4e223315df82426",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.13617594200268135,
+          "formation_energy_per_atom": -0.25873048681961863,
+          "energy_per_atom": -2.352764129638672
+        },
+        {
+          "query_index_zero_based": 11,
+          "query_number_one_based": 12,
+          "reduced_formula": "Sn5 Sr12",
+          "proposal_site_species_counts": {
+            "Sr": 12.0,
+            "Sn": 5.0
+          },
+          "proposal_nsites": 17,
+          "proposal_sha256": "bf1a75dcc43ab36ee15f990b734c7a2a04766704fcee136f97cbd559f721acf2",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.1301544039857152,
+          "formation_energy_per_atom": -0.4215531068689683,
+          "energy_per_atom": -2.6973495483398438
+        },
+        {
+          "query_index_zero_based": 12,
+          "query_number_one_based": 13,
+          "reduced_formula": "Sn1 Sr19",
+          "proposal_site_species_counts": {
+            "Sr": 19.0,
+            "Sn": 1.0
+          },
+          "proposal_nsites": 20,
+          "proposal_sha256": "ad4ccea180a4398021d5aecbe4e966519fc6d6db685d3d1617f299c1b217f6c2",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.05044385592142753,
+          "formation_energy_per_atom": -0.043346420923868575,
+          "energy_per_atom": -1.7883281707763672
+        },
+        {
+          "query_index_zero_based": 13,
+          "query_number_one_based": 14,
+          "reduced_formula": "Sn8 Sr9",
+          "proposal_site_species_counts": {
+            "Sr": 9.0,
+            "Sn": 8.0
+          },
+          "proposal_nsites": 17,
+          "proposal_sha256": "8c08f4328a5250626ca957e921e5f27ca66a5b1cbe54e5265f51e09fcdd7e4b1",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.10916998807121736,
+          "formation_energy_per_atom": -0.5759779425228343,
+          "energy_per_atom": -3.2354958478142235
+        },
+        {
+          "query_index_zero_based": 14,
+          "query_number_one_based": 15,
+          "reduced_formula": "Sn9 Sr8",
+          "proposal_site_species_counts": {
+            "Sn": 9,
+            "Sr": 8
+          },
+          "proposal_nsites": 17,
+          "proposal_sha256": "5b9c2ece231c9ced271fad64481103db0d1cf61fa1be4ab9f72c5ec854cda49e",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.2112628431881176,
+          "formation_energy_per_atom": -0.455856585035137,
+          "energy_per_atom": -3.243281644933364
+        },
+        {
+          "query_index_zero_based": 15,
+          "query_number_one_based": 16,
+          "reduced_formula": "Sn13 Sr5",
+          "proposal_site_species_counts": {
+            "Sr": 5.0,
+            "Sn": 13.0
+          },
+          "proposal_nsites": 18,
+          "proposal_sha256": "56c333aa82cfea069e5e894d8f3da393f1bc97ab599a466625258a371f25c969",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.1009998586442733,
+          "formation_energy_per_atom": -0.35603818187007186,
+          "energy_per_atom": -3.5627144707573786
+        },
+        {
+          "query_index_zero_based": 16,
+          "query_number_one_based": 17,
+          "reduced_formula": "Mg2 Sn2 Sr5",
+          "proposal_site_species_counts": {
+            "Sr": 10.0,
+            "Mg": 4.0,
+            "Sn": 4.0
+          },
+          "proposal_nsites": 18,
+          "proposal_sha256": "2bad0c45dca8d0661087090bc928caa90330804f0cfd9616dc5892bb79ea58ce",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.17415512932671406,
+          "formation_energy_per_atom": -0.2737779264096858,
+          "energy_per_atom": -2.3646437327067056
+        },
+        {
+          "query_index_zero_based": 17,
+          "query_number_one_based": 18,
+          "reduced_formula": "Mg5 Sn2 Sr2",
+          "proposal_site_species_counts": {
+            "Sr": 4.0,
+            "Mg": 10.0,
+            "Sn": 4.0
+          },
+          "proposal_nsites": 18,
+          "proposal_sha256": "1a86b4a73cf87bd0c1da3665ad5325296c058cc5e31695c063d32cb892d61c48",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.15172624588012829,
+          "formation_energy_per_atom": -0.23081961384526017,
+          "energy_per_atom": -2.278785917494032
+        },
+        {
+          "query_index_zero_based": 18,
+          "query_number_one_based": 19,
+          "reduced_formula": "Mg2 Sn5 Sr2",
+          "proposal_site_species_counts": {
+            "Sr": 4.0,
+            "Mg": 4.0,
+            "Sn": 10.0
+          },
+          "proposal_nsites": 18,
+          "proposal_sha256": "b397060a345e149c97b0c0813ba62f90e196c14bda0e07745df4f6027271b489",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.07051029205322212,
+          "formation_energy_per_atom": -0.3444948902836554,
+          "energy_per_atom": -3.1601679060194225
+        },
+        {
+          "query_index_zero_based": 19,
+          "query_number_one_based": 20,
+          "reduced_formula": "Mg8 Sn7 Sr3",
+          "proposal_site_species_counts": {
+            "Sr": 3.0,
+            "Mg": 8.0,
+            "Sn": 7.0
+          },
+          "proposal_nsites": 18,
+          "proposal_sha256": "2f59b90dee63cd7d6366c8da895ded5c5533f32f193a104b280530a3ec8714f3",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.06790838241577157,
+          "formation_energy_per_atom": -0.3007296986050076,
+          "energy_per_atom": -2.725399441189236
+        }
+      ],
+      "m5_sidecar": {
+        "present": false,
+        "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_29/attempt_01/m5_decisions.jsonl",
+        "sha256": null,
+        "records": []
+      }
+    },
+    "on_GaPtTm17": {
+      "path": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_17/attempt_01/trajectories/episode_000.json",
+      "sha256": "fc557c6c281ab0ec5f211cee05ecb07365786246b7b90515a51a3bf1dbdd6044",
+      "mSUN": 10.0,
+      "num_newly_discovered_stable": 10,
+      "AUDC": 93.0,
+      "trajectory_length": 20,
+      "final_unique_structure_count": 20.0,
+      "all_rows_newly_discovered": true,
+      "unique_exact_serialized_proposals": 20,
+      "rows": [
+        {
+          "query_index_zero_based": 0,
+          "query_number_one_based": 1,
+          "reduced_formula": "Ga2 Pt1",
+          "proposal_site_species_counts": {
+            "Ga": 2,
+            "Pt": 1
+          },
+          "proposal_nsites": 3,
+          "proposal_sha256": "ffd3ecae9367dd990d2ebf1c00be21439edb58a6a547064409524bf02d0c3431",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.4309498469034807,
+          "formation_energy_per_atom": -0.13778289159138998,
+          "energy_per_atom": -4.106786410013835
+        },
+        {
+          "query_index_zero_based": 1,
+          "query_number_one_based": 2,
+          "reduced_formula": "Pt1 Tm7",
+          "proposal_site_species_counts": {
+            "Tm": 7.0,
+            "Pt": 1.0
+          },
+          "proposal_nsites": 8,
+          "proposal_sha256": "e1e88f5c9b2e0820e869ea8c9b008d22afeb5e7f16a17631343f575f601841e9",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.26743340492248535,
+          "formation_energy_per_atom": -0.10365420579910278,
+          "energy_per_atom": -4.775747299194336
+        },
+        {
+          "query_index_zero_based": 2,
+          "query_number_one_based": 3,
+          "reduced_formula": "Pt7 Tm1",
+          "proposal_site_species_counts": {
+            "Tm": 1.0,
+            "Pt": 7.0
+          },
+          "proposal_nsites": 8,
+          "proposal_sha256": "b6578a1be01c15862b695e5e7bc7ca943d1862a1f9110bfeb990a0d3f79a73e7",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.03368425369262695,
+          "formation_energy_per_atom": -0.49896401166915894,
+          "energy_per_atom": -6.39562463760376
+        },
+        {
+          "query_index_zero_based": 3,
+          "query_number_one_based": 4,
+          "reduced_formula": "Ga1 Tm1",
+          "proposal_site_species_counts": {
+            "Tm": 1.0,
+            "Ga": 1.0
+          },
+          "proposal_nsites": 2,
+          "proposal_sha256": "16ddeccce5420c709d373f36c8ffdd8e4d9f65da4d06ad1b88236b1bd0e1913d",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.05795145034790039,
+          "formation_energy_per_atom": -0.5668416023254395,
+          "energy_per_atom": -4.252404689788818
+        },
+        {
+          "query_index_zero_based": 4,
+          "query_number_one_based": 5,
+          "reduced_formula": "Ga1 Tm7",
+          "proposal_site_species_counts": {
+            "Tm": 7.0,
+            "Ga": 1.0
+          },
+          "proposal_nsites": 8,
+          "proposal_sha256": "258bc03d74e01521b20a3b5744a2a052fa016a32b899aabf43dc926ab5b05c8f",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.12103207906087299,
+          "formation_energy_per_atom": -0.04646182060241699,
+          "energy_per_atom": -4.318851470947266
+        },
+        {
+          "query_index_zero_based": 5,
+          "query_number_one_based": 6,
+          "reduced_formula": "Ga1 Pt4 Tm3",
+          "proposal_site_species_counts": {
+            "Ga": 1,
+            "Pt": 4,
+            "Tm": 3
+          },
+          "proposal_nsites": 8,
+          "proposal_sha256": "adb53c1548e19ab9104bec5f584df89c807b147a0f31f1a5d8281c45b35f0468",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.417018556594849,
+          "formation_energy_per_atom": -0.7650027275085449,
+          "energy_per_atom": -5.853770732879639
+        },
+        {
+          "query_index_zero_based": 6,
+          "query_number_one_based": 7,
+          "reduced_formula": "Ga7 Tm5",
+          "proposal_site_species_counts": {
+            "Tm": 5.0,
+            "Ga": 7.0
+          },
+          "proposal_nsites": 12,
+          "proposal_sha256": "93601a9624357fb50f36fb6f6ee3015685ea151c15771f2f56595d34c439d709",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.12224292755126953,
+          "formation_energy_per_atom": -0.4907107353210449,
+          "energy_per_atom": -4.045867919921875
+        },
+        {
+          "query_index_zero_based": 7,
+          "query_number_one_based": 8,
+          "reduced_formula": "Ga13 Tm1",
+          "proposal_site_species_counts": {
+            "Tm": 1.0,
+            "Ga": 13.0
+          },
+          "proposal_nsites": 14,
+          "proposal_sha256": "843473168e4abd6ba1ef2fc2d9adee88e8a8a1da1cee3f35bf299487470fe6fc",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.054670197623116756,
+          "formation_energy_per_atom": -0.09161690303257533,
+          "energy_per_atom": -3.1065210614885603
+        },
+        {
+          "query_index_zero_based": 8,
+          "query_number_one_based": 9,
+          "reduced_formula": "Ga3 Tm13",
+          "proposal_site_species_counts": {
+            "Tm": 13.0,
+            "Ga": 3.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "e08b16c140a0b9017b803058245ac74571926a3834667542a51a70160b248314",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.08736801147460938,
+          "formation_energy_per_atom": -0.1638728380203247,
+          "energy_per_atom": -4.338458061218262
+        },
+        {
+          "query_index_zero_based": 9,
+          "query_number_one_based": 10,
+          "reduced_formula": "Ga5 Tm11",
+          "proposal_site_species_counts": {
+            "Tm": 11.0,
+            "Ga": 5.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "0a4bc5dd35fe8a5b8c64a53bc8a29ef9352e487988efb2a24053f4260d5115fc",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.08774121602376272,
+          "formation_energy_per_atom": -0.33099353313446045,
+          "energy_per_atom": -4.309969902038574
+        },
+        {
+          "query_index_zero_based": 10,
+          "query_number_one_based": 11,
+          "reduced_formula": "Ga1 Tm15",
+          "proposal_site_species_counts": {
+            "Tm": 15.0,
+            "Ga": 1.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "c11075d2c8c29e2fa246320152910a8affe7c084221a2e5bdb602bb7955ef6ac",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.09180132548014353,
+          "formation_energy_per_atom": 0.008054375648498535,
+          "energy_per_atom": -4.362139701843262
+        },
+        {
+          "query_index_zero_based": 11,
+          "query_number_one_based": 12,
+          "reduced_formula": "Ga7 Tm9",
+          "proposal_site_species_counts": {
+            "Tm": 9.0,
+            "Ga": 7.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "3014d284468e754759100dd655b081efe5cdfc4eb3ce88a444505fbce8ed7fd6",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.08569574356079102,
+          "formation_energy_per_atom": -0.477941632270813,
+          "energy_per_atom": -4.2613091468811035
+        },
+        {
+          "query_index_zero_based": 12,
+          "query_number_one_based": 13,
+          "reduced_formula": "Ga4 Tm1",
+          "proposal_site_species_counts": {
+            "Tm": 1.0,
+            "Ga": 4.0
+          },
+          "proposal_nsites": 5,
+          "proposal_sha256": "54c0994017dd4e46a4afd6676a77127d05d88a2329993c38ffbadcec9084d0ea",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.1261764526367184,
+          "formation_energy_per_atom": -0.28342742919921876,
+          "energy_per_atom": -3.499529266357422
+        },
+        {
+          "query_index_zero_based": 13,
+          "query_number_one_based": 14,
+          "reduced_formula": "Ga5 Tm3",
+          "proposal_site_species_counts": {
+            "Tm": 6.0,
+            "Ga": 10.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "2047d165e76d4f58cc040db1bbe58bd2b569cf801e664a36a22e359ebd81d4dd",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.10781097412109375,
+          "formation_energy_per_atom": -0.499222993850708,
+          "energy_per_atom": -3.9891772270202637
+        },
+        {
+          "query_index_zero_based": 14,
+          "query_number_one_based": 15,
+          "reduced_formula": "Ga12 Tm5",
+          "proposal_site_species_counts": {
+            "Tm": 5.0,
+            "Ga": 12.0
+          },
+          "proposal_nsites": 17,
+          "proposal_sha256": "871dc246ebd830c803cf53cda5c3fa114383f92ff689fda58b7a168ddde65ab1",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.13437461853027344,
+          "formation_energy_per_atom": -0.424805809469784,
+          "energy_per_atom": -3.788189607508042
+        },
+        {
+          "query_index_zero_based": 15,
+          "query_number_one_based": 16,
+          "reduced_formula": "Ga7 Tm6",
+          "proposal_site_species_counts": {
+            "Tm": 6.0,
+            "Ga": 7.0
+          },
+          "proposal_nsites": 13,
+          "proposal_sha256": "209a2e0818d8fc61a33b6188d206642824da3784fff58eeb380f88837ee9fcf5",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.11988258361816406,
+          "formation_energy_per_atom": -0.49944613530085635,
+          "energy_per_atom": -4.124821882981521
+        },
+        {
+          "query_index_zero_based": 16,
+          "query_number_one_based": 17,
+          "reduced_formula": "Ga17 Tm2",
+          "proposal_site_species_counts": {
+            "Ga": 17,
+            "Tm": 2
+          },
+          "proposal_nsites": 19,
+          "proposal_sha256": "960c6dba808c51dfabec5fc14d85216a32f441c254f661e123619d777a9aa6d6",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.04623744362279014,
+          "formation_energy_per_atom": -0.16934354681717723,
+          "energy_per_atom": -3.2371944628263774
+        },
+        {
+          "query_index_zero_based": 17,
+          "query_number_one_based": 18,
+          "reduced_formula": "Ga3 Tm16",
+          "proposal_site_species_counts": {
+            "Ga": 3,
+            "Tm": 16
+          },
+          "proposal_nsites": 19,
+          "proposal_sha256": "0f45d3b1cc31336d7107f0cc7981c35faae8dcb96e3e9eed32cc3b6937f69d54",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.08719896015368,
+          "formation_energy_per_atom": -0.1243722815262644,
+          "energy_per_atom": -4.345285917583265
+        },
+        {
+          "query_index_zero_based": 18,
+          "query_number_one_based": 19,
+          "reduced_formula": "Ga8 Tm9",
+          "proposal_site_species_counts": {
+            "Ga": 8,
+            "Tm": 9
+          },
+          "proposal_nsites": 17,
+          "proposal_sha256": "d053e3c4ec0aab8715e30f9b53c6089f49a88145aa9b121757972ef99ea0cb15",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.21564663157743524,
+          "formation_energy_per_atom": -0.3803672790527344,
+          "energy_per_atom": -4.111955979291131
+        },
+        {
+          "query_index_zero_based": 19,
+          "query_number_one_based": 20,
+          "reduced_formula": "Ga1 Tm10",
+          "proposal_site_species_counts": {
+            "Tm": 10.0,
+            "Ga": 1.0
+          },
+          "proposal_nsites": 11,
+          "proposal_sha256": "d0cb69ba69f423b57242b0ec8d59f54ad5bbcedc77e3697f77ce6e00c4c5dd7c",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.04146703084309866,
+          "formation_energy_per_atom": -0.08034671436656605,
+          "energy_per_atom": -4.406084234064275
+        }
+      ],
+      "m5_sidecar": {
+        "present": true,
+        "path": "M1/MADE/results/protocol_v1/m1_full/dev/Ga-Pt-Tm/seed_17/attempt_01/m5_decisions.jsonl",
+        "sha256": "e2c008c84decc239b565cc9e47a10d90bfe3dbcbf31d08110e1307787e417f1b",
+        "records": [
+          {
+            "step": 0,
+            "query_count": 0,
+            "m1_queries_remaining": 20,
+            "mode": "mixed",
+            "incoming_compositions": [
+              "Ga17Pt3"
+            ],
+            "outgoing_compositions": [
+              "Ga17Pt3",
+              "Ga2Pt"
+            ],
+            "composition_source": [
+              "planner",
+              "ucb_explore"
+            ],
+            "alpha_t": 0.8,
+            "beta": 2.0,
+            "rationale": "alpha=0.80, 1/2 slots to unexplored stoichiometries",
+            "ucb_mean": [
+              0.0
+            ],
+            "ucb_std": [
+              1.0
+            ]
+          },
+          {
+            "step": 1,
+            "query_count": 1,
+            "m1_queries_remaining": 19,
+            "mode": "mixed",
+            "incoming_compositions": [
+              "Ga17Pt3"
+            ],
+            "outgoing_compositions": [
+              "Ga17Pt3",
+              "Tm7Pt"
+            ],
+            "composition_source": [
+              "planner",
+              "ucb_explore"
+            ],
+            "alpha_t": 0.76,
+            "beta": 1.9,
+            "rationale": "alpha=0.76, 1/2 slots to unexplored stoichiometries",
+            "ucb_mean": [
+              0.4309498469034807
+            ],
+            "ucb_std": [
+              0.9999820094598278
+            ]
+          },
+          {
+            "step": 2,
+            "query_count": 2,
+            "m1_queries_remaining": 18,
+            "mode": "mixed",
+            "incoming_compositions": [
+              "Ga17Pt3"
+            ],
+            "outgoing_compositions": [
+              "Ga17Pt3",
+              "TmPt7"
+            ],
+            "composition_source": [
+              "planner",
+              "ucb_explore"
+            ],
+            "alpha_t": 0.7200000000000001,
+            "beta": 1.8,
+            "rationale": "alpha=0.72, 1/2 slots to unexplored stoichiometries",
+            "ucb_mean": [
+              0.3521554357018414
+            ],
+            "ucb_std": [
+              0.998885010428899
+            ]
+          },
+          {
+            "step": 3,
+            "query_count": 3,
+            "m1_queries_remaining": 17,
+            "mode": "mixed",
+            "incoming_compositions": [
+              "Ga17Pt3"
+            ],
+            "outgoing_compositions": [
+              "Ga17Pt3",
+              "TmGa"
+            ],
+            "composition_source": [
+              "planner",
+              "ucb_explore"
+            ],
+            "alpha_t": 0.68,
+            "beta": 1.7,
+            "rationale": "alpha=0.68, 1/2 slots to unexplored stoichiometries",
+            "ucb_mean": [
+              0.2869831247575306
+            ],
+            "ucb_std": [
+              0.9604009330837374
+            ]
+          },
+          {
+            "step": 4,
+            "query_count": 4,
+            "m1_queries_remaining": 16,
+            "mode": "mixed",
+            "incoming_compositions": [
+              "Tm7Ga"
+            ],
+            "outgoing_compositions": [
+              "Tm7Ga",
+              "TmPt"
+            ],
+            "composition_source": [
+              "planner",
+              "ucb_explore"
+            ],
+            "alpha_t": 0.6400000000000001,
+            "beta": 1.6,
+            "rationale": "alpha=0.64, 1/2 slots to unexplored stoichiometries",
+            "ucb_mean": [
+              0.16366961275468567
+            ],
+            "ucb_std": [
+              0.8919088110099638
+            ]
+          },
+          {
+            "step": 5,
+            "query_count": 5,
+            "m1_queries_remaining": 15,
+            "mode": "mixed",
+            "incoming_compositions": [
+              "Tm5Ga7"
+            ],
+            "outgoing_compositions": [
+              "Tm5Ga7",
+              "Tm3GaPt4"
+            ],
+            "composition_source": [
+              "planner",
+              "ucb_explore"
+            ],
+            "alpha_t": 0.6000000000000001,
+            "beta": 1.5,
+            "rationale": "alpha=0.60, 1/2 slots to unexplored stoichiometries",
+            "ucb_mean": [
+              0.1753702961673282
+            ],
+            "ucb_std": [
+              0.8646359220183734
+            ]
+          },
+          {
+            "step": 6,
+            "query_count": 6,
+            "m1_queries_remaining": 14,
+            "mode": "mixed",
+            "incoming_compositions": [
+              "Tm5Ga7"
+            ],
+            "outgoing_compositions": [
+              "Tm5Ga7",
+              "TmGa7"
+            ],
+            "composition_source": [
+              "planner",
+              "ucb_explore"
+            ],
+            "alpha_t": 0.5599999999999999,
+            "beta": 1.4,
+            "rationale": "alpha=0.56, 1/2 slots to unexplored stoichiometries",
+            "ucb_mean": [
+              0.27211070619246247
+            ],
+            "ucb_std": [
+              0.8293469162383676
+            ]
+          },
+          {
+            "step": 7,
+            "query_count": 7,
+            "m1_queries_remaining": 13,
+            "mode": "mixed",
+            "incoming_compositions": [
+              "TmGa13"
+            ],
+            "outgoing_compositions": [
+              "TmGa13",
+              "Ga2Pt5"
+            ],
+            "composition_source": [
+              "planner",
+              "ucb_explore"
+            ],
+            "alpha_t": 0.52,
+            "beta": 1.3,
+            "rationale": "alpha=0.52, 1/2 slots to unexplored stoichiometries",
+            "ucb_mean": [
+              0.2104029406413775
+            ],
+            "ucb_std": [
+              0.7257134574214444
+            ]
+          },
+          {
+            "step": 8,
+            "query_count": 8,
+            "m1_queries_remaining": 12,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm13Ga3"
+            ],
+            "outgoing_compositions": [
+              "Tm13Ga3"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.48,
+            "beta": 1.2,
+            "rationale": "alpha=0.48, pure exploitation of planner plan"
+          },
+          {
+            "step": 9,
+            "query_count": 9,
+            "m1_queries_remaining": 11,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm11Ga5"
+            ],
+            "outgoing_compositions": [
+              "Tm11Ga5"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.44000000000000006,
+            "beta": 1.1,
+            "rationale": "alpha=0.44, pure exploitation of planner plan"
+          },
+          {
+            "step": 10,
+            "query_count": 10,
+            "m1_queries_remaining": 10,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm15Ga"
+            ],
+            "outgoing_compositions": [
+              "Tm15Ga"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.4,
+            "beta": 1.0,
+            "rationale": "alpha=0.40, pure exploitation of planner plan"
+          },
+          {
+            "step": 11,
+            "query_count": 11,
+            "m1_queries_remaining": 9,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm9Ga7"
+            ],
+            "outgoing_compositions": [
+              "Tm9Ga7"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.36000000000000004,
+            "beta": 0.9,
+            "rationale": "alpha=0.36, pure exploitation of planner plan"
+          },
+          {
+            "step": 12,
+            "query_count": 12,
+            "m1_queries_remaining": 8,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "TmGa4"
+            ],
+            "outgoing_compositions": [
+              "TmGa4"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.32000000000000006,
+            "beta": 0.8,
+            "rationale": "alpha=0.32, pure exploitation of planner plan"
+          },
+          {
+            "step": 13,
+            "query_count": 13,
+            "m1_queries_remaining": 7,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm3Ga5"
+            ],
+            "outgoing_compositions": [
+              "Tm3Ga5"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.27999999999999997,
+            "beta": 0.7,
+            "rationale": "alpha=0.28, pure exploitation of planner plan"
+          },
+          {
+            "step": 14,
+            "query_count": 14,
+            "m1_queries_remaining": 6,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm5Ga12"
+            ],
+            "outgoing_compositions": [
+              "Tm5Ga12"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.24,
+            "beta": 0.6,
+            "rationale": "alpha=0.24, pure exploitation of planner plan"
+          },
+          {
+            "step": 15,
+            "query_count": 15,
+            "m1_queries_remaining": 5,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm6Ga7"
+            ],
+            "outgoing_compositions": [
+              "Tm6Ga7"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.2,
+            "beta": 0.5,
+            "rationale": "alpha=0.20, pure exploitation of planner plan"
+          },
+          {
+            "step": 16,
+            "query_count": 16,
+            "m1_queries_remaining": 4,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm2Ga17"
+            ],
+            "outgoing_compositions": [
+              "Tm2Ga17"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.16000000000000003,
+            "beta": 0.4,
+            "rationale": "alpha=0.16, pure exploitation of planner plan"
+          },
+          {
+            "step": 17,
+            "query_count": 17,
+            "m1_queries_remaining": 3,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm16Ga3"
+            ],
+            "outgoing_compositions": [
+              "Tm16Ga3"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.12,
+            "beta": 0.3,
+            "rationale": "alpha=0.12, pure exploitation of planner plan"
+          },
+          {
+            "step": 18,
+            "query_count": 18,
+            "m1_queries_remaining": 2,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm9Ga8"
+            ],
+            "outgoing_compositions": [
+              "Tm9Ga8"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.08000000000000002,
+            "beta": 0.2,
+            "rationale": "alpha=0.08, pure exploitation of planner plan"
+          },
+          {
+            "step": 19,
+            "query_count": 19,
+            "m1_queries_remaining": 1,
+            "mode": "exploit",
+            "incoming_compositions": [
+              "Tm10Ga"
+            ],
+            "outgoing_compositions": [
+              "Tm10Ga"
+            ],
+            "composition_source": [
+              "planner"
+            ],
+            "alpha_t": 0.04000000000000001,
+            "beta": 0.1,
+            "rationale": "alpha=0.04, pure exploitation of planner plan"
+          }
+        ]
+      }
+    },
+    "off_GaPtTm17_same_seed_comparator": {
+      "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_17/attempt_01/trajectories/episode_000.json",
+      "sha256": "161def0558359fee02534bcfa4b1fa6cb7138d403ef362931afcf2dd1d0106bd",
+      "mSUN": 16.0,
+      "num_newly_discovered_stable": 16,
+      "AUDC": 168.0,
+      "trajectory_length": 20,
+      "final_unique_structure_count": 20.0,
+      "all_rows_newly_discovered": true,
+      "unique_exact_serialized_proposals": 20,
+      "rows": [
+        {
+          "query_index_zero_based": 0,
+          "query_number_one_based": 1,
+          "reduced_formula": "Ga17 Pt3",
+          "proposal_site_species_counts": {
+            "Ga": 17,
+            "Pt": 3
+          },
+          "proposal_nsites": 20,
+          "proposal_sha256": "b79dbb12ee48ecf62a3e6c5d27dc7ff5f247df09c0f251bc3631a4808d3b89db",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.12129576206207249,
+          "formation_energy_per_atom": -0.14138489961624146,
+          "energy_per_atom": -3.52415771484375
+        },
+        {
+          "query_index_zero_based": 1,
+          "query_number_one_based": 2,
+          "reduced_formula": "Ga1 Pt7",
+          "proposal_site_species_counts": {
+            "Ga": 1.0,
+            "Pt": 7.0
+          },
+          "proposal_nsites": 8,
+          "proposal_sha256": "6c158752e6cecca10c6df29d7b8a10f22aa098ebdf29c21bf90cad56258a6800",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.0077817440032958984,
+          "formation_energy_per_atom": -0.21116474270820618,
+          "energy_per_atom": -5.912216663360596
+        },
+        {
+          "query_index_zero_based": 2,
+          "query_number_one_based": 3,
+          "reduced_formula": "Ga12 Pt1",
+          "proposal_site_species_counts": {
+            "Ga": 12.0,
+            "Pt": 1.0
+          },
+          "proposal_nsites": 13,
+          "proposal_sha256": "b37f702ae472863c4c8c01cf013672436388c0910eeb110efc701c7d28380da3",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.025907033529038337,
+          "formation_energy_per_atom": -0.10880099810086764,
+          "energy_per_atom": -3.257901118351863
+        },
+        {
+          "query_index_zero_based": 3,
+          "query_number_one_based": 4,
+          "reduced_formula": "Ga7 Pt2",
+          "proposal_site_species_counts": {
+            "Ga": 14.0,
+            "Pt": 4.0
+          },
+          "proposal_nsites": 18,
+          "proposal_sha256": "20c81d1a174e3cfe384b1d21d2e35e545bf30ec9e2dd281b8eb46946df9651ac",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.058218593950624786,
+          "formation_energy_per_atom": -0.3309379418690999,
+          "energy_per_atom": -3.9446504380967884
+        },
+        {
+          "query_index_zero_based": 4,
+          "query_number_one_based": 5,
+          "reduced_formula": "Ga5 Pt11",
+          "proposal_site_species_counts": {
+            "Ga": 5.0,
+            "Pt": 11.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "8d1cd931904a7f87abbb22d1da58e4a6c0cf14485a392f85c1d70954ff352883",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.08935761451721191,
+          "formation_energy_per_atom": -0.3986827880144119,
+          "energy_per_atom": -5.500179767608643
+        },
+        {
+          "query_index_zero_based": 5,
+          "query_number_one_based": 6,
+          "reduced_formula": "Ga3 Pt13",
+          "proposal_site_species_counts": {
+            "Ga": 3.0,
+            "Pt": 13.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "de1e1bc7ef06bccf9bbcb5346b19df6f21a473ced382796ccbb1ce43f5184d71",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.08568871021270752,
+          "formation_energy_per_atom": -0.2427310198545456,
+          "energy_per_atom": -5.743931293487549
+        },
+        {
+          "query_index_zero_based": 6,
+          "query_number_one_based": 7,
+          "reduced_formula": "Ga7 Pt9",
+          "proposal_site_species_counts": {
+            "Ga": 7.0,
+            "Pt": 9.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "d07cf9b534223d67672915ece195d3f6e7cde8d4207a1e35983d0aaeaeecbf2b",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.09709525108337402,
+          "formation_energy_per_atom": -0.4752344936132431,
+          "energy_per_atom": -5.177028179168701
+        },
+        {
+          "query_index_zero_based": 7,
+          "query_number_one_based": 8,
+          "reduced_formula": "Ga1 Pt15",
+          "proposal_site_species_counts": {
+            "Ga": 1.0,
+            "Pt": 15.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "61e73994ea901a1aa3728d2217bd8e8047fa63747a91138ca2db6953af32831f",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.019532084465026855,
+          "formation_energy_per_atom": -0.08994115889072418,
+          "energy_per_atom": -5.9908447265625
+        },
+        {
+          "query_index_zero_based": 8,
+          "query_number_one_based": 9,
+          "reduced_formula": "Ga11 Pt9",
+          "proposal_site_species_counts": {
+            "Ga": 11.0,
+            "Pt": 9.0
+          },
+          "proposal_nsites": 20,
+          "proposal_sha256": "4f32c944200a79f7e7fda9981e69d381f422bf73ed40fb9b2b55e3de89b773d2",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.09436321258544922,
+          "formation_energy_per_atom": -0.5038148283958435,
+          "energy_per_atom": -4.845875549316406
+        },
+        {
+          "query_index_zero_based": 9,
+          "query_number_one_based": 10,
+          "reduced_formula": "Ga14 Pt5",
+          "proposal_site_species_counts": {
+            "Ga": 14.0,
+            "Pt": 5.0
+          },
+          "proposal_nsites": 19,
+          "proposal_sha256": "0956819a84437b7b37c86fb155f55b6767b4c722f9dcf5a6ec251431384d8852",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.08782394727071097,
+          "formation_energy_per_atom": -0.3730193188315944,
+          "energy_per_atom": -4.117628800241571
+        },
+        {
+          "query_index_zero_based": 10,
+          "query_number_one_based": 11,
+          "reduced_formula": "Ga13 Pt3",
+          "proposal_site_species_counts": {
+            "Ga": 13.0,
+            "Pt": 3.0
+          },
+          "proposal_nsites": 16,
+          "proposal_sha256": "1ea475331a2fcca760c8fe5ea735610b5f786e40d27a8a779d75c33ce11d8076",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.04247662425041199,
+          "formation_energy_per_atom": -0.2858742028474808,
+          "energy_per_atom": -3.788558006286621
+        },
+        {
+          "query_index_zero_based": 11,
+          "query_number_one_based": 12,
+          "reduced_formula": "Ga8 Pt1",
+          "proposal_site_species_counts": {
+            "Ga": 16.0,
+            "Pt": 2.0
+          },
+          "proposal_nsites": 18,
+          "proposal_sha256": "da540ea8f3653a7ab7b28e895ebbe1f8f85901ea9f4cb1edb03d6faa788d1273",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.025159244184139506,
+          "formation_energy_per_atom": -0.16941902372572157,
+          "energy_per_atom": -3.4278397030300565
+        },
+        {
+          "query_index_zero_based": 12,
+          "query_number_one_based": 13,
+          "reduced_formula": "Ga12 Pt7",
+          "proposal_site_species_counts": {
+            "Ga": 12.0,
+            "Pt": 7.0
+          },
+          "proposal_nsites": 19,
+          "proposal_sha256": "c947252ab10e288c65ea9b810ecb25fda18317e8d3b9642cec0c460646ce7fc9",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.09032585746363608,
+          "formation_energy_per_atom": -0.4895388201663369,
+          "energy_per_atom": -4.570740549187911
+        },
+        {
+          "query_index_zero_based": 13,
+          "query_number_one_based": 14,
+          "reduced_formula": "Ga3 Pt16",
+          "proposal_site_species_counts": {
+            "Ga": 3.0,
+            "Pt": 16.0
+          },
+          "proposal_nsites": 19,
+          "proposal_sha256": "cfa33bea670e5eae1943a1e4a6558d584fecee867552fe32a99e4aff6b22ced3",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.14371242021259345,
+          "formation_energy_per_atom": -0.13285156300193385,
+          "energy_per_atom": -5.728718406275699
+        },
+        {
+          "query_index_zero_based": 14,
+          "query_number_one_based": 15,
+          "reduced_formula": "Ga8 Pt9",
+          "proposal_site_species_counts": {
+            "Ga": 8.0,
+            "Pt": 9.0
+          },
+          "proposal_nsites": 17,
+          "proposal_sha256": "536074217390aa581139453eaba702541d6b2f8b4ea6d1efd3c7658548c6bbc9",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.05917549133300781,
+          "formation_energy_per_atom": -0.5312293838052189,
+          "energy_per_atom": -5.127219256232767
+        },
+        {
+          "query_index_zero_based": 15,
+          "query_number_one_based": 16,
+          "reduced_formula": "Ga1 Pt10",
+          "proposal_site_species_counts": {
+            "Ga": 1.0,
+            "Pt": 10.0
+          },
+          "proposal_nsites": 11,
+          "proposal_sha256": "61c8a80ffdbaa0a42b00e5a403753afe79ab23cc5b33c479c36ce8632eb8e5bf",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.0679819367148653,
+          "formation_energy_per_atom": -0.0912518718025901,
+          "energy_per_atom": -5.901313781738281
+        },
+        {
+          "query_index_zero_based": 16,
+          "query_number_one_based": 17,
+          "reduced_formula": "Ga2 Pt7",
+          "proposal_site_species_counts": {
+            "Ga": 2.0,
+            "Pt": 7.0
+          },
+          "proposal_nsites": 9,
+          "proposal_sha256": "d6c6c76242c0db4eb5489b3df43d99267d768a6b8e2e82e6fa4a8b089fa403f4",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.1541173193189831,
+          "formation_energy_per_atom": -0.23512087927924263,
+          "energy_per_atom": -5.625292460123698
+        },
+        {
+          "query_index_zero_based": 17,
+          "query_number_one_based": 18,
+          "reduced_formula": "Ga5 Pt13",
+          "proposal_site_species_counts": {
+            "Ga": 5,
+            "Pt": 13
+          },
+          "proposal_nsites": 18,
+          "proposal_sha256": "2cad7db263193ecdb86c113d88be5d931a463219a83db8266140cddc88836740",
+          "is_stable": false,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.10127618577744713,
+          "formation_energy_per_atom": -0.35890453391604954,
+          "energy_per_atom": -5.571430206298828
+        },
+        {
+          "query_index_zero_based": 18,
+          "query_number_one_based": 19,
+          "reduced_formula": "Ga19 Pt1",
+          "proposal_site_species_counts": {
+            "Ga": 19.0,
+            "Pt": 1.0
+          },
+          "proposal_nsites": 20,
+          "proposal_sha256": "e7e69f6589be1dae739342ae33ba14dbc42cf6dd08c2d8a2478ac072b3a2163b",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.025979145367939882,
+          "formation_energy_per_atom": -0.0615810751914978,
+          "energy_per_atom": -3.124591255187988
+        },
+        {
+          "query_index_zero_based": 19,
+          "query_number_one_based": 20,
+          "reduced_formula": "Ga7 Pt10",
+          "proposal_site_species_counts": {
+            "Ga": 7.0,
+            "Pt": 10.0
+          },
+          "proposal_nsites": 17,
+          "proposal_sha256": "cc710db568aa7028b17e110f7ccc6bd2541b13c44e20a448384c99bb7fbd3a7e",
+          "is_stable": true,
+          "is_newly_discovered": true,
+          "e_above_hull": 0.07272237889907007,
+          "formation_energy_per_atom": -0.4855489310096292,
+          "energy_per_atom": -5.269634471220129
+        }
+      ],
+      "m5_sidecar": {
+        "present": false,
+        "path": "M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_17/attempt_01/m5_decisions.jsonl",
+        "sha256": null,
+        "records": []
+      }
+    }
+  },
+  "GaPtTm_system_means": {
+    "m1_full": {
+      "seed_17_29_43_mSUN": [
+        10.0,
+        12.0,
+        9.0
+      ],
+      "three_seed_mean": 10.333333333333334
+    },
+    "exploration_off": {
+      "seed_17_29_43_mSUN": [
+        16.0,
+        18.0,
+        13.0
+      ],
+      "three_seed_mean": 15.666666666666666
+    }
+  },
+  "issues": [
+    {
+      "claim": "OFF Mg-Sn-Sr seed29 first stable Sn9Sr1 at query1",
+      "finding": "This is array index1 and one-based query2; state the indexing convention explicitly."
+    },
+    {
+      "claim": "OFF Mg-Sn-Sr seed29 queries1-15 are14 consecutive binaries with8 stable",
+      "finding": "The first16 actual queries (zero-based0-15) are Sn-Sr binaries. There are6 stable binaries, followed by4 ternaries (one-based17-20),2 stable. Totalstable=mSUN8."
+    },
+    {
+      "claim": "Full Ga-Pt-Tm seed17 has10 stable Ga-Tm binary hits",
+      "finding": "There are9 stable Ga-Tm binaries plus1 stable Pt-Tm binary. Total10."
+    },
+    {
+      "claim": "Full Ga-Pt-Tm seed17 probes six ternaries at indices5,12,13,14,15,18",
+      "finding": "Only zero-basedindex5 is ternary, Ga1Pt4Tm3,e_hull0.417018556594849. Indices12,13,14,15,18 are Ga-Tm binaries. No consistentone-based interpretation supports sixternaries."
+    },
+    {
+      "claim": "Full Ga-Pt-Tm seed17 indices12,13,14,15,18 are explorationprobes",
+      "finding": "Actualexisting m5_decisions sidecar marks those steps exploit, composition_source=[planner]. Step5 is mixed with ternaryoutgoing UCB composition."
+    },
+    {
+      "claim": "OFF15.7vsON10.3 on the same seed17",
+      "finding": "Actual seed17mSUN OFF16 vsON10;15.6667and10.3333 are means over seeds17,29,43."
+    },
+    {
+      "claim": "Frozen Full runs do not contain m5_decisions.jsonl",
+      "finding": "The audited FullGa-Pt-Tm seed17attempt01 currently contains20real decisionrecords. Do notinvent missingmode annotations."
+    },
+    {
+      "claim": "Over-exploitation/missedregion or wastefulexploration as proven causation",
+      "finding": "Observedquerypatterns support a descriptivecase study only. Thisrecorddoesnotprove anunobservedcounterfactual or attributeeveryunstableprobe to exploration. All20proposals areexactserializeduniqueandall20arenewlydiscovered; no duplicate-structuremodecollapse evidenced."
+    }
+  ],
+  "claim_verdict": "Material errors in the report narrative; use actual recorded observations and original logged modes only.",
+  "case_mode_join": [
+    {
+      "query_index_zero_based": 0,
+      "query_number_one_based": 1,
+      "formula": "Ga2 Pt1",
+      "is_stable": false,
+      "e_above_hull": 0.4309498469034807,
+      "mode": "mixed",
+      "composition_source": [
+        "planner",
+        "ucb_explore"
+      ],
+      "rationale": "alpha=0.80, 1/2 slots to unexplored stoichiometries",
+      "outgoing_compositions": [
+        "Ga17Pt3",
+        "Ga2Pt"
+      ]
+    },
+    {
+      "query_index_zero_based": 1,
+      "query_number_one_based": 2,
+      "formula": "Pt1 Tm7",
+      "is_stable": false,
+      "e_above_hull": 0.26743340492248535,
+      "mode": "mixed",
+      "composition_source": [
+        "planner",
+        "ucb_explore"
+      ],
+      "rationale": "alpha=0.76, 1/2 slots to unexplored stoichiometries",
+      "outgoing_compositions": [
+        "Ga17Pt3",
+        "Tm7Pt"
+      ]
+    },
+    {
+      "query_index_zero_based": 2,
+      "query_number_one_based": 3,
+      "formula": "Pt7 Tm1",
+      "is_stable": true,
+      "e_above_hull": 0.03368425369262695,
+      "mode": "mixed",
+      "composition_source": [
+        "planner",
+        "ucb_explore"
+      ],
+      "rationale": "alpha=0.72, 1/2 slots to unexplored stoichiometries",
+      "outgoing_compositions": [
+        "Ga17Pt3",
+        "TmPt7"
+      ]
+    },
+    {
+      "query_index_zero_based": 3,
+      "query_number_one_based": 4,
+      "formula": "Ga1 Tm1",
+      "is_stable": true,
+      "e_above_hull": 0.05795145034790039,
+      "mode": "mixed",
+      "composition_source": [
+        "planner",
+        "ucb_explore"
+      ],
+      "rationale": "alpha=0.68, 1/2 slots to unexplored stoichiometries",
+      "outgoing_compositions": [
+        "Ga17Pt3",
+        "TmGa"
+      ]
+    },
+    {
+      "query_index_zero_based": 4,
+      "query_number_one_based": 5,
+      "formula": "Ga1 Tm7",
+      "is_stable": false,
+      "e_above_hull": 0.12103207906087299,
+      "mode": "mixed",
+      "composition_source": [
+        "planner",
+        "ucb_explore"
+      ],
+      "rationale": "alpha=0.64, 1/2 slots to unexplored stoichiometries",
+      "outgoing_compositions": [
+        "Tm7Ga",
+        "TmPt"
+      ]
+    },
+    {
+      "query_index_zero_based": 5,
+      "query_number_one_based": 6,
+      "formula": "Ga1 Pt4 Tm3",
+      "is_stable": false,
+      "e_above_hull": 0.417018556594849,
+      "mode": "mixed",
+      "composition_source": [
+        "planner",
+        "ucb_explore"
+      ],
+      "rationale": "alpha=0.60, 1/2 slots to unexplored stoichiometries",
+      "outgoing_compositions": [
+        "Tm5Ga7",
+        "Tm3GaPt4"
+      ]
+    },
+    {
+      "query_index_zero_based": 6,
+      "query_number_one_based": 7,
+      "formula": "Ga7 Tm5",
+      "is_stable": false,
+      "e_above_hull": 0.12224292755126953,
+      "mode": "mixed",
+      "composition_source": [
+        "planner",
+        "ucb_explore"
+      ],
+      "rationale": "alpha=0.56, 1/2 slots to unexplored stoichiometries",
+      "outgoing_compositions": [
+        "Tm5Ga7",
+        "TmGa7"
+      ]
+    },
+    {
+      "query_index_zero_based": 7,
+      "query_number_one_based": 8,
+      "formula": "Ga13 Tm1",
+      "is_stable": true,
+      "e_above_hull": 0.054670197623116756,
+      "mode": "mixed",
+      "composition_source": [
+        "planner",
+        "ucb_explore"
+      ],
+      "rationale": "alpha=0.52, 1/2 slots to unexplored stoichiometries",
+      "outgoing_compositions": [
+        "TmGa13",
+        "Ga2Pt5"
+      ]
+    },
+    {
+      "query_index_zero_based": 8,
+      "query_number_one_based": 9,
+      "formula": "Ga3 Tm13",
+      "is_stable": true,
+      "e_above_hull": 0.08736801147460938,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.48, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm13Ga3"
+      ]
+    },
+    {
+      "query_index_zero_based": 9,
+      "query_number_one_based": 10,
+      "formula": "Ga5 Tm11",
+      "is_stable": true,
+      "e_above_hull": 0.08774121602376272,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.44, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm11Ga5"
+      ]
+    },
+    {
+      "query_index_zero_based": 10,
+      "query_number_one_based": 11,
+      "formula": "Ga1 Tm15",
+      "is_stable": true,
+      "e_above_hull": 0.09180132548014353,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.40, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm15Ga"
+      ]
+    },
+    {
+      "query_index_zero_based": 11,
+      "query_number_one_based": 12,
+      "formula": "Ga7 Tm9",
+      "is_stable": true,
+      "e_above_hull": 0.08569574356079102,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.36, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm9Ga7"
+      ]
+    },
+    {
+      "query_index_zero_based": 12,
+      "query_number_one_based": 13,
+      "formula": "Ga4 Tm1",
+      "is_stable": false,
+      "e_above_hull": 0.1261764526367184,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.32, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "TmGa4"
+      ]
+    },
+    {
+      "query_index_zero_based": 13,
+      "query_number_one_based": 14,
+      "formula": "Ga5 Tm3",
+      "is_stable": false,
+      "e_above_hull": 0.10781097412109375,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.28, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm3Ga5"
+      ]
+    },
+    {
+      "query_index_zero_based": 14,
+      "query_number_one_based": 15,
+      "formula": "Ga12 Tm5",
+      "is_stable": false,
+      "e_above_hull": 0.13437461853027344,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.24, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm5Ga12"
+      ]
+    },
+    {
+      "query_index_zero_based": 15,
+      "query_number_one_based": 16,
+      "formula": "Ga7 Tm6",
+      "is_stable": false,
+      "e_above_hull": 0.11988258361816406,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.20, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm6Ga7"
+      ]
+    },
+    {
+      "query_index_zero_based": 16,
+      "query_number_one_based": 17,
+      "formula": "Ga17 Tm2",
+      "is_stable": true,
+      "e_above_hull": 0.04623744362279014,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.16, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm2Ga17"
+      ]
+    },
+    {
+      "query_index_zero_based": 17,
+      "query_number_one_based": 18,
+      "formula": "Ga3 Tm16",
+      "is_stable": true,
+      "e_above_hull": 0.08719896015368,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.12, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm16Ga3"
+      ]
+    },
+    {
+      "query_index_zero_based": 18,
+      "query_number_one_based": 19,
+      "formula": "Ga8 Tm9",
+      "is_stable": false,
+      "e_above_hull": 0.21564663157743524,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.08, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm9Ga8"
+      ]
+    },
+    {
+      "query_index_zero_based": 19,
+      "query_number_one_based": 20,
+      "formula": "Ga1 Tm10",
+      "is_stable": true,
+      "e_above_hull": 0.04146703084309866,
+      "mode": "exploit",
+      "composition_source": [
+        "planner"
+      ],
+      "rationale": "alpha=0.04, pure exploitation of planner plan",
+      "outgoing_compositions": [
+        "Tm10Ga"
+      ]
+    }
+  ],
+  "mode_join_validation": {
+    "join_key": "m5_decisions.query_count == zero-based trajectory index",
+    "all_query_counts_exactly_0_through_19": true,
+    "all_step_equals_query_count": true,
+    "joined_records": 20
+  },
+  "stability_semantics": "Stable here preserves the recorded is_stable flag; the saved Full resolved configuration uses stability_tolerance=0.1 eV/atom, not zero hull distance."
+}

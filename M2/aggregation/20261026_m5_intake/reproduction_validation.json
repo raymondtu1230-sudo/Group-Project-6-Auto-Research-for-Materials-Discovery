@@ -1,0 +1,17 @@
+{
+  "status": "passed_with_explicit_package_condition",
+  "script_sha256": "af8a2edca055792232c94087d80b7b816cdb794cec73c49f08ccb56c7729fdfc",
+  "recorded_script_sha256_matches": true,
+  "output_manifest_entries_verified": 34,
+  "prior_canonical_accepted_runs": 144,
+  "actual_new_M5_strict_accepted_runs": 0,
+  "actual_new_M5_strict_resolved_config_errors": 18,
+  "new_M5_endpoint_only_verified_runs": 18,
+  "all_162_canonical_pass_claim": false,
+  "new_m5_source_hash_checks": 1332,
+  "original_raw_files_modified": 0,
+  "actual_missing_resolved_configs_fabricated": 0,
+  "new_scientific_runs": 0,
+  "new_oracle_queries": 0,
+  "static_ruff_check": "All checks passed"
+}

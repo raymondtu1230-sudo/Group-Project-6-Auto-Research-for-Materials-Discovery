@@ -1,0 +1,12 @@
+{
+  "accepted_numeric_and_labels": true,
+  "independent_endpoint_rows_checked": 18,
+  "method_primary_mean_SD_metrics_checked": 4,
+  "full_comparator_pairs_checked": 18,
+  "pair_AF_EF_checked": 36,
+  "derived_saved_observation_points_checked": 360,
+  "canonical_M5_accepted": false,
+  "canonical_144_unchanged_scope": "Not reverified in this metrics-only comparison; builder carryover manifest records originals.",
+  "strict_package_pending_labels_present": true,
+  "errors": []
+}

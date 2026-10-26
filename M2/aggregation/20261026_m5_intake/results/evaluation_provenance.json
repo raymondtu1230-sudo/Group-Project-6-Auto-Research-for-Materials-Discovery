@@ -1,0 +1,22 @@
+{
+  "source_snapshot_commit": "a27634d9edbf231d0c034273fa9f977f9d5e799e",
+  "script_sha256": "af8a2edca055792232c94087d80b7b816cdb794cec73c49f08ccb56c7729fdfc",
+  "analysis_scope": "strict_rejection_plus_separate_endpoint_only_provisional_analysis",
+  "canonical_144_reused_unchanged": true,
+  "evaluator_path": "M2/evaluate.py",
+  "evaluator_sha256": "2eacad27246a8669657c6551807cbfeb1274cf94b691840f2f196d55e3e93a89",
+  "official_metric_module_path": "M1/MADE/src/made/evaluation/metrics.py",
+  "official_metric_module_sha256": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+  "official_class_ast_sha256": "33b54edd959fc7415d30314cdbadb9a01e710d3deee026835320622578d2a6ff",
+  "load_mode": "exact_unchanged_class_AST_with_real_numpy_no_unrelated_model_imports",
+  "numpy_version": "2.3.5",
+  "metric_formula_modifications": 0,
+  "evaluator_modifications": 0,
+  "agent_calls": 0,
+  "oracle_calls": 0,
+  "prior_helper_sha256": "317381100123edb4afc9ef253191462c0370da110d3ee1e57beb1641263ad9c4",
+  "official_curve_source": "M1/package_reference_evidence.py",
+  "official_curve_source_sha256": "dc92e726f7d9e83e756e861b92960436464ca9e567e41372a39c486e2d9447e2",
+  "official_curve_function_ast_sha256": "7914873de6671f742cc5edf6c8ec8017e9fd41be0f1d56ff199af09b58678737",
+  "curve_function_formula_modifications": 0
+}

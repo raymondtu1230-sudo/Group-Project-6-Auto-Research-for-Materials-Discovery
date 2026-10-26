@@ -1,0 +1,642 @@
+{
+  "split": "dev",
+  "validated_runs": 0,
+  "missing_units": [
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Au-K-Tb",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Au-K-Tb",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Au-K-Tb",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Dy-W",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Dy-W",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Dy-W",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Mg-Na",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Mg-Na",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Mg-Na",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      43
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Au-K-Tb",
+      17
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Au-K-Tb",
+      29
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Au-K-Tb",
+      43
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Co-Dy-W",
+      17
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Co-Dy-W",
+      29
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Co-Dy-W",
+      43
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Co-Mg-Na",
+      17
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Co-Mg-Na",
+      29
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Co-Mg-Na",
+      43
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Ga-Pt-Tm",
+      17
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Ga-Pt-Tm",
+      29
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Ga-Pt-Tm",
+      43
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Hf-Ni-Zr",
+      17
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Hf-Ni-Zr",
+      29
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Hf-Ni-Zr",
+      43
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Mg-Sn-Sr",
+      17
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Mg-Sn-Sr",
+      29
+    ],
+    [
+      "m1_full",
+      "dev",
+      "Mg-Sn-Sr",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Au-K-Tb",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Au-K-Tb",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Au-K-Tb",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Dy-W",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Dy-W",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Dy-W",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Mg-Na",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Mg-Na",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Mg-Na",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      43
+    ]
+  ],
+  "missing_baseline_units": [
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Au-K-Tb",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Au-K-Tb",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Au-K-Tb",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Dy-W",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Dy-W",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Dy-W",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Mg-Na",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Mg-Na",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Co-Mg-Na",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      17
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Au-K-Tb",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Au-K-Tb",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Au-K-Tb",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Dy-W",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Dy-W",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Dy-W",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Mg-Na",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Mg-Na",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Co-Mg-Na",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Ga-Pt-Tm",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Hf-Ni-Zr",
+      43
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      17
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      29
+    ],
+    [
+      "random_generator_baseline",
+      "dev",
+      "Mg-Sn-Sr",
+      43
+    ]
+  ],
+  "issues": [
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_17/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_17/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_29/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_29/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_43/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_43/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_17/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_17/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_29/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_29/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_43/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_43/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_17/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_17/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_29/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_29/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_43/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_43/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_17/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_29/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_43/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_17/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_29/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_43/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_17/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_29/attempt_01/resolved_config.yaml\""
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "error": "[Errno 2] No such file or directory: \"/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_43/attempt_01/resolved_config.yaml\""
+    }
+  ],
+  "final_comparison_complete": false,
+  "baseline_sweep_complete": false
+}

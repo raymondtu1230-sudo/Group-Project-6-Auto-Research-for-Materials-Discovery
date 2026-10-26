@@ -1,7 +1,7 @@
-# Shared results after M3 completion
+# Shared group results — M5 evidence pending
 
-26 October 2026. Current assembly entry: [M2/aggregation/20261026_m3_complete](../aggregation/20261026_m3_complete/README.md). All 144 real dev results validate, including the complete 54-run M3 component package, 288 paired baseline comparisons and 36 M3 component pairs.
+The current [M5 intake](../aggregation/20261026_m5_intake/README.md) and [corrected M6 notes](../aggregation/20261026_m5_intake/M6_HANDOFF.md) supplement the accepted 144-run report. M5's 18 real endpoints are checked; original configs and component evidence must be recovered for formal acceptance. Do not report 162 canonical passes.
 
-M3 full averages 6.50 mSUN / 62.75 AUDC. Planning and self-correction add 1.3889 / 0.6667 mSUN relative to that comparator. The two OFF arms remain separate from all-enabled Full-agent ablations. M3's assigned handoff is complete; M1/M6 decide on any additional Full-agent planning/self-correction scope.
+Use the correct Full reference and case descriptions rather than copying the stale M5 report headline or assigning inferred explore labels to planner steps. The [follow-up checklist](../aggregation/20261026_m5_intake/M5_FOLLOWUP.md) is ready for the user to forward. No scientific rerun is requested for this packaging follow-up.
 
-Use the current [M6 handoff](../aggregation/20261026_m3_complete/M6_HANDOFF.md) for tables, curves, costs, interpretation and remaining inputs. M5 exploration and M6 remaining check/hidden / final assembly are still open. No external receipt message was sent. All changes are under M2, and earlier entry-point versions are backed up in the new report.
+M3's assigned 54-run component package remains complete. Additional Full planning/self-correction is an M1/M6 scope decision. M6's remaining check/hidden evaluation and final report/native PPT are separate pending tasks. M2 updates and previous-file backups are retained; other members' files and original attempts remain unchanged.

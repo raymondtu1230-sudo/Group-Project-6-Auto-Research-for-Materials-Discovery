@@ -1,7 +1,9 @@
-# M2 material for M6 — complete M3 handoff
+# Current M2 material — conditional M5 intake
 
-26 October 2026. Use the [current 144-run shared report](../aggregation/20261026_m3_complete/README.md), [M6 tables and interpretation](../aggregation/20261026_m3_complete/M6_HANDOFF.md), and [editable slide text / speaker notes](../aggregation/20261026_m3_complete/GROUP_RESULTS_SLIDE_CONTENT.md). All eight methods have 18 dev units; M2 evaluation reports no issues.
+26 October 2026. See the [M5 intake and corrected shared comparison](../aggregation/20261026_m5_intake/README.md), [M6 handoff](../aggregation/20261026_m5_intake/M6_HANDOFF.md), and [M5 evidence follow-up](../aggregation/20261026_m5_intake/M5_FOLLOWUP.md).
 
-M3 full is now received and independently validated. Its three-method component study is complete, with matched planning and self-correction comparisons, actual three-arm curves and baseline AF/EF. The former missing-comparator request is closed. Additional all-enabled Full-agent planning/self-correction ablations are for M1/M6 to decide, not M3 delivery debt.
+The [accepted 144-run report](../aggregation/20261026_m3_complete/README.md) remains unchanged, including the complete M3 component study. M5 adds 18 endpoint-verified exploration OFF records whose actual resolved configurations and component evidence are missing. The new 162-row table has explicit acceptance labels: canonical M5 acceptance is 0/18, pending those files.
 
-The earlier [126-run report](../aggregation/20261026/README.md), [M2 routing slide source](M2_Frozen_Routing_Slide_Content_20261025.md), [routing notes](M2_SPEAKER_NOTES_20261025.md), and original dated native decks remain preserved. This release adds assembly-ready content and plots; it does not claim a newly exported PPTX. M6 owns the final group deck.
+Correct frozen Full 10.0000/88.1111 versus OFF 9.6667/88.2222 gives ON minus OFF +0.3333 mSUN/−0.1111 AUDC. Corrected case descriptions use original trajectories and the existing Full decision sidecar. Curves, provisional AF/EF and machine-labelled costs are ready for draft assembly with the package-pending qualification.
+
+No new native PPTX export or external message is claimed. M6 owns final assembly. Existing routing slides, notes, dated decks and prior reports remain available.

@@ -1,3 +1,9 @@
+# Current update — M5 conditional intake, 26 October 2026
+
+Use the [M5 intake](aggregation/20261026_m5_intake/README.md) and [corrected M6 handoff](aggregation/20261026_m5_intake/M6_HANDOFF.md). Existing144 accepted records remain; the18 newly received M5 endpoints are verified but lack actual resolved configs/component evidence and do not yet pass the canonical evaluator. Full−OFF is+.3333mSUN/−.1111AUDC. The received-data analysis is finished; M5 must recover its original package before formal closeout. Historical record below remains preserved.
+
+---
+
 # Current update — complete M3 handoff, 26 October 2026
 
 Use the [144-run shared report](aggregation/20261026_m3_complete/README.md) and [M6 handoff](aggregation/20261026_m3_complete/M6_HANDOFF.md). All 54 M3 component runs are now validated; the missing m3_full request is closed. Additional Full-agent planning/self-correction experiments are an M1/M6 decision and are not owed by M3. Earlier text below is preserved as a dated stage record.

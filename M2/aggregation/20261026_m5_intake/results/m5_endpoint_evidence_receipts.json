@@ -1,0 +1,1010 @@
+[
+  {
+    "method": "exploration_off",
+    "system": "Au-K-Tb",
+    "seed": 17,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_17/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13502,
+        "sha256": "b5ccf20a4e0368fa14ccc7ac2d1469ca1d02c8b9bcc2199ddd9246e0cf445b03"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 627054,
+        "sha256": "b082b138554fe238b4078f2f929a1a093925a72bcadf3fc5b9c5d0c9d9bdc0fc"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 78265,
+        "sha256": "285317bbff3f442e94cfabf6b51bc738f896aba8df6f257fa4f9795540000250"
+      },
+      "summary/summary.json": {
+        "bytes": 11790,
+        "sha256": "a8363296e0aa752800ad32acb1367a40a4122fd1782c6b179ed9eae73af11601"
+      },
+      "summary/episodes.json": {
+        "bytes": 6077,
+        "sha256": "ddba9504c1e42b6444f5aae7268a3e67eb843d0471bb7536777793b8a31d7f2e"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5275,
+        "sha256": "66f2f51667305ae7bf0b007062df60ffcef0a51bcf43a27a4572d7d89997f4da"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 67310,
+        "sha256": "a082e84f3b93f65fe1a064ed1f75dcd7c92759b9da70d89f0c658153658b29c9"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Au-K-Tb/seed_17/reconstructed_curve.json",
+    "derived_history_sha256": "b3d4f79b1f9ee1b33ab419b0bf3a47ee592b524bb685b733f6b86ba99dbd77d2"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Au-K-Tb",
+    "seed": 29,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_29/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13502,
+        "sha256": "457bf9b1ab2c8006adb249dd92cdfb7874ca24d442abb64e91bde3e902eec7e0"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 604571,
+        "sha256": "c8525ce7d26b6dfd409c71256f733e900b80f82713eea5da6bc5966868db057d"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 72550,
+        "sha256": "df03f835832384535a3420ff36024c6013479a4aa0cd081c7cec10944ca99779"
+      },
+      "summary/summary.json": {
+        "bytes": 11781,
+        "sha256": "7914a66f7ef5b18c4b0d796d11be504216d907e978cb942f3cd5e8c108eadeed"
+      },
+      "summary/episodes.json": {
+        "bytes": 6068,
+        "sha256": "9e64e01c88009e381ea5e693a43fbb2df2518dfab67fc32ba31dbff2da937eed"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5266,
+        "sha256": "64f337b75d8fa8353196c61222c300ed034c56c6f8a95b6ffa7751b57481ff9a"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 67322,
+        "sha256": "6f8658052c2e4f827ed12f4e10f0a09bcfa3d13e357f011f34be4c9789a73cf1"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Au-K-Tb/seed_29/reconstructed_curve.json",
+    "derived_history_sha256": "da714db472751b8d9c55a6fc116c392b9f151bf01b9178c5eb5bd9feaab9644e"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Au-K-Tb",
+    "seed": 43,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Au-K-Tb/seed_43/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13502,
+        "sha256": "d626f0c7e743f005fe9bf01a6494467e27cf9f9f7751a369ec0fb3391adca13a"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 632141,
+        "sha256": "54c20f31374c6d855287ee88fe3808c7e73bb9a18fbd7f59e93180a4dfe21176"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 73810,
+        "sha256": "85e3b43cc2c931986c813874ea5fff994796444025d1ad0d5193796b24f890d9"
+      },
+      "summary/summary.json": {
+        "bytes": 11760,
+        "sha256": "a1b95554cd4362c41cc58c89480fe5694c213bb9128561e5d0ca247cee1a7cbc"
+      },
+      "summary/episodes.json": {
+        "bytes": 6047,
+        "sha256": "0009936b82c0371e0db97bf3de512d417c0115f7ecc99042688cf5d0df8054ab"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5245,
+        "sha256": "fc4038512632aa75a8a13be6628d404e3deaa8ac2740c8a8c92442baa700e0ed"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 67321,
+        "sha256": "9d33a240d39cfedc0f7e4b7a45f3cc4dc982d2299a6324cd59395e270febf2a1"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Au-K-Tb/seed_43/reconstructed_curve.json",
+    "derived_history_sha256": "6b36170fb61271bc9f1cac885e05915b37f164a28208e9138cbe5371b99574d9"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Co-Dy-W",
+    "seed": 17,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_17/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13502,
+        "sha256": "ff6ebc9a1dce2d6dd4a43c66de341f8362a4a4ca6bfc52332fb9acc72190e348"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 607377,
+        "sha256": "bf7f79ed06f8934edcf8d7cf4acfde041fe5c884a7776a01197dba8559f2a7f9"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 68428,
+        "sha256": "35901b545797d270dc67e10c7a8f2a5114b2c767b399eabff431248295c0ccbe"
+      },
+      "summary/summary.json": {
+        "bytes": 11798,
+        "sha256": "f75c4ba3a9f72860000f989214ead34d26c79ce626b6c7b8010a5f404e708b1c"
+      },
+      "summary/episodes.json": {
+        "bytes": 6085,
+        "sha256": "0a41483ca2c754bd92364e7d013664b3d41a8a0efb96d4512ef78598da99759b"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5283,
+        "sha256": "33d4c1f33d73a3875e8ce52046b1f2ed387de9bf1e25c9ab69d284187b9e6453"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 65983,
+        "sha256": "ff27fe6ee4b1dccfd64556ce369c1bf06e4844315b096da6fa8b432e2351c353"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Co-Dy-W/seed_17/reconstructed_curve.json",
+    "derived_history_sha256": "ce57f397236fe88d731e0a6642b48f74b9e669effa16313ed338a1e26275782a"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Co-Dy-W",
+    "seed": 29,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_29/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13502,
+        "sha256": "8bfb92e13f8505989cad4b7ce414ff6481913b6c06db2bcb6a654ea17da20399"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 607206,
+        "sha256": "d404568c7216187e07c6be14721601a68b6a6c9760f9e80e7b23673620f5032f"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 75263,
+        "sha256": "11c33fcadb3bb64ce594fe46cebebd0c333da3aa4069da3c56a850d4f1ad8126"
+      },
+      "summary/summary.json": {
+        "bytes": 11787,
+        "sha256": "c6b498777f3ce098071f0535d34bc9d91d64b5db02aec1fd02facba692b22b34"
+      },
+      "summary/episodes.json": {
+        "bytes": 6074,
+        "sha256": "6969f3091d895d948d0368fe77a0dab71d82595131f72d0f102a0b0d58a2c0af"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5272,
+        "sha256": "ec1d8c12bd8a34dabd17d61e98dd6b95c50a90ff10715db47dfec83fbf8f7f5c"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 65991,
+        "sha256": "6eb857f28a6b1d677410e2f08333430f9a86ee016bf6f90de1480e396b677d93"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Co-Dy-W/seed_29/reconstructed_curve.json",
+    "derived_history_sha256": "ab4030011aa6046d1bc5c15afa5dcc171da482ff9c1f522385e1dc2c2b0ddd9b"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Co-Dy-W",
+    "seed": 43,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Dy-W/seed_43/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13500,
+        "sha256": "8578d43f92780ef8282095f0d22205337b77584ca1eeb142325f75d4d1b65de3"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 632013,
+        "sha256": "a955409978189b8d3a1252c6d67219e2582c56765d9ee63bfd00eec2b261e579"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 68664,
+        "sha256": "8b9a774e3e3490a6cb67c9f51a1a0edd2ec620afcfd7fcc86ececb17a203ea2d"
+      },
+      "summary/summary.json": {
+        "bytes": 11716,
+        "sha256": "cfb3b578e0d695f50130a49a9dbc767d5863d59d71eddb678e02c7aab68a42c4"
+      },
+      "summary/episodes.json": {
+        "bytes": 6004,
+        "sha256": "3430baded4e0276518d53e2715e79416764f0bc4bc3f2b3f1425efc78f15863b"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5202,
+        "sha256": "dee0cdf9fc5e955ec3fbbbc599028f7a4edf686d13806d1db1033ae7c81e43e1"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 66002,
+        "sha256": "24e2807060e4d77cfd84c35c569d4bca0e08657f21989570b90d3ae3197cae92"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Co-Dy-W/seed_43/reconstructed_curve.json",
+    "derived_history_sha256": "07989266440305bd78356610be1da819395a424a2bdb9a608102bb2cff058c41"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Co-Mg-Na",
+    "seed": 17,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_17/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "3dcf65daa475df9468b446ef0522de6035ef87624ca1d2f68910e1d55a62f073"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 715897,
+        "sha256": "23d525fc42e99d7610af62c53ea089b31b2f20b0783b7a371935d86bb98055c0"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 60004,
+        "sha256": "cd5860d173bcc835764033cede6ad066830b5f9b2414feb25440a395a127fc23"
+      },
+      "summary/summary.json": {
+        "bytes": 11702,
+        "sha256": "d6a1ca74b93a0d3ca782ee0fb59a81406a90f35bcc5cc86a6dd8603e7ac9acff"
+      },
+      "summary/episodes.json": {
+        "bytes": 5990,
+        "sha256": "ad9cefcbec256066a9410c4b9151c863eba1279abcad0cc21468e58befdc068d"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5188,
+        "sha256": "530e27b1f5fb5e38fc817b9fc06e7a231dbb412457f0e7dd0e44c0987ae3035d"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 57883,
+        "sha256": "e1207f408fd41194f1953e916e5145f9fdfdc449fb83a6a4302d30b4044ff151"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Co-Mg-Na/seed_17/reconstructed_curve.json",
+    "derived_history_sha256": "d87dde722232af9982b03838c3f49b14533c9091075d81114200d6e2b29e08d6"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Co-Mg-Na",
+    "seed": 29,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_29/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "064f674a029f596347b0e9bb27539f64a07fb5c72d379f6ca4b06bfbb312f071"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 732572,
+        "sha256": "40bf93e8d7dfb12db5672fe5aa7d4d26a8cbb013f6ad2f223171ebe6002227fa"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 60649,
+        "sha256": "e211427e505469266a5131a1d21bd42149072a4bf157843b3534ff26527c475f"
+      },
+      "summary/summary.json": {
+        "bytes": 11733,
+        "sha256": "b7b77c10570a9112c393b37bf231e637dbbaf4637872105e21945897afa8abc7"
+      },
+      "summary/episodes.json": {
+        "bytes": 6020,
+        "sha256": "d3270796881c7f428ee29cb5063e6c5566ef8a909e51f3fb30536a0a81aa87af"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5218,
+        "sha256": "a300a711d98daa311469e94e43861fbf7c0ce31eecf15422918302f158e5670d"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 57872,
+        "sha256": "2f3438bcf0523a87b98efc4c1fed06f7362e9aefae9abf5235a65c22f31505c5"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Co-Mg-Na/seed_29/reconstructed_curve.json",
+    "derived_history_sha256": "99686e635518c7d171adb9a8dca594296bef3b95398c8f6267d802cb2242d016"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Co-Mg-Na",
+    "seed": 43,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Co-Mg-Na/seed_43/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "ee5c1b707225eae00a140c411ff6b4267a309dfc8c47e9ed1fd0d4ce655b52df"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 700293,
+        "sha256": "325c36a20a6d17aaf66c849dce6b771694d09f9cd8b82ab2c046c8e15c003dfa"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 60400,
+        "sha256": "4a626eec8e8c13c2174e3f6e81fe84ed3ebfcae1194b56a98273e4f44c18006d"
+      },
+      "summary/summary.json": {
+        "bytes": 11745,
+        "sha256": "3b456d47c617c7f9699f74467899194c544218de08b3bb91667e66a75c7d9749"
+      },
+      "summary/episodes.json": {
+        "bytes": 6033,
+        "sha256": "446b842f4b52c44850a8c8b92e6edee85543a5ef2992f89ac4114267cc4ef847"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5231,
+        "sha256": "37821ddfe734a5b08d128e98c1dae9f19cc2039e0649c7b3894214cfdb11a49a"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 57847,
+        "sha256": "bcbb5fccfbd29dd2932b93f8fcd42d6b235e48c4cddcee45bca945e79e7379c5"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Co-Mg-Na/seed_43/reconstructed_curve.json",
+    "derived_history_sha256": "7928d4e6bd0e0778ef6ec349a5787510d3fecafc0c5c2706d7b4eb1689379d37"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Ga-Pt-Tm",
+    "seed": 17,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "3031110134629812bc9759ba0d5bb35d5e980699dcad55a22902b53f5df53538"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 897321,
+        "sha256": "161def0558359fee02534bcfa4b1fa6cb7138d403ef362931afcf2dd1d0106bd"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 89429,
+        "sha256": "2891b5198d76ba4253365e82ace79d8c62e705028df5a98ba0147c4eecca2213"
+      },
+      "summary/summary.json": {
+        "bytes": 11757,
+        "sha256": "80fb745290615bb36da11adb99ecc6ef861845eaf6a2cc69e4afc3c1283f9908"
+      },
+      "summary/episodes.json": {
+        "bytes": 6044,
+        "sha256": "a14f6fc726dbcbf14e0e59716355cde89419768af116a1b59bbb9b045a75561a"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5242,
+        "sha256": "e4e27c446ecfef33d5cd95d3897ea5979dd330fd433974d51016d9ae227fa89b"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 80518,
+        "sha256": "2662966b1f71f970afb9410fb0a03867afc8d0e482c12c54196f9f46981d0511"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Ga-Pt-Tm/seed_17/reconstructed_curve.json",
+    "derived_history_sha256": "cf5f746deb4c3162abe37a7a6a9aa21a18ebbc9470774cebfe5888b6eb1698db"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Ga-Pt-Tm",
+    "seed": 29,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "1f9bde71901e2e7dbfa87314b368927cfcfb4a9a02e5044dfc1ced039e77c2df"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 888235,
+        "sha256": "1ad9d5fe1f16e1cf32a7d058fb6e964b3ab3c25c8cfbffe98fd824764bdfcff5"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 90194,
+        "sha256": "62e522711b347ef2c6946724cfcd87e64df211e32dbb13719bc2efa5bfb41b42"
+      },
+      "summary/summary.json": {
+        "bytes": 11752,
+        "sha256": "53e42136725b1793c97c6db0aa385f56d4711618ed7bbb486f69f6b06ea3b521"
+      },
+      "summary/episodes.json": {
+        "bytes": 6039,
+        "sha256": "abfb3d236fe8dfd7a2f2fcb8118526c8c6b13463bf1ccc8d376e8d1a4ee7af34"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5237,
+        "sha256": "cbc0161f6381d3db90bf253cade6dc2f75e035ed010c3807d9e2d88318dc8e93"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 80525,
+        "sha256": "995131d563107a43869f4f10e5ae98007771d149cfa85c44449b08acfa36af39"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Ga-Pt-Tm/seed_29/reconstructed_curve.json",
+    "derived_history_sha256": "ccb51c8f193f32c7237d8499687679229093a59261a492c647ebe91c776a0245"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Ga-Pt-Tm",
+    "seed": 43,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "0c441a2d51892f5d3db41d93ba801ad32b957a1f159939b047863889e550a570"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 896256,
+        "sha256": "79337d9f2b7766f1c2971736a84000212995892a8b2b2717043860d1c93b7d4e"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 90975,
+        "sha256": "23949c79e68f705710ca13623be69e2f9e7bfb7f79c5f9fc73a2c122cad0665b"
+      },
+      "summary/summary.json": {
+        "bytes": 11766,
+        "sha256": "926c19a0a1ef99658eb0aca169d6773e612be80bf9d3233b37bf2af3eb733d27"
+      },
+      "summary/episodes.json": {
+        "bytes": 6053,
+        "sha256": "eef286f3590d0535537520b0d640768bf78bfe54eff46dd434b105db0863b2d7"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5251,
+        "sha256": "f64ea6bd4a3e8d1f121b756eb078a6d3b1094aa9a38add0a5748f452b04553b8"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 80537,
+        "sha256": "5588ff9682cd2270fb15ceb7f82145d544407edf656a383908444ab38d16a7a0"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Ga-Pt-Tm/seed_43/reconstructed_curve.json",
+    "derived_history_sha256": "bb055bbd15d2b399db831e14b160c66e6779e9306134e97c5e55e882f7f10fd7"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Hf-Ni-Zr",
+    "seed": 17,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "8dc8f3efba60f169c41213b10fa8ad9bec7ca40801d4e991c9db9113e57dc570"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 707663,
+        "sha256": "2b1bb39b629ae5618400ea29f4f141e76c16c973b5fe1ffa8fe2d2675f3736f1"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 75990,
+        "sha256": "76bd76e81ceafabf0e1070d35873831e44afb24ce5149d6445c53d3f8643de31"
+      },
+      "summary/summary.json": {
+        "bytes": 11784,
+        "sha256": "b714ce2ef447e4ede974d98d506c20cff24b4a694972d820ac0f12aa9862c717"
+      },
+      "summary/episodes.json": {
+        "bytes": 6071,
+        "sha256": "dfd1d40c969e73a0a1762fc276832c1040d6c42b42997b123f9ae3829ea8de37"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5269,
+        "sha256": "a063a8f724a2b27b5823b7522b912ae2339a9a65d3a238f2fcd31ea7c7a6ce4f"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 71890,
+        "sha256": "dabf0bf8f010622dcc02dac41351698d20d6d565cc12400dce4fcc29a992f6dc"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Hf-Ni-Zr/seed_17/reconstructed_curve.json",
+    "derived_history_sha256": "f0f33bff073d699e435710bdfc9bf7d89e370938df0842bce36d92087efcc529"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Hf-Ni-Zr",
+    "seed": 29,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "0492c348feb07ab5bc7eb96ca1d7194af88bc75419212c03ff5b777ea1f814ef"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 699126,
+        "sha256": "9d366b4a0c75afaf2cb6df95a2a2dbc0c62bf917e5b25494f9fbe8a1b9a2e07a"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 76315,
+        "sha256": "fa5045a65c5a15e801cc584dfa8747182b477f6cc3713b10c47c954536225776"
+      },
+      "summary/summary.json": {
+        "bytes": 11777,
+        "sha256": "956e2a05ec8e428d9a651068d15adc9c1a2022c11be0ec4df0afb4476e3191bc"
+      },
+      "summary/episodes.json": {
+        "bytes": 6064,
+        "sha256": "eec58cb6f59178ae6be57478827aa0b290a61686c0cd3f62bf47080ed18dfaec"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5262,
+        "sha256": "b21304e6c922f2b3ae29d07651439f3508e30f6c3d2b69ee5ddd9ab902308e2f"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 71903,
+        "sha256": "0b334f12d4918013392b3bf4ed44e19e3fd8830d94bc4064ce175948d02ecaf1"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Hf-Ni-Zr/seed_29/reconstructed_curve.json",
+    "derived_history_sha256": "82be7ca3d0f4936cd316bd5dbfcdd1289080f2fce554c262cb322b2eea2f2fb5"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Hf-Ni-Zr",
+    "seed": 43,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "bc3d57e3676260de4d4b5f7dec0e38c70b0fdf5d67570ee61e1e1eb07fcc1bde"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 734375,
+        "sha256": "f8b75ad54ee3fa9248c584d1470808ae0b6eea70560d0b85e4a192cda27de33f"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 75863,
+        "sha256": "f0d85bfc32b6f1231f94d42507b932a946ddf168664f7ec6dc8d2807ba5e7ffc"
+      },
+      "summary/summary.json": {
+        "bytes": 11793,
+        "sha256": "982ab33eaad6b5681a4cd34cf3ad5022f1f608a5de7b371cd6d64fa038042271"
+      },
+      "summary/episodes.json": {
+        "bytes": 6080,
+        "sha256": "e22e85c38a1984426e7164ea61f94e6b8220c856e0c54af5332a473edcb3390b"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5278,
+        "sha256": "f0069d42c4fec18e83475364cc62a7ea0a36a16809559598436edcb99a33a7b9"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 71910,
+        "sha256": "4199f1f76cd904d663147f9063316383bb6a9077f02392f99306f828b8993cff"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Hf-Ni-Zr/seed_43/reconstructed_curve.json",
+    "derived_history_sha256": "e85aaa10b8c6699ac5b21e36935d7bc2ce6a47f579f2043eff0f8d1fbb96cb65"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Mg-Sn-Sr",
+    "seed": 17,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "5e3a1387836901535fce6522d69058ac6a24c00325e6821958020f2a31e04c97"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 1701925,
+        "sha256": "e5192a75608ed7fa00e600aa39ff0a0a04b3d64cd8358f7e7199a01c3aefea8d"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 84998,
+        "sha256": "834b22fa81ad95dbcc66fcd076d5ebc5334db8ab0c1584301d7a2db8ce00516a"
+      },
+      "summary/summary.json": {
+        "bytes": 11814,
+        "sha256": "c821d6c7e52a687a6a627b517120f7682adec16d4a782dec6d20420d6fc92651"
+      },
+      "summary/episodes.json": {
+        "bytes": 6101,
+        "sha256": "21327d59648960668536392424b177754d9ec649bcb9de716cc9e49e316c176d"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5299,
+        "sha256": "4abc164cd3a02ebf0d5973e3ce3ad7aa7a46efc7bbb10f566c3dddbe834a3ee3"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 76776,
+        "sha256": "7fbb42811adf003ab1b6e5b9fad67ea58fc8cc14d333dd3959e609486edc491e"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Mg-Sn-Sr/seed_17/reconstructed_curve.json",
+    "derived_history_sha256": "6fd5648d1e675437417e19df3a2f4397b545dc7c5ce5d676add7053f394c36d3"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Mg-Sn-Sr",
+    "seed": 29,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "0df7116842fccbdfec45f9267d9dff198fc4b2492fc8f538395991e1a5dc1f6c"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 1700329,
+        "sha256": "a060c35f63036bbb93a6f6e9b7767b8c413b13394123c7e300d50f881a72bfc4"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 85132,
+        "sha256": "92f650e4aee936867da288715159df0eab8df69d0bf2e5069b700ea7c2b4421d"
+      },
+      "summary/summary.json": {
+        "bytes": 11765,
+        "sha256": "b9735384456434c8e769fb5ec8af6c3b5b230d00dd3d41203c2b6439f273e133"
+      },
+      "summary/episodes.json": {
+        "bytes": 6052,
+        "sha256": "03350aff2b961154c70bb0a1940647ef6452bc20a6b2f722dd1ef620f63f3f25"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5250,
+        "sha256": "709155c5dc6b26b612ad08a3814489f768fdb27f776440febf4a4f689d53ef5c"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 76806,
+        "sha256": "a856f6d29724e7102aacdb620b476fc97c24d01c7423644c21830beed3ced8c6"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Mg-Sn-Sr/seed_29/reconstructed_curve.json",
+    "derived_history_sha256": "ba8db6e8fa592a2af0bd1c1f0eb5b465a870168455dfa49ac11d817a67a5de48"
+  },
+  {
+    "method": "exploration_off",
+    "system": "Mg-Sn-Sr",
+    "seed": 43,
+    "source": "/Users/owenneflibata/Documents/ChatGPT/Boan's Project Work/M2/stage_m5_intake_20261026/snapshot/M1/MADE/results/protocol_v1/exploration_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+    "original_files": {
+      "run_metadata.json": {
+        "bytes": 13505,
+        "sha256": "065edcf5c55ae58d743e0960d5b0131ef7201f4dd0eb90b9f09a57b0eab54408"
+      },
+      "trajectories/episode_000.json": {
+        "bytes": 1708038,
+        "sha256": "bea12b16b2953aa8571b87f675d76cda73d0abcf932d30c9b8ed2546ffaa06fc"
+      },
+      "trajectories/phase_diagram_episode_000.png": {
+        "bytes": 85042,
+        "sha256": "fca0e18ca392be46497364e043e63dea3e690845349c2e22ffeac9a4651f84db"
+      },
+      "summary/summary.json": {
+        "bytes": 11812,
+        "sha256": "fc6b5a1587079c08ec20c2a6bd8541d73b2161786e5eaf8f82fcf8beba9174ff"
+      },
+      "summary/episodes.json": {
+        "bytes": 6099,
+        "sha256": "7aae39d741ce523f3a69421b7d0021d402fbb8b8f891df1122fb2437e24dd247"
+      },
+      "summary/episodes.csv": {
+        "bytes": 5297,
+        "sha256": "37ae3dfb9351e0c01d6d1d70de829690aab4c79a56139e3854601a3d260a4aa6"
+      },
+      "summary/phase_diagram_gt.png": {
+        "bytes": 76768,
+        "sha256": "f8be3a073ba3db7164397e99df391972d9597899feae54c6526d48f3b3c2a0fb"
+      }
+    },
+    "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+    "recorded_command_flags": [
+      "agent.enable_planning=true",
+      "agent.enable_memory=true",
+      "agent.enable_reflection=true",
+      "agent.enable_exploration=false",
+      "agent.enable_tool_routing=true"
+    ],
+    "source_file_hash_checks": 74,
+    "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+    "endpoint_audit_passed": true,
+    "strict_canonical_accepted": false,
+    "missing_evidence": [
+      "resolved_config.yaml",
+      "raw_Hydra_configuration",
+      "original_per_query_metrics_history",
+      "component_logs"
+    ],
+    "derived_history_path": "M2/aggregation/20261026_m5_intake/results/derived_endpoint_analysis/Mg-Sn-Sr/seed_43/reconstructed_curve.json",
+    "derived_history_sha256": "b000cc5754629b3137802ec131f895d9e94652f582d478ab7c06ea117c089aaa"
+  }
+]
