@@ -1,0 +1,11 @@
+{
+  "method": "m3_full",
+  "status": "actual_18_raw_runs_validated",
+  "raw_runs_validated": 18,
+  "historical_reported_endpoints_matched": 18,
+  "matched_component_pairs": 36,
+  "source_hash_checks_per_pair": 74,
+  "all_paired_scientific_config_differences_are_only_assigned_switch": true,
+  "config_logging_output_path_differences_preserved_and_listed": true,
+  "historical_comparator_missing": false
+}

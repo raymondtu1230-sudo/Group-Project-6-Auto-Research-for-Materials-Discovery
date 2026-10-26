@@ -1,7 +1,7 @@
-# M2 material for M6 — 26 October 2026
+# M2 material for M6 — complete M3 handoff
 
-Use the [shared aggregation](../aggregation/20261026/README.md) for the current seven-method dev scoreboard: 126 validated real episodes, including the newly received M4 memory_off and M3 component-study runs. The [M6 handoff](../aggregation/20261026/M6_HANDOFF.md) contains the result tables, comparison scopes and open assembly inputs. [Editable slide text and speaker notes](../aggregation/20261026/GROUP_RESULTS_SLIDE_CONTENT.md) are ready; this update does not include a newly exported PPTX.
+26 October 2026. Use the [current 144-run shared report](../aggregation/20261026_m3_complete/README.md), [M6 tables and interpretation](../aggregation/20261026_m3_complete/M6_HANDOFF.md), and [editable slide text / speaker notes](../aggregation/20261026_m3_complete/GROUP_RESULTS_SLIDE_CONTENT.md). All eight methods have 18 dev units; M2 evaluation reports no issues.
 
-M3 component studies stay separate from the all-enabled Full single-switch ablations. Their historical m3_full comparator lacks its complete 18-run raw package. Current validation and all remaining group inputs are explicit in the shared report; receipt of these packages does not close the entire group task.
+M3 full is now received and independently validated. Its three-method component study is complete, with matched planning and self-correction comparisons, actual three-arm curves and baseline AF/EF. The former missing-comparator request is closed. Additional all-enabled Full-agent planning/self-correction ablations are for M1/M6 to decide, not M3 delivery debt.
 
-The [M2 routing slide source](M2_Frozen_Routing_Slide_Content_20261025.md), [routing speaking notes](M2_SPEAKER_NOTES_20261025.md), [original frozen analysis](../verification/preserved-40204426478/report/) and historical [21 October native deck](M2_Method_and_Dev_Baselines_20261021_36of36.pptx) remain available. M3 and M4 final decks remain in their own report directories.
+The earlier [126-run report](../aggregation/20261026/README.md), [M2 routing slide source](M2_Frozen_Routing_Slide_Content_20261025.md), [routing notes](M2_SPEAKER_NOTES_20261025.md), and original dated native decks remain preserved. This release adds assembly-ready content and plots; it does not claim a newly exported PPTX. M6 owns the final group deck.

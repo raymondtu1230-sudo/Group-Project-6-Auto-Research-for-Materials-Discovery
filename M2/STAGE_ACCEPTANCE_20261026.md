@@ -1,19 +1,18 @@
-# M2 本阶段验收，2026-10-26
+# M2 本阶段验收 — M3 完整组件交付
 
-已完成本轮收到的 M3/M4 数据核验与共享汇总，尚未完成全组最终交付。
+2026-10-26。本轮 M3 验收与当前已收材料的共享汇总均已完成；全组最终组装仍在继续。
 
 | 工作 | 当前状态 |
 | --- | --- |
-| M2 的 36 项真实 dev 基线与 18 项 routing_off | 已完成并沿用已核验原件，无重跑 |
-| M4 的 18 项 memory_off | 已核验并加入 Full 配对与双基线比较 |
-| M3 的 36 项组件 OFF 实验 | 已核验并以实际 m3_* 方法名单列，双基线比较完成 |
-| M3 的完整 m3_full 原始基准 | 待补 18 项目录；现有历史 CSV 仅作有标注的背景值 |
-| 当前 126 项结果、252 个双基线配对比较、曲线、成本、M6 文字 | 已完成，见 [共享入口](aggregation/20261026/README.md) |
-| 正式 Full planning_off/self_correction_off | 未收到正确方法交付，待 M1/M3 明确并补齐 |
-| M5 正式 exploration_off | 未收到完整冻结交付 |
-| M6 其余 check/hidden 与最终原生 PPT | 待收齐并组装；本轮仅提供可编辑文字和讲稿 |
-| 实际 M4 独立测试 | 15/15 通过；72 项联合选集因环境缺依赖而收集失败 |
-| 其他成员文件与原始结果保护 | 未编辑；M2 入口原件另有备份 |
-| 对外消息 | 未代发，由用户转发回执 |
+| M2 的 36 项 dev 基线和 18 项 routing_off | 已完成，沿用已核验原件，无重跑 |
+| M4 的 18 项 memory_off | 已验收，Full 配对与基线比较保持不变 |
+| M3 的 m3_full / planning-off / self-correction-off | 三组共 54 项已收齐、验证并配对，M3 指定组件交付完成 |
+| 共享表、曲线、AF/EF、成本 | 已更新为 144 项结果、288 个基线配对及 36 个 M3 配对 |
+| 原缺 m3_full 基准待办 | 已关闭 |
+| 额外 Full-agent planning_off/self_correction_off | 非 M3 欠交；是否需要及执行人由 M1/M6 决定 |
+| M5 正式 exploration_off | 此快照未找到完整交付，等待 |
+| M6 其余 check/hidden、报告和最终原生 PPT | 继续收齐并组装；本轮仅更新数据、图表和可编辑文字 |
+| 其他成员文件、原始结果、历史报告 | 均未改动；M2 活动交接入口更新前另有备份 |
+| 对外消息 | 未代发，可由用户转发回执 |
 
-[机器可读状态](STAGE_AUDIT_20261026.json)、[M6 交接](aggregation/20261026/M6_HANDOFF.md)、[待补项与回执](aggregation/20261026/RECEIPT_AND_OPEN_ITEMS.md)。原 25 October 验收记录保留其历史时间范围。
+[共享入口](aggregation/20261026_m3_complete/README.md)、[M6 交接](aggregation/20261026_m3_complete/M6_HANDOFF.md)、[机器可读状态](STAGE_AUDIT_20261026.json)。旧 126 项报告保留其历史快照范围；其中 M3 欠交 Full 实验的表述已撤回并显著标注更正。

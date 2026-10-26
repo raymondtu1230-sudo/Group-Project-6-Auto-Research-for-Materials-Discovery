@@ -1,3 +1,9 @@
+# Current update — complete M3 handoff, 26 October 2026
+
+Use the [144-run shared report](aggregation/20261026_m3_complete/README.md) and [M6 handoff](aggregation/20261026_m3_complete/M6_HANDOFF.md). All 54 M3 component runs are now validated; the missing m3_full request is closed. Additional Full-agent planning/self-correction experiments are an M1/M6 decision and are not owed by M3. Earlier text below is preserved as a dated stage record.
+
+---
+
 # Update — 26 October 2026
 
 The current shared scoreboard, peer validation, baseline AF/EF, curves, costs and M6 assembly text are in [M2/aggregation/20261026](aggregation/20261026/README.md). It includes 126 validated real dev episodes. M3 component profiles are kept separate from Full single-switch ablations, and the missing raw m3_full comparator and remaining group inputs are explicit. This completes aggregation of the currently received results; the entire group handoff remains open. No new native PPTX is claimed by this update.

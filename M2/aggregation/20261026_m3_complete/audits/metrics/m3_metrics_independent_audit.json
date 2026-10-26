@@ -1,0 +1,2401 @@
+{
+  "snapshot_commit": "dcd3481a44f5bd9e0f9d7e58778a7f59a5a81210",
+  "accepted": true,
+  "actual_run_count": 54,
+  "new_m3_full_units": 18,
+  "new_m3_full_trajectory_prefixes_checked": 360,
+  "all_M3_trajectory_prefixes_checked": 1080,
+  "official_endpoint_AUDCs_checked": 54,
+  "paired_M3_component_comparisons": 36,
+  "new_scientific_runs": 0,
+  "agent_calls": 0,
+  "oracle_calls": 0,
+  "history_provenance": "All M3 histories are explicitly reconstructed from actual saved trajectory observations, not recovered original checkpoints.",
+  "scope": "M3 component study against m3_full, not Full-system single-switch ablations. Decisions on any additional Full-system planning/self-correction experiments belong to M1/M6, not this audit or an assumed M3 assignment.",
+  "source_provenance": {
+    "M2_evaluator_sha256": "2eacad27246a8669657c6551807cbfeb1274cf94b691840f2f196d55e3e93a89",
+    "official_metric_module_sha256": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+    "official_metric_class_AST_sha256": "33b54edd959fc7415d30314cdbadb9a01e710d3deee026835320622578d2a6ff",
+    "M1_trajectory_packaging_sha256": "dc92e726f7d9e83e756e861b92960436464ca9e567e41372a39c486e2d9447e2",
+    "M1_curve_function_AST_sha256": "7914873de6671f742cc5edf6c8ec8017e9fd41be0f1d56ff199af09b58678737",
+    "loader": "exact unchanged official class and trajectory-function AST; real NumPy; no scientific dependency mocks or formula edits",
+    "numpy_version": "2.3.5"
+  },
+  "errors": [],
+  "per_run": [
+    {
+      "method": "m3_full",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Au-K-Tb/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "cfd2fdd3c2f6ce695857683aae8b77bc97e2f36e4d6f42c963e37d7b15a76983",
+      "saved_history_sha256": "cc6d77da8385e570fa1ec63f342cf5d926741d074ebb543b93af091fd1a6eafd",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 99.5,
+      "original_official_AUDC": 99.5,
+      "original_mSUN": 11.0,
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Au-K-Tb/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "45b9d38f3128f185ed7c3ff8daf765770af41557b63fb47c017a3086e9f3ad7f",
+      "saved_history_sha256": "cd129911a2ce0533856c18416f2def14dc6da730319f72193f14f0e5e938fa4f",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 75.0,
+      "original_official_AUDC": 75.0,
+      "original_mSUN": 8.0,
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Au-K-Tb/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "71dc374d9138c35de30ce8f6f6db51652964097e902d13340f674ba34b5eb121",
+      "saved_history_sha256": "8331374c6227fd7d82c76d20dcca61aab4809ea65f5167072b8b810900e058b4",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 93.5,
+      "original_official_AUDC": 93.5,
+      "original_mSUN": 11.0,
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Co-Dy-W/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "d88752389c810b83fdbc60a6f65ede49d6f557f6fae1b14ada1919f289f591c2",
+      "saved_history_sha256": "d8993ecab63aa053d0e3c2dce449bcb9ad29a158860dc1b43e323d48bea407f5",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 103.5,
+      "original_official_AUDC": 103.5,
+      "original_mSUN": 9.0,
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Co-Dy-W/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "985d2de836801733250b56698e13c2d5cf4b0e6e64ff14cbd32d67da54c8edce",
+      "saved_history_sha256": "798c40a5b6023f367d81d148ea94f4520385996c9ba027a7b75df94093583ee9",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 59.0,
+      "original_official_AUDC": 59.0,
+      "original_mSUN": 4.0,
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Co-Dy-W/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "5fa7278c2363f0119bca141ecd9039c36a1df440b3c1cff5d4caa6389f373b20",
+      "saved_history_sha256": "cceefeba2798ae931e9ecef7201d8ed1a2d266f51c65189745af2c84550fb1d7",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 60.0,
+      "original_official_AUDC": 60.0,
+      "original_mSUN": 4.0,
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Co-Mg-Na/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "10e076fa3495cf2c9c8209a06a99f4bb7984cc360d957f3b97aa53b3c7a810bd",
+      "saved_history_sha256": "bbd901ddb2f29482321420d90f9b4a3805ea56dcaf819803bcd3d42debbe4b50",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 32.5,
+      "original_official_AUDC": 32.5,
+      "original_mSUN": 7.0,
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Co-Mg-Na/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "ff3393a5e0b79173870b3f505997ba2c1b8a2b8ab10fce27673915511006549c",
+      "saved_history_sha256": "243f7be01ee0e884223542f28c718e9ce626e8f3a06550ac2df212c022fe91b1",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 20.0,
+      "original_official_AUDC": 20.0,
+      "original_mSUN": 2.0,
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Co-Mg-Na/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "85b6022068a5a06a9f7c48bc4d964413dff40b61e20c15039ebb07cadaffe79c",
+      "saved_history_sha256": "7b79b2b503e44ee33eac98e996bf8ea3305d5757060a3f423457945f190a3b58",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 34.0,
+      "original_official_AUDC": 34.0,
+      "original_mSUN": 4.0,
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "9092398c3787f01e0fc8b3a47502bf5f3503ebaf9e7815066e96438aa9235ba8",
+      "saved_history_sha256": "ec00f0860c69e354014fd0c248e67fe65b39f1fbc93b7202ce89822de0b28ac0",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 65.0,
+      "original_official_AUDC": 65.0,
+      "original_mSUN": 6.0,
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "ab432bc64315c78a9f12006da56c3b94bb77f1f142f2f350f182971019c19fe0",
+      "saved_history_sha256": "fa686ba12620c20526a2d1c198768ec471e633e9a06e0fb8adddced496b40451",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 101.5,
+      "original_official_AUDC": 101.5,
+      "original_mSUN": 9.0,
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "6b6e5d855aa10e21dad65b04696e652e5e118762869c8e53542c88e73fc52576",
+      "saved_history_sha256": "0f30e72270fdcc8d3e8f30a3233469ecbd1a7268bac185701020f27be098def3",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 49.5,
+      "original_official_AUDC": 49.5,
+      "original_mSUN": 3.0,
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "0cc9e484a5c300bf5cfe24c89d49ffc1bd35367226cec518491ce91ab43ef94b",
+      "saved_history_sha256": "fdba6119bbd9210724b6f4fac15df70a7414987cf6c6162011c29abe5c5bbbd3",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 71.0,
+      "original_official_AUDC": 71.0,
+      "original_mSUN": 8.0,
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "3ee2aa3ac1fb5c6efdb5e8fddba2786decd6a73da28c40b7bd05eed05406797d",
+      "saved_history_sha256": "518124b560d6067fd046a30c3ac40d37368b66dfeb1f16c6e4512aa35e854a11",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 37.5,
+      "original_official_AUDC": 37.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "b363b82030c56f1d4b492d43140ba435cb10a315de8507b5cf272775c97c2861",
+      "saved_history_sha256": "4833c7df87ccf6dbd9d73cc0bf665aad82c7e6b76dbdd34fdc15ad67cd436a7b",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 32.5,
+      "original_official_AUDC": 32.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Mg-Sn-Sr/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "6de3916d3a311f1b7608687f5ab34325e39918f66e1093cde09d954e10cbf18b",
+      "saved_history_sha256": "62992fa83cf60325986d607568258bbdbf046e8ed1f8978f0af4f5799252b3ab",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 67.5,
+      "original_official_AUDC": 67.5,
+      "original_mSUN": 7.0,
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Mg-Sn-Sr/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "56d12560a44b639fbdc9b145308a113bcb79e480f4f749bfed97af2994fd7405",
+      "saved_history_sha256": "d58df134cba7cdf4131a12b98d1a18f4c58ba633a26266ff97361686a7953394",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 54.5,
+      "original_official_AUDC": 54.5,
+      "original_mSUN": 7.0,
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "accepted": true
+    },
+    {
+      "method": "m3_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_full/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "a817bca7d47d1c89ffe04b7cf67d6f45e6d3f853b88b847e85aaa0bfd5b9387c",
+      "saved_history_sha256": "435b00ebcd7843695b25b48163b3a0242953639086497dfe483668aad91754fa",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 73.5,
+      "original_official_AUDC": 73.5,
+      "original_mSUN": 7.0,
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Au-K-Tb/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "6eb7cba87c2e80ead33f1a585821b302151f66575f0e2c444e1070ac03ad15d7",
+      "saved_history_sha256": "6349b657050f23c46a41ff96a4473d2e0756f24478ab384d4474f2df6de4da9b",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 34.5,
+      "original_official_AUDC": 34.5,
+      "original_mSUN": 3.0,
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Au-K-Tb/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "a774fa8653521618a5494f79bc53aee7ecada2d0dee803ce7ce647301d0016fe",
+      "saved_history_sha256": "909299d0ac966f242a3cff7fa1b7a14373af50e973ecff06e1da4a8195a01ce6",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 45.5,
+      "original_official_AUDC": 45.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Au-K-Tb/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "445e0d22002e066f8720fb8022fc2bec62b4f4b4fa7ce0352812d2835c207f29",
+      "saved_history_sha256": "62bc7a77cdf2e7705e7af55e57a60ff89f050423216f5338283d4e322581aad1",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 14.0,
+      "original_official_AUDC": 14.0,
+      "original_mSUN": 2.0,
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Dy-W/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "50ad6ca5b981c7d102ca130aef40f7aa62e567bc3a259495901c1b2a5cb5533e",
+      "saved_history_sha256": "738c26330791342f7924208dffbdb9c939f9a31974561e4c33569a836e28f0f4",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 20.0,
+      "original_official_AUDC": 20.0,
+      "original_mSUN": 2.0,
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Dy-W/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "b6b3e4f35ff4e6d9fd4d92082c09a496bb37374bdbedbb48d92266559df6181d",
+      "saved_history_sha256": "bca0043303a1bbc2fed82291858fb706239e33c0032896ca15eb8be9059206c5",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 14.5,
+      "original_official_AUDC": 14.5,
+      "original_mSUN": 1.0,
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Dy-W/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "d253f06d4944af328502fc02ddceecb2d0452a8618aaa8437f68fe7fd3b37348",
+      "saved_history_sha256": "07a8f3cb5851f4c1f83e2d06dce2a0bd64c4054c92d9cbc3a157068058dbcc79",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 11.0,
+      "original_official_AUDC": 11.0,
+      "original_mSUN": 2.0,
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Mg-Na/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "bf7d8162b44d08624fa00bc9bd5e4e44c180cd921513de1cdd287ad88f52675d",
+      "saved_history_sha256": "88b1f9bc0133ec838800baa36f6c168afef4fc2f62738d62126283743d11ef69",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 37.5,
+      "original_official_AUDC": 37.5,
+      "original_mSUN": 3.0,
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Mg-Na/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "bbd663afb0c6493af78844201e61ed24e4f4799a2ae5815558d82c7e33d6e5a8",
+      "saved_history_sha256": "9447226f35b6ecb59cf47a174623c695f4160c2dbd8b1a89c86b25680ef74797",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 28.0,
+      "original_official_AUDC": 28.0,
+      "original_mSUN": 4.0,
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Co-Mg-Na/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "0cb856810fbeb9392f83d85ad43da93595abfc04f92aff10e92bcbb04a1ea567",
+      "saved_history_sha256": "8aa29f4a7b14f9157b1c7a5b0d59e9fe9b4b6640fd9f0edd88a113e8d134bbb0",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 40.0,
+      "original_official_AUDC": 40.0,
+      "original_mSUN": 4.0,
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "ace375f9c6b6ad3ee9a1327e44a1b39625cbb358d66ec7d07ab0c149cd81e63c",
+      "saved_history_sha256": "6dc0b2ef03aa17a2ca5c1a9b5345d2240136a6a0bb7cc8da9af393535015c01e",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 47.5,
+      "original_official_AUDC": 47.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "c796eaa223c801b2bf9504ef54c83cef2e5edcb3db1bca0a7dc245b5e655d663",
+      "saved_history_sha256": "cb730386b69eb41d0c4df0825a884a86cdd83093d3f056ab5fc298641ee2b8e1",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 57.0,
+      "original_official_AUDC": 57.0,
+      "original_mSUN": 6.0,
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "3d9dc40608628ea958ec23b40d0c6bd25e6a658aa70d768f83a450919ca9e673",
+      "saved_history_sha256": "b701daa19a2faafdb385679be51d13d253cb63ad579172e19fc1495749d9b801",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 110.5,
+      "original_official_AUDC": 110.5,
+      "original_mSUN": 11.0,
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "968dc4d8163a3eaef7cfd9cc8b41699fbc293e309037aaf7861fe9b42d033df3",
+      "saved_history_sha256": "e3c2f2cdba1190e2154575d33823bf1c5ab2e524d6bfd2ade99ecd51fd01012c",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 82.5,
+      "original_official_AUDC": 82.5,
+      "original_mSUN": 11.0,
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "8ebff1d0bf6b305be17d1f538474ff60bad31d760b9017ed5a135d1ee4cf28a6",
+      "saved_history_sha256": "a8962eaaea9548c0a7a0e8f7ad88ce2a5ff33437104b09d8b1315c92ada32417",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 75.0,
+      "original_official_AUDC": 75.0,
+      "original_mSUN": 8.0,
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "5b16b2d8dc02dde18596cd01f9fa8cd1ac34e66409b2385c87bd890a9c41890d",
+      "saved_history_sha256": "816535f1c4036c9f9ded5d635b4bf19be38073bf9630e5c022faa41bcbc730c9",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 96.5,
+      "original_official_AUDC": 96.5,
+      "original_mSUN": 9.0,
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "0e748af17072236dae47296f8b3727807716a078683c7023ddcf84fc94ffda1f",
+      "saved_history_sha256": "df2a2f89fcf97608c42882f2e59025f62c660b921765cca9a7a371630423399b",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 60.0,
+      "original_official_AUDC": 60.0,
+      "original_mSUN": 6.0,
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "f2d2eba8d6028d7dde260eac6d8b7b57f2616a885940c950e002520191976cbb",
+      "saved_history_sha256": "aec5815806d9714539e56d937e1f7c8e590fa513e8991710f1601d58f17bb954",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 57.5,
+      "original_official_AUDC": 57.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "accepted": true
+    },
+    {
+      "method": "m3_planning_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_planning_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "a5dbb60ab5291d9aa7e942ea29fd4596919dd03c2532d95410ac37201150a942",
+      "saved_history_sha256": "36f56c489ff0fc90ba68b79f6af05318ff1e3468bd052913e8c433685584c824",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 54.5,
+      "original_official_AUDC": 54.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Au-K-Tb/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "015bae186707f232023ca71a301feeb95d43fd7f4be7ff8e26c6c82397c676d0",
+      "saved_history_sha256": "cc6d77da8385e570fa1ec63f342cf5d926741d074ebb543b93af091fd1a6eafd",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 99.5,
+      "original_official_AUDC": 99.5,
+      "original_mSUN": 11.0,
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Au-K-Tb/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "a4c15cd718bb62af4d997dac2a01303df367d14f04381414255d93a47066d3de",
+      "saved_history_sha256": "cd129911a2ce0533856c18416f2def14dc6da730319f72193f14f0e5e938fa4f",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 75.0,
+      "original_official_AUDC": 75.0,
+      "original_mSUN": 8.0,
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Au-K-Tb/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "da5c002a2a18d757e8315e6dc41714e5b385f8a4290b0806406799e2545ef129",
+      "saved_history_sha256": "8331374c6227fd7d82c76d20dcca61aab4809ea65f5167072b8b810900e058b4",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 93.5,
+      "original_official_AUDC": 93.5,
+      "original_mSUN": 11.0,
+      "canonical_material_reference_sha256": "2b5c95b6b3e3c49987c0f362ed144e0473f20dc3514df271d81c34b957188ea4",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Dy-W/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "25a0b50349df32690382885e585e1362018c0462d072cb5f01641f04cad877b8",
+      "saved_history_sha256": "d8993ecab63aa053d0e3c2dce449bcb9ad29a158860dc1b43e323d48bea407f5",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 103.5,
+      "original_official_AUDC": 103.5,
+      "original_mSUN": 9.0,
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Dy-W/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "b10930c953b6129084fc9e86255c4062b4d1f7c06d01284489f01427517cced0",
+      "saved_history_sha256": "798c40a5b6023f367d81d148ea94f4520385996c9ba027a7b75df94093583ee9",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 59.0,
+      "original_official_AUDC": 59.0,
+      "original_mSUN": 4.0,
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Dy-W/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "cd439e6aab4c8cd18cc9d72521924d962ba76f64144876646b2e62a9aa081c2f",
+      "saved_history_sha256": "cceefeba2798ae931e9ecef7201d8ed1a2d266f51c65189745af2c84550fb1d7",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 60.0,
+      "original_official_AUDC": 60.0,
+      "original_mSUN": 4.0,
+      "canonical_material_reference_sha256": "8ea7300f633d39115512d216665f9de72e7bd12dc9a6a80fb08408ee220b88e8",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Mg-Na/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "69de839a8a72df32129535119d5d332f9eb78bd4aa0aefc2de3b5f40537b5c38",
+      "saved_history_sha256": "c58ecfbda60838fe2e85e5f5c469514759893a2ad530475c2c183f5adfe3b37b",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 13.5,
+      "original_official_AUDC": 13.5,
+      "original_mSUN": 3.0,
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Mg-Na/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "eb7ea158195289296306599ab6c0a020b0e6c3398548bbd83141fe22ba7b0884",
+      "saved_history_sha256": "1613e5c43ab8db87c21575af82f00b70699d6d0baef5e07643a612bd09aaf1c9",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 0.0,
+      "original_official_AUDC": 0.0,
+      "original_mSUN": 0.0,
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Co-Mg-Na/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "e19c047b81630932565fca871de9f7e2766ac054000856574848b773131db927",
+      "saved_history_sha256": "1613e5c43ab8db87c21575af82f00b70699d6d0baef5e07643a612bd09aaf1c9",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 0.0,
+      "original_official_AUDC": 0.0,
+      "original_mSUN": 0.0,
+      "canonical_material_reference_sha256": "81cf3856d1084df6ae5bccfd36decbced80a7fed7e824e15e1cbe61a9b564ddb",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "4ae30ae8bd35bdaac9961aa9b0410dadbb77210dcbdb17d8998d57280ca6ddfa",
+      "saved_history_sha256": "40fe0cdfb85b5377a7e34ac471c82ad6ab9268b9007ec67a84d2120799f813ee",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 64.5,
+      "original_official_AUDC": 64.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "80c980dc8da973555ab381befba3550be9f024ab751d0df844b5dd55e1395820",
+      "saved_history_sha256": "fa686ba12620c20526a2d1c198768ec471e633e9a06e0fb8adddced496b40451",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 101.5,
+      "original_official_AUDC": 101.5,
+      "original_mSUN": 9.0,
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "4dc102eb2cd6287d72bba6bee99300b110d08828b080eeaa83a4f4c4c5a7ed99",
+      "saved_history_sha256": "bc0db48e9193767dacf94b9512da6c7de0e14a87997b4b3b708e23c428d5b0d1",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 57.5,
+      "original_official_AUDC": 57.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "2f263c047f12e7431b355f36027b64a0aa5702162c73ec4cd4764a97759d116e",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "cee783d368eb9683c92f5202b64ed4057cbce13754e5c5d18da6cdf06d3cb211",
+      "saved_history_sha256": "54cd61762a2795e7dfc6fd83d11d67dffe2134cbbfbf597470a6cfa1053b08b6",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 58.5,
+      "original_official_AUDC": 58.5,
+      "original_mSUN": 7.0,
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "8f7d92128c3ad5337215e041479d45864c0838db2dcccb1b1375d5dff8213ebf",
+      "saved_history_sha256": "518124b560d6067fd046a30c3ac40d37368b66dfeb1f16c6e4512aa35e854a11",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 37.5,
+      "original_official_AUDC": 37.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "35684120460a66b3d86c85e11b07f3a0c7b04baec09f31efc4784be9dbb06373",
+      "saved_history_sha256": "c3a5ba2a02c42b337ed5587aa40165f7ab7428451815ff68b2b09a9015a65d32",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 36.5,
+      "original_official_AUDC": 36.5,
+      "original_mSUN": 5.0,
+      "canonical_material_reference_sha256": "34e552e7d8590f101a65378f6835fbaf9205a4679c06963a82562f0a45905f6a",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "64920dc7997802cb5c5f9558007b97687623bcc7ebb517beacb2c346706fdc7c",
+      "saved_history_sha256": "dca268e048f325b18bf3149bb91528d32d49d27012faea593416f5eb316fc54f",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 64.0,
+      "original_official_AUDC": 64.0,
+      "original_mSUN": 6.0,
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "3b2852e97d7a7e26ff4e75be6ac5cb79514fa5b539dd789b7e35e555cfcde28d",
+      "saved_history_sha256": "d58df134cba7cdf4131a12b98d1a18f4c58ba633a26266ff97361686a7953394",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 54.5,
+      "original_official_AUDC": 54.5,
+      "original_mSUN": 7.0,
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "accepted": true
+    },
+    {
+      "method": "m3_self_correction_off",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "path": "M3/results/frozen_20261025/protocol_v1/m3_self_correction_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+      "saved_history_source": "reconstructed_from_frozen_official_trajectory",
+      "actual_trajectory_sha256": "ac36227b16f5f1f1d0ade457d16ccfdf498327ad61c734093a14a746e8caf559",
+      "saved_history_sha256": "817ddac7af3b122df8041f5d31498c0b6f2bd97d0a768b8b44f0edd6eb0e8bcc",
+      "trajectory_function_prefixes_checked": 20,
+      "mismatches": [],
+      "actual_official_AUDC": 71.0,
+      "original_official_AUDC": 71.0,
+      "original_mSUN": 6.0,
+      "canonical_material_reference_sha256": "67e7d8791cc42e745eca63adaea89eb73f175d5055279b7ee8f1b986599d0057",
+      "accepted": true
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223258-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132142-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223258-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132142-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223258-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132142-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Au-K-Tb/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Au-K-Tb/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -8.0,
+      "delta_AUDC_off_minus_m3_full": -65.0,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.2727272727272727
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223731-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132436-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223731-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132436-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223731-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132436-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Au-K-Tb/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Au-K-Tb/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -3.0,
+      "delta_AUDC_off_minus_m3_full": -29.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.625
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-224155-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132739-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-224155-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132739-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-224155-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132739-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Au-K-Tb/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Au-K-Tb/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -9.0,
+      "delta_AUDC_off_minus_m3_full": -79.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.18181818181818182
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-232239-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135258-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-232239-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135258-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-232239-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135258-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Co-Dy-W/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Dy-W/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -7.0,
+      "delta_AUDC_off_minus_m3_full": -83.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.2222222222222222
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-232858-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135554-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-232858-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135554-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-232858-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135554-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Co-Dy-W/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Dy-W/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -3.0,
+      "delta_AUDC_off_minus_m3_full": -44.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.25
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-233345-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140037-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-233345-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140037-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-233345-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140037-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Co-Dy-W/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Dy-W/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -2.0,
+      "delta_AUDC_off_minus_m3_full": -49.0,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.5
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-224842-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133312-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-224842-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133312-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-224842-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133312-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Co-Mg-Na/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Mg-Na/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -4.0,
+      "delta_AUDC_off_minus_m3_full": 5.0,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.42857142857142855
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-225444-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133343-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-225444-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133343-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-225444-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133343-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Co-Mg-Na/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Mg-Na/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 2.0,
+      "delta_AUDC_off_minus_m3_full": 8.0,
+      "AF_off_vs_m3_full": 1.1666666666666667,
+      "EF_off_vs_m3_full": 2.0
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230005-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133642-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230005-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133642-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230005-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133642-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Co-Mg-Na/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Mg-Na/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 6.0,
+      "AF_off_vs_m3_full": 0.9444444444444444,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234232-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140252-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234232-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140252-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234232-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140252-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Ga-Pt-Tm/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -1.0,
+      "delta_AUDC_off_minus_m3_full": -17.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.8333333333333334
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234843-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140834-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234843-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140834-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234843-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140834-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Ga-Pt-Tm/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -3.0,
+      "delta_AUDC_off_minus_m3_full": -44.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.6666666666666666
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-235555-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-141116-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-235555-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-141116-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-235555-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-141116-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Ga-Pt-Tm/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 8.0,
+      "delta_AUDC_off_minus_m3_full": 61.0,
+      "AF_off_vs_m3_full": 1.6,
+      "EF_off_vs_m3_full": 3.6666666666666665
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230542-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134038-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230542-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134038-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230542-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134038-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Hf-Ni-Zr/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 3.0,
+      "delta_AUDC_off_minus_m3_full": 11.5,
+      "AF_off_vs_m3_full": 1.1875,
+      "EF_off_vs_m3_full": 1.375
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231149-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134400-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231149-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134400-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231149-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134400-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Hf-Ni-Zr/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 3.0,
+      "delta_AUDC_off_minus_m3_full": 37.5,
+      "AF_off_vs_m3_full": 1.5833333333333333,
+      "EF_off_vs_m3_full": 1.6
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231629-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134718-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231629-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134718-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231629-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134718-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Hf-Ni-Zr/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 4.0,
+      "delta_AUDC_off_minus_m3_full": 64.0,
+      "AF_off_vs_m3_full": 2.111111111111111,
+      "EF_off_vs_m3_full": 1.8
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221142-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131137-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221142-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131137-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221142-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131137-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Mg-Sn-Sr/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -1.0,
+      "delta_AUDC_off_minus_m3_full": -7.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.8571428571428571
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221243-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131206-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221243-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131206-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221243-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131206-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Mg-Sn-Sr/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -2.0,
+      "delta_AUDC_off_minus_m3_full": 3.0,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.7142857142857143
+    },
+    {
+      "method": "m3_planning_off",
+      "comparator": "m3_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-222236-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131239-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_planning",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-222236-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131239-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-222236-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131239-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_planning_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Mg-Sn-Sr/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -2.0,
+      "delta_AUDC_off_minus_m3_full": -19.0,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.7142857142857143
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Au-K-Tb",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223332-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132142-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223332-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132142-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223332-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132142-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Au-K-Tb/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Au-K-Tb/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 0.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Au-K-Tb",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223954-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132436-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223954-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132436-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-223954-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132436-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Au-K-Tb/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Au-K-Tb/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 0.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Au-K-Tb",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-224521-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132739-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-224521-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132739-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-224521-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-132739-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Au-K-Tb/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Au-K-Tb/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 0.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Co-Dy-W",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-232401-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135258-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-232401-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135258-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-232401-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135258-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Co-Dy-W/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Dy-W/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 0.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Co-Dy-W",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-233104-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135554-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-233104-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135554-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-233104-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-135554-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Co-Dy-W/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Dy-W/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 0.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Co-Dy-W",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-233922-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140037-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-233922-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140037-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-233922-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140037-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Co-Dy-W/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Dy-W/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 0.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Co-Mg-Na",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-225145-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133312-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-225145-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133312-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-225145-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133312-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Co-Mg-Na/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Mg-Na/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -4.0,
+      "delta_AUDC_off_minus_m3_full": -19.0,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.42857142857142855
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Co-Mg-Na",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-225516-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133343-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-225516-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133343-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-225516-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133343-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Co-Mg-Na/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Mg-Na/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -2.0,
+      "delta_AUDC_off_minus_m3_full": -20.0,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Co-Mg-Na",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230046-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133642-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230046-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133642-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230046-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-133642-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Co-Mg-Na/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Co-Mg-Na/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -4.0,
+      "delta_AUDC_off_minus_m3_full": -34.0,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234304-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140252-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234304-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140252-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234304-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140252-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Ga-Pt-Tm/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Ga-Pt-Tm/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -1.0,
+      "delta_AUDC_off_minus_m3_full": -0.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.8333333333333334
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234915-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140834-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234915-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140834-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-234915-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-140834-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Ga-Pt-Tm/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 0.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Ga-Pt-Tm",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-235730-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-141116-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-235730-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-141116-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-235730-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-141116-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Ga-Pt-Tm/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Ga-Pt-Tm/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 2.0,
+      "delta_AUDC_off_minus_m3_full": 8.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.6666666666666667
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230629-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134038-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230629-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134038-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-230629-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134038-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Hf-Ni-Zr/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Hf-Ni-Zr/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -1.0,
+      "delta_AUDC_off_minus_m3_full": -12.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.875
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231221-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134400-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231221-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134400-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231221-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134400-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Hf-Ni-Zr/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Hf-Ni-Zr/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 0.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Hf-Ni-Zr",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231953-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134718-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231953-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134718-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-231953-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-134718-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Hf-Ni-Zr/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Hf-Ni-Zr/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 4.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 17,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221210-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131137-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221210-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131137-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221210-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131137-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Mg-Sn-Sr/seed_17/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Mg-Sn-Sr/seed_17/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -1.0,
+      "delta_AUDC_off_minus_m3_full": -3.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.8571428571428571
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 29,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221825-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131206-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221825-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131206-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-221825-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131206-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Mg-Sn-Sr/seed_29/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Mg-Sn-Sr/seed_29/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": 0.0,
+      "delta_AUDC_off_minus_m3_full": 0.0,
+      "AF_off_vs_m3_full": 1.0,
+      "EF_off_vs_m3_full": 1.0
+    },
+    {
+      "method": "m3_self_correction_off",
+      "comparator": "m3_full",
+      "system": "Mg-Sn-Sr",
+      "seed": 43,
+      "configuration_differences": [
+        {
+          "path": "agent.capture_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-222323-orb-m1_integrated/m4_proposal_events.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131239-orb-m1_integrated/m4_proposal_events.jsonl"
+        },
+        {
+          "path": "agent.enable_reflection",
+          "off": false,
+          "m3_full": true
+        },
+        {
+          "path": "agent.exploration_policy.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-222323-orb-m1_integrated/m5_decisions.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131239-orb-m1_integrated/m5_decisions.jsonl"
+        },
+        {
+          "path": "agent.memory_manager.log_path",
+          "off": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261025-222323-orb-m1_integrated/m4_evidence.jsonl",
+          "m3_full": "C:\\Users\\User\\PE6203\\Group-Project-6-Auto-Research-for-Materials-Discovery\\M1\\MADE\\results\\20261026-131239-orb-m1_integrated/m4_evidence.jsonl"
+        },
+        {
+          "path": "experiment.output_dir",
+          "off": "results/protocol_v1/m3_self_correction_off/dev/Mg-Sn-Sr/seed_43/attempt_01",
+          "m3_full": "results/protocol_v1/m3_full/dev/Mg-Sn-Sr/seed_43/attempt_01"
+        }
+      ],
+      "unexpected_configuration_differences": [],
+      "protocol_and_material_reference_match": true,
+      "delta_mSUN_off_minus_m3_full": -1.0,
+      "delta_AUDC_off_minus_m3_full": -2.5,
+      "AF_off_vs_m3_full": 0.0,
+      "EF_off_vs_m3_full": 0.8571428571428571
+    }
+  ],
+  "method_summaries": [
+    {
+      "method": "m3_full",
+      "split": "dev",
+      "runs_available": 18,
+      "runs_expected": 18,
+      "systems_expected": 6,
+      "seeds_expected": 3,
+      "complete_method_sweep": true,
+      "aggregation": "equal_weight_system_mean_per_seed_then_seed_mean_and_sample_sd",
+      "mSUN_at_B_seed_n": 3,
+      "mSUN_at_B_mean": 6.5,
+      "mSUN_at_B_std": 1.3017082793177757,
+      "AUDC_seed_n": 3,
+      "AUDC_mean": 62.75,
+      "AUDC_std": 9.028888820521239,
+      "wall_time_seconds_seed_n": 3,
+      "wall_time_seconds_mean": 684.0043888888888,
+      "wall_time_seconds_std": 20.63618636463448,
+      "known_cost_usd_seed_n": 3,
+      "known_cost_usd_mean": 0.0,
+      "known_cost_usd_std": 0.0,
+      "AF_vs_random_seed_n": 0,
+      "AF_vs_random_mean": null,
+      "AF_vs_random_std": null,
+      "EF_vs_random_seed_n": 0,
+      "EF_vs_random_mean": null,
+      "EF_vs_random_std": null,
+      "AF_vs_chemeleon_seed_n": 0,
+      "AF_vs_chemeleon_mean": null,
+      "AF_vs_chemeleon_std": null,
+      "EF_vs_chemeleon_seed_n": 0,
+      "EF_vs_chemeleon_mean": null,
+      "EF_vs_chemeleon_std": null
+    },
+    {
+      "method": "m3_planning_off",
+      "split": "dev",
+      "runs_available": 18,
+      "runs_expected": 18,
+      "systems_expected": 6,
+      "seeds_expected": 3,
+      "complete_method_sweep": true,
+      "aggregation": "equal_weight_system_mean_per_seed_then_seed_mean_and_sample_sd",
+      "mSUN_at_B_seed_n": 3,
+      "mSUN_at_B_mean": 5.111111111111111,
+      "mSUN_at_B_std": 0.3469443332443556,
+      "AUDC_seed_n": 3,
+      "AUDC_mean": 49.22222222222222,
+      "AUDC_std": 4.514123925504793,
+      "wall_time_seconds_seed_n": 3,
+      "wall_time_seconds_mean": 431.08333333333337,
+      "wall_time_seconds_std": 72.03550768910966,
+      "known_cost_usd_seed_n": 3,
+      "known_cost_usd_mean": 0.0,
+      "known_cost_usd_std": 0.0,
+      "AF_vs_random_seed_n": 0,
+      "AF_vs_random_mean": null,
+      "AF_vs_random_std": null,
+      "EF_vs_random_seed_n": 0,
+      "EF_vs_random_mean": null,
+      "EF_vs_random_std": null,
+      "AF_vs_chemeleon_seed_n": 0,
+      "AF_vs_chemeleon_mean": null,
+      "AF_vs_chemeleon_std": null,
+      "EF_vs_chemeleon_seed_n": 0,
+      "EF_vs_chemeleon_mean": null,
+      "EF_vs_chemeleon_std": null
+    },
+    {
+      "method": "m3_self_correction_off",
+      "split": "dev",
+      "runs_available": 18,
+      "runs_expected": 18,
+      "systems_expected": 6,
+      "seeds_expected": 3,
+      "complete_method_sweep": true,
+      "aggregation": "equal_weight_system_mean_per_seed_then_seed_mean_and_sample_sd",
+      "mSUN_at_B_seed_n": 3,
+      "mSUN_at_B_mean": 5.833333333333333,
+      "mSUN_at_B_std": 0.8819171036881965,
+      "AUDC_seed_n": 3,
+      "AUDC_mean": 58.30555555555556,
+      "AUDC_std": 7.782339931846642,
+      "wall_time_seconds_seed_n": 3,
+      "wall_time_seconds_mean": 674.6805555555555,
+      "wall_time_seconds_std": 38.11232190561258,
+      "known_cost_usd_seed_n": 3,
+      "known_cost_usd_mean": 0.0,
+      "known_cost_usd_std": 0.0,
+      "AF_vs_random_seed_n": 0,
+      "AF_vs_random_mean": null,
+      "AF_vs_random_std": null,
+      "EF_vs_random_seed_n": 0,
+      "EF_vs_random_mean": null,
+      "EF_vs_random_std": null,
+      "AF_vs_chemeleon_seed_n": 0,
+      "AF_vs_chemeleon_mean": null,
+      "AF_vs_chemeleon_std": null,
+      "EF_vs_chemeleon_seed_n": 0,
+      "EF_vs_chemeleon_mean": null,
+      "EF_vs_chemeleon_std": null
+    }
+  ]
+}

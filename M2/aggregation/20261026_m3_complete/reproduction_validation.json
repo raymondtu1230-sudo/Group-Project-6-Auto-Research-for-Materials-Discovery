@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "published_repository_ZIP_only_functional_execution": true,
+  "script_sha256": "317381100123edb4afc9ef253191462c0370da110d3ee1e57beb1641263ad9c4",
+  "recorded_provenance_script_sha256_matches": true,
+  "output_manifest_entries_verified": 21,
+  "actual_M2_evaluator_validated_runs": 144,
+  "actual_M2_evaluator_issues": [],
+  "actual_M2_M3_only_validated_runs": 54,
+  "prior_seven_method_aggregate_metric_fields_unchanged": true,
+  "prior_36_full_system_pair_rows_byte_identical": true,
+  "all_18_m3_full_endpoints_match_historical_reports": true,
+  "static_ruff_check": "All checks passed",
+  "new_scientific_runs": 0,
+  "new_oracle_queries": 0,
+  "previous_126_release_preserved": true
+}

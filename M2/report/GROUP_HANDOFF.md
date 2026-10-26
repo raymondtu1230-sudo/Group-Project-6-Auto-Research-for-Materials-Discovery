@@ -1,7 +1,7 @@
-# Shared group result handoff — 26 October 2026
+# Shared results after M3 completion
 
-Current results and assembly materials: [M2/aggregation/20261026](../aggregation/20261026/README.md). This incorporates M4's 18 Memory OFF and M3's 36 OFF component profiles into 126 validated real dev episodes and baseline comparisons.
+26 October 2026. Current assembly entry: [M2/aggregation/20261026_m3_complete](../aggregation/20261026_m3_complete/README.md). All 144 real dev results validate, including the complete 54-run M3 component package, 288 paired baseline comparisons and 36 M3 component pairs.
 
-Use [M6_HANDOFF.md](../aggregation/20261026/M6_HANDOFF.md) for presentation tables and evidence scope, and [RECEIPT_AND_OPEN_ITEMS.md](../aggregation/20261026/RECEIPT_AND_OPEN_ITEMS.md) for the concise receipt and remaining inputs. M3 should be paired with m3_full; its complete raw comparator still needs to be supplied. The received M3 methods are distinct from the formal all-other-components-ON planning_off and self_correction_off methods.
+M3 full averages 6.50 mSUN / 62.75 AUDC. Planning and self-correction add 1.3889 / 0.6667 mSUN relative to that comparator. The two OFF arms remain separate from all-enabled Full-agent ablations. M3's assigned handoff is complete; M1/M6 decide on any additional Full-agent planning/self-correction scope.
 
-All new artifacts and entry-point changes are under M2. Original peer files remain untouched. No message was sent on the user's behalf. Earlier versions of updated entry points are preserved in aggregation/20261026/backups/.
+Use the current [M6 handoff](../aggregation/20261026_m3_complete/M6_HANDOFF.md) for tables, curves, costs, interpretation and remaining inputs. M5 exploration and M6 remaining check/hidden / final assembly are still open. No external receipt message was sent. All changes are under M2, and earlier entry-point versions are backed up in the new report.

@@ -1,0 +1,86 @@
+{
+  "aggregate_discovery_curve_data.csv": {
+    "bytes": 9303,
+    "sha256": "e1a04628a286aa8f729e4e864539214b512b95d026112553bfbb81ddf27652a7"
+  },
+  "aggregation_validation.json": {
+    "bytes": 1345,
+    "sha256": "e2932b3982b32b712a6a11fc22698402251872ab0bd335f9695a181fe4946dd4"
+  },
+  "discovery_curves_by_study.png": {
+    "bytes": 231192,
+    "sha256": "c1868f00e1a9b792fdab5e1cf32a08f4aabd3fee077f018f865a3f187b84be7b"
+  },
+  "discovery_curves_by_study.svg": {
+    "bytes": 90202,
+    "sha256": "61ae006324810d76fdd32da20c67d2305f10eb421a22a2c7f98c5269c7912abc"
+  },
+  "evaluation_provenance.json": {
+    "bytes": 1089,
+    "sha256": "67dc31088bfb9e900a058d587bce4bb14d647a92c03820eeebbb112389430f32"
+  },
+  "input_receipts.json": {
+    "bytes": 189442,
+    "sha256": "17728818ed5ec684f51fdc75efeb9bf7e251d51904561fa4d97d20181d12da5c"
+  },
+  "m2_evaluator/discovery_curves.png": {
+    "bytes": 1137136,
+    "sha256": "bb685375348f5124ba2f460e10fbe4443af263a658595a8a4a8a430a068a74bc"
+  },
+  "m2_evaluator/discovery_curves.svg": {
+    "bytes": 620135,
+    "sha256": "c2728e361c0a40b120ac8dff19137090858eb8939005eb985341f3e17fedc7f0"
+  },
+  "m2_evaluator/per_method_summary.csv": {
+    "bytes": 3498,
+    "sha256": "f84580f027c4a768f5ae44145b1006686ba29d514567f5a8bb6d95940cec5978"
+  },
+  "m2_evaluator/per_run.csv": {
+    "bytes": 54723,
+    "sha256": "c300a033591906fa47f6a27b23424758974398eabc93df87616754e8e1380e5d"
+  },
+  "m2_evaluator/per_system_summary.csv": {
+    "bytes": 13930,
+    "sha256": "5072c05e1e370c24a21900adcdf3d0f6e8ca809cbbaf23063af16c609b8382f1"
+  },
+  "m2_evaluator/validation.json": {
+    "bytes": 188,
+    "sha256": "7cfb6c72506fa91e7d006333c036713619b9de5373840cd27cd95dbc7bac394b"
+  },
+  "m3_comparator_validation.json": {
+    "bytes": 405,
+    "sha256": "0d3681dc08ecea8d82482c6f5214aece459dd38016005881d82774d19e56b1b0"
+  },
+  "m3_component_effect_summary.csv": {
+    "bytes": 833,
+    "sha256": "8cbb973cbc61ee15a01450aef038717b6230aa95b10cc8a909164ff6aa30e12e"
+  },
+  "m3_only_validation.json": {
+    "bytes": 339,
+    "sha256": "28faa9ac4a6e2724d22143569ba0b6dea80d006078e92ed756b768666fe3f32c"
+  },
+  "paired_full_system_ablations.csv": {
+    "bytes": 2446,
+    "sha256": "10134bd2923ae925b26104eda6be9b1a49867cca27615eff6ca125028261b68e"
+  },
+  "paired_m3_component_ablations.csv": {
+    "bytes": 13056,
+    "sha256": "502e28a1f94ef919137b5e8a27855cc48640f9da58314453de542131f2113d7f"
+  },
+  "per_method_summary.csv": {
+    "bytes": 3898,
+    "sha256": "924434578b3355432957892d5cdd809a811e4af80fc40495cd04e3f50a3bb02f"
+  },
+  "per_run_costs.csv": {
+    "bytes": 39350,
+    "sha256": "24ebb464478deff57a85ac8d587aafaaced7fdc8ab71ee4f1c22b5b28112410d"
+  },
+  "per_run_with_baseline_comparisons.csv": {
+    "bytes": 100313,
+    "sha256": "2e83a27dbb24d68c997b3b4709c65275aa2d660e168157d8349a2fac5f40f2a7"
+  },
+  "per_system_summary.csv": {
+    "bytes": 13930,
+    "sha256": "5072c05e1e370c24a21900adcdf3d0f6e8ca809cbbaf23063af16c609b8382f1"
+  }
+}

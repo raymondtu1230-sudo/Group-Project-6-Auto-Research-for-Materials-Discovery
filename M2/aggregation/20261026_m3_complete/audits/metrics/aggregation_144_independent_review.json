@@ -1,0 +1,21 @@
+{
+  "accepted": true,
+  "rows": 144,
+  "unique_run_keys": 144,
+  "methods": 8,
+  "receipts_verified": 144,
+  "baseline_AF_EF_comparisons_checked": 288,
+  "paired_rows_checked": {
+    "paired_full_system_ablations.csv": 36,
+    "paired_m3_component_ablations.csv": 36
+  },
+  "all_summary_means_and_sample_SDs_checked": true,
+  "manifest_files_checked": 21,
+  "source_snapshot": "dcd3481a44f5bd9e0f9d7e58778a7f59a5a81210",
+  "unchanged_evaluator_and_official_AST_identity_checked": true,
+  "errors": [],
+  "new_scientific_runs": 0,
+  "agent_calls": 0,
+  "oracle_calls": 0,
+  "M3_effect_summary_means_sample_SDs_and_paircounts_checked": true
+}

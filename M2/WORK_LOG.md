@@ -314,3 +314,13 @@ Older snapshots below are superseded by this confirmed snapshot.
 - Tests: actual M4 standalone suite15/15 passed. The72-test joint selection stopped at collection due to absent Hydra/pymatgen; M4's72-pass statement is attributed, not independently certified. Offline parsing/collection failures during adapter development are retained under M2 staging and did not launch or overwrite science.
 - Learned: evaluator core-completion flags cover Full and two baselines, not every group ablation. M3's current profiles also disable exploration/routing, so their causal comparator is m3_full. The historical18-row comparator CSV lacks complete raw folders; paired component gains stay provisional. Official EF default cap is100, notwithstanding older prose saying10.
 - Next: request complete m3_full originals and clarify whether M1/M3 will supply formal Full planning_off/self_correction_off; collect M5 exploration_off and M6 remaining check/hidden material; update final group report/deck after receipt.
+
+
+## 26 October 2026 — complete M3 comparator intake
+
+- Built: accepted the18 original m3_full folders at dcd3481a; ran unchanged M2 evaluator on144 real dev records, issues=[]; M3-only54/54 valid; updated288 baseline comparisons,36 matched M3 component pairs, actual three-arm curves, machine-labelled costs and M6 assembly text. Earlier7-method numeric aggregates and36 Full memory/routing pair rows remain unchanged.
+- Checked: all3996 M3 source fingerprints and432 manifest entries explained with explicit Windows newline handling;108 scientific files establish02/ae7 evidence-patch equivalence;36 paired configs differ only in their treatment and run paths;1080 supplied history prefixes match the unchanged M1 trajectory-history function and54 official AUDCs/endpoints agree. This verifies recorded-flag consistency, not fresh hull/novelty reevaluation.
+- Results: m3_full6.50mSUN/62.75AUDC; comparator-minus-planningOFF+1.3889mSUN/+13.5278AUDC; comparator-minus-selfcorrectionOFF+.6667mSUN/+4.4444AUDC. Pairwise variation remains explicit.
+- Corrected scope: latest M3/user clarification confirms extra Full-agent planning_off/self_correction_off are not M3 assignment debt. The previous M2 attribution is withdrawn. M3 assigned54-run handoff is complete; M1/M6 decide any extra Full-agent work.
+- Preserved: no original metadata/history/scientific source changed; newfull keepsae7fe819 andOFFkeeps02e0026. Prior126-run release remains; outdated human-facing statements have a prominent superseding correction and byte-exact backup. No new experiment/model/oracle call or external message. All edits underM2.
+- Next: M5 exploration package, M6 remaining check/hidden and final report/deck assembly; resolve extra Full-agent scope withM1/M6 if desired.

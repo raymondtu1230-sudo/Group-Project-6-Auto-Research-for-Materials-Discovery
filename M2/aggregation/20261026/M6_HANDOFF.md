@@ -1,3 +1,9 @@
+# Superseded by the complete M3 handoff
+
+26 October 2026: all18 m3_full original runs have now been received and validated. [Current144-run report](../20261026_m3_complete/README.md). The complete54-run M3 component assignment is accepted. The earlier attribution of extra Full-agent planning_off/self_correction_off runs to M3 is withdrawn; M1/M6 decide that additional scope. Below is the preserved earlier intake record, not the current outstanding-work list.
+
+---
+
 # Shared development results for M6 — 26 October 2026
 
 M2 has received and independently inspected M4's 18 Memory OFF results and M3's 36 component-study results. The shared table preserves their actual method names and comparison scopes. These results cover the six development systems, seeds 17/29/43, B=20 and one episode per system/seed. They are descriptive development results.
