@@ -1,5 +1,10 @@
 # PE6203 M4 Memory Module
 
+## Current status, 26 October 2026
+
+The frozen full agent uses M3 planning and M4 bounded observed-feedback memory. The formal Memory OFF development ablation is complete:18pairs,36validated runs. Generator/filter capture remains enabled in both arms. Final results, curves, three traced cases and cost limits are in [the formal evidence folder](evidence/frozen-memory-ablation-20261026/). [Report materials](report/README.md) identify the final deck and notes. Earlier dated records below describe previous development stages and are not the current completion status.
+
+
 M1 adopted the M4 memory configuration on 20 October 2026 (`9acd3c9`) and integrated M3 (`2fcc214`). The default planner remains diversity; select the M3 planner for memory-consumption checks. A new optional proposal-event capture subclass and joint boundary tests are documented in [integration/EVENT_CAPTURE.md](integration/EVENT_CAPTURE.md). M1 adopted the capture subclass in `3f8d48f` on 21 October; it is now active in the official integrated profile, independently of Memory.
 
 The earlier real-material workflow remains validation evidence, not a Memory performance improvement. Formal ablation uses the frozen full agent on dev, changing only the Memory switch. See [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md).
@@ -58,7 +63,7 @@ Start with a paired pilot to estimate cost before scaling. Use official mSUN/AUD
 - Verify retrieval is consumed in the actual decision input and omitted when OFF.
 - Confirm complete final-step evidence, idempotent resume, and episode isolation.
 - Compare real episode trajectories with exported logs.
-- The locked MADE environment and an earlier real ORB workflow have been validated. Joint synthetic tests now check M3 consumption; a causal Memory performance ablation remains pending.
+- The locked MADE environment and an earlier real ORB workflow have been validated. Joint synthetic tests now check M3 consumption; the later frozen-agent ablation is documented in the current-status section above.
 
 ## Delivery schedule for October 2026
 

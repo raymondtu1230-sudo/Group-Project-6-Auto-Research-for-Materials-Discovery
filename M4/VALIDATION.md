@@ -1,5 +1,10 @@
 # Validation record
 
+## Current status, 26 October 2026
+
+The frozen full agent uses M3 planning and M4 bounded observed-feedback memory. The formal Memory OFF development ablation is complete:18pairs,36validated runs. Generator/filter capture remains enabled in both arms. Final results, curves, three traced cases and cost limits are in [the formal evidence folder](evidence/frozen-memory-ablation-20261026/). [Report materials](report/README.md) identify the final deck and notes. Earlier dated records below describe previous development stages and are not the current completion status.
+
+
 Updated 19 October 2026 for the evidence-schema revision. No new oracle run was required: saved trajectories were re-exported, and original scientific metrics were preserved.
 
 - Current main M1 tests plus standalone M4 tests: 32 passed, three dependency warnings.

@@ -4,6 +4,7 @@ import json
 
 import pytest
 from hydra import compose, initialize_config_dir
+from hydra.core.hydra_config import HydraConfig
 from hydra.utils import instantiate
 from m4_memory.capture import CapturedM1IntegratedAgent
 from m4_memory.m1_adapter import M4MemoryManager
@@ -61,10 +62,19 @@ def test_config_constructs_real_agent(tmp_path):
         config = compose(
             config_name="config",
             overrides=["agent=m1_integrated", "experiment.seed=0"],
+            return_hydra_config=True,
         )
         config.agent.memory_manager.log_path = str(tmp_path / "log.jsonl")
         config.agent.capture_path = str(tmp_path / "capture.jsonl")
-        agent = instantiate(config.agent)
+        # Compose alone has no launcher runtime. Supply the same output context
+        # that Hydra provides during an actual benchmark run.
+        config.hydra.runtime.output_dir = str(tmp_path)
+        previous = HydraConfig.instance().cfg
+        HydraConfig.instance().set_config(config)
+        try:
+            agent = instantiate(config.agent)
+        finally:
+            HydraConfig.instance().cfg = previous
     assert isinstance(agent, CapturedM1IntegratedAgent)
     assert isinstance(agent.memory_manager, M4MemoryManager)
 

@@ -1,6 +1,6 @@
 # Memory and evidence management
 
-Draft updated 21 October 2026. Method text and development evidence for M6. Final frozen-agent results remain pending.
+Updated 26 October 2026. Integrated method and preserved development evidence for M6. The final frozen-agent development ablation is complete; see M4_FROZEN_MEMORY_RESULTS.md for the authoritative results.
 
 ## Method
 
@@ -14,7 +14,7 @@ M4 uses public observations and makes no oracle calls. It preserves the official
 
 Filter exclusion does not establish that a structure was never evaluated: M1 falls back to the unfiltered candidates when a filter returns none. Audit records label that fallback and retain public structure identity for offline matching. An unstable evaluated structure is a scientific outcome, not automatically a runtime failure or evidence of a physical mechanism. The audit sidecar stays outside retrieval, policy rewards and decision inputs.
 
-Both ON and OFF conditions export all evaluated observations from the official trajectory, including the final query. M1 updates online memory before the next proposal, so the online log may omit the final evaluation. M3 decision traces establish actual memory consumption. M5 has confirmed the evidence schema and supplies a separate decision-log interface for exploration context. Its updated module and log path still require adoption into M1 at the reviewed revision; the development pair below did not enable exploration or use an M5 sidecar.
+Both ON and OFF conditions export all evaluated observations from the official trajectory, including the final query. M1 updates online memory before the next proposal, so the online log may omit the final evaluation. M3 decision traces establish actual memory consumption. M5 has confirmed the evidence schema and supplies a separate decision-log interface for exploration context. The frozen agent includes the adopted M5 module and decision sidecar. The earlier development pair below did not enable exploration or use an M5 sidecar.
 
 ## Development validation
 
@@ -33,11 +33,11 @@ This single development pair showed no Memory benefit. ON retained the Sn-Sr sub
 
 ## Final evaluation and limitations
 
-After the full-agent freeze, compare the accepted frozen m1_full reference with memory_off on dev, changing only enable_memory. Match systems, initial reference data, seeds, oracle settings, inference settings and other component switches. Keep capture identical in both arms, isolate episodes and retain complete evidence. M6 restricts check/hidden evaluation to the frozen full agent and baselines.
+The completed frozen-agent comparison pairs the accepted m1_full reference with memory_off on dev, changing only enable_memory. Match systems, initial reference data, seeds, oracle settings, inference settings and other component switches. Keep capture identical in both arms, isolate episodes and retain complete evidence. M6 restricts check/hidden evaluation to the frozen full agent and baselines.
 
 Report official mSUN@B, AUDC, paired AF/EF, discovery curves and available cost data. Use the agreed seeds 17/29/43 and disclose any reduction in repeats. Campaign-query counts exclude initialization/scorer computation. Record measured model usage where available and retain missing cost fields explicitly. Runtime differences between this single pair do not isolate Memory overhead.
 
-The development pair is not the final frozen-full-agent ablation. Final results and two or three traceable cases will follow the controlled experiment. Each case should link observed evidence, memory consumed, subsequent choice and official feedback, including neutral or negative outcomes.
+The development pair remains historical. The completed final frozen-agent comparison uses all 18 development pairs, with three traced cases, discovery curves and partial cost accounting in ../evidence/frozen-memory-ablation-20261026/analysis/. Exact ON consumed-memory IDs were not retained in the formal reference, so the final cases distinguish available observations from proven consumption and avoid attributing a decision to an unrecorded memory ID.
 
 ## Sources for assembly
 
@@ -47,3 +47,7 @@ The development pair is not the final frozen-full-agent ablation. Final results 
 - M6/PROTOCOL_ADOPTION.md: dev/check/hidden roles and frozen-agent comparison.
 
 Team settings remain subject to any teaching-team protocol amendment. The method slides and speaker notes use the same draft status and development results.
+
+## Frozen development result
+
+ON mSUN@20=10.0000 versus OFF 9.1111, AUDC 88.1111 versus 86.9444. Effects vary by pair. See M4_FROZEN_MEMORY_RESULTS.md for aggregation, uncertainty, provenance and limitations. The final deck is M4_Frozen_Memory_Results.pptx.

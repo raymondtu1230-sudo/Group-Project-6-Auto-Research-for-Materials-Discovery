@@ -23,4 +23,8 @@ Each seed first averages the six systems equally; values are mean ± sample SD a
 
 M1's ON evidence remains in `M1/MADE/results/protocol_v1/m1_full/dev/` at the reference evidence revision. The raw archive contains evaluator-only reference data for offline analysis; it must never be supplied to agent memory or decision inputs. No private API configuration is included.
 
-M2: use these 18 Memory OFF units with the frozen full reference in the component-ablation table. AF/EF and any additional group-wide comparisons should use the shared M2 reporting definitions; this handoff reports mSUN and AUDC and does not invent missing cost counters. M6: use the aggregate table and mixed-effects qualification above. The older development-pilot deck remains a draft and should not be presented as the final ablation result.
+M2: use these 18 Memory OFF units with the frozen full reference in the component-ablation table. AF/EF and any additional group-wide comparisons should use the shared M2 reporting definitions; this handoff reports mSUN and AUDC and does not invent missing cost counters. M6: use the aggregate table and mixed-effects qualification above. The older development-pilot deck remains historical; use the final-result deck listed below.
+
+## Completed analysis and presentation handoff
+
+[Discovery curves](analysis/discovery_curves.png), per-query data, [three traced cases](analysis/TRACED_CASES.md), original per-run cost accounting and official directional OFF-vs-ON AF/EF are now available in the analysis folder. The required comparisons against Random and Chemeleon remain part of M2's shared leaderboard. ON exact review-memory IDs were not retained, so the cases make no record-specific causal claim. The final two-slide deck is M4_Frozen_Memory_Results.pptx, with matching M4_SPEAKER_NOTES.md.

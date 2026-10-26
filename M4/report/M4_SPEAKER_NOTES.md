@@ -1,17 +1,15 @@
-# Speaker notes for the two-slide draft
+# M4 presentation notes
 
-Draft updated 21 October 2026. Approximately 90 seconds total. Final frozen-agent results remain pending.
+Updated 26 October 2026. Approximately 90 seconds for two slides. Use `M4_Frozen_Memory_Results.pptx` for final assembly. The older 21 October draft remains historical.
 
 ## Slide 1: Memory and evidence management
 
-M4 keeps a complete evidence log and supplies a bounded set of observations to planning. Each structure attempt has its own identity and retains public energy and stability feedback. The adapter returns recent observations with contrasting outcomes, up to eight records and 4,000 JSON characters. M1 has adopted the module, and M3 records the memory IDs used in its reviews. We export the official trajectory in both conditions to include the final query. Separate audit logs capture generator and filter events without feeding them back into decisions. Oracle exceptions remain outside this capture boundary.
+M4 stores the public feedback from each evaluated structure and supplies bounded observations to planning. Each attempt keeps its own identity and observed stability. The M1 adapter returns recent observations with contrasting outcomes, up to eight records and 4,000 JSON characters. The independent core also supports composition-distance retrieval, but the active argument-free hook uses bounded recent feedback. M3 consumes this memory. We export every official trajectory, including the final query. Separate generator and filter audit logs remain outside decision inputs and stay enabled when memory is off. Oracle exceptions are outside that capture boundary.
 
-## Slide 2: Memory pilot and planned evaluation
+## Slide 2: Frozen Memory ablation
 
-We tested one development pair on Mg-Sn-Sr with seed 17 and a budget of 20 queries per arm. Both used the M3 planner and CPU ORB, with exploration and routing off. Memory ON scored seven on mSUN and 68.5 on AUDC. OFF scored eight and 76.0, so this pair showed no benefit. ON stayed in Sn-Sr, while OFF also explored ternary compositions. The figure shows the ON run's observed phase diagram. This is a development finding from one system and seed. The formal ablation will compare the frozen full agent against Memory OFF with all other settings matched.
+We compared the frozen full agent with memory disabled across six development systems and three seeds, using 20 campaign queries per episode. All 36 runs passed individual validation, and reference snapshots match. Memory ON averaged 10.00 mSUN versus 9.11 OFF. AUDC averaged 88.11 versus 86.94. The effect is mixed: ON is better in eight mSUN pairs, equal in three and worse in seven. For example, it helps on Co-Mg-Na seed 29, but concentrated Sn-Sr search loses against OFF on Mg-Sn-Sr seed 17. Memory helps some allocations but does not guarantee improvement. These results use the development split. M1 reconstructed the ON curves from frozen trajectories with documented provenance.
 
-## Sources and presentation limits
+## Sources and Q&A
 
-Slide 1: M4/EVIDENCE_SCHEMA.md, M4/src/m4_memory/m1_adapter.py, M4/src/m4_memory/capture.py, M1/PLUGIN_INTERFACE.md and adopted profile commit 3f8d48f.
-
-Slide 2: M4/evidence/dev-pilot-20261021/paired_results.csv, audit.json, m3_trace_on.json, m3_trace_off.json and raw_outputs.zip. The figure is on/trajectories/phase_diagram_episode_000.png inside the ZIP. The base team revision is e1a40d8. M6/PROTOCOL_ADOPTION.md defines the final dev-only ablation. Initialization adds oracle work beyond the 20 campaign queries. Neither the single pair nor its runtime difference establishes a general effect or isolated Memory overhead.
+Source table: M4/evidence/frozen-memory-ablation-20261026/paired_results.csv. Chart: analysis/aggregate_curves.csv, arithmetic mean of six systems within seed, then three seeds. Slide table rounds means to two decimals; report includes seed SD. Official AUDC uses new-stable discovery counts, a definition distinct from mSUN. Cases: analysis/TRACED_CASES.md and traced_cases.csv. Costs: analysis/per_run_cost.csv. A budgeted campaign query is one env.step; initialization adds uninstrumented oracle work. LLM cost is not reported. Exact ON consumed-memory IDs are unavailable for the formal reference. Avoid causal attribution to a specific record. All source code and evidence remain separately versioned.

@@ -165,12 +165,14 @@ def test_hydra_profile_constructs_and_runs_real_components(tmp_path):
     from pathlib import Path
 
     from hydra import compose, initialize_config_dir
+    from hydra.core.hydra_config import HydraConfig
     from hydra.utils import instantiate
 
     config_dir = Path(__file__).resolve().parents[2] / "M1/MADE/configs"
     with initialize_config_dir(config_dir=str(config_dir), version_base=None):
         config = compose(
             config_name="config",
+            return_hydra_config=True,
             overrides=[
                 "agent=m1_integrated",
                 "agent/planner=m3_research",
@@ -185,7 +187,13 @@ def test_hydra_profile_constructs_and_runs_real_components(tmp_path):
         config.agent.memory_manager.log_path = str(tmp_path / "memory.jsonl")
         config.agent.memory_manager.run_id = "hydra-check"
         config.agent.memory_manager.episode_id = 0
-        a = instantiate(config.agent)
+        config.hydra.runtime.output_dir = str(tmp_path)
+        previous = HydraConfig.instance().cfg
+        HydraConfig.instance().set_config(config)
+        try:
+            a = instantiate(config.agent)
+        finally:
+            HydraConfig.instance().cfg = previous
     assert isinstance(a, CapturedM1IntegratedAgent)
     assert isinstance(a.planner, M3ResearchPlanner)
     composition, structure = a(state())

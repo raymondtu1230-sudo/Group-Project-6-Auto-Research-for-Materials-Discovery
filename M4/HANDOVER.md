@@ -1,10 +1,15 @@
 # M4 handover
 
+## Current status, 26 October 2026
+
+The frozen full agent uses M3 planning and M4 bounded observed-feedback memory. The formal Memory OFF development ablation is complete:18pairs,36validated runs. Generator/filter capture remains enabled in both arms. Final results, curves, three traced cases and cost limits are in [the formal evidence folder](evidence/frozen-memory-ablation-20261026/). [Report materials](report/README.md) identify the final deck and notes. Earlier dated records below describe previous development stages and are not the current completion status.
+
+
 ## Current scope
 
 M4 provides independent evidence storage, deterministic bounded retrieval and an adapter to M1's four-method MemoryManager interface. M1 adopted the M4 configuration on 20 October (`9acd3c9`) and integrated M3 (`2fcc214`). M4-owned sources and optional capture instructions stay under M4/.
 
-The adapter returns recent observations with contrasting outcomes. The standalone core additionally supports composition-targeted retrieval, but the current M1 get_memory() contract has no target-composition argument. The report must distinguish these behaviors. Main now configures M4, but the default diversity Planner still does not consume m1_memory; select M3 for meaningful consumption checks.
+The adapter returns recent observations with contrasting outcomes. The standalone core additionally supports composition-targeted retrieval, but the current M1 get_memory() contract has no target-composition argument. The report must distinguish these behaviors. The frozen full agent selects M3 and consumes m1_memory. The standalone diversity baseline does not consume that field.
 
 ## Validation completed
 
@@ -26,9 +31,9 @@ M1 freezes the integrated agent on 25 October and supplies the agreed reference 
 
 The adapter implements update_state(state), get_memory(), get_state() and load_state(state). Create a fresh manager per episode and use only public post-query observations. get_memory returns a JSON-serializable list, bounded by record count and serialized character count. M1/M3 own actual consumption and token accounting.
 
-The standalone core supports explicit rejected/error events. Current framework hooks and the trajectory exporter capture completed evaluations only. Instability is an observed outcome, not a runtime error. Use EVIDENCE_SCHEMA.md as the field contract and M5_LOG_FORMAT.md for the remaining policy-context requirements.
+The standalone core supports explicit rejected/error events. The observation hook and trajectory exporter capture evaluations. The adopted capture subclass additionally records generator/filter exclusions and exceptions separately. Instability is an observed outcome, not a runtime error. Use EVIDENCE_SCHEMA.md as the field contract and M5_LOG_FORMAT.md for the remaining policy-context requirements.
 
-M5 confirmed schema v1 in M5/M4_LOG_CONFIRMATION.md. M6 receipt of M4 method materials remains to be confirmed. The report method and two-slide draft are in report/. There is no completed ablation, no improvement claim and no selection of final discovery cases yet.
+M5 confirmed schema v1 in M5/M4_LOG_CONFIRMATION.md. M6 receipt of M4 method materials remains to be confirmed. The report method and two-slide draft are in report/. The final frozen development ablation and three balanced cases are complete. Its small positive aggregate difference does not establish a uniform or statistically significant benefit.
 
 ## Work log
 

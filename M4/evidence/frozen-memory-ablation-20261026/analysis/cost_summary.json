@@ -1,0 +1,24 @@
+{
+  "ON": {
+    "runs": 18,
+    "campaign_queries": 360,
+    "wall_time_total_seconds": 5639.179,
+    "wall_time_mean_seconds": 313.2877222222222,
+    "machines": [
+      "LiLinghaodeMacBook-Air.local"
+    ],
+    "llm_usage": "not_reported",
+    "all_oracle_evaluations": "not_instrumented_including_initialization"
+  },
+  "OFF": {
+    "runs": 18,
+    "campaign_queries": 360,
+    "wall_time_total_seconds": 5758.1630000000005,
+    "wall_time_mean_seconds": 319.8979444444444,
+    "machines": [
+      "MacBook-Air.local"
+    ],
+    "llm_usage": "not_reported",
+    "all_oracle_evaluations": "not_instrumented_including_initialization"
+  }
+}
