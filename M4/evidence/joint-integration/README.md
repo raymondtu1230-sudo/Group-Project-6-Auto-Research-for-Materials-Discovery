@@ -1,8 +1,10 @@
 # Joint synthetic integration evidence, 20 October 2026
 
+Historical development evidence. The completed formal 18-pair comparison is in [the final package](../frozen-memory-ablation-20261026/). Pending-work statements below describe this earlier stage.
+
 Main source before M4 changes: `871fa8f`. M1/M3/M4 contract and new capture tests:
 **69 passed**, no skips/deselections; three existing dependency warnings.
-See `../../joint_test_results.txt` for the recorded output.
+See `../validation-history/joint_test_results.txt` for the recorded output.
 
 The unchanged M1 smoke script passed after allowing local Chrome to launch for
 plot export. A first restricted attempt failed at plot export and is not counted

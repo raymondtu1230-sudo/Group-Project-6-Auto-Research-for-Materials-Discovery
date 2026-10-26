@@ -1,5 +1,7 @@
 # Real-material development Memory pair, 21 October 2026
 
+Historical development evidence. The completed formal 18-pair comparison is in [the final package](../frozen-memory-ablation-20261026/). Pending-work statements below describe this earlier stage.
+
 ## Controlled development scope
 
 Team source `e1a40d8`; Mg-Sn-Sr, seed 17, B=20, protocol-v1 CPU ORB and official

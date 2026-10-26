@@ -46,7 +46,7 @@ The development pair remains historical. The completed final frozen-agent compar
 - M1/PLUGIN_INTERFACE.md and M1/protocol/protocol_v1.yaml: integration and experiment contract.
 - M6/PROTOCOL_ADOPTION.md: dev/check/hidden roles and frozen-agent comparison.
 
-Team settings remain subject to any teaching-team protocol amendment. The method slides and speaker notes use the same draft status and development results.
+Team settings remain subject to any teaching-team protocol amendment. The final slides and speaker notes use the completed frozen development results and identify Zhang Yiming as presenter.
 
 ## Frozen development result
 

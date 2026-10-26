@@ -1,5 +1,7 @@
 # Development Memory pilot
 
+Historical 21 October pilot. The frozen full-agent comparison is now complete; see [final results](report/M4_FROZEN_MEMORY_RESULTS.md). The commands below describe the earlier `e1a40d8` source/profile and should not be run on current main as an exact reproduction.
+
 ## Scope
 
 One paired development check: Mg-Sn-Sr, seed 17, B=20, protocol-v1 CPU ORB.
@@ -8,7 +10,7 @@ Composition exploration and tool routing are OFF in both arms. Only the Memory
 switch and run/output identities differ. This is not `m1_full`, not the frozen
 component ablation, and not a check/hidden run. The base team source is `e1a40d8`.
 
-The current full method cannot yet run unchanged: its method overrides enable
+At that earlier revision, the full method could not run unchanged: its method overrides enable
 tool routing while the shared profile has `tool_router: null`. This pilot does
 not silently disable a component and report a full-agent score. Separate method
 IDs `m4_dev_pilot_on` and `m4_dev_pilot_off` are added only to the local driver's
@@ -42,7 +44,7 @@ using the exact child run identity; the parent now sets those identity variables
 when preserving configuration. This affects logging provenance, not scientific
 execution. No metric or trajectory is reconstructed or altered.
 
-## Interpretation and remaining work
+## Historical interpretation
 
 The completed paired audit and raw evidence are under `evidence/dev-pilot-20261021/`. ON scored mSUN@20=7/AUDC=68.5, versus OFF 8/76.0. The development pair did not show a Memory benefit. A single
 system/seed cannot establish an aggregate effect. Keep equal and negative
@@ -52,9 +54,6 @@ recorded inference fees separately from total compute cost.
 
 Proposal-event capture is independent of Memory. A missing event file means no
 captured generator/filter event occurred; do not fabricate failures. M5's new
-sidecar is not part of this check: its latest module and log_path still need M1
-adoption. The current main M5 policy is disabled in both arms.
+sidecar is not part of this check: its module and log_path had not yet been adopted at that revision. M5 exploration was disabled in both pilot arms.
 
-After the full agent is frozen, reuse an accepted matching full reference and
-run `memory_off` with only that switch changed on dev. Agree systems/repeats and
-raw-output delivery with M1/M2/M6. This pilot does not replace that experiment.
+The later formal experiment reused the accepted full reference and ran `memory_off` with only that switch changed on dev. Its agreed systems, repeats and raw outputs are documented in [the final evidence package](evidence/frozen-memory-ablation-20261026/). This pilot remains a separate historical experiment.

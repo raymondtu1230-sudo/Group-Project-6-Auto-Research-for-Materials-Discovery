@@ -8,6 +8,10 @@ The committed evidence/synthetic-smoke examples contain two synthetic Li-O evalu
 
 For over-exploitation and wasteful-exploration analysis, M1/M5 must provide exploration mode, selected direction, remaining budget, candidate-tool provenance and the actual policy rationale. These cannot be inferred from energy values. M3 must also provide the IDs/content of memory actually consumed by a decision.
 
-Current automatic capture covers completed evaluations, including unstable outcomes. Runtime errors and rejected candidates require an explicit framework event source. The optional capture subclass now provides generator/filter events when explicitly adopted by M1; see integration/EVENT_CAPTURE.md. It does not capture oracle errors and is not enabled by publishing M4 files. Never invent a physical cause for an unstable structure.
+Current automatic capture covers completed evaluations, including unstable outcomes. Runtime errors and rejected candidates require an explicit framework event source. The capture subclass adopted in the frozen profile provides generator/filter events; see integration/EVENT_CAPTURE.md. It does not capture oracle errors. Capture remains enabled independently of Memory. Never invent a physical cause for an unstable structure.
 
 Prefer M5's per-episode decision_log JSONL sidecar for analysis, preserving the checkpoint as source. Join it to M4 proposal events by run/episode and completed query count; see integration/EVENT_CAPTURE.md for next-slot step semantics and filter fallback limits.
+
+## Final evidence, 26 October
+
+The [formal package](evidence/frozen-memory-ablation-20261026/) includes paired observations, M5 decisions and three traced cases. Join reference records by result directory, method, system, seed and attempt as well as query count: the original ON logs reuse `m4-local`, so run ID alone is insufficient. Exact formal ON review-memory IDs were not retained. Preserve this limit rather than inferring consumed IDs from available observations.

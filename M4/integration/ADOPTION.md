@@ -1,89 +1,28 @@
-# M4 adoption and acceptance
+# M4 installation and integrated contract
 
-Status: M1 adopted the memory configuration in `9acd3c9` and M3 in `2fcc214`.
-The steps below are reproducible adoption instructions, not a request to replace
-current configuration. Default diversity still ignores memory; use the M3 planner
-and verify consumption before any Memory-effect experiment is accepted.
-Keep current M2/M3/M5 settings when integrating. Do not replace the complete
-agent YAML with the older example in this directory.
+Updated 26 October 2026. M1 has adopted the memory manager and independent capture wrapper. The frozen full method selects M3. No new integration or wholesale configuration replacement is requested.
 
-## 1. Install the package (M1)
+## Install
 
-From the repository root:
+From `M1/MADE` in the team checkout:
 
 ```bash
-cd M1/MADE
 uv sync --locked
 uv pip install --python .venv/bin/python --no-deps -e ../../M4
 ```
 
-The editable install is local environment setup, not a change to the official
-runner. Confirm the package remains importable after any later environment sync;
-repeat the install if the environment manager removes it.
+The editable package is local environment setup. After environment sync, verify it remains installed. Credentials stay in ignored local configuration.
 
-## 2. Merge only the memory configuration block (M1)
+## Authoritative configuration
 
-In `M1/MADE/configs/agent/m1_integrated.yaml`, replace `memory_manager: null`
-with the following block. Preserve every other owner's configuration.
+Use the agreed frozen `M1/MADE/configs/agent/m1_integrated.yaml` and M1 method overrides. It configures the M4 manager and capture subclass with independent `enable_memory`. Preserve M2/M3/M5 components and capture when running memory_off. For original scientific provenance, see [the runbook](../EXPERIMENT_RUNBOOK.md).
 
-```yaml
-memory_manager:
-  _target_: m4_memory.m1_adapter.M4MemoryManager
-  log_path: ${hydra:runtime.output_dir}/m4_evidence.jsonl
-  run_id: ${oc.env:M4_RUN_ID,m4-local}
-  episode_id: ${oc.env:M4_EPISODE_ID,0}
-  limit: 8
-  max_chars: 4000
-```
+The initial memory-only YAML is preserved in [archive/](archive/README.md). It disables components that belong to the final full agent. Do not copy it over the official profile. Current M4 tests already exist in `M1/MADE/tests/test_m4_memory.py`; the retained M4 test copy is a reference, not an installation step that overwrites another member's work.
 
-Retain the existing independent `enable_memory` switch. Use a fresh manager and
-unique log path per episode. Set a unique `M4_RUN_ID` for each experiment attempt;
-do not treat the fallback identity as production provenance.
+## Contract and validation
 
-## 3. Consume the records (M3)
+The adapter returns `list[dict]` of bounded public post-query records and supports `get_state`/`load_state`. The M1 agent keeps its `(Composition, Structure)` return contract. The argument-free hook provides recent contrasting outcomes, not composition-targeted retrieval. Components never call the oracle directly or inspect hidden labels/evaluation-only state.
 
-Read `context.get("m1_memory", [])` in the actual planner decision path. Records
-are `list[dict]`, JSON-serializable and bounded. Include the returned observations
-in the decision input; attaching unused records to context is insufficient.
-Record the retrieved event IDs and the actual input supplied to the decision
-policy in a separate decision trace. Do not feed that trace recursively back
-into M4 retrieval. Never pass evaluation-only metrics or reference snapshots to
-the planner. Do not add oracle calls.
+Use [the complete current test command](../VALIDATION.md), which passed 72 tests at the reviewed source. These include ON/OFF behavior, invalid feedback, restore, capture isolation and real M3 decision boundaries using synthetic observations. Synthetic tests are distinct from the 18-pair formal real-material comparison.
 
-An empty list is normal at the first decision and when memory is disabled.
-The current adapter retrieves recent/contrasting observations; it does not accept
-a target composition. Do not claim target-aware retrieval in the integrated
-method without a separately tested interface change.
-
-## 4. Run the contract checks (M1/M4)
-
-Copy the component test into M1's test slot; do not overwrite the original tests.
-From `M1/MADE` after configuration adoption:
-
-```bash
-cp ../../M4/integration/M1/MADE/tests/test_m4_memory.py tests/test_m4_memory.py
-uv run --no-sync pytest -q tests/test_m1_integrated.py tests/test_m4_memory.py ../../M4/tests -o addopts=''
-uv run --no-sync ruff check ../../M4/src/m4_memory tests/test_m4_memory.py
-uv run --no-sync python ../run_smoke_test.py
-```
-
-These are instructions for the future adopted configuration, not a claim they
-have already passed on that configuration. The original smoke checks framework
-behavior; additionally demonstrate M3 memory consumption with fake public
-observations: ON receives bounded records after feedback, OFF receives no M4
-records, invalid plugin output is rejected, checkpoint restore preserves memory,
-and new episodes do not leak prior records. M3 must add an assertion at its own
-decision-input boundary; the existing M4 tests cannot prove future planner use.
-
-## 5. Complete evidence and handoff
-
-M1 invokes memory updates before the next proposal, so the online log can omit
-the last evaluation. Export the official trajectory after each run, including
-Memory OFF; see `../EXPERIMENT_RUNBOOK.md`. Do not change framework callback
-ordering just to fill the log. Exported evidence is an analysis artifact and
-must not be preloaded into either member of the comparison.
-
-Before the frozen release, record the integrated Git revision, passing checks,
-M3 consumption evidence, M5 schema confirmation and the agreed protocol. Only
-then run the paired pilot and formal comparisons. Main M1 files remain unchanged
-by publishing these instructions.
+M1 updates online memory before the next proposal. Export complete trajectories in both arms when needed. The capture sidecar remains excluded from retrieval, planning inputs and rewards. See [EVENT_CAPTURE.md](EVENT_CAPTURE.md) for exact coverage and fallback semantics.

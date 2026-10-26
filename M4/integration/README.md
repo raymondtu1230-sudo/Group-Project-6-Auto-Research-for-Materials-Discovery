@@ -1,10 +1,12 @@
-# M1 integration references
+# Integrated M4 interface
 
-M1 adopted M4 on 20 October (`9acd3c9`) and integrated M3 (`2fcc214`). The older full YAML and component test retained here document the earlier validation; do not overwrite newer team files with those snapshots.
+The official frozen M1 full agent uses M4 memory, M3 planning and the independent generator/filter capture wrapper. The final development ablation is complete.
 
-- [ADOPTION.md](ADOPTION.md): package/configuration and M3 consumption checks.
-- [EVENT_CAPTURE.md](EVENT_CAPTURE.md): optional generator/filter rejection and error capture, exact coverage limits and tests.
-- [m4_capture_overrides.yaml](m4_capture_overrides.yaml): reference fields adopted by M1 in `3f8d48f`, identical in both comparison arms.
-- [../EXPERIMENT_RUNBOOK.md](../EXPERIMENT_RUNBOOK.md): official capture and result handoff.
+- [ADOPTION.md](ADOPTION.md): current package setup and authoritative configuration.
+- [EVENT_CAPTURE.md](EVENT_CAPTURE.md): capture coverage, isolation and checkpoint semantics.
+- [m4_capture_overrides.yaml](m4_capture_overrides.yaml): reference fields adopted by M1; preserve official settings.
+- [Current validation](../VALIDATION.md): complete 72-test command and result evidence.
+- [Runbook](../EXPERIMENT_RUNBOOK.md): offline reproduction and original scientific execution.
+- [archive/](archive/README.md): obsolete initial memory-only YAML, retained for history.
 
-M1 enabled the capture target in its official profile on 21 October (`3f8d48f`). Default diversity still ignores memory; use M3 for consumption checks. Historical real-ORB validation is not a final full-agent Memory ablation.
+`test_joint_capture.py` and `test_dev_pilot.py` remain active regression tests. The saved component test under `M1/MADE/tests/` is a handoff copy. The installed authoritative test is in the repository's top-level M1 tree.
