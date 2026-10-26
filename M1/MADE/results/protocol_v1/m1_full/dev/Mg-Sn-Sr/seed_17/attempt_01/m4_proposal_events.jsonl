@@ -1,0 +1,1 @@
+{"candidate_id": "proposal:1:generator:chemeleon:1", "elements": ["Mg", "Sn", "Sr"], "episode_id": "0", "error_type": "ReadError", "event_id": "proposal:1:generator:chemeleon:1", "m1_queries_remaining": 19, "query_count": 1, "run_id": "m4-local", "schema_version": 1, "stage": "generator:chemeleon", "status": "error", "step_id": 2}

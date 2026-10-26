@@ -100,3 +100,11 @@ attempts, and sweep logs are retained in the result directory. The sweep log
 ends with `completed=18 failed=0`. These artifacts are the frozen M1 handoff
 to M2 and the paired ablation owners; AF/EF are computed only after the
 corresponding baseline results are paired by M2.
+
+The original Hydra artifacts and M4/M5 component logs were subsequently mapped
+from their timestamped runner directories into each protocol attempt. Every
+completed unit also contains a complete query 1--20 discovery history labelled
+as reconstructed from the frozen official trajectory; its endpoint and AUDC
+are verified against the official final metrics. See
+`M1/MADE/results/protocol_v1/m1_full/dev/EVIDENCE_README.md` for provenance and
+the explicit logging limitations.
