@@ -1,0 +1,40 @@
+{
+ "source_directory": "results/20261026-040824-orb-m1_integrated",
+ "target_attempt": "protocol_v1/exploration_off/dev/Ga-Pt-Tm/seed_29/attempt_01",
+ "recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+ "files": {
+  "hydra/config.yaml": {
+   "bytes": 3969,
+   "sha256": "4e63bbe66f84bd7f19bc9690c8b888d6ce8fa3607f9dac5a49c0fc98c1f83f8d"
+  },
+  "hydra/hydra.yaml": {
+   "bytes": 6020,
+   "sha256": "d5ac98062dd4b9248017507e65e436272c69aa7f25ce74370665548b041353a9"
+  },
+  "hydra/overrides.yaml": {
+   "bytes": 1047,
+   "sha256": "0cbb015314d8fbf548f99ee33192748c08c035332102f46e7cf6ea67c5ee6fad"
+  },
+  "m4_evidence.jsonl": {
+   "bytes": 11114,
+   "sha256": "9113a6b9fe5fffcc04830ce6617577f075c21070a6119f647f373cb970bce9ca"
+  },
+  "run_benchmark.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "console_attempt_01.log": {
+   "bytes": 503580,
+   "sha256": "aa2fda79078704c9fa5e4907991752310f65c51a3d1dcbc272dcd69af781add8"
+  },
+  "resolved_config.yaml": {
+   "bytes": 3969,
+   "sha256": "4e63bbe66f84bd7f19bc9690c8b888d6ce8fa3607f9dac5a49c0fc98c1f83f8d",
+   "note": "the run's saved Hydra composed config (results/<ts>/.hydra/config.yaml); interpolations resolved at packaging time where resolvable outside the Hydra runtime, otherwise kept verbatim; no rerun"
+  },
+  "m2_metrics_history.json": {
+   "bytes": 5511,
+   "sha256": "039f9cc668062df339ff53c3867eebc98695611ba705de525ff0018ace6e5bd1"
+  }
+ }
+}
