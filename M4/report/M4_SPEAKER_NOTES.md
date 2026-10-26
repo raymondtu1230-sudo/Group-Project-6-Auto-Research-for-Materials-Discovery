@@ -1,15 +1,25 @@
 # M4 presentation notes
 
-Updated 26 October 2026. Approximately 90 seconds for two slides. Use `M4_Frozen_Memory_Results.pptx` for final assembly. The older 21 October draft remains historical.
+Updated 26 October 2026. Approximately 90 seconds for two slides.
 
 ## Slide 1: Memory and evidence management
 
-M4 stores the public feedback from each evaluated structure and supplies bounded observations to planning. Each attempt keeps its own identity and observed stability. The M1 adapter returns recent observations with contrasting outcomes, up to eight records and 4,000 JSON characters. The independent core also supports composition-distance retrieval, but the active argument-free hook uses bounded recent feedback. M3 consumes this memory. We export every official trajectory, including the final query. Separate generator and filter audit logs remain outside decision inputs and stay enabled when memory is off. Oracle exceptions are outside that capture boundary.
+M4 records the feedback from each queried structure, including its composition, energy and observed stability. It gives the planner a bounded selection of recent stable and unstable outcomes, with up to eight records at a time. Each episode has its own memory, and the state can be restored from a checkpoint. We also keep the full trajectory in both Memory ON and OFF runs. Generator and filter logs stay separate from planning, so turning memory off does not remove the evidence needed for analysis.
+
+Sources: M4/src/m4_memory/ and M1/PLUGIN_INTERFACE.md.
 
 ## Slide 2: Frozen Memory ablation
 
-We compared the frozen full agent with memory disabled across six development systems and three seeds, using 20 campaign queries per episode. All 36 runs passed individual validation, and reference snapshots match. Memory ON averaged 10.00 mSUN versus 9.11 OFF. AUDC averaged 88.11 versus 86.94. The effect is mixed: ON is better in eight mSUN pairs, equal in three and worse in seven. For example, it helps on Co-Mg-Na seed 29, but concentrated Sn-Sr search loses against OFF on Mg-Sn-Sr seed 17. Memory helps some allocations but does not guarantee improvement. These results use the development split. M1 reconstructed the ON curves from frozen trajectories with documented provenance.
+We tested Memory ON and OFF on six development systems with three seeds, giving 18 pairs and 36 episodes. Each episode used the same budget of 20 campaign queries. The table shows that Memory ON averaged 10.00 mSUN, compared with 9.11 for OFF. AUDC was 88.11 versus 86.94. The average mSUN difference was positive, but the effect varied: ON did better in eight pairs, tied in three and did worse in seven. We therefore describe the result as a modest average improvement rather than a consistent gain. These are development results. M1 reconstructed the ON curves from the saved trajectories, and the report records that provenance.
 
-## Sources and Q&A
+Sources: M4/evidence/frozen-memory-ablation-20261026/paired_results.csv and analysis/aggregate_curves.csv. Means average six systems within each seed, then the three seed means. The report provides seed SD and individual cases.
 
-Source table: M4/evidence/frozen-memory-ablation-20261026/paired_results.csv. Chart: analysis/aggregate_curves.csv, arithmetic mean of six systems within seed, then three seeds. Slide table rounds means to two decimals; report includes seed SD. Official AUDC uses new-stable discovery counts, a definition distinct from mSUN. Cases: analysis/TRACED_CASES.md and traced_cases.csv. Costs: analysis/per_run_cost.csv. A budgeted campaign query is one env.step; initialization adds uninstrumented oracle work. LLM cost is not reported. Exact ON consumed-memory IDs are unavailable for the formal reference. Avoid causal attribution to a specific record. All source code and evidence remain separately versioned.
+## Reference information for Q&A
+
+The bounded adapter uses up to 8 records and 4,000 serialized JSON characters. Its active hook retrieves recent contrasting outcomes. Composition-distance retrieval is a separate core capability.
+
+The detailed report records mean and sample SD across three seed means. The compact chart shows means for all 20 query points. The report also distinguishes mSUN from the new-stable count used by official AUDC. Chart values retain 10 decimal places for workbook compatibility, while the source CSV retains original precision.
+
+Campaign queries count env.step calls. Initialization adds oracle work that is not fully instrumented. LLM costs are not reported. The reference does not retain exact ON review-memory IDs, so the case studies do not attribute a decision to a particular memory record.
+
+Evidence and limitations: M4_FROZEN_MEMORY_RESULTS.md and ../evidence/frozen-memory-ablation-20261026/analysis/.
