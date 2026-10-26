@@ -170,6 +170,12 @@ Compared run by run (same system and seed):
 
 Full tables and the reasoning: [report/M3_RESULTS.md](report/M3_RESULTS.md).
 
+**On M1's frozen agent.** M3's two assigned ablations (`m3_planning_off`,
+`m3_self_correction_off`, 36 runs) were re-run on the frozen tag
+`m1-freeze-20261025` and reproduce the numbers above exactly, run by run. The
+complete result folders are in
+[results/frozen_20261025/](results/frozen_20261025/).
+
 ### The bug found along the way
 
 The first full set of runs showed **identical** results with self-correction
@@ -188,6 +194,7 @@ remain in the git history (commit `e1a40d8`).
 | M1 | Design ([DESIGN.md](DESIGN.md)); code, settings and tests (`integration/`, merged by M1) |
 | M1 | The bug fix: run `python M3/install.py --install` so M1's final agent uses it |
 | M2 | Result tables (`results/*.csv`) and results text (`report/M3_RESULTS.md`) |
+| M1, M2, M6 | Complete result folders of the 36 frozen-agent ablation runs (`results/frozen_20261025/`) |
 | M6 | Method text, results text and slides (`report/`) |
 
 Notes for each teammate are in [HANDOVER.md](HANDOVER.md).
@@ -239,6 +246,7 @@ M3's code lives here, laid out exactly where it goes in M1's folder.
 | --- | --- | --- |
 | [results/m3_ablation_runs.csv](results/m3_ablation_runs.csv) | One row per run (72) | M2 |
 | [results/m3_ablation_summary.csv](results/m3_ablation_summary.csv) | One row per version | M2 |
+| [results/frozen_20261025/](results/frozen_20261025/) | Complete result folders of the 36 assigned ablation runs on the frozen agent | M1, M2, M6 |
 | [report/M3_RESULTS.md](report/M3_RESULTS.md) | Results tables and explanation | M2, M6 |
 | [report/M3_METHOD.md](report/M3_METHOD.md) | Method text for the group report | M6 |
 | `report/M3_Method_Draft.pptx` | M3's three slides with speaker notes | M6 |

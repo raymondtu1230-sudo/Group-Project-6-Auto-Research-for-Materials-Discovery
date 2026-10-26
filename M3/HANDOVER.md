@@ -16,6 +16,7 @@ plug into slots M1's agent already had. All of M3's code is in
 | M1 | One-page design ([DESIGN.md](DESIGN.md)); code, settings and tests (`integration/`, merged by M1 in `2fcc214`) |
 | M1 | The bug fix, installed with `python M3/install.py --install` |
 | M2 | Result tables (`results/*.csv`) and results text (`report/M3_RESULTS.md`) |
+| M1, M2, M6 | The 36 assigned ablation runs on the frozen agent, as complete result folders (`results/frozen_20261025/`) |
 | M6 | Method text (`report/M3_METHOD.md`), results text and slides (`report/`) |
 
 ## Notes for each teammate
@@ -40,6 +41,12 @@ plug into slots M1's agent already had. All of M3's code is in
   `report/M3_RESULTS.md`.
 - M3's runs keep tool routing off and use the default generator, so they do
   not depend on your part.
+- **Frozen-agent runs:** `results/frozen_20261025/protocol_v1/` holds the 36
+  `m3_planning_off` and `m3_self_correction_off` runs in M1's reference
+  layout (resolved config, M4 log, run logs, `m2_metrics_history.json`,
+  SHA-256 manifest). `M2/evaluate.py` validates all 36 with no issues. Pair
+  them with `m3_full`, not `m1_full`: exploration and routing are off in all
+  M3 methods.
 
 ### M4 (memory)
 
