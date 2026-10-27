@@ -11,3 +11,5 @@
 Planning OFF mSUN 为 5.2778，Self-correction OFF 为 9.5000，Full 为 10.0000。新增两臂均与 m1_full 配对；此前 m3_* 仍与 m3_full 配对。此前“额外 Full 规划/自纠错尚待决定”的状态已被 M3 实际交付取代。
 
 M3 声明使用相同 Chemeleon 压缩包，但未提供运行机 checksum 原始记录；保留此证据限定，无需重跑。M5 辅助字段修正、配置插值和 routing 历史缺件说明继续有效。M2 当前收到的 dev 验收与汇总完成；M6 check/hidden、全组最终组装、排练和课程提交仍有后续。本次没有代发消息或课程提交，也未导出新原生 PPTX。
+
+完整方法与原有接口说明保留在[此前已发布的交接版本](https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery/blob/09c9b74300b26176ce5ade37d5192ba98caa240f/M2/METHODS_AND_M6_HANDOFF.md)及当前 [HANDOFF_LAYOUT.md](HANDOFF_LAYOUT.md)。
