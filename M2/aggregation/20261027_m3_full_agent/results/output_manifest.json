@@ -1,7 +1,7 @@
 {
   "per_run_costs.csv": {
-    "bytes": 45411,
-    "sha256": "555cef7d77d0c3daf10dfef4cf67ae5b0bf2d49c2828d0ff6f02f394b609f00e"
+    "bytes": 22884,
+    "sha256": "e80c2c6f5de8872077aa30619bd9cf79af57490d26bc63d0a26402cba8cf2792"
   },
   "m3_comparator_validation.json": {
     "bytes": 405,
@@ -80,8 +80,8 @@
     "sha256": "41f2c071496926dfb21e0a448ccecfddf35e3bbff8861dba999d09b37324f1b3"
   },
   "per_run_with_baseline_comparisons.csv": {
-    "bytes": 126970,
-    "sha256": "f8d6238e9ae02cdc38bf6f17cc2aac45bc16f8a025fdc899c3e7fdeb03ac9b8a"
+    "bytes": 83548,
+    "sha256": "593c0ae3526983ff289e5d88f8ea514b68ee136875f3804b98a163d0e534358a"
   },
   "evaluation_provenance.json": {
     "bytes": 1282,
@@ -124,8 +124,8 @@
     "sha256": "3b1952f1781b1499848939b96b5ee17f373f3acd58d4677b4c3044fe64293101"
   },
   "m2_evaluator/per_run.csv": {
-    "bytes": 76692,
-    "sha256": "46539972ce9fde4d33dafdd53c341f32f2413fe9d7777255a82afb5a623790e3"
+    "bytes": 55797,
+    "sha256": "a9982c08d7c25763f502714a8ab0d9a785ca2efa1211cc5c048021994b7fffe1"
   },
   "m5_history_analysis_views/Hf-Ni-Zr/seed_43/as_submitted_metrics_history.json": {
     "bytes": 5178,
