@@ -1,0 +1,5 @@
+method,role,split,system,seed
+chemeleon_generative_baseline,heldout,check,Ga-Ho-Lu,17
+chemeleon_generative_baseline,heldout,check,Al-Li-V,17
+chemeleon_generative_baseline,heldout,check,Al-V-Zn,17
+chemeleon_generative_baseline,heldout,check,Co-Pd-Tl,17

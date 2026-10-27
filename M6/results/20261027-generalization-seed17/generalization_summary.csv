@@ -1,0 +1,19 @@
+method,metric,metric_label,dev_runs,dev_expected,dev_complete,dev_mean,dev_sd,dev_available_mean_partial,heldout_split,heldout_runs,heldout_expected,heldout_complete,heldout_mean,heldout_sd,heldout_available_mean_partial,gap_heldout_minus_dev,relative_gap,gap_status,dev_zero_baseline_pairs,heldout_zero_baseline_pairs
+m1_full,mSUN_at_B,mSUN@B,18,6,True,9.0,,,check,4,4,True,14.0,,,5.0,0.5555555555555556,complete,,
+m1_full,AUDC,AUDC,18,6,True,77.33333333333333,,,check,4,4,True,131.25,,,53.91666666666667,0.6971982758620691,complete,,
+m1_full,AF_vs_random,AF vs Random,18,6,True,1.49364670417302,,,check,4,4,True,2.538340336134454,,,1.044693631961434,0.6994248566563432,complete,1,0
+m1_full,EF_vs_random,EF vs Random,18,6,True,18.963492063492062,,,check,4,4,True,5.198717948717949,,,-13.764774114774113,-0.7258565072660661,complete,1,0
+m1_full,AF_vs_chemeleon,AF vs Chemeleon,18,6,True,1.012878787878788,,,check,4,4,False,,,,,,"incomplete: dev 18/6, check 4/4",0,0
+m1_full,EF_vs_chemeleon,EF vs Chemeleon,18,6,True,2.3472222222222223,,,check,4,4,False,,,,,,"incomplete: dev 18/6, check 4/4",0,0
+random_generator_baseline,mSUN_at_B,mSUN@B,18,6,True,3.3333333333333335,,,check,12,4,True,6.25,,,2.9166666666666665,0.8749999999999999,complete,,
+random_generator_baseline,AUDC,AUDC,18,6,True,34.833333333333336,,,check,12,4,True,60.875,,,26.041666666666664,0.7476076555023923,complete,,
+random_generator_baseline,AF_vs_random,AF vs Random,18,6,True,1.0,,,check,12,4,True,1.0,,,0.0,0.0,complete,1,0
+random_generator_baseline,EF_vs_random,EF vs Random,18,6,True,0.8333333333333334,,,check,12,4,True,1.0,,,0.16666666666666663,0.19999999999999996,complete,1,0
+random_generator_baseline,AF_vs_chemeleon,AF vs Chemeleon,18,6,True,0.18627450980392157,,,check,12,4,False,,,,,,"incomplete: dev 18/6, check 12/4",0,0
+random_generator_baseline,EF_vs_chemeleon,EF vs Chemeleon,18,6,True,0.5368055555555555,,,check,12,4,False,,,,,,"incomplete: dev 18/6, check 12/4",0,0
+chemeleon_generative_baseline,mSUN_at_B,mSUN@B,18,6,True,6.666666666666667,,,check,0,4,False,,,,,,"incomplete: dev 18/6, check 0/4",,
+chemeleon_generative_baseline,AUDC,AUDC,18,6,True,69.0,,,check,0,4,False,,,,,,"incomplete: dev 18/6, check 0/4",,
+chemeleon_generative_baseline,AF_vs_random,AF vs Random,18,6,True,1.3505116959064327,,,check,0,4,False,,,,,,"incomplete: dev 18/6, check 0/4",1,0
+chemeleon_generative_baseline,EF_vs_random,EF vs Random,18,6,True,18.469841269841268,,,check,0,4,False,,,,,,"incomplete: dev 18/6, check 0/4",1,0
+chemeleon_generative_baseline,AF_vs_chemeleon,AF vs Chemeleon,18,6,True,1.0,,,check,0,4,False,,,,,,"incomplete: dev 18/6, check 0/4",0,0
+chemeleon_generative_baseline,EF_vs_chemeleon,EF vs Chemeleon,18,6,True,1.0,,,check,0,4,False,,,,,,"incomplete: dev 18/6, check 0/4",0,0

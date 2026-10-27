@@ -158,3 +158,17 @@ what is still open. Used for the individual report.
   Corrected two outdated numbers in M5's slide text against M2's validated data
   (Mg-Sn-Sr exploration −1.0, not −2.0; per-run SD 5.0 → 2.8) and used M2's audited
   failure-case wording. The generalization slide waits for the check runs.
+
+### 2026-10-27 (evening): held-out runs, bare minimum
+
+- Overnight runs were not possible, so held-out was cut to the protocol's 1-seed
+  fallback. Chemeleon on check was stopped (~2.5 h per unit here) and is reported as
+  not run. Frozen agent on check, seed 17: 4/4 completed, ~3–12 min each.
+- Scored with `M2/evaluate.py --split check`: agent 14.0 mSUN@20 (8, 13, 19, 16) vs
+  Random 6.25 (8, 1, 13, 3) on seed 17. Dev seed 17: agent 9.0, Random 3.33. The
+  agent's lead over Random grows from +5.7 to +7.8 on held-out systems.
+- M2's wrapper exits after the run because it cannot resolve the frozen config's
+  `${hydra:…}` interpolation; added `M6/package_check_evidence.py` (reuses M1's
+  resolver) to attach the Hydra configs, resolved config and component logs. The
+  live per-query history is kept as captured.
+- Deck generalization and conclusions slides updated with these numbers.

@@ -15,7 +15,7 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | C2d | Candidate proposal / tool routing | M2 | ✅ in frozen agent; ablation −2.3 when off (12/1/5) | `M2/frozen_20261025/` |
 | C2e | Reflection and failure recovery | M3 | ✅ in frozen agent; ablation −0.5 when off (8/2/8) | `M3/results/frozen_20261025/` |
 | C3 | Random-generator baseline (official) | M2 | ✅ dev 18/18; check 12/12 (M6, 20 Oct): mSUN@20 5.58 ± 0.63 | `M2/verification/20261020-handoff-audit/`, `M6/results/20261020-check-random/` |
-| C4 | Chemeleon generative baseline (official) | M2 | 🟡 dev 18/18 ✅ (6.94 ± 1.11); check 0/12, running locally on M6's laptop since 27 Oct 21:10 (~2 h per run, 2 in parallel) | `M2/verification/direct-39432570527-1/final-report/` |
+| C4 | Chemeleon generative baseline (official) | M2 | 🟡 dev 18/18 ✅ (6.94 ± 1.11). Check: not run (~2.5 h per unit locally; dropped for compute, stated in report) | `M2/verification/direct-39432570527-1/final-report/` |
 | C5 | Frozen configs | M1 | ✅ tag `m1-freeze-20261025` | `M1/FREEZE_RECORD.md` |
 | C6 | Run commands | M1, M2, M6 | ✅ | `M1/EXPERIMENT_PROTOCOL.md`, `M1/REPRODUCE.md`, `M6/run_check_baselines.sh` |
 | C7 | Random seeds | M1 | ✅ 17/29/43 | `M1/protocol/protocol_v1.yaml` |
@@ -33,23 +33,23 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | P4 | Same model, oracle, budget, tools, systems, evaluator for all methods | M1, M6 | ✅ by protocol v1; checked by `M2/evaluate.py` | `M1/protocol/` |
 | P5 | Three repeats preferred; one allowed if stated | M6 | 🟡 3 seeds planned; 1-seed fallback defined for held-out | `M6/COMPUTE_PLAN.md` §4, `M6/PROTOCOL_ADOPTION.md` §6 |
 | P6 | Hidden-split support in runner/evaluator | M1, M2 | 🟡 M1 says the allow-list is done, but it is not on main yet (checked 20 Oct). Hidden split waits for the TA | `M6/PROTOCOL_ADOPTION.md` §4 |
-| P7 | Check baselines (24 units) | M6 | 🟡 Random 12/12 ✅ (5.58 ± 0.63). Chemeleon 0/12, running on M6's laptop from the frozen tag (staggered launcher) | `M6/results/20261020-check-random/` |
-| P8 | Frozen agent on check (12) and hidden (9·H) | M6 | 🟡 check: running since 27 Oct 21:10 at the frozen tag (~6 min per run). Hidden: not released | – |
+| P7 | Check baselines (24 units) | M6 | 🟡 Random 12/12 ✅ (5.58 ± 0.63). Chemeleon not run (compute) | `M6/results/20261020-check-random/` |
+| P8 | Frozen agent on check (12) and hidden (9·H) | M6 | ✅ check, seed 17 only (1-seed fallback): 4/4, mSUN@20 14.0 vs Random 6.25. Hidden: not released | `M6/results/20261027-check-agent-seed17/` |
 
 ## 3.1 / 4.2 Report
 
 | # | Section (brief) | Owner | Status | File(s) |
 | --- | --- | --- | --- | --- |
-| R1 | Leaderboard: mSUN@B, AUDC, AF, EF, research cost for our method and both baselines | M2 data, M6 | ✅ dev: Full 10.00, Chemeleon 6.94, Random 4.06 mSUN@20. Held-out row pending check runs | `M2/aggregation/20261027_m3_full_agent/ (PR #6, unmerged)` |
+| R1 | Leaderboard: mSUN@B, AUDC, AF, EF, research cost for our method and both baselines | M2 data, M6 | ✅ dev: Full 10.00, Chemeleon 6.94, Random 4.06. Held-out (check, seed 17): Full 14.0, Random 6.25, Chemeleon not run | `M6/results/20261027-check-agent-seed17/` |
 | R2 | Discovery curves | M2 | ✅ dev curves for all 11 methods | `M2/aggregation/20261027_m3_full_agent/ (PR #6, unmerged)results/discovery_curves_by_study.svg` |
 | R3 | Component ablation | M3, M4, M5, M2; M6 combines | ✅ all five single-switch ablations on dev, 198 runs validated by M2; m3_* study kept separate | `M2/aggregation/20261027_m3_full_agent/ (PR #6, unmerged)M6_HANDOFF.md` |
-| R4 | Generalization: dev vs held-out | M6 | 🟡 Random done (check easier, +38 %). Chemeleon and agent check runs in progress | `M6/generalization.py` |
+| R4 | Generalization: dev vs held-out | M6 | ✅ seed 17: agent 9.0 → 14.0, Random 3.3 → 6.3; lead over Random +5.7 → +7.8 | `M6/results/20261027-generalization-seed17/` |
 | R5 | Failure classification: over-exploitation, one trajectory | M5, M4, M6 | ✅ exploration_off Mg-Sn-Sr/29 (16 binary queries before any ternary), audited by M2 | `M2/aggregation/20261026_m5_intake/audits/metrics/failure_cases.md` |
 | R6 | Failure classification: wasteful exploration, one trajectory | M5, M4, M6 | ✅ m1_full Ga-Pt-Tm/17 (one unstable UCB ternary probe; 10 vs 16 mSUN vs off, causation not established), audited by M2 | `M2/aggregation/20261026_m5_intake/audits/metrics/failure_cases.md` |
 | R7 | Discussion: which mechanisms helped, remaining bottlenecks | M6 | 🟡 drafted in the deck (planning and routing carry the gain; slow start, 1 composition/step, small sample) | deck |
 | R8 | Research cost: oracle calls, tokens/USD, wall time | M2, M6 | ✅ USD 0 known fees; times on different machines | `M2/aggregation/20261027_m3_full_agent/ (PR #6, unmerged)report/COST_ANALYSIS.md` |
 | R9 | Method text from each member (due 24 Oct) | M1–M5 | ✅ all received: M1 (`M1/report/A1_*`), M2 (PR #6), M3, M4 (`M4/report/`), M5 (`M5/report/`) | – |
-| R10 | Per-material table to M2 (27 Oct) | M6 | 🟡 after check runs finish (~28 Oct morning) | – |
+| R10 | Per-material table to M2 (27 Oct) | M6 | 🟡 ready (`per_run.csv` in the check results); not yet sent to M2 | `M6/results/20261027-check-agent-seed17/per_run.csv` |
 
 ## 4.3 Presentation
 
@@ -58,7 +58,7 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | S1 | 10 min talk + 5 min Q&A | M6 | ✅ 14-slide deck with speaker notes (M6's Slides artifact, private until shared) | – |
 | S2 | Main idea and architecture | M1 + owners | ✅ deck slides 3–7 | – |
 | S3 | How the system uses MADE and manages the budget | M1 | ✅ deck slides 2–3 | – |
-| S4 | Key results vs both baselines | M6 | 🟡 deck slides 9–12; held-out numbers pending | – |
+| S4 | Key results vs both baselines | M6 | ✅ deck slides 9–12 | – |
 | S5 | Trajectories, discoveries, failure cases | M5, M6 | ✅ deck slide 13 | – |
 | S6 | Conclusions and lessons | M6 | ✅ deck slide 14 | – |
 | S7 | Rehearsal 29 Oct | M6 | ⬜ | – |
