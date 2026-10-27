@@ -1,0 +1,4 @@
+system,seed,attempt,query,formula,e_above_hull_ev_per_atom,mSUN_before,mSUN_after,source_trajectory,proposal_sha256
+Co-Mg-Na,29,1,5,Mg1 Na6,0.08404693697473697,0,1,M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_29/attempt_01/trajectories/episode_000.json,402e87bd87246cc32f051103ea441e6981c1d251eb3fa00ebc5a5e597d90944b
+Co-Mg-Na,29,1,6,Mg4 Na3,0.06082549823328809,1,2,M1/MADE/results/protocol_v1/m1_full/dev/Co-Mg-Na/seed_29/attempt_01/trajectories/episode_000.json,b4685d6ff87fcae4c1d622dbae4fb78815a1298ae017f87312ce9d6b9df9b704
+Mg-Sn-Sr,17,2,3,Sn7 Sr1,0.08256316184997559,0,1,M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_02/trajectories/episode_000.json,ee9771cc863ae1438391e6763c097f22d511547b2c63f0a43aea0db4df8b8dd3

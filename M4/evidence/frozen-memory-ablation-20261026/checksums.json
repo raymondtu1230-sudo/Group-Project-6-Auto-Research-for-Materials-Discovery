@@ -1,11 +1,15 @@
 {
   "README.md": {
-    "bytes": 3954,
-    "sha256": "c971d15edcb0cf9ac41b8ebff5e8431d48c1cdc41e64a2eb7098de89834a82ec"
+    "bytes": 4095,
+    "sha256": "0ccea94660cb9d552bd58b3bbf4da3eaf923fae0d189fcdaf40ba7fadc40ab79"
+  },
+  "analysis/DISCOVERY_EXAMPLES.md": {
+    "bytes": 1374,
+    "sha256": "79f09a8c6b955c46c0041a7d4c3191dfbdecfc6243427627b591d2a47e5dc8d2"
   },
   "analysis/README.md": {
-    "bytes": 2597,
-    "sha256": "76360206e3c7821cebef377ab32daf6ca7718afeb39402e033dd00d2704a7f6f"
+    "bytes": 2992,
+    "sha256": "a851ba5a9d26e028885cc0d776843993993508fdbff04beea55307225fa024a2"
   },
   "analysis/TRACED_CASES.md": {
     "bytes": 3230,
@@ -26,6 +30,10 @@
   "analysis/discovery_curves.svg": {
     "bytes": 52950,
     "sha256": "6a3d0918bd15710709ecddcd90aacfe8ef32b4fcfdf054e07b291a1c8b9c174e"
+  },
+  "analysis/discovery_examples.csv": {
+    "bytes": 749,
+    "sha256": "486629e75f7e4572bfc056afcdccba7f7befbbc39d6768e1be0e8bbfc0aa66e5"
   },
   "analysis/paired_AF_EF_OFF_vs_ON.csv": {
     "bytes": 1502,
@@ -48,8 +56,8 @@
     "sha256": "2a2a5e73b19a53c1ecb4a9e4e15981c7a1253eec7ed218d4fb44bddd53b706c3"
   },
   "closeout_validation.json": {
-    "bytes": 1272,
-    "sha256": "6c6864f9b6a0483876718cbb87d5016681ffd14d43e7d0d4579c8354d55a3754"
+    "bytes": 1549,
+    "sha256": "98275340443be26e25e39aebb012e89f883d9a601bae5cf31df6c544c6a5874e"
   },
   "memory_off_raw_results.zip": {
     "bytes": 5103853,

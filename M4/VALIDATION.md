@@ -4,7 +4,7 @@ Updated 26 October 2026.
 
 ## Interface and regression tests
 
-All 72 relevant tests passed. The suite covers M1/M3/M4 boundaries, independent Memory switches, invalid observations, JSON bounds, checkpoint restoration, generator/filter capture isolation and pilot configuration isolation. Ruff passed for the changed reporting helper and test files. The final test-only repair supplies Hydra's output-directory context during configuration construction and restores the previous singleton afterwards. It changes no scientific code or Hydra configuration.
+All 72 relevant tests passed. A fresh 27 October run in the complete local M1 environment again passed 72 tests; its [original transcript](evidence/validation-history/20261027-72-tests.txt) is retained. This is M4 environment evidence, not a claim that M2 independently reran the full suite. The suite covers M1/M3/M4 boundaries, independent Memory switches, invalid observations, JSON bounds, checkpoint restoration, generator/filter capture isolation and pilot configuration isolation. Ruff passed for the changed reporting helper and test files. The final test-only repair supplies Hydra's output-directory context during configuration construction and restores the previous singleton afterwards. It changes no scientific code or Hydra configuration.
 
 From the repository root, after installing M4 in the locked M1 environment:
 

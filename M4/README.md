@@ -13,7 +13,7 @@ M4 stores public feedback from queried structures and provides bounded recent st
 | Presenter script | [Speaker notes](report/M4_SPEAKER_NOTES.md) |
 | Method | [Memory and evidence management](report/M4_METHOD.md) |
 | Raw results, validation and checksums | [Formal evidence package](evidence/frozen-memory-ablation-20261026/) |
-| Curves, three cases and costs | [Offline analysis](evidence/frozen-memory-ablation-20261026/analysis/) |
+| Curves, three cases, discovery examples and costs | [Offline analysis](evidence/frozen-memory-ablation-20261026/analysis/) |
 | Setup and reproduction | [Runbook](EXPERIMENT_RUNBOOK.md) |
 | Interface and validation | [M1 integration](M1_STATUS.md), [tests](VALIDATION.md) |
 
@@ -29,6 +29,8 @@ The completed formal comparison covers 18 ON/OFF pairs: six development systems,
 The core has no third-party dependencies. Integration and offline scientific reporting use the locked M1/MADE environment. The standalone core supports composition-distance retrieval, while the active argument-free M1 hook uses recent contrasting outcomes. Characters are not model tokens. Use separate per-episode identities and logs, and restore state explicitly. Concurrent writers are unsupported.
 
 M4 preserves the official runner, oracle, evaluator and budget logic. Retrieval uses public post-query observations only. Evaluation-only reference envelopes belong to offline reporting and never enter decisions.
+
+[Work record](WORK_LOG.md) supports the later individual report. [Three concrete discoveries](evidence/frozen-memory-ablation-20261026/analysis/DISCOVERY_EXAMPLES.md) identify source structures and query outcomes.
 
 ## Historical records
 

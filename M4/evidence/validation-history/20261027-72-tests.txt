@@ -1,0 +1,11 @@
+........................................................................ [100%]
+=============================== warnings summary ===============================
+M1/MADE/src/made/agents/base.py:19
+M1/MADE/src/made/agents/base.py:35
+  PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+
+M1/MADE/.venv/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10
+  UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+72 passed, 3 warnings in 8.88s

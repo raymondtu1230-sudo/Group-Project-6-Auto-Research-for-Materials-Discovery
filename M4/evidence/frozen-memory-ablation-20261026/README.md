@@ -28,3 +28,5 @@ M2: use these 18 Memory OFF units with the frozen full reference in the componen
 ## Completed analysis and presentation handoff
 
 [Discovery curves](analysis/discovery_curves.png), per-query data, [three traced cases](analysis/TRACED_CASES.md), original per-run cost accounting and official directional OFF-vs-ON AF/EF are now available in the analysis folder. The required comparisons against Random and Chemeleon remain part of M2's shared leaderboard. ON exact review-memory IDs were not retained, so the cases make no record-specific causal claim. The final two-slide deck is M4_Frozen_Memory_Results.pptx, with matching M4_SPEAKER_NOTES.md.
+
+[Three specific discovery examples](analysis/DISCOVERY_EXAMPLES.md) identify source trajectories, queried structures and observed outcomes.

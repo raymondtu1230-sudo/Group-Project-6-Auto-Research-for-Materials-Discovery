@@ -28,5 +28,13 @@
       1,
       2
     ]
+  },
+  "latest_test_recheck": {
+    "date": "2026-10-27",
+    "environment": "M4 local complete M1/MADE environment",
+    "passed": 72,
+    "warnings": 3,
+    "transcript": "M4/evidence/validation-history/20261027-72-tests.txt",
+    "independent_M2_72_suite_reproduced": false
   }
 }
