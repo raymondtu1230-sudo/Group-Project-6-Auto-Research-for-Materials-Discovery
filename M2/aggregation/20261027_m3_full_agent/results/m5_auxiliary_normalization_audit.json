@@ -1,0 +1,11 @@
+{
+  "submitted_core_query_count_and_raw_AUDC_prefixes_checked": 360,
+  "submitted_core_prefixes_passed": 360,
+  "submitted_auxiliary_normalized_AUDC_mismatches": 305,
+  "as_submitted_history_copies_preserved": 18,
+  "auxiliary_normalized_AUDC_analysis_views_corrected": 18,
+  "correction_scope": "only discovery_curve_area_under_discovery_curve_normalized; all other history fields unchanged",
+  "official_function": "unchanged DiscoveryCurveMetrics.area_under_discovery_curve(normalize=True)",
+  "shared_primary_metrics_use": "mSUN_raw_AUDC_AF_EF; auxiliary normalization is not used",
+  "source_originals_modified": 0
+}

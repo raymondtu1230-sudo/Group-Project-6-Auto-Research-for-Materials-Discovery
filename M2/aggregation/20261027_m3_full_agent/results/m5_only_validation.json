@@ -1,0 +1,17 @@
+{
+  "validator": "unchanged_M2_evaluate_load_run_collect_compare",
+  "validated_runs": 18,
+  "method": "exploration_off",
+  "issues": [],
+  "protocol_and_canonical_reference_comparison": "passed",
+  "prior_provisional_metadata_and_trajectory_hashes_unchanged": 18,
+  "prior_provisional_discovery_count_prefixes_matched": 360,
+  "actual_packaged_evidence_manifest_file_checks": 144,
+  "as_submitted_originals_passed_core_load_run": 18,
+  "as_submitted_auxiliary_normalized_AUDC_correct": false,
+  "auxiliary_normalized_AUDC_mismatched_prefixes": 305,
+  "separate_analysis_view_auxiliary_normalization_corrected": true,
+  "configuration_artifact_note": "saved_run_composed_configuration; any retained interpolation fields are listed per unit",
+  "strict_acceptance_scope": "actual unchanged M2 evaluator checks; does not assert every Hydra runtime interpolation was expanded in the supplied artifact",
+  "original_result_files_modified": 0
+}

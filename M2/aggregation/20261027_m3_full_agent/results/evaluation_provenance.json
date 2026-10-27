@@ -1,0 +1,20 @@
+{
+  "source_snapshot_commit": "09c9b74300b26176ce5ade37d5192ba98caa240f",
+  "original_scientific_freeze_commit": "02e0026bf450f71f4f7862228d295f5b02b49e12",
+  "m3_full_actual_recorded_revision": "ae7fe81991c56dd2d77685220b74ddbef11039c7",
+  "m5_exploration_off_actual_recorded_revision": "aedf8ca238d2ef56948c0eadf2c897aef67f5104",
+  "source_revision_policy": "preserve_each_original_metadata_revision; no historical run is relabelled",
+  "full_reference_selection": "prior_accepted_metadata_trajectory_and_configuration_hashes; never_latest_attempt",
+  "aggregation_script_sha256": "790fa9e93f46edaac1d77bac2809a11b881910745463eed70e3a94dfe6f34c9f",
+  "evaluator_path": "M2/evaluate.py",
+  "evaluator_sha256": "2eacad27246a8669657c6551807cbfeb1274cf94b691840f2f196d55e3e93a89",
+  "official_metric_module_path": "M1/MADE/src/made/evaluation/metrics.py",
+  "official_metric_module_sha256": "f24d68a2b0a854cf7d880a97079c47e1d8160da11f7f31fa8900274067c7e3a1",
+  "official_class_ast_sha256": "33b54edd959fc7415d30314cdbadb9a01e710d3deee026835320622578d2a6ff",
+  "load_mode": "exact_unchanged_class_AST_with_real_numpy_no_unrelated_model_imports",
+  "numpy_version": "2.3.5",
+  "metric_formula_modifications": 0,
+  "evaluator_modifications": 0,
+  "agent_calls": 0,
+  "oracle_calls": 0
+}

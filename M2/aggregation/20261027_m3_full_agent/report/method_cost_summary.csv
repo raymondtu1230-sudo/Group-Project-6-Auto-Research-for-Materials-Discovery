@@ -1,0 +1,12 @@
+method,episodes,wall_time_reported_n,mean_recorded_launcher_minutes,platform_labels,processors,known_cost_usd_sum,cost_scope,cross_machine_speed_comparison_valid
+random_generator_baseline,18,18,15.98927962962963,Linux-6.17.0-1022-azure-x86_64-with-glibc2.39; Linux-7.0.0-1017-azure-x86_64-with-glibc2.39,x86_64,0.0,partial; unreported resources are unknown,False
+chemeleon_generative_baseline,18,18,234.30932407407408,Linux-6.17.0-1022-azure-x86_64-with-glibc2.39; Linux-7.0.0-1017-azure-x86_64-with-glibc2.39,x86_64,0.0,partial; unreported resources are unknown,False
+m1_full,18,18,5.221462037037037,macOS-26.3-arm64-arm-64bit,arm,0.0,partial; unreported resources are unknown,False
+planning_off,18,18,5.55730462962963,Windows-11-10.0.26300-SP0,"AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",0.0,partial; unreported resources are unknown,False
+memory_off,18,18,5.331632407407407,macOS-26.6.2-arm64-arm-64bit,arm,0.0,partial; unreported resources are unknown,False
+self_correction_off,18,18,14.41364351851852,Windows-11-10.0.26300-SP0,"AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",0.0,partial; unreported resources are unknown,False
+exploration_off,18,18,34.710181481481484,Windows-11-10.0.26200-SP0,"AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",0.0,partial; unreported resources are unknown,False
+tool_routing_off,18,18,14.490735185185185,Linux-6.17.0-1022-azure-x86_64-with-glibc2.39,x86_64,0.0,partial; unreported resources are unknown,False
+m3_full,18,18,11.400073148148149,Windows-11-10.0.26300-SP0,"AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",0.0,partial; unreported resources are unknown,False
+m3_planning_off,18,18,7.184722222222223,Windows-11-10.0.26300-SP0,"AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",0.0,partial; unreported resources are unknown,False
+m3_self_correction_off,18,18,11.244675925925925,Windows-11-10.0.26300-SP0,"AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",0.0,partial; unreported resources are unknown,False

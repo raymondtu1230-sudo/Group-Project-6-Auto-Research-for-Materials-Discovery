@@ -1,0 +1,20 @@
+[
+  {
+    "source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_17/attempt_01",
+    "method": "m1_full",
+    "system": "Mg-Sn-Sr",
+    "seed": 17,
+    "attempt": 1,
+    "status": "failed",
+    "reason": "not_the_hash_pinned_accepted_frozen_reference"
+  },
+  {
+    "source": "M1/MADE/results/protocol_v1/m1_full/dev/Mg-Sn-Sr/seed_29/attempt_01",
+    "method": "m1_full",
+    "system": "Mg-Sn-Sr",
+    "seed": 29,
+    "attempt": 1,
+    "status": null,
+    "reason": "not_the_hash_pinned_accepted_frozen_reference"
+  }
+]

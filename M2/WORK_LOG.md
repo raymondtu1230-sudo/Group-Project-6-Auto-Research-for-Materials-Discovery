@@ -345,3 +345,12 @@ Older snapshots below are superseded by this confirmed snapshot.
 - Learned: a matching endpoint does not certify every auxiliary history value. Normalization must use the official formula. Full Ga–Pt–Tm seed17 has eight mixed and twelve exploit decisions; ternarity alone cannot determine the decision mode.
 - Next: M6 check/hidden inputs and final report/deck assembly, user/team review and rehearsal, then the later individual report and submission. Extra Full planning/self-correction is an optional M1/M6 scope decision and does not block assigned dev acceptance. Team target dates remain distinct from teacher/TA-confirmed requirements.
 - Scope: all project writes remain under M2. Original scientific source and attempts stay unchanged. No new experiment, model/oracle call, external message or course submission was made.
+
+
+## 2026-10-27 — M3 assigned Full ablations accepted; 198-run dev release
+
+- Received M3 commit 62ed42b and validated all 36 planning_off/self_correction_off units with the unchanged M2 evaluator. All 198 dev units pass with issues=[]; 396 baseline comparisons and 90 Full ablation pairs are available. The 36-pair M3 component study remains separate and byte-identical.
+- Checked 2,664 scientific-source hashes, 324 manifest members, concrete single-switch configs and 720 raw discovery/AUDC prefixes. Retained exact/Windows-line-ending evidence distinctions. Independently preserved all 1,620 checked prior run fields and the earlier 54 Full pairs.
+- Recorded the declared Chemeleon archive identity without inventing a missing run-machine checksum receipt. Existing receipt recovery is a documentation follow-up, not a rerun requirement.
+- Updated results prose, figures, machine-labelled costs, four-slide content, short script and M6 handoff. Public derivatives use repository-relative locations and platform labels; raw local paths/hostnames are excluded. Original files and earlier releases remain unchanged. No messages, course submissions or new scientific calls were made.
+- Current received-dev validation and aggregation are complete. Remaining check/hidden inputs, final group assembly and rehearsal remain separate.
