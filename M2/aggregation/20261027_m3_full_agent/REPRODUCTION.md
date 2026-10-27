@@ -18,6 +18,8 @@ The existing [162-run reproduction notes](../20261027_dev_closeout/REPRODUCTION.
 
 Line-ending conversion is verification only; original files are not edited. Published receipts contain repository-relative sources and platform labels. M5 submitted-history copies remain byte-identical to published originals. Matplotlib previews are reproducible derived plots; no original experimental phase-diagram images are copied into this release. The retained [output manifest](results/output_manifest.json) describes published result files; local PNG previews may be generated in addition.
 
+The three public per-run CSV views omit generated source/view-directory columns (`source` and `original_source`). Scientific scores, approved runtime/cost fields and row membership are unchanged; full local evaluator exports and the original repository evidence retain the complete lineage.
+
 M3's new histories are labelled reconstructions from the original trajectories, rather than original checkpoint captures. All 720 new discovery-count prefixes agree with the recorded stable/new-discovery flags; raw AUDC was independently summed with a zero-origin trapezoid and matched the official calculation at every prefix. This is a consistency check of recorded evidence, not a new hull, novelty or oracle evaluation.
 
 M3 declares Chemeleon archive SHA-256 `ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e`. No run-machine archive-checksum receipt was found in the delivered 36-run artifacts. Accept the core metrics and the documented single-switch configuration comparison; retain model-archive identity as declared rather than independently established. Recovering an existing checksum receipt is a documentation follow-up, not a request to rerun.
