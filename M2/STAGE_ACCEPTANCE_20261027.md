@@ -1,20 +1,13 @@
-# M2 开发集阶段验收 — 27 October 2026
+# M2 当前交付：198 项 dev 与五项 Full 消融已收尾
 
-**当前分工下的dev包均已收到，162项核心验收通过，issues=[]。** 当前数据分析、表格/曲线/成本、结果文字及M6可编辑组装材料已完成；小组最终交付仍有后续。
+2026-10-27，Asia/Hong_Kong。M3 新交的 planning_off 与 self_correction_off 共 36 项已验收；共享结果更新为 **198 项、11 个方法，M2 核心评估 issues=[]**。原 162 项结果与独立 M3 组件表保持不变。
 
-| 核对项 | 当前结论 |
-| --- | --- |
-| M2基线和路由实验 | 已完成、保存、验收；未重跑成功项 |
-| M3组件研究 |54/54原始包及m3_full配对通过 |
-| M4memory_off |18/18通过 |
-| M5exploration_off |18/18配置/组件证据及核心指标通过，原缺包待办关闭 |
-| 总表和配对 |162项、324个基线比较、54个Full配对、36个M3配对完成 |
-| M5附加字段 |305处normalizedAUDC仅在M2分析副本按官方公式修正；提交原件与差异均保留 |
-| 配置来源 |saved composed configs保留插值，不冒称完全解析的运行时导出 |
-| M6当前可取 |最终dev表、曲线、成本、结果章节、四页内容、213词讲稿、Q&A |
-| 原生PPTX |本轮未导出新版；当前贡献为可编辑源内容和图表，旧21OctPPT仅历史 |
-| 后续工作 |M6剩余check/hidden、最终报告/PPT、团队复核排练、个人报告与提交 |
-| 额外Full规划/自纠错 |M1/M6可选研究范围，不属于M3欠交，不阻碍现有dev验收 |
-| 文件保护与通信 |只修改M2，旧入口备份，原始数据/历史失败保留，未代发/提交 |
+- [当前结果与验收](aggregation/20261027_m3_full_agent/README.md)
+- [M6 完整交接](aggregation/20261027_m3_full_agent/M6_HANDOFF.md)
+- [五项 Full 消融配对](aggregation/20261027_m3_full_agent/results/paired_full_system_ablations.csv)与[独立 M3 组件配对](aggregation/20261027_m3_full_agent/results/paired_m3_component_ablations.csv)
+- [当前四页内容与图表](aggregation/20261027_m3_full_agent/report/M2_FOUR_SLIDE_CONTENT.md)、[讲稿](aggregation/20261027_m3_full_agent/report/M2_SPEAKER_NOTES.md)、[成本](aggregation/20261027_m3_full_agent/report/COST_ANALYSIS.md)
+- [后续分工与补证](aggregation/20261027_m3_full_agent/NEXT_STEPS.md)、[旧 162 项版本](aggregation/20261027_dev_closeout/README.md)
 
-[正式入口](aggregation/20261027_dev_closeout/README.md)、[M6交接](aggregation/20261027_dev_closeout/M6_HANDOFF.md)、[后续分工及日期来源](aggregation/20261027_dev_closeout/NEXT_STEPS.md)、[机器状态](STAGE_AUDIT_20261027.json)。历史routing隐藏Hydra原件缺失和临时检查点未保留的例外仍如实披露，不声称所有历史原件逐字节齐全。
+Planning OFF mSUN 为 5.2778，Self-correction OFF 为 9.5000，Full 为 10.0000。新增两臂均与 m1_full 配对；此前 m3_* 仍与 m3_full 配对。此前“额外 Full 规划/自纠错尚待决定”的状态已被 M3 实际交付取代。
+
+M3 声明使用相同 Chemeleon 压缩包，但未提供运行机 checksum 原始记录；保留此证据限定，无需重跑。M5 辅助字段修正、配置插值和 routing 历史缺件说明继续有效。M2 当前收到的 dev 验收与汇总完成；M6 check/hidden、全组最终组装、排练和课程提交仍有后续。本次没有代发消息或课程提交，也未导出新原生 PPTX。

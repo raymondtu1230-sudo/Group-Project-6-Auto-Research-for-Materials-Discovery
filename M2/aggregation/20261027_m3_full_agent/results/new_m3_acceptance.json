@@ -1,0 +1,19 @@
+{
+  "source_commit": "62ed42b0b546f19d20178484e48b03df3a112508",
+  "accepted_runs": 36,
+  "only_assigned_scientific_switch_differs": true,
+  "resolved_configs_no_interpolation": 36,
+  "scientific_source_hash_checks": 2664,
+  "manifest_members_verified": 324,
+  "manifest_exact_members": 36,
+  "manifest_LF_CRLF_only_members": 288,
+  "independent_trajectory_flag_and_AUDC_prefixes": 720,
+  "history_provenance": "trajectory_reconstruction_not_original_checkpoint",
+  "chemeleon_archive_sha256_claim": "ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e",
+  "runtime_model_archive_checksum_receipt_found": false,
+  "model_archive_identity_status": "M3_declared_same_archive_not_independently_proven_on_run_machine",
+  "metric_acceptance": "passed",
+  "new_scientific_runs": 0,
+  "new_oracle_queries": 0,
+  "original_result_files_modified": 0
+}

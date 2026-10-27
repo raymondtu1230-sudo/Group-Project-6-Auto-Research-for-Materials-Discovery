@@ -1,16 +1,15 @@
-# M2 当前交付入口 — 开发集收尾
+# M2 当前交付：198 项 dev 与五项 Full 消融已收尾
 
-2026-10-27。当前分工下的开发集数据均已收到并完成核心验收：**162项、9个方法，M2评估器issues=[]**。M5原缺包待办已关闭；本轮没有重跑成功实验。
+2026-10-27，Asia/Hong_Kong。M3 新交的 planning_off 与 self_correction_off 共 36 项已验收；共享结果更新为 **198 项、11 个方法，M2 核心评估 issues=[]**。原 162 项结果与独立 M3 组件表保持不变。
 
-| 当前材料 | 入口 |
-| --- | --- |
-| 正式dev汇总、324个基线比较、54个Full配对和36个M3配对 | [开发集收尾报告](aggregation/20261027_dev_closeout/README.md) |
-| 结果章节、曲线、成本和M6组装说明 | [M6交接](aggregation/20261027_dev_closeout/M6_HANDOFF.md) |
-| 四页可编辑内容、213词讲稿与Q&A | [幻灯片内容](aggregation/20261027_dev_closeout/report/M2_FOUR_SLIDE_CONTENT.md)、[讲稿](aggregation/20261027_dev_closeout/report/M2_SPEAKER_NOTES.md)、[Q&A](aggregation/20261027_dev_closeout/report/REHEARSAL_QA.md) |
-| 27Oct当前职责与后续 | [阶段验收](STAGE_ACCEPTANCE_20261027.md)、[下一步](aggregation/20261027_dev_closeout/NEXT_STEPS.md) |
-| 工具路由代码与接口 | integration/、configs/m2_routing.yaml、[接口说明](HANDOFF_LAYOUT.md)；冻结版已集成，不重新安装 |
-| 原36项基线与18项routing实验归档 | verification/及frozen_20261025/；旧失败、缺件和复评来源继续保留 |
+- [当前结果与验收](aggregation/20261027_m3_full_agent/README.md)
+- [M6 完整交接](aggregation/20261027_m3_full_agent/M6_HANDOFF.md)
+- [五项 Full 消融配对](aggregation/20261027_m3_full_agent/results/paired_full_system_ablations.csv)与[独立 M3 组件配对](aggregation/20261027_m3_full_agent/results/paired_m3_component_ablations.csv)
+- [当前四页内容与图表](aggregation/20261027_m3_full_agent/report/M2_FOUR_SLIDE_CONTENT.md)、[讲稿](aggregation/20261027_m3_full_agent/report/M2_SPEAKER_NOTES.md)、[成本](aggregation/20261027_m3_full_agent/report/COST_ANALYSIS.md)
+- [后续分工与补证](aggregation/20261027_m3_full_agent/NEXT_STEPS.md)、[旧 162 项版本](aggregation/20261027_dev_closeout/README.md)
 
-M3组件实验用m3_full配对，额外Full规划/自纠错由M1/M6决定，不是M3欠交。M5配置保留插值；其305处辅助归一化AUDC仅在M2分析副本按官方公式修正，原件与差异清单均保留，主指标不变。
+Planning OFF mSUN 为 5.2778，Self-correction OFF 为 9.5000，Full 为 10.0000。新增两臂均与 m1_full 配对；此前 m3_* 仍与 m3_full 配对。此前“额外 Full 规划/自纠错尚待决定”的状态已被 M3 实际交付取代。
 
-当前四页为可编辑文字、表格和图表数据，未导出新原生PPTX；21Oct旧PPT只含早期基线，属历史版本。M6剩余check/hidden、全组最终报告/PPT和提交尚未完成。本轮仅修改M2，旧入口已备份，未代发消息或作业。
+M3 声明使用相同 Chemeleon 压缩包，但未提供运行机 checksum 原始记录；保留此证据限定，无需重跑。M5 辅助字段修正、配置插值和 routing 历史缺件说明继续有效。M2 当前收到的 dev 验收与汇总完成；M6 check/hidden、全组最终组装、排练和课程提交仍有后续。本次没有代发消息或课程提交，也未导出新原生 PPTX。
+
+工具路由代码与接口仍在 integration/、configs/m2_routing.yaml 和 [HANDOFF_LAYOUT.md](HANDOFF_LAYOUT.md)；冻结版已集成，无需重装。

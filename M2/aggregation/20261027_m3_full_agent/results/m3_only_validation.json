@@ -1,0 +1,13 @@
+{
+  "validator": "unchanged_M2_evaluate_load_run_collect_compare",
+  "validated_runs": 54,
+  "methods": {
+    "m3_full": 18,
+    "m3_planning_off": 18,
+    "m3_self_correction_off": 18
+  },
+  "issues": [],
+  "protocol_and_canonical_reference_comparison": "passed",
+  "paired_comparator": "m3_full",
+  "original_result_files_modified": 0
+}

@@ -1,9 +1,13 @@
-# M2 当前交接 — dev包全部完成核心验收
+# M2 当前交付：198 项 dev 与五项 Full 消融已收尾
 
-27 October 2026。[正式开发集收尾](../aggregation/20261027_dev_closeout/README.md)、[M6交接](../aggregation/20261027_dev_closeout/M6_HANDOFF.md)、[后续分工](../aggregation/20261027_dev_closeout/NEXT_STEPS.md)。
+2026-10-27，Asia/Hong_Kong。M3 新交的 planning_off 与 self_correction_off 共 36 项已验收；共享结果更新为 **198 项、11 个方法，M2 核心评估 issues=[]**。原 162 项结果与独立 M3 组件表保持不变。
 
-M5补交证据已验收，原缺包待办关闭。当前162项核心评估通过，包含324个双基线配对、54个Full配对和36个M3配对。M5原历史305处辅助归一化值在M2分析副本按官方公式更正，保留提交版本；mSUN/rawAUDC未变化。M5配置仍保留普通/运行时插值，不冒称完整解析导出。
+- [当前结果与验收](../aggregation/20261027_m3_full_agent/README.md)
+- [M6 完整交接](../aggregation/20261027_m3_full_agent/M6_HANDOFF.md)
+- [五项 Full 消融配对](../aggregation/20261027_m3_full_agent/results/paired_full_system_ablations.csv)与[独立 M3 组件配对](../aggregation/20261027_m3_full_agent/results/paired_m3_component_ablations.csv)
+- [当前四页内容与图表](../aggregation/20261027_m3_full_agent/report/M2_FOUR_SLIDE_CONTENT.md)、[讲稿](../aggregation/20261027_m3_full_agent/report/M2_SPEAKER_NOTES.md)、[成本](../aggregation/20261027_m3_full_agent/report/COST_ANALYSIS.md)
+- [后续分工与补证](../aggregation/20261027_m3_full_agent/NEXT_STEPS.md)、[旧 162 项版本](../aggregation/20261027_dev_closeout/README.md)
 
-M6可取：结果文字、最终dev表、曲线、成本，以及四页可编辑内容、213词讲稿（估算98秒）和Q&A。没有生成新版原生PPTX，也没有代发消息。当前按分工的dev包全部收齐，不需要额外Full规划/自纠错才能关闭此阶段；那些实验由M1/M6决定是否追加。
+Planning OFF mSUN 为 5.2778，Self-correction OFF 为 9.5000，Full 为 10.0000。新增两臂均与 m1_full 配对；此前 m3_* 仍与 m3_full 配对。此前“额外 Full 规划/自纠错尚待决定”的状态已被 M3 实际交付取代。
 
-M6其余check/hidden、全组报告/PPT、排练和提交仍是后续。只修改M2，当前入口和历史待补清单原件均已备份。
+M3 声明使用相同 Chemeleon 压缩包，但未提供运行机 checksum 原始记录；保留此证据限定，无需重跑。M5 辅助字段修正、配置插值和 routing 历史缺件说明继续有效。M2 当前收到的 dev 验收与汇总完成；M6 check/hidden、全组最终组装、排练和课程提交仍有后续。本次没有代发消息或课程提交，也未导出新原生 PPTX。

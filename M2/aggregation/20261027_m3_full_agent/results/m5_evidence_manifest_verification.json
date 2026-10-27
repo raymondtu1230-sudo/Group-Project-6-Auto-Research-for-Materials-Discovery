@@ -1,0 +1,8 @@
+{
+  "manifest_members_verified": 144,
+  "exact_published_bytes": 18,
+  "recorded_Windows_bytes_reproduced_by_only_LF_to_CRLF": 126,
+  "unexplained_mismatches": 0,
+  "published_source_files_modified": 0,
+  "scope": "recorded manifest is from Windows checkout; actual published LF bytes and hashes are recorded separately"
+}
