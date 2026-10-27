@@ -138,3 +138,23 @@ what is still open. Used for the individual report.
   run staying in the Sn–Sr binary is a possible over-exploitation illustration.
 - M1 has wired M4's proposal-event capture and M5's decision log into
   `m1_integrated.yaml`, so the frozen agent will produce failure-analysis logs.
+
+## 2026-10-27
+
+- Read the team's frozen results. M1 froze the agent on 25 Oct (`m1-freeze-20261025`);
+  M2 validated 198 dev runs (PR #6, unmerged): Full 10.00 ± 0.88, Chemeleon 6.94,
+  Random 4.06 mSUN@20; ablations (Full − off): planning +4.72, routing +2.28,
+  memory +0.89, self-correction +0.50, exploration +0.33.
+- Started the held-out check runs on this laptop from a separate worktree at the
+  frozen tag (`../gp6-freeze`), with the Chemeleon checkpoints from Figshare (SHA256
+  matches M1's record): frozen m1_full × 12 and Chemeleon × 12 (two parallel streams).
+- First launch problems, all attempts kept:
+  - m1_full needs `M4/src` on `PYTHONPATH` (as in M2's frozen runs); the first agent
+    attempts failed on import.
+  - Two Chemeleon runs started in the same second shared a Hydra run folder and
+    corrupted its `config.yaml`. Stopped both, moved the folder out of the scan path,
+    and restarted all streams with a launch lock that keeps starts ≥ 5 s apart.
+- Built the group deck (14 slides, 9:55, speaker notes) from all members' material.
+  Corrected two outdated numbers in M5's slide text against M2's validated data
+  (Mg-Sn-Sr exploration −1.0, not −2.0; per-run SD 5.0 → 2.8) and used M2's audited
+  failure-case wording. The generalization slide waits for the check runs.
