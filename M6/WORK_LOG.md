@@ -172,3 +172,14 @@ what is still open. Used for the individual report.
   resolver) to attach the Hydra configs, resolved config and component logs. The
   live per-query history is kept as captured.
 - Deck generalization and conclusions slides updated with these numbers.
+
+## 2026-10-28
+
+- Ran Chemeleon on the check set, seed 17 (4 runs in parallel, staggered starts,
+  03:04–06:28 UTC, ~3.4 h each on the laptop). All 4 completed with full histories.
+- Scored all check runs together: agent 14.00, Chemeleon 7.25, Random 6.25 mSUN@20
+  (seed 17). The agent beats Chemeleon on 3 of 4 systems (not Ga-Ho-Lu: 8 vs 10).
+- Generalization, seed 17 both sides: lead over Chemeleon grows from +2.3 (dev) to
+  +6.8 (check); over Random from +5.7 to +7.8.
+- Built the deck as an editable .pptx for Google Slides (local, not committed) and the
+  report as a Google Doc for group review.

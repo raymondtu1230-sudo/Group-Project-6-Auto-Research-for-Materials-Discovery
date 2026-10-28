@@ -1,0 +1,193 @@
+{
+  "split": "check",
+  "validated_runs": 20,
+  "missing_units": [
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Al-Li-V",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Al-Li-V",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Al-V-Zn",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Al-V-Zn",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Co-Pd-Tl",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Co-Pd-Tl",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Ga-Ho-Lu",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Ga-Ho-Lu",
+      43
+    ],
+    [
+      "m1_full",
+      "check",
+      "Al-Li-V",
+      29
+    ],
+    [
+      "m1_full",
+      "check",
+      "Al-Li-V",
+      43
+    ],
+    [
+      "m1_full",
+      "check",
+      "Al-V-Zn",
+      29
+    ],
+    [
+      "m1_full",
+      "check",
+      "Al-V-Zn",
+      43
+    ],
+    [
+      "m1_full",
+      "check",
+      "Co-Pd-Tl",
+      29
+    ],
+    [
+      "m1_full",
+      "check",
+      "Co-Pd-Tl",
+      43
+    ],
+    [
+      "m1_full",
+      "check",
+      "Ga-Ho-Lu",
+      29
+    ],
+    [
+      "m1_full",
+      "check",
+      "Ga-Ho-Lu",
+      43
+    ]
+  ],
+  "missing_baseline_units": [
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Al-Li-V",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Al-Li-V",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Al-V-Zn",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Al-V-Zn",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Co-Pd-Tl",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Co-Pd-Tl",
+      43
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Ga-Ho-Lu",
+      29
+    ],
+    [
+      "chemeleon_generative_baseline",
+      "check",
+      "Ga-Ho-Lu",
+      43
+    ]
+  ],
+  "issues": [
+    {
+      "kind": "superseded_attempt",
+      "source": "/private/tmp/claude-501/-Users-sshr-Documents-pe202-project/ac9e0361-3e5f-47f8-aa4b-777b5dc2a26f/scratchpad/check_all3/results/protocol_v1/chemeleon_generative_baseline/check/Al-V-Zn/seed_17/attempt_01"
+    },
+    {
+      "kind": "superseded_attempt",
+      "source": "/private/tmp/claude-501/-Users-sshr-Documents-pe202-project/ac9e0361-3e5f-47f8-aa4b-777b5dc2a26f/scratchpad/check_all3/results/protocol_v1/chemeleon_generative_baseline/check/Al-V-Zn/seed_17/attempt_02"
+    },
+    {
+      "kind": "superseded_attempt",
+      "source": "/private/tmp/claude-501/-Users-sshr-Documents-pe202-project/ac9e0361-3e5f-47f8-aa4b-777b5dc2a26f/scratchpad/check_all3/results/protocol_v1/chemeleon_generative_baseline/check/Ga-Ho-Lu/seed_17/attempt_01"
+    },
+    {
+      "kind": "superseded_attempt",
+      "source": "/private/tmp/claude-501/-Users-sshr-Documents-pe202-project/ac9e0361-3e5f-47f8-aa4b-777b5dc2a26f/scratchpad/check_all3/results/protocol_v1/chemeleon_generative_baseline/check/Ga-Ho-Lu/seed_17/attempt_02"
+    },
+    {
+      "kind": "superseded_attempt",
+      "source": "/private/tmp/claude-501/-Users-sshr-Documents-pe202-project/ac9e0361-3e5f-47f8-aa4b-777b5dc2a26f/scratchpad/check_all3/results/protocol_v1/m1_full/check/Ga-Ho-Lu/seed_17/attempt_01"
+    },
+    {
+      "kind": "superseded_attempt",
+      "source": "/private/tmp/claude-501/-Users-sshr-Documents-pe202-project/ac9e0361-3e5f-47f8-aa4b-777b5dc2a26f/scratchpad/check_all3/results/protocol_v1/random_generator_baseline/check/Co-Pd-Tl/seed_43/attempt_01"
+    },
+    {
+      "kind": "superseded_attempt",
+      "source": "/private/tmp/claude-501/-Users-sshr-Documents-pe202-project/ac9e0361-3e5f-47f8-aa4b-777b5dc2a26f/scratchpad/check_all3/results/protocol_v1/random_generator_baseline/check/Co-Pd-Tl/seed_43/attempt_02"
+    },
+    {
+      "kind": "superseded_attempt",
+      "source": "/private/tmp/claude-501/-Users-sshr-Documents-pe202-project/ac9e0361-3e5f-47f8-aa4b-777b5dc2a26f/scratchpad/check_all3/results/protocol_v1/random_generator_baseline/check/Ga-Ho-Lu/seed_17/attempt_01"
+    },
+    {
+      "kind": "incomplete_or_invalid_run",
+      "source": "/private/tmp/claude-501/-Users-sshr-Documents-pe202-project/ac9e0361-3e5f-47f8-aa4b-777b5dc2a26f/scratchpad/check_all3/results/protocol_v1/m1_full/check/Ga-Ho-Lu/seed_29/attempt_01",
+      "error": "Run is not marked completed"
+    }
+  ],
+  "final_comparison_complete": false,
+  "baseline_sweep_complete": false
+}
