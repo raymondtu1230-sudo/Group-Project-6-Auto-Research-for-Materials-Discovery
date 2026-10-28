@@ -1,6 +1,6 @@
 # Requirements Checklist (course brief → owner → status → file)
 
-Owner: M6. Last updated: 2026-10-27 at team revision `77f1c71`; frozen agent tag `m1-freeze-20261025`.
+Owner: M6. Last updated: 2026-10-28 at team revision `dab0969`; frozen agent tag `m1-freeze-20261025`.
 Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked.
 
 ## 4.1 Codebase
@@ -46,19 +46,19 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 | R4 | Generalization: dev vs held-out | M6 | ✅ seed 17: agent 9.0 → 14.0; lead over Chemeleon +2.3 → +6.8, over Random +5.7 → +7.8 | `M6/results/20261028-generalization-seed17-all-methods/` |
 | R5 | Failure classification: over-exploitation, one trajectory | M5, M4, M6 | ✅ exploration_off Mg-Sn-Sr/29 (16 binary queries before any ternary), audited by M2 | `M2/aggregation/20261026_m5_intake/audits/metrics/failure_cases.md` |
 | R6 | Failure classification: wasteful exploration, one trajectory | M5, M4, M6 | ✅ m1_full Ga-Pt-Tm/17 (one unstable UCB ternary probe; 10 vs 16 mSUN vs off, causation not established), audited by M2 | `M2/aggregation/20261026_m5_intake/audits/metrics/failure_cases.md` |
-| R7 | Discussion: which mechanisms helped, remaining bottlenecks | M6 | 🟡 drafted in the deck (planning and routing carry the gain; slow start, 1 composition/step, small sample) | deck |
+| R7 | Discussion: which mechanisms helped, remaining bottlenecks | M6 | ✅ in the report (Google Doc) and deck slide 14 | report |
 | R8 | Research cost: oracle calls, tokens/USD, wall time | M2, M6 | ✅ USD 0 known fees; times on different machines | `M2/aggregation/20261027_m3_full_agent/ (PR #6, unmerged)report/COST_ANALYSIS.md` |
 | R9 | Method text from each member (due 24 Oct) | M1–M5 | ✅ all received: M1 (`M1/report/A1_*`), M2 (PR #6), M3, M4 (`M4/report/`), M5 (`M5/report/`) | – |
-| R10 | Per-material table to M2 (27 Oct) | M6 | 🟡 ready (`per_run.csv` in the all-methods check results); not yet sent to M2 | `M6/results/20261028-check-seed17-all-methods/per_run.csv` |
+| R10 | Per-material table to M2 | M6 | ✅ built 28 Oct; message to M2 drafted | `M6/results/20261028-per-material-table/` |
 
 ## 4.3 Presentation
 
 | # | Requirement | Owner | Status | File(s) |
 | --- | --- | --- | --- | --- |
-| S1 | 10 min talk + 5 min Q&A | M6 | ✅ 14-slide deck with speaker notes (M6's Slides artifact, private until shared) | – |
+| S1 | 10 min talk + 5 min Q&A | M6 | ✅ 14-slide deck with speaker notes (Google Slides, link in root README) | `README.md` |
 | S2 | Main idea and architecture | M1 + owners | ✅ deck slides 3–7 | – |
 | S3 | How the system uses MADE and manages the budget | M1 | ✅ deck slides 2–3 | – |
-| S4 | Key results vs both baselines | M6 | ✅ deck slides 9–12 | – |
+| S4 | Key results vs both baselines | M6 | ✅ deck slides 9–12 (held-out slide being updated in Google Slides) | – |
 | S5 | Trajectories, discoveries, failure cases | M5, M6 | ✅ deck slide 13 | – |
 | S6 | Conclusions and lessons | M6 | ✅ deck slide 14 | – |
 | S7 | Rehearsal 29 Oct | M6 | ⬜ | – |
@@ -67,7 +67,7 @@ Status: ✅ done · 🟡 partial / in progress · ⬜ not started · ⛔ blocked
 
 | # | Item | Owner | Status | Notes |
 | --- | --- | --- | --- | --- |
-| D1 | GitHub repo or Google Drive folder with code, report, slides | M6 | ⬜ | Submit 30 Oct |
+| D1 | GitHub repo or Google Drive folder with code, report, slides | M6 | 🟡 root README with results, map, report and slide links (28 Oct); submit 30 Oct | `README.md` |
 | D2 | Frozen revision tagged and named in the report | M1 | ✅ `m1-freeze-20261025` | `M1/FREEZE_RECORD.md` |
 | D3 | Individual reports (≤ 3 pages, due end of 3 Nov, per `M2/STATUS.md`) | Each member | ⬜ | M6 uses `M6/WORK_LOG.md` |
 | D4 | GenAI-use declaration, if the course requires one | All | ⬜ | Confirm with TA |

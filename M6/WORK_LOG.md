@@ -183,3 +183,11 @@ what is still open. Used for the individual report.
   +6.8 (check); over Random from +5.7 to +7.8.
 - Built the deck as an editable .pptx for Google Slides (local, not committed) and the
   report as a Google Doc for group review.
+- Applied M2's six review comments in the Google Doc report: wording on the check
+  set limited to what was observed; Random's EF vs Random corrected to 0.94 with an
+  exact zero-baseline note and median definition; cost table now says tokens are not
+  instrumented and uses "budgeted oracle queries"; evidence-package limits from
+  M2's SOURCE_AUDIT/REPRODUCTION added; M3 component study retitled.
+- Built the per-material table for M2 (`results/20261028-per-material-table/`).
+- Wrote the repository's root README for submission (results, repository map,
+  report and slide links, reproduction).
