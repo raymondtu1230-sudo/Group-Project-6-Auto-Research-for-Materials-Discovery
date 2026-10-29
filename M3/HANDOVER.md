@@ -17,7 +17,7 @@ plug into slots M1's agent already had. All of M3's code is in
 | M1 | The bug fix, installed with `python M3/install.py --install` |
 | M2 | Result tables (`results/*.csv`) and results text (`report/M3_RESULTS.md`) |
 | M1, M2, M6 | All 90 frozen-agent runs as complete result folders (`results/frozen_20261025/`): the assigned full-agent ablations `planning_off` and `self_correction_off` (vs `m1_full`), and the component study `m3_full`, `m3_planning_off`, `m3_self_correction_off` |
-| M6 | Method text (`report/M3_METHOD.md`), results text and slides (`report/`) |
+| M6 | Method text (`report/M3_METHOD.md`) and results text (`report/M3_RESULTS.md`) |
 
 ## Notes for each teammate
 

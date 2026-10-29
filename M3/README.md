@@ -75,7 +75,7 @@ test runs, so they don't mix into M3's results):
 | **M2** | Receives M3's result tables. M3's runs keep tool routing off. | M2 builds the final results table; tool routing being off means M3's numbers don't depend on M2's part. |
 | **M4** | The planner reads M4's memory when it scores areas. Every M3 run gets its own memory run ID. | M4's memory test needs a planner that uses memory; M4 confirmed that M3 does. |
 | **M5** | Exploration runs after M3's self-correction and receives its plan. M3's runs keep exploration off. | M3's Hf-Ni-Zr runs are a ready example of "over-exploitation", one of the two failure types M5 reports. |
-| **M6** | Receives M3's method text, slides and results text. | M3's table belongs in the "component vs M1 reference" section of the report, separate from the frozen agent's own ablation table. |
+| **M6** | Receives M3's method text and results text. | M3's table belongs in the "component vs M1 reference" section of the report, separate from the frozen agent's own ablation table. |
 
 ---
 
@@ -226,7 +226,7 @@ remain in the git history (commit `e1a40d8`).
 | M1 | The bug fix: run `python M3/install.py --install` so M1's final agent uses it |
 | M2 | Result tables (`results/*.csv`) and results text (`report/M3_RESULTS.md`) |
 | M1, M2, M6 | Complete result folders of all 90 frozen-agent runs: the assigned full-agent ablations (`planning_off`, `self_correction_off`) and the component study (`results/frozen_20261025/`) |
-| M6 | Method text, results text and slides (`report/`) |
+| M6 | Method text and results text (`report/`) |
 
 Notes for each teammate are in [HANDOVER.md](HANDOVER.md).
 
@@ -284,8 +284,6 @@ shows these as `merged` and never overwrites them.
 | [results/frozen_20261025/](results/frozen_20261025/) | Complete result folders of all 90 frozen-agent runs (full-agent ablations and component study), plus the Chemeleon checksum receipt | M1, M2, M6 |
 | [report/M3_RESULTS.md](report/M3_RESULTS.md) | Results tables and explanation | M2, M6 |
 | [report/M3_METHOD.md](report/M3_METHOD.md) | Method text for the group report | M6 |
-| `report/M3_Method_Draft.pptx` | M3's three slides with speaker notes | M6 |
-| [report/M3_SPEAKER_NOTES.md](report/M3_SPEAKER_NOTES.md) | Script for the slides, plus likely Q&A | Presenter |
 
 ### Evidence
 

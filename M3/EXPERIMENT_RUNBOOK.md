@@ -116,7 +116,7 @@ This writes:
 Edit the "Why" section by hand.
 
 Share with M2: the two CSVs and `M3_RESULTS.md`. Share with M6:
-`M3_RESULTS.md` and the updated slides.
+`M3_RESULTS.md`.
 
 Following M6's `PROTOCOL_ADOPTION.md`, label these results "component vs M1
 reference" (`m3_full` vs `m1_baseline`), separate from the frozen agent's

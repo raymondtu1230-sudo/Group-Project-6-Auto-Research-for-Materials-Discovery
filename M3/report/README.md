@@ -3,8 +3,6 @@
 | File | What it is | For |
 | --- | --- | --- |
 | [M3_METHOD.md](M3_METHOD.md) | Method text for the group report: how the planner and self-correction work, and how both studies were evaluated | M6 |
-| `M3_Method_Draft.pptx` | M3's three slides, with speaker notes | M6, presenter |
-| [M3_SPEAKER_NOTES.md](M3_SPEAKER_NOTES.md) | Script for the slides (about 2 minutes), plus likely Q&A | Presenter |
 | [M3_RESULTS.md](M3_RESULTS.md) | Results of both studies: the full-agent ablations against `m1_full` (36 runs) and the component study (72 runs), with the hand-written "Why" section | M2, M6 |
 
 M2 also uses the component-study tables in `../results/*.csv`. Evidence: the
