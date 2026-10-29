@@ -9,7 +9,7 @@ The 72 protocol runs behind `M3/report/M3_RESULTS.md` and
 - Code: `main` at `81b0e36`, plus `python M3/install.py --install`, which put the
   progress-signal fix into M1 (`m3_planning.py` sha256
   `71a24373…5887d`). Every arm ran from this one checkout.
-- Setup: section 0 of `M3/EXPERIMENT_RUNBOOK.md` on one Windows 11 PC
+- Setup: sections 1–3 of `M3/EXPERIMENT_RUNBOOK.md` on one Windows 11 PC
   (AMD Ryzen 7 9700X, 16 threads, 31 GB, CPU only), Python 3.12.15 through uv.
 - Command: `uv run python ../../M3/run_ablations.py --jobs 3` from `M1/MADE`,
   so 3 runs at a time with 5 CPU threads each. Wall time 14:13–18:14.

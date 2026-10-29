@@ -1,3 +1,0 @@
-[2026-10-19 19:08:13] [INFO] [made.agents.m3_planning] M3 review: step=0 subgoal=Li-O memory_records=0
-[2026-10-19 19:08:15] [INFO] [made.agents.m3_planning] M3 review: step=4 subgoal=Li-O memory_records=4
-[2026-10-19 19:08:16] [INFO] [made.agents.m3_planning] M3 review: step=8 subgoal=Li-O memory_records=8

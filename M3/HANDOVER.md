@@ -14,7 +14,6 @@ plug into slots M1's agent already had. All of M3's code is in
 | To | What |
 | --- | --- |
 | M1 | One-page design ([DESIGN.md](DESIGN.md)); code, settings and tests (`integration/`, merged by M1 in `2fcc214`) |
-| M1 | The bug fix, installed with `python M3/install.py --install` |
 | M2 | Result tables (`results/*.csv`) and results text (`report/M3_RESULTS.md`) |
 | M1, M2, M6 | All 90 frozen-agent runs as complete result folders (`results/frozen_20261025/`): the assigned full-agent ablations `planning_off` and `self_correction_off` (vs `m1_full`), and the component study `m3_full`, `m3_planning_off`, `m3_self_correction_off` |
 | M6 | Method text (`report/M3_METHOD.md`) and results text (`report/M3_RESULTS.md`) |
@@ -23,10 +22,9 @@ plug into slots M1's agent already had. All of M3's code is in
 
 ### M1 (integration)
 
-- **Install the bug fix in the final agent.** Your full agent (`m1_full`)
-  uses the M3 planner, so it needs the fix described below. Run
-  `python M3/install.py --install`. It updates only M3's own two files in your
-  folder (`m3_planning.py` and its test); your files are not touched.
+- **Bug fix: done.** The frozen agent's `m3_planning.py` is identical to M3's
+  fixed version, so `m1_full` and every ablation use it (see the bug note in
+  [README.md](README.md#the-bug-found-along-the-way)).
 - `install.py` shows your agent config as `merged`: you added M4's and M5's
   settings and kept M3's lines. That is expected.
 - The default planner is still your `diversity` planner, so `m1_baseline`
@@ -93,62 +91,10 @@ plug into slots M1's agent already had. All of M3's code is in
 - M3 ran on practice (dev) systems only. `run_ablations.py` refuses any other
   system.
 
-## The bug and the fix
+## Results and checks
 
-- **What happened:** in the first full set of runs, results with
-  self-correction on and off were identical in all 18 pairs.
-- **Why:** the simulator marks every new structure as "newly discovered",
-  even unstable ones (360 of 360 tries in `m3_full`; only 96 were stable).
-  M3 read that mark as progress, so it never thought it was stuck, and the
-  planner counted every remembered try as a success.
-- **Fix:** progress now means a new **stable** material, and memory failures
-  are unstable results. The tests now use realistic simulator outputs.
-- **Re-runs:** all 72 runs were redone with the fix. The summary script only
-  accepts M3 runs made with the current M3 code (it checks a fingerprint of the
-  file), so old runs cannot slip in. The old results remain in the git history
-  (commit `e1a40d8`).
-
-## Results (fixed code)
-
-All 72 runs ran on one PC (AMD Ryzen 7 9700X, CPU only) from the same code,
-following section 0 of [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md). All
-finished on the first attempt, and the reference matched M1's earlier recorded
-numbers exactly in all 18 pairs. Evidence:
-[evidence/20261021-dev-ablations/](evidence/20261021-dev-ablations/).
-
-| Comparison | Change in materials found per run | Better / same / worse (of 18) |
-| --- | --- | --- |
-| M3 vs reference | +1.50 (6.50 vs 5.00) | 9 / 3 / 6 |
-| Effect of planning | +1.39 | 12 / 1 / 5 |
-| Effect of self-correction | +0.67 | 7 / 10 / 1 |
-
-M3 helps on hard systems and loses on easy ones; the explanation is in
-`report/M3_RESULTS.md`, section "Why".
-
-## Results on the frozen agent
-
-| Method (18 runs each) | mSUN@20 | Compared with | Better / same / worse |
-| --- | --- | --- | --- |
-| `planning_off` | 5.28 | `m1_full` 10.00 | `m1_full` better in 15 / 2 / 1 (p = 0.0005) |
-| `self_correction_off` | 9.50 | `m1_full` 10.00 | 8 / 2 / 8 (p = 1.0) |
-| `m3_full` | 6.50 | – | identical to the development runs |
-| `m3_planning_off` | 5.11 | `m3_full` 6.50 | identical to the development runs |
-| `m3_self_correction_off` | 5.83 | `m3_full` 6.50 | identical to the development runs |
-
-Details and folder layout: [results/frozen_20261025/README.md](results/frozen_20261025/README.md).
-The Chemeleon archive used by the full-agent runs was re-hashed on the run
-machine: [chemeleon_checksum_receipt.txt](results/frozen_20261025/chemeleon_checksum_receipt.txt).
-
-## Checks (frozen tag `m1-freeze-20261025`, `ae7fe81`, run from `M1/MADE`)
-
-| Check | Result |
-| --- | --- |
-| `install.py` | M3 files `ok`, M1-owned files `merged` |
-| M1 + M3 tests (with M4 on the path) | 41 passed |
-| M1 protocol tests | 8 passed |
-| M3 tool tests | 17 passed |
-| Code style (ruff) | passes |
-| M1 + M3 + M4 + M5 tests together | 59 passed, 1 failed (the M4/M5 issue above, not M3) |
-| Frozen-agent runs | 90 of 90 complete |
-
-Full output: [test_results.txt](test_results.txt).
+- Results of both studies: [README.md](README.md#results), with the full
+  tables and explanation in [report/M3_RESULTS.md](report/M3_RESULTS.md).
+- The 90 frozen-agent runs, their layout and the Chemeleon checksum receipt:
+  [results/frozen_20261025/](results/frozen_20261025/).
+- Latest check record, on the frozen tag: [test_results.txt](test_results.txt).

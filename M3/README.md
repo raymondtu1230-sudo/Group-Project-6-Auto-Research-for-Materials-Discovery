@@ -71,7 +71,7 @@ test runs, so they don't mix into M3's results):
 
 | Member | How M3 affects them | Why it matters |
 | --- | --- | --- |
-| **M1** | M3 plugs into M1's existing planner and self-correction slots. It also edits four M1 files: the agent config, the experiment script, a protocol test and the protocol notes. | M1's full agent (`m1_full`) uses the M3 planner, so M1 needs the latest M3 code installed (see [Who receives what](#who-receives-what)). |
+| **M1** | M3 plugs into M1's existing planner and self-correction slots. It also edits four M1 files: the agent config, the experiment script, a protocol test and the protocol notes. | M1's full agent (`m1_full`) uses the M3 planner; the frozen agent contains the current M3 code, bug fix included. |
 | **M2** | Receives M3's result tables. M3's runs keep tool routing off. | M2 builds the final results table; tool routing being off means M3's numbers don't depend on M2's part. |
 | **M4** | The planner reads M4's memory when it scores areas. Every M3 run gets its own memory run ID. | M4's memory test needs a planner that uses memory; M4 confirmed that M3 does. |
 | **M5** | Exploration runs after M3's self-correction and receives its plan. M3's runs keep exploration off. | M3's Hf-Ni-Zr runs are a ready example of "over-exploitation", one of the two failure types M5 reports. |
@@ -212,23 +212,11 @@ All 90 frozen-agent result folders are in
 The first full set of runs showed **identical** results with self-correction
 on and off, in all 18 pairs. The cause: the simulator marks *every* new
 structure as "newly discovered", even unstable ones, and M3 had read that as
-progress, so it never thought it was stuck. M3 now counts only **stable** new
-materials as progress. All runs were redone with the fix; the old results
-remain in the git history (commit `e1a40d8`).
-
----
-
-## Who receives what
-
-| To | What |
-| --- | --- |
-| M1 | Design ([DESIGN.md](DESIGN.md)); code, settings and tests (`integration/`, merged by M1) |
-| M1 | The bug fix: run `python M3/install.py --install` so M1's final agent uses it |
-| M2 | Result tables (`results/*.csv`) and results text (`report/M3_RESULTS.md`) |
-| M1, M2, M6 | Complete result folders of all 90 frozen-agent runs: the assigned full-agent ablations (`planning_off`, `self_correction_off`) and the component study (`results/frozen_20261025/`) |
-| M6 | Method text and results text (`report/`) |
-
-Notes for each teammate are in [HANDOVER.md](HANDOVER.md).
+progress, so it never thought it was stuck (360 of 360 tries were marked new;
+only 96 were stable). M3 now counts only **stable** new materials as progress.
+All runs were redone with the fix. The summary script only accepts runs made
+with the current M3 code (it checks the file's fingerprint), so old runs
+cannot slip in; the old results remain in the git history (commit `e1a40d8`).
 
 ---
 
@@ -239,7 +227,7 @@ Notes for each teammate are in [HANDOVER.md](HANDOVER.md).
 | File | What it is |
 | --- | --- |
 | `README.md` | This page |
-| [HANDOVER.md](HANDOVER.md) | What each teammate receives and needs to know, checks |
+| [HANDOVER.md](HANDOVER.md) | What each teammate receives and needs to know |
 | [DESIGN.md](DESIGN.md) | One-page design agreed with M1 |
 | [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md) | Step by step: set up a computer, run the 72-run component study, and run the 90 frozen-agent runs |
 
@@ -291,7 +279,6 @@ shows these as `merged` and never overwrites them.
 | --- | --- |
 | [evidence/20261021-dev-ablations/](evidence/20261021-dev-ablations/) | The 72 real runs: run list, every planner and course-change log line, one traced example |
 | [evidence/synthetic-demo/](evidence/synthetic-demo/) | Output of the made-up-results demo |
-| [evidence/synthetic-smoke/](evidence/synthetic-smoke/) | A check that M3 runs end to end inside MADE (tiny test system, not a result) |
 
 ---
 

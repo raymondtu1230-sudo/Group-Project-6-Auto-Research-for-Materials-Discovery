@@ -1,6 +1,6 @@
 # M3 experiment runbook
 
-How to reproduce M3's runs on your own computer. Sections 0–4 cover the
+How to reproduce M3's runs on your own computer. Sections 1–4 cover the
 component study (72 runs against `m1_baseline`). Section 5 covers the runs on
 M1's frozen agent: M3's assigned full-agent ablations (`planning_off`,
 `self_correction_off`) and the component study re-run (90 runs in total).
@@ -9,31 +9,13 @@ M1 integrated M3 on `main` (`2fcc214`). M1 also made M4's memory
 manager the default memory in `m1_integrated.yaml` (`9acd3c9`). Every run with
 memory on, including `m1_baseline`, therefore needs the M4 package installed.
 
-## 0. Fresh computer (fastest path)
-
-Run **all 72** runs on one machine (baseline included), so every arm uses the
-same hardware and code; no results need copying in. In PowerShell:
-
-```powershell
-irm https://astral.sh/uv/install.ps1 | iex      # uv (once); git must be installed
-git clone https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery.git
-cd Group-Project-6-Auto-Research-for-Materials-Discovery\M1\MADE
-uv sync --locked
-uv pip install --no-deps -e ..\..\M4
-uv run python ..\..\M3\install.py --install    # puts the fixed M3 module into M1 (local only)
-copy .env.example .env                           # then put your Materials Project key in .env
-uv run python ..\..\M3\run_ablations.py --dry-run --jobs 3   # should say 72 to run
-uv run python ..\..\M3\run_ablations.py --jobs 3
-```
-
-`--jobs`: use about one run per 4–5 CPU cores (e.g. 3 on 16 threads, 5 on 24).
-Keep the machine awake, plugged in and online. The first run also downloads the
-~100 MB ORB model. When it finishes: `uv run python ..\..\M3\summarize_ablations.py`.
-
 ## 1. One-time setup
 
+Needs git and [uv](https://docs.astral.sh/uv/).
+
 ```bash
-cd M1/MADE
+git clone https://github.com/raymondtu1230-sudo/Group-Project-6-Auto-Research-for-Materials-Discovery.git
+cd Group-Project-6-Auto-Research-for-Materials-Discovery/M1/MADE
 uv sync --locked
 uv pip install --no-deps -e ../../M4   # M4 memory manager (repeat after any uv sync)
 cp .env.example .env                   # then edit .env: MATERIALS_PROJECT_API_KEY=<your key>
@@ -79,9 +61,13 @@ saves the console and gives each run its own `M4_RUN_ID`, which M4 requires.
 ## 3. All runs
 
 ```bash
-uv run python ../../M3/run_ablations.py --dry-run   # lists what will run
-uv run python ../../M3/run_ablations.py
+uv run python ../../M3/run_ablations.py --dry-run --jobs 3   # should say 72 to run
+uv run python ../../M3/run_ablations.py --jobs 3
 ```
+
+`--jobs` runs several at once: use about one per 4–5 CPU cores (3 on 16
+threads). Keep the machine awake and online; the first run downloads the
+~100 MB ORB model.
 
 This runs:
 

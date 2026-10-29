@@ -43,13 +43,6 @@ Following M6's `PROTOCOL_ADOPTION.md` section 5, this table compares M3 configur
 | `m3_full` − `m3_planning_off` | contribution of M3 planning | 18 | +1.39 ± 4.33 | 12 / 1 / 5 | 13.53 |
 | `m3_full` − `m3_self_correction_off` | contribution of M3 self-correction | 18 | +0.67 ± 1.46 | 7 / 10 / 1 | 4.44 |
 
-## What changed (generated)
-
-- M3 (planner + self-correction) vs M1 reference: `m3_full` found 1.50 more stable-unique-novel structures per run than `m1_baseline` on average, better in 9 of 18 paired runs, the same in 3 and worse in 6.
-- Contribution of M3 planning: `m3_full` found 1.39 more stable-unique-novel structures per run than `m3_planning_off` on average, better in 12 of 18 paired runs, the same in 1 and worse in 5.
-- Contribution of M3 self-correction: `m3_full` found 0.67 more stable-unique-novel structures per run than `m3_self_correction_off` on average, better in 7 of 18 paired runs, the same in 10 and worse in 1.
-- Self-correction re-planned 124 times across 36 runs with it on (16 for no progress in the window, 108 for repeated formulas).
-
 ## Why (interpretation, edit by hand)
 
 Runs: 72 of 72 completed on the first attempt (21 Oct, one Windows PC, 3 runs at a time with 5 CPU threads each, same code revision `81b0e36` plus `M3/install.py --install` for every arm). No run failed, resumed from a checkpoint or shared a checkpoint folder. The re-run `m1_baseline` matches M1's recorded 19 Oct values exactly in all 18 pairs (mSUN and AUDC), so the reference is reproducible and turning on M4 memory does not change it.
