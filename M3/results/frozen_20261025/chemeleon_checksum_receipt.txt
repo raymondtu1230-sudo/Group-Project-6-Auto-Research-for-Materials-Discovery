@@ -1,0 +1,31 @@
+# M3 Chemeleon checksum receipt (run machine)
+# Machine: the Windows 11 PC that ran all 90 M3 frozen-agent runs
+#          (AMD Ryzen 7 9700X, CPU only). Tag m1-freeze-20261025 (ae7fe81).
+
+## 1. Download, as recorded when it was made (26 Oct 2026, 22:39 SGT)
+$ curl -sS -L --fail --retry 3 -o checkpoints.tar.gz "https://api.figshare.com/v2/file/download/54966305"
+$ ls -l checkpoints.tar.gz ; sha256sum checkpoints.tar.gz
+exit=0
+bytes: 548874535
+ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e
+
+The archive was then extracted from M1/MADE, giving M1/MADE/ckpts/
+(ignored by git). The archive itself is kept outside the repository.
+
+## 2. Re-check of the same archive and the extracted files on the run machine
+archive                                        548874535  ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e
+
+file in archive                                bytes      sha256 (identical in archive and in M1/MADE/ckpts/)
+ckpts/chemeleon_csp_alex_mp_20_v0.0.2.ckpt     147634564  602a261d67a95094312d214ddcb7f46e7c8315cf58c986dbc57b8a642d7f5bc0
+ckpts/chemeleon_csp_mp_20_v0.0.2.ckpt          147634564  50dfbb4bf102f675c37740a6c2e893859d6d1cf49da91a1cc16236c015dcc220
+ckpts/chemeleon_dng_alex_mp_20_v0.0.2.ckpt     168774702  7c12346d3ddcf90d52dbb6f78cc91c4d7d5bea4d127edaf50e628fc95d48ab70
+ckpts/chemeleon_dng_mp_20_v0.0.2.ckpt          168774702  8031cd242f55677972c6e4b955dbaa0936cd987961d7378d2fe2b93647258216
+
+The archive hash matches M1/FREEZE_RECORD.md and M2's records.
+
+## 3. Which runs loaded Chemeleon (from each run_console.log)
+planning_off            18 of 18 runs  "Loaded Chemeleon model from ckpts/chemeleon_csp_alex_mp_20_v0.0.2.ckpt"
+self_correction_off     18 of 18 runs  same file
+m3_full                  0 of 18 runs  tool routing off, so Chemeleon is never used
+m3_planning_off          0 of 18 runs  tool routing off
+m3_self_correction_off   0 of 18 runs  tool routing off

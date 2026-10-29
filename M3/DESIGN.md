@@ -21,9 +21,10 @@ stable phases are most likely, and stop wasting queries when the search stalls.
 | Review | Re-score every open sub-goal: `(successes + new_in_memory + 0.5·near_hull_in_memory + 1) / (attempts + 2) + 0.5 · unexplored_share`. |
 | Update plan | The best-scoring sub-goal becomes the next batch target. Ties are broken by a seeded random choice. |
 
-Memory (M4): the review reads `context["m1_memory"]`. New phases and near-hull
+Here `successes` counts the planner's own stable results. Memory (M4): the
+review reads `context["m1_memory"]`. New stable phases and other near-hull
 results (≤ 0.1 eV/atom) in memory raise a sub-goal's score. Formulas that
-memory shows failing twice are skipped. With memory off, the list is empty and
+memory shows as unstable twice are skipped. With memory off, the list is empty and
 only the planner's own counts are used.
 
 ## Slot 2: self-correction (`enable_reflection`)
@@ -31,14 +32,16 @@ only the planner's own counts are used.
 `M3StuckReplanPolicy.revise_plan(plan, context) -> Plan` runs after the planner.
 
 - **Stuck if**, over the last K = 6 observed queries:
-  - there was no new phase (`no_progress`); or
+  - there was no new stable phase (`no_progress`; MADE's "newly discovered"
+    mark alone does not count, because it is set for unstable structures
+    too); or
   - the plan targets a formula already tried twice (`repetition`).
 - **Re-plan**: replace the plan with valid compositions that are the least
   visited and farthest from the recent window.
 - **Escalate**: repeated stalls double the candidates per composition.
   Generation is not an oracle query, and M1 still caps the plan.
-- **Guards**: a 3-query cooldown between re-plans; any discovery resets the
-  escalation level.
+- **Guards**: a 3-query cooldown between re-plans; any new stable phase resets
+  the escalation level.
 
 ## Rules kept
 
@@ -59,8 +62,11 @@ only the planner's own counts are used.
 
 ## Evaluation
 
-All runs use the dev systems × seeds 17/29/43, compared with M1's reference:
+All runs use the dev systems × seeds 17/29/43, paired by system and seed.
 
-- `m3_full`: M3 planner and self-correction on.
-- `m3_planning_off`: planning off.
-- `m3_self_correction_off`: self-correction off.
+- **Full-agent ablations** (M3's assigned ablations), against M1's frozen
+  `m1_full`: `planning_off` and `self_correction_off`, each with one M3 part
+  off and memory, exploration and tool routing on.
+- **Component study**, against M1's reference `m1_baseline`, with exploration
+  and tool routing off: `m3_full` (both M3 parts on), `m3_planning_off` and
+  `m3_self_correction_off`.

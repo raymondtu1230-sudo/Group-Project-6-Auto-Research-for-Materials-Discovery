@@ -43,7 +43,7 @@ plug into slots M1's agent already had. All of M3's code is in
   and `.../self_correction_off`, 18 runs each, are `m1_full` with only that
   part off (memory, exploration and routing on, same Chemeleon archive). Pair
   them with M1's `m1_full` reference: planning_off 5.28 vs 10.00 mSUN@20
-  (15 / 2 / 1, sign p = 0.001); self_correction_off 9.50 vs 10.00 (8 / 2 / 8,
+  (15 / 2 / 1, sign p = 0.0005); self_correction_off 9.50 vs 10.00 (8 / 2 / 8,
   p = 1.0).
 - **Component study:** the same folder holds `m3_full`, `m3_planning_off` and
   `m3_self_correction_off` (exploration and routing off). Pair those with
@@ -61,11 +61,12 @@ plug into slots M1's agent already had. All of M3's code is in
   that M3's decision log shows memory in use when it is on, and none when it is
   off.
 - Every M3 run sets its own `M4_RUN_ID`, as your adoption notes ask.
-- **Heads-up:** on `main` at `24d29d8`, your test
+- **Heads-up:** on M1's frozen tag (`ae7fe81`), your test
   `tests/test_m4_memory.py::test_config_constructs_real_agent` fails. M5's
-  config change added `log_path: ${hydra:runtime.output_dir}/...`, which only
-  works inside a real Hydra run, not in a plain test. This is between M4 and
-  M5; M3 is not involved, and M3's runs used the earlier config.
+  config sets `log_path: ${hydra:runtime.output_dir}/...`, which only works
+  inside a real Hydra run, not in a plain test. Real runs are not affected:
+  all 36 of M3's full-agent runs wrote their M5 log with this setting. This is
+  between M4 and M5; M3 is not involved.
 
 ### M5 (exploration)
 
@@ -75,13 +76,13 @@ plug into slots M1's agent already had. All of M3's code is in
   case of over-exploitation. The planner stayed on the nickel–zirconium pair
   for 12–16 of its 20 tries and found 6.0 materials per run, against 11.7 for
   the reference. Logs: `evidence/20261021-dev-ablations/m3_trace_lines.tsv`.
-- See the M4 heads-up above about the new `log_path` setting.
+- See the M4 heads-up above about the `log_path` setting.
 
 ### M6 (protocol, report, slides)
 
 - **Frozen agent's ablation table:** M3's assigned `planning_off` and
   `self_correction_off` (vs `m1_full`) belong here. Planning: 10.00 → 5.28
-  mSUN@20, lower in 15 of 18 pairs (p = 0.001). Self-correction: 10.00 → 9.50,
+  mSUN@20, lower in 15 of 18 pairs (p = 0.0005). Self-correction: 10.00 → 9.50,
   no measurable effect (8 / 2 / 8).
 - **Component study:** the `m3_*` methods compare against `m3_full` (and the
   development study against `m1_baseline`). Per `PROTOCOL_ADOPTION.md`
@@ -128,14 +129,17 @@ M3 helps on hard systems and loses on easy ones; the explanation is in
 
 | Method (18 runs each) | mSUN@20 | Compared with | Better / same / worse |
 | --- | --- | --- | --- |
-| `planning_off` | 5.28 | `m1_full` 10.00 | `m1_full` better in 15 / 2 / 1 (p = 0.001) |
+| `planning_off` | 5.28 | `m1_full` 10.00 | `m1_full` better in 15 / 2 / 1 (p = 0.0005) |
 | `self_correction_off` | 9.50 | `m1_full` 10.00 | 8 / 2 / 8 (p = 1.0) |
+| `m3_full` | 6.50 | – | identical to the development runs |
 | `m3_planning_off` | 5.11 | `m3_full` 6.50 | identical to the development runs |
 | `m3_self_correction_off` | 5.83 | `m3_full` 6.50 | identical to the development runs |
 
 Details and folder layout: [results/frozen_20261025/README.md](results/frozen_20261025/README.md).
+The Chemeleon archive used by the full-agent runs was re-hashed on the run
+machine: [chemeleon_checksum_receipt.txt](results/frozen_20261025/chemeleon_checksum_receipt.txt).
 
-## Checks (`main` at `24d29d8`, run from `M1/MADE`)
+## Checks (frozen tag `m1-freeze-20261025`, `ae7fe81`, run from `M1/MADE`)
 
 | Check | Result |
 | --- | --- |
@@ -144,4 +148,7 @@ Details and folder layout: [results/frozen_20261025/README.md](results/frozen_20
 | M1 protocol tests | 8 passed |
 | M3 tool tests | 17 passed |
 | Code style (ruff) | passes |
-| M1 + M3 + M4 + M5 tests together | 58 passed, 1 failed (the M4/M5 issue above, not M3) |
+| M1 + M3 + M4 + M5 tests together | 59 passed, 1 failed (the M4/M5 issue above, not M3) |
+| Frozen-agent runs | 90 of 90 complete |
+
+Full output: [test_results.txt](test_results.txt).

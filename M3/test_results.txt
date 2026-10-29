@@ -1,5 +1,6 @@
 # M3 test record: Windows 11, Python 3.12.15, run from M1/MADE
-# main at 24d29d8, after `python ../../M3/install.py --install` (progress-signal fix)
+# Frozen tag m1-freeze-20261025 (ae7fe81), working tree with no modified tracked files.
+# M3's code and settings in this tag are byte-for-byte the same as M3/integration/.
 
 $ uv run python ../../M3/install.py
 ok             M1/MADE/src/made/agents/m3_planning.py
@@ -16,10 +17,11 @@ $ PYTHONPATH=../../M4/src uv run pytest -q tests/test_m1_integrated.py tests/tes
 41 passed, 3 warnings
 
 $ PYTHONPATH=../../M4/src uv run pytest -q tests/test_m1_integrated.py tests/test_m3_planning.py tests/test_m4_memory.py tests/test_m5_exploration.py
-1 failed, 58 passed, 3 warnings
+1 failed, 59 passed, 3 warnings
 # The failure is tests/test_m4_memory.py::test_config_constructs_real_agent:
-# M5's config now sets log_path: ${hydra:runtime.output_dir}/..., which only
-# resolves inside a Hydra run. Not caused by M3 (see HANDOVER.md).
+# M5's config sets log_path: ${hydra:runtime.output_dir}/m5_decisions.jsonl,
+# which only resolves inside a Hydra run, not in a plain test. Not caused by
+# M3, and it does not affect real runs (see HANDOVER.md).
 
 $ PYTHONPATH=.. uv run pytest -q ../tests -o addopts=''
 8 passed
@@ -31,5 +33,5 @@ $ uv run ruff check src/made/agents/m3_planning.py tests/test_m3_planning.py ../
 All checks passed!
 9 files already formatted
 
-$ uv run python ../../M3/run_ablations.py --dry-run
-72 of 72 runs already completed; 0 to run
+$ uv run python ../../M3/run_ablations.py --methods planning_off self_correction_off m3_full m3_planning_off m3_self_correction_off --no-baseline --dry-run
+90 of 90 runs already completed; 0 to run

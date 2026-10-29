@@ -11,7 +11,7 @@ M1's frozen agent (`m1-freeze-20261025`, all five parts on) with only planning, 
 | Method | mSUN@20 | AUDC | Δ mSUN vs `m1_full` | `m1_full` better / same / worse | Sign test |
 | --- | --- | --- | --- | --- | --- |
 | `m1_full` (M1 reference) | 10.00 | 88.1 | – | – | – |
-| `planning_off` | 5.28 | 51.5 | −4.72 (sd of paired difference 3.56) | 15 / 2 / 1 | p = 0.001 |
+| `planning_off` | 5.28 | 51.5 | −4.72 (sd of paired difference 3.56) | 15 / 2 / 1 | p = 0.0005 |
 | `self_correction_off` | 9.50 | 79.6 | −0.50 (sd 2.20) | 8 / 2 / 8 | p = 1.0 |
 
 Per-system mean mSUN@20, `m1_full` / `planning_off` / `self_correction_off`: Au-K-Tb 13.0 / 3.7 / 13.7; Co-Dy-W 7.3 / 3.7 / 7.3; Co-Mg-Na 9.0 / 3.7 / 5.7; Ga-Pt-Tm 10.3 / 7.3 / 10.7; Hf-Ni-Zr 9.3 / 6.7 / 8.7; Mg-Sn-Sr 11.0 / 6.7 / 11.0.
@@ -75,7 +75,7 @@ M3 helps most on the three systems where the reference finds almost nothing (Au-
 
 **AF and EF are 0 for every method.** That follows the official zero-baseline convention used by M2; they are discovery metrics, not wall-time speed-ups.
 
-**Cost.** M3 uses no language model and the same 20 oracle queries. Mean wall time per run was 698 s for `m3_full` and 542 s for `m1_baseline` on this laptop, with 3 runs in parallel.
+**Cost.** M3 uses no language model and the same 20 oracle queries. Mean wall time per run was 698 s for `m3_full` and 542 s for `m1_baseline` on this desktop PC, with 3 runs in parallel.
 
 **Limits.** 18 pairs over 6 dev systems is a small sample, and the system-level pattern rests on 3 seeds per system. The check and hidden splits were not used, per M6's protocol.
 

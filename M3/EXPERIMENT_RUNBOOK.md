@@ -1,6 +1,9 @@
 # M3 experiment runbook
 
-Runs M3's two ablations against M1's reference on your own computer.
+How to reproduce M3's runs on your own computer. Sections 0–4 cover the
+component study (72 runs against `m1_baseline`). Section 5 covers the runs on
+M1's frozen agent: M3's assigned full-agent ablations (`planning_off`,
+`self_correction_off`) and the component study re-run (90 runs in total).
 
 M1 integrated M3 on `main` (`2fcc214`). M1 also made M4's memory
 manager the default memory in `m1_integrated.yaml` (`9acd3c9`). Every run with
@@ -118,6 +121,52 @@ Share with M2: the two CSVs and `M3_RESULTS.md`. Share with M6:
 Following M6's `PROTOCOL_ADOPTION.md`, label these results "component vs M1
 reference" (`m3_full` vs `m1_baseline`), separate from the frozen agent's
 component ablation table.
+
+## 5. Runs on M1's frozen agent
+
+These runs use M1's frozen agent as it is, so skip `install.py --install` (the
+tag already contains the current M3 code). Setup as in section 1, then:
+
+1. **Check out the tag and confirm it is clean.**
+
+   ```bash
+   git fetch --tags --force
+   git checkout m1-freeze-20261025      # commit ae7fe81
+   git status --porcelain --untracked-files=no   # must print nothing
+   ```
+
+2. **Put the Chemeleon weights in place.** The full agent's tool routing can
+   use the Chemeleon generator. Download the official archive (Figshare file
+   54966305), check it, and extract it from `M1/MADE`. It unpacks into
+   `ckpts/`, which git ignores:
+
+   ```bash
+   curl -L --fail -o ../../../checkpoints.tar.gz https://api.figshare.com/v2/file/download/54966305
+   sha256sum ../../../checkpoints.tar.gz   # must be ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e
+   tar -xzf ../../../checkpoints.tar.gz    # creates ckpts/ with four .ckpt files
+   ```
+
+   The archive is 548,874,535 bytes, the same one M1 and M2 used. Keep it
+   outside the repository. M3's record of the archive and the four files is
+   `results/frozen_20261025/chemeleon_checksum_receipt.txt`.
+
+3. **Run.** From `M1/MADE`:
+
+   ```bash
+   uv run python ../../M3/run_ablations.py --methods planning_off self_correction_off --no-baseline --jobs 3
+   uv run python ../../M3/run_ablations.py --methods m3_full m3_planning_off m3_self_correction_off --no-baseline --jobs 3
+   ```
+
+   `--no-baseline` is needed: the reference for the full-agent ablations is
+   M1's own 18 `m1_full` runs, which are already in the repository.
+
+4. **Check.** `uv run python ../../M3/run_ablations.py --methods planning_off
+   self_correction_off m3_full m3_planning_off m3_self_correction_off
+   --no-baseline --dry-run` should report 90 of 90 completed. Validate with
+   M2's evaluator, also from `M1/MADE`:
+   `uv run python ../../M2/evaluate.py --results-root results/protocol_v1 --output <new folder> --split dev`.
+
+Result folders, layout and numbers: `results/frozen_20261025/README.md`.
 
 ## Fairness checklist
 

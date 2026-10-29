@@ -15,7 +15,7 @@ complete result folders in M1's reference-evidence layout. Two studies:
 | Failures | None; no attempt overwritten |
 | Frozen version | Tag `m1-freeze-20261025`; working tree had no modified tracked files |
 | Machine | Windows 11 PC, AMD Ryzen 7 9700X, CPU only, up to 3 runs at a time |
-| Chemeleon weights | Official Figshare file 54966305, 548,874,535 bytes, SHA-256 `ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e` (same archive as M1 and M2) |
+| Chemeleon weights | Official Figshare file 54966305, 548,874,535 bytes, SHA-256 `ccbe78df811cdf7451dbafe7c0c5fef7985b4f9502f328e0ddab44bc6896ea1e` (same archive as M1 and M2). Loaded by all 36 full-agent runs; the component study keeps tool routing off and never loads it. Run-machine record of the archive and its four files: [chemeleon_checksum_receipt.txt](chemeleon_checksum_receipt.txt) |
 
 **Version note.** `m3_planning_off` and `m3_self_correction_off` were run when
 the tag pointed to `02e0026`; the other methods after M1 moved it to
@@ -40,7 +40,7 @@ Checked from every run's `resolved_config.yaml`:
 | Method | mSUN@20 | AUDC | Δ mSUN vs `m1_full` | `m1_full` better / same / worse | Sign test |
 | --- | --- | --- | --- | --- | --- |
 | `m1_full` (reference) | 10.00 | 88.1 | – | – | – |
-| `planning_off` | 5.28 | 51.5 | −4.72 | 15 / 2 / 1 | p = 0.001 |
+| `planning_off` | 5.28 | 51.5 | −4.72 | 15 / 2 / 1 | p = 0.0005 |
 | `self_correction_off` | 9.50 | 79.6 | −0.50 | 8 / 2 / 8 | p = 1.0 |
 
 Means over 18 runs; Δ and the counts are paired by system and seed.
@@ -94,6 +94,8 @@ Each method folder also keeps its sweep console log under `dev/`.
 
 - `M2/evaluate.py` validates all 90 runs with no issues; each method is
   complete (18 of 18).
+- The Chemeleon archive and its four checkpoint files were re-hashed on the
+  run machine and match ([receipt](chemeleon_checksum_receipt.txt)).
 - Every per-query curve matches its run's final mSUN and AUDC.
 - The Materials Project API key appears in none of the files.
 

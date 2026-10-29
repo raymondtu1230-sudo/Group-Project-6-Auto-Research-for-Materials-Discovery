@@ -193,7 +193,7 @@ and evaluator as M1's 18 reference runs:
 | Version | Found per run (mSUN@20) | AUDC | `m1_full` better / same / worse | Sign test |
 | --- | --- | --- | --- | --- |
 | `m1_full` (M1's reference) | 10.00 | 88.1 | – | – |
-| `planning_off` | 5.28 | 51.5 | 15 / 2 / 1 | p = 0.001 |
+| `planning_off` | 5.28 | 51.5 | 15 / 2 / 1 | p = 0.0005 |
 | `self_correction_off` | 9.50 | 79.6 | 8 / 2 / 8 | p = 1.0 |
 
 - **Planning is the larger effect.** Without it the full agent finds about half
@@ -241,12 +241,16 @@ Notes for each teammate are in [HANDOVER.md](HANDOVER.md).
 | `README.md` | This page |
 | [HANDOVER.md](HANDOVER.md) | What each teammate receives and needs to know, checks |
 | [DESIGN.md](DESIGN.md) | One-page design agreed with M1 |
-| [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md) | Step by step: set up a computer and run all 72 tests |
+| [EXPERIMENT_RUNBOOK.md](EXPERIMENT_RUNBOOK.md) | Step by step: set up a computer, run the 72-run component study, and run the 90 frozen-agent runs |
 
 ### The code (`integration/`)
 
 M3's code lives here, laid out exactly where it goes in M1's folder.
-`install.py` copies it in.
+`install.py` copies it in. The four M3-owned files are identical to the
+versions in M1's frozen agent (tag `m1-freeze-20261025`). The four M1-owned
+files are snapshots of M3's original edits; M1 has since added M4's and M5's
+parts to them, so M1's own copies are the current versions. `install.py`
+shows these as `merged` and never overwrites them.
 
 | File | What it is |
 | --- | --- |
@@ -264,7 +268,7 @@ M3's code lives here, laid out exactly where it goes in M1's folder.
 | File | What it does |
 | --- | --- |
 | [install.py](install.py) | Checks that M3 is in M1's folder; `--install` puts it there. It never overwrites an M1 file that M1 has changed. |
-| [run_ablations.py](run_ablations.py) | Runs the 72 tests. Safe to stop and restart; failed runs are kept and retried. |
+| [run_ablations.py](run_ablations.py) | Runs the test versions (by default the 72-run component study; `--methods` picks others, such as the full-agent ablations). Safe to stop and restart; failed runs are kept and retried. |
 | [summarize_ablations.py](summarize_ablations.py) | Turns finished runs into the result tables and `report/M3_RESULTS.md` |
 | `examples/m3_demo.py` | Short demo with made-up results, showing the planner and course changes |
 | `tests/test_m3_tools.py` | 17 tests for the three tools above |
@@ -277,7 +281,7 @@ M3's code lives here, laid out exactly where it goes in M1's folder.
 | --- | --- | --- |
 | [results/m3_ablation_runs.csv](results/m3_ablation_runs.csv) | One row per run (72) | M2 |
 | [results/m3_ablation_summary.csv](results/m3_ablation_summary.csv) | One row per version | M2 |
-| [results/frozen_20261025/](results/frozen_20261025/) | Complete result folders of all 90 frozen-agent runs (full-agent ablations and component study) | M1, M2, M6 |
+| [results/frozen_20261025/](results/frozen_20261025/) | Complete result folders of all 90 frozen-agent runs (full-agent ablations and component study), plus the Chemeleon checksum receipt | M1, M2, M6 |
 | [report/M3_RESULTS.md](report/M3_RESULTS.md) | Results tables and explanation | M2, M6 |
 | [report/M3_METHOD.md](report/M3_METHOD.md) | Method text for the group report | M6 |
 | `report/M3_Method_Draft.pptx` | M3's three slides with speaker notes | M6 |
@@ -305,10 +309,12 @@ uv run pytest -q ../../M3/tests -o addopts=''
 uv run python ../../M3/run_ablations.py --dry-run  # lists the runs still to do
 ```
 
-Last checked on `main` at `24d29d8`: M1 and M3 tests 41 passed; M3 tool tests
-17 passed; M1 protocol tests 8 passed; style checks pass. One M4 test
-(`test_config_constructs_real_agent`) fails on that `main` because of an M5
-config change; it is not caused by M3 (see HANDOVER.md).
+Last checked on M1's frozen tag `m1-freeze-20261025` (`ae7fe81`): M1 and M3
+tests 41 passed; M3 tool tests 17 passed; M1 protocol tests 8 passed; style
+checks pass; all 90 frozen-agent runs complete. One M4 test
+(`test_config_constructs_real_agent`) fails because of an M5 config setting
+that only works inside a real run; it is not caused by M3 (see HANDOVER.md).
+Full output: [test_results.txt](test_results.txt).
 
 ---
 

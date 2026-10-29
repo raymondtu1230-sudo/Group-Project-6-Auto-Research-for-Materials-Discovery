@@ -1,6 +1,7 @@
 # Speaker notes for the three M3 slides
 
-These notes are also embedded in the slides. Target: about 2 minutes in total.
+These notes are also embedded in the slides. Target: about 2 minutes 20 seconds
+in total.
 
 Plain words used throughout: a "try" is one oracle query (20 per run), an
 "area" is a search region (each pair of elements, or all three together), and
@@ -43,28 +44,19 @@ This small demo shows the idea with made-up results: finds only at tries 3 and
 Every change of course is recorded, so in the real runs we can see what
 happened after each one.
 
-## Slide 3: Better on hard systems, worse on easy ones (~45 s)
+## Slide 3: Planning matters most in the full agent (~60 s)
 
-We ran 72 tests: six practice systems, three repeats each, with and without
-each part. The reference agent reproduced its earlier numbers exactly, so the
-comparison is fair.
+In M1's full frozen agent, with every part on, the agent finds 10 new stable
+materials per run. Switching off only my planner drops that to 5.3, lower in
+15 of 18 paired runs: the largest effect of any part. Switching off only
+self-correction gives 9.5, with as many runs better as worse, so it shows no
+clear effect there.
 
-With both of my parts on, the agent found 1.5 more new stable materials per
-run than the reference: 6.5 instead of 5. But this depends heavily on the
-system.
-
-On the three hard systems, where the reference found almost nothing, it went
-from about 1 to about 7. On the three easy ones, it dropped from about 9 to
-about 6.
-
-The reason is that my planner mostly stays with the pairs and rarely tries all
-three elements together. That works when the good materials are in a pair, like
-gold-potassium-terbium, but misses them in hafnium-nickel-zirconium, where most
-are in the three-element mix.
-
-Planning adds about 1.4 materials per run, and self-correction about 0.7. The
-clearest case is cobalt-magnesium-sodium: changing course after six empty tries
-raised the total from 3 to 13 across its three runs.
+The table is my earlier component study, with exploration and tool routing
+off. There, both my parts together beat the reference by 1.5 per run, and the
+gain came from the hard systems: about 1 to 7 on the three hard ones, but about
+9 to 6 on the three easy ones, because the planner rarely tries all three
+elements together.
 
 Next step: always save some tries for the three-element mix.
 
@@ -74,7 +66,9 @@ Next step: always save some tries for the three-element mix.
 | --- | --- |
 | Why four areas? | Good materials often cluster in one region; splitting lets the agent focus there. |
 | Why four tries per area? | Enough to judge an area, few enough not to waste budget on a bad one. |
+| Why does planning matter more in the full agent? | Without the planner, the agent asks for the whole three-element system every time. With it, tries are spread over the pairs and the mix. In the full agent it is lower without planning on all six systems. A plausible reason it no longer loses on Hf-Ni-Zr is that M5's exploration offsets the planner's preference for pairs; we did not test that separately. |
+| Does self-correction help at all? | Not measurably in the full agent (8 better, 8 worse). Its one consistent gain is Co-Mg-Na (9.0 with it, 5.7 without), the same system where it helped most in the component study. |
 | Why does it lose on easy systems? | It sticks to the pairs; in Hf-Ni-Zr most finds are in the three-element mix, which the reference samples more. |
 | How do you know self-correction works? | Before a bug fix it never fired, and on and off gave identical results in all 18 pairs. After the fix it changed course 16 times and helped most in Co-Mg-Na. |
 | What was the bug? | The simulator marks every new structure as "newly discovered", even unstable ones, so the agent never thought it was stuck. Now only stable finds count as progress. |
-| Is the comparison fair? | Same systems, repeats, 20-try budget, simulator and memory for every version, all run on one machine; the reference reproduced exactly. |
+| Is the comparison fair? | Component study: same systems, repeats, 20-try budget, simulator and memory for every version, all run on one machine; the reference reproduced exactly. Full-agent ablations: M1's `m1_full` reference ran on M1's machine, and mine on my PC, from the same frozen tag, settings, seeds and Chemeleon archive; M2's evaluator accepted all of them. |
